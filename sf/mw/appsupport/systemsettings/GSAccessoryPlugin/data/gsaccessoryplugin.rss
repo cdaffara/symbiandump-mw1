@@ -1,0 +1,867 @@
+/*
+* Copyright (c) 2005-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource definitions for GSAccessoryPlugin
+*
+*/
+
+
+NAME ACCP // 4 letter ID
+
+#include <avkon.rsg>
+#include <gsaccsplugin.loc>
+#include <GSApp.rsg>
+#include <uikon.rh>
+
+#include "gsaccessoryplugin.hrh"
+
+// Record resource offset
+RESOURCE RSS_SIGNATURE
+    {
+    }
+
+// Common resources among GS
+#include "gscommonresources.rss"
+
+RESOURCE TBUF
+    {
+    buf="ACCP";
+    }
+
+//============================================================================
+// Definitions used in the main view
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_MAIN_VIEW
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_acc_main_view
+    {
+    menubar = r_acc_menubar;
+    cba = R_GS_SOFTKEYS_OPTIONS_BACK_OPEN;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_MENUBAR
+//----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_acc_menubar
+    {
+    titles =
+        {
+        MENU_TITLE
+            {
+            menu_pane = r_gs_menu_item_exit;
+            },
+        MENU_TITLE
+            {
+            menu_pane = r_gs_menu_item_help;
+            },
+        MENU_TITLE
+            {
+            menu_pane = r_acc_menu_item_set_as_default;
+            },
+        MENU_TITLE
+            {
+            menu_pane = r_gs_menu_item_open;
+            }
+        };
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_MENU_ITEM_SET_AS_DEFAULT
+//----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_acc_menu_item_set_as_default
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = EGSCmdAppSetasDefault;
+            txt = qtn_set_options_set_as_default;
+	    flags = EEikMenuItemSpecific;
+            }
+        };
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_MAIN_VIEW_CAPTION
+//----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_acc_main_view_caption
+    {
+    buf = qtn_cp_folder_enhancements;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_MAIN_VIEW_TITLE
+//----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_acc_main_view_title
+    {
+    txt = qtn_set_title_settings_enhancements;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_MAIN_VIEW_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE GS_FEATURE_ARRAY r_acc_main_view_lbx
+    {
+    items =
+        {
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_accessory_headset"\t""\t\t";
+            item = EGSHeadsetListItemId;
+            type = EGSListBoxItemTypeIsDynamic;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_accessory_headphones"\t""\t\t";
+            item = EGSHeadphonesListItemId;
+            type = EGSListBoxItemTypeIsDynamic;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_accessory_wired_carkit"\t""\t\t";
+            item = EGSWiredCarKitListItemId;
+            type = EGSListBoxItemTypeIsDynamic;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_accessory_wireless_carkit"\t""\t\t";
+            item = EGSWirelessCarKitListItemId;
+            type = EGSListBoxItemTypeIsDynamic;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_accessory_music_stand"\t""\t\t";
+            item = EGSMusicStandListItemId;
+            type = EGSListBoxItemTypeIsDynamic;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_accessory_tv_out"\t""\t\t";
+            item = EGSTvOutListItemId;
+            type = EGSListBoxItemTypeIsDynamic;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_accessory_loopset"\t""\t\t";
+            item = EGSLoopsetListItemId;
+            type = EGSListBoxItemTypeIsDynamic;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_accessory_tty"\t""\t\t";
+            item = EGSTextPhoneListItemId;
+            type = EGSListBoxItemTypeIsDynamic;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_audio_hac_mode"\t""\t\t";
+            item = EGSHACListItemId;
+            type = EGSListBoxItemTypeIsDynamic;
+            }
+        };
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_DEFAULT_ACCESSORY
+//----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_acc_default_accessory
+    {
+    buf = qtn_set_accessory_default;
+    }
+
+//============================================================================
+// Definitions used in the HAC view
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_HAC_VIEW
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_acc_hac_view
+    {
+    menubar = r_gs_menubar_change_exit;
+    cba = R_GS_SOFTKEYS_OPTIONS_BACK_CHANGE;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_HAC_TITLE
+//----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_acc_hac_title
+    {
+    txt = qtn_set_title_settings_enhancements;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_HAC_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE GS_FEATURE_ARRAY r_acc_hac_lbx
+    {
+    items =
+        {
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_set_audio_hac_mode"\t\t";
+            item = KGSSettIdHACMode;
+            type = EGSListBoxItemTypeIsDynamic;
+            }
+        };
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_HAC_MODE_SETTING_PAGE
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_acc_hac_mode_setting_page
+    {
+    number = EAknSettingPageNoOrdinalDisplayed;
+    label = qtn_set_audio_hac_mode;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    type =  EAknSetListBox;
+    editor_resource_id = r_setting_listbox;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_HAC_MODE_SETTING_PAGE_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_acc_hac_mode_setting_page_lbx
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = qtn_set_audio_hac_mode_on;
+            },
+        LBUF
+            {
+            txt = qtn_set_audio_hac_mode_off;
+            }
+        };
+    }
+
+//============================================================================
+// Definitions used in the Headphones view
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_HEADPHONES_VIEW
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_acc_headphones_view
+    {
+    menubar = r_gs_menubar_change_exit;
+    cba = R_GS_SOFTKEYS_OPTIONS_BACK_CHANGE;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_HEADPHONES_TITLE
+//----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_acc_headphones_title
+    {
+    txt = qtn_set_title_settings_headphones;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_HEADPHONES_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE GS_FEATURE_ARRAY r_acc_headphones_lbx
+    {
+    items =
+        {
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_acc_sett_def_prof"\t\t";
+            item = KGSSettIdHPDP;
+            }
+        };
+    }
+
+//============================================================================
+// Definitions used in the Headset view
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_HEADSET_VIEW
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_acc_headset_view
+    {
+    menubar = r_gs_menubar_change_exit;
+    cba = R_GS_SOFTKEYS_OPTIONS_BACK_CHANGE;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_HEADSET_TITLE
+//----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_acc_headset_title
+    {
+    txt = qtn_set_title_settings_headset;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_HEADSET_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE GS_FEATURE_ARRAY r_acc_headset_lbx
+    {
+    items =
+        {
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_acc_sett_def_prof"\t\t";
+            item = KGSSettIdHSDP;
+            },
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_set_auto_answer"\t\t";
+            item = KGSSettIdHSAA;
+            }
+        };
+    }
+
+//============================================================================
+// Definitions used in the Loopset view
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_LOOPSET_VIEW
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_acc_loopset_view
+    {
+    menubar = r_gs_menubar_change_exit;
+    cba = R_GS_SOFTKEYS_OPTIONS_BACK_CHANGE;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_LOOPSET_TITLE
+//----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_acc_loopset_title
+    {
+    txt = qtn_set_title_settings_loopset;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_LOOPSET_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE GS_FEATURE_ARRAY r_acc_loopset_lbx
+    {
+    items =
+        {
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_acc_sett_def_prof"\t\t";
+            item = KGSSettIdLSDP;
+            },
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_set_auto_answer"\t\t";
+            item = KGSSettIdLSAA;
+            }
+        };
+    }
+
+//============================================================================
+// Definitions used in the Music Stand view
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_MUSIC_STAND_VIEW
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_acc_music_stand_view
+    {
+    menubar = r_gs_menubar_change_exit;
+    cba = R_GS_SOFTKEYS_OPTIONS_BACK_CHANGE;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_MUSIC_STAND_TITLE
+//----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_acc_music_stand_title
+    {
+    txt = qtn_set_title_settings_music_stand;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_MUSIC_STAND_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE GS_FEATURE_ARRAY r_acc_music_stand_lbx
+    {
+    items =
+        {
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_acc_sett_def_prof"\t\t";
+            item = KGSSettIdMSDP;
+            },
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_set_auto_answer"\t\t";
+            item = KGSSettIdMSAA;
+            },
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_set_settings_lights"\t\t";
+            item = KGSSettIdMSL;
+            }
+        };
+    }
+
+
+//============================================================================
+// Definitions used in the TTY view
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_TTY_VIEW
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_acc_tty_view
+    {
+    menubar = r_gs_menubar_change_exit;
+    cba = R_GS_SOFTKEYS_OPTIONS_BACK_CHANGE;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_TTY_TITLE
+//----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_acc_tty_title
+    {
+    txt = qtn_set_title_settings_tty;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_TTY_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE GS_FEATURE_ARRAY r_acc_tty_lbx
+    {
+    items =
+        {
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_acc_sett_def_prof"\t\t";
+            item = KGSSettIdTextPhoneDP;
+            }
+        };
+    }
+
+//============================================================================
+// Definitions used in the TV Out view
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_TVOUT_VIEW
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_acc_tvout_view
+    {
+    menubar = r_gs_menubar_change_exit;
+    cba = R_GS_SOFTKEYS_OPTIONS_BACK_CHANGE;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_TVOUT_TITLE
+//----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_acc_tvout_title
+    {
+    txt = qtn_set_title_settings_tv_out;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_TVOUT_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE GS_FEATURE_ARRAY r_acc_tvout_lbx
+    {
+    items =
+        {
+        GS_FEATURE
+            {
+            txt = " \t"qtn_acc_sett_def_prof"\t\t";
+            item = EGSSettIdTvoutDP;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_tv_aspect_ratio"\t\t";
+            item = EGSSettIdTvAspectRatio;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_tv_system"\t\t";
+            item = EGSSettIdTvSystem;
+            },
+        GS_FEATURE
+            {
+            txt = " \t"qtn_set_tv_flicker_filter"\t\t";
+            item = EGSSettIdTvFlickerFilter;
+            }
+        };
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_ASPECT_RATIO_SETTING_PAGE
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_acc_aspect_ratio_setting_page
+    {
+    number = EAknSettingPageNoOrdinalDisplayed;
+    label = qtn_set_tv_aspect_ratio;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    type = EAknSetListBox;
+    editor_resource_id = r_setting_listbox;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_ASPECT_RATIO_SETTING_PAGE_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_acc_aspect_ratio_setting_page_lbx
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = qtn_set_select_normal_screen;
+            },
+        LBUF
+            {
+            txt = qtn_set_select_wide_screen;
+            }
+        };
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_FLICKER_FILTER_SETTING_PAGE
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_acc_flicker_filter_setting_page
+    {
+    number = EAknSettingPageNoOrdinalDisplayed;
+    label = qtn_set_tv_flicker_filter;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    type = EAknSetListBox;
+    editor_resource_id = r_setting_listbox;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_FLICKER_FILTER_SETTING_PAGE_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_acc_flicker_filter_setting_page_lbx
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = qtn_set_tv_flicker_filter_on;
+            },
+        LBUF
+            {
+            txt = qtn_set_tv_flicker_filter_off;
+            }
+        };
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_TV_SYSTEM_SETTING_PAGE
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_acc_tv_system_setting_page
+    {
+    number = EAknSettingPageNoOrdinalDisplayed;
+    label = qtn_set_tv_system;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    type = EAknSetListBox;
+    editor_resource_id = r_setting_listbox;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_TV_SYSTEM_SETTING_PAGE_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_acc_tv_system_setting_page_lbx
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = qtn_set_select_pal;
+            },
+        LBUF
+            {
+            txt = qtn_set_select_palm;
+            },
+        LBUF
+            {
+            txt = qtn_set_select_ntsc;
+            }
+        };
+    }
+
+
+//----------------------------------------------------------------------------
+// R_ACC_TV_SYSTEM_SETTING_PAGE_NO_PALM_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_acc_tv_system_setting_page_no_palm_lbx
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = qtn_set_select_pal;
+            },
+        LBUF
+            {
+            txt = qtn_set_select_ntsc;
+            }
+        };
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_TV_SETTINGS_CHANGE_STR
+//----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_acc_tv_settings_change_str
+    {
+    buf = qtn_set_tv_settings_change_query;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_TV_SETTINGS_CHANGE_QUERY
+//----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_acc_tv_settings_change_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                animation = R_QGN_NOTE_INFO_ANIM;
+                label = qtn_set_tv_settings_change_query;
+                };
+            }
+        };
+    }
+
+//============================================================================
+// Definitions used in the Wired Carkit view
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_WIRED_CARKIT_VIEW
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_acc_wired_carkit_view
+    {
+    menubar = r_gs_menubar_change_exit;
+    cba = R_GS_SOFTKEYS_OPTIONS_BACK_CHANGE;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_WIRED_CARKIT_TITLE
+//----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_acc_wired_carkit_title
+    {
+    txt = qtn_set_title_settings_wired_carkit;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_WIRED_CARKIT_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE GS_FEATURE_ARRAY r_acc_wired_carkit_lbx
+    {
+    items =
+        {
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_acc_sett_def_prof"\t\t";
+            item = KGSSettIdCKDP;
+            },
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_set_auto_answer"\t\t";
+            item = KGSSettIdCKAA;
+            },
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_set_settings_lights"\t\t";
+            item = KGSSettIdCKL;
+            }
+        };
+    }
+
+//============================================================================
+// Definitions used in the Wireless Carkit view
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_WIRELESS_CARKIT_VIEW
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_acc_wireless_carkit_view
+    {
+    menubar = r_gs_menubar_change_exit;
+    cba = R_GS_SOFTKEYS_OPTIONS_BACK_CHANGE;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_WIRELESS_CARKIT_TITLE
+//----------------------------------------------------------------------------
+//
+RESOURCE TITLE_PANE r_acc_wireless_carkit_title
+    {
+    txt = qtn_set_title_settings_wireless_carkit;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_WIRELESS_CARKIT_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE GS_FEATURE_ARRAY r_acc_wireless_carkit_lbx
+    {
+    items =
+        {
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_acc_sett_def_prof"\t\t";
+            item = KGSSettIdWCKDP;
+            },
+        GS_FEATURE
+            {
+            txt =  " \t"qtn_set_auto_answer"\t\t";
+            item = KGSSettIdWCKAA;
+            }
+        };
+    }
+
+//============================================================================
+// Commonly used definitions
+//============================================================================
+
+//----------------------------------------------------------------------------
+// R_ACC_DEFAULT_PROFILE_SETTING_PAGE
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_acc_default_profile_setting_page
+    {
+    number = EAknSettingPageNoOrdinalDisplayed;
+    label = qtn_acc_sett_def_prof;
+    softkey_resource = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+    type = EAknSetListBox;
+    editor_resource_id = r_setting_listbox;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_ACTIVE_PROFILE
+//----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_acc_active_profile
+    {
+    buf = qtn_acc_list_act_prof;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_AUTO_ANSWER_SETTING_PAGE
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_acc_auto_answer_setting_page
+    {
+    number = EAknSettingPageNoOrdinalDisplayed;
+    label = qtn_set_auto_answer;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    type =  EAknSetListBox;
+    editor_resource_id = r_setting_listbox;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_AUTO_ANSWER_SETTING_PAGE_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_acc_auto_answer_setting_page_lbx
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = qtn_set_auto_answer_on;
+            },
+        LBUF
+            {
+            txt = qtn_set_auto_answer_off;
+            }
+        };
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_LIGHTS_SETTING_PAGE
+//----------------------------------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_acc_lights_setting_page
+    {
+    number = EAknSettingPageNoOrdinalDisplayed;
+    label = qtn_set_settings_lights;
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    type =  EAknSetListBox;
+    editor_resource_id = r_setting_listbox;
+    }
+
+//----------------------------------------------------------------------------
+// R_ACC_LIGHTS_SETTING_PAGE_LBX
+//----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_acc_lights_setting_page_lbx
+    {
+    items =
+        {
+        LBUF
+            {
+            txt = qtn_set_settings_lights_on;
+            },
+        LBUF
+            {
+            txt = qtn_set_settings_lights_automatic;
+            }
+        };
+    }

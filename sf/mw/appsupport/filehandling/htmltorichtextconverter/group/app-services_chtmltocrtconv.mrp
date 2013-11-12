@@ -1,0 +1,14 @@
+component	app-services_chtmltocrtconv
+source	\sf\mw\appsupport\filehandling\htmltorichtextconverter
+binary	\sf\mw\appsupport\filehandling\htmltorichtextconverter\group	all
+
+exports	\sf\mw\appsupport\filehandling\htmltorichtextconverter\group
+
+notes_source	\component_defs\release.src
+
+
+ipr E 
+ipr T \sf\mw\appsupport\filehandling\htmltorichtextconverter\tdata
+ipr T \sf\mw\appsupport\filehandling\htmltorichtextconverter\tsrc
+ipr T \sf\mw\appsupport\filehandling\htmltorichtextconverter\test 
+

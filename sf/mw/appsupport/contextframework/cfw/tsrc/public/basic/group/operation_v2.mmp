@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../mt_cfsisupgrade/operation_v2/operation_v2.hrh"
+
+TARGETTYPE		PLUGIN
+TARGET			operation_v2.dll
+UID 			0x10009D8D KOperation_V2DllUid
+CAPABILITY      	CAP_GENERAL_DLL
+
+SOURCEPATH		../mt_cfsisupgrade/operation_v2
+SOURCE			main.cpp
+SOURCE			operation_v2.cpp
+SOURCE			operationnode_v2.cpp
+
+USERINCLUDE		../mt_cfsisupgrade/operation_v2
+
+MW_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../mt_cfsisupgrade/operation_v2
+START RESOURCE  operation_v2.rss
+TARGET          operation_v2.rsc
+TARGETPATH      /resource/plugins
+END
+
+LIBRARY         euser.lib
+LIBRARY         cfoperationpluginservices.lib
+LIBRARY         cfservices.lib
+LIBRARY         xmldom.lib
+LIBRARY         estor.lib
+
+// End of file

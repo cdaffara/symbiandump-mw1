@@ -1,0 +1,6 @@
+<ContextSourceSettings>
+    <SettingNameNode attribute1="attributevalue1">
+        <ParamNameNode param1="value1"/>
+        <ParamNameNode param1="value1" param2="value2"/>
+    </SettingNameNode>
+</ContextSourceSettings>

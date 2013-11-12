@@ -1,0 +1,40 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+;Languages
+&EN
+
+;Header
+; SA = Symbian Application
+; RU = Rom Upgrade
+#{"ticoncaptionoverride"}, (0x2001B674), 1, 0, 0, TYPE=SA
+
+%{"Nokia India Pvt Ltd"}
+:"Nokia India Pvt Ltd"
+
+"\epoc32\release\armv5\udeb\ticoncaptionoverride.exe"-"!:\sys\bin\ticoncaptionoverride.exe"
+"\epoc32\data\z\apparctestregfiles\ticoncaptionoverride_reg.rsc"-"!:\private\10003a3f\import\apps\ticoncaptionoverride_reg.rsc"
+"\epoc32\data\z\apparctestregfiles\ticoncaptionoverride.rsc"-"!:\resource\apps\ticoncaptionoverride.rsc"
+"\epoc32\data\z\apparctestregfiles\ticoncaptionoverride_loc.rsc"-"!:\resource\apps\ticoncaptionoverride_loc.rsc"
+"\epoc32\data\z\apparctestregfiles\ticoncaptionoverride_loc.r01"-"!:\resource\apps\ticoncaptionoverride_loc.r01"
+"\epoc32\data\z\apparctestregfiles\ticoncaptionoverride_loc.r02"-"!:\resource\apps\ticoncaptionoverride_loc.r02"
+"\epoc32\data\z\apparctestregfiles\ticoncaptionoverride_loc.r03"-"!:\resource\apps\ticoncaptionoverride_loc.r03"
+"\epoc32\data\z\apparctestregfiles\ticoncapoverride.mbm"-"!:\resource\apps\ticoncapoverride.mbm"
+"\epoc32\data\z\apparctestregfiles\ticoncapoverride02.m02"-"!:\resource\apps\ticoncapoverride02.m02"
+"\epoc32\data\z\apparctestregfiles\svg_icon.svg"-"!:\resource\apps\svg_icon.svg"
+
+

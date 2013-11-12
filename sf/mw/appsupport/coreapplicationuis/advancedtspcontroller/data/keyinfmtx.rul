@@ -1,0 +1,70 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <!-- Check if FM Tx has been enabled -->
+    <if>
+        <and>
+            <equals>
+                <contextRef source='FmTx' type='State'/>
+                <string>Active</string>
+            </equals>
+            <equals>
+                <contextRef source='Call' type='State'/>
+                <string>None</string>
+            </equals>
+        </and>
+        <actions>
+            <!-- FM Tx has been enabled -->
+            <!-- Store and replace the volume event handling table -->
+            <Tsp
+            storeRoutingTable='01'/>
+
+            <Tsp
+            routingTable='01'
+            keyEventRemConVolumeUp='41'
+            keyEventRemConVolumeDown='42'
+            />
+
+	        <Tsp
+	        routingTable='01'
+    	    ruleDefaultApp='02'
+    	    defaultApplicationSysAp='100058F3'
+    	    />
+        </actions>
+    </if>
+    <elseIf>
+        <and>
+            <equals>
+                <contextRef source='Call' type='State'/>
+                <string>None</string>
+            </equals>
+            <or>
+                <equals>
+                    <contextRef source='FmTx' type='State'/>
+                    <string>Off</string>
+                </equals>
+                <equals>
+                    <contextRef source='FmTx' type='State'/>
+                    <string>Active</string>
+                </equals>
+                <equals>
+                    <contextRef source='FmTx' type='State'/>
+                    <string>PowerSaveAccessory</string>
+                </equals>
+                <equals>
+                    <contextRef source='FmTx' type='State'/>
+                    <string>PowerSaveInactivity</string>
+                </equals>
+                <equals>
+                    <contextRef source='FmTx' type='State'/>
+                    <string>Inactive</string>
+                </equals>            
+            </or>
+        </and>
+        <actions>
+            <!-- FM Tx has been disabled -->
+            <!-- Restore the volume event handling table -->
+            <Tsp
+            restoreRoutingTable='01'/>
+        </actions>
+    </elseIf>
+</script>

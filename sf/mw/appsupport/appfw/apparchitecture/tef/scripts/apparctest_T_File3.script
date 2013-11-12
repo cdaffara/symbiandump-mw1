@@ -1,0 +1,41 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-UIFRAMEWORKS-APPARC-0047
+//! @SYMDEF 			INC069526
+//! @SYMTestCaseDesc 		When an implementation of the ApSidChecker interface invokes the rescan callback that was passed to it,
+//!                 		the App list server should scan for application registration files. This tests that it does so.
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		Trigger the loading of a special plugin implementing the ApSidChecker interface
+                   		Tell the loaded instance of the aforementioned implementation to trigger a rescan via pub&sub
+		    		-> The plugin will invoke its callback
+		    		-> The plugin will start a timer
+		    		-> The timer will publish a result when either:
+		       			a) it recieves an AppRegisteredAt() call -- this is part of the scan we tried to trigger. (success)
+		       			b) the timer completes (failure)
+		   		Retrieve the results from the plugin, again via pub & sub
+//! @SYMTestExpectedResults 	The Apparc App list server scans for new/removed apps when a plugins requests it
+
+START_TESTCASE API-APPFWK-UIFRAMEWORKS-APPARC-0047
+
+PRINT Run T_File3 Apparc test
+//
+LOAD_SUITE ApparctestServer
+DELAY 5000
+RUN_TEST_STEP 1000 ApparctestServer T_File3 
+
+END_TESTCASE API-APPFWK-UIFRAMEWORKS-APPARC-0047

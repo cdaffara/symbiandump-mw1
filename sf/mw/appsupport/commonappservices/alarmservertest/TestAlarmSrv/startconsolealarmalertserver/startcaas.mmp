@@ -1,0 +1,45 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// CAAS stands for 'ConsoleAlarmAlertServer' -
+// a crippled version of AlarmAlertServer for use in textshell mode
+// This mmp produces a TestServer with one TestStep which starts CAAS under TestExecute
+// 
+//
+
+
+
+TARGET		startcaas.exe
+TARGETTYPE	exe
+UID			0x1000007A
+VENDORID 	0x70000001
+
+
+SOURCEPATH	.
+SOURCE		startcaasserver.cpp
+SOURCE		startcaasstep.cpp	
+
+USERINCLUDE		../startconsolealarmalertserver
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY		euser.lib
+LIBRARY		testexecuteutils.lib
+LIBRARY		efsrv.lib
+LIBRARY		testexecutelogclient.lib
+
+#ifndef MARM
+#endif
+
+MACRO __DATA_CAGING__
+MACRO __SECURE_API__
+CAPABILITY All -TCB

@@ -1,0 +1,50 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#include <conplugin.rh>
+#include "TCon3.hrh"
+
+RESOURCE CONARC_RESOURCE_FILE
+	{
+	converter_list=
+		{
+		CONVERTER_DATA
+			{
+			conv_uid=KTCon3ImplementationUid; // UID of the converter								 //MConverterBase::Uid
+			from_list=
+				{
+				MIME 
+					{ 
+					type="application/unknown"; 
+					lang_list=
+						{
+						LANG_DATA{lang_id=01;translation="englishepoc32/cplaintext";}
+						};
+					}
+				};
+			to_list=
+				{
+				MIME 
+					{ 
+					type="xyzzy/frot";
+					lang_list=
+						{
+						LANG_DATA{lang_id=02;translation="frenchxyzzy/frot";}
+						};
+					}
+				};
+			}
+		};
+	}

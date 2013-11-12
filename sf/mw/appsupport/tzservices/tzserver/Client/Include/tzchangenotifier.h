@@ -1,0 +1,60 @@
+// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __tzchangenotifier_h__
+#define __tzchangenotifier_h__
+
+#include <e32base.h>
+
+class RTz;
+class CTzConverter;
+class CTzRuleHolder;
+
+//-------------------------------------------------------------------------
+/**
+Observes the Time Zone Server and relays change notification of time zone
+to the rules holder so it can clear its cache.
+
+@internalComponent
+@since 9.1
+*/
+class CTzChangeNotifier : public CActive
+	{
+public:
+	~CTzChangeNotifier();
+	static CTzChangeNotifier* NewL( CTzRuleHolder& aRulesHolder );
+	TInt StartObserving();
+	void StopObserving();
+	
+	void RunIfReadyL();
+
+private:
+    inline CTzChangeNotifier( CTzRuleHolder& aRulesHolder );
+
+	// from CActive
+	virtual void RunL();
+	virtual void DoCancel();
+
+private:
+    CTzRuleHolder& iRulesHolder;
+	};
+
+inline CTzChangeNotifier::CTzChangeNotifier( CTzRuleHolder& aRulesHolder ) :
+		CActive       (CActive::EPriorityStandard), 
+		iRulesHolder  (aRulesHolder)
+		{
+		}
+
+#endif

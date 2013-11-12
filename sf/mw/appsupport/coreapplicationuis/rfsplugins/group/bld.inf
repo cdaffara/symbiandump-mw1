@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for RFS plugins.
+*
+*  Copyright (c) 2008 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by
+*  Nokia Corporation. All rights are reserved. Copying,
+*  including reproducing, storing, adapting or translating, any
+*  or all of this material requires the prior written consent of
+*  Nokia Corporation. This material also contains confidential
+*  information which may not be disclosed to others without the
+*  prior written consent of Nokia Corporation.
+* ==============================================================================
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../rom/RFSPlugins.iby                              CORE_MW_LAYER_IBY_EXPORT_PATH(RFSPlugins.iby)
+
+PRJ_MMPFILES
+
+#include "../AIRFSPlugin/group/bld.inf"
+#include "../DisplayContrastPlugin/group/bld.inf"
+#include "../CertRFSPlugin/group/bld.inf"
+#include "../ClockRFSPlugin/group/bld.inf"
+#include "../DatastoreRFSPlugin/group/bld.inf"
+#include "../DefaultFolderRFSPlugin/group/bld.inf"
+#include "../NitzRFSPlugin/group/bld.inf"
+#include "../StarterRFSPlugin/group/bld.inf"
+#include "../SyncMLRFSPlugin/group/bld.inf"
+#include "../TelephonyRFSPlugin/group/bld.inf"
+#include "../FormatterRFSPlugin/group/bld.inf"
+#include "../UnitconverterRFSPlugin/group/bld.inf"
+#include "../SIPRFSPlugin/group/bld.inf"
+#include "../msgcentrerfsplugin/group/bld.inf"

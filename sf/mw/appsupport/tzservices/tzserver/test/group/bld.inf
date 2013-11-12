@@ -1,0 +1,102 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_TESTMMPFILES
+../switest/group/switestlib.mmp
+../Unit/group/DstUnitTests.mmp support
+../Integration/group/DstIntServer.mmp support
+../component/tz_userdata.mmp
+../component/t_databaseupdate.mmp 
+../component/tz_backup.mmp 
+../component/t_tzdatachangenotification.mmp
+../component/t_tzdatabaseupdate.mmp 
+../component/t_tzlocalizationdbcreationtests.mmp
+../component/t_bootperformance.mmp
+../switest/group/t_tzswiobserver.mmp
+
+PRJ_TESTEXPORTS
+
+// ROM
+timezonertests.iby				/epoc32/rom/include/timezonertests.iby
+timezonetests.iby				/epoc32/rom/include/timezonetests.iby
+teststartupmode.iby				/epoc32/rom/include/teststartupmode.iby
+
+// Integration test scripts
+../Integration/dstscripts/Locations.ini			c:/dstscripts/locations.ini
+../Integration/dstscripts/LocationTest.script		c:/dstscripts/locationtest.script
+../Integration/dstscripts/Conversions.ini			c:/dstscripts/conversions.ini
+../Integration/dstscripts/ConversionTest.script	c:/dstscripts/conversiontest.script
+../Integration/dstscripts/VCal.ini					c:/dstscripts/vcal.ini
+../Integration/dstscripts/VCalTest.script			c:/dstscripts/vcaltest.script
+../Integration/dstscripts/Performance.ini			c:/dstscripts/performance.ini
+../Integration/dstscripts/PerformanceTest.script	c:/dstscripts/performancetest.script
+../Integration/dstscripts/AutoUpdate.ini		c:/dstscripts/autoupdate.ini
+../Integration/dstscripts/AutoUpdateTest.script		c:/dstscripts/autoupdatetest.script
+../Integration/dstscripts/UTCOffset.ini		c:/dstscripts/utcoffset.ini
+../Integration/dstscripts/UTCOffsetTest.script	c:/dstscripts/utcoffsettest.script
+../Integration/dstscripts/AutoUpdateNotification.ini c:/dstscripts/autoupdatenotification.ini
+../Integration/dstscripts/autoupdatenotificationtest.script c:/dstscripts/autoupdatenotificationtest.script
+../Integration/dstscripts/UTCAlarm.ini		c:/dstscripts/utcalarm.ini
+../Integration/dstscripts/UTCAlarmTest.script	c:/dstscripts/utcalarmtest.script
+../Integration/dstscripts/isdaylightsavingon.ini		c:/dstscripts/isdaylightsavingon.ini
+../Integration/dstscripts/isdaylightsavingontest.script	c:/dstscripts/isdaylightsavingontest.script
+../Integration/dstscripts/ServerMsgSender.ini		c:/dstscripts/servermsgsender.ini
+../Integration/dstscripts/ServerMsgSender.script           c:/dstscripts/servermsgsender.script
+../Integration/dstscripts/BackupRestore.script	    c:/dstscripts/backuprestore.script
+../Integration/dstscripts/BackupRestore.ini        c:/dstscripts/backuprestore.ini
+../Integration/dstscripts/TestNaiadTZServer.ini		c:/dstscripts/testnaiadtzserver.ini
+../Integration/dstscripts/TestNaiadTZServer.script		c:/dstscripts/testnaiadtzserver.script
+../Integration/dstscripts/TimeZoneOffsetCheck.script	c:/dstscripts/TimeZoneOffsetCheck.script
+../Integration/dstscripts/TimeZoneOffsetCheck.ini		c:/dstscripts/TimeZoneOffsetCheck.ini
+../Integration/dstscripts/NextDSTChange.ini	c:/dstscripts/nextdstchange.ini
+../Integration/dstscripts/NextDSTChange.script		c:/dstscripts/nextdstchange.script
+../Integration/dstscripts/UnknownZoneTime.script	c:/dstscripts/unknownzonetime.script
+
+// Unit test scripts
+../Unit/dstscripts/cenrep_access_all.cre			z:/dstscripts/cenrep_access_all.cre
+../Unit/dstscripts/cenrep_access_all.cre			c:/dstscripts/cenrep_access_all.cre
+../Unit/dstscripts/unittest.script					c:/dstscripts/unittest.script
+../Unit/dstscripts/unittest.ini 					c:/dstscripts/unittest.ini
+../Unit/dstscripts/dstdatabasemanagerstep.ini 		c:/dstscripts/dstdatabasemanagerstep.ini
+../Unit/dstscripts/encodedrulesstep.ini 			c:/dstscripts/encodedrulesstep.ini
+../Unit/dstscripts/tzupdatenotification.ini 		c:/dstscripts/tzupdatenotification.ini
+../Unit/dstscripts/actualisedrules.ini             c:/dstscripts/actualisedrules.ini	
+../Unit/dstscripts/tzrules.ini                     c:/dstscripts/tzrules.ini
+
+//RTest exports
+../component/testresourcefiles/tzdb.dbz				z:/testresourcefiles/tzdb.dbz
+../component/testresourcefiles/tz_userdata_empty.db	z:/testresourcefiles/tz_userdata_empty.db
+
+../component/testresourcefiles/timezonegroups.r01  z:/testresourcefiles/timezonegroups.r01
+../component/testresourcefiles/timezonegroups.r02  z:/testresourcefiles/timezonegroups.r02
+../component/testresourcefiles/timezonegroups.rsc  z:/testresourcefiles/timezonegroups.rsc
+../component/testresourcefiles/timezones.r01  		z:/testresourcefiles/timezones.r01
+../component/testresourcefiles/timezones.r02  		z:/testresourcefiles/timezones.r02
+../component/testresourcefiles/timezones.rsc  		z:/testresourcefiles/timezones.rsc
+../component/testresourcefiles/locDbStart_test.db	z:/testresourcefiles/locDbStart_test.db
+../component/testresourcefiles/signed_timezone_upgrade.sis  z:/testresourcefiles/signed_timezone_upgrade.sis
+../switest/data/TEFSigned_timezone_upgrade.SIS     z:/data/TEFSigned_timezone_upgrade.sis
+
+#ifdef WINSCW
+PRJ_TESTEXTENSIONS
+// For the SWI tests, tzserver.exe needs to be present
+// under z/sys/bin. The following section on extension
+// makefiles copies the file for use in emulator platform
+start	extension	syslibs/fm_copyfile_to_winscw_zdrive
+	option FILE_TO_COPY tzserver.exe
+	option SRC_PATH $(EPOCROOT)epoc32/release/winscw/udeb
+	option DEST_PATH z/sys/bin
+end
+#endif

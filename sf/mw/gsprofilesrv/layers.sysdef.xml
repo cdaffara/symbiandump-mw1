@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/mw/gsprofilesrv" >
+]>
+
+<SystemDefinition name="gsprofilesrv" schema="1.5.1">
+  <systemModel>
+    <layer name="bldfirst_mw_layer">
+      <module name="gsprofilesrv">
+        <unit name="ftuwizardmodel_api" unitID="ftuwizardmodel_api" mrp="" bldFile="&layer_real_source_path;/gsprofilesrv_plat/ftuwizardmodel_api" proFile="ftuwizardmodel_api.pro" qmakeArgs="-r -config rom"/>
+        <unit name="ftuwizardmodel" unitID="ftuwizardmodel" mrp="" bldFile="&layer_real_source_path;/ftuwizardmodel" proFile="ftuwizardmodel.pro" qmakeArgs="-r -config rom"/>
+        <unit name="controlpanel_api" unitID="controlpanel_api" mrp="" bldFile="&layer_real_source_path;/gsprofilesrv_plat/controlpanel_api" proFile="controlpanel_api.pro" qmakeArgs="-r -config rom"/>
+        <unit name="gsprofilesrv" unitID="presdo.gsprofilesrv" bldFile="&layer_real_source_path;/group" mrp="" />
+      </module>
+    </layer>
+    <layer name="mw_layer">
+      <module name="controlpanel">
+        <unit unitID="controlpanel" mrp="" bldFile="&layer_real_source_path;/controlpanel" name="controlpanel" proFile="controlpanel.pro" qmakeArgs="-r -config rom"/>
+      </module>
+    </layer>
+    <layer name="qt_unit_test_layer">
+      <module name="controlpanel_tests">
+        <unit unitID="presdo.controlpanel_ui_contants" mrp="" bldFile="&layer_real_source_path;/controlpanel/tsrc" proFile="tsrc.pro" name="controlpanel_ui_contants" qmakeArgs="-r"/>
+      </module>
+    </layer>
+    
+  </systemModel>
+</SystemDefinition>

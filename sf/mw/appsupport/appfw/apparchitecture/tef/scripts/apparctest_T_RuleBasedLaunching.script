@@ -1,0 +1,32 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-APPARC-0023  
+//! @SYMPREQ 			PREQ1122   
+//! @SYMTestCaseDesc 		Rule Based Launching of Applications     
+//! @SYMTestPriority 		High   
+//! @SYMTestStatus 		3. Released   
+//! @SYMTestActions 		The test utilises 4 test applications that simply display the appication name. Each application is launched and closed in sequence.
+//! @SYMTestExpectedResults 	The test verifies that each application can be opened and closed normally.
+
+START_TESTCASE API-APPFWK-APPARC-0023
+
+PRINT Run T_RuleBasedLaunching Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 200 ApparcTestServer T_RuleBasedLaunching
+
+END_TESTCASE API-APPFWK-APPARC-0023

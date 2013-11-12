@@ -1,0 +1,48 @@
+// Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// mmp file for the grep utility
+// 
+//
+
+TARGET		grep.exe
+TARGETTYPE	EXE
+
+UID		0x20004c45 0x2000EE90
+
+SOURCEPATH	../src
+SOURCE		grep.c
+SOURCE		file.c
+SOURCE		binary.c
+SOURCE		mmfile.c
+SOURCE		queue.c
+SOURCE		util.c
+SOURCE		namespace.c
+
+SOURCEPATH	../../src
+SOURCE		err.c
+SOURCE		fts.c
+
+USERINCLUDE	 ../inc
+USERINCLUDE	 ../../inc
+
+OS_LAYER_LIBC_SYSTEMINCLUDE
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY		libc.lib 
+
+//LIBRARY		zlib.lib 
+
+LIBRARY     euser.lib 
+STATICLIBRARY	libcrt0.lib 
+SMPSAFE

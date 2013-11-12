@@ -1,0 +1,38 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T_NonNativeAppsStep-TestAppForDocument-0001
+//! @SYMDEF			DEF065742
+//! @SYMTestCaseDesc 		Tests AppForDocument API for non native applications.
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions		Call AppForDocument, first with the file name, and then with the file data, with a series of different known files.
+//!   				API Calls:
+//!   				RApaLsSession::AppForDocument(const TDesC &aFileName, TUid &aAppUid, TDataType &aDataType) const;
+//!   				RApaLsSession::AppForDocument(RFile &aFile, TUid &aAppUid, TDataType &aDataType) const;
+//! @SYMTestExpectedResults 	Test checks MIME type and UIDs obtained match the expected ones.
+
+START_TESTCASE API-APPFWK-T_NonNativeAppsStep-TestAppForDocument-0001
+
+PRINT Run NonNativeApps Apparc test
+//
+// Testexecute not yet startup state aware (DEF059510). Until then, delay required to ensure emulator boot has finished
+DELAY 5000
+//
+LOAD_SUITE ApparctestServer
+RUN_TEST_STEP 1000 ApparctestServer T_NonNativeApps
+
+END_TESTCASE API-APPFWK-T_NonNativeAppsStep-TestAppForDocument-0001

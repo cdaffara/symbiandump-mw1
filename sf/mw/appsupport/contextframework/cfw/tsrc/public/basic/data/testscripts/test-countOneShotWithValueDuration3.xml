@@ -1,0 +1,26 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+    	<and>
+	        <count oneShotAt='2' type='trigger'>
+	            <contextRef source='Test' type='Counting'/>
+	        </count>
+	        <equal>
+	            <contextRef source='Test' type='Control'
+	                        value='True'/>
+	        </equal>
+    	</and>
+        <actions>
+            <testAction/>
+        </actions>
+    </if>
+    <elseIf>
+        <contextUpdated>
+            <contextRef source='Test' type='Control'
+                        value='Anything'/>
+        </contextUpdated>
+        <actions>
+            <testAction/>
+        </actions>
+    </elseIf>
+</script>

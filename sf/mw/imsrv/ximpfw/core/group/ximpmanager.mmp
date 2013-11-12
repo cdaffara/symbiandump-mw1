@@ -1,0 +1,67 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for Presence Manager
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/ximpdlluids.hrh"
+
+
+
+TARGET                  ximpmanager.dll
+TARGETTYPE              dll
+UID                     XIMP_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_COMMON
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+
+SOURCEPATH              ../srcfrontend/srcmanager
+SOURCE                  ximpclientifsingleton.cpp
+SOURCE                  ximpcontextclientproxy.cpp
+SOURCE                  ximpcontexteventpump.cpp
+SOURCE                  ximpcntxteventobsarray.cpp
+SOURCE                  ximpclientimp.cpp
+SOURCE                  ximpcontextimp.cpp
+
+USERINCLUDE             ../srcfrontend/srcmanager
+USERINCLUDE             ../srcclient
+USERINCLUDE             ../srcutils
+USERINCLUDE             ../srcdatamodel
+USERINCLUDE             ../srcoperations
+USERINCLUDE             ../../presence/srcpresencedatamodel
+USERINCLUDE             ../../presence/srcpresencedatamodel/presencepublishing
+
+// TODO remove unnecessary
+SYSTEMINCLUDE           ../../inc/core/base
+SYSTEMINCLUDE           ../../inc/core/datamodel
+SYSTEMINCLUDE           ../../inc/core/protocolplugin
+SYSTEMINCLUDE           ../../inc/core/protocolpluginhost
+SYSTEMINCLUDE           ../../inc/presence/presencedatamodel
+SYSTEMINCLUDE           ../../inc/presence/presenceprotocolplugin
+SYSTEMINCLUDE           ../../inc/presence/presenceprotocolpluginhost
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 euser.lib
+LIBRARY                 ecom.lib
+LIBRARY                 bafl.lib
+LIBRARY                 estor.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 ximpsrvclient.lib
+
+// End of file

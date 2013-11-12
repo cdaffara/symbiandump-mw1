@@ -1,0 +1,74 @@
+/* Generated automatically */
+#ifndef have_Src_module_globals
+#define have_Src_module_globals
+
+extern LinkList linkedmodules;
+extern int setup_ _((UNUSED(Module m)));
+extern int boot_ _((UNUSED(Module m)));
+extern int cleanup_ _((UNUSED(Module m)));
+extern int finish_ _((UNUSED(Module m)));
+extern void register_module _((char*n,Module_func setup,Module_func boot,Module_func cleanup,Module_func finish));
+extern Linkedmod module_linked _((char const*name));
+extern int addbuiltin _((Builtin b));
+extern mod_import_function int addbuiltins _((char const*nam,Builtin binl,int size));
+extern FuncWrap wrappers;
+extern mod_import_function int addwrapper _((Module m,FuncWrap w));
+extern char**module_path;
+extern mod_import_variable LinkList modules;
+extern int add_autobin _((char*nam,char*module));
+extern int deletebuiltin _((char*nam));
+extern mod_import_function int deletebuiltins _((char const*nam,Builtin binl,int size));
+extern mod_import_function int deletewrapper _((Module m,FuncWrap w));
+#ifdef DYNAMIC
+#ifdef AIXDYNAMIC
+#else
+#ifdef HPUXDYNAMIC
+#endif
+#endif /* !AIXDYNAMIC */
+#else /* !DYNAMIC */
+#endif /* !DYNAMIC */
+extern mod_import_function int module_loaded _((const char*name));
+#ifdef DYNAMIC
+#ifdef AIXDYNAMIC
+#else
+#endif /* !AIXDYNAMIC */
+#else /* !DYNAMIC */
+#endif /* !DYNAMIC */
+extern mod_import_function int load_module _((char const*name));
+extern mod_import_function int require_module _((char*nam,const char*module,UNUSED(int res),int test));
+extern void add_dep _((const char*name,char*from));
+extern int bin_zmodload _((char*nam,char**args,Options ops,UNUSED(int func)));
+extern int unload_module _((Module m,LinkNode node));
+extern mod_import_variable Conddef condtab;
+extern Conddef getconddef _((int inf,char*name,int autol));
+extern int addconddef _((Conddef c));
+extern mod_import_function int addconddefs _((char const*nam,Conddef c,int size));
+extern Hookdef hooktab;
+extern Hookdef gethookdef _((char*n));
+extern int addhookdef _((Hookdef h));
+extern mod_import_function int addhookdefs _((char const*nam,Hookdef h,int size));
+extern int deletehookdef _((Hookdef h));
+extern mod_import_function int deletehookdefs _((UNUSED(char const*nam),Hookdef h,int size));
+extern int addhookdeffunc _((Hookdef h,Hookfn f));
+extern mod_import_function int addhookfunc _((char*n,Hookfn f));
+extern int deletehookdeffunc _((Hookdef h,Hookfn f));
+extern mod_import_function int deletehookfunc _((char*n,Hookfn f));
+extern mod_import_function int runhookdef _((Hookdef h,void*d));
+extern int runhook _((char*n,void*d));
+extern int addparamdef _((Paramdef d));
+extern mod_import_function int addparamdefs _((char const*nam,Paramdef d,int size));
+extern int deleteparamdef _((Paramdef d));
+extern mod_import_function int deleteparamdefs _((UNUSED(char const*nam),Paramdef d,int size));
+extern int add_autocond _((char*nam,int inf,char*module));
+extern int deleteconddef _((Conddef c));
+extern mod_import_function int deleteconddefs _((char const*nam,Conddef c,int size));
+extern void add_autoparam _((char*nam,char*module));
+extern MathFunc mathfuncs;
+extern MathFunc getmathfunc _((char*name,int autol));
+extern mod_import_function int addmathfunc _((MathFunc f));
+extern mod_import_function int addmathfuncs _((char const*nam,MathFunc f,int size));
+extern int add_automathfunc _((char*nam,char*module));
+extern mod_import_function int deletemathfunc _((MathFunc f));
+extern mod_import_function int deletemathfuncs _((char const*nam,MathFunc f,int size));
+
+#endif /* !have_Src_module_globals */

@@ -1,0 +1,99 @@
+/*
+* Copyright (c) 2001-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project EAPOL
+*
+*/
+
+/*
+* %version: 40 %
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+
+../rom/eapol.iby	CORE_MW_LAYER_IBY_EXPORT_PATH(eapol.iby) 
+
+// Secure policy file for saving all EAPOL and EAP databases in DBMS.
+../am/include/102072e9.spd 	/epoc32/data/z/private/100012a5/policy/102072e9.spd
+../am/include/102072e9.spd  /epoc32/release/winscw/udeb/z/private/100012a5/policy/102072e9.spd
+../am/include/102072e9.spd  /epoc32/release/winscw/urel/z/private/100012a5/policy/102072e9.spd
+
+// Backup registration file for backing up all EAPOL databases. Exported to the private cage path of WLAN engine.
+backup_registration_eapol.xml  /epoc32/data/z/private/101F8EC5/backup_registration_eapol.xml
+backup_registration_eapol.xml  /epoc32/release/winscw/udeb/z/private/101F8EC5/backup_registration_eapol.xml
+backup_registration_eapol.xml  /epoc32/release/winscw/urel/z/private/101F8EC5/backup_registration_eapol.xml
+
+// Backup registration file for backing up all EAP server databases. Exported to the private cage path of EAP server.
+backup_registration.xml  /epoc32/data/z/private/20026FCB/backup_registration.xml
+backup_registration.xml  /epoc32/release/winscw/udeb/z/private/20026FCB/backup_registration.xml
+backup_registration.xml  /epoc32/release/winscw/urel/z/private/20026FCB/backup_registration.xml
+
+// copy EAPOL configuration file to WLAN server's private cage path
+../am/core/symbian/file_config/eap_symbian.conf  /epoc32/data/z/private/101F8EC5/eap.conf
+../am/core/symbian/file_config/eap_symbian.conf  /epoc32/release/winscw/udeb/z/private/101F8EC5/eap.conf
+../am/core/symbian/file_config/eap_symbian.conf  /epoc32/release/winscw/urel/z/private/101F8EC5/eap.conf
+
+// copy EAP server configuration file to EAP server's the private cage path
+../am/core/symbian/file_config/eap_symbian.conf  /epoc32/data/z/private/20026FCB/eap.conf
+../am/core/symbian/file_config/eap_symbian.conf  /epoc32/release/winscw/udeb/z/private/20026FCB/eap.conf
+../am/core/symbian/file_config/eap_symbian.conf  /epoc32/release/winscw/urel/z/private/20026FCB/eap.conf
+
+PRJ_MMPFILES
+
+// Tools libraries are needed by other modules. Must be built first.
+#include "../tools/group/bld.inf"
+
+eap_notifier.mmp
+
+// eap server
+eapauthserver.mmp
+
+// eap server exe
+eapauthserverexe.mmp
+
+// eapclientif
+eapclientif.mmp
+
+// coreinterfaceimplementation
+eapcoreinterfaceimplementation.mmp
+
+// coreinterface
+eapcoreinterface.mmp
+
+// compiles EAPOL WPX stub
+eapolwpxstub.mmp
+
+// This is the basic set that should always be compiled for every environment.
+eapol.mmp
+eapsim.mmp
+eaptlspeap.mmp
+eapmschapv2.mmp
+eapsecurid.mmp
+eapaka.mmp
+eapprotectedsetup.mmp
+eapgeneric.mmp
+eapgeneralsettings.mmp
+
+// Interface for providing EAP authentication services to VPN
+eapvpnif.mmp
+
+// Interface for providing authentication services to WLAN
+wlaneapolif.mmp
+
+// End of file.

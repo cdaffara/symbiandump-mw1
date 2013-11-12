@@ -1,0 +1,5 @@
+EXPORTS
+	??0CMenuSATInterface@@QAE@XZ @ 1 NONAME ; CMenuSATInterface::CMenuSATInterface(void)
+	?MakeSatUiVisible@CMenuSATInterface@@QAEHHABVTDesC16@@@Z @ 2 NONAME ; int CMenuSATInterface::MakeSatUiVisible(int, class TDesC16 const &)
+	?MakeSatUiVisible@CMenuSATInterface@@QAEHHABVTDesC16@@E@Z @ 3 NONAME ; int CMenuSATInterface::MakeSatUiVisible(int, class TDesC16 const &, unsigned char)
+

@@ -1,0 +1,268 @@
+
+HbSlider[orientation="Horizontal"]
+{
+    layout:slider_horizontal;
+    min-height:expr(2*var(hb-param-widget-slider-thumb-width));    
+}
+HbVolumeSliderPopup > HbSliderPopupContentWidget > HbSlider[orientation="Vertical"]::control:portrait
+{
+    min-height:25un;
+    min-width:0.0un;
+    size-policy-horizontal:fixed;
+    size-policy-vertical:minimum-expanding;
+    top:-var(hb-param-margin-gene-top);
+    bottom:var(hb-param-margin-gene-bottom);
+    left:-var(hb-param-margin-gene-middle-horizontal);
+    right:var(hb-param-margin-gene-middle-horizontal);   
+}
+
+HbZoomSliderPopup > HbSliderPopupContentWidget > HbSlider[orientation="Vertical"]::control:portrait
+{
+    min-height:25un;
+    min-width:0.0un;
+    size-policy-horizontal:fixed;
+    size-policy-vertical:minimum-expanding;
+    top:-var(hb-param-margin-gene-top);
+    bottom:var(hb-param-margin-gene-bottom);
+    left:-var(hb-param-margin-gene-middle-horizontal);
+    right:var(hb-param-margin-gene-middle-horizontal);   
+}
+
+HbSlider[orientation="Vertical"]::control
+{   
+    min-height:15un;
+    min-width:0.0un;
+    size-policy-horizontal:fixed;
+    size-policy-vertical:minimum-expanding;
+    top:-var(hb-param-margin-gene-top);
+    bottom:var(hb-param-margin-gene-bottom);
+    left:-var(hb-param-margin-gene-middle-horizontal);
+    right:var(hb-param-margin-gene-middle-horizontal);    
+}
+
+
+HbSlider[orientation="Horizontal"]::control
+{   
+    min-width:15un;
+    min-height:0.0un;
+    size-policy-vertical:fixed;
+    size-policy-horizontal:minimum-expanding;
+}
+
+HbSlider[orientation="Vertical"]
+{
+    layout:slider_vertical;
+    min-width:expr(2*var(hb-param-widget-slider-thumb-width));
+}
+
+
+HbSlider::increment-icon
+{   
+    fixed-width:var(hb-param-graphic-size-primary-small);
+    fixed-height:var(hb-param-graphic-size-primary-small);
+}
+
+HbSlider::decrement-icon
+{
+    fixed-width:var(hb-param-graphic-size-primary-small);
+    fixed-height: var(hb-param-graphic-size-primary-small);
+}
+
+HbSlider::icon-icon
+{
+    fixed-width:var(hb-param-graphic-size-primary-small);
+    fixed-height: var(hb-param-graphic-size-primary-small);
+}
+
+HbSlider::text_item_element
+{
+    font-variant:secondary;
+    fixed-width: 9un;
+    text-height: var(hb-param-text-height-secondary);
+    text-align:center center;
+    text-line-count-max:1;
+}
+
+HbSlider::text_element
+{
+    fixed-width: 9un;
+    fixed-height: var(hb-param-text-height-secondary);
+}
+
+/* margins*/
+
+HbSlider[orientation="Vertical"]::text_item_element
+{
+    top:-var(hb-param-margin-gene-popup);
+    
+}
+
+HbSlider[orientation="Horizontal"]::text_item_element
+{
+    right:var(hb-param-margin-gene-popup);
+    
+}
+
+HbSlider[orientation="Vertical"]::icon-icon
+{
+    bottom:var(hb-param-margin-gene-popup);
+    
+}
+
+HbSlider[orientation="Horizontal"]::icon-icon
+{
+    left:-var(hb-param-margin-gene-popup);
+    
+}
+
+HbSlider[orientation="Vertical"]::increment-icon
+{
+    top:-var(hb-param-margin-gene-top);
+    
+}
+HbSlider[orientation="Horizontal"]::increment-icon
+{
+    right:var(hb-param-margin-gene-right);
+}
+
+HbSlider[orientation="Horizontal"]::control
+{
+    left:-var(hb-param-margin-gene-left);
+    right:var(hb-param-margin-gene-right);
+    top:-var(hb-param-margin-gene-middle-horizontal);
+    bottom:var(hb-param-margin-gene-middle-horizontal);
+}
+HbSlider[orientation="Vertical"]::decrement-icon
+{
+    bottom:var(hb-param-margin-gene-bottom);
+}
+HbSlider[orientation="Horizontal"]::decrement-icon
+{
+    left:-var(hb-param-margin-gene-left);
+}
+
+/*touch area*/
+HbSlider[orientation="Vertical"]::decrement-icon-toucharea
+{ 
+    fixed-width: var(hb-param-touch-area-gene-primary-medium);
+    fixed-height: var(hb-param-touch-area-gene-primary-small);    
+}
+
+HbSlider[orientation="Vertical"]::increment-icon-toucharea
+{       
+    fixed-width: var(hb-param-touch-area-gene-primary-medium);
+    fixed-height: var(hb-param-touch-area-gene-primary-small);
+}
+
+HbSlider[orientation="Vertical"]::icon
+{
+    fixed-width: var(hb-param-touch-area-gene-primary-medium);
+    fixed-height: var(hb-param-touch-area-gene-primary-small);
+}
+
+HbSlider[orientation="Horizontal"]::decrement-icon-toucharea
+{   
+    fixed-width: var(hb-param-touch-area-gene-primary-small);
+    fixed-height: var(hb-param-touch-area-gene-primary-medium);
+}
+
+HbSlider[orientation="Horizontal"]::increment-icon-toucharea
+{       
+    fixed-width: var(hb-param-touch-area-gene-primary-small);
+    fixed-height: var(hb-param-touch-area-gene-primary-medium);
+}
+
+HbSlider[orientation="Horizontal"]::icon
+{
+    fixed-width: var(hb-param-touch-area-gene-primary-small);
+    fixed-height: var(hb-param-touch-area-gene-primary-medium);  
+}
+HbSlider::spacerRight{ 
+  size-policy-horizontal: expanding; 
+} 
+HbSlider::spacerLeft{ 
+  size-policy-horizontal: expanding; 
+} 
+
+HbSlider::spacerTextRight{ 
+  size-policy-horizontal: expanding; 
+} 
+HbSlider::spacerTextLeft{ 
+  size-policy-horizontal: expanding; 
+}
+HbSlider::spacerTop{ 
+  size-policy-vertical: expanding; 
+} 
+HbSlider::spacerBottom{ 
+  size-policy-vertical: expanding; 
+} 
+
+
+/*Ticks left vertical*/
+HbSlider::tick-marksleft
+{
+    left:-var(hb-param-margin-gene-middle-horizontal);
+    top:0.0un;
+    bottom:0.0un;
+    fixed-width:1.0un;
+    size-policy-vertical:preferred;
+
+}
+
+HbSlider::tick-textsleft
+{
+    top:0.0un;
+    bottom:0.0un;
+    left:-var(hb-param-margin-gene-popup);
+    fixed-width:7.5un;
+    size-policy-vertical:preferred;
+    
+}
+/*Ticks right vertical*/
+HbSlider::tick-marksright
+{
+
+   right:var(hb-param-margin-gene-middle-horizontal);
+    fixed-width:1.0un;
+    size-policy-vertical:preferred;
+
+}
+
+HbSlider::tick-textsright
+{
+    fixed-width:7.5un;
+    size-policy-vertical:preferred;
+    right:var(hb-param-margin-gene-popup);
+}
+/*Ticks above horizontal*/
+HbSlider::tick-marksabove
+{
+    top:-var(hb-param-margin-gene-middle-vertical);
+    bottom:var(hb-param-margin-gene-middle-vertical);
+    fixed-height:1.0un;
+    size-policy-horizontal:preferred;
+
+}
+
+HbSlider::tick-textsabove
+{
+    fixed-height:var(hb-param-text-height-tiny);
+    size-policy-horizontal:preferred;
+	
+}
+/*Ticks below horizontal*/
+HbSlider::tick-marksbelow
+{
+    top:-var(hb-param-margin-gene-middle-vertical);
+    bottom:var(hb-param-margin-gene-middle-vertical);
+    fixed-height:1.0un;
+    size-policy-horizontal:preferred;
+    
+}
+
+HbSlider::tick-textsbelow
+{
+    fixed-height:var(hb-param-text-height-tiny);
+    size-policy-horizontal:preferred;
+}
+

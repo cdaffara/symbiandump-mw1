@@ -1,0 +1,36 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-GroupNameStep-ver2-DoTestCaptionNameL-0001
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released 
+//! @SYMTestCaseDesc 		T-groupname to test localisable resource file
+//! @SYMTestActions 		It connects to the Application Architecture server to perform the following:
+//!				To test that information read from "old format" resource files isn't thrown away because
+//!				of an error while trying to read the group name member that isn't present in localisable resource file..
+//!				It calls following function to get the information about the groupname.
+//!				RApaLsSession::GetAppInfo(TApaAppInfo& aInfo,TUid aAppUid) const\n
+//! @SYMTestExpectedResults 	GetAppInfo should return the caption name and ShortCaption Name 
+//!				defined in the localisable resource file.
+
+START_TESTCASE API-APPFWK-T-GroupNameStep-ver2-DoTestCaptionNameL-0001
+
+PRINT Run T_GroupName_ver2 Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_GroupName_ver2
+
+END_TESTCASE API-APPFWK-T-GroupNameStep-ver2-DoTestCaptionNameL-0001

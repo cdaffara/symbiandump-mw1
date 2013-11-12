@@ -1,0 +1,62 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  XIMP Framework SEARCH Feature plugin DLL uids
+*
+*/
+
+
+#ifndef SEARCHDLLUIDS_HRH
+#define SEARCHDLLUIDS_HRH
+
+
+// -----------------------------------------------------------------------------
+// Common dll uids
+// -----------------------------------------------------------------------------
+//
+#define XIMP_SEARCH_DLL_UID_STATIC_INTERFACE                   			0x1000008d
+#define XIMP_SEARCH_DLL_UID_ECOM_PLUGIN                        			0x10009D8D
+
+
+// -----------------------------------------------------------------------------
+// ECOM implementation UID
+// -----------------------------------------------------------------------------
+//
+#define XIMP_ECOM_IMPLEMENTATION_UID_SEARCH_INTERFACE   				0x2001846F
+#define XIMP_ECOM_IMPL_UID_SEARCH_DATAMODEL_INTERFACE   				0x20018470
+#define XIMP_ECOM_IMPL_UID_SEARCH_PROCESSOR_INTERFACE   				0x20018471
+#define XIMP_ECOM_IMPL_UID_SEARCH_OPERATION_INTERFACE   				0x20018472
+
+//-------------------------------------------------------------------------------------
+// HOOK uids 
+//------------------------------------------------------------------------------------
+
+#define XIMP_DLL_UID_SEARCH_HOOK                      					0x20018473
+#define XIMP_DLL_UID_SEARCH_DATAMODEL_HOOK            					0x20018474
+#define XIMP_DLL_UID_SEARCH_PROCESSOR_HOOK            					0x20018475
+#define XIMP_DLL_UID_SEARCH_OPERATIONS_HOOK            					0x20018476
+
+//-------------------------------------------------------------------------------------
+// Dll  uids 
+//------------------------------------------------------------------------------------
+
+#define XIMP_DLL_UID_SEARCH_MANAGER                   					0x20018477
+#define XIMP_DLL_UID_SEARCH_PROCESSOR	            					0x20018478
+#define XIMP_DLL_UID_SEARCH_OPERATION                   				0x20018479
+#define XIMP_DLL_UID_SEARCH_DATAMODEL                             		0x2001847A
+
+
+
+#endif // SEARCHDLLUIDS_HRH
+
+

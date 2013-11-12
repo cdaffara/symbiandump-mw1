@@ -1,0 +1,35 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+// Load the DST test server
+LOAD_SUITE DstIntServer
+
+
+START_TESTCASE   PIM-AUTOUPDATENOTIFICATIONTEST-0001
+//! @SYMTestCaseID   PIM-AUTOUPDATENOTIFICATIONTEST-0001
+RUN_TEST_STEP 20 DstIntServer AutoUpdateNotification \dstscripts\autoupdatenotification.ini AutoUpdateNotification01
+END_TESTCASE   PIM-AUTOUPDATENOTIFICATIONTEST-0001
+START_TESTCASE   PIM-AUTOUPDATENOTIFICATIONTEST-0002
+//! @SYMTestCaseID   PIM-AUTOUPDATENOTIFICATIONTEST-0002
+RUN_TEST_STEP 20 DstIntServer AutoUpdateNotification \dstscripts\autoupdatenotification.ini AutoUpdateNotification02
+END_TESTCASE   PIM-AUTOUPDATENOTIFICATIONTEST-0002
+START_TESTCASE   PIM-AUTOUPDATENOTIFICATIONTEST-0003
+//! @SYMTestCaseID   PIM-AUTOUPDATENOTIFICATIONTEST-0003
+RUN_TEST_STEP 20 DstIntServer AutoUpdateNotification \dstscripts\autoupdatenotification.ini AutoUpdateNotification03
+END_TESTCASE   PIM-AUTOUPDATENOTIFICATIONTEST-0003
+START_TESTCASE   PIM-AUTOUPDATENOTIFICATIONTEST-0004
+//! @SYMTestCaseID   PIM-AUTOUPDATENOTIFICATIONTEST-0004
+RUN_TEST_STEP 20 DstIntServer AutoUpdateNotification \dstscripts\autoupdatenotification.ini AutoUpdateNotification04
+END_TESTCASE   PIM-AUTOUPDATENOTIFICATIONTEST-0004

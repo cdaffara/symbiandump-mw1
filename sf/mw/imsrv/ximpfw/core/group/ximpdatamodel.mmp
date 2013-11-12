@@ -1,0 +1,103 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for XIMP Data Model
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/ximpdlluids.hrh"
+
+
+
+TARGET                  ximpdatamodel.dll
+TARGETTYPE              dll
+UID                     XIMP_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_COMMON
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcdatamodel
+// ---------------------------------------------------------------------------
+// API data objects
+SOURCE                  ximpfeatureinfoimp.cpp
+SOURCE                  ximpprotocolinfoimp.cpp
+SOURCE                  ximpserviceinfoimp.cpp
+SOURCE                  ximpcontextclientinfoimp.cpp
+SOURCE                  ximpcontextstateimp.cpp
+SOURCE                  ximpdatasubscriptionstateimp.cpp
+SOURCE                  ximpstatusimp.cpp
+SOURCE                  ximpidentityimp.cpp
+SOURCE                  ximprestrictedobjectcollectionimp.cpp
+SOURCE                  ximpobjectcollectionimp.cpp
+SOURCE                  ximpfeaturepluginholder.cpp
+
+
+// API data events
+SOURCE                  ximprequestcompleteeventimp.cpp
+SOURCE                  ximpcontextstateeventimp.cpp
+
+
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcdatamodel
+// ---------------------------------------------------------------------------
+//Base classes for data types
+SOURCE                  ximpapiobjbase.cpp
+SOURCE                  ximpapieventbase.cpp
+SOURCE                  ximpeventcodec.cpp
+SOURCE                  ximpapidataobjbase.cpp
+SOURCE                  ximpapidataobjfactory.cpp
+SOURCE                  ximpsubscriptionitembase.cpp
+SOURCE                  ximpconfigurationitembase.cpp
+SOURCE                  ximpcontexteventfilter.cpp
+
+//Facade APIs to adaptation
+SOURCE                  ximpobjectfactoryimp.cpp
+
+
+
+
+
+USERINCLUDE             ../srcdatamodel
+USERINCLUDE             ../srcprocessor
+USERINCLUDE             ../srcoperations
+USERINCLUDE             ../../presence/srcpresencedatamodel
+USERINCLUDE             ../srcutils
+
+
+// TODO remove unnecessary
+SYSTEMINCLUDE           ../../inc/core/base
+SYSTEMINCLUDE           ../../inc/core/datamodel
+SYSTEMINCLUDE           ../../inc/core/protocolplugin
+SYSTEMINCLUDE           ../../inc/core/protocolpluginhost
+SYSTEMINCLUDE           ../../inc/presence/presencedatamodel
+SYSTEMINCLUDE           ../../inc/presence/presencemanagement
+SYSTEMINCLUDE           ../../inc/presence/presenceprotocolplugin
+SYSTEMINCLUDE           ../../inc/presence/presenceprotocolpluginhost
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 euser.lib
+LIBRARY                 bafl.lib
+LIBRARY                 estor.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 ecom.lib
+
+
+
+// End of file

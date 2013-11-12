@@ -1,0 +1,272 @@
+<file xmlns="http://www.s60.com/xml/genconfml/1" name="bookmarks.xml"
+    target="private/10008d39">
+    <setting ref="BookmarkItems/*"/>
+    <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+        version="1.0" xmlns:xi="http://www.w3.org/2001/xinclude">
+        <xsl:output encoding="UTF-8" method="xbel" indent="yes"
+            omit-xml-declaration="yes"/>
+        <xsl:template match="configuration/data">
+            <xbel version="1.0">
+
+                <!-- Customer Top Priority Bookmark -->
+                <xsl:comment> ======= Customer Top Priority Bookmark Item ======= </xsl:comment>
+                
+                <xsl:for-each
+                    select="BookmarkItems/CustomerTopPriorityBookmarkItem[URL and URL!='']">
+                    <bookmark>
+                        <xsl:attribute name="href"><xsl:value-of
+                            select="URL"/></xsl:attribute>
+                        <title>
+                            <xsl:value-of select="Name"/>
+                        </title>
+                        <xsl:if test="Tag1!='' or Tag2!='' or Tag3!='' or Tag4!=''">
+                            <info>
+                                <metadata owner="http://www.nokia.com/bookmarks.xsd">
+                                    <tags>
+                                        <xsl:if test="Tag1!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag1"/>
+                                            </tag>
+                                        </xsl:if>
+                                        <xsl:if test="Tag2!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag2"/>
+                                            </tag>
+                                        </xsl:if>
+                                        <xsl:if test="Tag3!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag3"/>
+                                            </tag>
+                                        </xsl:if>
+                                        <xsl:if test="Tag4!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag4"/>
+                                            </tag>
+                                        </xsl:if>
+                                    </tags>
+                                </metadata>
+                            </info>
+                        </xsl:if>
+                    </bookmark>
+                </xsl:for-each>
+
+                <!-- Top Priority Bookmark -->
+                
+                <xsl:comment> ======= Top Priority Bookmark Item ======= </xsl:comment>
+                
+                <xsl:for-each
+                    select="BookmarkItems/TopPriorityBookmarkItem[URL and URL!='']">
+                    <bookmark>
+                        <xsl:attribute name="href"><xsl:value-of
+                            select="URL"/></xsl:attribute>
+                        <title>
+                            <xsl:value-of select="Name"/>
+                        </title>
+                        <xsl:if test="Tag1!='' or Tag2!='' or Tag3!='' or Tag4!=''">
+                            <info>
+                                <metadata owner="http://www.nokia.com/bookmarks.xsd">
+                                    <tags>
+                                        <xsl:if test="Tag1!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag1"/>
+                                            </tag>
+                                        </xsl:if>
+                                        <xsl:if test="Tag2!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag2"/>
+                                            </tag>
+                                        </xsl:if>
+                                        <xsl:if test="Tag3!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag3"/>
+                                            </tag>
+                                        </xsl:if>
+                                        <xsl:if test="Tag4!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag4"/>
+                                            </tag>
+                                        </xsl:if>
+                                    </tags>
+                                </metadata>
+                            </info>
+                        </xsl:if>
+                    </bookmark>
+                </xsl:for-each>
+
+                <!-- Customer Bookmarks -->
+                <xsl:comment> ======= Customer Bookmark Items ======= </xsl:comment>
+                
+                <xsl:for-each
+                    select="BookmarkItems/CustomerBookmarkItem[URL and URL!='']">
+                    <bookmark>
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="URL"/>
+                        </xsl:attribute>
+                        <title>
+                            <xsl:value-of select="Name"/>
+                        </title>
+                        <xsl:if test="Tag1!='' or Tag2!='' or Tag3!='' or Tag4!=''">
+                            <info>
+                                <metadata owner="http://www.nokia.com/bookmarks.xsd">
+                                    <tags>
+                                        <xsl:if test="Tag1!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag1"/>
+                                            </tag>
+                                        </xsl:if>
+                                        <xsl:if test="Tag2!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag2"/>
+                                            </tag>
+                                        </xsl:if>
+                                        <xsl:if test="Tag3!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag3"/>
+                                            </tag>
+                                        </xsl:if>
+                                        <xsl:if test="Tag4!=''">
+                                            <tag>
+                                                <xsl:value-of
+                                                    select="Tag4"/>
+                                            </tag>
+                                        </xsl:if>
+                                    </tags>
+                                </metadata>
+                            </info>
+                        </xsl:if>
+                    </bookmark>
+                </xsl:for-each>
+                <xsl:comment> ======= End Customer Bookmark Items ======= </xsl:comment>
+
+                <!-- Nokia Bookmarks -->
+                <xsl:choose>
+                    <xsl:when test="BookmarkItems/RemoveNokiaBookmarks='false'">
+                    
+                        <xsl:comment> ======= Nokia Bookmark Items ======= </xsl:comment>
+                    
+                        <xsl:for-each
+                            select="BookmarkItems/NokiaBookmarkItem[URL and URL!='']">
+                            <bookmark>
+                                <xsl:attribute name="href">
+                                    <xsl:value-of select="URL"/>
+                                </xsl:attribute>
+                                <title>
+                                    <xsl:value-of select="Name"/>
+                                </title>
+                                <xsl:if
+                                    test="Tag1!='' or Tag2!='' or Tag3!='' or Tag4!=''">
+                                    <info>
+                                        <metadata owner="http://www.nokia.com/bookmarks.xsd">
+                                            <tags>
+                                                <xsl:if test="Tag1!=''">
+                                                    <tag>
+                                                        <xsl:value-of
+                                                            select="Tag1"/>
+                                                    </tag>
+                                                </xsl:if>
+                                                <xsl:if test="Tag2!=''">
+                                                    <tag>
+                                                        <xsl:value-of
+                                                            select="Tag2"/>
+                                                    </tag>
+                                                </xsl:if>
+                                                <xsl:if test="Tag3!=''">
+                                                    <tag>
+                                                        <xsl:value-of
+                                                            select="Tag3"/>
+                                                    </tag>
+                                                </xsl:if>
+                                                <xsl:if test="Tag4!=''">
+                                                    <tag>
+                                                        <xsl:value-of
+                                                            select="Tag4"/>
+                                                    </tag>
+                                                </xsl:if>
+                                            </tags>
+                                        </metadata>
+                                    </info>
+                                </xsl:if>
+                            </bookmark>
+                        </xsl:for-each>
+                        <xsl:comment> ======= End Nokia Bookmark Items ======= </xsl:comment>
+                    </xsl:when>
+                    <xsl:otherwise>
+                    
+                        <xsl:comment> ======= Nokia Bookmarks Removed ======= </xsl:comment>
+                        
+                    </xsl:otherwise>
+                </xsl:choose>
+
+                <!-- Third Party Bookmarks -->
+                <xsl:choose>
+                    <xsl:when
+                        test="BookmarkItems/RemoveNokiaThirdPartyBookmarks='false'">
+                        
+                        <xsl:comment> ======= Third Party Bookmark Items ======= </xsl:comment>
+                        
+                        <xsl:for-each
+                            select="BookmarkItems/ThirdPartyBookmarkItem[URL and URL!='']">
+                            <bookmark>
+                                <xsl:attribute name="href"><xsl:value-of
+                                    select="URL"/></xsl:attribute>
+                                <title>
+                                    <xsl:value-of select="Name"/>
+                                </title>
+                                <xsl:if
+                                    test="Tag1!='' or Tag2!='' or Tag3!='' or Tag4!=''">
+                                    <info>
+                                        <metadata owner="http://www.nokia.com/bookmarks.xsd">
+                                            <tags>
+                                                <xsl:if test="Tag1!=''">
+                                                    <tag>
+                                                        <xsl:value-of
+                                                            select="Tag1"/>
+                                                    </tag>
+                                                </xsl:if>
+                                                <xsl:if test="Tag2!=''">
+                                                    <tag>
+                                                        <xsl:value-of
+                                                            select="Tag2"/>
+                                                    </tag>
+                                                </xsl:if>
+                                                <xsl:if test="Tag3!=''">
+                                                    <tag>
+                                                        <xsl:value-of
+                                                            select="Tag3"/>
+                                                    </tag>
+                                                </xsl:if>
+                                                <xsl:if test="Tag4!=''">
+                                                    <tag>
+                                                        <xsl:value-of
+                                                            select="Tag4"/>
+                                                    </tag>
+                                                </xsl:if>
+                                            </tags>
+                                        </metadata>
+                                    </info>
+                                </xsl:if>
+                            </bookmark>
+                        </xsl:for-each>
+                        <xsl:comment> ======= End Third Party Bookmark Items ======= </xsl:comment>
+                    </xsl:when>
+                    <xsl:otherwise>
+                    
+                        <xsl:comment> ======= Third Party Bookmarks Removed ======= </xsl:comment>
+                    
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xbel>
+        </xsl:template>
+    </xsl:stylesheet>
+</file>

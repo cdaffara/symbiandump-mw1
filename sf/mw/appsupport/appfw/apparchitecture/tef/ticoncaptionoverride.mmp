@@ -1,0 +1,68 @@
+// Copyright (c) 2008-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+/**
+ @file
+ @test
+ @internalComponent - Internal Symbian test code 
+*/
+
+
+TARGET        	ticoncaptionoverride.exe
+TARGETTYPE    	exe
+TARGETPATH		/sys/bin
+
+CAPABILITY 	All -Tcb
+
+UID           	0x100039CE 0x2001B674 //the original UID
+VENDORID 		0x70000001
+
+SOURCEPATH    	.
+SOURCE        	ticoncaptionoverride.cpp
+
+USERINCLUDE   	.
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+//SYSTEMINCLUDE 	/epoc32/include/techview
+
+//reg added for Datacaging
+START RESOURCE	ticoncaptionoverride_reg.rss
+TARGETPATH		/apparctestregfiles
+END
+
+START RESOURCE 	ticoncaptionoverride.rss
+TARGETPATH 		/apparctestregfiles
+END
+
+START RESOURCE 	ticoncaptionoverride_loc.rss
+TARGETPATH 		/apparctestregfiles
+LANG 			SC 01 02 03
+END
+
+START BITMAP 	ticoncapoverride.mbm
+TARGETPATH 		/apparctestregfiles
+SOURCEPATH 		../tdatasrc
+SOURCE 			c8,1 tstappicon24x20.bmp tstappicon24x20m.bmp
+SOURCE 			c8,1 tstappicon40x55.bmp tstappicon40x55m.bmp
+END
+
+START BITMAP 	ticoncapoverride02.m02
+TARGETPATH 		/apparctestregfiles
+SOURCEPATH 		../tdatasrc
+SOURCE 			c8,1 def25.bmp def25m.bmp def25.bmp def25m.bmp def50.bmp def50m.bmp
+END
+
+LIBRARY 	euser.lib apparc.lib eikcore.lib cone.lib 
+
+SMPSAFE

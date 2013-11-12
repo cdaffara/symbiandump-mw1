@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for test project
+*
+*/
+
+
+// To get macro definitions for export paths
+#include <platform_paths.hrh>
+#include "../../secureformattertest/testdatacreator/group/bld.inf"
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_TESTMMPFILES
+rfstestapp.mmp
+
+PRJ_TESTEXPORTS
+../data/testspec_folder_structure.spc /epoc32/winscw/e/testdata/testspec_folder_structure.spc
+../data/testspec_many_files.spc       /epoc32/winscw/e/testdata/testspec_many_files.spc
+../data/testspec_big_files.spc        /epoc32/winscw/e/testdata/testspec_big_files.spc
+../data/testexclude_everything.exc    /epoc32/winscw/e/testdata/testexclude_everything.exc
+../data/testexclude_nothing.exc       /epoc32/winscw/e/testdata/testexclude_nothing.exc
+../data/testexclude_2.exc             /epoc32/winscw/e/testdata/testexclude_2.exc
+../data/testexclude_3.exc             /epoc32/winscw/e/testdata/testexclude_3.exc
+../data/testexclude_4.exc             /epoc32/winscw/e/testdata/testexclude_4.exc
+../data/testexclude_5.exc             /epoc32/winscw/e/testdata/testexclude_5.exc
+../data/testexclude_6.exc             /epoc32/winscw/e/testdata/testexclude_6.exc
+../data/testexclude_7.exc             /epoc32/winscw/e/testdata/testexclude_7.exc
+../data/testexclude_8.exc             /epoc32/winscw/e/testdata/testexclude_8.exc
+
+../data/app1_spec.spc                 /epoc32/winscw/e/testdata/appspec/app1_spec.spc
+../data/app87654321_spec.spc          /epoc32/winscw/e/testdata/appspec/app87654321_spec.spc
+../data/app87654321_exclude_sth.exc   /epoc32/winscw/e/testdata/appspec/app87654321_exclude_sth.exc
+../data/app1_exclude_everything.exc   /epoc32/winscw/e/testdata/appspec/app1_exclude_everything.exc

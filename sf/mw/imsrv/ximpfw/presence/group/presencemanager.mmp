@@ -1,0 +1,75 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for Presence Manager
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/ximpdlluids.hrh"
+
+
+
+TARGET                  presencemanager.dll
+TARGETTYPE              dll
+UID                     XIMP_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_PRESENCE_MANAGER
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+
+SOURCEPATH              ../srcpresencefrontend/srcpresencemanager
+
+SOURCE                  presencepublishingimp.cpp
+SOURCE                  presentitygroupsimp.cpp
+SOURCE                  presencewatchingimp.cpp
+SOURCE                  presenceauthorizationimp.cpp
+SOURCE                  presencefeaturesimp.cpp
+
+USERINCLUDE             ../../core/srcfrontend/srcmanager
+USERINCLUDE             ../srcpresenceoperations
+USERINCLUDE             ../../core/srcutils
+USERINCLUDE             ../../core/srcdatamodel
+USERINCLUDE             ../../group
+USERINCLUDE             ../srcpresencedatamodel
+USERINCLUDE             ../srcpresencedatamodel/presentitygroups
+USERINCLUDE             ../srcpresencedatamodel/presencewatching
+USERINCLUDE             ../srcpresencedatamodel/presenceauthorization
+USERINCLUDE             ../srcpresencedatamodel/presencepublishing
+
+//USERINCLUDE             ../../core/inc
+//SYSTEMINCLUDE           ../../inc/base
+//SYSTEMINCLUDE           ../../inc/datamodel
+SYSTEMINCLUDE           ../../inc/presence/presencemanagement
+SYSTEMINCLUDE           ../../inc/core/management
+
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 euser.lib
+LIBRARY                 ecom.lib
+LIBRARY                 bafl.lib
+LIBRARY                 estor.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 presencedatamodel.lib
+LIBRARY                 ximpsrvclient.lib
+
+#if defined( ARMCC )
+DEFFILE ../eabi/ 
+#elif defined ( WINSCW )
+deffile ../bwins/ 
+#endif
+
+// End of file

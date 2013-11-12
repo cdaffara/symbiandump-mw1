@@ -1,0 +1,527 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __01_TzLocalization_RLS__
+#define __01_TzLocalization_RLS__
+
+// europe/lisbon ==============================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_lisbon_standard_name "Western European Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_lisbon_daylight_name "Western European Summer Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_lisbon_short_standard_name "WET"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_lisbon_short_daylight_name "WEST"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_lisbon_lisbon_name "Lisbon"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_lisbon_porto_name "Porto"
+
+// europe/london ==============================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_london_standard_name "Greenwich Mean Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_london_daylight_name "British Summer Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_london_short_standard_name "GMT"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_london_short_daylight_name "BST"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_london_london_name "London"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_london_manchester_name "Manchester"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_london_birmingham_name "Birmingham"
+
+// america/los_angeles ========================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_los_angeles_standard_name "Pacific Standard Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_los_angeles_daylight_name "Pacific Daylight Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_los_angeles_short_standard_name "PST"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_los_angeles_short_daylight_name "PDT"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_los_angeles_los_angeles_name "Los Angeles"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_los_angeles_san_francisco_name "San Francisco"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_los_angeles_portland_name "Portland"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_los_angeles_seattle_name "Seattle"
+
+// america/chicago ========================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_chicago_standard_name "Central Standard Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_chicago_daylight_name "Central Daylight Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_chicago_short_standard_name "CST"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_chicago_short_daylight_name "CDT"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_chicago_chicago_name "Chicago"
+
+// europe/berlin ==============================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_berlin_standard_name "Central European Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_berlin_daylight_name "Central European Summer Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_berlin_short_standard_name "CET"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_berlin_short_daylight_name "CEST"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_berlin_berlin_name "Berlin"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_berlin_bonn_name "Bonn"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_berlin_frankfurter_name "Frankfurt"
+
+
+// europe/paris ===============================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_paris_standard_name "Central European Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_paris_daylight_name "Central European Summer Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_paris_short_standard_name "CET"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_paris_short_daylight_name "CEST"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_paris_paris_city_name "Paris"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_paris_nice_name "Nice"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_paris_stockholm_name "Stockholm"
+
+
+// europe/stockholm ===============================================================
+//rls_string STRING_stockholm_standard_name "Central European Time"
+//rls_string STRING_stockholm_daylight_name "Central European Summer Time"
+//rls_string STRING_stockholm_short_standard_name "CET"
+//rls_string STRING_stockholm_short_daylight_name "CEST"
+//rls_string STRING_stockholm_stockholm_name "Stockholm"
+
+
+// australia/sydney ===========================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sydney_standard_name "Eastern Standard Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sydney_daylight_name "Eastern Standard Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sydney_short_standard_name "EST"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sydney_short_daylight_name "EST"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sydney_sydney_name "Sydney"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sydney_ballarat_name "Ballarat"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sydney_canberra_name "Canberra"
+
+// europe/tirane ===========================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_tirane_standard_name "Central European Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_tirane_daylight_name "Central European Summer Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_tirane_short_standard_name "CET"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_tirane_short_daylight_name "CEST"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_tirane_tirane_name "Tirane"
+
+
+// asia/tehran ================================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_tehran_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_tehran_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_tehran_short_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_tehran_short_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_tehran_tehran_name "Tehran"
+
+// pacific/auckland ===========================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_auckland_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_auckland_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_auckland_short_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_auckland_short_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_auckland_auckland_name "Auckland"
+
+// atlantic/stanley ===========================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_stanley_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_stanley_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_stanley_short_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_stanley_short_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_stanley_stanley_name "Stanley"
+
+
+// asia/seoul ===========================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_seoul_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_seoul_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_seoul_short_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_seoul_short_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_seoul_seoul_name "Seoul"
+
+// europe/sofia ===============================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sofia_standard_name "Eastern European Summer"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sofia_daylight_name "Eastern European Summer Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sofia_short_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sofia_short_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_sofia_sofia_name "Sofia"
+
+// brazil/rio branco ==========================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_rio_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_rio_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_rio_short_standard_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_rio_short_daylight_name ""
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_rio_rio_branco_name "Rio Branco"
+
+// america/vancouver ==========================================================
+
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_vancouver_standard_name "Pacific Standard Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_vancouver_daylight_name "Pacific Daylight Time"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_vancouver_short_standard_name "PST"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_vancouver_short_daylight_name "PDT"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_vancouver_vancouver_name "Vancouver"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_vancouver_burnaby_name "Burnaby"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_vancouver_richmond_name "Richmond"
+/*&
+@description A string defining a time zone or city name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_vancouver_surrey_name "Surrey"
+
+
+#endif // __01_TzLocalization_RLS__

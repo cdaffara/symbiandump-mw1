@@ -1,0 +1,44 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-BackupStep-testGetsCallbackOnBackupStartL-0001
+//! @SYMTestCaseDesc 		Test whether backup server signals the test backup observer
+//!                 		on backup start operation.
+//! @SYMTestPriority 		High 
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		The test creates an object of test observer to observe for
+//!   				start backup event and registers the specified observer to be notified
+//!   				when a backup operation starts by calling RegisterBackupOperationObserverL().
+//!   				Set attributes to indicate start of backup operation. Flush the scheduler
+//!   				of all pending requests. Set start backup event to the AO. Notify the
+//!   				server of backup operation using NotifyBackupOperationL().
+//!   				Start the active scheduler to receive signal for start event from backup
+//!   				server.
+//!   				API Calls:	
+//!   				CBaBackupSessionWrapper::RegisterBackupOperationObserverL(MBackupOperationObserver& aBackupOperationObserver)
+//!   				CBaBackupSessionWrapper::NotifyBackupOperationL(const TBackupOperationAttributes& aBackupOperationAttributes)
+//!   				CBaBackupSessionWrapper::DeRegisterBackupOperationObserver(MBackupOperationObserver& aBackupOperationObserver)
+//! @SYMTestExpectedResults 	The test should complete with Backup server signaling the observer
+//!   				when the Backup operation starts.
+
+START_TESTCASE API-APPFWK-T-BackupStep-testGetsCallbackOnBackupStartL-0001
+
+PRINT Run T_Backup Apparc test 
+//
+LOAD_SUITE ApparcTestServer  
+RUN_TEST_STEP 100 ApparcTestServer T_Backup 
+
+END_TESTCASE API-APPFWK-T-BackupStep-testGetsCallbackOnBackupStartL-0001

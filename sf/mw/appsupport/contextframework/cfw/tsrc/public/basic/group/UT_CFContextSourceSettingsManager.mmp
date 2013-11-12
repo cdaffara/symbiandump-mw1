@@ -1,0 +1,62 @@
+/*
+* Copyright (c) 2008-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          UT_CFContextSourceSettingsManager.dll
+TARGETTYPE      dll
+TARGETPATH      /DigiaEUnit/Tests
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../UT_CFContextSourceSettingsManager
+SOURCE                  UT_CFContextSourceSettingsManagerDllMain.cpp
+SOURCE                  UT_CFContextSourceSettingsManager.cpp
+
+// Sources needed by the test
+SOURCEPATH              ../../../../src/CFContextSourceSettingsManager
+SOURCE                  cfcontextsourcesettingarray.cpp
+SOURCE                  cfcontextsourcesettingarrayimpl.cpp
+SOURCE                  cfcontextsourcesettingimpl.cpp
+SOURCE                  cfcontextsourcesettingparameterimpl.cpp
+SOURCE                  CFContextSourceSettingsManagerImpl.cpp
+SOURCE                  cfcontextsourcesettingsmanager.cpp
+
+USERINCLUDE             ../../../../inc/CFContextSourceSettingsManager
+USERINCLUDE             ../../../../inc/cfservices
+USERINCLUDE             ../../../../inc/common
+USERINCLUDE             ../UT_CFContextSourceSettingsManager
+USERINCLUDE             ../common
+
+MW_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+LIBRARY                 cfservices.lib
+LIBRARY                 cfcontextsourcesettingsmanager.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 estor.lib
+LIBRARY                 EUnit.lib
+LIBRARY                 euser.lib
+LIBRARY                 xmldom.lib
+LIBRARY                 xmlparser.lib
+LIBRARY                 flogger.lib
+
+// End of file

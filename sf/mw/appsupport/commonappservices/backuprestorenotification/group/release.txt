@@ -1,0 +1,29 @@
+Version 001 by IbrahimR, 18 Oct 2004
+======================================
+
+First release
+
+Backup/Restore Notification mechanism.Is a thin layer between
+Core Apps components and existing Backup/Restore notification mechanisms.
+(Configured between SECURE/UNSECURE).
+
+Perforce Release
+================
+Made by Zlatko Zimonjic - 30 May 2007
+PDEF104972: [v9.4,v9.5] {Fix Identified} Attempting to restore the contacts database using PC connect always fails 
+
+Perforce release
+================
+Made by Prabodh Depala 4 Feb 2005
+DEF053933 - Test Harness: T_BAckuprestore fails on H2 board & WINSCW on 9.1 
+
+Perforce release
+================
+Made by RICHARD JACKSON 25 Nov 2004
+DEF051194 - AlarmServer.exe panics when CBaBackupSessionWrapper::CloseAll() is called twice
+
+Perforce release
+================
+Made by Martin Hansen 4 Nov 2004
+Issue Id DEF051023
+DEF051017 - Update distribution Policy File , due to incorrect IPR entries

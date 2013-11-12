@@ -1,0 +1,36 @@
+//
+// Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-Serv2Step-AppInfoTest1-0001
+//! @SYMTestCaseDesc 		Test RApaLsSession::GetNextApp()  
+//! @SYMTestPriority 		High  
+//! @SYMTestStatus 		3. Released  
+//! @SYMTestActions 		Call RApaLsSession::GetAllApps() to initialize the process of getting all applications in the cached list. Traverse the application list
+//!  				by calling RApaLsSession::GetNextApp() to search for application tstapp. Test the application info obtained from GetNextApp() to ensure the application
+//!  				info obtained is of tstapp. Complete traversal of the list to ensure that at the end of the list, the enum ENoMoreAppInList is returned by GetNextApp().
+//!  				API Calls:	
+//!  				RApaLsSession::GetAllApps() const
+//!  				RApaLsSession::GetNextApp(TApaAppInfo& aInfo) const  
+//! @SYMTestExpectedResults 	The test compares the results obtained with expected values.
+
+START_TESTCASE API-APPFWK-T-Serv2Step-AppInfoTest1-0001
+
+PRINT Run T_Serv2 Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 400 ApparcTestServer T_Serv2
+
+END_TESTCASE API-APPFWK-T-Serv2Step-AppInfoTest1-0001

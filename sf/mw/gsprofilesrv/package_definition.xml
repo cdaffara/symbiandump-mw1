@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0" xmlns:qt="http://www.nokia.com/qt">
+ <package id="gsprofilesrv" name="General Settings and Profiles Services" levels="system plugin framework server generic specific">
+  <collection id="gsprofilesrv_pub" name="GS and Profiles Services Public Interfaces" level="specific">
+   <component id="profiles_engine_active_profile_settings_api" name="Profiles Engine Active Profile Settings API" class="api" filter="s60">
+    <meta rel="Api" href="gsprofilesrv_pub/profiles_engine_active_profile_settings_api/profiles_engine_active_profile_settings_api.metaxml"/>
+    <unit bldFile="gsprofilesrv_pub/profiles_engine_active_profile_settings_api/group"/>
+   </component>
+   <component id="profiles_engine_wrapper_api" name="Profiles Engine Wrapper API" class="api" filter="s60">
+    <meta rel="Api" href="gsprofilesrv_pub/profiles_engine_wrapper_api/profiles_engine_wrapper_api.metaxml"/>
+    <unit bldFile="gsprofilesrv_pub/profiles_engine_wrapper_api/group"/>
+   </component>
+  </collection>
+  <collection id="gsprofilesrv_plat" name="GS and Profiles Services Platform Interfaces" level="specific">
+   <component id="ftuwizardmodel_api" name="FTU Wizard Model API" filter="bldfirst,s60" class="api">
+      <unit bldFile="gsprofilesrv_plat/ftuwizardmodel_api" qt:proFile="ftuwizardmodel_api.pro" qt:qmakeArgs="-r -config rom"/>
+   </component>
+   <component id="profiles_engine_api" name="Profiles Engine API" class="api" filter="bldfirst,s60">
+    <meta rel="Api" href="gsprofilesrv_plat/profiles_engine_api/profiles_engine_api.metaxml"/>
+    <unit bldFile="gsprofilesrv_plat/profiles_engine_api/group"/>
+   </component>
+   <component id="settings_uis_cenrep_collection_api" name="Settings UIs CenRep Collection API" class="api" filter="bldfirst,s60">
+    <meta rel="Api" href="gsprofilesrv_plat/settings_uis_cenrep_collection_api/settings_uis_cenrep_collection_api.metaxml"/>
+    <unit bldFile="gsprofilesrv_plat/settings_uis_cenrep_collection_api/group"/>
+   </component>
+   <component id="controlpanel_api" name="Control panel api" class="api" filter="bldfirst,s60">
+    <unit bldFile="gsprofilesrv_plat/controlpanel_api" qt:qmakeArgs="-r -config rom" qt:proFile="controlpanel_api.pro"/>
+   </component>
+  </collection>
+  <collection id="ftuwizardmodel" name="FTU Wizard Model" level="generic">
+    <component id="ftuwizardmodel_build" name="FTU Wizardmodel Build" filter="s60,bldfirst">
+     <unit bldFile="ftuwizardmodel" qt:proFile="ftuwizardmodel.pro" qt:qmakeArgs="-r -config rom"/>
+    </component>
+  </collection>
+  <collection id="controlpanel" name="Control Panel" level="generic">
+   <component id="controlpanel_test" name="Control Panel Test" filter="s60,test,qt_unit_test">
+      <meta rel="testbuild">
+       <group name="controlpanel_tests"/>
+      </meta>
+      <unit bldFile="controlpanel/tsrc" qt:proFile="tsrc.pro"/> 
+   </component> 
+   <component id="controlpanel_rom" name="Control Panel ROM" filter="s60" class="config">
+	  <unit bldFile="controlpanel/rom"/>
+   </component>
+   <component id="controlpanel_config" name="Control Panel Config" filter="s60" class="config" introduced="^4">
+	  <unit bldFile="controlpanel/conf"/>
+   </component>
+   <component id="controlpanel_source" name="Control Panel Source" filter="s60">
+	  <unit bldFile="controlpanel/src" qt:qmakeArgs="-r -config rom" qt:proFile="src.pro"/>
+   </component>
+  </collection>
+  <collection id="profilesservices" name="Profiles Services" level="server">
+   <component id="profileengine" filter="s60" name="Profile Engine" introduced="9.1">
+    <unit bldFile="profilesservices/profileengine/group"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>

@@ -1,0 +1,46 @@
+// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// TCON1.MMP
+// 
+//
+
+target          tcon1.dll
+targettype      plugin
+UID				0x10009d8d 0x10004c60
+VENDORID 		0x70000001
+CAPABILITY All -Tcb
+
+sourcepath	.
+
+start resource 10004c60.rss
+target tcon1.rsc
+targetpath /resource/plugins
+end
+
+start resource 10207F6A.RSS
+targetpath /resource/convert
+end
+
+
+userinclude			../TSRC
+userinclude			../INC
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+//systeminclude 		/epoc32/include/ecom
+
+source  TCON1_V2.CPP
+
+library  euser.lib
+library  conarc.lib
+
+SMPSAFE

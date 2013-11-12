@@ -1,0 +1,37 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                XIMP Im Protocol Plug-in API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/protocolimconversation.h     MW_LAYER_PLATFORM_EXPORT_PATH(protocolimconversation.h)
+../inc/protocolimgroup.h     MW_LAYER_PLATFORM_EXPORT_PATH(protocolimgroup.h)
+../inc/protocoliminvitation.h     MW_LAYER_PLATFORM_EXPORT_PATH(protocoliminvitation.h)
+../inc/protocolimfeatures.h     MW_LAYER_PLATFORM_EXPORT_PATH(protocolimfeatures.h)
+../inc/protocolimfeatures.inl     MW_LAYER_PLATFORM_EXPORT_PATH(protocolimfeatures.inl)
+../inc/improtocolpluginifids.hrh     MW_LAYER_PLATFORM_EXPORT_PATH(improtocolpluginifids.hrh)
+../inc/protocolimsearch.h     MW_LAYER_PLATFORM_EXPORT_PATH(protocolimsearch.h)
+../inc/cprotocolimfeatures.h     MW_LAYER_PLATFORM_EXPORT_PATH(cprotocolimfeatures.h)
+../inc/cprotocolimfeatures.inl     MW_LAYER_PLATFORM_EXPORT_PATH(cprotocolimfeatures.inl)
+
+

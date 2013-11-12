@@ -1,0 +1,50 @@
+EXPORTS
+	_ZN16LogOutputFactory15createLogOutputERK7QString @ 1 NONAME
+	_ZN16LogOutputFactory15createLogOutputERK7QStringRK5QHashIS0_8QVariantE @ 2 NONAME
+	_ZN16LogOutputFactory23addCreateLogOutputEntryERK7QStringPFP9LogOutputvE @ 3 NONAME
+	_ZN6Logger11qt_metacallEN11QMetaObject4CallEiPPv @ 4 NONAME
+	_ZN6Logger11qt_metacastEPKc @ 5 NONAME
+	_ZN6Logger12addLogOutputEP9LogOutput @ 6 NONAME
+	_ZN6Logger14setLogDateTimeEb @ 7 NONAME
+	_ZN6Logger15removeLogOutputEP9LogOutput @ 8 NONAME
+	_ZN6Logger16setLogLoggerNameEb @ 9 NONAME
+	_ZN6Logger16staticMetaObjectE @ 10 NONAME DATA 16
+	_ZN6Logger17clearAllLogOutputEv @ 11 NONAME
+	_ZN6Logger17setDateTimeFormatERK7QString @ 12 NONAME
+	_ZN6Logger19getStaticMetaObjectEv @ 13 NONAME
+	_ZN6Logger3logERK7QString @ 14 NONAME
+	_ZN6Logger5closeERK7QString @ 15 NONAME
+	_ZN6Logger8closeAllEv @ 16 NONAME
+	_ZN6Logger8instanceERK7QString @ 17 NONAME
+	_ZN6Logger9configureER9QSettings @ 18 NONAME
+	_ZN6Logger9configureERK7QStringN9QSettings6FormatE @ 19 NONAME
+	_ZN6Logger9logOutputERK7QString @ 20 NONAME
+	_ZN6LoggerC1ERK7QStringP7QObject @ 21 NONAME
+	_ZN6LoggerC2ERK7QStringP7QObject @ 22 NONAME
+	_ZN6LoggerD0Ev @ 23 NONAME
+	_ZN6LoggerD1Ev @ 24 NONAME
+	_ZN6LoggerD2Ev @ 25 NONAME
+	_ZN9LogOutput11qt_metacallEN11QMetaObject4CallEiPPv @ 26 NONAME
+	_ZN9LogOutput11qt_metacastEPKc @ 27 NONAME
+	_ZN9LogOutput12parentLoggerEv @ 28 NONAME
+	_ZN9LogOutput15setParentLoggerEP6Logger @ 29 NONAME
+	_ZN9LogOutput16staticMetaObjectE @ 30 NONAME DATA 16
+	_ZN9LogOutput19getStaticMetaObjectEv @ 31 NONAME
+	_ZN9LogOutput4loadER9QSettings @ 32 NONAME
+	_ZN9LogOutput7setNameERK7QString @ 33 NONAME
+	_ZN9LogOutputC2EP6Logger @ 34 NONAME
+	_ZN9LogOutputD0Ev @ 35 NONAME
+	_ZN9LogOutputD1Ev @ 36 NONAME
+	_ZN9LogOutputD2Ev @ 37 NONAME
+	_ZNK6Logger10metaObjectEv @ 38 NONAME
+	_ZNK6Logger11logDateTimeEv @ 39 NONAME
+	_ZNK6Logger13logLoggerNameEv @ 40 NONAME
+	_ZNK6Logger14dateTimeFormatEv @ 41 NONAME
+	_ZNK6Logger4nameEv @ 42 NONAME
+	_ZNK9LogOutput10metaObjectEv @ 43 NONAME
+	_ZNK9LogOutput4nameEv @ 44 NONAME
+	_ZTI6Logger @ 45 NONAME
+	_ZTI9LogOutput @ 46 NONAME
+	_ZTV6Logger @ 47 NONAME
+	_ZTV9LogOutput @ 48 NONAME
+

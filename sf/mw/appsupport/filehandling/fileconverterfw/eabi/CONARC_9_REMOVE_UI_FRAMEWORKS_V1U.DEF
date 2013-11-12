@@ -1,0 +1,172 @@
+EXPORTS
+	_ZN13CCnaConverter10AddMimeToLEPK9CMimeInfo @ 1 NONAME ABSENT
+	_ZN13CCnaConverter12AddMimeFromLEPK9CMimeInfo @ 2 NONAME ABSENT
+	_ZN13CCnaConverter12InternalizeLER11RReadStream @ 3 NONAME ABSENT
+	_ZN13CCnaConverter4NewLE4TUid @ 4 NONAME
+	_ZN13CCnaConverter4NewLERKS_ @ 5 NONAME
+	_ZN13CCnaConverter5NewLCE4TUid @ 6 NONAME
+	_ZN13CCnaConverter5NewLCERKS_ @ 7 NONAME
+	_ZN13CCnaConverter6SetUidE4TUid @ 8 NONAME
+	_ZN13CCnaConverterD0Ev @ 9 NONAME
+	_ZN13CCnaConverterD1Ev @ 10 NONAME
+	_ZN13CCnaConverterD2Ev @ 11 NONAME
+	_ZN13TLanguageInfoC1E9TLanguage4TBufILi50EE @ 12 NONAME
+	_ZN13TLanguageInfoC2E9TLanguage4TBufILi50EE @ 13 NONAME
+	_ZN14CConverterBase10DoConvertLEv @ 14 NONAME
+	_ZN14CConverterBase12CapabilitiesEv @ 15 NONAME
+	_ZN14CConverterBase13CancelConvertEv @ 16 NONAME
+	_ZN14CConverterBase14ConvertObjectLER11RReadStreamR12RWriteStreamP20MConverterUiObserver @ 17 NONAME
+	_ZN14CConverterBase15ConvertObjectALER11RReadStreamR12RWriteStreamP20MConverterUiObserver @ 18 NONAME
+	_ZN14CConverterBase15EmbeddedObjectLER9TDataType @ 19 NONAME
+	_ZN14CConverterBase18ExtendedInterfaceLE4TUidRP5CBase @ 20 NONAME
+	_ZN14CConverterBase19GetEmbeddedFileNameER4TBufILi256EE @ 21 NONAME
+	_ZN14CConverterBase8ConvertLERK4TBufILi256EES3_P20MConverterUiObserver @ 22 NONAME
+	_ZN14CConverterBase9ConvertALERK4TBufILi256EES3_P20MConverterUiObserver @ 23 NONAME
+	_ZN17CCnaConverterList10ConverterLERK9TDataTypeS2_ @ 24 NONAME
+	_ZN17CCnaConverterList11ConvToListLERK9TDataTypeP9CArrayFixI14SConverterInfoE @ 25 NONAME
+	_ZN17CCnaConverterList13ConvFromListLERK9TDataTypeP9CArrayFixI14SConverterInfoE @ 26 NONAME
+	_ZN17CCnaConverterList13NewConverterLE4TUid @ 27 NONAME
+	_ZN17CCnaConverterList4NewLEv @ 28 NONAME
+	_ZN17CCnaConverterList5NewLCEv @ 29 NONAME
+	_ZN17CCnaConverterList6CountLEv @ 30 NONAME
+	_ZN17CCnaConverterList7ConvToLERK9TDataType @ 31 NONAME
+	_ZN17CCnaConverterList7ReleaseEv @ 32 NONAME
+	_ZN17CCnaConverterList7UpdateLEv @ 33 NONAME
+	_ZN17CCnaConverterList9ConvFromLERK9TDataType @ 34 NONAME
+	_ZN17CCnaConverterListD0Ev @ 35 NONAME
+	_ZN17CCnaConverterListD1Ev @ 36 NONAME
+	_ZN17CCnaConverterListD2Ev @ 37 NONAME
+	_ZN17CExportBufferBase10ConstructLEv @ 38 NONAME
+	_ZN17CExportBufferBase13ResetWritePtrEv @ 39 NONAME
+	_ZN17CExportBufferBase14FinalizeExportEv @ 40 NONAME
+	_ZN17CExportBufferBase17ResetExportBufferEv @ 41 NONAME
+	_ZN17CExportBufferBase7InsertLEt @ 42 NONAME
+	_ZTV20MConverterUiObserver @ 43 NONAME ; #<VT>#
+	_ZN17CExportBufferBaseC2Ei @ 44 NONAME
+	_ZN17CExportBufferBaseD0Ev @ 45 NONAME
+	_ZN17CExportBufferBaseD1Ev @ 46 NONAME
+	_ZN17CExportBufferBaseD2Ev @ 47 NONAME
+	_ZN17CFileImportBuffer13FillImportBufEv @ 48 NONAME
+	_ZN17CFileImportBuffer5SeekLE5TSeeki @ 49 NONAME
+	_ZN17CFileImportBufferC1E5RFilei @ 50 NONAME
+	_ZN17CFileImportBufferC2E5RFilei @ 51 NONAME
+	_ZN17CImportBufferBase10ConstructLEv @ 52 NONAME
+	_ZN17CImportBufferBase12ResetReadPtrEv @ 53 NONAME
+	_ZN17CImportBufferBase17ResetImportBufferEv @ 54 NONAME
+	_ZN17CImportBufferBase5ReadLERh @ 55 NONAME
+	_ZN17CImportBufferBase5SeekLE5TSeeki @ 56 NONAME
+	_ZN17CImportBufferBase7MaxSizeEv @ 57 NONAME
+	_ZN17CImportBufferBase9SetLengthEi @ 58 NONAME
+	_ZTV17CImportBufferBase @ 59 NONAME ; #<VT>#
+	_ZN17CImportBufferBaseC2Ei @ 60 NONAME
+	_ZN17CImportBufferBaseD0Ev @ 61 NONAME
+	_ZN17CImportBufferBaseD1Ev @ 62 NONAME
+	_ZN17CImportBufferBaseD2Ev @ 63 NONAME
+	_ZN20CExportDynamicBuffer10ConstructLEv @ 64 NONAME
+	_ZN20CExportDynamicBuffer19CommitExportBufferLEv @ 65 NONAME
+	_ZN20CExportDynamicBuffer4NewLEiR8CBufBase @ 66 NONAME
+	_ZN20MConverterUiObserver18Reserved1_Conv_ObsEv @ 67 NONAME
+	_ZN22CCnaConvInfoFileReader3AtLEi @ 68 NONAME ABSENT
+	_ZN22CCnaConvInfoFileReader4NewLERK7TDesC164TUid @ 69 NONAME ABSENT
+	_ZN22CCnaConvInfoFileReader5CountEv @ 70 NONAME ABSENT
+	_ZN22CCnaConvInfoFileReader5NewLCERK7TDesC164TUid @ 71 NONAME ABSENT
+	_ZN22CCnaConvInfoFileReader8RestoreLEv @ 72 NONAME ABSENT
+	_ZN22CCnaConvInfoFileReaderD0Ev @ 73 NONAME ABSENT
+	_ZN22CCnaConvInfoFileReaderD1Ev @ 74 NONAME ABSENT
+	_ZN22CCnaConvInfoFileReaderD2Ev @ 75 NONAME ABSENT
+	_ZN22CCnaConvInfoFileWriter13AddConverterLERK13CCnaConverter @ 76 NONAME ABSENT
+	_ZN22CCnaConvInfoFileWriter4NewLERK7TDesC164TUid @ 77 NONAME ABSENT
+	_ZN22CCnaConvInfoFileWriter5NewLCERK7TDesC164TUid @ 78 NONAME ABSENT
+	_ZN22CCnaConvInfoFileWriterD0Ev @ 79 NONAME ABSENT
+	_ZN22CCnaConvInfoFileWriterD1Ev @ 80 NONAME ABSENT
+	_ZN22CCnaConvInfoFileWriterD2Ev @ 81 NONAME ABSENT
+	_ZN27CCnaScanningConverterFinder4NewLER3RFs @ 82 NONAME ABSENT
+	_ZN27CCnaScanningConverterFinder5NewLCER3RFs @ 83 NONAME ABSENT
+	_ZN27CCnaScanningConverterFinderD0Ev @ 84 NONAME ABSENT
+	_ZN27CCnaScanningConverterFinderD1Ev @ 85 NONAME ABSENT
+	_ZN27CCnaScanningConverterFinderD2Ev @ 86 NONAME ABSENT
+	_ZN9CMimeInfo12AddLanguageLE13TLanguageInfo @ 87 NONAME
+	_ZN9CMimeInfo5NewLCER9TDataType @ 88 NONAME
+	_ZN9CMimeInfoD0Ev @ 89 NONAME
+	_ZN9CMimeInfoD1Ev @ 90 NONAME
+	_ZN9CMimeInfoD2Ev @ 91 NONAME
+	_ZNK13CCnaConverter10MimeToTextERK9TDataType @ 92 NONAME
+	_ZNK13CCnaConverter10MimeToTextEi @ 93 NONAME
+	_ZNK13CCnaConverter12ExternalizeLER12RWriteStream @ 94 NONAME ABSENT
+	_ZNK13CCnaConverter12MimeFromTextERK9TDataType @ 95 NONAME
+	_ZNK13CCnaConverter12MimeFromTextEi @ 96 NONAME
+	_ZNK13CCnaConverter6MimeToERK9TDataType @ 97 NONAME
+	_ZNK13CCnaConverter6MimeToEi @ 98 NONAME
+	_ZNK13CCnaConverter7CountToEv @ 99 NONAME
+	_ZNK13CCnaConverter8MimeFromERK9TDataType @ 100 NONAME
+	_ZNK13CCnaConverter8MimeFromEi @ 101 NONAME
+	_ZNK13CCnaConverter9CountFromEv @ 102 NONAME
+	_ZNK17CCnaConverterList10MimeTypeToER9TDataTypeRK14SConverterInfo @ 103 NONAME
+	_ZNK17CCnaConverterList12MimeTypeFromER9TDataTypeRK14SConverterInfo @ 104 NONAME
+	_ZNK22CCnaConvInfoFileWriter6StoreLEv @ 105 NONAME ABSENT
+	_ZTI14CConverterBase @ 106 NONAME ; #<TI>#
+	_ZTI17CExportBufferBase @ 107 NONAME ; #<TI>#
+	_ZTI17CFileImportBuffer @ 108 NONAME ; #<TI>#
+	_ZTI17CImportBufferBase @ 109 NONAME ; #<TI>#
+	_ZTI20MConverterUiObserver @ 110 NONAME ; #<TI>#
+	_ZTV14CConverterBase @ 111 NONAME ; #<VT>#
+	_ZTV17CExportBufferBase @ 112 NONAME ; #<VT>#
+	_ZTV17CFileImportBuffer @ 113 NONAME ; #<VT>#
+	_ZTI11CEtToTxtCnv @ 114 NONAME ABSENT ; #<TI>#
+	_ZTI11CQpToTxtCnv @ 115 NONAME ABSENT ; #<TI>#
+	_ZTI11CTxtToEtCnv @ 116 NONAME ABSENT ; #<TI>#
+	_ZTI11CTxtToQpCnv @ 117 NONAME ABSENT ; #<TI>#
+	_ZTI13CCnaConverter @ 118 NONAME ; #<TI>#
+	_ZTI14CBase64Decoder @ 119 NONAME ABSENT ; #<TI>#
+	_ZTI14CBase64Encoder @ 120 NONAME ABSENT ; #<TI>#
+	_ZTI16CCnaConvInfoFile @ 121 NONAME ABSENT ; #<TI>#
+	_ZTI17CCnaConverterList @ 122 NONAME ; #<TI>#
+	_ZTI18CCnaFoundConverter @ 123 NONAME ABSENT ; #<TI>#
+	_ZTI20CExportDynamicBuffer @ 124 NONAME ; #<TI>#
+	_ZTI21CCnaScanningCnfFinder @ 125 NONAME ABSENT ; #<TI>#
+	_ZTI22CCnaConvInfoFileReader @ 126 NONAME ABSENT ; #<TI>#
+	_ZTI22CCnaConvInfoFileWriter @ 127 NONAME ABSENT ; #<TI>#
+	_ZTI27CCnaScanningConverterFinder @ 128 NONAME ABSENT ; #<TI>#
+	_ZTI9CMimeInfo @ 129 NONAME ; #<TI>#
+	_ZTV11CEtToTxtCnv @ 130 NONAME ABSENT ; #<VT>#
+	_ZTV11CQpToTxtCnv @ 131 NONAME ABSENT ; #<VT>#
+	_ZTV11CTxtToEtCnv @ 132 NONAME ABSENT ; #<VT>#
+	_ZTV11CTxtToQpCnv @ 133 NONAME ABSENT ; #<VT>#
+	_ZTV13CCnaConverter @ 134 NONAME ; #<VT>#
+	_ZTV14CBase64Decoder @ 135 NONAME ABSENT ; #<VT>#
+	_ZTV14CBase64Encoder @ 136 NONAME ABSENT ; #<VT>#
+	_ZTV16CCnaConvInfoFile @ 137 NONAME ABSENT ; #<VT>#
+	_ZTV17CCnaConverterList @ 138 NONAME ; #<VT>#
+	_ZTV18CCnaFoundConverter @ 139 NONAME ABSENT ; #<VT>#
+	_ZTV20CExportDynamicBuffer @ 140 NONAME ; #<VT>#
+	_ZTV21CCnaScanningCnfFinder @ 141 NONAME ABSENT ; #<VT>#
+	_ZTV22CCnaConvInfoFileReader @ 142 NONAME ABSENT ; #<VT>#
+	_ZTV22CCnaConvInfoFileWriter @ 143 NONAME ABSENT ; #<VT>#
+	_ZTV27CCnaScanningConverterFinder @ 144 NONAME ABSENT ; #<VT>#
+	_ZTV9CMimeInfo @ 145 NONAME ; #<VT>#
+	_ZN15CConverterBase210DoConvertLEv @ 146 NONAME
+	_ZN15CConverterBase210Reserved_1Ev @ 147 NONAME
+	_ZN15CConverterBase210Reserved_2Ev @ 148 NONAME
+	_ZN15CConverterBase212CapabilitiesEv @ 149 NONAME
+	_ZN15CConverterBase213CancelConvertEv @ 150 NONAME
+	_ZN15CConverterBase214ConvertObjectLER11RReadStreamR12RWriteStreamP20MConverterUiObserver @ 151 NONAME
+	_ZN15CConverterBase215ConvertObjectALER11RReadStreamR12RWriteStreamP20MConverterUiObserver @ 152 NONAME
+	_ZN15CConverterBase215EmbeddedObjectLER9TDataType @ 153 NONAME
+	_ZN15CConverterBase218ExtendedInterfaceLE4TUidRP5CBase @ 154 NONAME
+	_ZN15CConverterBase219GetEmbeddedFileNameER4TBufILi256EE @ 155 NONAME
+	_ZN15CConverterBase28ConvertLERK4TBufILi256EES3_P20MConverterUiObserver @ 156 NONAME
+	_ZN15CConverterBase29ConvertALERK4TBufILi256EES3_P20MConverterUiObserver @ 157 NONAME
+	_ZN15CConverterBase2D0Ev @ 158 NONAME
+	_ZN15CConverterBase2D1Ev @ 159 NONAME
+	_ZN15CConverterBase2D2Ev @ 160 NONAME
+	_ZN23CCnaConvInfoFileReader23AtLEi @ 161 NONAME
+	_ZN23CCnaConvInfoFileReader24NewLERK7TDesC16 @ 162 NONAME
+	_ZN23CCnaConvInfoFileReader25CountEv @ 163 NONAME
+	_ZN23CCnaConvInfoFileReader25NewLCERK7TDesC16 @ 164 NONAME
+	_ZN23CCnaConvInfoFileReader28RestoreLEv @ 165 NONAME
+	_ZTI15CConverterBase2 @ 166 NONAME ; #<TI>#
+	_ZTV15CConverterBase2 @ 167 NONAME ; #<VT>#
+	_ZTI17CCnaConvInfoFile2 @ 168 NONAME ; #<TI>#
+	_ZTV17CCnaConvInfoFile2 @ 169 NONAME ; #<VT>#
+	KEnableAllSplCharForQpCnv @ 170 NONAME DATA 4
+

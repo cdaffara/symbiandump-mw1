@@ -1,0 +1,9 @@
+PRJ_PLATFORMS
+default
+
+PRJ_EXPORTS
+
+PRJ_MMPFILES
+gstwavparse.mmp
+gstwavenc.mmp
+gstqtmux.mmp

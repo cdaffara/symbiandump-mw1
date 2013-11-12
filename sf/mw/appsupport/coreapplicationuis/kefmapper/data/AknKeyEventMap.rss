@@ -1,0 +1,61 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Key table configuration file.
+*
+*/
+
+
+// RESOURCE IDENTIFIER
+
+NAME KEF
+
+// INCLUDES
+
+#include <eikon.rh>
+#include "aknkeyeventmap.rh"
+#include <e32keys.h>
+#include <aknkeyeventmap.hrh>
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE 
+    {
+    }
+
+RESOURCE KEF_KEY_EVENT_MAP r_avkon_key_event_map
+    	{
+	    keyevents =
+	        {
+	        KEF_KEY_EVENT
+	            {
+	            scancode   = { EStdKeyDevice27};           //Scan code for Express Media Key.
+	            keycode    = { EKeyApplication21};	 //Key code for Express Media Key.
+	            devicemode = { KKefModeDefault };
+	            eventtype  = { KKefTypeShort | KKefTypeKey };
+	            feedbacktype = 1; // 1 = Basic feedback
+	            }
+	        };	
+	    }
+
+
+// -----------------------------------------------------------------------------
+// r_avkon_key_event_map
+// By default, key event map is disabled.
+// -----------------------------------------------------------------------------
+//
+/*RESOURCE KEF_KEY_EVENT_MAP_DISABLED r_avkon_key_event_map
+    {
+    }*/
+
+// End of File

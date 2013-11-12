@@ -1,0 +1,35 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*	 Provides the information required for building the ES System App
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+// ROM files
+../rom/hsappkeyhandler.iby             CORE_MW_LAYER_IBY_EXPORT_PATH(hsappkeyhandler.iby)
+../sis/stubs/hsappkeyplugin_stub.sis         /epoc32/release/winscw/udeb/z/system/install/hsappkeyplugin_stub.sis
+../sis/stubs/hsappkeyplugin_stub.sis         /epoc32/data/z/system/install/hsappkeyplugin_stub.sis
+
+PRJ_MMPFILES
+hsappkeyplugin.mmp
+
+PRJ_TESTMMPFILES

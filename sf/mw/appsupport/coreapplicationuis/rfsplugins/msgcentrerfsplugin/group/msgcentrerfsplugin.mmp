@@ -1,0 +1,47 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project msgcentrerfsplugin
+*
+*/
+
+
+// To get macro definitions for include paths
+#include <platform_paths.hrh>
+
+TARGET          msgcentrerfsplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x20022D81
+
+CAPABILITY      CAP_ECOM_PLUGIN ALLFILES
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../src
+SOURCE          msgcentrerfsplugin.cpp
+SOURCE          proxy.cpp
+
+// Application layer system include is required due to muiu dependency.
+// The dependency is illegal in middleware layer and it can be corrected only 
+// by moving the plug-in to proper area in application layer (like messaging).
+APP_LAYER_SYSTEMINCLUDE
+USERINCLUDE     ../inc
+
+START RESOURCE  ../data/20022D81.rss
+TARGET          msgcentrerfsplugin.rsc
+END
+
+LIBRARY         ecom.lib                // ECom library
+LIBRARY         eikcore.lib             // Eikon library
+LIBRARY         euser.lib               // Base library
+LIBRARY         cone.lib                // Control environment library
+LIBRARY         muiuutils.lib                // For message centre reset

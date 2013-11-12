@@ -1,0 +1,155 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __02_TzLocalization_RLS__
+#define __02_TzLocalization_RLS__
+
+// europe/lisbon ==============================================================
+
+rls_string lisbon_standard_name "FRENCHWestern European Time"
+rls_string lisbon_daylight_name "FRENCHWestern European Summer Time"
+rls_string lisbon_short_standard_name "FRENCHWET"
+rls_string lisbon_short_daylight_name "FRENCHWEST"
+rls_string lisbon_lisbon_name "FRENCHLisbon"
+rls_string lisbon_porto_name "FRENCHPorto"
+
+// europe/london ==============================================================
+
+rls_string london_standard_name "FRENCHGreenwich Mean Time"
+rls_string london_daylight_name "FRENCHBritish Summer Time"
+rls_string london_short_standard_name "FRENCHGMT"
+rls_string london_short_daylight_name "FRENCHBST"
+rls_string london_london_name "FRENCHLondon"
+rls_string london_manchester_name "FRENCHManchester"
+rls_string london_birmingham_name "FRENCHBirmingham"
+
+// america/los_angeles ========================================================
+
+rls_string los_angeles_standard_name "FRENCHPacific Standard Time"
+rls_string los_angeles_daylight_name "FRENCHPacific Daylight Time"
+rls_string los_angeles_short_standard_name "FRENCHPST"
+rls_string los_angeles_short_daylight_name "FRENCHPDT"
+rls_string los_angeles_los_angeles_name "FRENCHLos Angeles"
+rls_string los_angeles_san_francisco_name "FRENCHSan Francisco"
+rls_string los_angeles_portland_name "FRENCHPortland"
+rls_string los_angeles_seattle_name "FRENCHSeattle"
+
+// america/chicago ========================================================
+
+rls_string chicago_standard_name "FRENCHCentral Standard Time"
+rls_string chicago_daylight_name "FRENCHCentral Daylight Time"
+rls_string chicago_short_standard_name "FRENCHCST"
+rls_string chicago_short_daylight_name "FRENCHCDT"
+rls_string chicago_chicago_name "FRENCHChicago"
+
+// europe/berlin ==============================================================
+rls_string berlin_standard_name "FRENCHCentral European Time"
+rls_string berlin_daylight_name "FRENCHCentral European Summer Time"
+rls_string berlin_short_standard_name "FRENCHCET"
+rls_string berlin_short_daylight_name "FRENCHCEST"
+rls_string berlin_berlin_name "FRENCHBerlin"
+rls_string berlin_bonn_name "FRENCHBonn"
+rls_string berlin_frankfurter_name "FRENCHFrankfurt"
+//rls_string berlin_tirane_name "FRENCHTirane"
+
+// europe/paris ===============================================================
+rls_string paris_standard_name "FRENCHCentral European Time"
+rls_string paris_daylight_name "FRENCHCentral European Summer Time"
+rls_string paris_short_standard_name "FRENCHCET"
+rls_string paris_short_daylight_name "FRENCHCEST"
+rls_string paris_paris_city_name "FRENCHParis"
+rls_string paris_nice_name "FRENCHNice"
+rls_string paris_stockholm_name "FRENCHStockholm"
+
+// europe/stockholm ===============================================================
+//rls_string stockholm_standard_name "FRENCHCentral European Time"
+//rls_string stockholm_daylight_name "FRENCHCentral European Summer Time"
+//rls_string stockholm_short_standard_name "FRENCHCET"
+//rls_string stockholm_short_daylight_name "FRENCHCEST"
+//rls_string stockholm_stockholm_name "FRENCHStockholm"
+
+// australia/sydney ===========================================================
+rls_string sydney_standard_name "FRENCHEastern Standard Time"
+rls_string sydney_daylight_name "FRENCHEastern Standard Time"
+rls_string sydney_short_standard_name "FRENCHEST"
+rls_string sydney_short_daylight_name "FRENCHEST"
+rls_string sydney_sydney_name "FRENCHSydney"
+rls_string sydney_ballarat_name "FRENCHBallarat"
+rls_string sydney_canberra_name "FRENCHCanberra"
+
+// europe/tirane ===========================================================
+rls_string tirane_standard_name "FRENCHCentral Standard Time"
+rls_string tirane_daylight_name "FRENCHCentral Standard Time"
+rls_string tirane_short_standard_name "FRENCHCST"
+rls_string tirane_short_daylight_name "FRENCHCSST"
+rls_string tirane_tirane_name "FRENCHTirane"
+
+// asia/tehran ================================================================
+rls_string tehran_standard_name ""
+rls_string tehran_daylight_name ""
+rls_string tehran_short_standard_name ""
+rls_string tehran_short_daylight_name ""
+rls_string tehran_tehran_name "FRENCHTehran"
+
+// pacific/auckland ===========================================================
+rls_string auckland_standard_name ""
+rls_string auckland_daylight_name ""
+rls_string auckland_short_standard_name ""
+rls_string auckland_short_daylight_name ""
+rls_string auckland_auckland_name "FRENCHAuckland"
+
+// atlantic/stanley ===========================================================
+rls_string stanley_standard_name ""
+rls_string stanley_daylight_name ""
+rls_string stanley_short_standard_name ""
+rls_string stanley_short_daylight_name ""
+rls_string stanley_stanley_name "FRENCHStanley"
+
+
+// asia/seoul ===========================================================
+rls_string seoul_standard_name ""
+rls_string seoul_daylight_name ""
+rls_string seoul_short_standard_name ""
+rls_string seoul_short_daylight_name ""
+rls_string seoul_seoul_name "FRENCHSeoul"
+
+// europe/sofia ===============================================================
+rls_string sofia_standard_name "FRENCHEastern European Summer"
+rls_string sofia_daylight_name "FRENCHEastern European Summer Time"
+rls_string sofia_short_standard_name ""
+rls_string sofia_short_daylight_name ""
+rls_string sofia_sofia_name "FRENCHSofia"
+
+// brazil/rio branco ==========================================================
+rls_string rio_standard_name ""
+rls_string rio_daylight_name ""
+rls_string rio_short_standard_name ""
+rls_string rio_short_daylight_name ""
+rls_string rio_rio_branco_name "FRENCHRio Branco"
+
+// Groups of Cities =====================================================================
+rls_string city_group_name1 "FRENCHUnited Kingdom"
+rls_string city_group_name2 "FRENCHCalifornia"
+rls_string city_group_name3 "FRENCHOregon"
+rls_string city_group_name4 "FRENCHWashington"
+rls_string city_group_name5 "FRENCHEurope"
+rls_string city_group_name6 "FRENCHAustralia"
+rls_string city_group_name7 "FRENCHCentralLakes"
+rls_string city_group_name8 "FRENCHAsia"
+rls_string city_group_name9  "FRENCHNew Zealand"
+rls_string city_group_name10 "FRENCHAtlantic"
+rls_string city_group_name11 "FRENCHAcre"
+
+#endif // __02_TzLocalization_RLS__

@@ -1,0 +1,128 @@
+EXPORTS
+	_ZN12CXIMPGlobals10UninstallDEv @ 1 NONAME
+	_ZN12CXIMPGlobals11HostManagerEv @ 2 NONAME
+	_ZN12CXIMPGlobals11NoMoreHostsEv @ 3 NONAME
+	_ZN12CXIMPGlobals13PluginFactoryEv @ 4 NONAME
+	_ZN12CXIMPGlobals14FeatureManagerEv @ 5 NONAME
+	_ZN12CXIMPGlobals16OperationFactoryEv @ 6 NONAME
+	_ZN12CXIMPGlobals8InstallLEP21MXIMPOperationFactoryP20MXIMPGlobalsObserver @ 7 NONAME
+	_ZN12CXIMPGlobals8InstanceEv @ 8 NONAME
+	_ZN15CXIMPPscContext13SetClientInfoEP25CXIMPContextClientInfoImp @ 9 NONAME
+	_ZN15CXIMPPscContext14SetServiceInfoEP19CXIMPServiceInfoImp @ 10 NONAME
+	_ZN15CXIMPPscContext15GetCachedUnbindEv @ 11 NONAME
+	_ZN15CXIMPPscContext15OrderOfContextsERKS_S1_ @ 12 NONAME
+	_ZN15CXIMPPscContext16AddNewOperationLEiRK6TDesC8 @ 13 NONAME
+	_ZN15CXIMPPscContext16AppendToOpQueueLEP18CXIMPOperationBase @ 14 NONAME
+	_ZN15CXIMPPscContext19DestroyCachedUnbindEv @ 15 NONAME
+	_ZN15CXIMPPscContext20FeaturesForSessionLCEv @ 16 NONAME
+	_ZN15CXIMPPscContext22SetPresenceInfoFilterLEN15MXIMPPscContext16TFilterStoreTypeEP22CPresenceInfoFilterImpPK16CXIMPIdentityImp @ 17 NONAME
+	_ZN15CXIMPPscContext27AppendToOpQueueUpdateReqIdLEP18CXIMPOperationBase @ 18 NONAME
+	_ZN15CXIMPPscContext4NewLEm @ 19 NONAME
+	_ZN16CXIMPHostManager16DisassociateHostEP9CXIMPHost @ 20 NONAME
+	_ZN17CXIMPEventCapsule15UpdateEventDataER17CXIMPApiEventBase @ 21 NONAME
+	_ZN17CXIMPEventCapsule16UpdateEventDataLER17CXIMPApiEventBase @ 22 NONAME
+	_ZN17CXIMPEventCapsule4NewLER17CXIMPApiEventBasei @ 23 NONAME
+	_ZN17CXIMPEventCapsule8SetReadyEi @ 24 NONAME
+	_ZN17CXIMPEventManager14ActivateEventLER17CXIMPApiEventBaseP15CXIMPPscContext @ 25 NONAME
+	_ZN17CXIMPEventManager21RegisterSessionQueueLER22CXIMPContextEventQueue @ 26 NONAME
+	_ZN17CXIMPEventManager22UnregisterSessionQueueER22CXIMPContextEventQueue @ 27 NONAME
+	_ZN17CXIMPEventManager28ActivateRequestCompleteEventER28CXIMPRequestCompleteEventImpP15CXIMPPscContext @ 28 NONAME
+	_ZN17CXIMPEventManager4NewLEv @ 29 NONAME
+	_ZN17CXIMPEventManager9AddEventLER17CXIMPApiEventBaseP15CXIMPPscContext @ 30 NONAME
+	_ZN17CXIMPEventManager9AddEventLER17CXIMPApiEventBaseR13RPointerArrayI15CXIMPPscContextE @ 31 NONAME
+	_ZN18CXIMPOperationBase10GetContextEv @ 32 NONAME
+	_ZN18CXIMPOperationBase12EndOperationEv @ 33 NONAME
+	_ZN18CXIMPOperationBase13SetResultCodeEi @ 34 NONAME
+	_ZN18CXIMPOperationBase14BaseConstructLE14TXIMPRequestIdP15CXIMPPscContext @ 35 NONAME
+	_ZN18CXIMPOperationBase14BeginOperationEv @ 36 NONAME
+	_ZN18CXIMPOperationBase16GetObjCollectionEv @ 37 NONAME
+	_ZN18CXIMPOperationBase17RequestCompletedLEv @ 38 NONAME
+	_ZN18CXIMPOperationBase18SetServerOperationEv @ 39 NONAME
+	_ZN18CXIMPOperationBase19GetReqCompleteEventEv @ 40 NONAME
+	_ZN18CXIMPOperationBase19SetObjectCollectionEP9MXIMPBase @ 41 NONAME
+	_ZN18CXIMPOperationBase27CreateRequestCompleteEventLEv @ 42 NONAME
+	_ZN18CXIMPOperationBase6SetOpLEP15CXIMPPscContext @ 43 NONAME
+	_ZN18CXIMPOperationBase7ContextEv @ 44 NONAME
+	_ZN18CXIMPOperationBase7SetHostER9MXIMPHost @ 45 NONAME
+	_ZN18CXIMPOperationBase8ProcessLEv @ 46 NONAME
+	_ZN18CXIMPOperationBase8SetReqIdE14TXIMPRequestId @ 47 NONAME
+	_ZN18CXIMPOperationBase9SetStatusEP11MXIMPStatus @ 48 NONAME
+	_ZN18CXIMPOperationBaseC2Ev @ 49 NONAME
+	_ZN18CXIMPOperationBaseD0Ev @ 50 NONAME
+	_ZN18CXIMPOperationBaseD1Ev @ 51 NONAME
+	_ZN18CXIMPOperationBaseD2Ev @ 52 NONAME
+	_ZN18CXIMPPluginFactory12GetProtocolLE4TUid @ 53 NONAME
+	_ZN18CXIMPPluginFactory13GetProtocolsLEv @ 54 NONAME
+	_ZN19CXIMPFeatureManager21GetFrameworkFeaturesLEv @ 55 NONAME
+	_ZN22CXIMPContextEventQueue12DropTopEventEv @ 56 NONAME
+	_ZN22CXIMPContextEventQueue13StopConsumingEv @ 57 NONAME
+	_ZN22CXIMPContextEventQueue13TopEventDataLEv @ 58 NONAME
+	_ZN22CXIMPContextEventQueue14SetEventFilterER23CXIMPContextEventFilter @ 59 NONAME
+	_ZN22CXIMPContextEventQueue14StartConsumingER23MXIMPEventQueueObserver @ 60 NONAME
+	_ZN22CXIMPContextEventQueue14TopEventReqIdLEv @ 61 NONAME
+	_ZN22CXIMPContextEventQueue23SelectTopEventIfNeededLEv @ 62 NONAME
+	_ZN22CXIMPContextEventQueue4NewLEv @ 63 NONAME
+	_ZN28CProtocolPresenceDataHostImp16GroupsDataAccessEv @ 64 NONAME
+	_ZN28CProtocolPresenceDataHostImp17PresenceDataCacheEv @ 65 NONAME
+	_ZN28CProtocolPresenceDataHostImp18WatchingDataAccessEv @ 66 NONAME
+	_ZN28CProtocolPresenceDataHostImp20PublishingDataAccessEv @ 67 NONAME
+	_ZN28CProtocolPresenceDataHostImp23AuthorizationDataAccessEv @ 68 NONAME
+	_ZN28CProtocolPresenceDataHostImp4NewLER9MXIMPHost @ 69 NONAME
+	_ZN28CProtocolPresenceDataHostImp5NewLCER9MXIMPHost @ 70 NONAME
+	_ZN36CProtocolPresenceWatchingDataHostImp4NewLER9MXIMPHost @ 71 NONAME
+	_ZN36CProtocolPresentityGroupsDataHostImp4NewLER9MXIMPHost @ 72 NONAME
+	_ZN36CXIMPProtocolRequestCompleteEventImp12InternalizeLER11RReadStream @ 73 NONAME
+	_ZN36CXIMPProtocolRequestCompleteEventImp12SetRequestIdERK14TXIMPRequestId @ 74 NONAME
+	_ZN36CXIMPProtocolRequestCompleteEventImp13SetResultCodeEi @ 75 NONAME
+	_ZN36CXIMPProtocolRequestCompleteEventImp4NewLEv @ 76 NONAME
+	_ZN38CProtocolPresencePublishingDataHostImp4NewLER9MXIMPHost @ 77 NONAME
+	_ZN41CProtocolPresenceAuthorizationDataHostImp4NewLER9MXIMPHost @ 78 NONAME
+	_ZN9CXIMPHost5NewLCER23MXIMPProtocolConnectionl @ 79 NONAME
+	_ZNK15CXIMPPscContext10ClientInfoEv @ 80 NONAME
+	_ZNK15CXIMPPscContext10EventQueueEv @ 81 NONAME
+	_ZNK15CXIMPPscContext11ServiceInfoEv @ 82 NONAME
+	_ZNK15CXIMPPscContext14IsHostAssignedEv @ 83 NONAME
+	_ZNK15CXIMPPscContext18PresenceInfoFilterEN15MXIMPPscContext16TFilterStoreTypeEPK16CXIMPIdentityImp @ 84 NONAME
+	_ZNK15CXIMPPscContext9SessionIdEv @ 85 NONAME
+	_ZNK17CXIMPEventCapsule10EventReqIdEv @ 86 NONAME
+	_ZNK17CXIMPEventCapsule5ReadyEv @ 87 NONAME
+	_ZNK17CXIMPEventCapsule9EventDataEv @ 88 NONAME
+	_ZNK17CXIMPEventCapsule9EventTypeEv @ 89 NONAME
+	_ZNK18CXIMPOperationBase17IsServerOperationEv @ 90 NONAME
+	_ZNK18CXIMPOperationBase4TypeEv @ 91 NONAME
+	_ZNK18CXIMPOperationBase6StatusEv @ 92 NONAME
+	_ZNK18CXIMPOperationBase9RequestIdEv @ 93 NONAME
+	_ZNK22CXIMPContextEventQueue11HasElementsEv @ 94 NONAME
+	_ZNK36CXIMPProtocolRequestCompleteEventImp12ExternalizeLER12RWriteStream @ 95 NONAME
+	_ZTI12CXIMPGlobals @ 96 NONAME ; #<TI>#
+	_ZTI15CXIMPPscContext @ 97 NONAME ; #<TI>#
+	_ZTI16CXIMPHostManager @ 98 NONAME ; #<TI>#
+	_ZTI17CXIMPEventCapsule @ 99 NONAME ; #<TI>#
+	_ZTI17CXIMPEventManager @ 100 NONAME ; #<TI>#
+	_ZTI18CXIMPOperationBase @ 101 NONAME ; #<TI>#
+	_ZTI18CXIMPPluginFactory @ 102 NONAME ; #<TI>#
+	_ZTI19CXIMPFeatureManager @ 103 NONAME ; #<TI>#
+	_ZTI22CXIMPContextEventQueue @ 104 NONAME ; #<TI>#
+	_ZTI28CProtocolPresenceDataHostImp @ 105 NONAME ; #<TI>#
+	_ZTI36CProtocolPresenceWatchingDataHostImp @ 106 NONAME ; #<TI>#
+	_ZTI36CProtocolPresentityGroupsDataHostImp @ 107 NONAME ; #<TI>#
+	_ZTI38CProtocolPresencePublishingDataHostImp @ 108 NONAME ; #<TI>#
+	_ZTI41CProtocolPresenceAuthorizationDataHostImp @ 109 NONAME ; #<TI>#
+	_ZTI9CXIMPHost @ 110 NONAME ; #<TI>#
+	_ZTV12CXIMPGlobals @ 111 NONAME ; #<VT>#
+	_ZTV15CXIMPPscContext @ 112 NONAME ; #<VT>#
+	_ZTV16CXIMPHostManager @ 113 NONAME ; #<VT>#
+	_ZTV17CXIMPEventCapsule @ 114 NONAME ; #<VT>#
+	_ZTV17CXIMPEventManager @ 115 NONAME ; #<VT>#
+	_ZTV18CXIMPOperationBase @ 116 NONAME ; #<VT>#
+	_ZTV18CXIMPPluginFactory @ 117 NONAME ; #<VT>#
+	_ZTV19CXIMPFeatureManager @ 118 NONAME ; #<VT>#
+	_ZTV22CXIMPContextEventQueue @ 119 NONAME ; #<VT>#
+	_ZTV28CProtocolPresenceDataHostImp @ 120 NONAME ; #<VT>#
+	_ZTV36CProtocolPresenceWatchingDataHostImp @ 121 NONAME ; #<VT>#
+	_ZTV36CProtocolPresentityGroupsDataHostImp @ 122 NONAME ; #<VT>#
+	_ZTV38CProtocolPresencePublishingDataHostImp @ 123 NONAME ; #<VT>#
+	_ZTV41CProtocolPresenceAuthorizationDataHostImp @ 124 NONAME ; #<VT>#
+	_ZTV9CXIMPHost @ 125 NONAME ; #<VT>#
+	_ZThn28_NK15CXIMPPscContext18PresenceInfoFilterEN15MXIMPPscContext16TFilterStoreTypeEPK16CXIMPIdentityImp @ 126 NONAME ; #<thunk>#
+

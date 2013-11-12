@@ -1,0 +1,105 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET        cap_alarm.exe
+TARGETTYPE    exe
+
+UID	      0x1000007a 0x10204872	 		
+
+SOURCEPATH	  .
+SOURCE        CSuite.cpp
+SOURCE        EASShdOpCodeNotifyChange1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmCategory1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmOwner1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmStatus1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmDayOrTimed1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmCharacteristics1_CStep.cpp
+SOURCE        EASShdOpCodeAlarmDataSize1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmCountForCategory1_CStep.cpp
+SOURCE        EASShdOpCodeGetAvailableCategoryList1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmIdListForCategory1_CStep.cpp
+SOURCE        EASShdOpCodeAlarmCountByState1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmIdListByState1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmIdList1_CStep.cpp
+SOURCE        EASShdOpCodeGetNextDueAlarmId1_CStep.cpp
+SOURCE        EASShdOpCodeNumberOfAlarmsActiveInQueue1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmSoundState1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmSoundsSilentUntil1_CStep.cpp
+SOURCE        SShdOpCodeAlarmSoundsTemporarilySilenced1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmPlayIntervals1_CStep.cpp
+SOURCE        EASShdOpCodeNotifyChangeCancel1_CStep.cpp
+SOURCE        EASShdOpCodeFetchTransferBuffer1_CStep.cpp
+SOURCE        EASShdOpCodeAlarmCount1_CStep.cpp
+SOURCE        EASShdOpCodeDbgFailAlloc1_CStep.cpp
+SOURCE        EASShdOpCodeDbgPreventUserNotify1_CStep.cpp
+SOURCE        EASShdOpCodeDbgSnoozeAlarm1_CStep.cpp
+SOURCE        EASShdOpCodeFlushServer1_CStep.cpp
+
+SOURCE        EASShdOpCodeGetAlarmDetails1_CStep.cpp
+SOURCE	      EASShdOpCodeGetAlarmDetails_DifferentSID1_CStep.cpp			
+
+SOURCE        EASShdOpCodeGetAlarmData1_CStep.cpp
+SOURCE        EASShdOpCodeGetAlarmData_DifferentSID1_CStep.cpp
+
+SOURCE        EASShdOpCodeAlarmAtIndex1_CStep.cpp
+SOURCE        EASShdOpCodeAlarmAtIndex_DifferentSID1_CStep.cpp
+
+SOURCE        SShdpCdAlarmNotificationCancelAndDeQueue1_CStep.cpp
+SOURCE        SShdpCdAlarmNotificationCancelAndDeQueue_DifferentSID1_CStep.cpp
+
+SOURCE        EASShdOpCodeAlarmDelete1_CStep.cpp
+SOURCE        EASShdOpCodeAlarmDelete_DifferentSID1_CStep.cpp
+
+SOURCE        EASShdOpCodeSetAlarmStatus1_CStep.cpp
+SOURCE        EASShdOpCodeSetAlarmStatus_DifferentSID1_CStep.cpp
+
+SOURCE        EASShdOpCodeSetAlarmDayOrTimed1_CStep.cpp
+SOURCE        EASShdOpCodeSetAlarmDayOrTimed_DifferentSID1_CStep.cpp
+
+SOURCE        EASShdOpCodeSetAlarmCharacteristics1_CStep.cpp
+SOURCE        EASShdOpCodeSetAlarmCharacteristics_DifferentSID1_CStep.cpp
+
+SOURCE        EASShdOpCodeSetClientData1_CStep.cpp
+SOURCE        EASShdOpCodeSetClientData_DifferentSID1_CStep.cpp
+
+SOURCE        EASShdOpCodeAlarmDataAttach1_CStep.cpp
+SOURCE        EASShdOpCodeAlarmDataAttach_DifferentSID1_CStep.cpp
+
+SOURCE        EASShdOpCodeAlarmDataDetach1_CStep.cpp
+SOURCE        EASShdOpCodeAlarmDataDetach_DifferentSID1_CStep.cpp
+
+SOURCE        EASShdOpCodeAlarmAddWithNotification1_CStep.cpp
+SOURCE        EASShdOpCodeOrphanAlarm1_CStep.cpp
+SOURCE        EASShdOpCodeAlarmAdd1_CStep.cpp
+SOURCE        EASShdOpCodeSetAlarmSoundState1_CStep.cpp
+SOURCE        EASShdOpCodeSetAlarmSoundsSilentUntil1_CStep.cpp
+SOURCE        EASShdOpCodeSetAlarmSoundsSilentFor1_CStep.cpp
+SOURCE        EASShdOpCodeCancelAlarmSilence1_CStep.cpp
+SOURCE        EASShdOpCodeSetAlarmPlayIntervals1_CStep.cpp
+SOURCE        EASShdOpCodeSetAlarmStatusByCategory1_CStep.cpp
+SOURCE        EASShdOpCodeAlarmDeleteAllByCategory1_CStep.cpp
+SOURCE        EASShdOpCodeAlarmDeleteByCategory1_CStep.cpp
+//USERINCLUDE   .
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY       euser.lib alarmclient.lib alarmshared.lib
+
+//For TEF 
+LIBRARY		testexecuteutils.lib 
+LIBRARY		testexecutelogclient.lib 
+
+MACRO __DATA_CAGING__
+MACRO __SECURE_API__
+CAPABILITY All -TCB

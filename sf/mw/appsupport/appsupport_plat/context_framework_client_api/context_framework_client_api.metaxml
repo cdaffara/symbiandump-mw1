@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="6864add1b4c2771d333e85923211490e" dataversion="2.0">
+<name>Context Framework Client API</name>
+<description>Context Framework Client API provides interface through 3rd party developers can access Context Framework services. Context Framework Client API provides possibility to define contexts, publish and subscribe contexts, define actions and register new scripts.</description>
+<type>c++</type>
+<collection>contextframework</collection>
+<libs><lib name="CFClient.lib"/>
+</libs>
+<release category="platform" sinceversion="0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

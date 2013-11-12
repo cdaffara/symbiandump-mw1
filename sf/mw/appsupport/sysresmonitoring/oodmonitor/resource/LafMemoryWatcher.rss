@@ -1,0 +1,151 @@
+/*
+* Copyright (c) 1997-2001 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <eikon.rh>
+#include <avkon.loc>
+#include <systemwarninglevels.hrh>
+
+STRUCT OOM_WATCHER_INFO
+	{
+	LONG lowthreshold = 0;  // level of free memory where OOM watcher triggers into low memory mode
+	LONG goodthreshold = 0;	// level of free memory where OOM watcher reverts to normal (must be > lowthreshold)
+   	LONG maxappexittime = 0;
+   	LONG rampluginruntime = 0;
+	}
+
+STRUCT OOD_WATCHER_INFO
+	{
+	LONG warningthreshold = 0;  // level of free disk below which OOD watcher triggers into warning mode
+	LONG criticalthreshold = 0;	// level of free disk below which OOD watcher triggers into critical mode (must be <= warning)
+	}
+
+STRUCT APP_ITEM
+    {
+    LONG uid = 0;
+    }
+
+// OOM Threshold levels
+RESOURCE OOM_WATCHER_INFO r_app_oom_thresholds
+	{
+	lowthreshold = KRAMLOWTHRESHOLD;
+	goodthreshold = KRAMGOODTHRESHOLD;
+    	maxappexittime = KMAXAPPEXITTIME;
+  	rampluginruntime = KRAMPLUGINRUNTIME;
+	}
+
+// OOD Threshold levels
+RESOURCE OOD_WATCHER_INFO r_app_ood_thresholds
+	{
+	warningthreshold = KDRIVECWARNINGTHRESHOLD;
+	criticalthreshold = KDRIVECCRITICALTHRESHOLD;
+	}
+
+// Apps that are candidates for closing in low memory situations
+// Ordered by priority; apps at the top of the list are exited first
+RESOURCE ARRAY r_app_oom_exit_candidates
+    {
+    items=
+        {
+		APP_ITEM
+            {
+            uid = 0x101F857A;  //CamCorder
+            },
+		APP_ITEM
+            { 
+            uid = 0x10005902;  //Calculator
+            },
+		APP_ITEM
+            {
+            uid = 0x101F4668;  //Converter
+            },
+		APP_ITEM
+            {
+            uid = 0x10005903;  //Clock
+            },
+		APP_ITEM
+            {
+            uid = 0x1000595F;  //Composer
+            }
+        };
+    }
+
+// Apps that are never closed in low memory situations
+RESOURCE ARRAY r_app_oom_exit_never
+    {
+    items=
+        {
+		APP_ITEM
+            {
+            uid = 0x100058F3;  //System App
+            },
+		APP_ITEM
+            {
+            uid = 0x101F4CD2;  //Menu App
+            },
+		APP_ITEM
+            {
+            uid = 0x100058B3;  //Phone App
+            },
+		APP_ITEM
+            {
+            uid = 0x100056CF;  //Screensaver
+            },
+		APP_ITEM
+            {
+            uid = 0x100059B5;  //Autolock
+            },
+		APP_ITEM
+            {
+            uid = 0x100058F4;  //Startup
+            },
+		APP_ITEM
+            {
+            uid = 0x10008D39;  //Browser
+            }
+       // AFTER HERE ARE FOR TESTING ONLY
+#ifdef RD_RAM_TEST_UID
+		,APP_ITEM
+            {
+            uid = 0x100051c3;  //Memsuck (only for testing)
+            },
+		APP_ITEM
+            {
+            uid = 0x010051c3;  //Disksuck (only for testing)
+            }
+#endif
+        };
+    }
+
+RESOURCE LBUF r_qtn_memlo_memory_full {txt = qtn_memlo_memory_full;}
+RESOURCE LBUF r_qtn_memlo_memory_running_out {txt = qtn_memlo_memory_running_out;}
+
+RESOURCE LBUF r_qtn_memlo_mmc_memory_running_out {txt = qtn_memlo_mmc_memory_running_out;}
+RESOURCE LBUF r_qtn_memlo_mmc_memory_full {txt = qtn_memlo_mmc_memory_full;}
+
+// Apps that are the last to be closed in low memory situations
+// Ordered by priority; apps at the top of the list are exited last
+RESOURCE ARRAY r_app_oom_exit_last
+    {
+    items=
+        {
+		APP_ITEM
+            {
+            uid = 0x101f9515;  //java (lcdui)
+            }
+        };
+    }

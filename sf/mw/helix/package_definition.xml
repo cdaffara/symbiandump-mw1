@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0">
+  <package id="helix" name="Helix" levels="plugin framework server generic specific">
+    <collection id="helix_ren" name="Helix Engine" level="framework">
+      <component id="helix_ren_build" filter="s60" name="Helix Engine Build" introduced="^2">
+       <unit bldFile="helix_ren/group"/>
+      </component>
+      <component id="helix_stub" filter="sf_build" name="Helix Stub" class="api" introduced="^2">
+        <unit bldFile="helix_ren/helix_stub/group"/>
+      </component>
+      <component id="helixrfsplugin" filter="s60" name="Helix RFS Plugin" class="plugin" introduced="^2">
+        <unit bldFile="helix_ren/helixrfsplugin/group"/>
+      </component>
+    </collection>    
+    <collection id="helix_test" name="Helix test" level="specific">
+      <component id="helix_tsrc" filter="s60,test,pref_test,module_test" name="console player" introduced="^2">
+       <unit bldFile="tsrc/consoleplayer/group"/>
+      </component>      
+    </collection>    
+  </package>
+</SystemDefinition>

@@ -1,0 +1,5 @@
+EXPORTS
+	_Z16CreateRecognizerv @ 1 NONAME
+	_ZTI20CEBookmarkRecognizer @ 2 NONAME ; #<TI>#
+	_ZTV20CEBookmarkRecognizer @ 3 NONAME ; #<VT>#
+

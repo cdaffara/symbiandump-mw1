@@ -1,0 +1,17 @@
+EXPORTS
+	?ConnMgrBus@CXmppParameters@@QAEABVTDesC16@@XZ @ 1 NONAME ; class TDesC16 const & CXmppParameters::ConnMgrBus(void)
+	?ConnMgrPath@CXmppParameters@@QAEABVTDesC16@@XZ @ 2 NONAME ; class TDesC16 const & CXmppParameters::ConnMgrPath(void)
+	?IapId@CXmppParameters@@QAEJXZ @ 3 NONAME ; long CXmppParameters::IapId(void)
+	?NewL@CXmppParameters@@SAPAV1@XZ @ 4 NONAME ; class CXmppParameters * CXmppParameters::NewL(void)
+	?Passwd@CXmppParameters@@QAEABVTDesC16@@XZ @ 5 NONAME ; class TDesC16 const & CXmppParameters::Passwd(void)
+	?Protocol@CXmppParameters@@QAEABVTDesC16@@XZ @ 6 NONAME ; class TDesC16 const & CXmppParameters::Protocol(void)
+	?ProxyPort@CXmppParameters@@QAEJXZ @ 7 NONAME ; long CXmppParameters::ProxyPort(void)
+	?ProxyServer@CXmppParameters@@QAEABVTDesC16@@XZ @ 8 NONAME ; class TDesC16 const & CXmppParameters::ProxyServer(void)
+	?ReadSettingsL@CXmppSettingsFetcher@@SAHKAAVCXmppParameters@@@Z @ 9 NONAME ; int CXmppSettingsFetcher::ReadSettingsL(unsigned long, class CXmppParameters &)
+	?Resource@CXmppParameters@@QAEABVTDesC16@@XZ @ 10 NONAME ; class TDesC16 const & CXmppParameters::Resource(void)
+	?ServerAddress@CXmppParameters@@QAEABVTDesC16@@XZ @ 11 NONAME ; class TDesC16 const & CXmppParameters::ServerAddress(void)
+	?ServerPort@CXmppParameters@@QAEJXZ @ 12 NONAME ; long CXmppParameters::ServerPort(void)
+	?SettingsId@CXmppParameters@@QAEKXZ @ 13 NONAME ; unsigned long CXmppParameters::SettingsId(void)
+	?Ssl@CXmppParameters@@QAEHXZ @ 14 NONAME ; int CXmppParameters::Ssl(void)
+	?UserName@CXmppParameters@@QAEABVTDesC16@@XZ @ 15 NONAME ; class TDesC16 const & CXmppParameters::UserName(void)
+

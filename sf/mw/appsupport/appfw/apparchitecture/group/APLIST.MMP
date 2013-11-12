@@ -1,0 +1,90 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+//
+// APLIST.MMP for component APLIST
+//
+
+/**
+@file
+
+@SYMPurpose aplist.dll 		//mm Apparc server client APIs + wserv wrapper utilities
+*/
+
+target          aplist.dll
+CAPABILITY 	All -Tcb
+targettype      DLL
+UID		0x1000008D 0x11003A3C	// GET REAL UID!!!!
+VENDORID 0x70000001
+
+option MSVC /Od
+
+
+SOURCEPATH	../aplist
+
+userinclude	../inc
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+source		aplapplist.cpp	aplapplistitem.cpp aplappinforeader.cpp apsidchecker.cpp
+source		apsiconcaptionoverride.cpp
+
+#ifndef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+source aplappregfinder.cpp
+#endif
+
+library         euser.lib gdi.lib estor.lib efsrv.lib fbscli.lib
+library         bitgdi.lib ws32.lib bafl.lib ecom.lib 
+
+#ifdef SYMBIAN_BAFL_SYSUTIL
+library sysutil.lib
+#endif
+
+library 		apparc.lib	// TApaAppCapability referenced from CApaAppInfoReader
+library			apgrfx.lib  // CApaMaskedBitmap referenced from CApaIconLoader
+library 		apfile.lib	// CAppSidChecker referenced from CApaAppRegFinder
+library 		apserv.lib	// CApaAppListServer referenced from CApaAppRegFinder
+library 		apmime.lib 	// TDataType referenced from CApaAppData
+library			centralrepository.lib
+
+#ifdef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+library			scrclient.lib
+#endif
+
+//library         	apserv.lib apfile.lib apparc.lib 
+
+#ifdef USE_IH_RAISE_EVENT
+LIBRARY			instrumentationhandler.lib
+#endif // USE_IH_RAISE_EVENT
+
+macro			SYMBIAN_SUPPORT_UI_FRAMEWORKS_V1
+
+
+START WINS
+//	baseaddress	0x42F00000
+END
+
+START MARM
+END
+
+#ifdef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+	deffile aplist.def
+#else
+	deffile aplist_legacy.def
+#endif
+
+
+
+SMPSAFE

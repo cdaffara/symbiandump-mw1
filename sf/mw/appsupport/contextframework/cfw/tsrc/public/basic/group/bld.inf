@@ -1,0 +1,531 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_TESTEXPORTS
+../rom/cfw_ats3.iby CORE_OS_LAYER_IBY_EXPORT_PATH(cfw_ats3.iby)
+
+../data/testsettings/validsettingsfile.xml\
+        /epoc32/data/z/data/cftestdata/testsettings/validsettingsfile.xml
+../data/testsettings/validsettingsfile.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsettings/validsettingsfile.xml
+
+../data/testsettings/validsettingsfile2.xml\
+        /epoc32/data/z/data/cftestdata/testsettings/validsettingsfile2.xml
+../data/testsettings/validsettingsfile2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsettings/validsettingsfile2.xml
+
+../data/testsettings/invalidsettingsfile.xml\
+        /epoc32/data/z/data/cftestdata/testsettings/invalidsettingsfile.xml
+../data/testsettings/invalidsettingsfile.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsettings/invalidsettingsfile.xml
+
+../data/testsettings/10282BDA.txt\
+        /epoc32/data/z/private/10202be9/10282BDA.txt
+../data/testsettings/10282BDA.txt\
+        /epoc32/release/winscw/udeb/z/private/10202be9/10282BDA.txt
+
+../data/testsettings/testcontextsourcesetting1.xml\
+    /epoc32/data/z/private/10282BC4/Settings/10002001/testcontextsourcesetting1.xml
+../data/testsettings/testcontextsourcesetting1.xml\
+    /epoc32/release/winscw/udeb/z/private/10282BC4/Settings/10002001/testcontextsourcesetting1.xml
+
+../data/testsettings/testcontextsourcesetting2.xml\
+    /epoc32/data/z/private/10282BC4/Settings/10002001/testcontextsourcesetting2.xml
+../data/testsettings/testcontextsourcesetting2.xml\
+    /epoc32/release/winscw/udeb/z/private/10282BC4/Settings/10002001/testcontextsourcesetting2.xml
+
+../data/testsettings/testcontextsourcesetting3.xml\
+        /epoc32/data/z/data/cftestdata/testsettings/testcontextsourcesetting3.xml
+../data/testsettings/testcontextsourcesetting3.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsettings/testcontextsourcesetting3.xml
+
+../data/testsettings/settingupgrade/testcontextsourcesetting3.xml\
+        /epoc32/data/z/data/cftestdata/testsettings/settingupgrade/testcontextsourcesetting3.xml
+../data/testsettings/settingupgrade/testcontextsourcesetting3.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsettings/settingupgrade/testcontextsourcesetting3.xml
+
+../data/testsettings/testcontextsourcesetting4.xml\
+        /epoc32/data/z/data/cftestdata/testsettings/testcontextsourcesetting4.xml
+../data/testsettings/testcontextsourcesetting4.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsettings/testcontextsourcesetting4.xml
+
+../data/testsettings/testcontextsourcesetting5.xml\
+        /epoc32/data/z/data/cftestdata/testsettings/testcontextsourcesetting5.xml
+../data/testsettings/testcontextsourcesetting5.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsettings/testcontextsourcesetting5.xml
+
+../data/testsettings/testcontextsourcesetting7.xml\
+        /epoc32/data/z/data/cftestdata/testsettings/testcontextsourcesetting7.xml
+../data/testsettings/testcontextsourcesetting7.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsettings/testcontextsourcesetting7.xml
+
+../data/testscripts/test-and.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-and.xml
+../data/testscripts/test-and.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-and.xml
+
+../data/testscripts/test-and-contextChanged.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-and-contextChanged.xml
+../data/testscripts/test-and-contextChanged.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-and-contextChanged.xml
+
+../data/testscripts/test-and-contextUpdated.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-and-contextUpdated.xml
+../data/testscripts/test-and-contextUpdated.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-and-contextUpdated.xml
+
+../data/testscripts/test-contains.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-contains.xml
+../data/testscripts/test-contains.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-contains.xml
+
+../data/testscripts/test-contextChanged.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-contextChanged.xml
+../data/testscripts/test-contextChanged.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-contextChanged.xml
+
+../data/testscripts/test-contextUpdated.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-contextUpdated.xml
+../data/testscripts/test-contextUpdated.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-contextUpdated.xml
+
+../data/testscripts/test-delay-contextRef.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-delay-contextRef.xml
+../data/testscripts/test-delay-contextRef.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-delay-contextRef.xml
+
+../data/testscripts/test-delay-script1.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-delay-script1.xml
+../data/testscripts/test-delay-script1.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-delay-script1.xml
+
+../data/testscripts/test-delay-script2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-delay-script2.xml
+../data/testscripts/test-delay-script2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-delay-script2.xml
+
+../data/testscripts/test-else.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-else.xml
+../data/testscripts/test-else.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-else.xml
+
+../data/testscripts/test-elseIf.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-elseIf.xml
+../data/testscripts/test-elseIf.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-elseIf.xml
+
+../data/testscripts/test-equals.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-equals.xml
+../data/testscripts/test-equals.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-equals.xml
+
+../data/testscripts/test-greater.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-greater.xml
+../data/testscripts/test-greater.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-greater.xml
+
+../data/testscripts/test-greaterOrEqual.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-greaterOrEqual.xml
+../data/testscripts/test-greaterOrEqual.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-greaterOrEqual.xml
+
+../data/testscripts/test-inRange.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-inRange.xml
+../data/testscripts/test-inRange.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-inRange.xml
+
+../data/testscripts/test-less.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-less.xml
+../data/testscripts/test-less.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-less.xml
+
+../data/testscripts/test-lessOrEqual.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-lessOrEqual.xml
+../data/testscripts/test-lessOrEqual.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-lessOrEqual.xml
+
+../data/testscripts/test-not.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-not.xml
+../data/testscripts/test-not.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-not.xml
+
+../data/testscripts/test-notEqual.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-notEqual.xml
+../data/testscripts/test-notEqual.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-notEqual.xml
+
+../data/testscripts/test-or.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-or.xml
+../data/testscripts/test-or.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-or.xml
+
+../data/testscripts/test-publishContext.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-publishContext.xml
+../data/testscripts/test-publishContext.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-publishContext.xml
+
+../data/testscripts/test-publishContext2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-publishContext2.xml
+../data/testscripts/test-publishContext2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-publishContext2.xml
+
+../data/testscripts/test-publishContext3.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-publishContext3.xml
+../data/testscripts/test-publishContext3.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-publishContext3.xml
+
+../data/testscripts/test-countRepeatingWithoutValue.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countRepeatingWithoutValue.xml
+../data/testscripts/test-countRepeatingWithoutValue.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countRepeatingWithoutValue.xml
+
+../data/testscripts/test-countRepeatingWithoutValue2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countRepeatingWithoutValue2.xml
+../data/testscripts/test-countRepeatingWithoutValue2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countRepeatingWithoutValue2.xml
+
+../data/testscripts/test-countRepeatingWithValue.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countRepeatingWithValue.xml
+../data/testscripts/test-countRepeatingWithValue.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countRepeatingWithValue.xml
+
+../data/testscripts/test-countOneShotWithoutValue.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithoutValue.xml
+../data/testscripts/test-countOneShotWithoutValue.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithoutValue.xml
+
+../data/testscripts/test-countOneShotWithoutValue2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithoutValue2.xml
+../data/testscripts/test-countOneShotWithoutValue2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithoutValue2.xml
+
+../data/testscripts/test-countOneShotWithValue.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValue.xml
+../data/testscripts/test-countOneShotWithValue.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValue.xml
+
+../data/testscripts/test-countOneShotWithValueDuration.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValueDuration.xml
+../data/testscripts/test-countOneShotWithValueDuration.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValueDuration.xml
+
+../data/testscripts/test-countOneShotWithValueDuration2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValueDuration2.xml
+../data/testscripts/test-countOneShotWithValueDuration2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValueDuration2.xml
+
+../data/testscripts/test-countOneShotWithValueDuration3.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValueDuration3.xml
+../data/testscripts/test-countOneShotWithValueDuration3.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValueDuration3.xml
+
+../data/testscripts/test-countOneShotWithValuePersistentDuration.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration.xml
+../data/testscripts/test-countOneShotWithValuePersistentDuration.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration.xml
+
+../data/testscripts/test-countOneShotWithValuePersistentDuration2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration2.xml
+../data/testscripts/test-countOneShotWithValuePersistentDuration2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration2.xml
+
+../data/testscripts/test-countOneShotWithValuePersistentDuration3.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration3.xml
+../data/testscripts/test-countOneShotWithValuePersistentDuration3.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration3.xml
+
+../data/testscripts/test-countOneShotWithValuePersistentDuration4.xml\
+    /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration4.xml
+../data/testscripts/test-countOneShotWithValuePersistentDuration4.xml\
+    /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration4.xml
+
+../data/testscripts/test-countOneShotWithValuePersistentDuration5.xml\
+    /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration5.xml
+../data/testscripts/test-countOneShotWithValuePersistentDuration5.xml\
+    /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration5.xml
+
+../data/testscripts/test-countOneShotWithValuePersistentDuration6.xml\
+    /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration6.xml
+../data/testscripts/test-countOneShotWithValuePersistentDuration6.xml\
+    /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration6.xml
+
+../data/testscripts/test-countOneShotWithValuePersistentDuration7.xml\
+    /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration7.xml
+../data/testscripts/test-countOneShotWithValuePersistentDuration7.xml\
+    /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration7.xml
+
+../data/testscripts/test-countOneShotWithValuePersistentDuration8.xml\
+    /epoc32/data/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration8.xml
+../data/testscripts/test-countOneShotWithValuePersistentDuration8.xml\
+    /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countOneShotWithValuePersistentDuration8.xml
+
+../data/testscripts/test-countRepeatingWithValuePersistent.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countRepeatingWithValuePersistent.xml
+../data/testscripts/test-countRepeatingWithValuePersistent.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countRepeatingWithValuePersistent.xml
+
+../data/testscripts/test-countRepeatingWithValuePersistent2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countRepeatingWithValuePersistent2.xml
+../data/testscripts/test-countRepeatingWithValuePersistent2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countRepeatingWithValuePersistent2.xml
+
+../data/testscripts/test-countRepeatingWithValuePersistent3.xml\
+    /epoc32/data/z/data/cftestdata/testscripts/test-countRepeatingWithValuePersistent3.xml
+../data/testscripts/test-countRepeatingWithValuePersistent3.xml\
+    /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countRepeatingWithValuePersistent3.xml
+
+../data/testscripts/test-countRepeatingWithoutValuePersistent.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-countRepeatingWithoutValuePersistent.xml
+../data/testscripts/test-countRepeatingWithoutValuePersistent.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-countRepeatingWithoutValuePersistent.xml
+
+../data/testscripts/test-parsing.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-parsing.xml
+../data/testscripts/test-parsing.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-parsing.xml
+
+../data/testscripts/test-parsing2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-parsing2.xml
+../data/testscripts/test-parsing2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-parsing2.xml
+
+../data/testscripts/test-parsing3.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-parsing3.xml
+../data/testscripts/test-parsing3.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-parsing3.xml
+
+../data/testscripts/test-registerscript.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-registerscript.xml
+../data/testscripts/test-registerscript.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-registerscript.xml
+
+../data/testscripts/test-registerscript-noactionaccess.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-registerscript-noactionaccess.xml
+../data/testscripts/test-registerscript-noactionaccess.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-registerscript-noactionaccess.xml
+
+../data/testscripts/test-registerscript-nocontextaccess.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-registerscript-nocontextaccess.xml
+../data/testscripts/test-registerscript-nocontextaccess.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-registerscript-nocontextaccess.xml
+
+../data/testscripts/test-registerscript-nocontextdefined.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-registerscript-nocontextdefined.xml
+../data/testscripts/test-registerscript-nocontextdefined.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-registerscript-nocontextdefined.xml
+
+../data/testscripts/test-registerscript-noactiondefined.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-registerscript-noactiondefined.xml
+../data/testscripts/test-registerscript-noactiondefined.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-registerscript-noactiondefined.xml
+
+../data/testscripts/test-scriptUpgradeRam.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-scriptUpgradeRom.xml
+../data/testscripts/test-scriptUpgradeRam.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-scriptUpgradeRom.xml
+
+../data/testscripts/test-scriptUpgradeRamCapabilitiesMissing.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-scriptUpgradeRomCapabilitiesMissing.xml
+../data/testscripts/test-scriptUpgradeRamCapabilitiesMissing.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-scriptUpgradeRomCapabilitiesMissing.xml
+
+../data/testscripts/test-scriptUpgradeRamNoUpgradeSecurity.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-scriptUpgradeRomNoUpgradeSecurity.xml
+../data/testscripts/test-scriptUpgradeRamNoUpgradeSecurity.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-scriptUpgradeRomNoUpgradeSecurity.xml
+
+../data/testscripts/test-scriptUpgradeRamClientMissingCapability.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-scriptUpgradeRomClientMissingCapability.xml
+../data/testscripts/test-scriptUpgradeRamClientMissingCapability.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-scriptUpgradeRomClientMissingCapability.xml
+
+../data/testscripts/test-saveScript.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-saveScript.xml
+../data/testscripts/test-saveScript.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-saveScript.xml
+
+../data/testscripts/test-saveScript2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-saveScript2.xml
+../data/testscripts/test-saveScript2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-saveScript2.xml
+
+../data/testscripts/test-actionV1.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-actionV1.xml
+../data/testscripts/test-actionV1.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-actionV1.xml
+
+../data/testscripts/test-actionV2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-actionV2.xml
+../data/testscripts/test-actionV2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-actionV2.xml
+
+../data/testscripts/test-operationV1-1.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-operationV1-1.xml
+../data/testscripts/test-operationV1-1.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-operationV1-1.xml
+
+../data/testscripts/test-operationV1-2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-operationV1-2.xml
+../data/testscripts/test-operationV1-2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-operationV1-2.xml
+
+../data/testscripts/test-operationV2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-operationV2.xml
+../data/testscripts/test-operationV2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-operationV2.xml
+
+../data/testscripts/test-scriptUpgradeRom.xml\
+        /epoc32/release/winscw/udeb/z/private/10282BC4/Rules/test-scriptUpgradeRom.rul
+../data/testscripts/test-scriptUpgradeRom.xml\
+        /epoc32/data/z/private/10282BC4/Rules/test-scriptUpgradeRom.rul
+
+../data/testscripts/test-rollbackRom.xml\
+        /epoc32/release/winscw/udeb/z/private/10282BC4/Rules/test-rollbackRom.rul
+../data/testscripts/test-rollbackRom.xml\
+        /epoc32/data/z/private/10282BC4/Rules/test-rollbackRom.rul
+
+../data/testscripts/test-scriptUpgradeRomClientMissingCapability.xml\
+        /epoc32/release/winscw/udeb/z/private/10282BC4/Rules/test-scriptUpgradeRomClientMissingCapability.rul
+../data/testscripts/test-scriptUpgradeRomClientMissingCapability.xml\
+        /epoc32/data/z/private/10282BC4/Rules/test-scriptUpgradeRomClientMissingCapability.rul
+
+../data/testscripts/test-cfclient.xml\
+        /epoc32/release/winscw/udeb/z/private/10282BC4/Rules/test-cfclient.rul
+../data/testscripts/test-cfclient.xml\
+        /epoc32/data/z/private/10282BC4/Rules/test-cfclient.rul
+
+../sis/contextsource_v1.sisx\
+        /epoc32/data/z/data/cftestdata/testsis/contextsource_v1/contextsource.sisx
+../sis/contextsource_v1_wins.sisx\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsis/contextsource_v1/contextsource.sisx
+
+../sis/contextsource_v2.sisx\
+        /epoc32/data/z/data/cftestdata/testsis/contextsource_v2/contextsource.sisx
+../sis/contextsource_v2_wins.sisx\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsis/contextsource_v2/contextsource.sisx
+
+../sis/action_v1.sisx\
+        /epoc32/data/z/data/cftestdata/testsis/action_v1/action.sisx
+../sis/action_v1_wins.sisx\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsis/action_v1/action.sisx
+
+../sis/action_v2.sisx\
+        /epoc32/data/z/data/cftestdata/testsis/action_v2/action.sisx
+../sis/action_v2_wins.sisx\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsis/action_v2/action.sisx
+
+../sis/operation_v1.sisx\
+        /epoc32/data/z/data/cftestdata/testsis/operation_v1/operation.sisx
+../sis/operation_v1_wins.sisx\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsis/operation_v1/operation.sisx
+
+../sis/operation_v2.sisx\
+        /epoc32/data/z/data/cftestdata/testsis/operation_v2/operation.sisx
+../sis/operation_v2_wins.sisx\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsis/operation_v2/operation.sisx
+
+../sis/operation_v3.sisx\
+        /epoc32/data/z/data/cftestdata/testsis/operation_v3/operation.sisx
+../sis/operation_v3_wins.sisx\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testsis/operation_v3/operation.sisx
+
+../data/testscripts/test-sourceCommand.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-sourceCommand.xml
+../data/testscripts/test-sourceCommand.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-sourceCommand.xml
+
+../data/testscripts/test-sourceCommand2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-sourceCommand2.xml
+../data/testscripts/test-sourceCommand2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-sourceCommand2.xml
+
+../data/testscripts/test-sourceCommandPlugIn.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-sourceCommandPlugIn.xml
+../data/testscripts/test-sourceCommandPlugIn.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-sourceCommandPlugIn.xml
+
+../data/testscripts/test-sourceCommandPlugIn2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-sourceCommandPlugIn2.xml
+../data/testscripts/test-sourceCommandPlugIn2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-sourceCommandPlugIn2.xml
+
+../data/testscripts/test-romPublishContext.xml\
+    /epoc32/release/winscw/udeb/z/private/10282BC4/Rules/test-romPublishContext.rul
+../data/testscripts/test-romPublishContext.xml\
+    /epoc32/data/z/private/10282BC4/Rules/test-romPublishContext.rul
+../data/testscripts/test-romPublishContext.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-romPublishContext.xml
+../data/testscripts/test-romPublishContext.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-romPublishContext.xml
+
+../data/testscripts/test-romPublishContext2.xml\
+    /epoc32/release/winscw/udeb/z/private/10282BC4/Rules/test-romPublishContext2.rul
+../data/testscripts/test-romPublishContext2.xml\
+    /epoc32/data/z/private/10282BC4/Rules/test-romPublishContext2.rul
+../data/testscripts/test-romPublishContext2.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-romPublishContext2.xml
+../data/testscripts/test-romPublishContext2.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-romPublishContext2.xml
+
+../data/testscripts/test-romPublishContext3.xml\
+    /epoc32/release/winscw/udeb/z/private/10282BC4/Rules/test-romPublishContext3.rul
+../data/testscripts/test-romPublishContext3.xml\
+    /epoc32/data/z/private/10282BC4/Rules/test-romPublishContext3.rul
+../data/testscripts/test-romPublishContext3.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-romPublishContext3.xml
+../data/testscripts/test-romPublishContext3.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-romPublishContext3.xml
+../data/testscripts/test-romPublishContext4.xml\
+	/epoc32/release/winscw/udeb/z/private/10282BC4/Rules/test-romPublishContext4.rul
+../data/testscripts/test-romPublishContext4.xml\
+	/epoc32/data/z/private/10282BC4/Rules/test-romPublishContext4.rul
+../data/testscripts/test-romPublishContext4.xml\
+	/epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-romPublishContext4.xml
+../data/testscripts/test-romPublishContext4.xml\
+	/epoc32/data/z/data/cftestdata/testscripts/test-romPublishContext4.xml
+
+../data/testscripts/test-romPublishContext5.xml\
+    /epoc32/release/winscw/udeb/z/private/10282BC4/Rules/test-romPublishContext5.rul
+../data/testscripts/test-romPublishContext5.xml\
+    /epoc32/data/z/private/10282BC4/Rules/test-romPublishContext5.rul
+../data/testscripts/test-romPublishContext5.xml\
+        /epoc32/release/winscw/udeb/z/data/cftestdata/testscripts/test-romPublishContext5.xml
+../data/testscripts/test-romPublishContext5.xml\
+        /epoc32/data/z/data/cftestdata/testscripts/test-romPublishContext5.xml
+
+PRJ_TESTMMPFILES
+
+// Test components
+contextsource_v1.mmp
+contextsource_v2.mmp
+action_v1.mmp
+action_v2.mmp
+operation_v1.mmp
+operation_v2.mmp
+operation_v3.mmp
+
+// Test includes
+#include "../testactionplugin/group/bld.inf"
+#include "../testcontextsourceplugin/group/bld.inf"
+
+
+PRJ_MMPFILES
+
+// None.

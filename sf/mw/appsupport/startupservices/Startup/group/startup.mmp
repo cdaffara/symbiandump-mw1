@@ -1,0 +1,92 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*           This is project specification file for the Startup.
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          startup.exe
+TARGETTYPE      exe
+UID             0x0 0x100058F4
+EPOCSTACKSIZE	0x5000
+EPOCHEAPSIZE    0x800 0x400000 // min 2kB, max 4MB
+
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_APPLICATION AllFiles SwEvent PowerMgmt
+
+SOURCEPATH      ../src
+
+SOURCE          StartupApplication.cpp
+SOURCE          StartupAppUi.cpp
+SOURCE          startupanimationwrapper.cpp
+SOURCE          startupview.cpp
+SOURCE          StartupDocument.cpp
+SOURCE          StartupSubscriber.cpp
+SOURCE          StartupPubSubObserver.cpp
+
+
+START RESOURCE  ../data/startup.rss
+TARGETPATH      APP_RESOURCE_DIR
+HEADER
+LANGUAGE_IDS
+END  // RESOURCE
+
+
+
+START RESOURCE 	../data/Startup_reg.rss
+HEADER
+TARGETPATH      /private/10003a3f/apps
+END
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+USERINCLUDE     ../data
+USERINCLUDE     ../../inc
+USERINCLUDE     ../../../inc
+
+SYSTEMINCLUDE   /epoc32/include/mw/hb/hbwidgets
+
+APP_LAYER_SYSTEMINCLUDE     // dependency to app layer (Profiles)
+
+LIBRARY         eikcoctl.lib
+LIBRARY         euser.lib
+LIBRARY         apparc.lib
+LIBRARY         cone.lib
+
+LIBRARY         eikcore.lib
+LIBRARY         efsrv.lib
+LIBRARY         fbscli.lib
+LIBRARY         centralrepository.lib
+LIBRARY         commonengine.lib        //use of SharedData
+LIBRARY         starterclient.lib       //use of Starter to remove splash screen
+LIBRARY         ws32.lib
+
+LIBRARY         apgrfx.lib              //
+LIBRARY         egul.lib                //DrawUtils
+LIBRARY         featmgr.lib
+LIBRARY         bafl.lib
+LIBRARY         mediatorclient.lib
+
+LIBRARY         sanimctrl.lib
+
+LIBRARY       hbwidgets.lib
+LIBRARY       hbCore.lib
+LIBRARY         bmpanim.lib
+
+
+SMPSAFE

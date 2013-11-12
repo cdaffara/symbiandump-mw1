@@ -1,0 +1,90 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PREFIX RUN_UTILS
+CopyFile c:\sys\bin\Cap_Alarm.exe c:\TestData\Scripts\Cap_Alarm.exe
+REMOVE_PREFIX
+
+// Start ConsoleAlarmAlertServer so that AlarmServer is able to run.
+LOAD_SUITE StartCAAS
+PRINT	-------- Starting ConsoleAlarmAlertServer
+RUN_TEST_STEP 2000 StartCAAS Start_ConsoleAlarmAlertServer
+
+
+//To delete all alarms
+RUN_PROGRAM -1 AlarmDelete
+
+//To create an alarm
+RUN_PROGRAM -1 AlarmCreate
+
+// Ultimate paths for Cap_Alarm_sc.exe:
+//	Emulator 9.1(EKA2)	- C:\sys\bin\		- have to create
+//	Emulator 	(EKA1)	- C:\system\programs\
+//	H2 		(EKA2)	- C:\sys\bin\		- have to create
+//	Lubboc	(EKA1)	- C:\system\programs\
+//RUN_UTILS MkDir C:\sys\bin\
+
+// --------------------
+// Use Setcap to change capabilities of harness (MASK = 00000004)
+RUN_PROGRAM -1 setcap c:\TestData\Scripts\Cap_Alarm.exe 00000004 C:\sys\bin\Cap_Alarm_sc.exe
+//Please don't ammend the following PRINT Line as it is used by CapToolSumm to generate its report
+PRINT --------  capabilities now set to [PowerMgmt] (MASK = 00000004)  --------
+
+RUN_SCRIPT  c:\TestData\Scripts\Cap_00000004_AlarmSub_Custom.script
+
+//To delete all alarms
+RUN_PROGRAM -1 AlarmDelete
+
+// --------------------
+// Use Setcap to change capabilities of harness (MASK = 00010004)
+RUN_PROGRAM -1 setcap c:\TestData\Scripts\Cap_Alarm.exe 00010004 C:\sys\bin\Cap_Alarm_sc.exe
+//Please don't ammend the following PRINT Line as it is used by CapToolSumm to generate its report
+PRINT --------  capabilities now set to [WriteUserData PowerMgmt] (MASK = 00010004)  --------
+
+RUN_SCRIPT  c:\TestData\Scripts\Cap_00010004_AlarmSub.script
+// --------------------
+// Use Setcap to change capabilities of harness (MASK = 00000004)
+RUN_PROGRAM -1 setcap c:\TestData\Scripts\Cap_Alarm.exe 00000004 C:\sys\bin\Cap_Alarm_sc.exe
+//Please don't ammend the following PRINT Line as it is used by CapToolSumm to generate its report
+PRINT --------  capabilities now set to [PowerMgmt] (MASK = 00000004)  --------
+
+RUN_SCRIPT  c:\TestData\Scripts\Cap_00000004_AlarmSub.script
+
+//To delete all alarms
+RUN_PROGRAM -1 AlarmDelete
+
+// --------------------
+// Use Setcap to change capabilities of harness (MASK = 00000024)
+RUN_PROGRAM -1 setcap c:\TestData\Scripts\Cap_Alarm.exe 00000024 C:\sys\bin\Cap_Alarm_sc.exe
+//Please don't ammend the following PRINT Line as it is used by CapToolSumm to generate its report
+PRINT --------  capabilities now set to [WriteDeviceData PowerMgmt] (MASK = 00000024)  --------
+
+RUN_SCRIPT  c:\TestData\Scripts\Cap_00000024_AlarmSub.script
+// --------------------
+// Use Setcap to change capabilities of harness (MASK = 00008004)
+RUN_PROGRAM -1 setcap c:\TestData\Scripts\Cap_Alarm.exe 00008004 C:\sys\bin\Cap_Alarm_sc.exe
+//Please don't ammend the following PRINT Line as it is used by CapToolSumm to generate its report
+PRINT --------  capabilities now set to [ReadUserData PowerMgmt] (MASK = 00008004)  --------
+
+RUN_SCRIPT  c:\TestData\Scripts\Cap_00008004_AlarmSub.script
+
+// --------------------
+// Cleanup
+PREFIX RUN_UTILS
+MakeReadWrite c:\TestData\Scripts\Cap_Agenda.exe
+DeleteFile c:\TestData\Scripts\Cap_Agenda.exe
+REMOVE_PREFIX
+// --------------------

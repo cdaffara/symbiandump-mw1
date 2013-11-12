@@ -1,0 +1,13 @@
+EXPORTS
+	?GetCamcorderMMFPluginSettings@CImagingConfigManager@@QBEHAAVTCamcorderMMFPluginSettings@@@Z @ 1 NONAME ; int CImagingConfigManager::GetCamcorderMMFPluginSettings(class TCamcorderMMFPluginSettings &) const
+	?GetImageQualityLevelsL@CImagingConfigManager@@QAEHAAV?$CArrayFixFlat@I@@I@Z @ 2 NONAME ; int CImagingConfigManager::GetImageQualityLevelsL(class CArrayFixFlat<unsigned int> &, unsigned int)
+	?GetImageQualitySet@CImagingConfigManager@@QAEHAAVTImageQualitySet@@ABVTSize@@I@Z @ 3 NONAME ; int CImagingConfigManager::GetImageQualitySet(class TImageQualitySet &, class TSize const &, unsigned int)
+	?GetImageQualitySet@CImagingConfigManager@@QAEHAAVTImageQualitySet@@HI@Z @ 4 NONAME ; int CImagingConfigManager::GetImageQualitySet(class TImageQualitySet &, int, unsigned int)
+	?GetVideoQualityLevelsL@CImagingConfigManager@@QAEHAAV?$CArrayFixFlat@I@@I@Z @ 5 NONAME ; int CImagingConfigManager::GetVideoQualityLevelsL(class CArrayFixFlat<unsigned int> &, unsigned int)
+	?GetVideoQualitySet@CImagingConfigManager@@QAEHAAVTVideoQualitySet@@ABVTSize@@ABVTDesC8@@IIVTFourCC@@I@Z @ 6 NONAME ; int CImagingConfigManager::GetVideoQualitySet(class TVideoQualitySet &, class TSize const &, class TDesC8 const &, unsigned int, unsigned int, class TFourCC, unsigned int)
+	?GetVideoQualitySet@CImagingConfigManager@@QAEHAAVTVideoQualitySet@@HI@Z @ 7 NONAME ; int CImagingConfigManager::GetVideoQualitySet(class TVideoQualitySet &, int, unsigned int)
+	?NewL@CImagingConfigManager@@SAPAV1@XZ @ 8 NONAME ; class CImagingConfigManager * CImagingConfigManager::NewL(void)
+	?NewLC@CImagingConfigManager@@SAPAV1@XZ @ 9 NONAME ; class CImagingConfigManager * CImagingConfigManager::NewLC(void)
+	?NumberOfImageQualityLevels@CImagingConfigManager@@QBEHXZ @ 10 NONAME ; int CImagingConfigManager::NumberOfImageQualityLevels(void) const
+	?NumberOfVideoQualityLevels@CImagingConfigManager@@QBEHXZ @ 11 NONAME ; int CImagingConfigManager::NumberOfVideoQualityLevels(void) const
+

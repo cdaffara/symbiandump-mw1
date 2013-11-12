@@ -1,0 +1,15 @@
+EXPORTS
+	?Panic@SAnimPanic@@SAXW4TPanicCode@1@ABVTDesC8@@H@Z @ 1 NONAME ; void SAnimPanic::Panic(enum SAnimPanic::TPanicCode, class TDesC8 const &, int)
+	?NewL@CSAnimEngine@@SAPAV1@AAVRFs@@AAVMSAnimObserver@@@Z @ 2 NONAME ; class CSAnimEngine * CSAnimEngine::NewL(class RFs &, class MSAnimObserver &)
+	?SetClientRequest@CSAnimPlugin@@IAEXAAVTRequestStatus@@@Z @ 3 NONAME ; void CSAnimPlugin::SetClientRequest(class TRequestStatus &)
+	?CompleteClientRequest@CSAnimPlugin@@IAEXH@Z @ 4 NONAME ; void CSAnimPlugin::CompleteClientRequest(int)
+	?SetDisplayMode@CSAnimImagePlugin@@QAEXW4TDisplayMode@@@Z @ 5 NONAME ; void CSAnimImagePlugin::SetDisplayMode(enum TDisplayMode)
+	?SetFrameDelay@CSAnimImagePlugin@@QAEXABVTTimeIntervalMicroSeconds32@@@Z @ 6 NONAME ; void CSAnimImagePlugin::SetFrameDelay(class TTimeIntervalMicroSeconds32 const &)
+	?SetSize@CSAnimImagePlugin@@QAEXABVTSize@@@Z @ 7 NONAME ; void CSAnimImagePlugin::SetSize(class TSize const &)
+	??0CSAnimImagePlugin@@IAE@PAX@Z @ 8 NONAME ; CSAnimImagePlugin::CSAnimImagePlugin(void *)
+	?SetVolume@CSAnimTonePlugin@@QAEXH@Z @ 9 NONAME ; void CSAnimTonePlugin::SetVolume(int)
+	?SetVolumeRamp@CSAnimTonePlugin@@QAEXABVTTimeIntervalMicroSeconds@@@Z @ 10 NONAME ; void CSAnimTonePlugin::SetVolumeRamp(class TTimeIntervalMicroSeconds const &)
+	??0CSAnimTonePlugin@@IAE@XZ @ 11 NONAME ; CSAnimTonePlugin::CSAnimTonePlugin(void)
+	?SetRepeatCount@CSAnimPlugin@@QAEXH@Z @ 12 NONAME ; void CSAnimPlugin::SetRepeatCount(int)
+	?SetScalingEnabled@CSAnimImagePlugin@@QAEXH@Z @ 13 NONAME ; void CSAnimImagePlugin::SetScalingEnabled(int)
+

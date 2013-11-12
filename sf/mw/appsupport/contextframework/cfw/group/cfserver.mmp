@@ -1,0 +1,81 @@
+/*
+* Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project CF server
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../inc/common/cftraceconfiguration.hrh"
+
+TARGET		  	cfserver.exe
+TARGETTYPE	    	exe
+UID			0 0x10282BC4
+
+CAPABILITY      	ALL -TCB -DRM
+VENDORID        	VID_DEFAULT
+
+EPOCHEAPSIZE            0x1000 0x500000 // Min 4kB, Max 5MB
+
+SOURCEPATH	  	../src/cfserver
+SOURCE          	CFServer.cpp
+SOURCE			CFEngine.cpp
+SOURCE          	CFServSession.cpp
+SOURCE          	CFContextManager.cpp
+SOURCE          	CFCacheElement.cpp
+SOURCE          	CFUtils.cpp
+SOURCE          	CFMessageHandlerBase.cpp
+SOURCE          	CFMessageHandlerContext.cpp
+SOURCE          	CFMessageHandlerAction.cpp
+SOURCE			CFMessageHandlerScript.cpp
+SOURCE                  cfstarter.cpp
+SOURCE                  cfphasebase.cpp
+SOURCE                  cfphasedevicestarting.cpp
+SOURCE                  cfphasedevicestarted.cpp
+SOURCE                  cfphaseloadingplugins.cpp
+SOURCE                  cfphaseloadingrules.cpp
+SOURCE                  cfphasecfwready.cpp
+SOURCE                  cfpropertylistener.cpp
+SOURCE			cfecomobserver.cpp
+SOURCE 			cfasynccmdqueue.cpp
+SOURCE 			cfcmd.cpp
+SOURCE 			cfactioncmd.cpp
+SOURCE 			cfpublishcontextcmd.cpp
+SOURCE 			cfremovesubscriptioncleanupcmd.cpp
+SOURCE 			cfcontextsourcecmd.cpp
+
+USERINCLUDE             .
+USERINCLUDE             ../inc/cfserver
+USERINCLUDE             ../inc/common
+USERINCLUDE             ../inc/cfservices
+USERINCLUDE             ../inc/cfscriptengine
+USERINCLUDE             ../inc/cfactivatorengine
+USERINCLUDE             ../inc/cfcontextsourcemanager
+USERINCLUDE             ../CenRep
+
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY                 centralrepository.lib
+LIBRARY                 euser.lib
+LIBRARY                 estor.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 ecom.lib
+LIBRARY                 cfservices.lib
+LIBRARY                 cfscriptengine.lib
+LIBRARY                 cfactivatorengine.lib
+LIBRARY                 cfcontextsourcemanager.lib
+LIBRARY                 cfoperationpluginservices.lib
+#ifdef TRACE_INTO_FILE
+LIBRARY                 flogger.lib
+#endif

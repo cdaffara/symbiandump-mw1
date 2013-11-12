@@ -1,0 +1,130 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#ifndef CFW_ATS3_IBY
+#define CFW_ATS3_IBY
+
+// Test plug-ins
+ECOM_PLUGIN( TestActionPlugIn.dll,          TestActionPlugIn.rsc )
+ECOM_PLUGIN( TestContextSourcePlugIn.dll,   TestContextSourcePlugIn.rsc )
+
+// Test data in ROM
+data=\epoc32\data\Z\private\10202be9\10282BDA.txt                                       private\10202be9\10282BDA.txt
+
+data=\epoc32\data\z\data\cftestdata\testsettings\validsettingsfile.xml                  data\cftestdata\testsettings\validsettingsfile.xml
+data=\epoc32\data\z\data\cftestdata\testsettings\validsettingsfile2.xml                 data\cftestdata\testsettings\validsettingsfile2.xml
+data=\epoc32\data\z\data\cftestdata\testsettings\invalidsettingsfile.xml                data\cftestdata\testsettings\invalidsettingsfile.xml
+data=\epoc32\data\z\data\cftestdata\testsettings\testcontextsourcesetting3.xml          data\cftestdata\testsettings\testcontextsourcesetting3.xml
+data=\epoc32\data\z\data\cftestdata\testsettings\settingupgrade\testcontextsourcesetting3.xml data\cftestdata\testsettings\settingupgrade\testcontextsourcesetting3.xml
+data=\epoc32\data\z\data\cftestdata\testsettings\testcontextsourcesetting4.xml          data\cftestdata\testsettings\testcontextsourcesetting4.xml
+data=\epoc32\data\z\data\cftestdata\testsettings\testcontextsourcesetting5.xml          data\cftestdata\testsettings\testcontextsourcesetting5.xml
+data=\epoc32\data\z\data\cftestdata\testsettings\testcontextsourcesetting7.xml          data\cftestdata\testsettings\testcontextsourcesetting7.xml
+
+data=\epoc32\data\z\data\cftestdata\testscripts\test-and.xml                            data\cftestdata\testscripts\test-and.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-and-contextChanged.xml             data\cftestdata\testscripts\test-and-contextChanged.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-and-contextUpdated.xml             data\cftestdata\testscripts\test-and-contextUpdated.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-contains.xml                       data\cftestdata\testscripts\test-contains.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-contextChanged.xml                 data\cftestdata\testscripts\test-contextChanged.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-contextUpdated.xml                 data\cftestdata\testscripts\test-contextUpdated.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-delay-contextRef.xml               data\cftestdata\testscripts\test-delay-contextRef.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-delay-script1.xml                  data\cftestdata\testscripts\test-delay-script1.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-delay-script2.xml                  data\cftestdata\testscripts\test-delay-script2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-else.xml                           data\cftestdata\testscripts\test-else.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-elseIf.xml                         data\cftestdata\testscripts\test-elseIf.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-equals.xml                         data\cftestdata\testscripts\test-equals.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-greater.xml                        data\cftestdata\testscripts\test-greater.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-greaterOrEqual.xml                 data\cftestdata\testscripts\test-greaterOrEqual.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-inRange.xml                        data\cftestdata\testscripts\test-inRange.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-less.xml                           data\cftestdata\testscripts\test-less.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-lessOrEqual.xml                    data\cftestdata\testscripts\test-lessOrEqual.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-not.xml                            data\cftestdata\testscripts\test-not.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-notEqual.xml                       data\cftestdata\testscripts\test-notEqual.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-or.xml                             data\cftestdata\testscripts\test-or.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-publishContext.xml                 data\cftestdata\testscripts\test-publishContext.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-publishContext2.xml                data\cftestdata\testscripts\test-publishContext2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-publishContext3.xml                data\cftestdata\testscripts\test-publishContext3.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countRepeatingWithoutValue.xml     data\cftestdata\testscripts\test-countRepeatingWithoutValue.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countRepeatingWithoutValue2.xml    data\cftestdata\testscripts\test-countRepeatingWithoutValue2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countRepeatingWithValue.xml        data\cftestdata\testscripts\test-countRepeatingWithValue.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithoutValue.xml       data\cftestdata\testscripts\test-countOneShotWithoutValue.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithoutValue2.xml      data\cftestdata\testscripts\test-countOneShotWithoutValue2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValue.xml          data\cftestdata\testscripts\test-countOneShotWithValue.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValueDuration.xml  data\cftestdata\testscripts\test-countOneShotWithValueDuration.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValueDuration2.xml data\cftestdata\testscripts\test-countOneShotWithValueDuration2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValueDuration3.xml data\cftestdata\testscripts\test-countOneShotWithValueDuration3.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration.xml data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration2.xml data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration3.xml data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration3.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration4.xml data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration4.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration5.xml data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration5.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration6.xml data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration6.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration7.xml data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration7.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration8.xml data\cftestdata\testscripts\test-countOneShotWithValuePersistentDuration8.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countRepeatingWithValuePersistent.xml data\cftestdata\testscripts\test-countRepeatingWithValuePersistent.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countRepeatingWithValuePersistent2.xml data\cftestdata\testscripts\test-countRepeatingWithValuePersistent2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countRepeatingWithValuePersistent3.xml data\cftestdata\testscripts\test-countRepeatingWithValuePersistent3.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-countRepeatingWithoutValuePersistent.xml data\cftestdata\testscripts\test-countRepeatingWithoutValuePersistent.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-parsing.xml                        data\cftestdata\testscripts\test-parsing.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-parsing2.xml                       data\cftestdata\testscripts\test-parsing2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-parsing3.xml                       data\cftestdata\testscripts\test-parsing3.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-registerscript.xml                 data\cftestdata\testscripts\test-registerscript.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-registerscript-noactionaccess.xml  data\cftestdata\testscripts\test-registerscript-noactionaccess.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-registerscript-nocontextaccess.xml data\cftestdata\testscripts\test-registerscript-nocontextaccess.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-registerscript-nocontextdefined.xml data\cftestdata\testscripts\test-registerscript-nocontextdefined.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-registerscript-noactiondefined.xml data\cftestdata\testscripts\test-registerscript-noactiondefined.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-scriptUpgradeRom.xml               data\cftestdata\testscripts\test-scriptUpgradeRom.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-scriptUpgradeRomCapabilitiesMissing.xml data\cftestdata\testscripts\test-scriptUpgradeRomCapabilitiesMissing.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-scriptUpgradeRomNoUpgradeSecurity.xml data\cftestdata\testscripts\test-scriptUpgradeRomNoUpgradeSecurity.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-scriptUpgradeRomClientMissingCapability.xml data\cftestdata\testscripts\test-scriptUpgradeRomClientMissingCapability.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-saveScript.xml                     data\cftestdata\testscripts\test-saveScript.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-saveScript2.xml                    data\cftestdata\testscripts\test-saveScript2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-actionV1.xml                    	data\cftestdata\testscripts\test-actionV1.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-actionV2.xml                    	data\cftestdata\testscripts\test-actionV2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-operationV1-1.xml                  data\cftestdata\testscripts\test-operationV1-1.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-operationV1-2.xml                  data\cftestdata\testscripts\test-operationV1-2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-operationV2.xml                    data\cftestdata\testscripts\test-operationV2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-sourceCommand.xml                  data\cftestdata\testscripts\test-sourceCommand.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-sourceCommand2.xml                 data\cftestdata\testscripts\test-sourceCommand2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-sourceCommandPlugIn.xml            data\cftestdata\testscripts\test-sourceCommandPlugIn.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-sourceCommandPlugIn2.xml           data\cftestdata\testscripts\test-sourceCommandPlugIn2.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-romScriptContextAutoDefine.xml     data\cftestdata\testscripts\test-romScriptContextAutoDefine.xml
+data=\epoc32\data\z\data\cftestdata\testscripts\test-romScriptContextAutoDefine2.xml    data\cftestdata\testscripts\test-romScriptContextAutoDefine2.xml
+
+
+data=\epoc32\data\z\data\cftestdata\testsis\action_v1\action.sisx						data\cftestdata\testsis\action_v1\action.sisx
+data=\epoc32\data\z\data\cftestdata\testsis\action_v2\action.sisx						data\cftestdata\testsis\action_v2\action.sisx
+data=\epoc32\data\z\data\cftestdata\testsis\contextsource_v1\contextsource.sisx			data\cftestdata\testsis\contextsource_v1\contextsource.sisx
+data=\epoc32\data\z\data\cftestdata\testsis\contextsource_v2\contextsource.sisx			data\cftestdata\testsis\contextsource_v2\contextsource.sisx
+data=\epoc32\data\z\data\cftestdata\testsis\operation_v1\operation.sisx					data\cftestdata\testsis\operation_v1\operation.sisx
+data=\epoc32\data\z\data\cftestdata\testsis\operation_v2\operation.sisx					data\cftestdata\testsis\operation_v2\operation.sisx
+data=\epoc32\data\z\data\cftestdata\testsis\operation_v3\operation.sisx					data\cftestdata\testsis\operation_v3\operation.sisx
+
+data=\epoc32\data\z\private\10282BC4\Rules\test-cfclient.rul                            private\10282BC4\Rules\test-cfclient.rul
+data=\epoc32\data\z\private\10282BC4\Rules\test-scriptUpgradeRom.rul                    private\10282BC4\Rules\test-scriptUpgradeRom.rul
+data=\epoc32\data\z\private\10282BC4\Rules\test-scriptUpgradeRomClientMissingCapability.rul private\10282BC4\Rules\test-scriptUpgradeRomClientMissingCapability.rul
+data=\epoc32\data\z\private\10282BC4\Rules\test-rollbackRom.rul 						private\10282BC4\Rules\test-rollbackRom.rul
+data=\epoc32\data\z\private\10282BC4\Rules\test-romScriptContextAutoDefine.rul          private\10282BC4\Rules\test-romScriptContextAutoDefine.rul
+data=\epoc32\data\z\private\10282BC4\Rules\test-romScriptContextAutoDefine2.rul         private\10282BC4\Rules\test-romScriptContextAutoDefine2.rul
+data=\epoc32\data\z\private\10282BC4\Rules\test-romPublishContext.rul         			private\10282BC4\Rules\test-romPublishContext.rul
+data=\epoc32\data\z\private\10282BC4\Rules\test-romPublishContext2.rul         			private\10282BC4\Rules\test-romPublishContext2.rul
+data=\epoc32\data\z\private\10282BC4\Rules\test-romPublishContext3.rul         			private\10282BC4\Rules\test-romPublishContext3.rul
+
+data=\epoc32\data\z\private\10282BC4\Settings\10002001\testcontextsourcesetting1.xml    private\10282BC4\Settings\10002001\testcontextsourcesetting1.xml
+data=\epoc32\data\z\private\10282BC4\Settings\10002001\testcontextsourcesetting2.xml    private\10282BC4\Settings\10002001\testcontextsourcesetting2.xml
+
+#endif // CFW_ATS3_IBY

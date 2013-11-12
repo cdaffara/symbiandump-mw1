@@ -1,0 +1,73 @@
+// TestHtmlToCrtConverterSuite.mmp
+
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET      		testhtmltocrtconvertersuite.exe
+TARGETTYPE  		exe
+UID			0x1000007A 0x10208315
+VENDORID 		0x70000001
+CAPABILITY   	ReadUserData WriteUserData
+
+SOURCEPATH		../src
+USERINCLUDE		../inc
+
+SOURCE			TestHtmlToCrtConverterSuiteServer.cpp
+SOURCE			TestHtmlToCrtConverterBufferStep.cpp
+SOURCE			TestHtmlToCrtConverterStep.cpp
+SOURCE 			CHtmlToCrtConvActive.cpp
+SOURCE 			../../../../src/CHtmlToCrtConvBuffer.cpp
+SOURCE 			../../../../src/CHtmlToCrtConverter.cpp
+SOURCE 			../../../../src/CHtmlToCrtConvHashTable.cpp
+SOURCE 			../../../../src/CHtmlToCrtConvActionProcessor.cpp
+SOURCE 			../../../../src/CHtmlToCrtConvParser.cpp
+SOURCE 			../../../../src/CHtmlToCrtConvActionProcessorCustom.cpp
+SOURCE 			../../../../src/CHtmlToCrtConvCharsetConvert.cpp
+
+USERINCLUDE		../../../../inc
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+//SYSTEMINCLUDE		/epoc32/include/ecom
+
+
+LIBRARY			euser.lib
+LIBRARY			etext.lib
+LIBRARY			efsrv.lib
+LIBRARY 		estor.lib
+LIBRARY			bafl.lib
+LIBRARY			gdi.lib
+LIBRARY			conarc.lib
+LIBRARY			charconv.lib 
+LIBRARY			testexecuteutils.lib 
+LIBRARY			testexecutelogclient.lib 
+LIBRARY 		pimtestclient.lib 
+
+
+SMPSAFE
+
+
+#define __CHTMLTOCRTCONV_COPY_TO_CLIPBOARD_BUILD_CONTROL__
+
+#ifdef __CHTMLTOCRTCONV_COPY_TO_CLIPBOARD_BUILD_CONTROL__
+    MACRO __CHTMLTOCRTCONV_COPY_TO_CLIPBOARD__ 
+#endif 
+
+#define __CHTMLTOCRTCONV_TESTCODE_BUILD_CONTROL__
+
+#ifdef __CHTMLTOCRTCONV_TESTCODE_BUILD_CONTROL__
+	MACRO __CHTMLTOCRTCONV_TESTCODE__
+#endif
+
+MACRO __EXETESTCODE__

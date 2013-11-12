@@ -1,0 +1,48 @@
+// bld.inf
+
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+
+
+PRJ_PLATFORMS
+    DEFAULT
+
+PRJ_EXPORTS
+    ssyreference.iby                		/epoc32/rom/include/ssyreference.iby
+
+    // Export config to SensorServers private folder.
+    // For emulator use.
+    ../data/ssyreferenceconfig.xml  		/epoc32/release/winscw/udeb/z/refssy/ssyreferenceconfig.xml
+    ../data/ssyreferenceconfig.xml  		/epoc32/release/winscw/urel/z/refssy/ssyreferenceconfig.xml
+
+    // For hardware use.
+    ../data/ssyreferenceconfig.xml  		/epoc32/data/z/refssy/ssyreferenceconfig.xml
+
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+	../inc/ssyreferenceaccelerometer.h		/epoc32/include/sensors/channels/ssyreferenceaccelerometer.h
+#endif
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+	../inc/ssyreferencemagnetometer.h		/epoc32/include/sensors/channels/ssyreferencemagnetometer.h
+#endif
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+	../inc/ssyreferenceorientation.h		/epoc32/include/sensors/channels/ssyreferenceorientation.h
+#endif
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+	../inc/ssyreferenceproximity.h			/epoc32/include/sensors/channels/ssyreferenceproximity.h
+#endif
+
+PRJ_MMPFILES
+    ssyreferenceplugin.mmp

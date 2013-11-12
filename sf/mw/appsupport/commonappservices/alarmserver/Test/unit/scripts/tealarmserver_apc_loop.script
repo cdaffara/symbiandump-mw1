@@ -1,0 +1,34 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE alarmserverunittestserver
+
+START_TESTCASE PIM-UCT-PREQ1118-APC-AS-0021
+//! @SYMTestCaseID PIM-UCT-PREQ1118-APC-AS-0021
+//! @SYMTestCaseDesc Loop option
+//! @SYMFssID <App-Services>/<AlarmServer>/EAS.001
+//! @SYMTestStatus Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions Use Resource file with RepeatSetting=Loop. Start the AlarmServer. Add an alarm, enable and wait for expiry. Verify that durations and intervals restart from the begining of the sequence.
+//! @SYMTestExpectedResults Sequence of sound intervals should restart after the end is reached
+//! @SYMTestType CT
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 180 alarmserverunittestserver AlarmPlayConfig \testdata\config\TEAlarmServer_apc.ini loop
+END_TESTCASE PIM-UCT-PREQ1118-APC-AS-0021
+

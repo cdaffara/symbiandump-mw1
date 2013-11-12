@@ -1,0 +1,27 @@
+/** Unused Enum scan
+-e???? +e749
+*/
+
+/** Unused header scan
+-e???? +e766
+*/
+
+/** standard lint check
+*/
+-w1 -e322
+
+/** define unicode
+-D_UNICODE
+*/
+
+/** Standard include directories */
+
+-i..\doc
+-i..\group
+-i..\EngInc
+-i..\EngSrc
+-i\epoc32\include
+
+/** Examined application source directories */
+..\EngSrc\*.cpp
+

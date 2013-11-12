@@ -1,0 +1,70 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  XIMP Framework Presence Data Model API interface IDs.
+*
+*/
+
+#ifndef PRESENCEDATAMODELIFIDS_HRH
+#define PRESENCEDATAMODELIFIDS_HRH
+
+
+/**
+ * @defgroup ximppresenceapi XIMP Framework Presence API
+ * @defgroup presencedatamodelapi XIMP Presence Data Model API
+ * @ingroup ximppresenceapi
+ *
+ * XIMP Framework Presence Data Model API contains
+ * abstract interfaces for presentity groups,
+ * presence authorization and presence information,
+ * related data items. API provides also abstract object
+ * factory interface to instantiate other related objects.
+ *
+ * @TODO Is it ok?: Object types declared in XIMP Framework Data Model API
+ * are used both in XIMP Framework - client communication
+ * and in XIMP Framework - protocol adaptation cummunication.
+ *
+ * @since S60 v3.2
+ */
+
+// Data model IF id's
+// 10xx - ximp related
+// 11xx - presence related
+// 12xx - instant messaging related
+
+// Interface IDs for Presence Data Model API interfaces
+#define PRES_IF_ID_PRESENTITY_GROUP_INFO               1101
+#define PRES_IF_ID_PRESENTITY_GROUP_MEMBER_INFO        1102
+#define PRES_IF_ID_PRESENCE_WATCHER_INFO               1103
+#define PRES_IF_ID_PRESENCE_GRANT_REQUEST_INFO         1104
+#define PRES_IF_ID_PRESENCE_BLOCK_INFO                 1105
+#define PRES_IF_ID_PRESENCE_INFO                       1106
+#define PRES_IF_ID_PRESENCE_INFO_FILTER                1107
+#define PRES_IF_ID_DEVICE_PRESENCE_INFO                1108
+#define PRES_IF_ID_PERSON_PRESENCE_INFO                1109
+#define PRES_IF_ID_SERVICE_PRESENCE_INFO               1110
+#define PRES_IF_ID_PRESENCE_INFO_FIELD_COLLECTION      1111
+#define PRES_IF_ID_PRESENCE_FIELD                      1112
+#define PRES_IF_ID_PRESENCE_INFO_FIELD_VALUE_BINARY    1113
+#define PRES_IF_ID_PRESENCE_INFO_FIELD_VALUE_TEXT      1114
+#define PRES_IF_ID_PRESENCE_INFO_FIELD_VALUE_ENUM      1115
+#define PRES_IF_ID_PRESENCE_BUDDY_INFO                 1116
+#define PRES_IF_ID_PRESENCE_BUDDY_INFO_LIST            1117
+
+#define PRES_IF_ID_PRESENCE_OBJECT_FACTORY     1027
+
+
+#endif // PRESENCEDATAMODELIFIDS_HRH
+
+
+

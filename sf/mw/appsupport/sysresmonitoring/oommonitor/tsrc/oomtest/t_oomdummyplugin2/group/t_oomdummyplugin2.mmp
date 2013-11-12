@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2006-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+
+
+
+#include <platform_paths.hrh>
+
+TARGET		  t_oomdummyplugin2.dll
+TARGETTYPE	  PLUGIN
+// UID2 = 0x10009d8d for ECOM plugins.
+// UID3 = the 'DLL UID' (see resource file)
+UID			 0x10009d8d 0x10286A81
+CAPABILITY CAP_GENERAL_DLL
+
+// This is a SYSTEMINCLUDE macro containing the middleware
+// layer specific include directories
+MW_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE ../inc
+USERINCLUDE ../../inc
+
+LIBRARY euser.lib
+LIBRARY t_oomclient.lib
+LIBRARY        oommonitor.lib
+
+SOURCEPATH ../data
+RESOURCE t_oomdummyplugin2.rss
+
+SOURCEPATH ../src
+SOURCE ecom_entry2.cpp
+SOURCE dummyplugin2.cpp
+
+#ifdef ENABLE_ABIV2_MODE
+DEBUGGABLE
+#endif

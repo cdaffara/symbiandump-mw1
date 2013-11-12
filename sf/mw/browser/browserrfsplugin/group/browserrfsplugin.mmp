@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Lesser General Public License as published by
+* the Free Software Foundation, version 2.1 of the License.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Lesser General Public License for more details.
+*
+* You should have received a copy of the GNU Lesser General Public License
+* along with this program.  If not, 
+* see "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html/".
+*
+* Description: mmp file for browser rfs plugin.
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET      browserrfsplugin.dll
+
+TARGETTYPE	PLUGIN
+
+CAPABILITY	CAP_ECOM_PLUGIN
+VENDORID	VID_DEFAULT
+               
+UID 0x10009D8D 0x200169E9
+
+SOURCEPATH  ../src
+SOURCE      BrowserRfsPlugin.cpp 
+SOURCE      Proxy.cpp
+
+START RESOURCE 200169E9.rss
+TARGET browserrfsplugin.rsc
+END
+
+
+USERINCLUDE ../inc
+
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE /epoc32/include/ecom 
+
+LIBRARY euser.lib       // Base library
+LIBRARY ECom.lib	      // ECom library
+LIBRARY efsrv.lib       // File library
+DEBUGLIBRARY            flogger.lib

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="05d52bab1d02a2b1b56436ba4411ab1f" dataversion="2.0">
+  <name>3GP File Composer API</name>
+  <description>Interface for creating 3GP files.</description>
+  <type>c++</type>
+  <collection>CamcorderMMFPlugin</collection>
+  <libs>
+    <lib name="camc3gpsink.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

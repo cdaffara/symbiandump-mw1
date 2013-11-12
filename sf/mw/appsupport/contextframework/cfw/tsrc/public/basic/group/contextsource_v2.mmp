@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../mt_cfsisupgrade/contextsource_v2/contextsource_v2.hrh"
+
+TARGETTYPE		PLUGIN
+TARGET			contextsource_v2.dll
+UID 			0x10009D8D KContextSource_V2DllUid
+CAPABILITY      	CAP_GENERAL_DLL
+
+SOURCEPATH		../mt_cfsisupgrade/contextsource_v2
+SOURCE			main.cpp
+SOURCE			contextsource_v2.cpp
+
+USERINCLUDE		../mt_cfsisupgrade/contextsource_v2
+
+MW_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../mt_cfsisupgrade/contextsource_v2
+START RESOURCE  contextsource_v2.rss
+TARGET          contextsource_v2.rsc
+TARGETPATH      /resource/plugins
+END
+
+LIBRARY         euser.lib
+LIBRARY         cfservices.lib
+LIBRARY         cfcontextsourcemanager.lib
+
+// End of file

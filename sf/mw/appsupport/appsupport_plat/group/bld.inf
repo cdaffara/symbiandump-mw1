@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Includes all the Platform API specific bld.inf files, which 
+*                export files.
+*
+*/
+
+#include "../action_plugin_api/group/bld.inf"
+#include "../application_orientation_api/group/bld.inf"
+#include "../context_access_api/group/bld.inf"
+#include "../context_framework_services_api/group/bld.inf"
+#include "../context_framework_client_api/group/bld.inf"
+#include "../context_framework_listener_api/group/bld.inf"
+#include "../context_framework_version_api/group/bld.inf"
+#include "../context_source_plugin_api/group/bld.inf"
+#include "../context_source_settings_manager_api/group/bld.inf"
+#include "../context_subscription_api/group/bld.inf"
+#include "../key_event_framework_api/group/bld.inf"
+#include "../key_event_framework_mapper_api/group/bld.inf"
+#include "../media_keys_definition_api/group/bld.inf"
+#include "../ood_threshold_api/group/bld.inf"
+#include "../oom_monitor_api/group/bld.inf"
+#include "../oom_monitor_plugin_api/group/bld.inf"
+#include "../operation_provider_api/group/bld.inf"
+#include "../phonecmdhandler_api/group/bld.inf"
+#include "../restore_factory_settings_api/group/bld.inf"
+#include "../restore_factory_settings_plugin_api/group/bld.inf"
+#include "../secondary_display_accfw_api/group/bld.inf"
+#include "../secondary_display_startup_api/group/bld.inf"
+#include "../secondary_display_sysap_api/group/bld.inf"
+#include "../secondary_display_system_state_api/group/bld.inf"
+#include "../sensor_user_setting_api/group/bld.inf"
+#include "../startup_configuration_api/group/bld.inf"
+#include "../system_application_key_handler_plugin_api/group/bld.inf"
+#include "../system_application_light_control_plugin_api/group/bld.inf"
+#include "../system_application_notification_api/group/bld.inf"
+#include "../system_application_plugin_callback_api/group/bld.inf"
+
+
+

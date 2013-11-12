@@ -1,0 +1,35 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  ?Description
+;
+
+
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"action"},(0x0100FFF3),2,0,0
+
+;Supports Series 60 v 3.2
+(0x102752AE), 0, 0, 0, {"Series60ProductID"}
+
+;Localized Vendor Name
+%{"action"}
+
+;Unique Vendor name
+:"Vendor"
+
+; action files to copy
+"\epoc32\release\winscw\udeb\action_v2.dll"			-"!:\sys\bin\action.dll"
+"\epoc32\data\Z\resource\plugins\action_v2.rsc"		-"!:\resource\plugins\action.rsc"

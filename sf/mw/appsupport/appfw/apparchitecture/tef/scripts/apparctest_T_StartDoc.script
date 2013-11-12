@@ -1,0 +1,58 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-StartDocStep-TestStartDocL-0001
+//! @SYMTestCaseDesc 		Checks that document names longer than 256 characters can be started.
+//!				The test starts a document and checks that the application launched
+//!				to handle that document is passed the full document name.
+//!				The test uses the StartDocument overload which does not provide an
+//!				application UID or mime type, because we want the test to check that
+//!				the long document name is supported by the data recognizer framework.
+//!				The test also checks that the data recognizer framework doesn't return
+//!				an error because it incorrectly assumes the document name is a file name
+//!				and tries to open the document to read its contents before performing
+//!				data recognition. Requirement ID PHAR-5NTCWY.
+//!				In this case, the document name isn't a file name, it's a pretend URL
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions		1. Call RApaLsSession::StartDocument passing a long document name (KLitLongURL).
+//!				2. StartDocument should cause TStartDocApp.app to be launched, so wait for the application thread to terminate.
+//!				3. Check the thread has terminated in the way we expected
+//! @SYMTestExpectedResults	Calling RApaLsSession::StartDocument should cause the apparc server to
+//!				call CLongUrlRec::DoRecognizeL as part of trying to find the mime type
+//!				of the document. CLongUrlRec returns a mime type which is associated with
+//!				TStartDocApp.app, so apparc server starts TStartDocApp.app passing the
+//!				long document name on the command line.
+//!				The long document name should eventually be passed through to
+//!				CStartDocAppUi::ProcessCommandParametersL which will panic with
+//!				EPanicDocNameCheck1Failed if the document name isn't KLitLongURL.
+//!				CStartDocDocument::OpenFileL panics with EPanicDocNameCheck1NotExecuted if
+//!				the document name check in CStartDocAppUi::ProcessCommandParametersL wasn't executed.
+//!				CStartDocDocument::OpenFileL panics with EPanicDocNameCheck2Failed if
+//!				the document name returned by CApaProcess::MainDocFileName isn't KLitLongURL.
+//!				TStartDocApp.app should exit with KTStartDocTestPassed.
+
+START_TESTCASE API-APPFWK-T-StartDocStep-TestStartDocL-0001
+
+PRINT Run T_StartDoc Apparc test
+//
+// Testexecute not yet startup state aware (DEF059510). Until then, delay required to ensure emulator boot has finished
+DELAY 5000
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_StartDoc 
+
+END_TESTCASE API-APPFWK-T-StartDocStep-TestStartDocL-0001

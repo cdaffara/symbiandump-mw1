@@ -1,0 +1,28 @@
+EXPORTS
+	?SaveL@CCaSrvMmcHistory@@QAEXAAVRFs@@ABVTDesC16@@@Z @ 1 NONAME ; void CCaSrvMmcHistory::SaveL(class RFs &, class TDesC16 const &)
+	?GetAppInfo@CCaSrvEngUtils@@QBEHABVCCaInnerEntry@@AAVTApaAppInfo@@@Z @ 2 NONAME ; int CCaSrvEngUtils::GetAppInfo(class CCaInnerEntry const &, class TApaAppInfo &) const
+	?GetApaAppInfo@CCaSrvEngUtils@@QBEHVTUid@@AAVTApaAppInfo@@@Z @ 3 NONAME ; int CCaSrvEngUtils::GetApaAppInfo(class TUid, class TApaAppInfo &) const
+	?RemoveL@CCaStorageProxy@@QAEXABV?$RArray@H@@@Z @ 4 NONAME ; void CCaStorageProxy::RemoveL(class RArray<int> const &)
+	?LocalizeEntryL@CCaStorageProxy@@QAEXAAVCCaLocalizationEntry@@@Z @ 5 NONAME ; void CCaStorageProxy::LocalizeEntryL(class CCaLocalizationEntry &)
+	?DbPropertyL@CCaStorageProxy@@QAEXABVTDesC16@@AAVTDes16@@@Z @ 6 NONAME ; void CCaStorageProxy::DbPropertyL(class TDesC16 const &, class TDes16 &)
+	?SetDBPropertyL@CCaStorageProxy@@QAEXABVTDesC16@@0@Z @ 7 NONAME ; void CCaStorageProxy::SetDBPropertyL(class TDesC16 const &, class TDesC16 const &)
+	?LoadDataBaseFromRomL@CCaStorageProxy@@QAEXXZ @ 8 NONAME ; void CCaStorageProxy::LoadDataBaseFromRomL(void)
+	?Find@CCaSrvMmcHistory@@QAEHI@Z @ 9 NONAME ; int CCaSrvMmcHistory::Find(unsigned int)
+	?AddL@CCaStorageProxy@@QAEXPAVCCaInnerEntry@@HW4TItemAppearance@@@Z @ 10 NONAME ; void CCaStorageProxy::AddL(class CCaInnerEntry *, int, enum TItemAppearance)
+	?NewL@CCaMmcWatcher@@SAPAV1@AAVRFs@@PAVMMmcWatcherCallback@@@Z @ 11 NONAME ; class CCaMmcWatcher * CCaMmcWatcher::NewL(class RFs &, class MMmcWatcherCallback *)
+	?GetEntriesL@CCaStorageProxy@@QAEXPBVCCaInnerQuery@@AAV?$RPointerArray@VCCaInnerEntry@@@@@Z @ 12 NONAME ; void CCaStorageProxy::GetEntriesL(class CCaInnerQuery const *, class RPointerArray<class CCaInnerEntry> &)
+	?NewL@CCaInstallNotifier@@SAPAV1@AAVMCaInstallListener@@W4TNotificationType@1@@Z @ 13 NONAME ; class CCaInstallNotifier * CCaInstallNotifier::NewL(class MCaInstallListener &, enum CCaInstallNotifier::TNotificationType)
+	?InsertL@CCaSrvMmcHistory@@QAEXI@Z @ 14 NONAME ; void CCaSrvMmcHistory::InsertL(unsigned int)
+	?NewLC@CCaMmcWatcher@@SAPAV1@AAVRFs@@PAVMMmcWatcherCallback@@@Z @ 15 NONAME ; class CCaMmcWatcher * CCaMmcWatcher::NewLC(class RFs &, class MMmcWatcherCallback *)
+	?TouchL@CCaStorageProxy@@QAEXPAVCCaInnerEntry@@@Z @ 16 NONAME ; void CCaStorageProxy::TouchL(class CCaInnerEntry *)
+	?LoadL@CCaSrvMmcHistory@@QAEXAAVRFs@@ABVTDesC16@@@Z @ 17 NONAME ; void CCaSrvMmcHistory::LoadL(class RFs &, class TDesC16 const &)
+	?OrganizeL@CCaStorageProxy@@QAEXABV?$RArray@H@@VTCaOperationParams@@@Z @ 18 NONAME ; void CCaStorageProxy::OrganizeL(class RArray<int> const &, class TCaOperationParams)
+	?CustomSortL@CCaStorageProxy@@QAEXABV?$RArray@H@@H@Z @ 19 NONAME ; void CCaStorageProxy::CustomSortL(class RArray<int> const &, int)
+	?GetLocalizationsL@CCaStorageProxy@@QAEXAAV?$RPointerArray@VCCaLocalizationEntry@@@@@Z @ 20 NONAME ; void CCaStorageProxy::GetLocalizationsL(class RPointerArray<class CCaLocalizationEntry> &)
+	?RunCaServer@@YAHXZ @ 21 NONAME ; int RunCaServer(void)
+	?GetEntriesIdsL@CCaStorageProxy@@QAEXPBVCCaInnerQuery@@AAV?$RArray@H@@@Z @ 22 NONAME ; void CCaStorageProxy::GetEntriesIdsL(class CCaInnerQuery const *, class RArray<int> &)
+	?NewL@CCaSrvMmcHistory@@SAPAV1@XZ @ 23 NONAME ; class CCaSrvMmcHistory * CCaSrvMmcHistory::NewL(void)
+	?AddLocalizationL@CCaStorageProxy@@QAEXABVCCaLocalizationEntry@@@Z @ 24 NONAME ; void CCaStorageProxy::AddLocalizationL(class CCaLocalizationEntry const &)
+	?SaveDatabaseL@CCaStorageProxy@@QAEXXZ @ 25 NONAME ; void CCaStorageProxy::SaveDatabaseL(void)
+	?RestoreDatabaseL@CCaStorageProxy@@QAEXXZ @ 26 NONAME ; void CCaStorageProxy::RestoreDatabaseL(void)
+

@@ -1,0 +1,97 @@
+/*
+* Copyright (c) 2001-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project EAPOL
+*
+*/
+
+/*
+* %version: 16.1.18 %
+*/
+
+#include <platform_paths.hrh>
+#include "eapol.mmh"
+
+CAPABILITY CAP_ECOM_PLUGIN
+VENDORID VID_DEFAULT
+TARGETTYPE    PLUGIN
+
+TARGET        eapsecurid.dll
+UID	          0x10009d8d 0x101F8E74
+
+deffile eapsecurid.def
+
+MACRO EAP_NO_EXPORTS
+// Start: added by script change_mmp_export_macros.sh.
+MACRO EAP_NO_EXPORT_EAP_TYPE_SECURID_H
+MACRO EAP_NO_EXPORT_EAP_TYPE_SECURID_STATE_H
+MACRO EAP_NO_EXPORT_EAP_AM_TYPE_SECURID_SYMBIAN_H
+MACRO EAP_NO_EXPORT_EAPSECURID_H
+// End: added by script change_mmp_export_macros.sh.
+
+SOURCEPATH    ../am/type/securid/symbian/plugin/src
+
+START RESOURCE 101F8E74.rss 
+	TARGET eapsecurid.rsc
+END
+
+SOURCE        EapSecurID.cpp
+SOURCE        EapSecurIDProxy.cpp
+
+SOURCE        EapSecurIDDbUtils.cpp
+SOURCE        EapGtcDbUtils.cpp
+
+SOURCEPATH    ../am/type/symbian/plugin/common
+SOURCE	      EapTypeInfo.cpp
+
+SOURCEPATH    ../am/type/securid/symbian
+SOURCE 	      eap_am_type_securid_symbian.cpp
+
+SOURCEPATH    ../../eapol_common/type/securid/core
+SOURCE		  eap_type_securid.cpp
+SOURCE		  eap_type_securid_client.cpp
+SOURCE		  eap_type_securid_state.cpp
+
+#ifdef COMPILE_EAP_SECURID_SERVER
+	SOURCE		  eap_type_securid_server.cpp
+#endif
+
+USERINCLUDE   ../am/type/securid/symbian/plugin/inc
+USERINCLUDE   ../../eapol_common/type/securid/include
+USERINCLUDE   ../../eapol_common/include
+USERINCLUDE   ../am/include
+USERINCLUDE   ../../eapol_common/am/include
+USERINCLUDE	  ../am/type/symbian/plugin/include
+USERINCLUDE   ../../eapol_common/type
+USERINCLUDE   ../am/eap_notifier/inc
+USERINCLUDE  	../eap_server/include
+
+MW_LAYER_SYSTEMINCLUDE // For the MiddleWare domain headers.
+
+LIBRARY     euser.lib ecom.lib eaptools.lib eaptrace.lib eapsymbiantools.lib edbms.lib efsrv.lib cone.lib eikcoctl.lib
+LIBRARY		bafl.lib
+LIBRARY     eikdlg.lib
+LIBRARY     eikcore.lib
+LIBRARY		featmgr.lib
+
+LIBRARY		HbCore.lib
+LIBRARY		HbWidgets.lib
+LIBRARY   eap_notifier.lib
+
+LANG		  SC
+
+
+//-------------------------------------------------------------------
+
+//-------------------------------------------------------------------
+// End of File

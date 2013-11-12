@@ -1,0 +1,76 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for IM Manager
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/imdlluids.hrh"
+
+
+TARGET                  immanager.dll
+TARGETTYPE              dll
+UID                     XIMP_IM_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_IM_MANAGER                                     
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+VERSION      10.0
+
+SOURCEPATH              ../srcimmanager
+
+
+SOURCE                  imconversationimp.cpp
+SOURCE                  imfeaturesimp.cpp
+
+
+SOURCEPATH              ../../srcutils
+SOURCE                   imlogutils.cpp
+
+
+USERINCLUDE             ../../group
+
+
+USERINCLUDE             ../../srcutils
+USERINCLUDE             ../../srcimdatamodel
+USERINCLUDE             ../../srcimoperations
+USERINCLUDE             ../srcimmanager
+USERINCLUDE             ../../srcimdatamodel/imconversation
+
+MW_LAYER_SYSTEMINCLUDE
+
+
+
+LIBRARY                 euser.lib
+LIBRARY                 ecom.lib
+LIBRARY                 bafl.lib
+LIBRARY                 estor.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 imdatamodel.lib
+LIBRARY                 ximpsrvclient.lib
+LIBRARY                 flogger.lib
+
+
+//EXPORTUNFROZEN
+
+
+#if defined( ARMCC )
+DEFFILE ../../eabi/ 
+#elif defined ( WINSCW )
+deffile ../../bwins/ 
+#endif
+
+// End of file

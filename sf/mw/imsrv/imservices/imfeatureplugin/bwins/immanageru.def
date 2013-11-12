@@ -1,0 +1,3 @@
+EXPORTS
+	?NewL@CImFeaturesImp@@SAPAV1@PAVMXIMPContext@@@Z @ 1 NONAME ; class CImFeaturesImp * CImFeaturesImp::NewL(class MXIMPContext *)
+

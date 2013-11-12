@@ -1,0 +1,24 @@
+EXPORTS
+	??0CCFOperationNode@@IAE@AAVMCFOperationServices@@PAV0@@Z @ 1 NONAME ; CCFOperationNode::CCFOperationNode(class MCFOperationServices &, class CCFOperationNode *)
+	??0CCFOperationPlugIn@@IAE@PAVTOperationPluginInitParams@@@Z @ 2 NONAME ; CCFOperationPlugIn::CCFOperationPlugIn(class TOperationPluginInitParams *)
+	??0CCFScriptRoot@@IAE@AAVMCFOperationServices@@PAVCCFOperationNode@@@Z @ 3 NONAME ; CCFScriptRoot::CCFScriptRoot(class MCFOperationServices &, class CCFOperationNode *)
+	??1CCFOperationNode@@UAE@XZ @ 4 NONAME ; CCFOperationNode::~CCFOperationNode(void)
+	??1CCFOperationPlugIn@@UAE@XZ @ 5 NONAME ; CCFOperationPlugIn::~CCFOperationPlugIn(void)
+	??1CCFOperationPluginManager@@UAE@XZ @ 6 NONAME ; CCFOperationPluginManager::~CCFOperationPluginManager(void)
+	??1CCFScriptRoot@@UAE@XZ @ 7 NONAME ; CCFScriptRoot::~CCFScriptRoot(void)
+	?Cleanup@CCFOperationNode@@UAEXXZ @ 8 NONAME ; void CCFOperationNode::Cleanup(void)
+	?Extension@CCFOperationPlugIn@@UBEPAXABVTUid@@@Z @ 9 NONAME ; void * CCFOperationPlugIn::Extension(class TUid const &) const
+	?ExternalizeL@CCFOperationNode@@UAEXAAVRWriteStream@@@Z @ 10 NONAME ; void CCFOperationNode::ExternalizeL(class RWriteStream &)
+	?GenerateDomTreeLocationInfoL@CCFOperationNode@@MAEXAAVCMDXMLNode@@@Z @ 11 NONAME ; void CCFOperationNode::GenerateDomTreeLocationInfoL(class CMDXMLNode &)
+	?Identifier@CCFScriptEvent@@QBE?AVTPtrC16@@XZ @ 12 NONAME ; class TPtrC16 CCFScriptEvent::Identifier(void) const
+	?InternalizeL@CCFOperationNode@@UAEXAAVRReadStream@@@Z @ 13 NONAME ; void CCFOperationNode::InternalizeL(class RReadStream &)
+	?NewL@CCFOperationPlugIn@@SAPAV1@ABVTUid@@PAVTOperationPluginInitParams@@@Z @ 14 NONAME ; class CCFOperationPlugIn * CCFOperationPlugIn::NewL(class TUid const &, class TOperationPluginInitParams *)
+	?NewL@CCFOperationPluginManager@@SAPAV1@AAVMCFScriptEngineInterface@@@Z @ 15 NONAME ; class CCFOperationPluginManager * CCFOperationPluginManager::NewL(class MCFScriptEngineInterface &)
+	?NewL@CCFScriptEvent@@SAPAV1@ABHABV?$RPointerArray@VCCFKeyValuePair@@@@ABVTDesC16@@@Z @ 16 NONAME ; class CCFScriptEvent * CCFScriptEvent::NewL(int const &, class RPointerArray<class CCFKeyValuePair> const &, class TDesC16 const &)
+	?NewLC@CCFOperationPlugIn@@SAPAV1@ABVTUid@@PAVTOperationPluginInitParams@@@Z @ 17 NONAME ; class CCFOperationPlugIn * CCFOperationPlugIn::NewLC(class TUid const &, class TOperationPluginInitParams *)
+	?NewLC@CCFOperationPluginManager@@SAPAV1@AAVMCFScriptEngineInterface@@@Z @ 18 NONAME ; class CCFOperationPluginManager * CCFOperationPluginManager::NewLC(class MCFScriptEngineInterface &)
+	?Parameters@CCFScriptEvent@@QBEABV?$RPointerArray@VCCFKeyValuePair@@@@XZ @ 19 NONAME ; class RPointerArray<class CCFKeyValuePair> const & CCFScriptEvent::Parameters(void) const
+	?ScriptId@CCFScriptEvent@@QBEHXZ @ 20 NONAME ; int CCFScriptEvent::ScriptId(void) const
+	?Value@CCFOperationNode@@UBE?AW4TCFConditionValue@1@XZ @ 21 NONAME ; enum CCFOperationNode::TCFConditionValue CCFOperationNode::Value(void) const
+	?Extension@CCFOperationNode@@UBEPAXABVTUid@@@Z @ 22 NONAME ; void * CCFOperationNode::Extension(class TUid const &) const
+

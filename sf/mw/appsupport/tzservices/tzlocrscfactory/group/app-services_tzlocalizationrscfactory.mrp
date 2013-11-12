@@ -1,0 +1,10 @@
+component	app-services_tzlocalizationrscfactory
+source	\sf\mw\appsupport\tzservices\tzlocrscfactory
+binary	\sf\mw\appsupport\tzservices\tzlocrscfactory\group	all
+exports	\sf\mw\appsupport\tzservices\tzlocrscfactory\group
+
+notes_source	\component_defs\release.src
+
+
+ipr E 
+

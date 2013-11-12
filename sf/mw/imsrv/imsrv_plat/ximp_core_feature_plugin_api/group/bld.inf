@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                XIMP core api
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/apidataobjfactoryaccessor.h     	MW_LAYER_PLATFORM_EXPORT_PATH(apidataobjfactoryaccessor.h)
+../inc/apidataobjfactoryaccessor.inl    MW_LAYER_PLATFORM_EXPORT_PATH(apidataobjfactoryaccessor.inl)
+../inc/eventcodec.h     								MW_LAYER_PLATFORM_EXPORT_PATH(eventcodec.h)
+../inc/ximpapidataobjbase.h     				MW_LAYER_PLATFORM_EXPORT_PATH(ximpapidataobjbase.h)
+../inc/ximpapieventbase.h     					MW_LAYER_PLATFORM_EXPORT_PATH(ximpapieventbase.h)
+../inc/ximpapiobjbase.h     						MW_LAYER_PLATFORM_EXPORT_PATH(ximpapiobjbase.h)
+../inc/ximpcontextinternal.h     				MW_LAYER_PLATFORM_EXPORT_PATH(ximpcontextinternal.h)
+
+../inc/ximphost.h     									MW_LAYER_PLATFORM_EXPORT_PATH(ximphost.h)
+../inc/ximphoststates.h     						MW_LAYER_PLATFORM_EXPORT_PATH(ximphoststates.h)
+
+// FIX ME : Need change
+../inc/ximpidentityimp.h     						MW_LAYER_PLATFORM_EXPORT_PATH(ximpidentityimp.h)
+
+../inc/ximpobjecthelpers.h     					MW_LAYER_PLATFORM_EXPORT_PATH(ximpobjecthelpers.h)
+../inc/ximpoperationbase.h     					MW_LAYER_PLATFORM_EXPORT_PATH(ximpoperationbase.h)
+../inc/ximpoperationdefs.h     					MW_LAYER_PLATFORM_EXPORT_PATH(ximpoperationdefs.h)
+../inc/ximpoperationfactory1.h     			MW_LAYER_PLATFORM_EXPORT_PATH(ximpoperationfactory1.h)
+../inc/ximpoperationfactory1.inl				MW_LAYER_PLATFORM_EXPORT_PATH(ximpoperationfactory1.inl)
+../inc/ximppanics.h     								MW_LAYER_PLATFORM_EXPORT_PATH(ximppanics.h)
+../inc/ximprbufhelpers.h     						MW_LAYER_PLATFORM_EXPORT_PATH(ximprbufhelpers.h)
+../inc/ximprequestidbuilder.h     			MW_LAYER_PLATFORM_EXPORT_PATH(ximprequestidbuilder.h)
+../inc/ximpsubscriptionitem.h     			MW_LAYER_PLATFORM_EXPORT_PATH(ximpsubscriptionitem.h)
+../inc/ximpobjecthelpers.inl						MW_LAYER_PLATFORM_EXPORT_PATH(ximpobjecthelpers.inl)
+../inc/ximppsccontext.h									MW_LAYER_PLATFORM_EXPORT_PATH(ximppsccontext.h)
+
+../inc/protocoldatahost.h								MW_LAYER_PLATFORM_EXPORT_PATH(protocoldatahost.h)
+../inc/protocoldatahost.inl							MW_LAYER_PLATFORM_EXPORT_PATH(protocoldatahost.inl)
+../inc/ximpitemparentbase.h							MW_LAYER_PLATFORM_EXPORT_PATH(ximpitemparentbase.h)
+../inc/ximpsubscriptionitembase.h				MW_LAYER_PLATFORM_EXPORT_PATH(ximpsubscriptionitembase.h)
+../inc/ximpfeaturepluginIfids.hrh				MW_LAYER_PLATFORM_EXPORT_PATH(ximpfeaturepluginifids.hrh)

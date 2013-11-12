@@ -1,0 +1,17 @@
+
+HbProgressSliderHandle
+{
+    layout:progresshandle;
+}
+
+HbProgressSliderHandle::icon
+{
+     fixed-height: expr(var(hb-param-widget-progress-slider-height)*1.5); 
+     fixed-width: expr(var(hb-param-widget-progress-slider-height)*1.5);  
+}
+
+HbProgressSliderHandle::toucharea
+{
+     fixed-height: var(hb-param-touch-area-gene-primary-medium);
+     fixed-width: expr(var(hb-param-widget-progress-slider-height)*1.5);  
+}

@@ -1,0 +1,20 @@
+/* Generated automatically */
+#ifndef have_Src_pattern_globals
+#define have_Src_pattern_globals
+
+extern void patcompstart _((void));
+extern mod_import_function Patprog patcompile _((char*exp,int inflags,char**endexp));
+extern int patgetglobflags _((char**strp,long*assertp,int*ignore));
+extern int errsfound;
+extern int forceerrs;
+extern void pattrystart _((void));
+extern mod_import_function int pattry _((Patprog prog,char*string));
+extern mod_import_function int pattrylen _((Patprog prog,char*string,int len,int unmetalen,int offset));
+extern mod_import_function int pattryrefs _((Patprog prog,char*string,int stringlen,int unmetalen,int patoffset,int*nump,int*begp,int*endp));
+extern int patmatchlen _((void));
+extern mod_import_function void freepatprog _((Patprog prog));
+#ifdef ZSH_PAT_DEBUG
+extern int bin_patdebug _((char*name,char**args,char*ops,int func));
+#endif /* ZSH_PAT_DEBUG */
+
+#endif /* !have_Src_pattern_globals */

@@ -1,0 +1,32 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+// Load the DST test server
+LOAD_SUITE DstIntServer -SharedData
+
+START_TESTCASE   PIM-TIMEZONEOFFSETCHECK-0001
+//! @SYMTestCaseID   PIM-TIMEZONEOFFSETCHECK-0001
+RUN_TEST_STEP 100 DstIntServer TimeZoneOffsetCheck \dstscripts\TimeZoneOffsetCheck.ini TimeZoneOffsetCheck01
+END_TESTCASE   PIM-TIMEZONEOFFSETCHECK-0001
+START_TESTCASE   PIM-TIMEZONEOFFSETCHECK-0002
+//! @SYMTestCaseID   PIM-TIMEZONEOFFSETCHECK-0002
+RUN_TEST_STEP 100 DstIntServer TimeZoneOffsetCheck \dstscripts\TimeZoneOffsetCheck.ini TimeZoneOffsetCheck02
+END_TESTCASE   PIM-TIMEZONEOFFSETCHECK-0002
+
+
+
+
+
+

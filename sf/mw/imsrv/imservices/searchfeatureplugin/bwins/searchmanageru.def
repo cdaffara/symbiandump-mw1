@@ -1,0 +1,3 @@
+EXPORTS
+	?NewL@CSearchFeatureImp@@SAPAV1@PAVMXIMPContext@@@Z @ 1 NONAME ; class CSearchFeatureImp * CSearchFeatureImp::NewL(class MXIMPContext *)
+

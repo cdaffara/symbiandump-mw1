@@ -1,0 +1,47 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  XIMP Framework Base API interface IDs.
+*
+*/
+
+#ifndef XIMPBASEIFIDS_HRH
+#define XIMPBASEIFIDS_HRH
+
+
+/**
+ * @defgroup ximpcoreapi XIMP Framework Core API
+ * @defgroup ximpfwbaseapi XIMP Framework Base API
+ * @ingroup ximpcoreapi
+ *
+ * XIMP Framework Base API declares XIMP Framework
+ * specific base structures and definitions, which are used
+ * in all other XIMP Framework APIs.
+ *
+ * XIMP Framework Base API defines abstract base interface,
+ * from where all other XIMP Framework object interfaces
+ * derive from. XIMP Framework Base API contains also common
+ * helpers for interface use, common error codes, and comon
+ * request ID structures.
+ *
+ * @since S60 v3.2
+ */
+
+
+// Interface UID for XIMPFw Base API interfaces
+#define XIMP_IF_ID_BASE                 0x10282DD5
+
+
+
+#endif // XIMPBASEIFIDS_HRH
+

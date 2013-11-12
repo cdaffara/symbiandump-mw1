@@ -1,0 +1,37 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID		API-APPFWK-VIEWSRV-0003
+//! @SYMDEF 			DEF117572
+//! @SYMTestCaseDesc		Addition and activation of views using View architecture support
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		The tests performed are addition of views to an application. Views 1, 2 & 5
+//!				are added, and activation of these views is tested (both with and without
+//!				a custom message associated to the activation). 
+//!				In addition, the getter and setter functionality of application default
+//!				view, and system default views are tested.
+//! @SYMTestType 		CIT
+//! @SYMTestExpectedResults 	Views are added and activated as expected with no error returned. Getter & setter funtions get & set accordingly too.
+
+START_TESTCASE API-APPFWK-VIEWSRV-0003
+
+PRINT Run TVwa viewsrv test
+//
+LOAD_SUITE appfwk_viewsrv_test_server
+RUN_TEST_STEP 100 appfwk_viewsrv_test_server TVwa
+
+END_TESTCASE API-APPFWK-VIEWSRV-0003

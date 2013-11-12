@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="38d75405c3f3c030a068fd4bf476dced" dataversion="2.0">
+<name>Flash Viewer Framework API</name>
+<description>The API to start Viewer UI for playing Flash content file 
+from a Viewer or a Stub application.</description>
+<type>c++</type>
+<subsystem>flashliteapi_3_0</subsystem>
+<libs></libs>
+<release category="public" sinceversion="5.0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

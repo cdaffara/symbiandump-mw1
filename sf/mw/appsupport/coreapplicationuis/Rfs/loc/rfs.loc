@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This file contains the localised strings for rfs.
+*
+*
+*/
+
+
+//  LOCALISATION STRINGS
+
+// d: Note if user tries to activate RFS when there are
+// d: ongoing calls or connections.
+// l: popup_note_window
+//
+#define qtn_rfs_note_active_calls "Ongoing calls and connections must be terminated before."
+
+
+// d: Wait note for closing connections
+// l: popup_note_wait_window
+//
+#define qtn_rfs_note_closing_connections "Closing connections"
+
+
+// d: Confirmation for restore factory settings operation.
+// l: popup_note_window
+//
+#define qtn_rfs_restore_query "Phone will return to original factory settings.During restore phone cannot be used, even for emergencies."
+
+
+// d: Confirmation for Erase all data operation.
+// l: popup_note_window
+//
+#define qtn_rfs_reset_phone_settings "Erase all data and settings? Memory card will not be erased. During restore phone cannot be used, even for emergencies."
+
+
+// d: Note for the users telling him that the device will restart
+// l: popup_note_window
+//
+#define qtn_rfs_note_device_restart  "Device will restart" 
+
+
+//End of File

@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project GSServerEngine
+*
+*/
+
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+TARGET                  gsserverenginestub.dll
+TARGETTYPE              dll
+UID                     0x10281F16
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+//EXPORTUNFROZEN
+
+SOURCEPATH              ../Src
+SOURCE                  GSServerEnginestub.cpp
+SOURCE                  GSServerClientstub.cpp
+
+USERINCLUDE             ../Inc
+
+// Default system include paths for middleware layer modules.
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY                 euser.lib
+
+// End of File

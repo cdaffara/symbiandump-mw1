@@ -1,0 +1,47 @@
+// Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// mmp file for the find utility
+// 
+//
+
+TARGET		find.exe
+TARGETTYPE	EXE
+
+UID		0x20004c45 0x2000EE8F
+
+SOURCEPATH	../src
+SOURCE		find.c
+SOURCE 	    function.c
+SOURCE 		ls.c
+SOURCE		main.c
+SOURCE		misc.c
+SOURCE		operator.c
+SOURCE 		options.c
+SOURCE 		fnmatch.c
+
+SOURCEPATH	../../src
+SOURCE 		err.c
+SOURCE      fts.c
+
+USERINCLUDE	../inc
+USERINCLUDE	../../inc
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+OS_LAYER_LIBC_SYSTEMINCLUDE
+
+LIBRARY		libc.lib euser.lib 
+
+STATICLIBRARY libcrt0.lib
+
+SMPSAFE

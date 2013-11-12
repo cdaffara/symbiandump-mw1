@@ -1,0 +1,113 @@
+// Copyright (c) 2000-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Component description file 
+// 
+//
+
+PRJ_MMPFILES
+
+TimeZoneLocalization.mmp
+
+PRJ_EXPORTS
+
+//
+// Headers.
+//
+../inc/TzLocalizer.h SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tzlocalizer.h)
+../inc/TzLocalizationDataTypes.h SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tzlocalizationdatatypes.h)
+../inc/TzLocalizationDataTypes.inl SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tzlocalizationdatatypes.inl)
+
+//
+// Secure Backup Engine registration file.
+//
+backup_registration.xml  z:/private/10205ea6/backup_registration.xml
+   
+//
+// ROM.
+//
+TimeZoneLocalization.iby	/epoc32/rom/include/timezonelocalization.iby
+
+PRJ_TESTMMPFILES
+
+../test/unit/TzLocalizationTestServer/group/TzLocalizationTestServer.mmp
+../test/integration/TzLocalTestServer/group/TzLocalTestServer.mmp
+../test/rtest/T_MultiThreadTimeZoneChange.mmp
+../test/rtest/t_localizationupdate.mmp
+../test/rtest/t_localizationuserdata.mmp
+../test/rtest/t_tzlocalizationupdate.mmp
+
+PRJ_TESTEXPORTS
+
+//
+// Unit test scripts and data files.
+//
+
+../test/unit/Scripts/TzLocalizationTest.script 		z:/tzlocalizationtestscripts/tzlocalizationtest.script
+../test/unit/Scripts/TzLocalizationSpeedTest.script z:/tzlocalizationtestscripts/tzlocalizationspeedtest.script
+../test/unit/data/TzLocalizationTest.ini c:/tzlocalizationtestscripts/tzlocalizationtest.ini
+../test/unit/data/DBS_10206A8B_TzLocalization_bad.db c:/tzlocalizationtestscripts/dbs_10206a8b_tzlocalization_bad.db
+
+../test/rtest/timezonelocalization/timezonegroups.rsc 	z:/timezonelocalization/timezonegroups.rsc
+../test/rtest/timezonelocalization/timezonegroups.r01 	z:/timezonelocalization/timezonegroups.r01
+../test/rtest/timezonelocalization/timezonegroups.r02 	z:/timezonelocalization/timezonegroups.r02
+../test/rtest/timezonelocalization/timezones.rsc 		z:/timezonelocalization/timezones.rsc
+../test/rtest/timezonelocalization/timezones.r01 		z:/timezonelocalization/timezones.r01
+../test/rtest/timezonelocalization/timezones.r02 		z:/timezonelocalization/timezones.r02
+../test/rtest/timezonelocalization/signed_timezone_loc_upgrade.sis 	z:/timezonelocalization/signed_timezone_loc_upgrade.sis
+
+../test/rtest/timezonelocalization/modified/timezonegroups.rsc 	z:/timezonelocalization/modified/timezonegroups.rsc
+../test/rtest/timezonelocalization/modified/timezonegroups.r01 	z:/timezonelocalization/modified/timezonegroups.r01
+../test/rtest/timezonelocalization/modified/timezonegroups.r02 	z:/timezonelocalization/modified/timezonegroups.r02
+../test/rtest/timezonelocalization/modified/timezones.rsc 		z:/timezonelocalization/modified/timezones.rsc
+../test/rtest/timezonelocalization/modified/timezones.r01 		z:/timezonelocalization/modified/timezones.r01
+../test/rtest/timezonelocalization/modified/timezones.r02 		z:/timezonelocalization/modified/timezones.r02
+
+../test/rtest/timezonelocalization/locale/timezonegroups.rsc 	z:/timezonelocalization/locale/timezonegroups.rsc
+../test/rtest/timezonelocalization/locale/timezonegroups.r01 	z:/timezonelocalization/locale/timezonegroups.r01
+../test/rtest/timezonelocalization/locale/timezones.rsc 		z:/timezonelocalization/locale/timezones.rsc
+../test/rtest/timezonelocalization/locale/timezones.r01 		z:/timezonelocalization/locale/timezones.r01
+
+//
+// Integration test scripts and data files.
+//
+
+../test/integration/tztestscripts/tzlocintegtest.script                z:/tzlocintegtest.script
+../test/integration/tztestscripts/tzlocintegtesthw.script              z:/tzlocintegtesthw.script
+../test/integration/tztestscripts/tzlocnoresource.script             	z:/tzlocnoresource.script
+../test/integration/tztestscripts/tzlocnoresource_pre.bat            	z:/tzlocnoresource_pre.bat
+../test/integration/tztestscripts/tzlocnoresource_post.bat              z:/tzlocnoresource_post.bat
+../test/integration/tztestscripts/tzlocaltest.bat                      c:/tzlocaltest.bat
+../test/integration/tztestscripts/tzlocaltestdata.ini                  c:/tzlocaltestdata.ini
+../test/integration/data/1020383e_defhometzkeynotpresent.cre			c:/test/tzloc/tzlocinteg/1020383e_defhometzkeynotpresent.cre
+../test/integration/data/1020383e_defhometzkeypresentbutnotset.cre		c:/test/tzloc/tzlocinteg/1020383e_defhometzkeypresentbutnotset.cre
+../test/integration/data/1020383e_defhometzkeypresentandsettoparis.cre	c:/test/tzloc/tzlocinteg/1020383e_defhometzkeypresentandsettoparis.cre
+../test/integration/data/1020383e_defintrec1rec2keyspresentandset.cre	c:/test/tzloc/tzlocinteg/1020383e_defintrec1rec2keyspresentandset.cre
+
+//
+// ROM.
+//
+TimeZoneLocalizationTests.iby /epoc32/rom/include/timezonelocalizationtests.iby
+TimeZoneLocalizationSpeedTests.iby /epoc32/rom/include/timezonelocalizationspeedtests.iby
+../test/integration/TzLocalTestServer/group/TzLocalTestServer.iby /epoc32/rom/include/tzlocaltestserver.iby
+
+PRJ_TESTEXTENSIONS
+
+start	extension	app-services/tzlocaltestserver
+option	TZ_RSC		timezones.rsc
+option	TZ_R01		timezones.r01
+option	TZ_R02		timezones.r02
+option	TZ_GRP_RSC	timezonegroups.rsc
+option	TZ_GRP_R01	timezonegroups.r01
+option	TZ_GRP_R02	timezonegroups.r02
+end

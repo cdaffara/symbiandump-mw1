@@ -1,0 +1,32 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-APPARC-0057  
+//! @SYMDEF 			PDEF092171   
+//! @SYMTestCaseDesc 		Test case for defect "TApaTask::EndTask() allows any application kill any task"
+//! @SYMTestPriority 		High   
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		Launch and close both a standard and a system application using TApaTask::EndTask().
+//! @SYMTestExpectedResults 	The app should be launched and closed accordingly
+
+START_TESTCASE API-APPFWK-APPARC-0057
+
+PRINT Run T_EndTask Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_EndTask
+
+END_TESTCASE API-APPFWK-APPARC-0057

@@ -1,0 +1,37 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __TSACTMAN_CORE_IBY__
+#define __TSACTMAN_CORE_IBY__
+
+file=ABI_DIR\BUILD_DIR\afservice.dll					       SHARED_LIB_DIR\afservice.dll
+data=\epoc32\data\z\resource\qt\plugins\afservice.qtplugin    resource\qt\plugins\afservice.qtplugin
+
+file=ABI_DIR\BUILD_DIR\hsactivitydbserver.exe                            PROGRAMS_DIR\hsactivitydbserver.exe
+
+file=ABI_DIR\BUILD_DIR\afstorageclient.dll					       SHARED_LIB_DIR\afstorageclient.dll
+file=ABI_DIR\BUILD_DIR\afactivitylauncher.dll			    		       SHARED_LIB_DIR\afactivitylauncher.dll
+
+file=ABI_DIR\BUILD_DIR\hbactivityplugin.dll					       SHARED_LIB_DIR\hbactivityplugin.dll
+data=\epoc32\data\z\resource\qt\plugins\hbactivityplugin.qtplugin    resource\qt\plugins\hbactivityplugin.qtplugin
+
+data=DATAZ_\resource\activity\afservice.xml resource\activity\afservice.xml
+data=DATAZ_\resource\activity\activityserviceplugin.xml resource\activity\activityserviceplugin.xml
+
+// stub sis
+data=ZSYSTEM/install/activitymanager_stub.sis                  system/install/activitymanager_stub.sis
+
+#endif //__TSACTMAN_CORE_IBY__

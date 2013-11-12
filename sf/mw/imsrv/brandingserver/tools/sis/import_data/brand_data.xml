@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<branding>
+    <brand>
+        <application_id>APP_ID</application_id>
+        <brand_id>BRAND_ID</brand_id>
+        <brand_language_id>99</brand_language_id>
+        <brand_version>1</brand_version>
+        
+        <element  id="nam" type="integer">
+        <element_value>10</element_value>
+        </element>
+        
+        <element  id="example_file" type="file">
+        <element_value>
+        <file_name>c:\private\102828DD\import\file.jpg</file_name>
+        </element_value>
+        </element>
+    </brand>
+ </branding>
+		

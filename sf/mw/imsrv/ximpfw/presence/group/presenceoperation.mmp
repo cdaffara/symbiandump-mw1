@@ -1,0 +1,183 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for Presence Operations
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/ximpdlluids.hrh"
+
+
+
+TARGET                  presenceoperation.dll
+TARGETTYPE              dll
+UID                     XIMP_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_PRESENCE_MANAGER
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresenceoperations
+// ---------------------------------------------------------------------------
+SOURCE                  operationlaunchcleaner.cpp
+SOURCE                  operationsynthesisesubscriptionevent.cpp
+SOURCE                  operationsetsubscriptiondata.cpp
+SOURCE                  presenceoperationfactoryimp.cpp
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresenceoperations/presentitygroups
+// ---------------------------------------------------------------------------
+
+// Client - presentity groups
+SOURCE                  operationsubscribegrouplist.cpp
+SOURCE                  operationunsubscribegrouplist.cpp
+SOURCE                  operationcreatepresentitygroup.cpp
+SOURCE                  operationdeletepresentitygroup.cpp
+SOURCE                  operationupdatepresentitygroupdisplayname.cpp
+
+// Adaptation - presentity groups
+SOURCE                  operationhandlepresentitygroups.cpp
+
+// Client - presentity group members
+SOURCE                  operationsubscribegroupcontent.cpp
+SOURCE                  operationunsubscribegroupcontent.cpp
+SOURCE                  operationaddpresentitygroupmember.cpp
+SOURCE                  operationremovepresentitygroupmember.cpp
+SOURCE                  operationupdatepresentitygroupmemberdisplayname.cpp
+
+// Adaptation - presentity group members
+SOURCE                  operationhandlepresentitygroupcontent.cpp
+SOURCE                  operationhandlepresentitygroupmemberadded.cpp
+SOURCE                  operationhandlepresentitygroupmemberremoved.cpp
+SOURCE                  operationhandlepresentitygroupmemberdisplaynameupdated.cpp
+
+
+
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../../presence/srcpresenceoperations/presencewatching
+// ---------------------------------------------------------------------------
+
+// Client - subscribe presentity presence
+SOURCE                  operationsubscribepresentitypresence.cpp
+SOURCE                  operationunsubscribepresentitypresence.cpp
+SOURCE                  operationsubscribepresentitygroupmemberspresence.cpp
+SOURCE                  operationunsubscribepresentitygroupmemberspresence.cpp
+
+// Adaptation - presentity presence recepetion
+SOURCE                  operationhandlepresentitypresence.cpp
+
+
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresenceoperations/presenceauthorization
+// ---------------------------------------------------------------------------
+
+// Client - Presence grant request listening
+SOURCE                  operationsubscribegrantrequestlist.cpp
+SOURCE                  operationunsubscribegrantrequestlist.cpp
+
+// Adaptation - Reception of grant requests
+SOURCE                  operationhandlepresencegrantrequests.cpp
+
+// Client - Granting presence
+SOURCE                  operationgrantpresencetopresentity.cpp
+SOURCE                  operationwithdrawpresencefrompresentity.cpp
+SOURCE                  operationgrantpresencetopresentitygroupmembers.cpp
+SOURCE                  operationwithdrawpresencefrompresentitygroupmembers.cpp
+SOURCE                  operationgrantpresencetoeveryone.cpp
+SOURCE                  operationwithdrawpresencefromeveryone.cpp
+
+// Client - Blocking presence
+SOURCE                  operationsubscribeblocklist.cpp
+SOURCE                  operationunsubscribeblocklist.cpp
+SOURCE                  operationblockpresenceforpresentity.cpp
+SOURCE                  operationcancelpresenceblockfrompresentity.cpp
+
+// Adaptation - Reception of block information
+SOURCE                  operationhandlepresenceblocking.cpp
+
+
+
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresenceoperations/presencepublishing
+// ---------------------------------------------------------------------------
+
+// Client - Publishing own presence
+SOURCE                  operationpublishownpresence.cpp
+
+// Client - Subscribing own presence
+SOURCE                  operationsubscribeownpresence.cpp
+SOURCE                  operationunsubscribeownpresence.cpp
+
+// Adaptation - Reception of own presence information
+SOURCE                  operationhandleownpresence.cpp
+
+// Client - Subscribing of presence watcher list
+SOURCE                  operationsubscribewatcherlist.cpp
+SOURCE                  operationunsubscribewatcherlist.cpp
+
+// Adaptation - Reception of presence watcher list
+SOURCE                  operationhandlepresencewatcherlist.cpp
+
+
+
+
+USERINCLUDE             ../../core/srcoperations
+//USERINCLUDE             ../srcoperations/sessionmng
+USERINCLUDE             ../srcpresenceoperations
+USERINCLUDE             ../srcpresenceoperations/presentitygroups
+USERINCLUDE             ../srcpresenceoperations/presencewatching
+USERINCLUDE             ../srcpresenceoperations/presenceauthorization
+USERINCLUDE             ../srcpresenceoperations/presencepublishing
+
+USERINCLUDE             ../../core/srcdatamodel
+USERINCLUDE             ../srcpresenceprocessor
+USERINCLUDE             ../srcpresencedatamodel
+USERINCLUDE             ../srcpresencedatamodel/presentitygroups
+USERINCLUDE             ../srcpresencedatamodel/presencewatching
+USERINCLUDE             ../srcpresencedatamodel/presenceauthorization
+USERINCLUDE             ../srcpresencedatamodel/presencepublishing
+
+
+USERINCLUDE             ../../core/srcutils
+USERINCLUDE             ../../core/srcprocessor
+
+// TODO remove unnecessary
+SYSTEMINCLUDE           ../../inc/core/base
+SYSTEMINCLUDE           ../../inc/core/datamodel
+SYSTEMINCLUDE           ../../inc/core/protocolplugin
+SYSTEMINCLUDE           ../../inc/core/protocolpluginhost
+SYSTEMINCLUDE           ../../inc/presence/presencedatamodel
+SYSTEMINCLUDE           ../../inc/presence/presencemanagement
+SYSTEMINCLUDE           ../../inc/presence/presenceprotocolplugin
+SYSTEMINCLUDE           ../../inc/presence/presenceprotocolpluginhost
+MW_LAYER_SYSTEMINCLUDE
+
+
+
+LIBRARY                 euser.lib
+LIBRARY                 estor.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 presencedatamodel.lib
+LIBRARY                 ximpprocessor.lib
+
+// End of file
+

@@ -1,0 +1,160 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __01_TzLocalization_RLS__
+#define __01_TzLocalization_RLS__
+
+// europe/lisbon ==============================================================
+
+rls_string lisbon_standard_name "Western European Time"
+rls_string lisbon_daylight_name "Western European Summer Time"
+rls_string lisbon_short_standard_name "WET"
+rls_string lisbon_short_daylight_name "WEST"
+rls_string lisbon_lisbon_name "Lisbon"
+rls_string lisbon_porto_name "Porto"
+
+// europe/london ==============================================================
+
+rls_string london_standard_name "Greenwich Mean Time"
+rls_string london_daylight_name "British Summer Time"
+rls_string london_short_standard_name "GMT"
+rls_string london_short_daylight_name "BST"
+rls_string london_london_name "London"
+rls_string london_manchester_name "Manchester"
+rls_string london_birmingham_name "Birmingham"
+
+// america/los_angeles ========================================================
+
+rls_string los_angeles_standard_name "Pacific Standard Time"
+rls_string los_angeles_daylight_name "Pacific Daylight Time"
+rls_string los_angeles_short_standard_name "PST"
+rls_string los_angeles_short_daylight_name "PDT"
+rls_string los_angeles_los_angeles_name "Los Angeles"
+rls_string los_angeles_san_francisco_name "San Francisco"
+rls_string los_angeles_portland_name "Portland"
+rls_string los_angeles_seattle_name "Seattle"
+
+// america/chicago ========================================================
+
+rls_string chicago_standard_name "Central Standard Time"
+rls_string chicago_daylight_name "Central Daylight Time"
+rls_string chicago_short_standard_name "CST"
+rls_string chicago_short_daylight_name "CDT"
+rls_string chicago_chicago_name "Chicago"
+
+// europe/berlin ==============================================================
+rls_string berlin_standard_name "Central European Time"
+rls_string berlin_daylight_name "Central European Summer Time"
+rls_string berlin_short_standard_name "CET"
+rls_string berlin_short_daylight_name "CEST"
+rls_string berlin_berlin_name "Berlin"
+rls_string berlin_bonn_name "Bonn"
+rls_string berlin_frankfurter_name "Frankfurt"
+
+
+// europe/paris ===============================================================
+rls_string paris_standard_name "Central European Time"
+rls_string paris_daylight_name "Central European Summer Time"
+rls_string paris_short_standard_name "CET"
+rls_string paris_short_daylight_name "CEST"
+rls_string paris_paris_city_name "Paris"
+rls_string paris_nice_name "Nice"
+rls_string paris_stockholm_name "Stockholm"
+
+
+// europe/stockholm ===============================================================
+//rls_string stockholm_standard_name "Central European Time"
+//rls_string stockholm_daylight_name "Central European Summer Time"
+//rls_string stockholm_short_standard_name "CET"
+//rls_string stockholm_short_daylight_name "CEST"
+//rls_string stockholm_stockholm_name "Stockholm"
+
+
+// australia/sydney ===========================================================
+rls_string sydney_standard_name "Eastern Standard Time"
+rls_string sydney_daylight_name "Eastern Standard Time"
+rls_string sydney_short_standard_name "EST"
+rls_string sydney_short_daylight_name "EST"
+rls_string sydney_sydney_name "Sydney"
+rls_string sydney_ballarat_name "Ballarat"
+rls_string sydney_canberra_name "Canberra"
+
+// europe/tirane ===========================================================
+rls_string tirane_standard_name "Central Standard Time"
+rls_string tirane_daylight_name "Central Standard Time"
+rls_string tirane_short_standard_name "CST"
+rls_string tirane_short_daylight_name "CSST"
+rls_string tirane_tirane_name "Tirane"
+
+
+// asia/tehran ================================================================
+rls_string tehran_standard_name ""
+rls_string tehran_daylight_name ""
+rls_string tehran_short_standard_name ""
+rls_string tehran_short_daylight_name ""
+rls_string tehran_tehran_name "Tehran"
+
+// pacific/auckland ===========================================================
+rls_string auckland_standard_name ""
+rls_string auckland_daylight_name ""
+rls_string auckland_short_standard_name ""
+rls_string auckland_short_daylight_name ""
+rls_string auckland_auckland_name "Auckland"
+
+// atlantic/stanley ===========================================================
+rls_string stanley_standard_name ""
+rls_string stanley_daylight_name ""
+rls_string stanley_short_standard_name ""
+rls_string stanley_short_daylight_name ""
+rls_string stanley_stanley_name "Stanley"
+
+
+// asia/seoul ===========================================================
+rls_string seoul_standard_name ""
+rls_string seoul_daylight_name ""
+rls_string seoul_short_standard_name ""
+rls_string seoul_short_daylight_name ""
+rls_string seoul_seoul_name "Seoul"
+
+// europe/sofia ===============================================================
+rls_string sofia_standard_name "Eastern European Summer"
+rls_string sofia_daylight_name "Eastern European Summer Time"
+rls_string sofia_short_standard_name ""
+rls_string sofia_short_daylight_name ""
+rls_string sofia_sofia_name "Sofia"
+
+// brazil/rio branco ==========================================================
+rls_string rio_standard_name ""
+rls_string rio_daylight_name ""
+rls_string rio_short_standard_name ""
+rls_string rio_short_daylight_name ""
+rls_string rio_rio_branco_name "Rio Branco"
+
+// Groups of Cities =====================================================================
+rls_string city_group_name1 "United Kingdom"
+rls_string city_group_name2 "California"
+rls_string city_group_name3 "Oregon"
+rls_string city_group_name4 "Washington"
+rls_string city_group_name5 "Europe"
+rls_string city_group_name6 "Australia"
+rls_string city_group_name7 "Central Lakes"
+rls_string city_group_name8 "Asia"
+rls_string city_group_name9  "New Zealand"
+rls_string city_group_name10 "Atlantic"
+rls_string city_group_name11 "Acre"
+
+
+
+#endif // __01_TzLocalization_RLS__

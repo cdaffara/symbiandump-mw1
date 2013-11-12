@@ -1,0 +1,3 @@
+EXPORTS
+	?LibEntryL@@YAPAVCMsgCentreRfsPluginTest@@AAVCTestModuleIf@@@Z @ 1 NONAME ; class CMsgCentreRfsPluginTest * LibEntryL(class CTestModuleIf &)
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+    <name>caurlhandlerplugin</name>
+    <filepath>caurlhandlerplugin</filepath>
+    <description></description>
+    <interface>
+        <name>com.nokia.homescreen.ICommandHandler</name>
+        <version>1.0</version>
+        <description></description>
+        <capabilities></capabilities>
+        <customproperty key="entryTypeName">url</customproperty>
+    </interface>
+</service>

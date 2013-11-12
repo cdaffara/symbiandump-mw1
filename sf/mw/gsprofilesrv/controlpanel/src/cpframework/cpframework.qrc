@@ -1,0 +1,10 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/widgetml">   
+        <file alias = "cpdataformlistentryviewitem.widgetml">resources/widgetml/cpdataformlistentryviewitem.widgetml</file>      
+        <file alias = "cpdataformlistentryviewitem.css">resources/widgetml/cpdataformlistentryviewitem.css</file>  
+        <file alias = "cpdataformlistentryviewitem_color.css">resources/widgetml/cpdataformlistentryviewitem_color.css</file>
+    </qresource>    
+    <qresource prefix="/icon">   
+        <file alias = "qgn_prop_set_default_sub.svg">resources/icon/qgn_prop_set_default_sub.svg</file>
+    </qresource>   
+</RCC>

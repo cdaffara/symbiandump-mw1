@@ -1,0 +1,5 @@
+EXPORTS
+	?CreateShutdownManager@LafShutdown@@SAPAVCLafShutdownManagerBase@@AAVMShutdownEventObserver@@@Z @ 1 NONAME ; class CLafShutdownManagerBase * LafShutdown::CreateShutdownManager(class MShutdownEventObserver &)
+	?SaveFromAppSwitch@LafShutdown@@SA?AW4TSaveType@MSaveObserver@@XZ @ 2 NONAME ; enum MSaveObserver::TSaveType LafShutdown::SaveFromAppSwitch(void)
+	?SaveFromViewSwitch@LafShutdown@@SA?AW4TSaveType@MSaveObserver@@XZ @ 3 NONAME ; enum MSaveObserver::TSaveType LafShutdown::SaveFromViewSwitch(void)
+

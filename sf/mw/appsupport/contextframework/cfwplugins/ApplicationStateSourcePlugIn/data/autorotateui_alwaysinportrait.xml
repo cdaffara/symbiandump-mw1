@@ -1,0 +1,40 @@
+<!--
+........................................................................................................................
+Description:
+    This rule script defines when to launch certain applications always in portrait mode.
+    
+Feature:
+    autorotateui
+    
+Dependencies:
+    None
+........................................................................................................................
+-->
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+
+<!--
+........................................................................................................................
+Description:
+    Set default HW layout to portrait mode.
+........................................................................................................................
+-->
+    <if>
+        <or>
+            <!-- Sensor setting has been disabled -->
+            <contextChanged>
+                <contextRef source='Sensor' type='Setting.Active' value='Off'/>
+            </contextChanged>
+    
+            <!-- Turning interaction setting has been disabled -->
+            <contextChanged>
+                <contextRef source='Sensor' type='Setting.TurningInteraction.AutoRotation' value='Off'/>
+            </contextChanged>
+        </or>
+        <actions>
+            <!-- Switch to 'Normal' mode (Portrait) -->
+            <Orientation Mode='Normal'/>
+        </actions>
+    </if>
+
+</script>

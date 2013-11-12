@@ -1,0 +1,91 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  It contains resources for operator animation variation.
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    OANI
+
+//  INCLUDES
+#include <uikon.rh>
+#include <avkon.rh>
+
+/**
+* Instructions for enabling operator variated animation:
+*
+* - Add #include of *.mbg file
+* - Follow instruction to fill in appropriate value for r_anim_duration,
+*   r_operator_image and r_operator_array.
+* - Recompile operatoranimation.rss resource file. Note: if you use abld script
+*   check that date has been modified; it might be required to remove
+*   previous compiled resource file.
+* - You can rename compiled resource file for specific locale, just like
+*   in case of normal resources.
+* - When making ROM image, make sure that the necessary compiled operator 
+*   resource files are included and the operator animation file exists.
+* - Test that ROM image works OK for each locale.
+*/
+
+//Fill in mbg file here, such as #include <operatoranimation.mbg>
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+
+STRUCT ANIM_DURATION
+   {
+   WORD time;
+   }
+
+RESOURCE ANIM_DURATION r_anim_duration
+   {
+   //fill in duration of time needed to display animation
+   time = 0; //milliseconds
+   }
+    
+RESOURCE BMPANIM_DATA r_operator_image
+    {
+    //fill in time in ms
+    frameinterval = 0;
+
+    playmode = EAknBitmapAnimationPlayModePlay;
+
+    //fill in path for mbm file
+    //such as "Z:\\System\\data\\operatoranimation.mbm" or
+    //        "Z:\\resource\\apps\\operatoranimation.mbm"
+    bmpfile = "";
+
+    frames = r_operator_array;
+    }
+
+
+// -----------------------------------------------------------------------------
+//
+// r_operator_array
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_operator_array 
+    {
+    items = 
+        {
+		//fill in array item
+        };
+    }
+
+// End of File
+
+

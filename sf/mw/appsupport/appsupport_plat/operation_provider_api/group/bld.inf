@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to
+*                Operation Provider API.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../inc/cfoperationnode.h            MW_LAYER_PLATFORM_EXPORT_PATH(cfoperationnode.h)
+../inc/cfoperationplugin.h          MW_LAYER_PLATFORM_EXPORT_PATH(cfoperationplugin.h)
+../inc/cfoperationpluginconst.hrh   MW_LAYER_PLATFORM_EXPORT_PATH(cfoperationpluginconst.hrh)
+../inc/cfoperationservices.h        MW_LAYER_PLATFORM_EXPORT_PATH(cfoperationservices.h)
+../inc/cfscriptevent.h              MW_LAYER_PLATFORM_EXPORT_PATH(cfscriptevent.h)
+../inc/cfscriptlistener.h           MW_LAYER_PLATFORM_EXPORT_PATH(cfscriptlistener.h)
+../inc/cfscriptroot.h               MW_LAYER_PLATFORM_EXPORT_PATH(cfscriptroot.h)

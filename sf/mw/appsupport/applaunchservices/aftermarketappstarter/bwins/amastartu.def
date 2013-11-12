@@ -1,0 +1,7 @@
+EXPORTS
+	??1CAmaStart@@UAE@XZ @ 1 NONAME ; CAmaStart::~CAmaStart(void)
+	?NewL@CAmaStart@@SAPAV1@XZ @ 2 NONAME ; class CAmaStart * CAmaStart::NewL(void)
+	?StartL@CAmaStart@@QAEXVTUid@@@Z @ 3 NONAME ; void CAmaStart::StartL(class TUid)
+	?CancelStart@CAmaStart@@QAEXXZ @ 4 NONAME ; void CAmaStart::CancelStart(void)
+	?Start@CAmaStart@@QAEXVTUid@@AAVTRequestStatus@@@Z @ 5 NONAME ; void CAmaStart::Start(class TUid, class TRequestStatus &)
+	?StartDsc@RAmaStartSession@@QAEXABVTUid@@AAVTRequestStatus@@@Z @ 6 NONAME ABSENT ; void RAmaStartSession::StartDsc(class TUid const &, class TRequestStatus &)

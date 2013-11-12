@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="Printing Services">
+  <purpose>
+    Framework providing standard print dialogs for print job setup and control to application clients.
+  </purpose>
+</relnotes>

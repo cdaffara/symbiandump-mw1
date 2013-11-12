@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="9b89d03aae693d9ae94044d9cc58cf84" dataversion="2.0">
+  <name>System Application Light Control Plug-in API</name>
+  <description>A plug-in interface for implementing customized light controlling.</description>
+  <type>c++</type>
+  <collection>coreapplicationuis</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

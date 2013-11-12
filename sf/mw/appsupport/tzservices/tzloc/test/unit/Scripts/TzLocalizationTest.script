@@ -1,0 +1,180 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run all TzLocalization Tests 
+//
+LOAD_SUITE TzLocalizationTestServer
+//
+
+
+//! @SYMTestCaseDesc Tests when booting with corrupt timezone database, a 
+//! new timezone database will be created.
+//! @SYMTestActions Retrieves a list of time zones and gets information 
+//! about a particular time zone using the TimeZone Localization API. 
+//! Then adds a city to a time zone/city group.  
+//! @SYMTestExpectedResults EPass if creates the new database successfully.
+// delete the database file, so that we start from scratch each time
+
+RUN_TEST_STEP 100 TzLocalizationTestServer TzPrepEnvDelFileTestStep
+
+RUN_TEST_STEP 100 TzLocalizationTestServer TzPrepEnvCopyFileTestStep
+
+
+RUN_TEST_STEP 100 TzLocalizationTestServer TzBootWithInvalidTimeZoneDbTestStep  
+
+
+
+// delete the database file, so that we start from scratch each time
+RUN_TEST_STEP 100 TzLocalizationTestServer TzPrepEnvDelFileTestStep
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzPassiveTimeZoneTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+TestZone1
+TestZone2
+TestZone3
+TestZone4
+TestZone5
+TestZone6
+TestZone7
+TestZone8
+TestZone9
+TestZone10
+TestZone11
+TestZone12
+TestZone13
+TestZone14
+TestZone15
+TestZone16
+REMOVE_PREFIX
+
+
+RUN_TEST_STEP 100 TzLocalizationTestServer TzPassiveAllTimeZonesTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini AllZonesTest
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzPassiveCityTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+TestZone1
+TestZone2
+TestZone3
+TestZone4
+TestZone5
+TestZone6
+TestZone7
+TestZone8
+TestZone9
+TestZone10
+TestZone11
+TestZone12
+TestZone13
+TestZone14
+TestZone15
+REMOVE_PREFIX
+RUN_TEST_STEP_RESULT -1 100 TzLocalizationTestServer TzPassiveCityTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini TestZone16
+
+RUN_TEST_STEP 100 TzLocalizationTestServer TzPassiveAllCitiesTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini AllCitiesTest
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzCitiesWithUTCOffsetTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini 
+CitiesByUTCTest1
+CitiesByUTCTest2
+CitiesByUTCTest3
+REMOVE_PREFIX
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzTimeZonesWithUTCOffsetTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+TimeZonesByUTCTest1
+TimeZonesByUTCTest2
+TimeZonesByUTCTest3
+REMOVE_PREFIX
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzActiveCityTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+TestCity1
+TestCity2
+TestCity3
+REMOVE_PREFIX
+RUN_TEST_STEP_RESULT -1 100 TzLocalizationTestServer TzActiveCityTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini TestCity4
+RUN_TEST_STEP_RESULT -11 100 TzLocalizationTestServer TzActiveCityTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini TestCity5
+RUN_TEST_STEP 100 TzLocalizationTestServer TzActiveCityTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini TestCity6
+RUN_TEST_STEP_RESULT -11 100 TzLocalizationTestServer TzActiveCityTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini TestCity7
+
+// Clean up DB
+RUN_TEST_STEP 100 TzLocalizationTestServer TzPrepEnvDelFileTestStep
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzGroupTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+TestGroup1
+TestGroup2
+TestGroup3
+TestGroup4
+TestGroup5
+TestGroup6
+TestGroup7
+TestGroup8
+TestGroup9
+TestGroup10
+TestGroup11
+TestGroup128
+TestGroup129
+REMOVE_PREFIX
+RUN_TEST_STEP_RESULT -1 100 TzLocalizationTestServer TzGroupTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini TestGroup130
+
+RUN_TEST_STEP 100 TzLocalizationTestServer TzAllGroupsTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini AllGroupsTest
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzActiveTimeZoneTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+TestZone1
+TestZone2
+TestZone3
+TestZone4
+TestZone5
+TestZone6
+TestZone7
+TestZone8
+TestZone9
+TestZone10
+TestZone11
+TestZone12
+TestZone13
+TestZone14
+TestZone15
+REMOVE_PREFIX
+RUN_TEST_STEP_RESULT -1 100 TzLocalizationTestServer TzActiveTimeZoneTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini TestZone16
+
+// Clean up DB
+RUN_TEST_STEP 100 TzLocalizationTestServer TzPrepEnvDelFileTestStep
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzSortingTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+SortTest1
+SortTest2
+SortTest3
+SortTest4
+SortTest5
+SortTest6
+SortTest7
+SortTest8
+SortTest9
+SortTest10
+SortTest11
+SortTest12
+SortTest13
+SortTest14
+REMOVE_PREFIX
+
+RUN_TEST_STEP 100 TzLocalizationTestServer TzFindingTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini FindTest1
+PREFIX RUN_TEST_STEP !Result=106 100 TzLocalizationTestServer TzFindingTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+FindTest2
+FindTest3
+FindTest4
+FindTest5
+FindTest6
+FindTest7
+REMOVE_PREFIX
+
+RUN_TEST_STEP 100 TzLocalizationTestServer TzPubSubTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini FindTest1
+
+RUN_TEST_STEP 100 TzLocalizationTestServer TzRaceTestStep

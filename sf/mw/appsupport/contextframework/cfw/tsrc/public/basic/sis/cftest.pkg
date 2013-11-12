@@ -1,0 +1,48 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  ?Description
+;
+
+
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"Cf-test"},(0x01000DEAD),1,0,0
+
+;Supports Series 60 v 3.2
+(0x102752AE), 0, 0, 0, {"Series60ProductID"}
+
+;Localized Vendor Name
+%{"Cf-test"}
+
+;Unique Vendor name
+:"Vendor"
+
+; Cf-test files to copy
+"\epoc32\release\armv5\UREL\mt_basicoperationsplugin.dll"               -"!:\sys\bin\mt_basicoperationsplugin.dll"
+"\epoc32\release\armv5\UREL\mt_cfactionplugin.dll"                      -"!:\sys\bin\mt_cfactionplugin.dll"
+"\epoc32\release\armv5\UREL\mt_cfclient.dll"                            -"!:\sys\bin\mt_cfclient.dll"
+"\epoc32\release\armv5\UREL\MT_CFContextSourceManager.dll"              -"!:\sys\bin\MT_CFContextSourceManager.dll"
+"\epoc32\release\armv5\UREL\MT_CFContextSourceSettingsManager.dll"      -"!:\sys\bin\MT_CFContextSourceSettingsManager.dll"
+"\epoc32\release\armv5\UREL\MT_CFOperationPluginManager.dll"            -"!:\sys\bin\MT_CFOperationPluginManager.dll"
+"\epoc32\release\armv5\UREL\MT_CFScriptEngine.dll"                      -"!:\sys\bin\MT_CFScriptEngine.dll"
+"\epoc32\release\armv5\UREL\mt_cfservices.dll"                          -"!:\sys\bin\mt_cfservices.dll"
+"\epoc32\release\armv5\UREL\UT_CCFContextManager.dll"                   -"!:\sys\bin\UT_CCFContextManager.dll"
+"\epoc32\release\armv5\UREL\UT_CCFEngine.dll"                           -"!:\sys\bin\UT_CCFEngine.dll"
+"\epoc32\release\armv5\UREL\UT_CFActivatorEngine.dll"                   -"!:\sys\bin\UT_CFActivatorEngine.dll"
+"\epoc32\release\armv5\UREL\UT_CFContextSourceManager.dll"              -"!:\sys\bin\UT_CFContextSourceManager.dll"
+"\epoc32\release\armv5\UREL\UT_CFContextSourceSettingsManager.dll"      -"!:\sys\bin\UT_CFContextSourceSettingsManager.dll"
+"\epoc32\release\armv5\UREL\UT_CFOperationPluginManager.dll"            -"!:\sys\bin\UT_CFOperationPluginManager.dll"
+"\epoc32\release\armv5\UREL\mt_cfsisupgrade.dll"               			-"!:\sys\bin\mt_cfsisupgrade.dll"

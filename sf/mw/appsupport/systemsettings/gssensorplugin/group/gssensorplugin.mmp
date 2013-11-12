@@ -1,0 +1,86 @@
+/*
+* Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project specification file for gssensorplugin.dll
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>    // For RESOURCE_FILES_DIR
+#include "gssensorplugin.cfg" // for trace macros
+
+TARGET              gssensorplugin.dll
+TARGETTYPE          PLUGIN
+VENDORID            VID_DEFAULT
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID                 0x10009D8D 0x10282DEC
+
+CAPABILITY          CAP_ECOM_PLUGIN
+
+SOURCEPATH  ../src
+SOURCE      gssensorbaseview.cpp
+SOURCE      gssenbasecontainer.cpp
+SOURCE      gssensorplugin.cpp
+SOURCE      gssensorplugincontainer.cpp
+SOURCE      gssensorpluginmodel.cpp
+SOURCE      gssentappingctrlview.cpp
+SOURCE      gssentappingctrlcontainer.cpp
+SOURCE      gssenturnctrlview.cpp
+SOURCE      gssenturnctrlcontainer.cpp
+SOURCE      gssensorpluginimplementationtable.cpp
+
+//User include paths
+USERINCLUDE     ../inc
+USERINCLUDE     ../data // For *.rh
+USERINCLUDE     ../cenrep // for CenRep keys
+
+
+//System include paths
+APP_LAYER_SYSTEMINCLUDE
+
+// The resource name should have to be same as the third UID above
+
+START RESOURCE  ../data/10282DEC.rss
+TARGET          gssensorplugin.rsc
+END
+
+START RESOURCE  ../data/gssensorpluginrsc.rss
+DEPENDS gsapp.rsg
+TARGETPATH      RESOURCE_FILES_DIR
+HEADER
+LANGUAGE_IDS
+END
+
+LIBRARY   euser.lib
+LIBRARY   ecom.lib
+LIBRARY   efsrv.lib
+LIBRARY   avkon.lib
+LIBRARY   bafl.lib 
+LIBRARY   cone.lib 
+LIBRARY   eikcoctl.lib 
+LIBRARY   eikcore.lib 
+LIBRARY   egul.lib              // For GulIcon in checkbox icons
+LIBRARY   eikctl.lib            // For checkbox icons
+
+LIBRARY   commonengine.lib      // For RConeResourceLoader
+LIBRARY   featmgr.lib           // Feature manager 
+LIBRARY   centralrepository.lib // for CenRep
+LIBRARY   aknskins.lib          // for enhanced skinning
+LIBRARY   hlplch.lib            // for "Help" options menu
+LIBRARY   gsframework.lib       // For base classes
+LIBRARY   gslistbox.lib         // For CGSListBoxItemTextArray
+LIBRARY   gsecomplugin.lib      // For base classes
+
+SMPSAFE

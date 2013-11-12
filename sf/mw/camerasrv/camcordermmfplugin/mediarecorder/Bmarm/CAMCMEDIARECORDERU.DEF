@@ -1,0 +1,3 @@
+EXPORTS
+	NewL__17CCMRMediaRecorder @ 1 NONAME R3UNUSED ; CCMRMediaRecorder::NewL(void)
+

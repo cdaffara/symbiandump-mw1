@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __TIMEZONELOCALIZATIONSPEEDTEST_IBY__
+#define __TIMEZONELOCALIZATIONSPEEDTEST_IBY__
+
+#include <BackupRestoreNotification.iby>
+#include <TimeZoneServer.iby>
+#include <TzLocalizationRscFactory.iby>
+
+REM ***These tests should not be run as part of overnight build
+#ifdef TIMEZONE_LOCALIZATION_SPEED_TEST
+ 
+REM *** TimeZoneLocalization***
+file=ABI_DIR\BUILD_DIR\TimeZoneLocalization.dll	System\Libs\TimeZoneLocalization.dll
+
+REM *** TimeZoneLocalization Localized Time Zone Resource files ***
+data=EPOCROOT##epoc32\data\Z\Resource\TimeZoneLocalization\timezonesspeedtest.r01 Resource\TimeZoneLocalization\timezones.r01
+data=EPOCROOT##epoc32\data\Z\Resource\TimeZoneLocalization\timezonesspeedtest.r02 Resource\TimeZoneLocalization\timezones.r02
+
+REM *** TimeZoneLocalization Localized Time Zone Grouping Resource files ***
+data=EPOCROOT##epoc32\data\Z\Resource\TimeZoneLocalization\timezonegroups.r01 Resource\TimeZoneLocalization\timezonegroups.r01
+data=EPOCROOT##epoc32\data\Z\Resource\TimeZoneLocalization\timezonegroups.r02 Resource\TimeZoneLocalization\timezonegroups.r02
+
+REM *** TimeZoneLocalization Database Policy file ***
+  data=ZPRIVATE\100012a5\policy\10206A8B.SPD PRIVATE\100012a5\policy\10206A8B.SPD
+  data=ZPRIVATE\10205EA6\backup_registration.xml PRIVATE\10205EA6\backup_registration.xml
+
+REM *** TimeZoneLocalization Test Server ***
+file=ABI_DIR\BUILD_DIR\TzLocalizationTestServer.exe	System\Libs\TzLocalizationTestServer.exe
+
+#endif
+
+#endif

@@ -1,0 +1,18 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+    	<and>
+	        <count repeatInterval='2' persistencyFile='testCountPersistency'>
+	            <contextRef source='Test' type='Counting'/>
+	            <string>A</string>
+	        </count>
+	        <equal>
+	            <contextRef source='Test' type='Control'
+	                        value='True'/>
+	        </equal>
+    	</and>
+        <actions>
+            <testAction/>
+        </actions>
+    </if>
+</script>

@@ -1,0 +1,28 @@
+<ContextSourceSettings>
+ 
+             <!-- sensordatacompensatorplgtesttypes.h -->
+                 <!-- KTestPSUid = {0x0AA01554};  -->
+                 <!-- ETestKeyState = 0x00000001 -->
+     <SensorCompensatorPluginTest mapper="int" category="0x0AA01554" key="0x00000001" 
+         capability="" 
+         source="SensorCompPluginTest" type="State" passthrough="false">
+         <IntMapping psvalue="-1" contextvalue="SetUndefined"/>
+         <IntMapping psvalue="0" contextvalue="SetD0"/>
+         <IntMapping psvalue="1" contextvalue="SetD1"/>
+         <IntMapping psvalue="2" contextvalue="SetD2"/>
+         <IntMapping psvalue="3" contextvalue="SetD3"/>
+         <IntMapping psvalue="4" contextvalue="SetD4"/>
+         <IntMapping psvalue="5" contextvalue="SetD5"/>
+         <IntMapping psvalue="6" contextvalue="SetD6"/>
+         <IntMapping psvalue="7" contextvalue="SetD7"/>
+         <IntMapping psvalue="10" contextvalue="SetU0"/>
+         <IntMapping psvalue="11" contextvalue="SetU1"/>
+         <IntMapping psvalue="12" contextvalue="SetU2"/>
+         <IntMapping psvalue="13" contextvalue="SetU3"/>
+         <IntMapping psvalue="14" contextvalue="SetU4"/>
+         <IntMapping psvalue="15" contextvalue="SetU5"/>
+         <IntMapping psvalue="16" contextvalue="SetU6"/>
+         <IntMapping psvalue="17" contextvalue="SetU7"/>
+     </SensorCompensatorPluginTest>
+         
+</ContextSourceSettings>

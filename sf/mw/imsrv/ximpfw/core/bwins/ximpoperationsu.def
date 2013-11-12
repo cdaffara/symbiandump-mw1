@@ -1,0 +1,7 @@
+EXPORTS
+	??0CXIMPOperationBind2@@QAE@XZ @ 1 NONAME ; CXIMPOperationBind2::CXIMPOperationBind2(void)
+	??0CXIMPOperationBind@@QAE@XZ @ 2 NONAME ; CXIMPOperationBind::CXIMPOperationBind(void)
+	??0CXIMPOperationForcedTeardown@@QAE@XZ @ 3 NONAME ; CXIMPOperationForcedTeardown::CXIMPOperationForcedTeardown(void)
+	??0CXIMPOperationUnbind@@QAE@XZ @ 4 NONAME ; CXIMPOperationUnbind::CXIMPOperationUnbind(void)
+	?NewL@CXIMPOperationFactory@@SAPAV1@XZ @ 5 NONAME ; class CXIMPOperationFactory * CXIMPOperationFactory::NewL(void)
+

@@ -1,0 +1,41 @@
+
+/*
+    CpDataFormListEntryViewItem default color definitions.
+*/
+
+CpDataFormListEntryViewItem::dataItem_Icon {
+    color: var(qtc_list_item_title_normal);
+}
+
+CpDataFormListEntryViewItem::dataItem_Icon[state="pressed"]{
+    color: var(qtc_list_item_pressed);
+}
+
+CpDataFormListEntryViewItem::dataItem_Icon[state="disabled"] {
+    color: var(qtc_list_item_disabled);
+}
+
+CpDataFormListEntryViewItem::dataItem_Label {
+    color: var(qtc_list_item_title_normal);
+}
+
+CpDataFormListEntryViewItem::dataItem_Label[state="pressed"] {
+    color: var(qtc_list_item_pressed);
+}
+
+CpDataFormListEntryViewItem::dataItem_Label[state="disabled"] {
+    color: var(qtc_list_item_disabled);
+}
+
+CpDataFormListEntryViewItem::dataItem_Description {
+    color: var(qtc_list_item_title_normal);
+}
+
+CpDataFormListEntryViewItem::dataItem_Description[state="pressed"] {
+    color: var(qtc_list_item_pressed);
+}
+
+CpDataFormListEntryViewItem::dataItem_Description[state="disabled"] {
+    color: var(qtc_list_item_disabled);
+}
+

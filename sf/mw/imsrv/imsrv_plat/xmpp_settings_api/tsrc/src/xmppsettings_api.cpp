@@ -1,0 +1,254 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+* Description: This file contains testclass implementation.
+*
+*/
+
+// INCLUDE FILES
+#include <StifTestInterface.h>
+#include "xmppsettings_api.h"
+#include <SettingServerClient.h>
+#include<xmppservicesettingsapi.h>
+
+// EXTERNAL DATA STRUCTURES
+//extern  ?external_data;
+
+// EXTERNAL FUNCTION PROTOTYPES  
+//extern ?external_function( ?arg_type,?arg_type );
+
+// CONSTANTS
+//const ?type ?constant_var = ?constant;
+
+// MACROS
+//#define ?macro ?macro_def
+
+// LOCAL CONSTANTS AND MACROS
+//const ?type ?constant_var = ?constant;
+//#define ?macro_name ?macro_def
+
+// MODULE DATA STRUCTURES
+//enum ?declaration
+//typedef ?declaration
+
+// LOCAL FUNCTION PROTOTYPES
+//?type ?function_name( ?arg_type, ?arg_type );
+
+// FORWARD DECLARATIONS
+//class ?FORWARD_CLASSNAME;
+
+// ============================= LOCAL FUNCTIONS ===============================
+
+// -----------------------------------------------------------------------------
+// ?function_name ?description.
+// ?description
+// Returns: ?value_1: ?description
+//          ?value_n: ?description_line1
+//                    ?description_line2
+// -----------------------------------------------------------------------------
+//
+/*
+?type ?function_name(
+    ?arg_type arg,  // ?description
+    ?arg_type arg)  // ?description
+    {
+
+    ?code  // ?comment
+
+    // ?comment
+    ?code
+    }
+*/
+
+// ============================ MEMBER FUNCTIONS ===============================
+
+// -----------------------------------------------------------------------------
+// Cxmppsettings_api::Cxmppsettings_api
+// C++ default constructor can NOT contain any code, that
+// might leave.
+// -----------------------------------------------------------------------------
+//
+Cxmppsettings_api::Cxmppsettings_api( 
+    CTestModuleIf& aTestModuleIf ):
+        CScriptBase( aTestModuleIf )
+    {
+    }
+
+// -----------------------------------------------------------------------------
+// Cxmppsettings_api::ConstructL
+// Symbian 2nd phase constructor can leave.
+// -----------------------------------------------------------------------------
+//
+void Cxmppsettings_api::ConstructL()
+    {
+        iXmppSettingId = 0;
+        iXmppSnapId = 15;
+        
+        iXmppServerPort = 5223;
+        iMessageToneVolume = 7;
+        iLastRegistrationError = KErrNone;
+
+        iPublishOnThePhoneStatus = ETrue;
+        iRoamingWarning = ETrue;
+        iAllowBuddyReq = ETrue;
+        iAutoLogin = EFalse;
+        iDefaultProfile = ETrue;
+        
+        iApi = CXmppSettingsApi::NewL();
+         iMessageTone = HBufC::NewL( 50 );
+        iMessageTone->Des().Copy( _L("c:\\system\\tones\\diipadaapa.wav") );
+        
+       // LOGARG16("messagetone path: %S", iMessageTone);
+        
+        iSnapName = HBufC::NewL( 50 );
+        iSnapName->Des().Copy( _L("Internet") );
+        
+        iSettingsName = HBufC::NewL( 50 );
+        iSettingsName->Des().Copy( _L("XMPP-SETTING 1") );
+        
+        iStackVersion = HBufC::NewL( 50 );
+        iStackVersion->Des().Copy( _L("XMPP STACK V1.021 build 127") );
+        
+        iXmppServerAddress = HBufC::NewL( 50 );
+        iXmppServerAddress->Des().Copy( _L("chat.gizmoproject.com") );
+        
+        iUsername = HBufC::NewL( 50 );
+        iUsername->Des().Copy( _L("lassi") );
+        
+        iPassword = HBufC::NewL( 50 );
+        iPassword->Des().Copy( _L("lassi123") );
+        
+        iConnectionServer1 = HBufC::NewL( 50 );
+        iConnectionServer1->Des().Copy( _L("Con.Server.gizmo.com") );
+        
+        iConnectionServer2 = HBufC::NewL( 50 );
+        iConnectionServer2->Des().Copy( _L("Con2.Server.gizmo.com") );
+        
+        
+
+    //Read logger settings to check whether test case name is to be
+    //appended to log file name.
+    RSettingServer settingServer;
+    TInt ret = settingServer.Connect();
+    if(ret != KErrNone)
+        {
+        User::Leave(ret);
+        }
+    // Struct to StifLogger settigs.
+    TLoggerSettings loggerSettings; 
+    // Parse StifLogger defaults from STIF initialization file.
+    ret = settingServer.GetLoggerSettings(loggerSettings);
+    if(ret != KErrNone)
+        {
+        User::Leave(ret);
+        } 
+    // Close Setting server session
+    settingServer.Close();
+
+    TFileName logFileName;
+    
+    if(loggerSettings.iAddTestCaseTitle)
+        {
+        TName title;
+        TestModuleIf().GetTestCaseTitleL(title);
+        logFileName.Format(Kxmppsettings_apiLogFileWithTitle, &title);
+        }
+    else
+        {
+        logFileName.Copy(Kxmppsettings_apiLogFile);
+        }
+
+    iLog = CStifLogger::NewL( Kxmppsettings_apiLogPath, 
+                          logFileName,
+                          CStifLogger::ETxt,
+                          CStifLogger::EFile,
+                          EFalse );
+    
+    SendTestClassVersion();
+    }
+
+// -----------------------------------------------------------------------------
+// Cxmppsettings_api::NewL
+// Two-phased constructor.
+// -----------------------------------------------------------------------------
+//
+Cxmppsettings_api* Cxmppsettings_api::NewL( 
+    CTestModuleIf& aTestModuleIf )
+    {
+    Cxmppsettings_api* self = new (ELeave) Cxmppsettings_api( aTestModuleIf );
+
+    CleanupStack::PushL( self );
+    self->ConstructL();
+    CleanupStack::Pop();
+
+    return self;
+
+    }
+
+// Destructor
+Cxmppsettings_api::~Cxmppsettings_api()
+    { 
+
+    // Delete resources allocated from test methods
+    Delete();
+        delete iMessageTone;
+        delete iSnapName;
+        delete iSettingsName;
+        delete iStackVersion;
+        delete iXmppServerAddress;
+        delete iUsername;
+        delete iPassword;
+        delete iConnectionServer1;
+        delete iConnectionServer2;
+        delete iApi;
+    // Delete logger
+    delete iLog; 
+
+    }
+
+//-----------------------------------------------------------------------------
+// Cxmppsettings_api::SendTestClassVersion
+// Method used to send version of test class
+//-----------------------------------------------------------------------------
+//
+void Cxmppsettings_api::SendTestClassVersion()
+	{
+	TVersion moduleVersion;
+	moduleVersion.iMajor = TEST_CLASS_VERSION_MAJOR;
+	moduleVersion.iMinor = TEST_CLASS_VERSION_MINOR;
+	moduleVersion.iBuild = TEST_CLASS_VERSION_BUILD;
+	
+	TFileName moduleName;
+	moduleName = _L("xmppsettings_api.dll");
+
+	TBool newVersionOfMethod = ETrue;
+	TestModuleIf().SendTestModuleVersion(moduleVersion, moduleName, newVersionOfMethod);
+	}
+
+// ========================== OTHER EXPORTED FUNCTIONS =========================
+
+// -----------------------------------------------------------------------------
+// LibEntryL is a polymorphic Dll entry point.
+// Returns: CScriptBase: New CScriptBase derived object
+// -----------------------------------------------------------------------------
+//
+EXPORT_C CScriptBase* LibEntryL( 
+    CTestModuleIf& aTestModuleIf ) // Backpointer to STIF Test Framework
+    {
+
+    return ( CScriptBase* ) Cxmppsettings_api::NewL( aTestModuleIf );
+
+    }
+
+
+//  End of File

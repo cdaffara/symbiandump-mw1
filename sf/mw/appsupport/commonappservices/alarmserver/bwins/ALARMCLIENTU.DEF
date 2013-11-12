@@ -1,0 +1,59 @@
+EXPORTS
+	??0RASCliSession@@QAE@XZ @ 1 NONAME ; public: __thiscall RASCliSession::RASCliSession(void)
+	?AlarmAdd@RASCliSession@@QBEHAAVTASShdAlarm@@@Z @ 2 NONAME ; public: int __thiscall RASCliSession::AlarmAdd(class TASShdAlarm &)const 
+	?AlarmAddWithNotification@RASCliSession@@QAEXAAVTRequestStatus@@AAVTASShdAlarm@@@Z @ 3 NONAME ; public: void __thiscall RASCliSession::AlarmAddWithNotification(class TRequestStatus &,class TASShdAlarm &)
+	?AlarmCountByState@RASCliSession@@QBEHW4TAlarmState@@@Z @ 4 NONAME ; public: int __thiscall RASCliSession::AlarmCountByState(enum TAlarmState)const 
+	?AlarmDataAttachL@RASCliSession@@QBEHHABVTDesC8@@@Z @ 5 NONAME ; public: int __thiscall RASCliSession::AlarmDataAttachL(int,class TDesC8 const &)const 
+	?AlarmDataDetach@RASCliSession@@QBEHH@Z @ 6 NONAME ; public: int __thiscall RASCliSession::AlarmDataDetatch(int)const 
+	?AlarmDataSize@RASCliSession@@QBEHH@Z @ 7 NONAME ; public: int __thiscall RASCliSession::AlarmDataSize(int)const 
+	?AlarmDelete@RASCliSession@@QBEHH@Z @ 8 NONAME ; public: int __thiscall RASCliSession::AlarmDelete(int)const 
+	?AlarmDeleteAllByCategory@RASCliSession@@QBEHVTUid@@H@Z @ 9 NONAME ; public: int __thiscall RASCliSession::AlarmDeleteAllByCategory(class TUid,int)const 
+	?AlarmNotificationCancelAndDequeue@RASCliSession@@QBEXH@Z @ 10 NONAME ; public: void __thiscall RASCliSession::AlarmNotificationCancelAndDequeue(int)const 
+	?AlarmSoundsTemporarilySilenced@RASCliSession@@QBEHXZ @ 11 NONAME ; public: int __thiscall RASCliSession::AlarmSoundsTemporarilySilenced(void)const 
+	?CancelAlarmSilence@RASCliSession@@QBEHXZ @ 12 NONAME ; public: int __thiscall RASCliSession::CancelAlarmSilence(void)const 
+	?Connect@RASCliSession@@QAEHXZ @ 13 NONAME ; public: int __thiscall RASCliSession::Connect(void)
+	?GetAlarmCategory@RASCliSession@@QBEHHAAVTUid@@@Z @ 14 NONAME ; public: int __thiscall RASCliSession::GetAlarmCategory(int,class TUid &)const 
+	?GetAlarmCharacteristics@RASCliSession@@QBEHHAAV?$TBitFlagsT@E@@@Z @ 15 NONAME ; public: int __thiscall RASCliSession::GetAlarmCharacteristics(int,class TBitFlagsT<unsigned char> &)const 
+	?GetAlarmCountForCategory@RASCliSession@@QBEHVTUid@@@Z @ 16 NONAME ; public: int __thiscall RASCliSession::GetAlarmCountForCategory(class TUid)const 
+	?GetAlarmData@RASCliSession@@QBEHHAAVTDes8@@@Z @ 17 NONAME ; public: int __thiscall RASCliSession::GetAlarmData(int,class TDes8 &)const 
+	?GetAlarmDayOrTimed@RASCliSession@@QBEHHAAW4TAlarmDayOrTimed@@@Z @ 18 NONAME ; public: int __thiscall RASCliSession::GetAlarmDayOrTimed(int,enum TAlarmDayOrTimed &)const 
+	?GetAlarmDetails@RASCliSession@@QBEHHAAVTASShdAlarm@@@Z @ 19 NONAME ; public: int __thiscall RASCliSession::GetAlarmDetails(int,class TASShdAlarm &)const 
+	?GetAlarmIdListByStateL@RASCliSession@@QBEXW4TAlarmState@@AAV?$RArray@H@@@Z @ 20 NONAME ; public: void __thiscall RASCliSession::GetAlarmIdListByStateL(enum TAlarmState,class RArray<int> &)const 
+	?GetAlarmIdListForCategoryL@RASCliSession@@QBEXVTUid@@AAV?$RArray@H@@@Z @ 21 NONAME ; public: void __thiscall RASCliSession::GetAlarmIdListForCategoryL(class TUid,class RArray<int> &)const 
+	?GetAlarmIdListL@RASCliSession@@QBEXAAV?$RArray@H@@@Z @ 22 NONAME ; public: void __thiscall RASCliSession::GetAlarmIdListL(class RArray<int> &)const 
+	?GetAlarmOwner@RASCliSession@@QBEHHAAV?$TBuf@$0BAA@@@@Z @ 23 NONAME ; public: int __thiscall RASCliSession::GetAlarmOwner(int,class TBuf<256> &)const 
+	?GetAlarmPlayIntervalsL@RASCliSession@@QBEXAAV?$CArrayFix@VTASCliSoundPlayDefinition@@@@@Z @ 24 NONAME ; public: void __thiscall RASCliSession::GetAlarmPlayIntervalsL(class CArrayFix<class TASCliSoundPlayDefinition> &)const 
+	?GetAlarmSoundState@RASCliSession@@QBEHAAW4TAlarmGlobalSoundState@@@Z @ 25 NONAME ; public: int __thiscall RASCliSession::GetAlarmSoundState(enum TAlarmGlobalSoundState &)const 
+	?GetAlarmSoundsSilentUntil@RASCliSession@@QBEHAAVTTime@@@Z @ 26 NONAME ; public: int __thiscall RASCliSession::GetAlarmSoundsSilentUntil(class TTime &)const 
+	?GetAlarmStatus@RASCliSession@@QBEHHAAW4TAlarmStatus@@@Z @ 27 NONAME ; public: int __thiscall RASCliSession::GetAlarmStatus(int,enum TAlarmStatus &)const 
+	?GetAvailableCategoryListL@RASCliSession@@QBEXAAV?$RArray@VTUid@@@@@Z @ 28 NONAME ; public: void __thiscall RASCliSession::GetAvailableCategoryListL(class RArray<class TUid> &)const 
+	?GetNextDueAlarmId@RASCliSession@@QBEHAAH@Z @ 29 NONAME ; public: int __thiscall RASCliSession::GetNextDueAlarmId(int &)const 
+	?NotifyChange@RASCliSession@@QAEXAAVTRequestStatus@@AAH@Z @ 30 NONAME ; public: void __thiscall RASCliSession::NotifyChange(class TRequestStatus &,int &)
+	?NotifyChangeCancel@RASCliSession@@QBEXXZ @ 31 NONAME ; public: void __thiscall RASCliSession::NotifyChangeCancel(void)const 
+	?NumberOfAlarmsActiveInQueue@RASCliSession@@QBEHXZ @ 32 NONAME ; public: int __thiscall RASCliSession::NumberOfAlarmsActiveInQueue(void)const 
+	?ServerAndThreadName@ASCliDefinitions@@SAABVTDesC16@@XZ @ 33 NONAME ; public: static class TDesC16 const & __cdecl ASCliDefinitions::ServerAndThreadName(void)
+	?SetAlarmCharacteristics@RASCliSession@@QBEHHV?$TBitFlagsT@E@@@Z @ 34 NONAME ; public: int __thiscall RASCliSession::SetAlarmCharacteristics(int,class TBitFlagsT<unsigned char>)const 
+	?SetAlarmDayOrTimed@RASCliSession@@QBEHHW4TAlarmDayOrTimed@@@Z @ 35 NONAME ; public: int __thiscall RASCliSession::SetAlarmDayOrTimed(int,enum TAlarmDayOrTimed)const 
+	?SetAlarmPlayIntervalsL@RASCliSession@@QBEXABV?$CArrayFix@VTASCliSoundPlayDefinition@@@@@Z @ 36 NONAME ; public: void __thiscall RASCliSession::SetAlarmPlayIntervalsL(class CArrayFix<class TASCliSoundPlayDefinition> const &)const 
+	?SetAlarmSoundState@RASCliSession@@QBEHW4TAlarmGlobalSoundState@@@Z @ 37 NONAME ; public: int __thiscall RASCliSession::SetAlarmSoundState(enum TAlarmGlobalSoundState)const 
+	?SetAlarmSoundsSilentFor@RASCliSession@@QBEHVTTimeIntervalMinutes@@@Z @ 38 NONAME ; public: int __thiscall RASCliSession::SetAlarmSoundsSilentFor(class TTimeIntervalMinutes)const 
+	?SetAlarmSoundsSilentUntil@RASCliSession@@QBEHABVTTime@@@Z @ 39 NONAME ; public: int __thiscall RASCliSession::SetAlarmSoundsSilentUntil(class TTime const &)const 
+	?SetAlarmStatus@RASCliSession@@QBEHHW4TAlarmStatus@@@Z @ 40 NONAME ; public: int __thiscall RASCliSession::SetAlarmStatus(int,enum TAlarmStatus)const 
+	?SetAlarmStatusByCategory@RASCliSession@@QBEHVTUid@@W4TAlarmStatus@@@Z @ 41 NONAME ; public: int __thiscall RASCliSession::SetAlarmStatusByCategory(class TUid,enum TAlarmStatus)const 
+	?SetClientData@RASCliSession@@QAEHABVTASShdAlarm@@@Z @ 42 NONAME ; public: int __thiscall RASCliSession::SetClientData(class TASShdAlarm const &)
+	?StartAlarmServer@AlarmClientUtils@@SAHXZ @ 43 NONAME ; public: static int __cdecl AlarmClientUtils::StartAlarmServer(void)
+	?Version@RASCliSession@@QBE?AVTVersion@@XZ @ 44 NONAME ; public: class TVersion  __thiscall RASCliSession::Version(void)const 
+	?__DbgFailAlloc@RASCliSession@@QBEXH@Z @ 45 NONAME ; public: void __thiscall RASCliSession::__DbgFailAlloc(int)const 
+	?__DbgPreventUserNotify@RASCliSession@@QBEXH@Z @ 46 NONAME ; public: void __thiscall RASCliSession::__DbgPreventUserNotify(int)const 
+	?__DbgShutDownServer@RASCliSession@@QBEXXZ @ 47 NONAME ; public: void __thiscall RASCliSession::__DbgShutDownServer(void)const 
+	?__DbgSnoozeAlarm@RASCliSession@@QBEHHABVTTime@@@Z @ 48 NONAME ; public: int __thiscall RASCliSession::__DbgSnoozeAlarm(int,class TTime const &)const 
+	?AlarmAddWithNotification@RASCliSession@@QAEXAAVTRequestStatus@@AAVTASShdAlarm@@ABVTDesC8@@@Z @ 49 NONAME ; public: void __thiscall RASCliSession::AlarmAddWithNotification(class TRequestStatus &,class TASShdAlarm &,class TDesC8 const &)
+	?AlarmAdd@RASCliSession@@QBEHAAVTASShdAlarm@@ABVTDesC8@@@Z @ 50 NONAME ; public: int __thiscall RASCliSession::AlarmAdd(class TASShdAlarm &,class TDesC8 const &)const 
+	?AlarmDeleteByCategory@RASCliSession@@QBEHVTUid@@H@Z @ 51 NONAME ; public: int __thiscall RASCliSession::AlarmDeleteByCategory(class TUid,int)const 
+	?GetAlarmData@RASCliSession@@QBEHHAAPAVHBufC8@@@Z @ 52 NONAME ; int RASCliSession::GetAlarmData(int, class HBufC8 * &) const
+	?SetWakeup@RASCliSession@@QBEHHH@Z @ 53  NONAME ; int RASCliSession::SetWakeup(int, int) const
+	?SetAlarmDays@RASCliSession@@QBEHHE@Z @ 54 NONAME ABSENT ; int RASCliSession::SetAlarmDays(int, unsigned char) const
+	?GetAlarmDays@RASCliSession@@QBEHHAAE@Z @ 55 NONAME ABSENT ; int RASCliSession::GetAlarmDays(int, unsigned char &) const
+	?SetContinuous@RASCliSession@@QBEHHH@Z @ 56 NONAME ABSENT ; int RASCliSession::SetContinuous(int, int) const
+	?GetContinuous@RASCliSession@@QBEHHAAH@Z @ 57 NONAME ABSENT ; int RASCliSession::GetContinuous(int, int &) const
+	?__DbgSetEnvChgHandling@RASCliSession@@QBEHH@Z @ 58 NONAME ; int RASCliSession::__DbgSetEnvChgHandling(int) const

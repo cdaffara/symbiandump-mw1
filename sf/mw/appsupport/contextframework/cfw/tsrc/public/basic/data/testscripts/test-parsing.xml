@@ -1,0 +1,182 @@
+<!-- Testing some cases that they are parsed correctly  -->
+
+<SCRIPT xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+	<IF>
+        <AND>
+	        <!-- equal -->
+	        <equals>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'/>
+	            <string>MusicPlayer</string>
+	        </equals>
+	        <equal>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'
+					value='MusicPlayer'/>
+	        </equal>
+	        <EQUAL>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'
+					VALUE='MusicPlayer'/>
+	        </EQUAL>
+
+	        <!-- not -->
+	        <not>
+		        <EqUaLs>
+		            <ConTExtRef SOurCE='Application.State'
+						TypE='Foreground.Application'/>
+		            <sTrInG>Settings</sTrInG>
+		        </EqUaLs>
+	        </not>
+
+	        <!-- notEqual -->
+	        <notEqual>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'/>
+	            <string>MusicPlayer</string>
+	        </notEqual>
+	        <NOTEQUAL>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'
+					VALUE='MusicPlayer'/>
+	        </NOTEQUAL>
+
+	        <!-- less -->
+	        <less>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'/>
+	            <string>MusicPlayer</string>
+	        </less>
+	        <LESS>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'
+					VALUE='MusicPlayer'/>
+	        </LESS>
+
+	        <!-- lessOrEqual -->
+	        <lessOrEqual>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'/>
+	            <string>MusicPlayer</string>
+	        </lessOrEqual>
+	        <LESSOREQUAL>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'
+					VALUE='MusicPlayer'/>
+	        </LESSOREQUAL>
+
+	        <!-- greater -->
+	        <greater>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'/>
+	            <string>MusicPlayer</string>
+	        </greater>
+	        <GREATER>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'
+					VALUE='MusicPlayer'/>
+	        </GREATER>
+
+	        <!-- greaterOrEqual -->
+	        <greaterOrEqual>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'/>
+	            <string>MusicPlayer</string>
+	        </greaterOrEqual>
+	        <GREATEROREQUAL>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'
+					VALUE='MusicPlayer'/>
+	        </GREATEROREQUAL>
+
+	        <!-- contains -->
+	        <contains>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'/>
+	            <string>Player</string>
+	        </contains>
+	        <CONTAINS>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'
+					VALUE='Player'/>
+	        </CONTAINS>
+        </AND>
+        <actions>
+            <!-- start calendar app -->
+            <startApp appUid='10005901' viewUid='00000001' msgUid='00000000' msg='msg'/>
+        </actions>
+    </IF>
+    <ELSEIF>
+        <OR>
+	        <!-- inRange, values do not make sense -->
+	        <inRange>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'/>
+	            <int>100</int>
+	            <int>200</int>
+	        </inRange>
+	        <INRANGE>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'/>
+	            <INT>100</INT>
+	            <INT>200</INT>
+	        </INRANGE>
+
+	        <!-- contextChanged -->
+	        <contextChanged>
+	            <contextRef source='Application.State'
+	            	type='Foreground.Application'/>
+	        </contextChanged>
+	        <contextChanged>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'
+					value='MusicPlayer'/>
+	        </contextChanged>
+	        <CONTEXTCHANGED>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'
+					VALUE='MusicPlayer'/>
+	        </CONTEXTCHANGED>
+
+	        <!-- contextUpdated -->
+	        <contextUpdated>
+	            <contextRef source='Application.State'
+	            	type='Foreground.Application'/>
+	        </contextUpdated>
+	        <contextUpdated>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'
+					value='MusicPlayer'/>
+	        </contextUpdated>
+	        <CONTEXTUPDATED>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'
+					VALUE='MusicPlayer'/>
+	        </CONTEXTUPDATED>
+
+	        <!-- count -->
+	        <count oneShotAt='3'>
+	            <contextRef source='Application.State'
+					type='Foreground.Application'
+					value='MusicPlayer'/>
+	        </count>
+	        <COUNT REPEATINTERVAL='3'>
+	            <CONTEXTREF SOURCE='Application.State'
+					TYPE='Foreground.Application'
+					VALUE='MusicPlayer'/>
+	        </COUNT>
+        </OR>
+        <actions>
+            <!-- start calendar app -->
+            <startApp appUid='10005901' viewUid='00000001' msgUid='00000000' msg='msg'/>
+        </actions>
+    </ELSEIF>
+    <ELSE>
+        <!-- may contain only actions -->
+        <ACTIONS>
+            <!-- start calendar app -->
+            <startApp appUid='10005901' viewUid='00000001' msgUid='00000000' msg='msg'/>
+        </ACTIONS>
+    </ELSE>
+</SCRIPT>

@@ -1,0 +1,12 @@
+#ifndef __FORMATTERRFSPLUGINTESTMODULE_IBY__
+#define __FORMATTERRFSPLUGINTESTMODULE_IBY__
+
+file=ABI_DIR\BUILD_DIR\FormatterRFSPluginTestModule.dll                      SHARED_LIB_DIR\FormatterRFSPluginTestModule.dll
+
+//data=\epoc32\data\z\system\data\TestFramework.ini             \testframework\TestFramework.ini
+
+data=\epoc32\data\z\system\data\ui_FormatterRFSPluginTestModule.cfg                      \testframework\ui_FormatterRFSPluginTestModule.cfg
+
+
+
+#endif

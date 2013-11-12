@@ -1,0 +1,73 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for search Feature Plugin processor 
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/searchdlluids.hrh"
+
+
+TARGET                  searchprocessor.dll
+TARGETTYPE              dll
+UID                     XIMP_SEARCH_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_SEARCH_PROCESSOR    
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+VERSION      10.0
+
+SOURCEPATH              ../../srcsearchprocessor
+SOURCE                  protocoldatahostimp.cpp
+SOURCE				   protocolsearchdatahostimp.cpp
+
+SOURCEPATH              ../searchdatahost
+SOURCE                  protocolsearchfeaturedatahostimp.cpp
+
+SOURCEPATH              ../../srcutils
+SOURCE                   searchlogutils.cpp
+
+
+
+USERINCLUDE             ../../group
+USERINCLUDE             ../../srcsearchprocessor
+USERINCLUDE             ../../srcsearchoperations
+USERINCLUDE             ../../srcsearchdatamodel
+USERINCLUDE             ../../srcutils
+USERINCLUDE             ../searchdatahost
+
+
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 euser.lib
+LIBRARY                 ecom.lib
+LIBRARY                 estor.lib
+LIBRARY                 centralrepository.lib
+LIBRARY                 bafl.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 searchdatamodel.lib
+LIBRARY					flogger.lib
+
+//EXPORTUNFROZEN
+
+#if defined( ARMCC )
+DEFFILE ../../eabi/ 
+#elif defined ( WINSCW )
+deffile ../../bwins/ 
+#endif
+
+// End of file

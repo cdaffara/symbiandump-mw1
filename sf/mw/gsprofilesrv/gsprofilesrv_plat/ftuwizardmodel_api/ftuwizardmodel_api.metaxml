@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api id="ab2a8c3a226e0d57c8f094360392381f" dataversion="2.0">
+  <name>Ftuwizardmodel API</name>
+  <description>FtuWizard is an interface through which setting wizard plugin can be executed in the FTU fw.</description>
+  <type>c++</type>
+  <collection>ftuwizardmodel</collection>
+  <libs>
+    <lib name="ftuwizardmodel.lib"/>
+  </libs>
+  <release category="platform" sinceversion=""/>
+  <attributes>
+    <htmldocprovided>no</htmldocprovided>
+    <adaptation>no</adaptation>
+  </attributes>
+</api>

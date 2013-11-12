@@ -1,0 +1,11 @@
+EXPORTS
+	_Z12GateFunctionv @ 1 NONAME
+	_ZTI13CTcon3Library @ 2 NONAME ; #<TI>#
+	_ZTI19CTcon3Extended1Impl @ 3 NONAME ; #<TI>#
+	_ZTI19CTcon3Extended2Impl @ 4 NONAME ; #<TI>#
+	_ZTI6CTCon3 @ 5 NONAME ; #<TI>#
+	_ZTV13CTcon3Library @ 6 NONAME ; #<VT>#
+	_ZTV19CTcon3Extended1Impl @ 7 NONAME ; #<VT>#
+	_ZTV19CTcon3Extended2Impl @ 8 NONAME ; #<VT>#
+	_ZTV6CTCon3 @ 9 NONAME ; #<VT>#
+

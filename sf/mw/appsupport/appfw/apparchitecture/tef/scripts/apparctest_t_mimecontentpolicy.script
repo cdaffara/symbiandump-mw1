@@ -1,0 +1,33 @@
+//
+// Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-APPARC-0077
+//! @SYMREQ 			REQ7736
+//! @SYMTestCaseDesc 		Tests IsClosedType() method for different mime types
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		Closed types are the mime types which are listed in the 10003a3f repository.
+//!				Calls CApfMimeContentPolicy::IsClosedType(const TDesC& aMimeType); for different closed and non-closed mime types.
+//! @SYMTestExpectedResults 	The test checks whether IsClosedType returns ETrue for the Closed Mime types and EFalse for non-closed Mime types
+
+START_TESTCASE API-APPFWK-APPARC-0077
+
+PRINT Run t_mimecontentpolicy Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer t_mimecontentpolicy
+
+END_TESTCASE API-APPFWK-APPARC-0077

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api id="2481ff0a026dfee0a990b5a8b3d6fb8a" dataversion="2.0">
+  <name>activity_framework_api</name>
+  <description>Activity Framework API provides ways to store/restore application activity. It also provides means to launch application in predefined activity.</description>
+  <type>c++</type>
+  <collection>activityfw</collection>
+  <libs>
+    <lib name="afservice.lib"/>
+  </libs>
+  <release category="platform" sinceversion="5.2"/>
+  <attributes>
+    <htmldocprovided>no</htmldocprovided>
+    <adaptation>no</adaptation>
+  </attributes>
+</api>

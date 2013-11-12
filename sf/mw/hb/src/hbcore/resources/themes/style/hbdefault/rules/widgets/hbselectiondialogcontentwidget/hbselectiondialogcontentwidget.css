@@ -1,0 +1,10 @@
+HbSelectionDialogContentWidget[!multiSelection]{
+	layout:default;
+}
+
+HbSelectionDialogContentWidget[multiSelection]{
+	layout:list_with_markall;
+	
+}
+
+ 

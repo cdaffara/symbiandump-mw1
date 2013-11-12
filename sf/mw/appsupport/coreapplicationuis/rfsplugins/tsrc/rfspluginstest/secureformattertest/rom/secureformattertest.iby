@@ -1,0 +1,69 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+#ifndef __SECUREFORMATTERTEST_IBY__
+#define __SECUREFORMATTERTEST_IBY__
+
+data=DATAZ_\private\102073ea\excludes\app_spec_001.exc      private\102073ea\excludes\app_spec_001.exc
+data=DATAZ_\private\102073ea\excludes\app_spec_002.exc      private\102073ea\excludes\app_spec_002.exc
+data=DATAZ_\private\102073ea\excludes\app_spec_003.exc      private\102073ea\excludes\app_spec_003.exc
+data=DATAZ_\private\102073ea\excludes\app_spec_004.exc      private\102073ea\excludes\app_spec_004.exc
+data=DATAZ_\private\102073ea\excludes\app_spec_005.exc      private\102073ea\excludes\app_spec_005.exc
+data=DATAZ_\private\102073ea\excludes\app_spec_006.exc      private\102073ea\excludes\app_spec_006.exc
+data=DATAZ_\private\102073ea\excludes\app_spec_007.exc      private\102073ea\excludes\app_spec_007.exc
+
+data=DATAZ_\private\102073ea\excludes\app_spec_dummy.exc    private\102073ea\excludes\app_spec_dummy.exc
+
+file=ABI_DIR\BUILD_DIR\secureformattertest.dll                      SHARED_LIB_DIR\secureformattertest.dll
+file=ABI_DIR\BUILD_DIR\testdatacreator.exe				sys\bin\testdatacreator.exe
+
+//data=\epoc32\data\z\system\data\TestFramework.ini             \testframework\TestFramework.ini
+
+data=\epoc32\data\z\system\data\secureformattertest.cfg                      \testframework\secureformattertest.cfg
+
+data = DATAZ_\testdata\testexclude_001.txt		testdata\testexclude_001.txt
+data = DATAZ_\testdata\testexclude_002.txt		testdata\testexclude_002.txt
+data = DATAZ_\testdata\testexclude_003.txt		testdata\testexclude_003.txt
+data = DATAZ_\testdata\testexclude_004.txt		testdata\testexclude_004.txt
+data = DATAZ_\testdata\testexclude_005.txt		testdata\testexclude_005.txt
+data = DATAZ_\testdata\testexclude_006.txt		testdata\testexclude_006.txt
+data = DATAZ_\testdata\testexclude_007.txt		testdata\testexclude_007.txt
+data = DATAZ_\testdata\testexclude_008.txt		testdata\testexclude_008.txt
+data = DATAZ_\testdata\testexclude_009.txt		testdata\testexclude_009.txt
+data = DATAZ_\testdata\testexclude_010.txt		testdata\testexclude_010.txt
+data = DATAZ_\testdata\testexclude_011.txt		testdata\testexclude_011.txt
+data = DATAZ_\testdata\testexclude_012.txt		testdata\testexclude_012.txt
+data = DATAZ_\testdata\testexclude_013.txt		testdata\testexclude_013.txt
+data = DATAZ_\testdata\testexclude_014.txt		testdata\testexclude_014.txt
+data = DATAZ_\testdata\testexclude_015.txt		testdata\testexclude_015.txt
+data = DATAZ_\testdata\testspec_001.txt			testdata\testspec_001.txt
+data = DATAZ_\testdata\testspec_002.txt			testdata\testspec_002.txt
+data = DATAZ_\testdata\testspec_003.txt			testdata\testspec_003.txt
+data = DATAZ_\testdata\testspec_004.txt			testdata\testspec_004.txt
+data = DATAZ_\testdata\testspec_005.txt			testdata\testspec_005.txt
+data = DATAZ_\testdata\testspec_006.txt			testdata\testspec_006.txt
+data = DATAZ_\testdata\testspec_007.txt			testdata\testspec_007.txt
+data = DATAZ_\testdata\testspec_008.txt			testdata\testspec_008.txt
+data = DATAZ_\testdata\testspec_009.txt			testdata\testspec_009.txt
+data = DATAZ_\testdata\testspec_010.txt			testdata\testspec_010.txt
+data = DATAZ_\testdata\testspec_011.txt			testdata\testspec_011.txt
+data = DATAZ_\testdata\testspec_012.txt			testdata\testspec_012.txt
+data = DATAZ_\testdata\testspec_013.txt			testdata\testspec_013.txt
+data = DATAZ_\testdata\testspec_014.txt			testdata\testspec_014.txt
+data = DATAZ_\testdata\testspec_015.txt			testdata\testspec_015.txt
+
+#endif //__SECUREFORMATTERTEST_IBY__

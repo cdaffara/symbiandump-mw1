@@ -1,0 +1,167 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+// Load the DST test server
+LOAD_SUITE DstUnitTestServer
+//CONCURRENT - dangerous
+
+
+// The unit test CTZConfigAgentTest needs to write to the central repository. However, the repository is
+// locked so that only the TimeZoneServer can write to it. The copy operation below copies a version of 
+// the repository that has no read/write restriction. This is required for the CTZConfigAgentTest to run.
+PREFIX RUN_UTILS
+CopyFile \dstscripts\cenrep_access_all.cre c:\private\10202be9\persists\1020383e.cre
+MakeReadWrite c:\private\10202be9\persists\1020383e.cre
+REMOVE_PREFIX
+
+RUN_TEST_STEP 100 DstUnitTestServer DstDatabaseManager \dstscripts\dstdatabasemanagerstep.ini DatabaseIntegrityChecks
+
+RUN_TEST_STEP 100 DstUnitTestServer SetLocation \dstscripts\unittest.ini SimpleDSTTests
+
+RUN_TEST_STEP 100 DstUnitTestServer ConvertTime \dstscripts\unittest.ini ConvertTime1
+RUN_TEST_STEP 100 DstUnitTestServer ConvertTime \dstscripts\unittest.ini ConvertTime2
+RUN_TEST_STEP 100 DstUnitTestServer ConvertTime \dstscripts\unittest.ini ConvertTime3
+RUN_TEST_STEP 100 DstUnitTestServer ConvertTime \dstscripts\unittest.ini ConvertTime4
+RUN_TEST_STEP 100 DstUnitTestServer ConvertTime \dstscripts\unittest.ini ConvertTime5
+RUN_TEST_STEP 100 DstUnitTestServer ConvertTime \dstscripts\unittest.ini ConvertTime6
+RUN_TEST_STEP 100 DstUnitTestServer ConvertTime \dstscripts\unittest.ini ConvertTime7
+RUN_TEST_STEP 100 DstUnitTestServer ConvertTime \dstscripts\unittest.ini ConvertTime8
+
+RUN_TEST_STEP 100 DstUnitTestServer GetOffsets \dstscripts\unittest.ini GetOffsets_Test1
+RUN_TEST_STEP 100 DstUnitTestServer GetOffsets \dstscripts\unittest.ini GetOffsets_Test2
+RUN_TEST_STEP 100 DstUnitTestServer GetOffsets \dstscripts\unittest.ini GetOffsets_Test3
+RUN_TEST_STEP 100 DstUnitTestServer GetOffsets \dstscripts\unittest.ini GetOffsets_Test4
+RUN_TEST_STEP 100 DstUnitTestServer GetOffsets \dstscripts\unittest.ini GetOffsets_Test5
+
+RUN_TEST_STEP 100 DstUnitTestServer TZConfigAgentTest \dstscripts\unittest.ini TzConfig1
+
+RUN_TEST_STEP 100 DstUnitTestServer EncodedRules \dstscripts\encodedrulesstep.ini London_2002-2005
+RUN_TEST_STEP 100 DstUnitTestServer EncodedRules \dstscripts\encodedrulesstep.ini London_1995-1996
+RUN_TEST_STEP 100 DstUnitTestServer EncodedRules \dstscripts\encodedrulesstep.ini Tirane_1984
+RUN_TEST_STEP 100 DstUnitTestServer EncodedRules \dstscripts\encodedrulesstep.ini London_1900-2100
+
+RUN_TEST_STEP 100 DstUnitTestServer TzUpdateNotification \dstscripts\TzUpdateNotification.ini London_Sydney
+RUN_TEST_STEP 100 DstUnitTestServer TzUpdateNotification \dstscripts\TzUpdateNotification.ini Berlin_Delhi
+RUN_TEST_STEP 100 DstUnitTestServer TzUpdateNotification \dstscripts\TzUpdateNotification.ini Tokyo_Tokyo
+
+RUN_TEST_STEP 100 DstUnitTestServer TimezoneCache 
+RUN_TEST_STEP 100 DstUnitTestServer DaylightSavingsTest
+
+// Cleanup
+PREFIX RUN_UTILS 
+DeleteFile c:\private\10202be9\persists\1020383e.cre 
+REMOVE_PREFIX 
+
+//!@SYMTestCaseID           PIM-APPSRV-TZ-ACTRUL-0001
+//!@SYMTestCaseDesc         Test the inappropriate use of Actualised Rules or the effect of invalid actualised rules.
+//!@SYMTestPriority         High
+//!@SYMTestActions          Read the Actualised Rules and the test setup from the accompanied ini file and execute the test case.
+//!@SYMTestExpectedResults  All test steps should fail as intended.
+//!@SYMDEF                  DEF101740 Reclassification of internal App-Services/Tz classes
+START_TESTCASE PIM-APPSRV-TZ-ACTRUL-0001
+RUN_TEST_STEP_RESULT -1 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR01_NoRules_Offset
+RUN_TEST_STEP !PanicCode=5 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR02_NoRules_DST
+RUN_TEST_STEP !PanicCode=7 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR03_UnsupportedTimeRef_Offset
+RUN_TEST_STEP !PanicCode=7 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR04_UnsupportedTimeRef_Rules
+RUN_TEST_STEP_RESULT -1 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR05_NoValid_OffsetRule
+RUN_TEST_STEP !PanicCode=10 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR20_StartGreaterThenEnd_Offset
+END_TESTCASE PIM-APPSRV-TZ-ACTRUL-0001
+
+//!@SYMTestCaseID           PIM-APPSRV-TZ-ACTRUL-0002
+//!@SYMTestCaseDesc         Verify the proper use of actualised rules to retrieve UTC offset and check if daylight savings time is currently in effect
+//!@SYMTestPriority         High
+//!@SYMTestActions          Read the Actualised Rules and the test setup from the accompanied ini file and execute the test case.
+//!@SYMTestExpectedResults  All test steps should pass.
+//!@SYMDEF                  DEF101740 Reclassification of internal App-Services/Tz classes
+START_TESTCASE PIM-APPSRV-TZ-ACTRUL-0002
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR06_Valid_OffsetRule
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR07_NoDST
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR08_DST_With2Rules
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR09_DST_With3Rules
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR10_NoDST_With3Rules
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR11_ReverseOrderRules
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR12_WithMixedTimeRefRules
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR13_SameRuleTimeOffsetCheck
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR14_OneYearEntryVancouverDST
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR15_OneYearEntryVancouverSTD
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR16_OneYearEntryTasmaniaSTD
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR17_OneYearEntryTasmaniaDST
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR18_OneYearEntryLondonSTD
+RUN_TEST_STEP 100 DstUnitTestServer ActualisedRules \dstscripts\actualisedrules.ini AR19_OneYearEntryLondonDST
+END_TESTCASE PIM-APPSRV-TZ-ACTRUL-0002
+
+///////////////
+//!@SYMTestCaseID           PIM-APPSRV-TZ-TZRULES-0001
+//!@SYMTestCaseDesc         Verify the use of Tz Rule APIs
+//!@SYMTestPriority         High
+//!@SYMTestActions          Read the Tz Rules and the test setup from the accompanied ini file and execute the test case.
+//!@SYMTestExpectedResults  All test steps should succeed except TR02A_AccessNonExistRule.
+//!@SYMDEF                  DEF101740 Reclassification of internal App-Services/Tz classes
+//!@SYMScriptInfo	    For conversion tests, if asymmetric conversion is expected due to the "missing hour" or "double conversion",
+//!			    error code -47 is used.  Note that when -47 is returned, all other tests within the particular test step should 
+//!                         be completed with no error, except asymmetric time conversion is found.  If other tests within the test step
+//!                         fail, then the appropriate error code should be used instead.
+///////////////
+START_TESTCASE PIM-APPSRV-TZ-TZRULES-0001
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR01A_NoRules_NoInitStdOffset
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR01B_NoRules_WithInitStdOffset
+RUN_TEST_STEP !PanicCode=4 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR02A_AccessNonExistRule
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR02B_AccessExistRule
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR03_DefaultRule
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR04_OutOfRangeRule
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05A_Vancouver2006_BeforeDST
+RUN_TEST_STEP_RESULT -47 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05B1_Vancouver2006_AtDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05B2_Vancouver2006_AtDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05B3_Vancouver2006_AtDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05B4_Vancouver2006_AtDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05C_Vancouver2006_DuringDST
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05D1_Vancouver2006_AtDSTEnd
+RUN_TEST_STEP_RESULT -47 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05D2_Vancouver2006_AtDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05D3_Vancouver2006_AtDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05D4_Vancouver2006_AtDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR05E_Vancouver2006_AfterDST
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR06_Vancouver2006_ConflictingRules
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07A_Vancouver2007_BeforeDST
+RUN_TEST_STEP_RESULT -47 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07B1_Vancouver2007_AtDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07B2_Vancouver2007_AtDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07B3_Vancouver2007_AtDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07B4_Vancouver2007_AtDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07C_Vancouver2007_DuringDST
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07D1_Vancouver2007_AtDSTEnd
+RUN_TEST_STEP_RESULT -47 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07D2_Vancouver2007_AtDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07D3_Vancouver2007_AtDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07D4_Vancouver2007_AtDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR07E_Vancouver2007_AfterDST
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08A1_Tasmania2007_BeforeDST
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08A2_Tasmania2007_BeforeDST
+RUN_TEST_STEP_RESULT -47 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08A3_Tasmania2007_MissingHour
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08B1_Tasmania2007_AtDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08B2_Tasmania2007_AtDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08C1_Tasmania2007_DuringDST
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08C2_Tasmania2007_DuringDST
+RUN_TEST_STEP !Result=Fail 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08D1_Tasmania2007_AtDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08D2_Tasmania2007_AtDoubleLocal
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08D3_Tasmania2007_AtDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08D4_Tasmania2007_AtDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR08E1_Tasmania2007_PostDST
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR09A1_Vancouver2003_DuringDST
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR09A2_Vancouver2003_BeforeDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR09B1_Vancouver2003_RightBeforeDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR09B2_Vancouver2003_AfterDSTEnd
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR09C1_Vancouver2004_BeforeDSTStart
+RUN_TEST_STEP 100 DstUnitTestServer TzRules \dstscripts\tzrules.ini TR09C2_Vancouver2004_AfterDSTStart
+END_TESTCASE PIM-APPSRV-TZ-TZRULES-0001
+
+

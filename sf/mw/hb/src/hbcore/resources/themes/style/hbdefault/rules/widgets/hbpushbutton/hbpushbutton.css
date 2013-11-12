@@ -1,0 +1,230 @@
+ HbPushButton{
+    layout:icon_button;
+    min-width:expr(var(hb-param-margin-gene-left)+var(hb-param-margin-gene-right)+var(hb-param-graphic-size-function));
+}
+
+/*
+	Default height of button as per the pdf if none of the primitives are there.
+*/
+HbPushButton[!icon][!text][!additionalText]{
+    min-height:expr(var(hb-param-margin-gene-top)+var(hb-param-margin-gene-bottom)+var(hb-param-text-height-secondary));
+}
+
+/*
+	specifying the min-height for icon only layout as icon has pref-height. 
+	specifying the min-width for icon only layout as icon has pref-width. 
+*/
+HbPushButton[icon][!text][!additionalText]{
+    layout:icon_button;
+    /* we are specifying pref -height for icon ,so need to see what could be min height so that it will suits for all usecases*/
+    min-height:expr(var(hb-param-margin-gene-top)+var(hb-param-margin-gene-bottom)+var(hb-param-text-height-secondary));
+}
+
+HbPushButton[text][!icon][!additionalText]{
+    layout:text_button;
+    min-height:expr(var(hb-param-margin-gene-top)+var(hb-param-margin-gene-bottom)+var(hb-param-text-height-secondary));
+}
+/*
+	specifying the min-height for icon + text vertical layout as icon has pref-height. 
+*/
+
+HbPushButton[!stretched][icon][text][!additionalText]{
+    layout:icon_text_Vertical;
+     /* we are using pref height for icon, so not included in calculation*/
+    min-height:expr(var(hb-param-margin-gene-center-align)+var(hb-param-margin-gene-center-align)+var(hb-param-margin-gene-middle-vertical)+var(hb-param-text-height-tiny));
+}
+
+HbPushButton[stretched][icon][text][!additionalText]{
+    layout:icon_text_Horizontal;
+    min-height:expr(var(hb-param-margin-gene-top)+var(hb-param-margin-gene-bottom)+ var(hb-param-graphic-size-function));
+}
+
+HbPushButton[!stretched][icon][text][additionalText]{
+    layout:icon_text_additionalText_vertical;
+    min-height:expr(var(hb-param-margin-gene-top)+var(hb-param-margin-gene-bottom)+ var(hb-param-graphic-size-primary-large));  
+}
+
+HbPushButton[stretched][icon][text][additionalText]{
+    layout:icon_text_additionalText_horizontal;
+    min-height:expr(var(hb-param-margin-gene-top)+var(hb-param-margin-gene-bottom)+ var(hb-param-graphic-size-function));
+}
+
+HbPushButton[!stretched][additionalText][text][!icon]{
+    layout:text_additionalText_vertical;
+    min-height:expr(var(hb-param-margin-gene-center-align)+var(hb-param-margin-gene-center-align)+var(hb-param-margin-gene-middle-vertical)+var(hb-param-text-height-title)+var(hb-param-text-height-tiny));
+}
+
+/*
+	icon common attributes
+*/
+HbPushButton::icon{
+    pref-width: var(hb-param-graphic-size-function);
+    pref-height: var(hb-param-graphic-size-function);
+}
+
+/*
+	text common attributes
+*/
+HbPushButton::text
+{
+    font-variant:primary;
+    text-height: var(hb-param-text-height-tiny);
+    text-align:center;
+}
+
+HbPushButton[icon][!text][!additionalText]::icon{
+    top: -var(hb-param-margin-gene-center-align) ;
+    bottom: var(hb-param-margin-gene-center-align) ; 
+}
+
+HbPushButton[text][!icon][!additionalText]::text
+{
+    top: -var(hb-param-margin-gene-center-align) ;
+    bottom: var(hb-param-margin-gene-center-align) ;
+    left: -var(hb-param-margin-gene-left);
+    right: var(hb-param-margin-gene-right);
+    text-line-count-max:2;
+}
+
+/* icon_text_Horizontal */
+HbPushButton[stretched][icon][text][!additionalText]::text{
+    right: var(hb-param-margin-gene-right);
+    text-align:left;
+    text-line-count-max:2;    
+}
+
+HbPushButton[stretched][icon][text][!additionalText]::icon{
+    top: -var(hb-param-margin-gene-top);
+    left: -var(hb-param-margin-gene-left);
+    bottom: var(hb-param-margin-gene-bottom);
+    right: var(hb-param-margin-gene-middle-horizontal);
+    fixed-width: var(hb-param-graphic-size-function);
+    fixed-height: var(hb-param-graphic-size-function);
+    size-policy: fixed fixed;
+}
+
+/* icon text vertical */
+HbPushButton[!stretched][icon][text][!additionalText]::text{
+    top:-var(hb-param-margin-gene-middle-vertical);
+    bottom: var(hb-param-margin-gene-center-align) ;
+    left:-var(hb-param-margin-gene-left);
+    right:var(hb-param-margin-gene-right);
+    text-line-count-max:1;
+}
+
+HbPushButton[!stretched][icon][text][!additionalText]::icon
+{
+    top: -var(hb-param-margin-gene-center-align) ;
+    /*fixed-width: var(hb-param-graphic-size-function);
+    fixed-height: var(hb-param-graphic-size-function);*/
+}
+
+/* text_additionalText_vertical */
+HbPushButton[!stretched][additionalText][text][!icon]::text
+{   
+    top: -var(hb-param-margin-gene-center-align) ;
+    left: -var(hb-param-margin-gene-left);
+    right: var(hb-param-margin-gene-right);
+    text-height: var(hb-param-text-height-title);
+    text-line-count-max:1;  
+}
+
+HbPushButton[!stretched][additionalText][text][!icon]::additional-text
+{
+    top: -var(hb-param-margin-gene-middle-vertical);
+    bottom: var(hb-param-margin-gene-center-align) ;
+    left: -var(hb-param-margin-gene-left);
+    right: var(hb-param-margin-gene-right);
+    text-height: var(hb-param-text-height-tiny);
+    font-variant: secondary;
+    text-align:center;
+    text-line-count-max:1;    
+}
+
+
+/* prt n lsc :icon_text_additionalText_horizontal & icon_text_additionalText_vertical */ 
+
+/* vertical alignment info for icon _text_additionaltext*/
+HbPushButton[!stretched][icon][text][additionalText]::icon
+{
+    top: -var(hb-param-margin-gene-top);    
+    left:-var(hb-param-margin-gene-left);
+    right:var(hb-param-margin-gene-middle-horizontal);
+    fixed-width: var(hb-param-graphic-size-primary-large); /*in pdf mentioned size is : hb-param-graphic-size-large*/
+    fixed-height:var(hb-param-graphic-size-primary-large);
+    size-policy : fixed fixed;
+}
+
+HbPushButton[!stretched][icon][text][additionalText]::text
+{
+    top: -var(hb-param-margin-gene-top);    
+    right:var(hb-param-margin-gene-right);
+    text-height:var(hb-param-text-height-primary);
+    /* set width pref */
+    /*pref-width: 0.0un;
+    size-policy-vertical:fixed;*/
+    text-align:left;
+    text-line-count-max:1;
+}
+
+HbPushButton[!stretched][icon][text][additionalText]::additional-text
+{
+    top: -var(hb-param-margin-gene-middle-vertical);
+    left: -var(hb-param-margin-gene-middle-horizontal);
+    bottom: var(hb-param-margin-gene-bottom);
+    right:var(hb-param-margin-gene-right);
+    font-variant:secondary;
+    text-height:var(hb-param-text-height-secondary);
+    /* set width pref */
+    /*pref-width: 0.0un;
+    size-policy-vertical:fixed;*/
+    text-align:left;
+    text-line-count-max:1;
+}
+
+/* horizontal alignment info for icon _text_additionaltext */
+HbPushButton[stretched][icon][text][additionalText]::icon
+{
+    top:-var(hb-param-margin-gene-top);
+    left:-var(hb-param-margin-gene-left);    
+    bottom:var(hb-param-margin-gene-bottom);
+    fixed-width: var(hb-param-graphic-size-function);
+    fixed-height:var(hb-param-graphic-size-function);
+    size-policy: fixed fixed;
+}
+
+HbPushButton[stretched][icon][text][additionalText]::text
+{
+    left:-var(hb-param-margin-gene-middle-horizontal);
+    text-height:var(hb-param-text-height-primary);
+    /* set width pref */
+    pref-width: 10.0un;
+    size-policy-vertical:fixed;
+    text-align:left;
+    text-line-count-max:1;
+}
+
+HbPushButton[stretched][icon][text][additionalText]::additional-text
+{
+    left:-var(hb-param-margin-gene-middle-horizontal);
+    right:var(hb-param-margin-gene-right);
+    font-variant:secondary;
+    text-height:var(hb-param-text-height-secondary);
+    pref-width: 10.0un;
+    size-policy-vertical:fixed;
+    text-align:left;
+    text-line-count-max:1;    
+}
+
+/* backgroud param */
+HbPushButton::background
+{
+    border-width: var(hb-param-background-button);
+}
+HbPushButton::spacerTop{ 
+  size-policy-vertical: expanding; 
+} 
+HbPushButton::spacerBottom{ 
+  size-policy-vertical: expanding; 
+} 
+

@@ -1,0 +1,36 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Then the test calls (asynchronous) CAmaStart::Start() with the appropriate DSC ID.
+// The test calls User::WaitForRequest() to wait for the Start() call to complete.
+// 
+//
+
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-AMASTARTER-0013
+//! @SYMTestCaseDesc		Attempt to start non-existent DSC with Start()
+//! @SYMPREQ 			PREQ1871
+//! @SYMREQ			REQ9141
+//! @SYMTestType		UT
+//! @SYMTestPriority		Critical
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions		The test uses the ID for a DSC that does not exist.
+//! @SYMTestExpectedResults 	The TRequestStatus object used for the Start() call has a value of KErrArgument
+
+PRINT Run AmaStarterStartL tests
+
+LOAD_SUITE tamastarter_server
+
+START_TESTCASE API-APPFWK-AMASTARTER-0013
+RUN_TEST_STEP 100 tamastarter_server AmaStarterStartLAsync
+END_TESTCASE API-APPFWK-AMASTARTER-0013

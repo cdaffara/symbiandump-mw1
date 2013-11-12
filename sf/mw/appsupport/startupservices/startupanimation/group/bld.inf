@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project Startup Animation
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../sanimengine/inc/sanimobserver.h  |../../../inc/sanimobserver.h
+../sanimengine/inc/sanimengine.h    |../../../inc/sanimengine.h
+../sanimctrl/inc/sanimctrl.h        |../../../inc/sanimctrl.h
+../sanimctrl/inc/sanimstartupctrl.h |../../../inc/sanimstartupctrl.h
+
+../rom/startupanimation.iby         CORE_MW_LAYER_IBY_EXPORT_PATH(startupanimation.iby)
+
+PRJ_MMPFILES
+#ifdef RD_STARTUP_ANIMATION_CUSTOMIZATION
+../sanimengine/group/sanimengine
+../sanimctrl/group/sanimctrl
+../sanimihlplugin/group/sanimihlplugin
+../sanimmmfplugin/group/sanimmmfplugin
+../sanimsvgplugin/group/sanimsvgplugin
+#endif // RD_STARTUP_ANIMATION_CUSTOMIZATION

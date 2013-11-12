@@ -1,0 +1,34 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Image description file for project Startup Application
+*
+*/
+
+
+#ifndef __STARTUP_IBY__
+#define __STARTUP_IBY__
+
+S60_APP_EXE(startup)
+S60_APP_AIF_RSC(StartUp)
+
+#ifdef __COVER_DISPLAY
+ECOM_PLUGIN(StartupMediatorPlugin.dll,102750AF.rsc)
+#endif //__COVER_DISPLAY
+
+file=ABI_DIR\BUILD_DIR\syserrcmd.dll SHARED_LIB_DIR\syserrcmd.dll
+
+data=DATAZ_\private\100058F4\backup_registration.xml    private\100058F4\backup_registration.xml
+
+#endif
+

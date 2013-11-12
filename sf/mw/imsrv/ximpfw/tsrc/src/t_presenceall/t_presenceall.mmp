@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: XIMP Framework Test Code 
+*
+*/
+
+#include            "../../tsrcutils/eunitcommon/eunittstdllbase.hrh"
+#include            "../../tsrcutils/processmaster/pm.h"
+
+TARGET              t_presenceall.dll
+
+SOURCEPATH          .
+SOURCE              t_presenceall.cpp
+
+
+USERINCLUDE             ../../../core/srcdatamodel
+USERINCLUDE             ../../../presence/srcpresencedatamodel
+USERINCLUDE             ../../../presence/srcpresencedatamodel/presentitygroups
+USERINCLUDE             ../../../presence/srcpresencedatamodel/presencewatching
+USERINCLUDE             ../../../presence/srcpresencedatamodel/presenceauthorization
+USERINCLUDE             ../../../presence/srcpresencedatamodel/presencepublishing
+USERINCLUDE             ../../../presence/srcpresencedatamodel/presenceinfo
+USERINCLUDE             ../../../core/srcutils
+
+LIBRARY             ecom.lib
+LIBRARY             bafl.lib
+LIBRARY             ximpdatamodel.lib
+LIBRARY             presencedatamodel.lib
+LIBRARY             estor.lib
+LIBRARY             ximputils.lib
+
+
+// end of file
+
+

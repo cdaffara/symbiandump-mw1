@@ -1,0 +1,140 @@
+/* linked-in known module `zsh/main' */
+  if (emulation == EMULATE_ZSH) {
+  }
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/rlimits' */
+  if (emulation == EMULATE_ZSH) {
+    add_autobin("limit", "zsh/rlimits");
+    add_autobin("ulimit", "zsh/rlimits");
+    add_autobin("unlimit", "zsh/rlimits");
+  }
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/sched' */
+  if (emulation == EMULATE_ZSH) {
+    add_autobin("sched", "zsh/sched");
+  }
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/parameter' */
+  if (emulation == EMULATE_ZSH) {
+    add_autoparam("parameters", "zsh/parameter");
+    add_autoparam("commands", "zsh/parameter");
+    add_autoparam("functions", "zsh/parameter");
+    add_autoparam("dis_functions", "zsh/parameter");
+    add_autoparam("funcstack", "zsh/parameter");
+    add_autoparam("builtins", "zsh/parameter");
+    add_autoparam("dis_builtins", "zsh/parameter");
+    add_autoparam("reswords", "zsh/parameter");
+    add_autoparam("dis_reswords", "zsh/parameter");
+    add_autoparam("options", "zsh/parameter");
+    add_autoparam("modules", "zsh/parameter");
+    add_autoparam("dirstack", "zsh/parameter");
+    add_autoparam("history", "zsh/parameter");
+    add_autoparam("historywords", "zsh/parameter");
+    add_autoparam("jobtexts", "zsh/parameter");
+    add_autoparam("jobdirs", "zsh/parameter");
+    add_autoparam("jobstates", "zsh/parameter");
+    add_autoparam("nameddirs", "zsh/parameter");
+    add_autoparam("userdirs", "zsh/parameter");
+    add_autoparam("aliases", "zsh/parameter");
+    add_autoparam("dis_aliases", "zsh/parameter");
+    add_autoparam("galiases", "zsh/parameter");
+    add_autoparam("dis_galiases", "zsh/parameter");
+  }
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/termcap' */
+  if (emulation == EMULATE_ZSH) {
+    add_autobin("echotc", "zsh/termcap");
+    add_autoparam("termcap", "zsh/termcap");
+  }
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/terminfo' */
+  if (emulation == EMULATE_ZSH) {
+    add_autobin("echoti", "zsh/terminfo");
+    add_autoparam("terminfo", "zsh/terminfo");
+  }
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/zutil' */
+  if (emulation == EMULATE_ZSH) {
+    add_autobin("zformat", "zsh/zutil");
+    add_autobin("zstyle", "zsh/zutil");
+    add_autobin("zregexparse", "zsh/zutil");
+    add_autobin("zparseopts", "zsh/zutil");
+  }
+  add_dep("zsh/zutil", "zsh/complete");
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/compctl' */
+  if (emulation == EMULATE_ZSH) {
+    add_autobin("compctl", "zsh/compctl");
+    add_autobin("compcall", "zsh/compctl");
+  }
+  add_dep("zsh/compctl", "zsh/complete");
+  add_dep("zsh/compctl", "zsh/zle");
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/complete' */
+  if (emulation == EMULATE_ZSH) {
+    add_autobin("compadd", "zsh/complete");
+    add_autobin("compset", "zsh/complete");
+    add_autocond("prefix", 0, "zsh/complete");
+    add_autocond("suffix", 0, "zsh/complete");
+    add_autocond("between", 0, "zsh/complete");
+    add_autocond("after", 0, "zsh/complete");
+  }
+  add_dep("zsh/complete", "zsh/zle");
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/complist' */
+  if (emulation == EMULATE_ZSH) {
+  }
+  add_dep("zsh/complist", "zsh/complete");
+  add_dep("zsh/complist", "zsh/zle");
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/computil' */
+  if (emulation == EMULATE_ZSH) {
+    add_autobin("compdescribe", "zsh/computil");
+    add_autobin("comparguments", "zsh/computil");
+    add_autobin("compvalues", "zsh/computil");
+    add_autobin("compquote", "zsh/computil");
+    add_autobin("comptags", "zsh/computil");
+    add_autobin("comptry", "zsh/computil");
+    add_autobin("compfiles", "zsh/computil");
+    add_autobin("compgroups", "zsh/computil");
+  }
+  add_dep("zsh/computil", "zsh/complete");
+  add_dep("zsh/computil", "zsh/zle");
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/zle' */
+  if (emulation == EMULATE_ZSH) {
+    add_autobin("bindkey", "zsh/zle");
+    add_autobin("vared", "zsh/zle");
+    add_autobin("zle", "zsh/zle");
+  }
+#endif
+#ifdef DYNAMIC
+/* non-linked-in known module `zsh/zleparameter' */
+  if (emulation == EMULATE_ZSH) {
+    add_autoparam("widgets", "zsh/zleparameter");
+    add_autoparam("keymaps", "zsh/zleparameter");
+  }
+  add_dep("zsh/zleparameter", "zsh/zle");
+#endif
+
+/* linked-in module `zsh/main' */
+    {
+        extern int setup_zshQsmain _((Module));
+        extern int boot_zshQsmain _((Module));
+        extern int cleanup_zshQsmain _((Module));
+        extern int finish_zshQsmain _((Module));
+
+        register_module("zsh/main",
+                        setup_zshQsmain, boot_zshQsmain,
+                        cleanup_zshQsmain, finish_zshQsmain);
+    }

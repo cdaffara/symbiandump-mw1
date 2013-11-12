@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="22bcb6bea40a8e683c1963e396fcc070" dataversion="1.0">
+<name>ximp_search_protocol_plugin_api</name>
+<description>This is an API that provides search interfaces to the adaptation plugin which needs to be implemented by the adaptation.</description>
+<type>c++</type>
+<subsystem>ximp_search_protocol_plugin_api</subsystem>
+<libs></libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

@@ -1,0 +1,47 @@
+// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// rt2htmcv.dll On-board converter from Symbian OS RTF to HTML
+// 
+//
+
+OPTION CW   -w off
+target          rt2htmcv.dll
+targettype      PLUGIN
+CAPABILITY   All -TCB
+UID		0x10009D8D 0x10003A68
+VENDORID 0x70000001
+
+NOEXPORTLIBRARY  /* Ensures that DEF file can be safely shared 
+                    for RVCT builds                            */
+
+SOURCEPATH	../Src
+
+userinclude	../inc
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+source 		RT2HTMCV.CPP
+
+library euser.lib estor.lib etext.lib efsrv.lib gdi.lib charconv.lib conarc.lib bafl.lib
+
+START RESOURCE 10003A68.rss
+TARGET rt2htmcv.rsc
+END
+
+START RESOURCE  	1000071c.rss
+HEADER
+TARGETPATH      	resource/convert
+LANG            	SC
+END
+
+SMPSAFE

@@ -1,0 +1,15 @@
+/* Generated automatically */
+#ifndef have_Src_Modules_terminfo_globals
+#define have_Src_Modules_terminfo_globals
+
+#ifdef USE_TERMINFO_MODULE
+#else /* !USE_TERMINFO_MODULE */
+#endif /* !USE_TERMINFO_MODULE */
+#ifdef USE_TERMINFO_MODULE
+#endif /* USE_TERMINFO_MODULE */
+extern int setup_ _((UNUSED(Module m)));
+extern int boot_ _((Module m));
+extern int cleanup_ _((Module m));
+extern int finish_ _((UNUSED(Module m)));
+
+#endif /* !have_Src_Modules_terminfo_globals */

@@ -1,0 +1,45 @@
+RichTextToHtmlConv 
+-------------------
+Made by Waiman Tang 16/03/09
+Issue Id: PDEF134629 	
+Title: ONB : Fix for some leavescan errors in defect_misc build
+
+-------------------
+Made by Xavier Leclercq 13/06/08
+Issue Id: PDEF123372
+Title: Receive an HTML formatted email message with bullet points from mobil... 
+
+-------------------
+Made by Konstantin Zheludev 29/09/06
+Issue Id: DEF093327
+Title: Tag Scan Error Report for Pim component
+
+-------------------
+Made by Steve Childerley 11/11/04
+Issue Id: DEF051448
+Title: rt2htmcv.cnv should be rt2htmcv.dll in @SYMPurpose statement
+
+-------------------
+Made by Andrew Smith 01/07/04
+Issue Id: DEF046389
+Title: app-services_richtexttohtmlconv.mrp contains spurious "binary" line
+
+-------------------------------------
+Jitender Kumar 10/03/04
+Issue Id:  DEF043515  
+Title:  Email, S90_REL_1.1_HK_W02: Wrong format of receipting e-mail from proto when bullet marks with alignments
+
+-------------------------------------
+Made by Graeme Riddick 29/09/03
+Issue Id:  DEF037964  
+Title:  ABLD ROMFILE ARM4 command fails for cedar  
+Generic add of ROMFILE to each project makefile
+
+
+-------------------------------------
+
+Made by Bob Rosenberg 20 June 2003
+
+* Created new directory to contain Rich text to HTML converter plug-in as a 
+	fix for defect DEF035740 - rt2htmcv files missing in cedar build
+

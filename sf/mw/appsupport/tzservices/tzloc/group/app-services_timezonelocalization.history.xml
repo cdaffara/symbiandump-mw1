@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="Timezone">
+  <purpose>
+    It allows application clients to configure the time-zone on the Phone and convert time between UTC and Wall-clock for any zone supported in its time-zone database. It is developed in response to PREQ 663 – Daylight Saving Time.
+  </purpose>
+
+  <minorchange revision="001">
+    Fix for PDEF102995-[ONB Regressions] TzLocalizationTest -- false pass result
+    Added routine to check if the bad DB file to be tested has already existed in the disk.
+  </minorchange>
+</relnotes>

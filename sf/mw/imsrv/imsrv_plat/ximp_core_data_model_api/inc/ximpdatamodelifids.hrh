@@ -1,0 +1,60 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  XIMP Framework Data Model API interface IDs.
+*
+*/
+
+#ifndef XIMPDATAMODELIFIDS_HRH
+#define XIMPDATAMODELIFIDS_HRH
+
+
+/**
+ * @defgroup ximpdatamodelapi XIMP Core Data Model API
+ * @ingroup ximpcoreapi
+ *
+ * XIMP Core Data Model API contains generic object 
+ * containers, status objects and identity objects. 
+ * API provides also abstract object factory interface
+ * to instantiate other objects.
+ *
+ * Object types declared in XIMP Core Data Model API
+ * are used both in XIMP Framework - client communication
+ * and in XIMP Framework - protocol adaptation cummunication.
+ *
+ * @since S60 v3.2
+ */
+
+// Datamodel IF id's
+// 10xx - ximp related
+// 11xx - presence related
+// 12xx - instant messaging related
+
+// Interface IDs for XIMP Data Model API interfaces
+#define XIMP_IF_ID_OBJECT_FACTORY                      1001
+#define XIMP_IF_ID_RESTRICTED_OBJECT_COLLECTION        1002
+#define XIMP_IF_ID_OBJECT_COLLECTION                   1003
+#define XIMP_IF_ID_PROTOCOL_INFO                       1004
+#define XIMP_IF_ID_SERVICE_INFO                        1005
+#define XIMP_IF_ID_FEATURE_INFO                        1006
+#define XIMP_IF_ID_CONTEXT_CLIENT_INFO                 1007
+#define XIMP_IF_ID_STATUS                              1008
+#define XIMP_IF_ID_CONTEXT_STATE                       1009
+#define XIMP_IF_ID_DATA_SUBSCRIPTION_STATE             1010
+#define XIMP_IF_ID_IDENTITY                            1011
+
+
+#endif // XIMPDATAMODELIFIDS_HRH
+
+
+

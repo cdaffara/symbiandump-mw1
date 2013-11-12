@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*           This is a localisation file for Startup application.
+*           This file is the one and only place where the logical strings
+*           are localised are defined. 
+*
+*/
+
+
+//  LOCALISATION STRINGS
+
+// d:When booting the device selftest is perform and if that test fails
+// d:this text is shown to the user. 
+// l:popup_note_window
+#define qtn_su_note_selftest_failed "Selftest failed. Contact service."
+
+// d:When the time is not configured in the phone it is asked
+// d:from the user. This time query is shown in the first boot and also
+// d:in the boot when time value is somehow corrupted or invalid.
+// l:popup_query_data_window
+#define qtn_su_enter_time   "Enter time:"
+
+// d:When the date is not configured in the phone it is asked
+// d:from the user. This date query is shown in the first boot and also
+// d:in the boot when date value is somehow corrupted or invalid.
+// l:popup_query_data_window
+#define qtn_su_enter_date   "Enter date:"
+
+// d: Text "Select home country" qtn_su_select_country in a pop up menu
+// d: header from where user can select home country when starting phone first time.
+// l: heading_pane_t1
+//
+#define qtn_su_select_country  "Select home country"
+
+// d: Text "Select home city" qtn_su_select_city in a pop up menu
+// d: header from where user can select home city when starting phone first time.
+// l: heading_pane_t1
+//
+#define qtn_su_select_city  "Select home city"
+
+// End of File

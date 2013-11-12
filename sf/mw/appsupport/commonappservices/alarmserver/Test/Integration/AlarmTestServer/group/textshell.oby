@@ -1,0 +1,199 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// This OBY File is used to build a TextShell ROM Image for the T_PREQ1118_TestSuite TEF Server.
+// 
+//
+
+
+#ifndef __TEXTSHELL_OBY__
+#define __TEXTSHELL_OBY__
+
+
+
+define OBEYFILE CDMAtest
+#if defined(ESHELL_ONLY)
+	// ALSO remove SCDV.dll, <gdbstub.iby> and <metrotrk.iby> from base.iby
+	define OBEYFILE CDMAtestEshell
+
+#else
+	#if defined(TEXT_ONLY_ROM)
+
+		#if defined(_DEBUG)
+		define OBEYFILE CDMAtestTextDebug
+		#else
+		define OBEYFILE CDMAtestText
+		#endif // _DEBUG
+				
+	#endif // TEXT_ONLY_ROM
+
+#endif // ESHELL_ONLY
+#endif
+define ROMDATE	##TODAY##
+
+#define __TCPIP_IBY__ // HACK to avoid including the old IP4 TCPIP.IBY via PLP.IBY
+#define NO_METROTRK_APP // don't want metrotrk application
+#define __INCLUDE_SW_KEYSTORE__ // Put sw implementation of keystore into v8.0a ROM
+
+//ESHELL Only Support
+#if defined(TEXT_ONLY_ROM)
+	#define EXCLUDE_JAVA
+
+	#include <header.iby>				/* ROM header definitions */
+	#include <base.iby>				/* The lowest-level of the operating system */
+
+
+	file=ABI_DIR\DEBUG_DIR\RUNTESTS.EXE			System\Programs\RUNTESTS.EXE
+
+	REM Networking Test Text ROM Specific Files
+
+	kerneltrace 0x80000000
+
+	#if defined(EKA2)
+		file=ABI_DIR\DEBUG_DIR\EDISP.DLL				System\Libs\EDISP.DLL
+	#else
+		#if defined(BRUTUS_UARTS)		// only way to check if assabet
+			debugport 1
+			file[VARID]=ASSP_DIR\DEBUG_DIR\cikdab.DLL	System\Libs\ekdata.dll
+			file[VARID]=ASSP_DIR\DEBUG_DIR\difiab.pdd	System\Libs\difir.pdd
+			file[VARID]=ASSP_DIR\DEBUG_DIR\EFIR.LDD		System\Libs\EFIR.LDD
+		#elif defined(LUBBOCK_UARTS)	// only way to check if lubbock
+			file[VARID]=ASSP_DIR\DEBUG_DIR\cikdla.DLL	System\Libs\ekdata.dll
+		#endif
+
+		file=ASSP_DIR\DEBUG_DIR\EDISP.DLL				System\Libs\EDISP.DLL
+		file=ABI_DIR\DEBUG_DIR\ELOCL.DLL				System\Libs\ELOCL.DLL	
+	#endif //EKA2
+
+	file=ABI_DIR\DEBUG_DIR\ECONS.DLL					System\Libs\ECONS.DLL	
+
+	file=ABI_DIR\DEBUG_DIR\EWSRV.EXE					System\Libs\EWSRV.EXE	fixed
+
+	#ifndef __SECURE_DATA__
+	file=ABI_DIR\DEBUG_DIR\ESHELL.EXE					System\Libs\ESHELL.EXE heapmin=0x8000
+	#endif //__SECURE_DATA__
+
+	// Full Text Support
+	#if !defined(ESHELL_ONLY)
+
+		#include "form.iby"
+
+		file=ABI_DIR\BUILD_DIR\ws32.dll					System\Libs\Ws32.dll
+
+		file=ABI_DIR\BUILD_DIR\VIEWCLI.DLL				System\Libs\VIEWCLI.DLL
+		file=ABI_DIR\BUILD_DIR\VIEWSRV.DLL				System\Libs\VIEWSRV.DLL
+		file=ABI_DIR\BUILD_DIR\UIKLAF.DLL				System\Libs\UIKLAF.DLL
+		file=ABI_DIR\BUILD_DIR\EXPARSER.DLL				System\Libs\EXPARSER.DLL
+		file=ABI_DIR\BUILD_DIR\Eikcore.DLL				System\Libs\Eikcore.dll
+		file=ABI_DIR\BUILD_DIR\EIKSRVC.DLL				System\Libs\EIKSRVC.DLL
+		#ifndef __MESSAGING_API_V2__
+		file=ABI_DIR\BUILD_DIR\Sysamob.exe				System\Libs\Sysamob.exe
+		#endif  // __MESSAGING_API_V2__
+
+		/* extras */
+		#include "mmfsounddev.iby"
+		#include "ezlib.iby"
+
+		#ifdef __SECURE_BACKUP__
+			file=ABI_DIR\BUILD_DIR\abclient.dll			System\libs\abclient.dll
+		#endif //__SECURE_BACKUP__
+		file=ABI_DIR\BUILD_DIR\eikcoctl.dll			System\libs\eikcoctl.dll
+
+		#include <centralrepository.iby>
+		#include <http.iby>
+
+		#ifdef SYMBIAN_CRYPTO
+			#include <crypto.iby>
+		#else
+			#include <cryptalg.iby>
+		#endif
+
+		#include <c32.iby>			/* standard Sockets components */
+		#include <irda.iby>			/* standard Sockets components */
+		#include <bluetooth.iby>	/* standard Sockets components */
+		#include <gdi.iby>			/* standard Graphics components */
+		#include <fntstore.iby>		/* standard Graphics components */
+		#include <fbserv.iby>		/* standard Graphics components */
+		#include <bitgdi.iby>		/* standard Graphics components */
+
+		#include <apparc.iby>		/* Application architecture DLLs */
+		#include <emime.iby>		/* Mime recognition */
+
+		#include <fepbase.iby>		/* Front end processor base classes */
+
+		#include <mmf.iby> 			/* Multimedia Framework */
+
+		#include <sysagent.iby>		/* System Agent client and server */
+
+		#include <network.iby>		/* Networking Components */
+		
+		#include <wapmessage.iby>       	/* Wap Stack Components  */
+
+		// ============== Telephony Core Components =============
+		#include <etel.iby>
+		#include <smsstack.iby>
+		#include <etelmm.iby>
+		#include <etelpckt.iby>
+		#include <mmtsy.iby>
+		#include <phbksync.iby>
+		#include <etelsat.iby>
+		#include <sysawatcher.iby>
+
+		#include <ecom.iby>
+
+		/* Store */
+		#include "Store.iby"
+
+		/* Etext */
+		#include "EText.iby"
+
+		/* Clock */
+		file=ABI_DIR\BUILD_DIR\clock.dll				System\Libs\Clock.dll
+
+		/* Print */
+		file=ABI_DIR\BUILD_DIR\print.dll				System\Libs\Print.dll
+
+		/* Pwrcli */
+		#include "PwrCli.iby"
+
+		/* Bafl */
+		#include "Bafl.iby"
+
+		/* Cone */
+		#include "cone.iby"
+
+		/* NumberConversion */
+		#include "NumberConversion.iby"
+
+		/* EGUL */
+		file=ABI_DIR\DEBUG_DIR\egul.dll					System\Libs\Egul.dll
+
+		/* Dial */
+		file=ABI_DIR\BUILD_DIR\dial.dll					System\Libs\Dial.dll
+
+
+	#endif // !ESHELL_ONLY
+#endif // TEXT_ONLY_ROM
+
+#include <AlarmServer.iby>
+#include <tef_citalarmplaytests.iby>
+#if defined(TEXT_ONLY_ROM) 
+	file=ABI_DIR\BUILD_DIR\alarmshared.dll 		System\Libs\alarmshared.dll
+	file=ABI_DIR\BUILD_DIR\alarmclient.dll 		System\Libs\alarmclient.dll
+	file=ABI_DIR\BUILD_DIR\alarmserver.exe 		System\Programs\alarmserver.exe
+#endif
+
+#include <TimeZoneServer.iby>
+
+
+

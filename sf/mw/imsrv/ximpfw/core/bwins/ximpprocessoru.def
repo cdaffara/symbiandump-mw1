@@ -1,0 +1,97 @@
+EXPORTS
+	??0CXIMPOperationBase@@QAE@XZ @ 1 NONAME ; CXIMPOperationBase::CXIMPOperationBase(void)
+	??1CXIMPOperationBase@@UAE@XZ @ 2 NONAME ; CXIMPOperationBase::~CXIMPOperationBase(void)
+	?ActivateEventL@CXIMPEventManager@@QAEXAAVCXIMPApiEventBase@@PAVCXIMPPscContext@@@Z @ 3 NONAME ; void CXIMPEventManager::ActivateEventL(class CXIMPApiEventBase &, class CXIMPPscContext *)
+	?ActivateRequestCompleteEvent@CXIMPEventManager@@QAEXAAVCXIMPRequestCompleteEventImp@@PAVCXIMPPscContext@@@Z @ 4 NONAME ; void CXIMPEventManager::ActivateRequestCompleteEvent(class CXIMPRequestCompleteEventImp &, class CXIMPPscContext *)
+	?AddEventL@CXIMPEventManager@@QAEXAAVCXIMPApiEventBase@@AAV?$RPointerArray@VCXIMPPscContext@@@@@Z @ 5 NONAME ; void CXIMPEventManager::AddEventL(class CXIMPApiEventBase &, class RPointerArray<class CXIMPPscContext> &)
+	?AddEventL@CXIMPEventManager@@QAEXAAVCXIMPApiEventBase@@PAVCXIMPPscContext@@@Z @ 6 NONAME ; void CXIMPEventManager::AddEventL(class CXIMPApiEventBase &, class CXIMPPscContext *)
+	?AddNewOperationL@CXIMPPscContext@@QAE?AVTXIMPRequestId@@HABVTDesC8@@@Z @ 7 NONAME ; class TXIMPRequestId CXIMPPscContext::AddNewOperationL(int, class TDesC8 const &)
+	?AppendToOpQueueL@CXIMPPscContext@@QAEXPAVCXIMPOperationBase@@@Z @ 8 NONAME ; void CXIMPPscContext::AppendToOpQueueL(class CXIMPOperationBase *)
+	?AppendToOpQueueUpdateReqIdL@CXIMPPscContext@@QAE?AVTXIMPRequestId@@PAVCXIMPOperationBase@@@Z @ 9 NONAME ; class TXIMPRequestId CXIMPPscContext::AppendToOpQueueUpdateReqIdL(class CXIMPOperationBase *)
+	?AuthorizationDataAccess@CProtocolPresenceDataHostImp@@QAEAAVCProtocolPresenceAuthorizationDataHostImp@@XZ @ 10 NONAME ; class CProtocolPresenceAuthorizationDataHostImp & CProtocolPresenceDataHostImp::AuthorizationDataAccess(void)
+	?BaseConstructL@CXIMPOperationBase@@QAEXVTXIMPRequestId@@PAVCXIMPPscContext@@@Z @ 11 NONAME ; void CXIMPOperationBase::BaseConstructL(class TXIMPRequestId, class CXIMPPscContext *)
+	?BeginOperation@CXIMPOperationBase@@UAEXXZ @ 12 NONAME ; void CXIMPOperationBase::BeginOperation(void)
+	?ClientInfo@CXIMPPscContext@@QBEPAVCXIMPContextClientInfoImp@@XZ @ 13 NONAME ; class CXIMPContextClientInfoImp * CXIMPPscContext::ClientInfo(void) const
+	?Context@CXIMPOperationBase@@UAEPAVCXIMPPscContext@@XZ @ 14 NONAME ; class CXIMPPscContext * CXIMPOperationBase::Context(void)
+	?CreateRequestCompleteEventL@CXIMPOperationBase@@MAEXXZ @ 15 NONAME ; void CXIMPOperationBase::CreateRequestCompleteEventL(void)
+	?DestroyCachedUnbind@CXIMPPscContext@@QAEXXZ @ 16 NONAME ; void CXIMPPscContext::DestroyCachedUnbind(void)
+	?DisassociateHost@CXIMPHostManager@@QAEXPAVCXIMPHost@@@Z @ 17 NONAME ; void CXIMPHostManager::DisassociateHost(class CXIMPHost *)
+	?DropTopEvent@CXIMPContextEventQueue@@QAEXXZ @ 18 NONAME ; void CXIMPContextEventQueue::DropTopEvent(void)
+	?EndOperation@CXIMPOperationBase@@UAEXXZ @ 19 NONAME ; void CXIMPOperationBase::EndOperation(void)
+	?EventData@CXIMPEventCapsule@@QBEABVTDesC8@@XZ @ 20 NONAME ; class TDesC8 const & CXIMPEventCapsule::EventData(void) const
+	?EventQueue@CXIMPPscContext@@QBEAAVCXIMPContextEventQueue@@XZ @ 21 NONAME ; class CXIMPContextEventQueue & CXIMPPscContext::EventQueue(void) const
+	?EventReqId@CXIMPEventCapsule@@QBE?AVTXIMPRequestId@@XZ @ 22 NONAME ; class TXIMPRequestId CXIMPEventCapsule::EventReqId(void) const
+	?EventType@CXIMPEventCapsule@@QBEJXZ @ 23 NONAME ; long CXIMPEventCapsule::EventType(void) const
+	?ExternalizeL@CXIMPProtocolRequestCompleteEventImp@@QBEXAAVRWriteStream@@@Z @ 24 NONAME ; void CXIMPProtocolRequestCompleteEventImp::ExternalizeL(class RWriteStream &) const
+	?FeatureManager@CXIMPGlobals@@QAEPAVCXIMPFeatureManager@@XZ @ 25 NONAME ; class CXIMPFeatureManager * CXIMPGlobals::FeatureManager(void)
+	?FeaturesForSessionLC@CXIMPPscContext@@QAEPAVCXIMPFeatureInfoImp@@XZ @ 26 NONAME ; class CXIMPFeatureInfoImp * CXIMPPscContext::FeaturesForSessionLC(void)
+	?GetCachedUnbind@CXIMPPscContext@@QAEPAVCXIMPOperationBase@@XZ @ 27 NONAME ; class CXIMPOperationBase * CXIMPPscContext::GetCachedUnbind(void)
+	?GetFrameworkFeaturesL@CXIMPFeatureManager@@QAEPAVHBufC8@@XZ @ 28 NONAME ; class HBufC8 * CXIMPFeatureManager::GetFrameworkFeaturesL(void)
+	?GetProtocolL@CXIMPPluginFactory@@QAEPAVCXIMPProtocolPluginBase@@VTUid@@@Z @ 29 NONAME ; class CXIMPProtocolPluginBase * CXIMPPluginFactory::GetProtocolL(class TUid)
+	?GetProtocolsL@CXIMPPluginFactory@@QAEPAVHBufC8@@XZ @ 30 NONAME ; class HBufC8 * CXIMPPluginFactory::GetProtocolsL(void)
+	?GetReqCompleteEvent@CXIMPOperationBase@@UAEPAVCXIMPRequestCompleteEventImp@@XZ @ 31 NONAME ; class CXIMPRequestCompleteEventImp * CXIMPOperationBase::GetReqCompleteEvent(void)
+	?GroupsDataAccess@CProtocolPresenceDataHostImp@@QAEAAVCProtocolPresentityGroupsDataHostImp@@XZ @ 32 NONAME ; class CProtocolPresentityGroupsDataHostImp & CProtocolPresenceDataHostImp::GroupsDataAccess(void)
+	?HasElements@CXIMPContextEventQueue@@QBEHXZ @ 33 NONAME ; int CXIMPContextEventQueue::HasElements(void) const
+	?HostManager@CXIMPGlobals@@QAEPAVCXIMPHostManager@@XZ @ 34 NONAME ; class CXIMPHostManager * CXIMPGlobals::HostManager(void)
+	?InstallL@CXIMPGlobals@@SAXPAVMXIMPOperationFactory@@PAVMXIMPGlobalsObserver@@@Z @ 35 NONAME ; void CXIMPGlobals::InstallL(class MXIMPOperationFactory *, class MXIMPGlobalsObserver *)
+	?Instance@CXIMPGlobals@@SAPAV1@XZ @ 36 NONAME ; class CXIMPGlobals * CXIMPGlobals::Instance(void)
+	?InternalizeL@CXIMPProtocolRequestCompleteEventImp@@QAEXAAVRReadStream@@@Z @ 37 NONAME ; void CXIMPProtocolRequestCompleteEventImp::InternalizeL(class RReadStream &)
+	?IsHostAssigned@CXIMPPscContext@@QBEHXZ @ 38 NONAME ; int CXIMPPscContext::IsHostAssigned(void) const
+	?IsServerOperation@CXIMPOperationBase@@QBEHXZ @ 39 NONAME ; int CXIMPOperationBase::IsServerOperation(void) const
+	?NewFromStreamLC@CXIMPProtocolRequestCompleteEventImp@@SAPAV1@AAVRReadStream@@@Z @ 40 NONAME ; class CXIMPProtocolRequestCompleteEventImp * CXIMPProtocolRequestCompleteEventImp::NewFromStreamLC(class RReadStream &)
+	?NewL@CProtocolPresenceAuthorizationDataHostImp@@SAPAV1@AAVMXIMPHost@@@Z @ 41 NONAME ; class CProtocolPresenceAuthorizationDataHostImp * CProtocolPresenceAuthorizationDataHostImp::NewL(class MXIMPHost &)
+	?NewL@CProtocolPresenceDataHostImp@@SAPAV1@AAVMXIMPHost@@@Z @ 42 NONAME ; class CProtocolPresenceDataHostImp * CProtocolPresenceDataHostImp::NewL(class MXIMPHost &)
+	?NewL@CProtocolPresencePublishingDataHostImp@@SAPAV1@AAVMXIMPHost@@@Z @ 43 NONAME ; class CProtocolPresencePublishingDataHostImp * CProtocolPresencePublishingDataHostImp::NewL(class MXIMPHost &)
+	?NewL@CProtocolPresenceWatchingDataHostImp@@SAPAV1@AAVMXIMPHost@@@Z @ 44 NONAME ; class CProtocolPresenceWatchingDataHostImp * CProtocolPresenceWatchingDataHostImp::NewL(class MXIMPHost &)
+	?NewL@CProtocolPresentityGroupsDataHostImp@@SAPAV1@AAVMXIMPHost@@@Z @ 45 NONAME ; class CProtocolPresentityGroupsDataHostImp * CProtocolPresentityGroupsDataHostImp::NewL(class MXIMPHost &)
+	?NewL@CXIMPContextEventQueue@@SAPAV1@XZ @ 46 NONAME ; class CXIMPContextEventQueue * CXIMPContextEventQueue::NewL(void)
+	?NewL@CXIMPEventCapsule@@SAPAV1@AAVCXIMPApiEventBase@@H@Z @ 47 NONAME ; class CXIMPEventCapsule * CXIMPEventCapsule::NewL(class CXIMPApiEventBase &, int)
+	?NewL@CXIMPEventManager@@SAPAV1@XZ @ 48 NONAME ; class CXIMPEventManager * CXIMPEventManager::NewL(void)
+	?NewL@CXIMPHostManager@@SAPAV1@XZ @ 49 NONAME ; class CXIMPHostManager * CXIMPHostManager::NewL(void)
+	?NewL@CXIMPProtocolRequestCompleteEventImp@@SAPAV1@XZ @ 50 NONAME ; class CXIMPProtocolRequestCompleteEventImp * CXIMPProtocolRequestCompleteEventImp::NewL(void)
+	?NewL@CXIMPPscContext@@SAPAV1@K@Z @ 51 NONAME ; class CXIMPPscContext * CXIMPPscContext::NewL(unsigned long)
+	?NewLC@CProtocolPresenceDataHostImp@@SAPAV1@AAVMXIMPHost@@@Z @ 52 NONAME ; class CProtocolPresenceDataHostImp * CProtocolPresenceDataHostImp::NewLC(class MXIMPHost &)
+	?NewLC@CXIMPHost@@SAPAV1@AAVMXIMPProtocolConnection@@J@Z @ 53 NONAME ; class CXIMPHost * CXIMPHost::NewLC(class MXIMPProtocolConnection &, long)
+	?NoMoreHosts@CXIMPGlobals@@QAEXXZ @ 54 NONAME ; void CXIMPGlobals::NoMoreHosts(void)
+	?OperationFactory@CXIMPGlobals@@QAEPAVMXIMPOperationFactory@@XZ @ 55 NONAME ; class MXIMPOperationFactory * CXIMPGlobals::OperationFactory(void)
+	?OrderOfContexts@CXIMPPscContext@@SAHABV1@0@Z @ 56 NONAME ; int CXIMPPscContext::OrderOfContexts(class CXIMPPscContext const &, class CXIMPPscContext const &)
+	?PluginFactory@CXIMPGlobals@@QAEPAVCXIMPPluginFactory@@XZ @ 57 NONAME ; class CXIMPPluginFactory * CXIMPGlobals::PluginFactory(void)
+	?PresenceDataCache@CProtocolPresenceDataHostImp@@QAEAAVCPresenceDataCache@@XZ @ 58 NONAME ; class CPresenceDataCache & CProtocolPresenceDataHostImp::PresenceDataCache(void)
+	?PresenceInfoFilter@CXIMPPscContext@@UBEPAVCPresenceInfoFilterImp@@W4TFilterStoreType@MXIMPPscContext@@PBVCXIMPIdentityImp@@@Z @ 59 NONAME ; class CPresenceInfoFilterImp * CXIMPPscContext::PresenceInfoFilter(enum MXIMPPscContext::TFilterStoreType, class CXIMPIdentityImp const *) const
+	?ProcessL@CXIMPOperationBase@@UAEXXZ @ 60 NONAME ; void CXIMPOperationBase::ProcessL(void)
+	?PublishingDataAccess@CProtocolPresenceDataHostImp@@QAEAAVCProtocolPresencePublishingDataHostImp@@XZ @ 61 NONAME ; class CProtocolPresencePublishingDataHostImp & CProtocolPresenceDataHostImp::PublishingDataAccess(void)
+	?Ready@CXIMPEventCapsule@@QBEHXZ @ 62 NONAME ; int CXIMPEventCapsule::Ready(void) const
+	?RegisterSessionQueueL@CXIMPEventManager@@QAEXAAVCXIMPContextEventQueue@@@Z @ 63 NONAME ; void CXIMPEventManager::RegisterSessionQueueL(class CXIMPContextEventQueue &)
+	?RequestCompletedL@CXIMPOperationBase@@UAEXXZ @ 64 NONAME ; void CXIMPOperationBase::RequestCompletedL(void)
+	?RequestId@CXIMPOperationBase@@UBE?AVTXIMPRequestId@@XZ @ 65 NONAME ; class TXIMPRequestId CXIMPOperationBase::RequestId(void) const
+	?SelectTopEventIfNeededL@CXIMPContextEventQueue@@QAEXXZ @ 66 NONAME ; void CXIMPContextEventQueue::SelectTopEventIfNeededL(void)
+	?ServiceInfo@CXIMPPscContext@@QBEPAVCXIMPServiceInfoImp@@XZ @ 67 NONAME ; class CXIMPServiceInfoImp * CXIMPPscContext::ServiceInfo(void) const
+	?SessionId@CXIMPPscContext@@QBEKXZ @ 68 NONAME ; unsigned long CXIMPPscContext::SessionId(void) const
+	?SetClientInfo@CXIMPPscContext@@QAEXPAVCXIMPContextClientInfoImp@@@Z @ 69 NONAME ; void CXIMPPscContext::SetClientInfo(class CXIMPContextClientInfoImp *)
+	?SetEventFilter@CXIMPContextEventQueue@@QAEXAAVCXIMPContextEventFilter@@@Z @ 70 NONAME ; void CXIMPContextEventQueue::SetEventFilter(class CXIMPContextEventFilter &)
+	?SetHost@CXIMPOperationBase@@UAEXAAVMXIMPHost@@@Z @ 71 NONAME ; void CXIMPOperationBase::SetHost(class MXIMPHost &)
+	?SetObjectCollection@CXIMPOperationBase@@UAEXPAVMXIMPBase@@@Z @ 72 NONAME ; void CXIMPOperationBase::SetObjectCollection(class MXIMPBase *)
+	?SetOpL@CXIMPOperationBase@@UAEXPAVCXIMPPscContext@@@Z @ 73 NONAME ; void CXIMPOperationBase::SetOpL(class CXIMPPscContext *)
+	?SetPresenceInfoFilterL@CXIMPPscContext@@QAEXW4TFilterStoreType@MXIMPPscContext@@PAVCPresenceInfoFilterImp@@PBVCXIMPIdentityImp@@@Z @ 74 NONAME ; void CXIMPPscContext::SetPresenceInfoFilterL(enum MXIMPPscContext::TFilterStoreType, class CPresenceInfoFilterImp *, class CXIMPIdentityImp const *)
+	?SetReady@CXIMPEventCapsule@@QAEXH@Z @ 75 NONAME ; void CXIMPEventCapsule::SetReady(int)
+	?SetReqId@CXIMPOperationBase@@UAEXVTXIMPRequestId@@@Z @ 76 NONAME ; void CXIMPOperationBase::SetReqId(class TXIMPRequestId)
+	?SetRequestId@CXIMPProtocolRequestCompleteEventImp@@QAEXABVTXIMPRequestId@@@Z @ 77 NONAME ; void CXIMPProtocolRequestCompleteEventImp::SetRequestId(class TXIMPRequestId const &)
+	?SetResultCode@CXIMPOperationBase@@UAEXH@Z @ 78 NONAME ; void CXIMPOperationBase::SetResultCode(int)
+	?SetResultCode@CXIMPProtocolRequestCompleteEventImp@@QAEXH@Z @ 79 NONAME ; void CXIMPProtocolRequestCompleteEventImp::SetResultCode(int)
+	?SetServerOperation@CXIMPOperationBase@@QAEXXZ @ 80 NONAME ; void CXIMPOperationBase::SetServerOperation(void)
+	?SetServiceInfo@CXIMPPscContext@@QAEXPAVCXIMPServiceInfoImp@@@Z @ 81 NONAME ; void CXIMPPscContext::SetServiceInfo(class CXIMPServiceInfoImp *)
+	?SetStatus@CXIMPOperationBase@@UAEXPAVMXIMPStatus@@@Z @ 82 NONAME ; void CXIMPOperationBase::SetStatus(class MXIMPStatus *)
+	?StartConsuming@CXIMPContextEventQueue@@QAEXAAVMXIMPEventQueueObserver@@@Z @ 83 NONAME ; void CXIMPContextEventQueue::StartConsuming(class MXIMPEventQueueObserver &)
+	?Status@CXIMPOperationBase@@UBEAAVMXIMPStatus@@XZ @ 84 NONAME ; class MXIMPStatus & CXIMPOperationBase::Status(void) const
+	?StopConsuming@CXIMPContextEventQueue@@QAEXXZ @ 85 NONAME ; void CXIMPContextEventQueue::StopConsuming(void)
+	?TopEventDataL@CXIMPContextEventQueue@@QAEABVTDesC8@@XZ @ 86 NONAME ; class TDesC8 const & CXIMPContextEventQueue::TopEventDataL(void)
+	?TopEventReqIdL@CXIMPContextEventQueue@@QAE?AVTXIMPRequestId@@XZ @ 87 NONAME ; class TXIMPRequestId CXIMPContextEventQueue::TopEventReqIdL(void)
+	?Type@CXIMPOperationBase@@UBEHXZ @ 88 NONAME ; int CXIMPOperationBase::Type(void) const
+	?UninstallD@CXIMPGlobals@@SAXXZ @ 89 NONAME ; void CXIMPGlobals::UninstallD(void)
+	?UnregisterSessionQueue@CXIMPEventManager@@QAEXAAVCXIMPContextEventQueue@@@Z @ 90 NONAME ; void CXIMPEventManager::UnregisterSessionQueue(class CXIMPContextEventQueue &)
+	?UpdateEventData@CXIMPEventCapsule@@QAEXAAVCXIMPApiEventBase@@@Z @ 91 NONAME ; void CXIMPEventCapsule::UpdateEventData(class CXIMPApiEventBase &)
+	?UpdateEventDataL@CXIMPEventCapsule@@QAEXAAVCXIMPApiEventBase@@@Z @ 92 NONAME ; void CXIMPEventCapsule::UpdateEventDataL(class CXIMPApiEventBase &)
+	?WatchingDataAccess@CProtocolPresenceDataHostImp@@QAEAAVCProtocolPresenceWatchingDataHostImp@@XZ @ 93 NONAME ; class CProtocolPresenceWatchingDataHostImp & CProtocolPresenceDataHostImp::WatchingDataAccess(void)
+	?GetContext@CXIMPOperationBase@@QAEPAVMXIMPPscContext@@XZ @ 94 NONAME ; class MXIMPPscContext * CXIMPOperationBase::GetContext(void)
+	?GetObjCollection@CXIMPOperationBase@@QAEPAVMXIMPRestrictedObjectCollection@@XZ @ 95 NONAME ; class MXIMPRestrictedObjectCollection * CXIMPOperationBase::GetObjCollection(void)
+

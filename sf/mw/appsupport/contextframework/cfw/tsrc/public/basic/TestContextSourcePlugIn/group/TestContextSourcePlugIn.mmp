@@ -1,0 +1,60 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+// TestContextSourcePlugIn.mmp
+//
+
+#include <platform_paths.hrh>
+#include "../inc/TestContextSourcePluginConst.hrh"
+
+TARGET          TestContextSourcePlugIn.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D KTestContextSourcePluginDllUid
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../src
+SOURCE          Main.cpp
+SOURCE          TestContextSourcePlugIn.cpp
+
+SOURCEPATH      ../../../../../src/cfserver
+SOURCE          cfpropertylistener.cpp
+
+SOURCEPATH      ../../mt_cfclient
+SOURCE          testcontextdata.cpp
+
+MW_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+USERINCLUDE     ../../mt_cfclient
+USERINCLUDE     ../../../../../inc/cfserver
+USERINCLUDE     ../../../../../inc/cfservices
+USERINCLUDE     ../../../../../inc/common
+
+SOURCEPATH      ../data
+START RESOURCE  TestContextSourcePlugIn.rss
+TARGET          TestContextSourcePlugIn.rsc
+TARGETPATH      /resource/plugins
+END
+
+LIBRARY         euser.lib
+LIBRARY         estor.lib
+LIBRARY         cfservices.lib
+LIBRARY         cfcontextsourcemanager.lib
+
+LIBRARY         flogger.lib

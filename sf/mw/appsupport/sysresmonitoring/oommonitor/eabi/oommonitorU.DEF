@@ -1,0 +1,26 @@
+EXPORTS
+	_Z19SetMemoryMonitorTlsP14CMemoryMonitor @ 1 NONAME
+	_Z23CreateOOMWatcherThreadLv @ 2 NONAME
+	_ZN17COomMonitorPlugin10ConstructLEv @ 3 NONAME
+	_ZN17COomMonitorPlugin18ExtensionInterfaceE4TUidRPv @ 4 NONAME
+	_ZN17COomMonitorPlugin9FsSessionEv @ 5 NONAME
+	_ZN17COomMonitorPlugin9WsSessionEv @ 6 NONAME
+	_ZN17COomMonitorPluginC2Ev @ 7 NONAME
+	_ZN17COomMonitorPluginD0Ev @ 8 NONAME
+	_ZN17COomMonitorPluginD1Ev @ 9 NONAME
+	_ZN17COomMonitorPluginD2Ev @ 10 NONAME
+	_ZN18ROomMonitorSession17RequestFreeMemoryEi @ 11 NONAME
+	_ZN18ROomMonitorSession17RequestFreeMemoryEiR14TRequestStatus @ 12 NONAME
+	_ZN18ROomMonitorSession19ThisAppIsNotExitingEi @ 13 NONAME
+	_ZN18ROomMonitorSession23CancelRequestFreeMemoryEv @ 14 NONAME
+	_ZN18ROomMonitorSession7ConnectEv @ 15 NONAME
+	_ZN20CAppOomMonitorPlugin4NewLE4TUid @ 16 NONAME
+	_ZTI17COomMonitorPlugin @ 17 NONAME ; #<TI>#
+	_ZTV17COomMonitorPlugin @ 18 NONAME ; #<VT>#
+	_ZN18ROomMonitorSession18RequestOptionalRamEiiiRi @ 19 NONAME
+	_ZN19COomMonitorPluginV27FreeRamEv @ 20 NONAME
+	_ZTI19COomMonitorPluginV2 @ 21 NONAME ; #<TI>#
+	_ZTV19COomMonitorPluginV2 @ 22 NONAME ; #<VT>#
+	_ZN18ROomMonitorSession18RequestOptionalRamEiiiR14TRequestStatus @ 23 NONAME
+	_ZN18ROomMonitorSession14SetOomPriorityENS_12TOomPriorityE @ 24 NONAME
+

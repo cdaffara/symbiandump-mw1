@@ -1,0 +1,14 @@
+EXPORTS
+	_ZN19CAfActivityLauncher15launchActivityLERK7TDesC16 @ 1 NONAME
+	_ZN19CAfActivityLauncher4NewLER13RApaLsSessionR10RWsSession @ 2 NONAME
+	_ZN19CAfActivityLauncher5NewLCER13RApaLsSessionR10RWsSession @ 3 NONAME
+	_ZN19CAfActivityLauncherD0Ev @ 4 NONAME
+	_ZN19CAfActivityLauncherD1Ev @ 5 NONAME
+	_ZN19CAfActivityLauncherD2Ev @ 6 NONAME
+	_ZTI19CAfActivityLauncher @ 7 NONAME
+	_ZTI26CAfActivityLauncherPrivate @ 8 NONAME
+	_ZTI8CAfEntry @ 9 NONAME
+	_ZTV19CAfActivityLauncher @ 10 NONAME
+	_ZTV26CAfActivityLauncherPrivate @ 11 NONAME
+	_ZTV8CAfEntry @ 12 NONAME
+

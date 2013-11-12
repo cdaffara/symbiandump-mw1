@@ -1,0 +1,95 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource structures for key event map.
+*
+*/
+
+
+#ifndef AKNKEYEVENTMAP_RH
+#define AKNKEYEVENTMAP_RH
+
+//  INCLUDES
+#include "aknkeyeventmap.hrh"
+
+//  STRUCTURE DEFINITIONS
+
+// -----------------------------------------------------------------------------
+// KEF_KEY_EVENT
+// Contains three arrays for storing the key translation data
+// for one 'key event', which can loosely be interpreted as
+// the process of mapping a device-generated scan code to a
+// software-interpreted key code.
+// -----------------------------------------------------------------------------
+//
+STRUCT KEF_KEY_EVENT
+    {
+    // All arrays have less than 256 elements.
+    LEN BYTE WORD scancode[];    // scancodes are 16bit
+    LEN BYTE WORD keycode[];    // keycodes are 16bit
+    LEN BYTE WORD devicemode[]; // devicemodes are 8bit
+    LEN BYTE BYTE eventtype[];  // eventtypes are 8bit
+
+#ifdef RD_TACTILE_FEEDBACK
+    WORD feedbacktype = 0;
+#endif // RD_TACTILE_FEEDBACK
+    }
+    
+#define AKN_KEY_EVENT KEF_KEY_EVENT
+
+// -----------------------------------------------------------------------------
+// KEF_REPEAT_RATE
+// Repeat rate. Note that these rate definitions affect only key event
+// framework.
+// -----------------------------------------------------------------------------
+//
+STRUCT KEF_REPEAT_RATE
+    {
+    WORD mode;
+    WORD mask;
+    BYTE rate; // if currentmode & modeMask == mode, then use this rate.
+    }
+
+#define AKN_REPEAT_RATE KEF_REPEAT_RATE
+
+// -----------------------------------------------------------------------------
+// KEF_KEY_EVENT_MAP
+// Key event mapping.
+// -----------------------------------------------------------------------------
+//    
+STRUCT KEF_KEY_EVENT_MAP
+    {
+    WORD version = KKefKeyEventVersion1;
+    WORD flags = 0; // flags for extensions
+
+    LEN WORD STRUCT repeatrates[]; // KEF_REPEAT_RATE structures
+    LEN WORD STRUCT keyevents[]; // KEF_KEY_EVENT structures
+    }
+    
+#define AKN_KEY_EVENT_MAP KEF_KEY_EVENT_MAP
+
+// -----------------------------------------------------------------------------
+// KEF_KEY_EVENT_MAP_DISABLED
+// Structure indicating that key event map ought to be disabled.
+// -----------------------------------------------------------------------------
+// 
+STRUCT KEF_KEY_EVENT_MAP_DISABLED
+    {
+    WORD version = KKefKeyEventVersionNoMap;
+    }
+
+#define AKN_KEY_EVENT_MAP_DISABLED KEF_KEY_EVENT_MAP_DISABLED
+
+#endif // AKNKEYEVENTMAP_RH
+
+// End of File

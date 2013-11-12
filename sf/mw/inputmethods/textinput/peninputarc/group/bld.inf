@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2005-2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0""
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project PeninputArc
+*
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+// IBY-files
+../rom/peninputarc.iby CORE_MW_LAYER_IBY_EXPORT_PATH(peninputarc.iby)
+
+//from peninputlayouteng
+//layout engine header.
+../inc/peninputlayoutenginc/peninputlayouteng.h                         |../../../inc/peninputlayouteng.h
+
+//ecom plugin interface
+../inc/peninputlayoutinterfaceinc/peninputlayoutplugininterface.h       |../../../inc/peninputlayoutplugininterface.h
+
+// Ui layout owner interface
+../inc/pensrvcliinc/peninputuilayoutownerinf.h                             |../../../inc/peninputuilayoutownerinf.h
+// Ui layout base interface
+../inc/pensrvcliinc/peninputuilayoutbase.h                              |../../../inc/peninputuilayoutbase.h
+
+
+//from peninputclient
+../inc/pensrvcliinc/peninputcmdparamext.h                                  |../../../inc/peninputcmdparamext.h
+
+
+PRJ_MMPFILES
+../src/peninputlayoutinterface/peninputlayoutinterface.mmp
+../src/peninputlayouteng/peninputlayouteng.mmp
+../src/peninputcrp/peninputcrp.mmp
+../src/peninputserverapp/peninputserver.mmp
+../src/peninputanim/peninputanim.mmp
+../src/peninputclient/peninputclient.mmp
+
+PRJ_TESTMMPFILES
+
+
+// End of file

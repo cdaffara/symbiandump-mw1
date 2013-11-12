@@ -1,0 +1,31 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                XIMP Core Protocol Plug-in API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/ximpprotocolpluginifids.hrh     MW_LAYER_PLATFORM_EXPORT_PATH(ximpprotocolpluginifids.hrh)
+../inc/ximpprotocolplugin.h     MW_LAYER_PLATFORM_EXPORT_PATH(ximpprotocolplugin.h)
+../inc/ximpprotocolconnection.h     MW_LAYER_PLATFORM_EXPORT_PATH(ximpprotocolconnection.h)
+../inc/ximpprotocolpluginbase.h     MW_LAYER_PLATFORM_EXPORT_PATH(ximpprotocolpluginbase.h)
+../inc/ximpprotocolpluginbase.inl     MW_LAYER_PLATFORM_EXPORT_PATH(ximpprotocolpluginbase.inl)

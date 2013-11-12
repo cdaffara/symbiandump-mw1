@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="bfafa5e2c1835c4d51f4e1b87d2ab71c" dataversion="2.0">
+  <name>Imaging Configuration Manager API</name>
+  <description>Interface to provide Central Repository centralized easily configurable product specific settings to clients such as Camcorder UI, Camcorder MMF Plug-in and Video Editor Engine</description>
+  <type>c++</type>
+  <collection>configmanagers</collection>
+  <libs>
+    <lib name="imagingconfigmanager.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

@@ -1,0 +1,6 @@
+EXPORTS
+	?CreateUpdaterL@CIMCacheFactory@@QAEPAVMIMCacheUpdater@@HABVTDesC16@@H@Z @ 1 NONAME ; class MIMCacheUpdater * CIMCacheFactory::CreateUpdaterL(int, class TDesC16 const &, int)
+	?Release@CIMCacheFactory@@SAXXZ @ 2 NONAME ; void CIMCacheFactory::Release(void)
+	?InstanceL@CIMCacheFactory@@SAPAV1@XZ @ 3 NONAME ; class CIMCacheFactory * CIMCacheFactory::InstanceL(void)
+	?CreateAccessorL@CIMCacheFactory@@QAEPAVMIMCacheAccessor@@HABVTDesC16@@@Z @ 4 NONAME ; class MIMCacheAccessor * CIMCacheFactory::CreateAccessorL(int, class TDesC16 const &)
+

@@ -1,0 +1,69 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __APPARC_IBY__
+#define __APPARC_IBY__
+
+#ifdef __TEXTSHELL_OBY__
+
+#include <openenv.iby>
+#include <scr.iby>
+#include <sts.iby>
+file=ABI_DIR\BUILD_DIR\sisregistryclient.dll		sys\bin\sisregistryclient.dll
+file=ABI_DIR\BUILD_DIR\sisregistryserver.exe		sys\bin\sisregistryserver.exe
+file=ABI_DIR\BUILD_DIR\plan.dll				sys\bin\plan.dll
+file=ABI_DIR\BUILD_DIR\siscontroller.dll		sys\bin\siscontroller.dll
+file=ABI_DIR\BUILD_DIR\apprscparser.dll			sys\bin\apprscparser.dll
+file=ABI_DIR\BUILD_DIR\swtypereginfo.dll		sys\bin\swtypereginfo.dll
+file=ABI_DIR\BUILD_DIR\swidataprovider.dll		sys\bin\swidataprovider.dll
+file=ABI_DIR\BUILD_DIR\securitymanager.dll		sys\bin\securitymanager.dll
+file=ABI_DIR\BUILD_DIR\sislauncherclient.dll		sys\bin\sislauncherclient.dll
+file=ABI_DIR\BUILD_DIR\sislauncherserver.exe		sys\bin\sislauncherserver.exe
+file=ABI_DIR\BUILD_DIR\swiobserverclient.dll		sys\bin\swiobserverclient.dll
+file=ABI_DIR\BUILD_DIR\uissclient.dll			sys\bin\uissclient.dll
+#include <asnpkcs.iby>
+#include <filetokens.iby>
+#include <certman.iby>
+#include <ocsp.iby>
+file=ABI_DIR\BUILD_DIR\devinfosupportclient.dll		sys\bin\devinfosupportclient.dll
+file=ABI_DIR\BUILD_DIR\devinfosupportcommon.dll		sys\bin\devinfosupportcommon.dll
+file=ABI_DIR\BUILD_DIR\ocspsupportclient.dll		sys\bin\ocspsupportclient.dll
+file=ABI_DIR\BUILD_DIR\ocspsupport.exe			sys\bin\ocspsupport.exe
+file=ABI_DIR\BUILD_DIR\swiobserver.exe			sys\bin\swiobserver.exe
+file=ABI_DIR\BUILD_DIR\Http.dll             		System\Libs\Http.dll
+file=ABI_DIR\BUILD_DIR\httputils.dll           		System\Libs\httputils.dll
+
+#endif
+
+REM Application Architecture
+
+file=ABI_DIR\BUILD_DIR\apparc.dll			System\Libs\apparc.dll
+file=ABI_DIR\BUILD_DIR\apfile.dll			System\Libs\apfile.dll
+file=ABI_DIR\BUILD_DIR\aplist.dll			System\Libs\aplist.dll
+file=ABI_DIR\BUILD_DIR\apgrfx.dll			System\Libs\apgrfx.dll
+file=ABI_DIR\BUILD_DIR\apserv.dll			System\Libs\apserv.dll
+file=ABI_DIR\BUILD_DIR\apsexe.exe			System\Programs\apsexe.exe
+file=ABI_DIR\BUILD_DIR\ServiceRegistry.dll	System\Libs\ServiceRegistry.dll
+
+
+#ifndef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+file=ABI_DIR\BUILD_DIR\apstart.dll			System\Libs\apstart.dll
+#endif // SYMBIAN_SYSTEM_STATE_MANAGEMENT
+
+//Backup and restore
+data=EPOCROOT##epoc32\data\z\private\10003a3f\backup_registration.xml   \private\10003a3f\backup_registration.xml
+
+#endif

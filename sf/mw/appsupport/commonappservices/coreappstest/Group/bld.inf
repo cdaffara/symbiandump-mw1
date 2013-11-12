@@ -1,0 +1,35 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_EXPORTS
+
+PRJ_MMPFILES
+
+PRJ_TESTMMPFILES
+client.mmp				support
+../TestServer/Server/server.mmp		support
+../TestServer/Test/TestServerTest.mmp
+../preparedrivec/preparedrivec.mmp
+
+PRJ_TESTEXPORTS
+CoreAppsTestTest.iby	/epoc32/rom/include/coreappstesttest.iby
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+../Inc/TestServer.h	/epoc32/include/coreappstest/testserver.h
+#endif
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+../Inc/utilities.h	/epoc32/include/coreappstest/utilities.h
+#endif
+CoreAppsTest.iby	/epoc32/rom/include/coreappstest.iby
+runeshell.iby	/epoc32/rom/include/runeshell.iby

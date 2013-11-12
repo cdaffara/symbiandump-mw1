@@ -1,0 +1,11 @@
+EXPORTS
+	_Z20CreateProfileEngineLv @ 1 NONAME
+	_Z28CreateProfileEngineExtendedLv @ 2 NONAME
+	_ZN27CProfileChangeNotifyHandler4NewLEP22MProfileChangeObserver @ 3 NONAME
+	_Z20CreateProfileEngineLP3RFs @ 4 NONAME
+	_Z28CreateProfileEngineExtendedLP3RFs @ 5 NONAME
+	_Z21ReleaseProfileUtilityv @ 6 NONAME
+	_Z23ProfileUtilityInstanceLv @ 7 NONAME
+	_Z29CreateProfileEngineExtended2LP3RFs @ 8 NONAME
+	_Z29CreateProfileEngineExtended2Lv @ 9 NONAME
+

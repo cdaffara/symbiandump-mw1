@@ -1,0 +1,61 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Image description file for project XIMP Framework
+*
+*/
+
+#ifndef PRESENCEFW_IBY
+#define PRESENCEFW_IBY
+
+#ifdef __PRESENCE_FRAMEWORK
+
+#include <data_caging_paths_for_iby.hrh>
+
+// XIMP Framework components
+file=ABI_DIR\BUILD_DIR\ximputils.dll              SHARED_LIB_DIR\ximputils.dll
+file=ABI_DIR\BUILD_DIR\ximpoperations.dll         SHARED_LIB_DIR\ximpoperations.dll
+file=ABI_DIR\BUILD_DIR\ximpprocessor.dll          SHARED_LIB_DIR\ximpprocessor.dll
+file=ABI_DIR\BUILD_DIR\ximpsrvclient.dll          SHARED_LIB_DIR\ximpsrvclient.dll
+file=ABI_DIR\BUILD_DIR\ximpdatamodel.dll          SHARED_LIB_DIR\ximpdatamodel.dll
+file=ABI_DIR\BUILD_DIR\ximpmanager.dll            SHARED_LIB_DIR\ximpmanager.dll
+
+
+// XIMP Framework server
+file=ABI_DIR\BUILD_DIR\ximpserver.exe             PROGRAMS_DIR\ximpserver.exe
+file=ABI_DIR\BUILD_DIR\ximprootserver.exe         PROGRAMS_DIR\ximprootserver.exe
+
+// XIMP ECOM Hook plugin
+ECOM_PLUGIN( ximpecomhook.dll, ximpecomhook.rsc )
+
+// Presence Plugin components
+file=ABI_DIR\BUILD_DIR\presencemanager.dll        SHARED_LIB_DIR\presencemanager.dll
+file=ABI_DIR\BUILD_DIR\presencedatamodel.dll      SHARED_LIB_DIR\presencedatamodel.dll  
+file=ABI_DIR\BUILD_DIR\presenceoperation.dll      SHARED_LIB_DIR\presenceoperation.dll
+file=ABI_DIR\BUILD_DIR\presencecacheclient.dll    SHARED_LIB_DIR\presencecacheclient.dll
+
+// Presence Plugin server
+file=ABI_DIR\BUILD_DIR\presencecacheserver.exe    PROGRAMS_DIR\presencecacheserver.exe
+
+// Presence Plugin ECOM Hook plugins
+ECOM_PLUGIN( presenceecomhook.dll, presenceecomhook.rsc ) 
+ECOM_PLUGIN( presencedatamodelhook.dll, presencedatamodelhook.rsc )
+ECOM_PLUGIN( presencecacheecomhook.dll, presencecacheecomhook.rsc )
+
+// ximpfw SIS, provides support for SIS upgrading
+//data=DATAZ_\system\install\ximpfw.sis     system\install\ximpfw.sis
+
+
+#endif // __PRESENCE_FRAMEWORK
+
+#endif //PRESENCEFW_IBY

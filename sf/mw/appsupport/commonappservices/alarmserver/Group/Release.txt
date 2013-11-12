@@ -1,0 +1,771 @@
+============================
+Release: by Daine Mamacos
+Date:    17/02/09
+Fix for: DEF133774: Making TEF tests for alarmserver work on autoroms.
+============================
+Release: by Xavier Leclercq
+Date:    16/02/09
+Fix for: DEF132675: Rationalization of AlarmServer code
+============================
+Release: by James Aley
+Date:    16/02/09
+Fix for: DEF134272: ONB: Alarm server bld.inf does not build or fully export CITAlarmServer test
+============================
+Release: by Xavier Leclercq
+Date:    08/01/09
+Fix for: DEF129339: Fixes for AlarmServer leavescan errors
+============================
+Release: by Shazia Murtaza
+Date:    06/01/09
+Fix for: DEF132792: Refactor the code in ASSrvAlarmQueue that publishes missed alarms   
+============================
+Release: by Shazia Murtaza
+Date:    31/12/08
+Fix for: DEF132660: Fix leavescan errors in alarmserver  
+============================
+Release: by Shazia Murtaza
+Date:    23/12/08
+Fix for: DEF132525   Remove unwanted comment from TEAlarmTestAlarmPlayConfig.cpp   
+============================
+Release: by Lucian Piros
+Date:    03/12/08
+Fix for: DEF130383: SMP: AlarmServer - TAlarmData fails with E32User-CBase 40 in CrazyDelay mode
+============================
+Release: by Michael Coffey
+Date:    01/12/08
+Fix for: DEF130829 Alarmserver does not elegantly handle SSM failure
+============================
+Release: by Michael Coffey
+Date:    29/10/08
+Fix for: PDEF128000 Alarms missed note shown when Calendar is opened even there no any missed alarms 
+============================
+Release: by Michael Coffey
+Date:    20/10/08
+Fix for: PDEF128996 Alarmserver panic when EAlarmCharacteristicsDoNotNotifyAlarmAlertServer used 
+============================
+Release: by Michael Coffey
+Date:    24/09/08
+Fix for: PDEF128000 Alarms missed note shown when Calendar is opened even there no any missed alarms 
+============================
+Release: by Raveendra Mullaguri
+Date:    05/09/08
+Fix for: DEF127117: Updating startup domain definitions (added in SSM) as per SM v2 of 9.5  
+============================
+Release: by Andrew Smith
+Date:    02/07/08
+Fix for: PDEF123820: TSTARTUPEXPIRE test failed in ONB 
+============================
+Release: by Xavier Leclercq
+Date:    13/05/08
+Fix for: PDEF118814: Symbian provided AlarmServer cannot handle the missing hour
+============================
+Release: by Kalyan Reddy
+Date:    18/01/08
+Fix for: PDEF116571: Calendar: Missed Alarm note cannot be displayed in Calendar app
+============================
+Release: by Shazia Murtaza
+Date:    14/01/08
+Fix for: PDEF115823: Symbian provided AlarmServer cannot handle day light saving change 
+============================
+Release: by Xavier Leclercq
+Date:    19/12/07
+Fix for: DEF114776: Alarm server code cleanup
+============================
+Release: by Michael Borghardt
+Date:    23/11/07
+Fix for: PDEF114735: V&V MA MAE Elena TE070705-50171 Arabic MMI: Alarm icon visible when changing
+Add printing the test name to the log file when it is run
+============================
+Release: by Daniel Burnham
+Date:    2/11/07
+Fix for: DEF113138: Alarm set will change after re-opening the emulator differs with time gaps
+=============================
+Release: by Beibei Wang
+Date:    11/10/07
+Fix for: Issue ID: PDEF112836  
+"Alarms missed" note shown when Calendar is opened even there isn't any missed a 
+
+The alarmserver has been changed so that when the system time changes, it might publish
+one of the following two changes accordingly:
+
+a)	Some alarms in the past have been missed (value is 1)
+b)	Time zone has been changed, if no alarms have been missed (value is 2)
+============================
+Release: by Kelly Hon
+Date:    22/05/07
+Fix for: PDEF106894: Non leaving function RASCliSession::GetAlarmData can leave
+============================
+Release: by Michael Coffey
+Date:    11/05/07
+Fix for: DEF098979: NQP Alarm Server - No sounds and incorrect alarm state
+============================
+Release: by Michael Coffey
+Date:    05/04/07
+Fix for: PDEF103544: Altering time whilst calender alarm on snooze freezes phone
+============================
+Release: by Michael Coffey
+Date:    12/03/07
+Fix for: PDEF103641: CAP GENIUS#50656: Nokia N73 Clock alarm does not work every time when phone is t
+============================
+Release: by Michael Coffey
+Date:    12/03/07
+Fix for: PDEF103544: Altering time whilst calender alarm on snooze freezes phone
+============================
+Release: by Saju Thomas
+Date:    22/12/06
+Fix for: DEF098981: NQP Alarm definition not changing from Next24 to Once 
+============================
+Release: by Tejsweeta Singh
+Date:    06/10/06
+Fix for: DEF086873: Alarm notification triggered when setting time
+============================
+Release: by Janice Halligan
+Date:    09/28/06
+Minor:   TestCITAlarmServer: tolerance for alarm expiry 5 -> 10 sec
+============================
+Release: by Xing Jin
+Date:    04/10/06
+Fix for: DEF095360: TREPEATDEFINITIONS test failed randomly on ONB tests.
+============================
+
+Release: by Xing Jin
+Date:    04/10/06
+Fix for: DEF095360: TREPEATDEFINITIONS test failed randomly on ONB tests.
+============================
+Release: by Ryan Gilmour
+Date:    04/09/06
+Fix for: INC092682: Sorting of next alarm alert is wrong
+============================
+Release: by Rajat Das
+Date:    22/08/06
+Fix for: DEF092710 : RASCliSession::AlarmAdd() needs WriteUserData but the comments dont say so 
+============================
+Release: by Michael Coffey
+Date:    16/08/06
+Fix for: DEF091616: Repeat Once Alarms are not deleted when system time is changed
+============================
+Release: by Konstantin Zheludev
+Date:    07/06/06
+Fix for: DEF087626: V&V MAE M600: TE060510-37496 Unable to switch the alarm off
+============================
+Release: by Janice Halligan
+Date:    15/05/06
+Fix for: DEF083031: Time not consistent using NextDueTime,__DbgSnoozeAlarm & GetAlarmDetails
+(test case added to TBasicAlarms.cpp)
+minor adjustments to doxygen format for __DbgSnoozeAlarm (in ASCliSession.cpp)
+minor fix to test case TAlarmNotifications.cpp (typo conditional as assignment operation)
+============================
+Release: by Kalyan Reddy
+Date:    26/04/06
+Fix for: INC084989: app-servicesalarmserver tbasicalarms.exe fails
+============================
+Release: by Konstantin Zheludev
+Date:    31/03/2006
+Fix for: DEF083034: Setting repeating alarm, snoozing it, alarm goes off: state & time not correct
+============================
+Release: by Xing Jin
+Date:    21/03/2006
+Fix for: INC082424: SS31 Workday alarm is getting activated, when workdays are changed
+============================
+Release: by Francesco Lodolo
+Date:    20/03/2006
+Fix for: INC082426: SS31 - Alarm server is not returning the correct state of the daily/ workday
+============================
+Release: 109 by Shazia Murtaza
+Date:    14/03/2006
+Fix for: DEF082155:Failing TPSEUDOCLOCKALARMS alarm server test
+============================
+Release: 110 by Konstantin Zheludev
+Date:	 28/02/2006
+Fix for: DEF081603 SWSV_602_R2A02_LOAD-SH-1: EUT crashes when setting EUT to act as a “shelf war...
+============================
+Release: 109 by Mohammad Minhaz
+Date:	 22/02/2006
+Fix for: DEF080340 Restoring from Mini SD --> Crash is detected
+============================
+Release: 108 by Shazia Murtaza
+Date:	 07/02/2006
+Fix for: DEF079157: OOD: AlarmServer startup fails when low disk 
+============================
+Release: 107 by Kelly Hon
+Date:	 25/10/2005
+Fix for: DEF071566: Remove obsolete PREQ 1118 macro from PIM MCL
+============================
+Release: 106 by Tony Naggs
+Date:	 03/10/2005
+Fix for: DEF070002: AlarmServer backup registration file is not published to z:privateAF5027 dur
+============================
+Release: 106 by Daniel Yuen
+Date:	 30/09/2005
+Fix for: DEF069659: corrupt Distribution.policy file
+============================
+Release: 105 by Kalyan Reddy
+Date:	 19/08/2005
+Fix for: DEF064007  testexecute tealarmserver.script is NOT run overnight 
+============================
+Release: 104 by John Moore
+Date:	 05/07/2005
+Fix for: DEF064650: Alarm Server incorrectly keeps track of changes to UTCoffset 
+============================
+Release: 103 by Ryan Gilmour
+Date:	 16/06/2005
+Fix for: DEF061424: TBACKUPALARMS fails on UREL
+============================
+Release: 102 by Prabodh Depala
+Date:	 16/06/2005
+Fix for: DEF061424: TBACKUPALARMS fails on UREL
+============================
+Release: 102 by Prabodh Depala
+Date:	 16/06/2005
+Fix for: DEF063349: TRepeatdefinition fails on 9.1winscw defect branch
+============================
+Release: 101 by Prabodh Depala
+Date:	 08/06/2005
+Fix for: DEF062643: TPSEUDOCLOCKALARMS & TREPEATDEFINITIONS fails on WINSCW 9.1
+============================
+Release: 100 by Simon Mellor
+Date:	 01/06/2005
+Fix for: DEF060769: TREPEATDEFINITIONS fails on H2 9.1
+============================
+Release: 099 by Ryan Gilmour
+Date:	 06/04/2005
+Fix for: DEF058613: some confused commenting in asclisession.cpp
+============================
+Release: 098 by J.Nareskog
+Date:	 31/03/2005
+Fix for: DEF058413: Alarm Server does not work properly regarding pausing and sound play periods
+============================
+Release: 097 by Mohammed Zafrulla
+Date:	 22/03/2005
+Fix for: DEF056549: non standard and illegal comments in submission 514621
+===========================
+Release: 096 by Veeranjaneyulu Toka
+Date:	 17/03/2005
+Fix for: DEF055311 - LIBff58944 DCM-1114: Abnormal behavior in AlarmTo do.[PP]
+===========================
+Release: 095 by J.Moore
+Date:	 11/03/2005
+Fix for: DEF056908 -  TBASICALARMS fails on 9.1 ARMV5 H2
+============================
+Release: 094 by J.Nareskog
+Date:	 03/03/2005
+Fix for: DEF056438 - Update the def files for BMARM on the alarm server
+============================
+Release: 093 by J.Nareskog
+Date:	 01/03/2005
+Fix for: DEF056331 The Alarm Server should use the CTimer::AtUTC mechanism
+============================
+Release: 092 by J.Owen
+Date:	 01/03/2005
+Mike,GT0228,PREQ1152 Time Zone Server UTC Offset Auto-Update and Notification and Alarm Storage in UTC time
+BR1318.1 PIM Application Services: RWorldServer::SetHome() will change behaviour. 
+============================
+Release: 091 by Prabodh Depala
+Date:	 08/02/2005
+Fix for: DEF053933  Test Harness: T_BAckuprestore fails on H2 board & WINSCW on 9.1
+============================
+Release: 090 by Krishna Vasudevan
+Date:	 07/02/2005
+Fix for: DEF053697 Console Alarm Alert Server should be an EXE
+============================
+Release: 089 by Loughlin Spollen
+Date:	 03/02/2005
+Fix for: DEF049948 - Core Apps Test Server improvement
+============================
+Release: 088 by Lucien Oh
+Date:	 02/02/2005
+Fix for: DEF054289 - There are 3 warnings on wins 8.1a test code.
+============================
+Release: 087 by Prabodh Depala
+Date:	 31/01/2005
+Fix for: DEF053933 - Test Harness: T_BAckuprestore fails on H2 board & WINSCW on 9.1
+============================
+Release: 086 by Shazia Murtaza
+Date:	 28/01/2005
+Fix for: DEF053937 - Test Harness: TBACKUPALARMS fails on H2 Board
+============================
+Release: 085 by Lucien Oh
+Date:	 13/01/2005
+Fix for: Added talarmrobustness test harness for Yankee.
+============================
+Release: 084 by Noel Raj
+Date:	 13/01/2005
+Fix for: DEF053442 - T_BACKUPALARMS fails on 9.1 winscw
+============================
+Release: 083 by Robert Williamson
+Date:	 28/01/2005
+Fix for: DEF054366  Secure backup regsitration file located in incorrect place
+============================
+Release: 082 by Glen Cook
+Date:	 21/12/2004
+Fix for: DEF052512 - TCLIENTSESSION fails on 8.1a WINSCW
+============================
+Release: 081 by Johan Nareskog
+Date:	 1/11/2004
+Fix for: DEF050940 - [System Build] Alarm Alert Screen Snooze Button Anomaly
+============================
+Release: 080 by Johan Nareskog
+Date:	 29/10/2004
+Fix for: DEF050990 - No alarm tests are passing in 9.0 	
+============================
+Release: 079 by Johan Nareskog
+Date:	 22/10/2004
+Fix for: DEF050629 - SS PlatSec Missing Bang in front of server name
+============================
+Perforce: 078 by Ibrahim Rahman
+Date: 08 October 2004
+GT0215   MS3.1.2  Backup & Restore
+Title: Modifed existing Backup&Restore functionality.
+AlarmServer now uses BackupRestoreNotification.dll which provides a
+notification mechanism for SECURE and UNSECURE builds.
+============================
+Release: 077 by Michael Coffey
+Date:	 30/09/2004
+Fix for: DEF049281 - file asshddefs.h has no api classification.	
+============================
+Release: 077 by Azar Khurshid 
+Date:	 15/09/2004
+Fix for: DEF047304 - NTT - App-services\alarmserver TAlarmLocaleChanges udeb fails on device (lubbock).	
+============================
+Release: 076 by Nikolay Budantsev 
+MS3.1.1  GT0215   PREQ277 PS6.4 Replacement APIs (Also PS8.1)
+MS3.6    GT0215   PREQ728 Base API Improvements
+============================
+Release: 075 by Subani  
+Date:    26/07/2004
+Fix for: DEF046852 - Almost all coreapps source files use wrong format of copyright information
+============================
+Release  075 by Ibrahim Rahman
+Date:	 13/09/04
+Yankee,  GT0215, MS3.3.2 CoreApps Secure Backup and Restore changes
+============================
+Release  074 by Nikolay Budantsev 
+Date:	 16/07/04
+Sierra,  GT0197, MS3.3.2 PREQ539 Core Apps Security Documentation Migration
+============================
+Release: 073 by Jitender Kumar
+Date:	 02/07/2004
+Fix for: INC046090 - NTT - alarmserver test TBasicAlarms fails
+============================
+Release: 072 by Nikolay Budantsev
+Date:	 28/05/2004
+Fix for: DEF045603 - Panic raised by Setting Alarm Sound Cycle when an alarm is due to go off
+============================
+Release: 071 by Nikolay Budantsev
+Date:	 20/05/2004
+Fix for: DEF045094 - unit test TAlarmLocaleChanges started failing on WinsCW
+============================
+Release: 070 by Nikolay Budantsev
+Date:	 13/05/2004
+Fix for: DEF045095 - Alarm Queue should delete old alarms more often
+============================
+Release: 069 by Pat Nicholls
+Date:	 06/05/2004
+Fix for: DEF044861 - Clock Alarms don't always go off when changing device time 
+============================
+Release: 068 by Ravi Kumar
+Date: 06/05/2004
+Fix for: DEF044316 - Alarmserver - Recent defect fix added new LeaveScan error
+============================
+Release: 067 by NikolayB
+Date: 05/05/2004
+Fix for: DEF044825 - unit test (TStartupExpire) is slow to run
+============================
+Release: 066 by TonyN & Beibei Wang
+Date: 27/04/2004
+Fix for: INC043744 - Agenda opening time is longer, when agenda is opened quickly after closing
+============================
+Release: 065 by Beibei Wang
+Date: 22/03/2004
+Fix for: DEF043696 - app-services_alarmserver & ealwl MRP needs to be updated for 8.0b CBR to build
+============================
+Release: 064 by Johan Nareskog
+Date: 19/03/2004
+Fix for: DEF043652 - Agenda build errors in 03234
+============================
+Release: 063 by Beibei Wang
+Date: 12/03/2004
+Fix for: DEF043009 - AlarmServer.ini just keeps growing all the time
+
+============================
+Release: 062 by Johan Nareskog
+Date: 11/02/2004
+Fix for: DEF042708 - T_BasicAlarmFails
+
+============================
+Release: 061 by Ravi Kumar
+Date: 11/02/2004
+Fix for: DEF041981 - Alarm server panics on Cedar
+
+============================
+Release: 060 by Johan Nareskog
+Date: 17/02/2004
+Fix for: INC041015  Clock, Western Build0347: The alarm fires at a wrong time when deleting another 
+
+============================
+Release: 059 by Johan Nareskog
+Date: 12/02/2004
+Fix for: INC042170  AV21 System crash when there are two alarms with same time and system time is mo 
+
+============================
+Release: 058 by Waiman Tang
+Date: 09/02/2004
+Fix for: INC041842 - Alarm Sound-Cycle is incorrect
+
+============================
+Release: 057 by Waiman Tang
+Date: 13/01/2004
+Fix for: DEF041209 - AlarmServer\ConsoleANTestClient.cpp test component is not migrated to SecureIPC
+
+============================
+Release: 056 by Bob Rosenberg
+Date: 30/12/2003
+Fix for: DEF041257 - TREPEATDEFINITIONS is failing on lubbock
+
+============================
+Release: 055 by Tony Naggs
+Date: 19/12/2003
+Fix for: DEF041075 - Error following the alarm going off on the Integrator board
+
+============================
+Release: 054 by Andrew Newman
+Date: 26/11/2003
+Fix for: DEF040433 - TSTARTUPEXPIRE fails under wins/winscw UDEB
+
+============================
+Release: 053 by Nichola Turner
+Date: 24/11/2003
+Fix for: INC038728 Clock: Alarm deleted from list with Snooze option
+
+============================
+Release: 052 by Andrew Newman
+Date: 21/11/2003
+Fix for: TALARMDATA fails under wincw UREL & THUMB UREL
+
+============================
+Release: 052 by Nichola Turner
+Date: 19/11/2003
+Fix for: DEF040213 AlarmCountByState(EAlarmStateNotifying) can return wrong value 
+
+============================
+Release: 053 by Nikolay Budantsev
+Date: 27/11/2003
+REQ2188 - Platform security migration to Secure IPC API
+PREQ44 - Migrate all Symbian OS code to new IPC APIs
+
+============================
+Release: 052 by Andrew Newman
+Date: 12/11/2003
+Fix for: DEF039980 TRepeatDefinitions fails in automated tests on lubbock
+
+============================
+Release: 051 by Beibei Wang
+Date: 07/11/2003
+Add two APIs
+
+EXPORT_C void RASCliSession::AlarmAddWithNotification(TRequestStatus& aStatus, TASShdAlarm& aAlarm, const TDesC8& aData);
+EXPORT_C TInt RASCliSession::AlarmAdd(TASShdAlarm& aAlarm, const TDesC8& aData) const
+ 
+It make it possible to add an alarm with its data attached. 
+============================
+Release: 050 by Nichola Turner
+Date: 04/11/2003
+Fix for: DEF039727 alarmserver\toomtest fails on lubbock
+
+============================
+Release: 049 by Johan Nareskog
+Date: 30/10/2003
+Fix for: DEF039608  Server Synchronisation 
+
+============================
+Release: 048 by Nichola Turner
+Date: 29/10/2003
+Fix for: DEF039224 Typos in Alarm Server API 
+
+============================
+Release: 047 by Johan Nareskog
+Date: 23/10/2003
+Fix for: INC038385  Agnmodel doesn't attach correct/enough data to alarms 
+
+============================
+Release: 046 by Nichola Turner
+Date: 17/10/2003
+Revert fix for: INC038198  Including agmalarm.h and ASCliSession.h causes compilation conflicts 
+
+============================
+Release: 045 by Tony Naggs
+Date: 17/10/2003
+INC038400 - Alarm server should deny alarm data changes whilst backup is in progress
+
+============================
+Release: 044 by Waiman Tang
+Date: 15/10/2003
+Fix for: INC038198  Including agmalarm.h and ASCliSession.h causes compilation conflicts 
+
+============================
+Release: 043 by Tony Naggs
+Date: 13/10/2003
+Further fix for: INC038673 - APP-SERVICES\ALARMSERVER\TEST\TSOUNDCONTROL failed in WINS UDEB
+  Verbose test fail info: TAlarmLocaleChanges, TPseudoClockAlarms, TRepeatDefinitions
+
+============================
+
+Release: 042 by Tom Bassett
+Date: 13/10/2003
+Fix for: DEF039058  alarmserver\TBASICALARMS : 2 tests fail on Lubbock 
+
+============================
+Release: 041 by Tony Naggs
+Date: 09/10/2003
+Fix for: INC038673 - APP-SERVICES\ALARMSERVER\TEST\TSOUNDCONTROL failed in WINS UDEB
+  Specific problems in test code fixed in TSoundControl and TAlarmLocaleChanges.
+  Some improvement in test failure information for most other tests too.
+
+============================
+Release: 040 by Johan Nareskog
+Date: 08/10/2003
+Fix for: DEF038907  alarmserver\TALARMIDARRAYS test fails on Lubbock 
+
+============================
+Release: 039 by Franco Bellu
+Date: 29/09/2003
+Patch which Fixes udeb failure of trepeatdefinitions 
+
+============================
+Release: 038 by Franco Bellu
+Date: 01/10/2003
+Fix for: INC038202 "talarmlocalechanges and trepeatdefinitions fails (urel) "
+
+============================
+Release: 037 by Andrew Newman
+Date: 29/09/2003
+Fix for: DEF038560  KNumberOfSecondsInHour -> KNumberOfSecondsInMinute
+
+============================
+Release: 036 by Tony Naggs
+Date: 01/10/2003
+Fix for: INC030901 - Alarm--Device crashes if you deactivate an alarm at the same time it goes off
+TSOUNDCONTROL test:
+  Made this a little more verbose when a test fails, so that it outputs the line number.
+  Also tweaked test timing points in testSoundsSilentFor() to make the test reliable.
+
+============================
+Release: 035 by Johan Nareskog
+Date: 26/09/2003
+Fix for: DEF037975  EALWL/Ta_ntf fails on Lubbock (beech) 
+
+============================
+Release: 034 by Tony Naggs
+Date: 18/09/2003
+Fix for: DEF037362 - TSOUNDCONTROL fails on WINSCW & WINS
+
+============================
+Release: 033 by Bob Rosenberg
+Date: 08/09/2003
+Fix for: INC037598 - SS66 - Alarm Server does not boot from power off state
+
+============================
+Release: 032 by Andrew Newman
+Date: 01/09/2003
+Fix for: INC037698  Unsafe cleanupstack use in DataAttach.
+
+============================
+Release: 031 by Johan Nareskog
+Date: 21/08/2003
+Fix for: DEF023451  Alarm tests should be made automatic as possible as we can 
+
+============================
+Release: 030 by Beibei Wang
+Date: 21/08/2003
+Fix for: DEF037361  TOOMTEST fails on WINSCW but passes on WINS
+
+============================
+Release: 029 by Beibei Wang
+Date: 20/08/2003
+Fix for: DEF036600 - TQUEUERESTORATION fails to run
+
+============================
+Release: 028 by Bob Rosenberg
+Date: 14/08/2003
+Fix for: INC030901 "DEF030305 - app-engines/agnmode/T_AlarmDetails.exe - test code fails "
+
+============================
+Release: 027 by Jonathan Gibson
+Date: 01/08/2003
+Fix for: DEF23451 "Alarm tests should be made as automatic as possible"
+============================
+
+Release: 026 by Franco Bellu
+Date: 30/07/2003
+Fix for: INC030901 "Alarm--Device crashes if you deactivate an alarm at the same time it goes off "
+
+===========================
+Release: 025
+Release by: Alex Dalitz
+Date: 23/06/2003
+===========================
+Fix for:
+DEF035708  Unfriendly thread naming convention e.g. alarmserver3d2f11c4 
+
+Release: 024
+Release by: Andy Blackburn
+Date: 20/05/2003
+===========================
+Fix for:
+DEF023880 - (propagated) Alarm Server should cope better if the Alarm Alert Server dies.
+
+Release: 023
+Release by: Beibei Wang
+Date: 11/04/2003
+===========================
+Fix for:
+INC022859 - Tbasicalarms test case fails (test case bug)
+
+Release: 022
+Release by: Beibei Wang
+Date: 09/04/2003
+===========================
+Fix for:
+INC021931 - "INC021931 - Clock: When change city - weekly alarm doesn't display"
+INC021888 - "Clock: Working days alarm doesn't fire if missed due to time changes"
+INC021889 - Clock: Daily alarm doesn't fire if missed due to time changes
+
+Release: 021
+Release by: Beibei Wang
+Date: 07/04/2003
+===========================
+Fix for defect
+INC021737 - CAgnAlarm error (related to previously reported INC017389 error)
+
+Release: 020
+Release by: Nichola Turner
+Date: 20/03/2003
+===========================
+  * fix for defect: INC021794 "RASCliSession::NotifyChange does not give the alarm id."
+
+Release: 019
+Release by: Nichola Turner
+Date: 06/03/2003
+===========================
+  * fix for defect:DEF021378 "paused alarms behave like snoozed alarms"
+
+Release: 018
+Release by: Nichola Turner
+Date: 19/02/2003
+===========================
+  * fix for defect:DEF020025 "(Propagated) Alarm clock rings only once when alarm is set at 00:00 GMT"
+
+
+Release: 017
+Release by: Nichola Turner
+Date: 26/02/2003
+===========================
+  * fix for defect: INC019916 - Clock: The alarm type doesn't change to "Once-only"
+
+Release: 016
+Release by: Sindhu Melkote
+Date: 13/12/2002
+===========================
+  * fix for defect: INC014258 - Clock: Missed 24 hours alarm ->alarm shown when not needed
+			    INC014259 - Clock: Missed once only alarm -> no clock alarm
+Release: 015
+Release by: Sindhu Melkote
+Date: 05/12/2002
+===========================
+  * fix for defect: INC004469 - Agenda model doesn't provide a way to get the actual time of a meeting
+
+Release: 014
+Release by: Andy Blackburn
+Date: 17/10/2002
+===========================
+  * fix for defect:GIS-5EXPBD "When an alarm expires and left to run for more than 240 minutes alarm server gets into an infinite loop."
+
+Release: 013
+Release by: Stephane Lenclud
+Date: 13/09/2002
+===========================
+  * fix for defect:TUR-59BGLX "WinNT4. Back up locks Agenda database on Assabet."
+
+
+Release: 012
+Release by: Stephane Lenclud
+Date: 02/07/2002
+===========================
+  * fix for defect:GIS-5BVJN7 "circular dependency between alarmserver and eiksrv causes lockup when alarms expire"
+
+
+Release: 011
+Release by: Beibei Wang
+Date: 02/07/2002
+===========================
+  * fix for defect:WAG-5B8H7J "Wrong behaviour if create an alarm before the snoozed alarm goes off"
+
+
+Release: 010
+Release by: Beibei Wang
+Date: 18/06/2002
+===========================
+  * fix for defect:ALM-59XHMW "When a snoozed alarm reappear the alarm sound has disappeared"
+
+Release: 009
+Release by: Beibei Wang
+Date: 02/04/2002
+===========================
+  * fix for defect:CDM-58CJCA "Program close: When setting back time in Control Panel"
+===========================
+Release: 008
+Release by: NicholaT
+Date: 27/02/2002
+===========================
+  * fix for defect BRN-579JJY "Disabled alarms doesn't go away ..."
+===========================
+
+Release: 007
+Release by: NicholaT
+Date: 21/02/2002
+===========================
+  * fix for defect WAN-538JSR "TIME: Multiple snoozes not working to correct timescales"
+===========================
+
+Release: 006
+Release by: PaulC
+Date: 05/02/2002
+===========================
+  * Fix in TQueueRestoration testcode to remove wins/urel link warning.
+===========================
+
+Release: 005
+Release by: NicholaT
+Date: 25/01/2002
+===========================
+  * fix for defect ALM-56DJSM "Strange behaviour when turning an alarm off"
+===========================
+
+Release: 004
+Release by: NicholaT
+Date: 23/01/2002
+===========================
+  * fix for defect WAG-56FGKT "Emulator crashes when copy-paste an entry from Agenda to Todo"
+  * fix for defect TUR-56HLLT "alarm sounds don't re-start at end of alarm sound pause period"
+===========================
+
+Release: 003
+Release by: NicholaT
+Date: 17/01/2002
+===========================
+  * fix for defect DUG-568GUN "AlarmServer testcode warnings in ARM4"
+===========================
+
+Release: 002
+Release by: NicholaT
+Date: 07/01/2002
+===========================
+  * fix for defect ROS-563MUZ "AlarmServer causes emulator deadlock on multi-processor machine"
+===========================
+
+Perforce release
+===========================
+(Made by Nichola Turner, 19th December 2001)
+* First release of the new Alarm Server.
+* (along with the World Server) is a replacement for the Alarm World server (EALWL)
+* The API has been changed.  See the Porting Guide for more details.

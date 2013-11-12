@@ -1,0 +1,153 @@
+EXPORTS
+	_ZN14CXIMPStatusImp12InternalizeLER11RReadStream @ 1 NONAME
+	_ZN14CXIMPStatusImp15NewFromStreamLCER11RReadStream @ 2 NONAME
+	_ZN14CXIMPStatusImp4NewLEv @ 3 NONAME
+	_ZN14CXIMPStatusImp5NewLCEv @ 4 NONAME
+	_ZN14XIMPEventCodec5PackLER17CXIMPApiEventBaseRl @ 5 NONAME
+	_ZN14XIMPEventCodec5PackLER17CXIMPApiEventBaseRlP8CBufFlat @ 6 NONAME
+	_ZN14XIMPEventCodec7UnPackLERK6TDesC8Rl @ 7 NONAME
+	_ZN15CXIMPApiObjBaseC2Ev @ 8 NONAME
+	_ZN15CXIMPApiObjBaseD0Ev @ 9 NONAME
+	_ZN15CXIMPApiObjBaseD1Ev @ 10 NONAME
+	_ZN15CXIMPApiObjBaseD2Ev @ 11 NONAME
+	_ZN16CXIMPIdentityImp12InternalizeLER11RReadStream @ 12 NONAME
+	_ZN16CXIMPIdentityImp15NewFromStreamLCER11RReadStream @ 13 NONAME
+	_ZN16CXIMPIdentityImp4NewLEv @ 14 NONAME
+	_ZN16CXIMPIdentityImp5NewLCERK7TDesC16 @ 15 NONAME
+	_ZN16CXIMPIdentityImp5NewLCEv @ 16 NONAME
+	_ZN17CXIMPApiEventBaseC2Ev @ 17 NONAME
+	_ZN17CXIMPApiEventBaseD0Ev @ 18 NONAME
+	_ZN17CXIMPApiEventBaseD1Ev @ 19 NONAME
+	_ZN17CXIMPApiEventBaseD2Ev @ 20 NONAME
+	_ZN19CXIMPApiDataObjBaseC2Ev @ 21 NONAME
+	_ZN19CXIMPApiDataObjBaseD0Ev @ 22 NONAME
+	_ZN19CXIMPApiDataObjBaseD1Ev @ 23 NONAME
+	_ZN19CXIMPApiDataObjBaseD2Ev @ 24 NONAME
+	_ZN19CXIMPFeatureInfoImp11AddFeatureLERK6TDesC8 @ 25 NONAME
+	_ZN19CXIMPFeatureInfoImp12InternalizeLER11RReadStream @ 26 NONAME
+	_ZN19CXIMPFeatureInfoImp15NewFromStreamLCER11RReadStream @ 27 NONAME
+	_ZN19CXIMPFeatureInfoImp4NewLEv @ 28 NONAME
+	_ZN19CXIMPFeatureInfoImp5NewLCEv @ 29 NONAME
+	_ZN19CXIMPServiceInfoImp12InternalizeLER11RReadStream @ 30 NONAME
+	_ZN19CXIMPServiceInfoImp15NewFromStreamLCER11RReadStream @ 31 NONAME
+	_ZN19CXIMPServiceInfoImp4NewLEv @ 32 NONAME
+	_ZN19CXIMPServiceInfoImp5NewLCE4TUidRK7TDesC16S3_S3_l @ 33 NONAME
+	_ZN19CXIMPServiceInfoImp5NewLCEv @ 34 NONAME
+	_ZN19FeaturePluginHolder11InitializeLEv @ 35 NONAME
+	_ZN19FeaturePluginHolder13AccessorCountEv @ 36 NONAME
+	_ZN19FeaturePluginHolder26PresenceObjFactoryAccessorEv @ 37 NONAME
+	_ZN19FeaturePluginHolder7ReleaseEv @ 38 NONAME
+	_ZN19FeaturePluginHolder8AccessorEi @ 39 NONAME
+	_ZN20CXIMPContextStateImp12InternalizeLER11RReadStream @ 40 NONAME
+	_ZN20CXIMPContextStateImp13SetStateValueEN17MXIMPContextState6TStateE @ 41 NONAME
+	_ZN20CXIMPContextStateImp15NewFromStreamLCER11RReadStream @ 42 NONAME
+	_ZN20CXIMPContextStateImp4NewLEv @ 43 NONAME
+	_ZN20CXIMPContextStateImp5NewLCEv @ 44 NONAME
+	_ZN20CXIMPProtocolInfoImp12InternalizeLER11RReadStream @ 45 NONAME
+	_ZN20CXIMPProtocolInfoImp15NewFromStreamLCER11RReadStream @ 46 NONAME
+	_ZN20CXIMPProtocolInfoImp5NewLCERK7TDesC164TUidRK19CXIMPFeatureInfoImp @ 47 NONAME
+	_ZN20CXIMPProtocolInfoImp5NewLCEv @ 48 NONAME
+	_ZN21CXIMPObjectFactoryImp4NewLEv @ 49 NONAME
+	_ZN21XIMPApiDataObjFactory12ExternalizeLER12RWriteStreamRK19CXIMPApiDataObjBase @ 50 NONAME
+	_ZN21XIMPApiDataObjFactory12ExternalizeLER12RWriteStreamRK6RArrayI13SXIMPReqParamE @ 51 NONAME
+	_ZN21XIMPApiDataObjFactory12InternalizeLER11RReadStreamR6RArrayI13SXIMPReqParamE @ 52 NONAME
+	_ZN21XIMPApiDataObjFactory13InternalizeLCER11RReadStream @ 53 NONAME
+	_ZN23CXIMPContextEventFilter12InternalizeLER11RReadStream @ 54 NONAME
+	_ZN23CXIMPContextEventFilter13NewCombinedLCERK6TArrayIPS_E @ 55 NONAME
+	_ZN23CXIMPContextEventFilter4NewLEPK6TArrayIlE @ 56 NONAME
+	_ZN23CXIMPContextEventFilter5NewLCEPK6TArrayIlE @ 57 NONAME
+	_ZN24CXIMPObjectCollectionImp4NewLEv @ 58 NONAME
+	_ZN24CXIMPObjectCollectionImp5NewLCEv @ 59 NONAME
+	_ZN25CXIMPContextClientInfoImp12InternalizeLER11RReadStream @ 60 NONAME
+	_ZN25CXIMPContextClientInfoImp15NewFromStreamLCER11RReadStream @ 61 NONAME
+	_ZN25CXIMPContextClientInfoImp4NewLEv @ 62 NONAME
+	_ZN25CXIMPContextClientInfoImp5NewLCEv @ 63 NONAME
+	_ZN25CXIMPContextStateEventImp15ContextStateImpEv @ 64 NONAME
+	_ZN25CXIMPContextStateEventImp20StateChangeReasonImpEv @ 65 NONAME
+	_ZN25CXIMPContextStateEventImp23SetStateChangeReasonImpEP14CXIMPStatusImp @ 66 NONAME
+	_ZN25CXIMPContextStateEventImp4NewLEv @ 67 NONAME
+	_ZN25CXIMPContextStateEventImp5NewLCEv @ 68 NONAME
+	_ZN25CXIMPSubscriptionItemBase10ForceCloseEv @ 69 NONAME
+	_ZN25CXIMPSubscriptionItemBase14AddSubscriberLEP15MXIMPPscContext @ 70 NONAME
+	_ZN25CXIMPSubscriptionItemBase14AddSubscriberLEPS_ @ 71 NONAME
+	_ZN25CXIMPSubscriptionItemBase14BaseConstructLEv @ 72 NONAME
+	_ZN25CXIMPSubscriptionItemBase14CleanIfExpiredEv @ 73 NONAME
+	_ZN25CXIMPSubscriptionItemBase16RemoveSubscriberEP15MXIMPPscContext @ 74 NONAME
+	_ZN25CXIMPSubscriptionItemBase16RemoveSubscriberEPS_ @ 75 NONAME
+	_ZN25CXIMPSubscriptionItemBase17UpdateExpirationLEv @ 76 NONAME
+	_ZN25CXIMPSubscriptionItemBase18CountOfSubscribersEv @ 77 NONAME
+	_ZN25CXIMPSubscriptionItemBase18SubscriptionStatusEP15MXIMPPscContext @ 78 NONAME
+	_ZN25CXIMPSubscriptionItemBase19ActivateSubscriberLEP15MXIMPPscContext @ 79 NONAME
+	_ZN25CXIMPSubscriptionItemBase19ActivateSubscriberLEPS_ @ 80 NONAME
+	_ZN25CXIMPSubscriptionItemBase20ChangeStatusAfterAddEv @ 81 NONAME
+	_ZN25CXIMPSubscriptionItemBase21DataSubscriptionStateEv @ 82 NONAME
+	_ZN25CXIMPSubscriptionItemBase23ChangeStatusAfterRemoveEv @ 83 NONAME
+	_ZN25CXIMPSubscriptionItemBase24UpdateSubscriptionStateLENS_18TSubscriptionEventE @ 84 NONAME
+	_ZN25CXIMPSubscriptionItemBase25SetDataSubscriptionStateLER29CXIMPDataSubscriptionStateImp @ 85 NONAME
+	_ZN25CXIMPSubscriptionItemBase37SynthesiseSubscriptionEventToAllCtxsLEv @ 86 NONAME
+	_ZN25CXIMPSubscriptionItemBase7ContextEi @ 87 NONAME
+	_ZN25CXIMPSubscriptionItemBaseC2ER19MXIMPItemParentBase @ 88 NONAME
+	_ZN25CXIMPSubscriptionItemBaseD0Ev @ 89 NONAME
+	_ZN25CXIMPSubscriptionItemBaseD1Ev @ 90 NONAME
+	_ZN25CXIMPSubscriptionItemBaseD2Ev @ 91 NONAME
+	_ZN26CXIMPConfigurationItemBase10ForceCloseEv @ 92 NONAME
+	_ZN26CXIMPConfigurationItemBase14BaseConstructLEv @ 93 NONAME
+	_ZN26CXIMPConfigurationItemBase16AddConfiguratorLEP15MXIMPPscContext @ 94 NONAME
+	_ZN26CXIMPConfigurationItemBase16AddConfiguratorLEPS_ @ 95 NONAME
+	_ZN26CXIMPConfigurationItemBase18RemoveConfiguratorEP15MXIMPPscContext @ 96 NONAME
+	_ZN26CXIMPConfigurationItemBase18RemoveConfiguratorEPS_ @ 97 NONAME
+	_ZN26CXIMPConfigurationItemBase19ConfigurationStatusEP15MXIMPPscContext @ 98 NONAME
+	_ZN26CXIMPConfigurationItemBaseC2ER19MXIMPItemParentBase @ 99 NONAME
+	_ZN26CXIMPConfigurationItemBaseD0Ev @ 100 NONAME
+	_ZN26CXIMPConfigurationItemBaseD1Ev @ 101 NONAME
+	_ZN26CXIMPConfigurationItemBaseD2Ev @ 102 NONAME
+	_ZN28CXIMPRequestCompleteEventImp12AppendParamLEP19CXIMPApiDataObjBase @ 103 NONAME
+	_ZN28CXIMPRequestCompleteEventImp12SetRequestIdERK14TXIMPRequestId @ 104 NONAME
+	_ZN28CXIMPRequestCompleteEventImp19CompletionResultImpEv @ 105 NONAME
+	_ZN28CXIMPRequestCompleteEventImp4NewLEv @ 106 NONAME
+	_ZN28CXIMPRequestCompleteEventImp5NewLCER14TXIMPRequestIdi @ 107 NONAME
+	_ZN29CXIMPDataSubscriptionStateImp12InternalizeLER11RReadStream @ 108 NONAME
+	_ZN29CXIMPDataSubscriptionStateImp15NewFromStreamLCER11RReadStream @ 109 NONAME
+	_ZN29CXIMPDataSubscriptionStateImp4NewLEv @ 110 NONAME
+	_ZN29CXIMPDataSubscriptionStateImp5NewLCEv @ 111 NONAME
+	_ZN34CXIMPRestrictedObjectCollectionImp18SetObjectOwnershipEi @ 112 NONAME
+	_ZN34CXIMPRestrictedObjectCollectionImp4NewLEi @ 113 NONAME
+	_ZN34CXIMPRestrictedObjectCollectionImp5NewLCEi @ 114 NONAME
+	_ZNK15CXIMPApiObjBase25HandleUnknownGetInterfaceElN9MXIMPBase9TIfGetOpsE @ 115 NONAME
+	_ZNK16CXIMPIdentityImp7CompareERKS_ @ 116 NONAME
+	_ZNK16CXIMPIdentityImpneERKS_ @ 117 NONAME
+	_ZNK23CXIMPContextEventFilter12ExternalizeLER12RWriteStream @ 118 NONAME
+	_ZNK23CXIMPContextEventFilter15IsEventAcceptedEl @ 119 NONAME
+	_ZNK25CXIMPContextClientInfoImp5MatchEPKS_ @ 120 NONAME
+	_ZNK25CXIMPSubscriptionItemBase12ContextCountEv @ 121 NONAME
+	_ZNK25CXIMPSubscriptionItemBase8StatusLCEP15MXIMPPscContext @ 122 NONAME
+	_ZNK25CXIMPSubscriptionItemBase9IsContextEP15MXIMPPscContext @ 123 NONAME
+	_ZNK26CXIMPConfigurationItemBase9IsContextEP15MXIMPPscContext @ 124 NONAME
+	_ZTI15CXIMPApiObjBase @ 125 NONAME ; #<TI>#
+	_ZTI17CXIMPApiEventBase @ 126 NONAME ; #<TI>#
+	_ZTI19CXIMPApiDataObjBase @ 127 NONAME ; #<TI>#
+	_ZTI21CXIMPObjectFactoryImp @ 128 NONAME ; #<TI>#
+	_ZTI24CXIMPObjectCollectionImp @ 129 NONAME ; #<TI>#
+	_ZTI25CXIMPSubscriptionItemBase @ 130 NONAME ; #<TI>#
+	_ZTI26CXIMPConfigurationItemBase @ 131 NONAME ; #<TI>#
+	_ZTI34CXIMPRestrictedObjectCollectionImp @ 132 NONAME ; #<TI>#
+	_ZTIN24CXIMPObjectCollectionImp22CXIMPCollectionElementE @ 133 NONAME ; #<TI>#
+	_ZTV15CXIMPApiObjBase @ 134 NONAME ; #<VT>#
+	_ZTV17CXIMPApiEventBase @ 135 NONAME ; #<VT>#
+	_ZTV19CXIMPApiDataObjBase @ 136 NONAME ; #<VT>#
+	_ZTV21CXIMPObjectFactoryImp @ 137 NONAME ; #<VT>#
+	_ZTV24CXIMPObjectCollectionImp @ 138 NONAME ; #<VT>#
+	_ZTV25CXIMPSubscriptionItemBase @ 139 NONAME ; #<VT>#
+	_ZTV26CXIMPConfigurationItemBase @ 140 NONAME ; #<VT>#
+	_ZTV34CXIMPRestrictedObjectCollectionImp @ 141 NONAME ; #<VT>#
+	_ZTVN24CXIMPObjectCollectionImp22CXIMPCollectionElementE @ 142 NONAME ; #<VT>#
+	_ZThn144_N26CXIMPConfigurationItemBaseD0Ev @ 143 NONAME ; #<thunk>#
+	_ZThn144_N26CXIMPConfigurationItemBaseD1Ev @ 144 NONAME ; #<thunk>#
+	_ZThn28_N25CXIMPSubscriptionItemBase19ActivateSubscriberLEP15MXIMPPscContext @ 145 NONAME ; #<thunk>#
+	_ZThn28_N25CXIMPSubscriptionItemBase25SetDataSubscriptionStateLER29CXIMPDataSubscriptionStateImp @ 146 NONAME ; #<thunk>#
+	_ZThn28_N25CXIMPSubscriptionItemBase37SynthesiseSubscriptionEventToAllCtxsLEv @ 147 NONAME ; #<thunk>#
+	_ZThn28_N25CXIMPSubscriptionItemBaseD0Ev @ 148 NONAME ; #<thunk>#
+	_ZThn28_N25CXIMPSubscriptionItemBaseD1Ev @ 149 NONAME ; #<thunk>#
+	_ZThn28_N26CXIMPConfigurationItemBaseD0Ev @ 150 NONAME ; #<thunk>#
+	_ZThn28_N26CXIMPConfigurationItemBaseD1Ev @ 151 NONAME ; #<thunk>#
+

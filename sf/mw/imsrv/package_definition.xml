@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0">
+ <package id="imsrv" name="Instant Messaging and Presence Services" levels="plugin framework server generic specific">
+  <collection id="brandingserver" name="Branding Server" level="specific">
+   <!-- collection is really a component. Needs to be moved down a directory -->
+   <component id="brandingserver_build" filter="s60" name="Branding Server Build">
+    <unit bldFile="brandingserver/group"/>
+   </component>
+  </collection>
+ </package>
+</SystemDefinition>

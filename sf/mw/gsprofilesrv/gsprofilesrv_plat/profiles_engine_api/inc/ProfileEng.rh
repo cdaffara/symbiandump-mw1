@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Profiles Engine resource structures.
+*
+*/
+
+
+//  STRUCTURE DEFINITIONS
+
+// -----------------------------------------------------------------------------
+// DEFAULT_PROFILES
+// Default profiles
+// -----------------------------------------------------------------------------
+//
+STRUCT DEFAULT_PROFILES
+    {
+    STRUCT items[];
+    }
+
+// -----------------------------------------------------------------------------
+// PROFILE
+// profile default name and ID
+// -----------------------------------------------------------------------------
+//
+STRUCT PROFILE
+    {
+    LONG id = 0;
+    LTEXT name = "";
+    LTEXT shortname = "";
+    LTEXT naviname = "";
+    LTEXT titlename = "";
+    }
+
+// -----------------------------------------------------------------------------
+// PROFILE_SETTINGS
+// Profile settings
+// -----------------------------------------------------------------------------
+//
+STRUCT PROFILE_SETTINGS
+    {
+    STRUCT items[];
+    }
+
+// -----------------------------------------------------------------------------
+// PROFILE SETTING
+// profile setting for dynamic profiles
+// -----------------------------------------------------------------------------
+//
+STRUCT PROFILE_SETTING
+    {
+    LONG id = 0;
+    LONG key_type = 0;
+    }
+
+// End of File

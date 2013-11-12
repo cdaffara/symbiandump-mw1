@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<api id="b3dbecebacc420336d0e033991439a6a" dataversion="1.0">
+  <name>XIMP Core Management API</name>
+  <description>Contains interfaces for managing and accessing the XIMP core features. API provides interfaces for:
+- creating ne instances of the framework
+- requesting the framework features
+- creating new contexts</description>
+  <type>c++</type>
+  <subsystem>ximpfw</subsystem>
+  <libs><lib name="ximpdatamodel.lib"/>
+<lib name="ximpoperations.lib"/>
+<lib name="ximpecomhook.lib"/>
+<lib name="ximpmanager.lib"/>
+<lib name="ximpsrvclient.lib"/>
+<lib name="ximpprocessor.lib"/>
+<lib name="ximputils.lib"/>
+</libs>
+  <release category="domain"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>yes</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

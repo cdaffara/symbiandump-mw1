@@ -1,0 +1,51 @@
+EXPORTS
+	?setLogDateTime@Logger@@QAEX_N@Z @ 1 NONAME ; void Logger::setLogDateTime(bool)
+	?tr@Logger@@SA?AVQString@@PBD0@Z @ 2 NONAME ; class QString Logger::tr(char const *, char const *)
+	?configure@Logger@@QAEXABVQString@@W4Format@QSettings@@@Z @ 3 NONAME ; void Logger::configure(class QString const &, enum QSettings::Format)
+	?addLogOutput@Logger@@QAE_NPAVLogOutput@@@Z @ 4 NONAME ; bool Logger::addLogOutput(class LogOutput *)
+	?getStaticMetaObject@Logger@@SAABUQMetaObject@@XZ @ 5 NONAME ; struct QMetaObject const & Logger::getStaticMetaObject(void)
+	?setDateTimeFormat@Logger@@QAEXABVQString@@@Z @ 6 NONAME ; void Logger::setDateTimeFormat(class QString const &)
+	?metaObject@LogOutput@@UBEPBUQMetaObject@@XZ @ 7 NONAME ; struct QMetaObject const * LogOutput::metaObject(void) const
+	?trUtf8@LogOutput@@SA?AVQString@@PBD0@Z @ 8 NONAME ; class QString LogOutput::trUtf8(char const *, char const *)
+	??1Logger@@UAE@XZ @ 9 NONAME ; Logger::~Logger(void)
+	?logDateTime@Logger@@QBE_NXZ @ 10 NONAME ; bool Logger::logDateTime(void) const
+	?log@Logger@@QAEXABVQString@@@Z @ 11 NONAME ; void Logger::log(class QString const &)
+	?setLogLoggerName@Logger@@QAEX_N@Z @ 12 NONAME ; void Logger::setLogLoggerName(bool)
+	??1LogOutput@@UAE@XZ @ 13 NONAME ; LogOutput::~LogOutput(void)
+	?qt_metacall@Logger@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 14 NONAME ; int Logger::qt_metacall(enum QMetaObject::Call, int, void * *)
+	??_ELogger@@UAE@I@Z @ 15 NONAME ; Logger::~Logger(unsigned int)
+	?closeAll@Logger@@SAXXZ @ 16 NONAME ; void Logger::closeAll(void)
+	?tr@LogOutput@@SA?AVQString@@PBD0@Z @ 17 NONAME ; class QString LogOutput::tr(char const *, char const *)
+	?setName@LogOutput@@QAEXABVQString@@@Z @ 18 NONAME ; void LogOutput::setName(class QString const &)
+	?trUtf8@LogOutput@@SA?AVQString@@PBD0H@Z @ 19 NONAME ; class QString LogOutput::trUtf8(char const *, char const *, int)
+	?removeLogOutput@Logger@@QAEXPAVLogOutput@@@Z @ 20 NONAME ; void Logger::removeLogOutput(class LogOutput *)
+	?metaObject@Logger@@UBEPBUQMetaObject@@XZ @ 21 NONAME ; struct QMetaObject const * Logger::metaObject(void) const
+	?name@Logger@@QBE?AVQString@@XZ @ 22 NONAME ; class QString Logger::name(void) const
+	??0Logger@@AAE@ABVQString@@PAVQObject@@@Z @ 23 NONAME ; Logger::Logger(class QString const &, class QObject *)
+	?staticMetaObject@Logger@@2UQMetaObject@@B @ 24 NONAME ; struct QMetaObject const Logger::staticMetaObject
+	?load@LogOutput@@QAE_NAAVQSettings@@@Z @ 25 NONAME ; bool LogOutput::load(class QSettings &)
+	?dateTimeFormat@Logger@@QBE?AVQString@@XZ @ 26 NONAME ; class QString Logger::dateTimeFormat(void) const
+	??0LogOutput@@IAE@PAVLogger@@@Z @ 27 NONAME ; LogOutput::LogOutput(class Logger *)
+	?staticMetaObject@LogOutput@@2UQMetaObject@@B @ 28 NONAME ; struct QMetaObject const LogOutput::staticMetaObject
+	?clearAllLogOutput@Logger@@QAEXXZ @ 29 NONAME ; void Logger::clearAllLogOutput(void)
+	??_ELogOutput@@UAE@I@Z @ 30 NONAME ; LogOutput::~LogOutput(unsigned int)
+	?logOutput@Logger@@QAEPAVLogOutput@@ABVQString@@@Z @ 31 NONAME ; class LogOutput * Logger::logOutput(class QString const &)
+	?close@Logger@@SAXABVQString@@@Z @ 32 NONAME ; void Logger::close(class QString const &)
+	?name@LogOutput@@QBE?AVQString@@XZ @ 33 NONAME ; class QString LogOutput::name(void) const
+	?qt_metacast@LogOutput@@UAEPAXPBD@Z @ 34 NONAME ; void * LogOutput::qt_metacast(char const *)
+	?logLoggerName@Logger@@QBE_NXZ @ 35 NONAME ; bool Logger::logLoggerName(void) const
+	?qt_metacall@LogOutput@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 36 NONAME ; int LogOutput::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?qt_metacast@Logger@@UAEPAXPBD@Z @ 37 NONAME ; void * Logger::qt_metacast(char const *)
+	?getStaticMetaObject@LogOutput@@SAABUQMetaObject@@XZ @ 38 NONAME ; struct QMetaObject const & LogOutput::getStaticMetaObject(void)
+	?setParentLogger@LogOutput@@QAEXPAVLogger@@@Z @ 39 NONAME ; void LogOutput::setParentLogger(class Logger *)
+	?createLogOutput@LogOutputFactory@@SAPAVLogOutput@@ABVQString@@@Z @ 40 NONAME ; class LogOutput * LogOutputFactory::createLogOutput(class QString const &)
+	?createLogOutput@LogOutputFactory@@SAPAVLogOutput@@ABVQString@@ABV?$QHash@VQString@@VQVariant@@@@@Z @ 41 NONAME ; class LogOutput * LogOutputFactory::createLogOutput(class QString const &, class QHash<class QString, class QVariant> const &)
+	?parentLogger@LogOutput@@QAEPAVLogger@@XZ @ 42 NONAME ; class Logger * LogOutput::parentLogger(void)
+	?tr@Logger@@SA?AVQString@@PBD0H@Z @ 43 NONAME ; class QString Logger::tr(char const *, char const *, int)
+	?addCreateLogOutputEntry@LogOutputFactory@@SAXABVQString@@P6APAVLogOutput@@XZ@Z @ 44 NONAME ; void LogOutputFactory::addCreateLogOutputEntry(class QString const &, class LogOutput * (*)(void))
+	?configure@Logger@@QAEXAAVQSettings@@@Z @ 45 NONAME ; void Logger::configure(class QSettings &)
+	?instance@Logger@@SAPAV1@ABVQString@@@Z @ 46 NONAME ; class Logger * Logger::instance(class QString const &)
+	?tr@LogOutput@@SA?AVQString@@PBD0H@Z @ 47 NONAME ; class QString LogOutput::tr(char const *, char const *, int)
+	?trUtf8@Logger@@SA?AVQString@@PBD0H@Z @ 48 NONAME ; class QString Logger::trUtf8(char const *, char const *, int)
+	?trUtf8@Logger@@SA?AVQString@@PBD0@Z @ 49 NONAME ; class QString Logger::trUtf8(char const *, char const *)
+

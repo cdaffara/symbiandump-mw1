@@ -1,0 +1,45 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestSuiteName	TestBackupRestoreNotificationServerSuite 
+//! @SYMScriptTestEnvironment
+//
+PRINT Run all TestBackupRestoreNotification Suite Tests
+//
+//
+LOAD_SUITE TestBackupRestoreNotificationServerSuite 
+//
+//
+START_TESTCASE PIM-APP-SERVICES-BACKUPRESTORENOTIFICATION-CIT-0001-HP-0001
+//
+//! @SYMTestCaseID		PIM-APP-SERVICES-BACKUPRESTORENOTIFICATION-CIT-0001-HP-0001
+//! @SYMTestType		CIT
+//! @SYMTestPriority		Medium
+//! @SYMFssID			
+//! @SYMTestCaseDesc		Initiate Backup 
+//! @SYMTestActions		1) Enable & Disable Backup
+//!				2) Enable & Disable Restore
+//! 				2) Check whether the start & stop Backup/Restore notifications are received
+//! 				3) Validate the CBackRestoreNotification Apis - BackupInProgress() & RestoreInProgress
+//! @SYMTestExpectedResults	Start & Stop Backup/Restore notifications must be received.
+//!				CBackRestoreNotification Apis - BackupInProgress() & RestoreInProgress behave as expected.
+RUN_TEST_STEP	100	TestBackupRestoreNotificationServerSuite	TestBackupRestoreNotificationStep	
+END_TESTCASE PIM-APP-SERVICES-BACKUPRESTORENOTIFICATION-CIT-0001-HP-0001
+//
+//
+PRINT TestContactsBackupRestoreServerSuite Tests complete
+//
+

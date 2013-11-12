@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+    <file alias="typefaces.xml">variant/typefaces_default.xml</file>
+    </qresource>
+</RCC>

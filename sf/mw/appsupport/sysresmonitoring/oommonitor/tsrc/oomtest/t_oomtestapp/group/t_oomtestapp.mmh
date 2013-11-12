@@ -1,0 +1,60 @@
+/*
+* Copyright (c) 2006-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+
+
+#include <platform_paths.hrh>
+
+TARGET          T_OOM_TESTAPP_NAME_EXE
+TARGETTYPE      exe
+EPOCHEAPSIZE    0x10000 0x4000000 // Min 64KB, Max 64MB
+UID             0x100039CE T_OOM_TESTAPP_UID
+CAPABILITY      WriteDeviceData AllFiles
+
+SOURCEPATH      ../src
+SOURCE          t_oomtestappapplication.cpp
+SOURCE          t_oomtestappappview.cpp
+SOURCE          t_oomtestappappui.cpp
+SOURCE          t_oomtestappdocument.cpp
+
+SOURCEPATH      ../data
+START RESOURCE  t_oomtestapp.rss
+HEADER
+TARGET          T_OOM_TESTAPP_NAME
+TARGETPATH      resource/apps
+END
+
+START RESOURCE  t_oomtestapp_reg.rss
+TARGET          T_OOM_TESTAPP_NAME_REG
+TARGETPATH      /private/10003a3f/apps
+END
+
+MW_LAYER_SYSTEMINCLUDE
+T_OOM_TEST_APPDEFS_INCLUDE
+USERINCLUDE    ../inc
+
+LIBRARY        euser.lib
+LIBRARY        apparc.lib
+LIBRARY        cone.lib
+LIBRARY        eikcore.lib
+LIBRARY        avkon.lib
+LIBRARY        efsrv.lib
+LIBRARY        oommonitor.lib
+LIBRARY        commondialogs.lib
+
+// End of File

@@ -1,0 +1,68 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// RECWAP.MMP
+// recwap.mdl WAP file recogniser for app launching for Emime framework
+// 
+//
+
+/**
+ @file
+*/
+
+
+#ifdef __UI_FRAMEWORKS_V2__
+
+TARGET recwap.dll
+TARGETTYPE plugin
+UID		0x10009D8D 0x1000515E
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+start resource ../waprecogniser/1000515E.rss
+#ifdef SYMBIAN_SECURE_ECOM
+TARGET recwap.rsc
+#endif
+end
+
+#else
+
+TARGET          RECWAP.MDL
+TARGETTYPE      MDL
+TARGETPATH      /system/recogs\
+
+UID		0x10003A19 0x1000515E
+
+START WINS
+	baseaddress	0x70900000
+END
+
+#endif //__UI_FRAMEWORKS_V2__
+
+
+CAPABILITY TrustedUI ProtServ
+
+VENDORID 0x70000001
+
+SOURCEPATH	../waprecogniser
+
+//systeminclude   ../INC
+
+source          recwap.cpp
+
+library         euser.lib apmime.lib 
+
+START MARM
+END
+
+SMPSAFE

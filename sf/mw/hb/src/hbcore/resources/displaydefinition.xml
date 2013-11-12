@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<displayDefinition>
+
+    <display
+    resolutionName="NHD"
+    resolutionWidth="640"
+    resolutionHeight="360"
+    ppiValue="229"
+    orientationAngle="270"
+    unitValue="6.7" />
+    
+    <display
+    defaultMode="true"
+    resolutionName="NHD"   
+    resolutionWidth="360" 
+    resolutionHeight="640"
+    ppiValue="229"
+    orientationAngle="0"
+    unitValue="6.7" />
+
+    <display
+    resolutionName="VGA"
+    resolutionWidth="640"
+    resolutionHeight="480"
+    ppiValue="250"
+    orientationAngle="90"
+    unitValue="6.2" />
+    
+    <display
+    resolutionName="VGA"   
+    resolutionWidth="480" 
+    resolutionHeight="640"
+    ppiValue="250"
+    orientationAngle="90"
+    unitValue="6.2" />
+
+    <display
+    resolutionName="HVGA"
+    resolutionWidth="480"
+    resolutionHeight="320"
+    ppiValue="180"
+    orientationAngle="90"
+    unitValue="5.3" />
+    
+    <display
+    resolutionName="HVGA"   
+    resolutionWidth="320" 
+    resolutionHeight="480"
+    ppiValue="180"
+    orientationAngle="90"
+    unitValue="5.3" />
+    
+    <display
+    resolutionName="NHD"
+    resolutionWidth="640"
+    resolutionHeight="360"
+    ppiValue="183.6"
+    orientationAngle="90"
+    unitValue="5.42" />
+    
+    <display
+    resolutionName="NHD"
+    resolutionWidth="360" 
+    resolutionHeight="640"
+    ppiValue="183.6"
+    orientationAngle="90"
+    unitValue="5.42" />
+    
+    <display
+    resolutionName="WVGA"
+    resolutionWidth="864"
+    resolutionHeight="480"
+    ppiValue="247.1"
+    orientationAngle="90"
+    unitValue="7.27" />
+    
+    <display
+    resolutionName="WVGA"
+    resolutionWidth="480" 
+    resolutionHeight="864"
+    ppiValue="247.1"
+    orientationAngle="90"
+    unitValue="7.27" />
+    
+</displayDefinition>
+

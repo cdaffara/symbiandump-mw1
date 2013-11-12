@@ -1,0 +1,87 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource headers for project gssensorplugin
+*
+*/
+
+
+#ifndef GSSENSORPLUGIN_HRH
+#define GSSENSORPLUGIN_HRH
+
+// commands
+enum TMenuCommands
+    {
+    EGSCmdOk = 550,     // GS plugin commands starts from 500
+    EGSSenMenuOpen,     // Menu command Open
+    EGSSenMenuChange,   // Menu command change
+    EGSSenMskGeneral,   // MSK general in main view. Can be either 'Change' or 'Open'
+    EGSSenMenuExit      // 'Exit' menu command. Overridden to take control of exit
+    };
+
+// values for interaction type
+enum TGSSensorInteraction
+    {
+    EGSSenTapping = 0,
+    EGSSenTurning,
+    EGSSenOrientation
+    };
+
+// Sensor list items ie. views
+enum TGSSenItemIds 
+    {
+    EGSSensorsListItemId = 0,
+    EGSTapCtrlListItemId,
+    EGSTurnCtrlListItemId,
+    EGSOrientationListItemId,
+    EGSExtPluginsListItemId
+    };
+
+// sensors active status displays item ids
+enum TGSSenActive
+    {
+    KGSSenorsActive
+    };
+    
+// tapping control display
+enum TGSSenTapCtrl
+    {
+    KGSTapCtrlSC = 0, // Silencing calls
+    KGSTapCtrlSA,     // Silencing alarms
+    KGSTapCtrlMes,    // Message
+    KGSTapCtrlMP      // Music player
+    };
+
+// turning control display
+enum TGSSenTurnCtrl
+    {
+    KGSTurnCtrlSC = 0,     // Silencing calls
+    KGSTurnCtrlSA,         // Silencing alarms
+    KGSDisplayOrientation  // Display orientation
+    };
+
+// orientation settings display
+enum TGSSenOrientation
+    {
+    KGSOrientationCam = 0,  // Camera
+    KGSOrientationPD        // Phone Display
+    };
+
+// Common on/off values
+enum TGSSenOnOff
+    {
+    KGSSenOff,
+    KGSSenOn
+    };
+
+#endif //  GSSENSORPLUGIN_HRH

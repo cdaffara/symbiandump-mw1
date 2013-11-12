@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+#include <data_caging_paths.hrh>
+#include "../inc/cauid.hrh"
+
+TARGET          camenuserver.exe
+TARGETTYPE      exe
+UID             0x1000008c CA_SRV_UID3
+CAPABILITY      CAP_SERVER AllFiles 
+VENDORID        VID_DEFAULT
+
+EPOCSTACKSIZE   0x5000
+
+SOURCEPATH      ../srvsrc
+SOURCE          menusrvmain.cpp
+
+
+USERINCLUDE     ../srvinc
+
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         camenu.lib
+LIBRARY         cautils.lib
+
+
+
+
+SMPSAFE

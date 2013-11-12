@@ -1,0 +1,83 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for IM Feature Plugin
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/imdlluids.hrh"
+
+
+TARGET                  imoperation.dll
+TARGETTYPE              dll
+UID                     XIMP_IM_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_IM_OPERATION                  
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+VERSION      10.0
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../../srcimoperations
+// ---------------------------------------------------------------------------
+SOURCE                  operationlaunchcleaner.cpp
+
+SOURCE                  imoperationfactoryimp.cpp
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../imconversation
+// ---------------------------------------------------------------------------
+// Client - 
+SOURCE                  operationsendmessage.cpp
+SOURCE                  operationreceivemessage.cpp
+// Adaptation - 
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../../srcutils
+// ---------------------------------------------------------------------------
+SOURCE                  imlogutils.cpp 
+
+
+USERINCLUDE             ../../srcutils
+USERINCLUDE             ../../srcimdatamodel
+USERINCLUDE             ../../srcimdatamodel/imconversation
+USERINCLUDE             ../../srcimprocessor
+USERINCLUDE             ../../srcimoperations
+USERINCLUDE             ../imconversation
+
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY                 euser.lib
+LIBRARY                 ecom.lib
+LIBRARY                 estor.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 imdatamodel.lib
+LIBRARY                 ximpprocessor.lib
+LIBRARY                 improcessor.lib
+LIBRARY                 flogger.lib 
+
+//EXPORTUNFROZEN
+
+               
+#if defined( ARMCC )
+DEFFILE ../../eabi/ 
+#elif defined ( WINSCW )
+deffile ../../bwins/ 
+#endif
+
+// End of file
+

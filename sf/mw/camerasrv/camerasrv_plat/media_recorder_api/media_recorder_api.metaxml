@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="e5ee5042b465d1611fc682f0eb7cbee2" dataversion="2.0">
+<name>Media Recorder API</name>
+<description>Interface for recording encoded audio and video.</description>
+<type>c++</type>
+<collection>CamcorderMMFPlugin</collection>
+<libs><lib name="camcmediarecorder.lib"/>
+</libs>
+<release category="platform" sinceversion="0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

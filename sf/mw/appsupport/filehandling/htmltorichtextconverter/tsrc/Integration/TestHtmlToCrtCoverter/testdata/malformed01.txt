@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<title>malformed1</title>
+
+block level tags:
+<p align= centerthis text is centred
+<pre>pre tag (should cancel alignment)
+
+<p align=rightthis text is right aligned
+<divdiv tag (should cancel alignment)
+
+<p>here's the blockquote tag:
+<blockquoteThey went in single file, running like hounds on a strong scent, and an
+ eager light was in their eyes. Nearly due west the broad swath of the marching Orcs
+ tramped its ugly slot; the sweet grass of Rohan had been bruised and blackened as
+ they passed. 
+<p><ifrom "The Two Towers" by J.R.R. Tolkien</I>
+</blockquote>
+end of blockquote tag
+
+<p>here's the center tag:
+<centercentred text</center>
+end of center tag
+
+<phere's the headings 1-6:
+<h1h1</h1>
+<h2h2</h2>
+<h3 align = centerh3 with center alignment</h3>
+<h4h4</h4>
+<h5h5</h5>
+<h6h6</h6>
+end of the headings
+
+<p>formatted text tags:
+<p><bbold</b> normal
+<p><iitalics</i> normal
+<p><uunderline</u> normal
+<p><ememphasis</em> normal
+<p><strongstrong</strong> normal
+<p><subsubscript</sub> normal
+<p><supsuperscript</sup> normal
+<p><strikestrikethrough</strike> normal
+<p><dfndfn</dfn> normal
+<p><varvar</var> normal
+<p><citecite</cite> normal
+<p><iitalics <band bold <uand underline</u> just bold and italics</b> and just italics</i> normal
+
+<p>here's the image tag with the alt attribute:
+<img SRC="http://www.foo.com/foo.gif" ALIGN="left"
+ALT="text description of image" HEIGHT=20 WIDTH=30
+DYNSRC="http://www.foo.com/foo.avi" START="fileopen"
+LOOP="infinite" BORDER=3
+
+<p>here's a table:
+<table BORDER="2" ALIGN="left" CELLPADDING="5" BORDERCOLOR="#ff0000" WIDTH="75%">
+<caption ALIGN="top">table caption</caption>
+<tr> <thtable header row 1</th> <th>table header row 1</th></tr>
+<tr> <tdtable data row 2</td> <td>table data row 2</td></tr>
+<tr> <tdtable data row 3</td> <td>table data row 3</td></tr>
+</table
+
+<p>unordered list:
+<ul TYPE="square">
+<li>unordered list item 1
+<li>unordered list item 2
+<li>unordered list item 3
+</ul>
+
+ordered list:
+<ol TYPE="A" START="3">
+<li>ordered list item 1
+<li>ordered list item 2
+<li>ordered list item 3
+</ol
+
+definition list:
+<DL>
+<DT>Term 1<dd>This is the definition of the first term.
+<DT>Term 2<dd>This is the definition of the second term.
+</DL>
+
+<p>here's the form tag (contents should be ignored): 
+<form METHOD="get" ACTION="http://hoohoo.ncsa.uiuc.edu/htbin/query" ENCTYPE="application/x-www-form-urlencoded">
+all contents of the form tag should be ignored
+<input TYPE="password" NAME="foo">
+</form>
+and the end of the form tag
+
+<p>here's the A tag
+<a href = "www.link.com">the link</a> end of A tag
+
+<p>the following tags are not recognised:
+<html> html
+<style> style
+<script> script
+<isindex> isindex
+<base> base
+<meta> meta
+<link> link
+<head> head
+<body> body
+<address> address
+<dir> dir
+<menu> menu
+<input> input
+<select> select
+<option> option
+<textarea> textarea
+<img> img
+<applet> applet
+<font> font
+<basefont> basefont
+<map> map
+<area> area
+<tt> tt
+<big> big
+<small> small
+<code> code
+<samp> samp
+<kbd> kbd
+
+<p align = "right">new paragraph right aligned
+</html>

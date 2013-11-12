@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+TARGET         afactivitylauncher.dll
+TARGETTYPE     dll
+UID            0x1000008d  0x20026784
+SECUREID       0x20026784
+
+CAPABILITY     ALL -TCB
+
+
+EPOCHEAPSIZE   0x100000 0x600000 // 1MB - 6MB
+
+MW_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE    ../inc
+SYSTEMINCLUDE  ../../inc
+
+SOURCEPATH     ../src
+SOURCE         afactivitylauncher.cpp
+SOURCE         afactivitylauncher_p.cpp
+SOURCE         afapplicationlauncher.cpp
+
+LIBRARY        euser.lib 
+LIBRARY        inetprotutil.lib
+LIBRARY        apgrfx.lib
+LIBRARY        cone.lib
+LIBRARY        apparc.lib
+LIBRARY        estor.lib
+LIBRARY        afstorageclient.lib
+STATICLIBRARY  afstoragecommon.lib
+
+DEBUGLIBRARY    flogger.lib
+
+
+SMPSAFE

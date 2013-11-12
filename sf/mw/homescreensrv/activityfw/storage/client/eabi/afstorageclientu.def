@@ -1,0 +1,29 @@
+EXPORTS
+	_ZN16CAfStorageClient10activitiesER13RPointerArrayI8CAfEntryEi @ 1 NONAME
+	_ZN16CAfStorageClient11addActivityERK8CAfEntryi @ 2 NONAME ABSENT
+	_ZN16CAfStorageClient12activityDataERP8CAfEntryRKS0_ @ 3 NONAME
+	_ZN16CAfStorageClient12getThumbnailERK7TDesC16Pv @ 4 NONAME
+	_ZN16CAfStorageClient12saveActivityERK8CAfEntryi @ 5 NONAME
+	_ZN16CAfStorageClient12waitActivityEv @ 6 NONAME
+	_ZN16CAfStorageClient14launchActivityERK8CAfEntry @ 7 NONAME
+	_ZN16CAfStorageClient14removeActivityERK8CAfEntry @ 8 NONAME
+	_ZN16CAfStorageClient14updateActivityERK8CAfEntryi @ 9 NONAME ABSENT
+	_ZN16CAfStorageClient16notifyDataChangeEv @ 10 NONAME
+	_ZN16CAfStorageClient21applicationActivitiesER13RPointerArrayI8CAfEntryERKS1_ @ 11 NONAME
+	_ZN16CAfStorageClient27removeApplicationActivitiesERK8CAfEntry @ 12 NONAME
+	_ZN16CAfStorageClient4NewLER23MAfAsyncRequestObserver @ 13 NONAME
+	_ZN16CAfStorageClient5NewLCER23MAfAsyncRequestObserver @ 14 NONAME
+	_ZN16CAfStorageClientD0Ev @ 15 NONAME
+	_ZN16CAfStorageClientD1Ev @ 16 NONAME
+	_ZN16CAfStorageClientD2Ev @ 17 NONAME
+	_ZTI22CAfAsyncRequestPrivate @ 18 NONAME
+	_ZTI23CAfStorageClientPrivate @ 19 NONAME
+	_ZTI26CAfThumbnailRequestPrivate @ 20 NONAME
+	_ZTI30RAfStorageClientImplementation @ 21 NONAME
+	_ZTI8CAfEntry @ 22 NONAME
+	_ZTV22CAfAsyncRequestPrivate @ 23 NONAME
+	_ZTV23CAfStorageClientPrivate @ 24 NONAME
+	_ZTV26CAfThumbnailRequestPrivate @ 25 NONAME
+	_ZTV30RAfStorageClientImplementation @ 26 NONAME
+	_ZTV8CAfEntry @ 27 NONAME
+

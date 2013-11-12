@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="e29438579af68bc79e7d149c9d33e060" dataversion="2.0">
+<name>operation provider api</name>
+<description>Operation Provider API gives possibility to extend or fully replace the rule engine, which is used in Context Framework.</description>
+<type>c++</type>
+<collection>contextframework</collection>
+<libs><lib name="cfoperationpluginservices.lib"/>
+</libs>
+<release category="platform" sinceversion="0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

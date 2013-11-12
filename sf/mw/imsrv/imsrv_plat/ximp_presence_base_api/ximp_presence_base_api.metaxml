@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<api id="e64d5c92535182d1f85426f8750dbc62" dataversion="1.0">
+<name>XIMP Presence Base API</name>
+<description>Contains common base interface and definitions shared between all other XIMP Presence Feture Plug-in APIs.</description>
+<type>c++</type>
+<subsystem>ximpfw</subsystem>
+<libs><lib name="presencecacheecomhook.lib"/>
+<lib name="presencedatamodel.lib"/>
+<lib name="presencedatamodelhook.lib"/>
+<lib name="presenceecomhook.lib"/>
+<lib name="presencemanager.lib"/>
+<lib name="presenceoperation.lib"/>
+<lib name="presencecacheclient.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

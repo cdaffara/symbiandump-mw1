@@ -1,0 +1,10 @@
+EXPORTS
+	_ZN26CBackupRestoreNotification4NewLERK7TDesC16R34MBackupRestoreNotificationObserver @ 1 NONAME
+	_ZN26CBackupRestoreNotificationD0Ev @ 2 NONAME
+	_ZN26CBackupRestoreNotificationD1Ev @ 3 NONAME
+	_ZN26CBackupRestoreNotificationD2Ev @ 4 NONAME
+	_ZNK26CBackupRestoreNotification16BackupInProgressEv @ 5 NONAME
+	_ZNK26CBackupRestoreNotification17RestoreInProgressEv @ 6 NONAME
+	_ZTI26CBackupRestoreNotification @ 7 NONAME ; #<TI>#
+	_ZTV26CBackupRestoreNotification @ 8 NONAME ; #<VT>#
+

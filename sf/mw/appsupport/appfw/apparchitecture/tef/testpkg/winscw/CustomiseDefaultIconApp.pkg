@@ -1,0 +1,32 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+;Languages
+&EN
+
+;Header
+; SA = Symbian Application
+; RU = Rom Upgrade
+#{"CustomiseDefaultIconApp"}, (0x10208181), 1, 0, 0, TYPE=SA
+
+%{"Nokia India Pvt Ltd"}
+:"Nokia India Pvt Ltd"
+
+"\epoc32\release\winscw\udeb\CustomiseDefaultIconApp.exe"-"!:\sys\bin\CustomiseDefaultIconApp.exe"
+"\epoc32\release\winscw\udeb\z\apparctestregfiles\CustomiseDefaultIconApp_reg.rsc"-"!:\private\10003a3f\import\apps\CustomiseDefaultIconApp_reg.rsc"
+"\epoc32\release\winscw\udeb\z\apparctestregfiles\CustomiseDefaultIconApp_loc.rsc"-"!:\resource\apps\CustomiseDefaultIconApp_loc.rsc"
+

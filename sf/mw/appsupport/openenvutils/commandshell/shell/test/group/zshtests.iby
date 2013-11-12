@@ -1,0 +1,68 @@
+// Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __OESHELLTESTS_IBY__
+#define __OESHELLTESTS_IBY__
+
+#include <zsh.iby>
+	
+
+//test shell scripts
+data=EPOCROOT##epoc32\winscw\c\zsh\zshtests_auto1.sh  zsh\zshtests_auto1.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\zshtests_auto2.sh  zsh\zshtests_auto2.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\zshtests_manual.sh zsh\zshtests_manual.sh
+
+data=EPOCROOT##epoc32\winscw\c\zsh\aliastest.sh	zsh\aliastest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\autoloadtest.sh	zsh\autoloadtest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\breaktest.sh	zsh\breaktest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\cdtest1.sh	zsh\cdtest1.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\cdtest2.sh	zsh\cdtest2.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\continuetest.sh	zsh\continuetest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\dirstest.sh	zsh\dirstest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\dottest.sh	zsh\dottest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\evaltest.sh	zsh\evaltest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\exittest.sh	zsh\exittest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\fctest.sh	zsh\fctest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\fctest_manual.sh	zsh\fctest_manual.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\functionstest.sh	zsh\functionstest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\printtest.sh	zsh\printtest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\pwdtest.sh	zsh\pwdtest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\readtest_manual.sh	zsh\readtest_manual.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\sanity_auto.sh	zsh\sanity_auto.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\setopttest.sh	zsh\setopttest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\util_set17.sh	zsh\util_set17.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\shifttest.sh	zsh\shifttest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\typesettest1.sh	zsh\typesettest1.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\typesettest2.sh	zsh\typesettest2.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\ls.sh	zsh\ls.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\unhashtest.sh	zsh\unhashtest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\unsetopttest.sh	zsh\unsetopttest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\unsettest.sh	zsh\unsettest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\util_source.sh	zsh\util_source.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\whencetest.sh	zsh\whencetest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\util_dot1.sh		zsh\util_dot1.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\externalcmd_test.sh		zsh\externalcmd_test.sh
+
+data=EPOCROOT##epoc32\winscw\c\zsh\findtest1.sh	zsh\findtest1.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\findtest2.sh	zsh\findtest2.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\findtest3.sh	zsh\findtest3.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\greptest1.sh	zsh\greptest1.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\greptest2.sh	zsh\greptest2.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\pstest.sh	zsh\pstest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\miniziptest.sh	zsh\miniziptest.sh
+data=EPOCROOT##epoc32\winscw\c\zsh\unziptest.sh	zsh\unziptest.sh
+file=ABI_DIR\BUILD_DIR\tredirect.exe 		        	sys\bin\tredirect.exe
+data=EPOCROOT##epoc32\winscw\c\zsh\redirecttest.sh	zsh\redirecttest.sh
+#endif

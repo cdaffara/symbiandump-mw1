@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2005-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for GSAccessoryPlugin.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../cenrep/AccessoriesCRKeys.h    MW_LAYER_PLATFORM_EXPORT_PATH( accessoriescrkeys.h )
+// ../rom/GSAccsPlugin.iby 	     CORE_MW_LAYER_IBY_EXPORT_PATH( gsaccsplugin.iby )
+// ../rom/GSAccsPluginResources.iby LANGUAGE_MW_LAYER_IBY_EXPORT_PATH( gsaccspluginresources.iby )
+// ../loc/GSAccsPlugin.loc 	     MW_LAYER_LOC_EXPORT_PATH( gsaccsplugin.loc )
+
+// Configurations
+../conf/GSAccessoriesPlugin.confml            MW_LAYER_CONFML(gsaccessoriesplugin.confml)
+../conf/GSAccessoriesPlugin_101F877D.crml     MW_LAYER_CRML(gsaccessoriesplugin_101F877D.crml)
+../conf/GSAccessoriesPlugin_101F8779.crml     MW_LAYER_CRML(gsaccessoriesplugin_101F8779.crml)
+../conf/GSAccessoriesPlugin_1020730B.crml     MW_LAYER_CRML(gsaccessoriesplugin_1020730B.crml)
+../conf/GSAccessoriesPlugin_10207194.crml     MW_LAYER_CRML(gsaccessoriesplugin_10207194.crml)
+
+PRJ_MMPFILES
+// GSAccessoryPlugin.mmp
+
+PRJ_EXTENSIONS
+START EXTENSION s60/mifconv
+  OPTION TARGETFILE gsaccplugin.mif
+  OPTION HEADERFILE gsaccplugin.mbg
+  OPTION SOURCES -c8,8 qgn_prop_set_accessory_sub
+END

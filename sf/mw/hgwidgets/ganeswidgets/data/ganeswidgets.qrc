@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/mark.svg</file>
+        <file>hgwidget.css</file>
+        <file>hgwidget.widgetml</file>
+        <file>hgmediawall.css</file>
+        <file>hgmediawall_color.css</file>
+        <file>hgmediawall.widgetml</file>
+        <file>hgindexfeedback.css</file>
+        <file>fadein.fxml</file>
+        <file>fadeout.fxml</file>
+        <file>fadeoutin.fxml</file>
+    </qresource>
+</RCC>

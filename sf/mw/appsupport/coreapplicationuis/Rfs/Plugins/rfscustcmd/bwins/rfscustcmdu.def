@@ -1,0 +1,6 @@
+EXPORTS
+	?RfsCustCmdFirstBootNewL@RfsCustCmdFactory@@SAPAVMSsmCustomCommand@@XZ @ 1 NONAME ; class MSsmCustomCommand * RfsCustCmdFactory::RfsCustCmdFirstBootNewL(void)
+	?RfsCustCmdDeepNewL@RfsCustCmdFactory@@SAPAVMSsmCustomCommand@@XZ @ 2 NONAME ; class MSsmCustomCommand * RfsCustCmdFactory::RfsCustCmdDeepNewL(void)
+	?RfsCustCmdPreUiNewL@RfsCustCmdFactory@@SAPAVMSsmCustomCommand@@XZ @ 3 NONAME ; class MSsmCustomCommand * RfsCustCmdFactory::RfsCustCmdPreUiNewL(void)
+	?RfsCustCmdPostUiNewL@RfsCustCmdFactory@@SAPAVMSsmCustomCommand@@XZ @ 4 NONAME ; class MSsmCustomCommand * RfsCustCmdFactory::RfsCustCmdPostUiNewL(void)
+

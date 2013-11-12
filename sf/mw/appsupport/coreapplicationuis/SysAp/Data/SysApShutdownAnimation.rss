@@ -1,0 +1,93 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  It contains resources for Shutdown animation.
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    SDAN
+
+//  INCLUDES
+#include <uikon.rh>
+#include <avkon.rh>
+
+/**
+* Instructions for enabling operator variated animation:
+*
+* - Add #include of *.mbg file
+* - Follow instruction to fill in appropriate value for r_anim_duration,
+*   r_shutdown_anim, r_shutdown_tone_path and r_shutdownanim_frames.
+* - Recompile SysApShutdownAnimation.rss resource file. Note: if you use abld script
+*   check that date has been modified; it might be required to remove
+*   previous compiled resource file.
+* - You can rename compiled resource file for specific locale, just like
+*   in case of normal resources.
+* - When making ROM image, make sure that the necessary compiled Shutdown 
+*   resource files are included and the Shutdown animation file exists.
+* - Test that ROM image works OK for each locale.
+*/
+
+#include <SysAp.MBG>
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+
+STRUCT ANIM_DURATION
+    {
+    WORD time;
+    }
+
+RESOURCE ANIM_DURATION r_anim_duration
+    {
+    //ENABLE ANIMATION: Fill in duration of time needed to display animation
+    //                  If time is 0, animation is disabled.
+    time = 0; //milliseconds
+    }
+
+RESOURCE BMPANIM_DATA r_shutdown_anim
+    {
+    //ENABLE ANIMATION: Fill in time of single frame in ms
+    frameinterval = 0;
+
+    playmode = EAknBitmapAnimationPlayModePlay;
+
+    //ENABLE ANIMATION: Fill in path for mbm file
+    //Example: "z:\\resource\\apps\\SysAp.mbm"
+    //        
+    bmpfile = "";
+
+    frames = r_shutdownanim_frames;
+    }
+
+RESOURCE ARRAY r_shutdownanim_frames 
+    {
+    items = 
+        {
+        //ENABLE ANIMATION: Add animation frames
+        };
+    }
+
+RESOURCE TBUF r_shutdown_tone_path
+    {
+    //ENABLE ANIMATION: Fill in the shutdown tone path
+    //Example: "z:\\private\\100058F3\\shutdowntone.mid"
+    buf = "";
+    }
+
+
+// End of File
+
+

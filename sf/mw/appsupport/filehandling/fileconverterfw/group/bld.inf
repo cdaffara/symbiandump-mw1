@@ -1,0 +1,101 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// File/data converter framework
+// 
+//
+
+/**
+ @file
+*/
+
+
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+// specify the source file followed by its destination here
+// copy will be used to copy the source file to its destination
+// If there's no destination then the source file will be copied
+// to the same name in /epoc32/include
+
+../INC/CONARC.H SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(conarc.h)	
+../INC/CONCNF.H SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(concnf.h)	
+../INC/CONFNDR.H SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(confndr.h)
+../INC/CONLIST.H SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(conlist.h)	
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+../INC/CONSTD.H /epoc32/include/constd.h	
+#endif
+../INC/EXBUF.H SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(exbuf.h)		
+../INC/INBUF.H SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(inbuf.h)		
+../INC/CNFTOOL.RH SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(cnftool.rh)
+../INC/CONPLUGIN.RH SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(conplugin.rh)
+
+// We should use the new epoccnf.pl tool, if __CNF_FORMAT_V2__ is defined.
+// Otherwise we must use the old version as the version 2 code won't exist.
+../CNFTOOL/epoccnf.pl		/epoc32/tools/epoccnf.pl
+
+../group/conarc.iby	/epoc32/rom/include/conarc.iby
+
+PRJ_MMPFILES
+
+../group/CONARC.MMP
+
+PRJ_TESTMMPFILES
+
+
+../TSRC/TCON1_V2.MMP support
+../TSRC/TCON2_V2.MMP support
+../TSRC/TCON3_V2.MMP support
+../TSRC/t_conV2_V2.mmp
+../TSRC/t_convBadUid_V2.mmp
+
+../Tef/TConArcTestServer.mmp
+../TSRC/TTestEcomConverter.mmp
+
+
+
+PRJ_TESTEXPORTS
+../Tef/scripts/conarctest_run.bat              z:/conarctest/conarctest_run.bat
+../Tef/scripts/conarctest_run.bat              /epoc32/release/winscw/udeb/conarctest_run.bat
+../Tef/scripts/conarctest_run.bat              /epoc32/release/winscw/urel/conarctest_run.bat
+../Tef/scripts/conarctest_T_B64Cnv.script      z:/conarctest/conarctest_t_b64cnv.script
+../Tef/scripts/conarctest_T_Cnf.script         z:/conarctest/conarctest_t_cnf.script
+../Tef/scripts/conarctest_T_LoadEComCnv.script z:/conarctest/conarctest_t_loadecomcnv.script
+../group/ConarcTest.iby	                       /epoc32/rom/include/conarctest.iby
+
+ // WINSCW UDEB
+../TSRC/w7allchr.doc.b64	/epoc32/release/winscw/udeb/z/resource/test/conarc/w7allchr.doc.b64
+../TSRC/w7allchr.doc.qp		/epoc32/release/winscw/udeb/z/resource/test/conarc/w7allchr.doc.qp
+../TSRC/w7allchrwosplchr.doc.qp	/epoc32/release/winscw/udeb/z/resource/test/conarc/w7allchrwosplchr.doc.qp
+ 
+../TSRC/W7ALLCHR.DOC 		/epoc32/release/winscw/udeb/z/resource/test/conarc/w7allchr.doc
+../TSRC/RELEASE.TXT 		/epoc32/release/winscw/udeb/z/resource/test/conarc/release.txt
+../TSRC/release.txt.etext	/epoc32/release/winscw/udeb/z/resource/test/conarc/release.txt.etext
+ 
+// WINSCW UREL
+../TSRC/w7allchr.doc.b64	/epoc32/release/winscw/urel/z/resource/test/conarc/w7allchr.doc.b64
+../TSRC/w7allchr.doc.qp		/epoc32/release/winscw/urel/z/resource/test/conarc/w7allchr.doc.qp
+../TSRC/w7allchrwosplchr.doc.qp		/epoc32/release/winscw/urel/z/resource/test/conarc/w7allchrwosplchr.doc.qp
+../TSRC/W7ALLCHR.DOC 		/epoc32/release/winscw/urel/z/resource/test/conarc/w7allchr.doc
+../TSRC/RELEASE.TXT 		/epoc32/release/winscw/urel/z/resource/test/conarc/release.txt
+../TSRC/release.txt.etext	/epoc32/release/winscw/urel/z/resource/test/conarc/release.txt.etext
+
+// for ROM-builds
+../TSRC/w7allchr.doc.b64	/epoc32/data/z/resource/test/conarc/w7allchr.doc.b64
+../TSRC/w7allchr.doc.qp		/epoc32/data/z/resource/test/conarc/w7allchr.doc.qp
+../TSRC/w7allchrwosplchr.doc.qp		/epoc32/data/z/resource/test/conarc/w7allchrwosplchr.doc.qp
+../TSRC/W7ALLCHR.DOC 		/epoc32/data/z/resource/test/conarc/w7allchr.doc
+../TSRC/RELEASE.TXT 		/epoc32/data/z/resource/test/conarc/release.txt
+../TSRC/release.txt.etext	/epoc32/data/z/resource/test/conarc/release.txt.etext

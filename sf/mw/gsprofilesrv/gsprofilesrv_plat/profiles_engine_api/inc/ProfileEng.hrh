@@ -1,0 +1,74 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Profiles Engine enumeration TProfileSettingKeyType
+*		and TProfileSettingId.
+*
+*/
+
+
+#ifndef __PROFILEENG_HRH__
+#define __PROFILEENG_HRH__
+
+#define PROFILES_ENGINE_RESOURCE_SIGNATURE 75
+#define PROFILES_MAX_NAME_LENGTH           64
+#define PROFILES_MAX_STATUS_MSG_LENGTH     40
+#define PROFILES_MAX_CALL_OBJECT_TEXT_LENGTH 1000
+
+// DATA TYPES
+enum TProfileSettingKeyType
+    {
+    EProfileSettingKeyTypeInt = 0,
+    EProfileSettingKeyTypeString = 1,
+    EProfileSettingKeyTypeBin = 2,
+    EProfileSettingKeyTypeReal = 3
+    };
+
+enum TProfileSettingId
+    {
+    EProfileSettingIdModifiableFlags = 0x00000000,
+    EProfileSettingIdVisibleFlags = 0x00000001,
+    EProfileSettingIdProfileName = 0x00000002,
+    EProfileSettingIdAlertForGroups = 0x00000003,
+    EProfileSettingIdRingingTone = 0x00000004,
+    EProfileSettingIdRingingTone2 = 0x00000005,
+    EProfileSettingIdMsgTone = 0x00000006,
+    EProfileSettingIdRingingType = 0x00000007,
+    EProfileSettingIdKeypadVolume = 0x00000008,
+    EProfileSettingIdRingingVolume = 0x00000009,
+    EProfileSettingIdVibra = 0x0000000A,
+    EProfileSettingIdWarnAndGameTones = 0x0000000B,
+    EProfileSettingIdImTone = 0x0000000C,
+    EProfileSettingIdEmailTone = 0x0000000D,
+    EProfileSettingIdVideoCallTone = 0x0000000E,
+    EProfileSettingIdStatusMsg = 0x0000000F,
+    EProfileSettingIdAvailAttribute = 0x00000010,
+    EProfileSettingIdMediaVolume = 0x00000011,
+    EProfileSettingIdTextToSpeechTone = 0x00000012,
+    EProfileSettingIdNameChanged = 0x00000013,
+    EProfileSettingIdCallObjectContent = 0x00000014,
+    EProfileSettingIdPttTone = 0x00000015,
+    EProfileSettingIdPttStatus = 0x00000016,
+    EProfileSettingId3DEffect = 0x00000017,
+    EProfileSettingId3DEcho = 0x00000018,
+    EProfileSettingIdTactileFeedback = 0x00000019,
+    EProfileSettingIdAudioFeedback = 0x0000001A,
+    EProfileSettingIdReminderTone = 0x0000001B,
+    EProfileSettingIdClockAlarmTone = 0x0000001C,
+    EProfileSettingIdAlertVibra = 0x0000001D
+    };
+
+#endif // __PROFILEENG_HRH__
+
+// End of File
+

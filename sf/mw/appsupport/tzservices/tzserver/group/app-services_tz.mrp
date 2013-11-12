@@ -1,0 +1,12 @@
+component	app-services_tz
+source	\sf\mw\appsupport\tzservices\tzserver
+binary	\sf\mw\appsupport\tzservices\tzserver\group	all
+
+exports	\sf\mw\appsupport\tzservices\tzserver\group
+
+notes_source	\component_defs\release.src
+
+
+ipr E 
+ipr T \sf\mw\appsupport\tzservices\tzserver\test
+

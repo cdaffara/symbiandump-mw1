@@ -1,0 +1,40 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Start Method as EWaitForStart, a valid timeout interval, a valid launch retry count and 
+// start up type as EStartupProcess and for EStartupApp.
+// Make few test AMC(s) EXE(s) to wait for longer than timeout interval when AMAStarter tries to 
+// launch it for the first time.
+// The test AMC EXE which is timed out should be launched successfully after first retry.
+// 
+//
+
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-AMASTARTER-0001
+//! @SYMTestCaseDesc		To check correct launch of AMCs with and without any attempt to retry.
+//! @SYMPREQ 			PREQ871
+//! @SYMREQ			REQ9141
+//! @SYMTestType		CIT
+//! @SYMTestPriority		Critical
+//! @SYMTestStatus 		3. Released
+//! @SYMTestCaseDependencies	tamastarter_amaadder has been launched as part of a modified test SSC resource file.
+//! @SYMTestActions		Add the Dsc item(s) for the test AMC(s) to be launched at start up, with following attributes: 
+//! @SYMTestExpectedResults 	The test AMC EXE should be launched successfully within the timeout interval without any retries.
+
+PRINT Run AmaStarterSSC tests
+
+LOAD_SUITE tamastarter_server
+
+START_TESTCASE API-APPFWK-AMASTARTER-0001
+RUN_TEST_STEP 1000 tamastarter_server AmaStarterSsc
+END_TESTCASE API-APPFWK-AMASTARTER-0001

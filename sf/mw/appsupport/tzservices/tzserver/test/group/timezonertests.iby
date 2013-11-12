@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __TIMEZONERTESTS_IBY__
+#define __TIMEZONERTESTS_IBY__
+
+//
+// Executables and libraries for RTest tests.
+//
+
+file=ABI_DIR\BUILD_DIR\t_databaseupdate.exe					SYSTEM_BINDIR\t_databaseupdate.exe
+file=ABI_DIR\BUILD_DIR\tz_userdata.exe						SYSTEM_BINDIR\tz_userdata.exe
+file=ABI_DIR\BUILD_DIR\tz_backup.exe						SYSTEM_BINDIR\tz_backup.exe
+file=ABI_DIR\BUILD_DIR\t_tzdatachangenotification.exe 		SYSTEM_BINDIR\t_tzdatachangenotification.exe
+file=ABI_DIR\BUILD_DIR\t_tzswiobserver.exe					SYSTEM_BINDIR\t_tzswiobserver.exe
+file=ABI_DIR\BUILD_DIR\t_tzdatabaseupdate.exe   			SYSTEM_BINDIR\t_tzdatabaseupdate.exe
+file=ABI_DIR\BUILD_DIR\t_tzlocalizationdbcreationtests.exe	SYSTEM_BINDIR\t_tzlocalizationdbcreationtests.exe
+file=ABI_DIR\BUILD_DIR\switest.dll							SYSTEM_BINDIR\switest.dll
+
+//
+// Data for RTest tests.
+//
+
+data=DATAZ_\testresourcefiles\tzdb.dbz						\testresourcefiles\tzdb.dbz
+data=DATAZ_\testresourcefiles\tz_userdata_empty.db			\testresourcefiles\tz_userdata_empty.db
+data=DATAZ_\testresourcefiles\locDbStart_test.db			\testresourcefiles\locDbStart_test.db
+data=DATAZ_\testresourcefiles\timezonegroups.r01 			\testresourcefiles\timezonegroups.r01
+data=DATAZ_\testresourcefiles\timezonegroups.r02			\testresourcefiles\timezonegroups.r02
+data=DATAZ_\testresourcefiles\timezonegroups.rsc			\testresourcefiles\timezonegroups.rsc
+data=DATAZ_\testresourcefiles\timezones.r01					\testresourcefiles\timezones.r01
+data=DATAZ_\testresourcefiles\timezones.r02					\testresourcefiles\timezones.r02
+data=DATAZ_\testresourcefiles\timezones.rsc					\testresourcefiles\timezones.rsc
+data=DATAZ_\testresourcefiles\signed_timezone_upgrade.sis	\testresourcefiles\signed_timezone_upgrade.sis
+data=DATAZ_\data\TEFSigned_timezone_upgrade.sis				data\TEFSigned_timezone_upgrade.sis
+
+#endif

@@ -1,0 +1,55 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Conarc plug-in resource file.
+// 
+//
+
+#include <conplugin.rh>
+
+RESOURCE CONARC_RESOURCE_FILE
+	{
+	converter_list=
+		{
+		CONVERTER_DATA
+        		{
+			conv_uid  = 0x1000a90e;
+
+			from_list =
+				{
+				MIME
+					{
+					type = "text/html";
+					lang_list =
+						{
+						// The following are used as 'human readable names' for the mime types.
+						LANG_DATA{lang_id=01; translation="html";}
+						};
+					}
+				};
+
+			to_list   =
+				{
+				MIME
+					{
+					type = "epoc32/crichtext";
+					lang_list =
+						{
+						// The following are used as 'human readable names' for the mime types.
+						LANG_DATA{lang_id=01; translation="Epoc rich text";}
+						};
+					}
+				};
+			}
+		};
+	}

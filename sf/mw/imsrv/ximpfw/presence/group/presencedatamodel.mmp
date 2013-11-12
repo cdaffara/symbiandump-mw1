@@ -1,0 +1,181 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for Presence Data Model
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/ximpdlluids.hrh"
+
+
+
+TARGET                  presencedatamodel.dll
+TARGETTYPE              dll
+UID                     XIMP_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_COMMON
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresencedatamodel/presentitygroups
+// ---------------------------------------------------------------------------
+// Subscription items
+SOURCE                  grouplistsubscriptionitem.cpp
+SOURCE                  groupcontentsubscriptionitem.cpp
+
+// API data objects
+SOURCE                  presentitygroupinfoimp.cpp
+SOURCE                  presentitygroupmemberinfoimp.cpp
+
+// API data events
+SOURCE                  presentitygrouplisteventimp.cpp
+SOURCE                  presentitygroupcontenteventimp.cpp
+
+
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresencedatamodel/presencewatching
+// ---------------------------------------------------------------------------
+// Subscription items
+SOURCE                  presentitypresencesubscriptionitem.cpp
+SOURCE                  presentitygroupmemberspresencesubscriptionitem.cpp
+
+// API data events
+SOURCE                  presentitypresenceeventimp.cpp
+
+
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresencedatamodel/presenceauthorization
+// ---------------------------------------------------------------------------
+// Subscription items
+SOURCE                  blocklistsubscriptionitem.cpp
+SOURCE                  grantrequestlistsubscriptionitem.cpp
+
+// Configuration items
+SOURCE                  presenceconfigurationitem.cpp
+SOURCE                  presencetoeveryoneconfigurationitem.cpp
+SOURCE                  groupmemberspresenceconfigurationitem.cpp
+
+// API data objects
+SOURCE                  presenceblockinfoimp.cpp
+SOURCE                  presencegrantrequestinfoimp.cpp
+
+// API data events
+SOURCE                  presenceblocklisteventimp.cpp
+SOURCE                  presencegrantrequestlisteventimp.cpp
+
+
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresencedatamodel/presencepublishing
+// ---------------------------------------------------------------------------
+// Subscription items
+SOURCE                  ownpresencesubscriptionitem.cpp
+SOURCE                  watcherlistsubscriptionitem.cpp
+
+// API data objects
+SOURCE                  presencewatcherinfoimp.cpp
+
+
+// API data events
+SOURCE                  ownpresenceeventimp.cpp
+SOURCE                  presencewatcherlisteventimp.cpp
+
+
+// Presence information
+SOURCE                  documentutils.cpp
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresencedatamodel/presenceinfo
+// ---------------------------------------------------------------------------
+
+// presence info API
+SOURCE                  presenceinfofieldimp.cpp
+SOURCE                  presenceinfofieldcollectionimp.cpp
+SOURCE                  presenceinfofieldvaluetextimp.cpp
+SOURCE                  presenceinfofieldvaluebinaryimp.cpp
+SOURCE                  presenceinfofieldvalueenumimp.cpp
+SOURCE                  devicepresenceinfoimp.cpp
+SOURCE                  personpresenceinfoimp.cpp
+SOURCE                  servicepresenceinfoimp.cpp
+SOURCE                  presenceinfoimp.cpp
+SOURCE                  presenceinfofilterimp.cpp
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresencedatamodel/presencecache
+// ---------------------------------------------------------------------------
+
+SOURCE                  presencebuddyinfoimp.cpp 
+SOURCE                  presencebuddyinfolistimp.cpp
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresencedatamodel
+// ---------------------------------------------------------------------------
+SOURCE                  presencedatacacheimp.cpp
+SOURCE                  presenceobjectfactoryimp.cpp
+// filter store
+SOURCE                  presencefilterstore.cpp
+
+SOURCE                  presenceapidataobjfactory.cpp
+SOURCE                  presenceeventcodec.cpp
+
+SOURCE                  presenceapidataobjfactoryaccessor.cpp
+
+
+USERINCLUDE             ../../core/srcdatamodel
+USERINCLUDE             ../../core/srcprocessor
+USERINCLUDE             ../../core/srcoperations
+USERINCLUDE             ../../core/srcutils
+
+
+USERINCLUDE             ../srcpresencedatamodel
+USERINCLUDE             ../srcpresencedatamodel/presentitygroups
+USERINCLUDE             ../srcpresencedatamodel/presencewatching
+USERINCLUDE             ../srcpresencedatamodel/presenceauthorization
+USERINCLUDE             ../srcpresencedatamodel/presencepublishing
+USERINCLUDE             ../srcpresencedatamodel/presenceinfo
+USERINCLUDE             ../srcpresencedatamodel/presencecache
+USERINCLUDE             ../group
+
+// TODO remove unnecessary
+SYSTEMINCLUDE           ../../inc/core/base
+SYSTEMINCLUDE           ../../inc/core/datamodel
+SYSTEMINCLUDE           ../../inc/core/protocolplugin
+SYSTEMINCLUDE           ../../inc/core/protocolpluginhost
+SYSTEMINCLUDE           ../../inc/presence/presencedatamodel
+SYSTEMINCLUDE           ../../inc/presence/presencemanagement
+SYSTEMINCLUDE           ../../inc/presence/presenceprotocolplugin
+SYSTEMINCLUDE           ../../inc/presence/presenceprotocolpluginhost
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 euser.lib
+LIBRARY                 bafl.lib
+LIBRARY                 estor.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 ecom.lib
+
+
+
+// End of file

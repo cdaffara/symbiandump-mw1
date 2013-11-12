@@ -1,0 +1,58 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  XIMP Framework Protocol Plugin API interface IDs.
+*
+*/
+
+#ifndef XIMPPROTOCOLPLUGINIFIDS_HRH
+#define XIMPPROTOCOLPLUGINIFIDS_HRH
+
+
+/**
+ * @defgroup ximpprotocolpluginapi XIMP Protocol Plugin API
+ * @ingroup ximpcoreapi
+ *
+ * XIMP Framework Protocol Plugin API contains abstract
+ * interfaces what protocol adaptation plug-ins must implement.
+ * XIMP Framework will instantiate protocol plug-ins through
+ * ECom framework and call methods declared in these interfces.
+ *
+ * XIMP Framework will instantiate and execute protocol
+ * implementations on dedicated Symbian OS server process.
+ * Protocol implementations are loaded on need basis, based
+ * on XIMP Framework clients requests. Protocol adaptation
+ * must derive from CXIMPProtocolPluginBase and make  
+ * concrete protocol implementation available through ECom
+ * framework.
+ *
+ * @since S60 v3.2
+ */
+
+// ECom interface UID for XIMPFw Protocol Plugin Base
+#define XIMP_ECOM_IF_UID_PROTOCOL_PLUGIN_BASE_INTERFACE     0x10282DD7
+
+
+// Protocol plugin IF id's
+// 30xx - ximp related
+// 31xx - presence related
+// 32xx - instant messaging related
+
+// Interface IDs for XIMPFw Protocol Plugin API interfaces
+#define XIMP_IF_ID_PROTOCOL_PLUGIN                          3001
+#define XIMP_IF_ID_PROTOCOL_CONNECTION                      3002
+
+
+#endif // XIMPPROTOCOLPLUGINIFIDS_HRH
+
+

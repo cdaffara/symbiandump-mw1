@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="80ffb4d35e0885ccfb82531ca2fd7863" dataversion="2.0">
+<name>Media Recorder Sink API</name>
+<description>Abstract Sink API to where Media Recorder writes audio and video data.</description>
+<type>c++</type>
+<collection>CamcorderMMFPlugin</collection>
+<libs></libs>
+<release category="platform" sinceversion="0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

@@ -1,0 +1,63 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#include "CHtmlToCrtConverter.rls"
+NAME H2RT
+
+STRUCT CNV_SIGNATURE
+	{
+    LONG cnv_signature   = 0;
+    SRLINK cnv_selfreference;
+	}
+  
+RESOURCE CNV_SIGNATURE {}
+
+STRUCT CNV_TEXT
+	{
+	LTEXT text;
+	}
+ 
+RESOURCE CNV_TEXT r_cnv_image_tag_default_text
+	{
+	text=STRING_r_cnv_image_tag_default_text1;
+	}
+
+RESOURCE CNV_TEXT r_cnv_default_character_set
+	{
+	text=STRING_r_cnv_default_character_set1;
+	}
+
+STRUCT CNV_COLOR
+	{
+	BYTE color_r = 0;
+	BYTE color_g = 0;
+	BYTE color_b = 0;
+	}
+
+RESOURCE CNV_COLOR r_cnv_colour_anchor_tag_href
+	{
+	//blue
+    color_r = 0;
+    color_g = 0;
+    color_b = 0xFF;
+	}
+
+RESOURCE CNV_COLOR r_cnv_colour_image_tag_src
+	{
+	//blue
+    color_r = 0;
+    color_g = 0;
+    color_b = 0xFF;
+	}

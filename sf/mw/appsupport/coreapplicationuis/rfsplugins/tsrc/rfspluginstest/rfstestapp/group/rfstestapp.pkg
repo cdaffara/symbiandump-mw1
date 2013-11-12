@@ -1,0 +1,49 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  ?Description
+;
+
+
+;Languages
+&EN
+
+#{"rfstestapp"},(0x0AA01498),1,0,0,TYPE=SA
+
+;Localised Vendor name
+%{"RfsTestApp EN"}
+
+; Vendor name
+: "RfsTestApp"
+
+"\epoc32\release\armv5\urel\rfstestapp.exe"-"e:\sys\bin\rfstestapp.exe"
+"\epoc32\release\armv5\urel\testdatacreator.exe"-"e:\sys\bin\testdatacreator.exe"
+"\epoc32\data\z\resource\apps\rfstestapp.rsc"-"e:\resource\apps\rfstestapp.rsc"
+"\epoc32\data\z\private\10003a3f\apps\rfstestapp_reg.rsc"-"e:\private\10003a3f\import\apps\rfstestapp_reg.rsc"
+"..\data\testspec_folder_structure.spc"-"e:\testdata\testspec_folder_structure.spc"
+"..\data\testspec_many_files.spc"-"e:\testdata\testspec_many_files.spc"
+"..\data\testspec_big_files.spc"-"e:\testdata\testspec_big_files.spc"
+"..\data\testexclude_everything.exc"-"e:\testdata\testexclude_everything.exc"
+"..\data\testexclude_nothing.exc"-"e:\testdata\testexclude_nothing.exc"
+"..\data\testexclude_2.exc"-"e:\testdata\testexclude_2.exc"
+"..\data\testexclude_3.exc"-"e:\testdata\testexclude_3.exc"
+"..\data\testexclude_4.exc"-"e:\testdata\testexclude_4.exc"
+"..\data\testexclude_5.exc"-"e:\testdata\testexclude_5.exc"
+"..\data\testexclude_6.exc"-"e:\testdata\testexclude_6.exc"
+"..\data\testexclude_7.exc"-"e:\testdata\testexclude_7.exc"
+"..\data\testexclude_8.exc"-"e:\testdata\testexclude_8.exc"
+
+"..\data\app1_spec.spc"-"e:\testdata\appspec\app1_spec.spc"
+"..\data\app87654321_spec.spc"-"e:\testdata\appspec\app87654321_spec.spc"
+"..\data\app87654321_exclude_sth.exc"-"e:\testdata\appspec\app87654321_exclude_sth.exc"
+"..\data\app1_exclude_everything.exc"-"e:\testdata\appspec\app1_exclude_everything.exc"

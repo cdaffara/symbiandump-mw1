@@ -1,0 +1,46 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-OOMStep-TestOOMConstructionL-0001
+//! @SYMTestCaseDesc 		Test methods CApaScanningAppFinder::NewL, CApaProcess::NewL, CApaProcess::AddNewDocumentL, CApaProcess::OpenNewDocumentL and CApaDocument::SaveL when device goes Out of Memory.
+//! @SYMTestPriority 		High 
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		OOM Test for CApaScanningAppFinder::NewL:
+//! 				Use macro __UHEAP_SETFAIL() to simulate the out of memory situation. Call CApaScanningAppFinder::NewL() to allocate memory. Observe the leave that occurs. Observe after how many allocations the leave occurs.
+//! 				OOM Test for CApaProcess::NewL:
+//! 				Use macro __UHEAP_SETFAIL() to simulate the out of memory situation. Call CApaProcess::NewL() to allocate memory. Observe the leave that occurs. Observe after how many allocations the leave occurs.
+//! 				OOM Test for CApaProcess::AddNewDocumentL:
+//! 				Use macro __UHEAP_SETFAIL() to simulate the out of memory situation. Call CApaProcess::AddNewDocumentL() to allocate memory. Observe the leave that occurs. Observe after how many allocations the leave occurs.
+//! 				OOM Test for CApaProcess::OpenNewDocumentL:
+//! 				Use macro __UHEAP_SETFAIL() to simulate the out of memory situation. Call CApaProcess::OpenNewDocumentL() to allocate memory. Observe the leave that occurs. Observe after how many allocations the leave occurs.
+//! 				OOM Test for CApaDocument::SaveL:
+//! 				Create and initialize a document for tstapp. Use macro __UHEAP_SETFAIL() to simulate the out of memory situation. Call CApaDocument::SaveL() to allocate memory for the document to be saved. Observe the leave that occurs. Observe after how many allocations the leave occurs.
+//! 				API Calls:	
+//! 				CApaScanningAppFinder::NewL(const RFs& aFs)
+//! 				CApaProcess::NewL(const RFs& aFs,CApaAppFinder& aAppFinder)
+//! 				CApaProcess::AddNewDocumentL(const TDesC& aDllFileName,TUid aDllUid=KNullUid)
+//! 				CApaProcess::OpenNewDocumentL(CFileStore*& aStore,CStreamDictionary*& aStreamDic,const TDesC& aDocFullFileName,TUint aFileMode)
+//! 				CApaDocument::SaveL()
+//! @SYMTestExpectedResults 	Tests should complete without any memory leaks. It should also observe the no of allocations which occur before OOM situation.
+
+START_TESTCASE API-APPFWK-T-OOMStep-TestOOMConstructionL-0001
+
+PRINT Run T_OOM Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_OOM
+
+END_TESTCASE API-APPFWK-T-OOMStep-TestOOMConstructionL-0001

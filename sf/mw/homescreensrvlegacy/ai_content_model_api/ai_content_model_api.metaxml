@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="e0fdab3ac028999293009f1a1b34299e" dataversion="1.0">
+  <name>AI Content Model API</name>
+  <description>AI Content Model API provides an abstraction to access the plug-in content, enables service request routing to the plug-in, and provides a callback interface used by the Active Idle plug-ins to give notification about modifications in the content and/or internal state.Each Active Idle plug-in must implement this interface together with the plug-in proprietary Content Model API, which specifies the content provided by the plug-in at run time, uniquely identifies content type and the logical means of every content entity, and specifies set of services supported by the plug-in. AI Content Model and the plug-in proprietary Content Model API are used at Active Idle UI and/or Theme development time.</description>
+  <type>c++</type>
+  <subsystem>activeidle</subsystem>
+  <libs>
+    <lib name="Ai3XmlUiMain.lib" />
+  </libs>
+  <release category="domain"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>yes</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

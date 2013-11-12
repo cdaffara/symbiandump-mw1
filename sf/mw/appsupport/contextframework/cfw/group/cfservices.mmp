@@ -1,0 +1,61 @@
+/*
+* Copyright (c) 2006-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project CFServices
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../inc/common/cftraceconfiguration.hrh"
+
+TARGET          		cfservices.dll
+TARGETTYPE      		dll
+UID             		0x1000008d 0x10282BC5
+
+CAPABILITY      		CAP_GENERAL_DLL
+VENDORID        		VID_DEFAULT
+
+SOURCEPATH      		../src/cfservices
+SOURCE          		CFContextObject.cpp
+SOURCE				CFContextObjectImpl.cpp
+SOURCE          		CFContextSubscription.cpp
+SOURCE          		CFContextSubscriptionImpl.cpp
+SOURCE          		CFContextIndication.cpp
+SOURCE          		CFContextIndicationImpl.cpp
+SOURCE          		CFContextQuery.cpp
+SOURCE		    		CFContextQueryImpl.cpp
+SOURCE          		CFActionSubscription.cpp
+SOURCE          		CFActionSubscriptionImpl.cpp
+SOURCE          		CFActionIndication.cpp
+SOURCE          		CFActionIndicationImpl.cpp
+SOURCE          		CFKeyValuePair.cpp
+SOURCE                  	cfserviceutils.cpp
+SOURCE                  	CFContextDataProxy.cpp
+SOURCE                  	cfcontextsourcecommandparameter.cpp
+SOURCE                  	cfcontextsourcecommandparameterimpl.cpp
+SOURCE                  	cfcontextsourcecommand.cpp
+SOURCE                  	cfcontextsourcecommandimpl.cpp
+SOURCE                  	cfecompluginmanager.cpp
+
+USERINCLUDE     		.
+USERINCLUDE     		../inc/cfservices
+USERINCLUDE     		../inc/common
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY         		euser.lib
+LIBRARY         		estor.lib
+#ifdef TRACE_INTO_FILE
+LIBRARY         		flogger.lib
+#endif

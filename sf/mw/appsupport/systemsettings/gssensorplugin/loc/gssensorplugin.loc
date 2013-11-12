@@ -1,0 +1,142 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Localization strings for GSSensorPlugin
+*
+*/
+
+
+//  LOCALISATION STRINGS
+
+//d:Text of a list item in General folder list
+//d:Item opens Sensor Interaction folder
+//l:list_single_large_graphic_pane_t1
+//w:
+//r: 5.0
+#define qtn_set_folder_sensor "Sensor interaction"
+
+//d:Text in title pane
+//d:Sensor settings view
+//l:title_pane_t2/opt9
+//w:
+//r: 5.0
+#define qtn_set_title_settings_sensor "Sensor settings"
+
+// **SENSOR SETTINGS VIEW
+// List items under Sensor Interaction folder
+
+//d:Text of a list item in Sensor interaction view's list
+//d:Item opens Sensors view
+//l:list_setting_pane_t1
+//w:
+//r: 5.0
+#define qtn_set_sensor_sensors "Sensors"
+
+//d:Navi scroll sensor related text string
+//d:Item opens Sensors view with Navi Wheel as a text
+//l:list_setting_pane_t1
+//w:
+//r: 5.0
+#define qtn_set_sensor_navi_wheel "Navi wheel"
+
+//d:Text of a list item in Sensor interaction view's list
+//d:Item opens Tapping control view
+//l:list_setting_pane_t1
+//w:
+//r: 5.0
+#define qtn_set_sensor_tapping_control "Tapping control"
+
+//d:Text of a list item in Sensor interaction view's list
+//d:Item opens Turning control view
+//l:list_setting_pane_t1
+//w:
+//r: 5.0
+#define qtn_set_sensor_turning_control "Turning control"
+
+// **SENSORS VIEW
+
+//d:Text in title pane
+//d:Sensors setting list view
+//l:title_pane_t2/opt9
+//w:
+//r: 5.0
+#define qtn_set_title_settings_sensors "Sensors settings"
+
+//d:Text in radio button list
+//d:Item sets value off
+//l:list_set_graphic_pane_t1
+//w:
+//r: 5.0
+#define qtn_sensor_active_status_off "Off"
+
+//d:Text in radio button list
+//d:Item sets value on
+//l:list_set_graphic_pane_t1
+//w:
+//r: 5.0
+#define qtn_sensor_active_status_on "On"
+
+// **TAPPING CONTROL VIEW
+
+//d:Text in title pane
+//d:Tapping control setting list view
+//l:title_pane_t2/opt9
+//w:
+//r: 5.0
+#define qtn_set_title_settings_tapctrl "Tapping control settings"
+
+//d:Text in multi selection list
+//d:Item sets value Silencing calls
+//l:list_set_graphic_pane_t1
+//w:
+//r: 5.0
+#define qtn_sensor_silencing_calls "Silencing calls"
+
+//d:Text in multi selection list
+//d:Item sets value Silencing alarms
+//l:list_set_graphic_pane_t1
+//w:
+//r: 5.0
+#define qtn_sensor_silencing_alarm "Snoozing alarms"
+
+//d:Text in multi selection list
+//d:Item sets the Auto rotation on or off
+//l:list_set_graphic_pane_t1
+//w:
+//r: 5.0
+#define qtn_set_sensor_auto_orientation "Display Orientation"
+
+// **TURNING CONTROL VIEW
+
+//d:Text in title pane
+//d:Turning control setting list view
+//l:title_pane_t2/opt9
+//w:
+//r: 5.0
+#define qtn_set_title_settings_turnctrl "Turning control settings"
+
+//d:Text in Yes-No query dialog
+//d:User has to answer either yes or no
+//l:popup_note_window
+//w:
+//r: 5.0
+#define qtn_sensor_setting_switch_on_query "Sensors are currently switched off. Switch on?"
+
+//d:Text in information note
+//d:Note is shown when user exits settings and these statements are true
+//d:1. Sensors are left active
+//d:2. All settings are unchecked
+//l:popup_note_window
+//w:
+//r: 5.0
+#define qtn_sensor_setting_switch_off_note "No sensor actions defined. Sensors are switched off"

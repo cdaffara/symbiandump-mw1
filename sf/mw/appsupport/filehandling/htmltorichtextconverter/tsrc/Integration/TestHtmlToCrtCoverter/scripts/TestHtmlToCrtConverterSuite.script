@@ -1,0 +1,246 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file			
+//! @SYMTestSuiteName	TestHtmlToCrtConverterSuite
+//! @SYMScriptTestEnvironment	
+
+//
+PRINT Run all TestHtmlToCrtConverterSuite tests
+//
+
+LOAD_SUITE TestHtmlToCrtConverterSuite
+//
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0001
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0001
+//! @SYMTestCaseDesc 		Converts other character set to unicode characters and compares the characters 
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> - CHARSET.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Get the source text to be converted from the ini file.
+//!				2. Convert the non-unicode character set to unicode character using charset converter.Store it in the buffer.
+//!				3. Convert the non-unicode character set to unicode using CHtmlToCrtConverter Buffer.
+//!				4. Compare the outputs of the above and verify if the conversion is successful.
+//! @SYMTestExpectedResults 	The non-unicode character sets are converted to unicode successfully.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert1
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert2
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert3
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert4
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert5
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert6
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert7
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert8
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert9
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert10
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert11
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert12
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterBufferStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convert13
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0001
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0002
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0002
+//! @SYMTestCaseDesc 		Converts the file in Html format to rtf format synchrounously
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> - CONVERSION.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Get the source file from the ini file.
+//!				2. Convert the source file which is in HTML format to rtf format Synchronously.
+//!				3. Verify if the target file is in rtf format by checking the contents of the file.
+//! @SYMTestExpectedResults 	Synchronous conversion of Html file to rtf format is successful.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest1
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0002
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0003
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0003
+//! @SYMTestCaseDesc 		Converts the file in Html format to rtf format asynchrounously
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> - CONVERSION.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Get the source file from the ini file.
+//!				2. Convert the source file which is in HTML format to rtf format Asynchronously.
+//!				3. Verify if the target file is in rtf format by checking the contents of the file.
+//! @SYMTestExpectedResults 	Synchronous conversion of Html file to rtf format is successful.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest2
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0003
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0004
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0004
+//! @SYMTestCaseDesc 		Converts the file in Html format to rtf format synchrounously and call the function in the OOM loop
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> - CONVERSION.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Get the source file from the ini file.
+//!				2. Convert the source file which is in HTML format to rtf format Synchronously.
+//!				3. Call the synchrounous function in the OOM loop and check that the correct error code is returned.
+//!				4. Repeat test until KErrNone is returned.
+//!				4. Verify if the target file is in rtf format by checking the contents of the file.
+//! @SYMTestExpectedResults 	Every action should propagate Heap allocation failures. If the allocation fails, the function leaves with KErrNoMemory and the system will not crash.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest3
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0004
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0005
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0005
+//! @SYMTestCaseDesc 		Logs the time taken for converting the file in Html format to rtf format synchrounously
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> - CONVERSION.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Get the source file and the target file name from the ini file .
+//!				2. Convert the source file which is in HTML format to rtf format Synchronously.
+//!				3. Log the time taken for converting the file synchronously.
+//!				4. Verify if the target file is in rtf format by checking the contents of the file.
+//! @SYMTestExpectedResults 	The time taken  for the synchronous file to file conversion is logged.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest4
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0005
+
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0006
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0006
+//! @SYMTestCaseDesc 		Converts the file in Html format to rtf format asynchronously and call the function in the OOM loop
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> - CONVERSION.001
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Get the source file from the ini file.
+//!				2. Convert the source file which is in HTML format to rtf format asynchronously.
+//!				3. Call the asynchrounous function in the OOM loop and check that the correct error code is returned.
+//!				4. Repeat the test until KErrNone is returned.
+//!				4. Verify if the target file is in rtf format by checking the contents of the file.
+//! @SYMTestExpectedResults 	Every action should propagate Heap allocation failures. If the allocation fails, the function leaves with KErrNoMemory and the system will not crash.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest5
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0006
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0007
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0007
+//! @SYMTestCaseDesc 		Convert the file which is not in html format
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> - CONVERSION.002
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Get the source file and target file name from the ini file.
+//!				2. Convert the source file which is in different format say .wav file synchronously and 
+//!				   asynchronously
+//!				3. Verify if the target file is in rtf format or not by checking the contents of the file.
+//! @SYMTestExpectedResults 	The source file is not converted to rtf format.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest6
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest6.1
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0007
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0008
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0008
+//! @SYMTestCaseDesc 		Convert the file which has Javascript tags
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> - CONVERSION.003
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Get the source file and target file name from the ini file.
+//!				2. Convert the source file which has only Javascript tags 
+//!				3. Verify if the target file is in rtf format or not by checking the contents of the file.
+//! @SYMTestExpectedResults 	The source file is not converted to rtf format.i.e It ignores the Javascript tags
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest7
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0008
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0009
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0009
+//! @SYMTestCaseDesc 		Convert the file which contains malformed data ie. html tags as well as non html tags.
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> - CONVERSION.002
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Get the source file and target file name from the ini file.
+//!				2. Convert the source file which has malformed data to rtf format synchronously.
+//!				3. Verify if the target file is in rtf format by checking the contents of the file.
+//! @SYMTestExpectedResults 	The non-html tags are not converted to rtf format.
+//! @SYMTestType 		CIT
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest8
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest8.2
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0009
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0010
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0010
+//! @SYMTestCaseDesc 		Convert the file which contains malformed data ie. html tags as well as javascript tags.
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> -CONVERSION.003
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Medium
+//! @SYMTestActions 		1. Get the source file and target file name from the ini file
+//!				2. Convert the source file which has HTML tags as well as javascript tags synchrounously.
+//!				3. Verify that the javascript tags is excluded from the converted text by checking the
+//!				contents of the file.
+//! @SYMTestExpectedResults 	The javascript tags will be excluded from the converted text.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest9
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0010
+
+START_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0011
+//! @SYMTestCaseID		PIM-APPSRV-CHtmlToCrtConverter-CIT-0011
+//! @SYMTestCaseDesc 		Convert an empty file to rtf format synchronously and asynchronously
+//! @SYMFssID			<App-Services>/<CHtmlToCrtConverter> - CONVERSION.002
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1. Get the source file and target file name from the ini file
+//!				2. Convert the empty file synchrounously and asynchronously.
+//!				3. Verify that the file is converted by checking the contents of the file.
+//! @SYMTestExpectedResults 	No contents are found in the target file.
+//! @SYMTestType 		CIT
+
+
+RUN_TEST_STEP 100 TestHtmlToCrtConverterSuite TestHtmlToCrtConverterStep C:\CITHtmlToCrtConverter\testdata\TestHtmlToCrtConverterSuite.ini convertertest10
+
+END_TESTCASE PIM-APPSRV-CHtmlToCrtConverter-CIT-0011
+
+PRINT Completed TestHtmlToCrtConverterSuite TESTS

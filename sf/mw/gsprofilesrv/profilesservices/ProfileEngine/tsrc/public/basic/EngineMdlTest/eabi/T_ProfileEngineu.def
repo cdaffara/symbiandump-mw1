@@ -1,0 +1,25 @@
+EXPORTS
+	_Z16CreateTestSuiteLv @ 1 NONAME
+	_ZTI10T_MProfile @ 2 NONAME ; #<TI>#
+	_ZTI14T_MProfileName @ 3 NONAME ; #<TI>#
+	_ZTI15T_MProfileTones @ 4 NONAME ; #<TI>#
+	_ZTI16T_MProfileEngine @ 5 NONAME ; #<TI>#
+	_ZTI20T_MProfileExtraTones @ 6 NONAME ; #<TI>#
+	_ZTI21T_MProfilePttSettings @ 7 NONAME ; #<TI>#
+	_ZTI21T_MProfilesNamesArray @ 8 NONAME ; #<TI>#
+	_ZTI23T_MProfileExtraSettings @ 9 NONAME ; #<TI>#
+	_ZTI26T_MProfileFeedbackSettings @ 10 NONAME ; #<TI>#
+	_ZTI29T_CProfileChangeNotifyHandler @ 11 NONAME ; #<TI>#
+	_ZTV10T_MProfile @ 12 NONAME ; #<VT>#
+	_ZTV14T_MProfileName @ 13 NONAME ; #<VT>#
+	_ZTV15T_MProfileTones @ 14 NONAME ; #<VT>#
+	_ZTV16T_MProfileEngine @ 15 NONAME ; #<VT>#
+	_ZTV20T_MProfileExtraTones @ 16 NONAME ; #<VT>#
+	_ZTV21T_MProfilePttSettings @ 17 NONAME ; #<VT>#
+	_ZTV21T_MProfilesNamesArray @ 18 NONAME ; #<VT>#
+	_ZTV23T_MProfileExtraSettings @ 19 NONAME ; #<VT>#
+	_ZTV26T_MProfileFeedbackSettings @ 20 NONAME ; #<VT>#
+	_ZTV29T_CProfileChangeNotifyHandler @ 21 NONAME ; #<VT>#
+	_ZTI24T_MProfile3DToneSettings @ 22 NONAME ; #<TI>#
+	_ZTV24T_MProfile3DToneSettings @ 23 NONAME ; #<VT>#
+

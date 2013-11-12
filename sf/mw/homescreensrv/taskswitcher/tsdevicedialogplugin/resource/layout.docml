@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument version="0.10">
+    <widget name="tsdevicedialog" type="HbDialog">
+        <widget name="heading" role="HbDialog:headingWidget" type="HbLabel">
+            <string name="alignment" value="AlignVCenter|AlignHCenter" />
+            <string locid="txt_ts_title_task_switcher" name="plainText" value="Task switcher" />
+        </widget>
+        <widget name="gridContainer" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="taskgrid" type="TsTasksGrid">
+                <widget name="item" role="HbAbstractView:prototype" type="TsTasksGridItem"/>
+                <bool name="longPressEnabled" value="FALSE"/>
+                <bool name="itemRecycling" value="TRUE"/>
+                <enums name="horizontalScrollBarPolicy" value="ScrollBarAlwaysOff"/>
+                <bool name="swapDimensionsOnOrientationChange" value="FALSE"/>
+                <string name="scrollDirections" value="Horizontal"/>
+                <string name="alignment" value="AlignCenter"/>
+                <integer name="rowCount" value="1"/>
+                <integer name="columnCount" value="2"/>                
+            </widget>            
+            <widget name="noitemswidget" type="HbWidget">
+                <widget name="noitemslabel" type="HbLabel">
+                    <string name="alignment" value="AlignVCenter|AlignHCenter" />
+                    <string locid="txt_ts_info_no_recent_applications" name="plainText"/>
+                    
+                    <fontspec name="fontSpec" role="Primary" textheight="var(hb-param-text-height-primary)"/>
+                    <enums name="textWrapping" value="TextWordWrap"/>                    
+                </widget>   
+                <layout orientation="Vertical" spacing="0.0un" type="linear">
+                    <contentsmargins bottom="var(hb-param-margin-gene-screen)" left="var(hb-param-margin-gene-screen)" right="var(hb-param-margin-gene-screen)" top="var(hb-param-margin-gene-screen)"/>
+                    <stretchitem stretchfactor="1"/>
+                    <linearitem itemname="noitemslabel"/>
+                    <stretchitem stretchfactor="1"/>
+                </layout>
+            </widget>          
+            <layout type="stacked">
+                <stackitem itemname="noitemswidget"/>
+                <stackitem itemname="taskgrid"/>
+            </layout>
+        </widget>            
+        <bool name="backgroundFaded" value="TRUE"/>
+        <string name="dismissPolicy" value="TapOutside"/>
+        <string name="frameType" value="Weak"/>        
+        <integer name="timeout" value="0"/>
+        <sizepolicy horizontalPolicy="Preferred" horizontalStretch="0" verticalPolicy="Preferred" verticalStretch="0"/>
+    </widget>
+    <section name="portrait">
+        <widget name="tsdevicedialog">
+            <sizehint type="PREFERRED" width="48un" height="40un"/>
+        </widget>
+    </section>
+    <section name="landscape">
+        <widget name="tsdevicedialog">
+            <sizehint type="PREFERRED" width="60un" height="40un"/>
+        </widget>
+    </section>
+</hbdocument>

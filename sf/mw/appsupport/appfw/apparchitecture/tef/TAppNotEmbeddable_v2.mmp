@@ -1,0 +1,51 @@
+// Copyright (c) 2003-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// TAppNotEmbeddable.mmp
+// 
+//
+
+
+TARGET        	tappnotembeddable.exe
+TARGETTYPE    	exe
+
+CAPABILITY 	All -Tcb
+UID           	0x100039CE 0x10004c47
+VENDORID 	0x70000001
+
+SOURCEPATH    	.
+SOURCE        	TAppNotEmbeddable.cpp
+
+USERINCLUDE   	.
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+//SYSTEMINCLUDE 	/epoc32/include/techview
+
+TARGETPATH	/sys/bin
+
+//reg added for Datacaging
+START RESOURCE	TAppNotEmbeddable_reg.rss
+TARGETPATH	/apparctestregfiles
+END
+
+
+LIBRARY       	apparc.lib  
+LIBRARY       	cone.lib
+LIBRARY       	eikcore.lib
+LIBRARY       	euser.lib
+LIBRARY       	gdi.lib
+
+epocstacksize 	0x5000 
+
+SMPSAFE

@@ -1,0 +1,5 @@
+EXPORTS
+	??1CCFScriptHandler@@UAE@XZ @ 1 NONAME ; CCFScriptHandler::~CCFScriptHandler(void)
+	?NewL@CCFScriptHandler@@SAPAV1@AAVMCFExtendedContextInterface@@AAVRFs@@AAVMCFActionHandler@@AAVMCFSecurityChecker@@@Z @ 2 NONAME ; class CCFScriptHandler * CCFScriptHandler::NewL(class MCFExtendedContextInterface &, class RFs &, class MCFScriptActionHandler &, class MCFSecurityChecker &)
+	?NewLC@CCFScriptHandler@@SAPAV1@AAVMCFExtendedContextInterface@@AAVRFs@@AAVMCFActionHandler@@AAVMCFSecurityChecker@@@Z @ 3 NONAME ; class CCFScriptHandler * CCFScriptHandler::NewLC(class MCFExtendedContextInterface &, class RFs &, class MCFScriptActionHandler &, class MCFSecurityChecker &)
+

@@ -1,0 +1,58 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __RECOGNISERSTEST_IBY__
+#define __RECOGNISERSTEST_IBY__
+
+REM Application Protocol recognisers test
+
+#include <recognisers.iby>
+
+REM recogniser test framework
+file=ABI_DIR\BUILD_DIR\T_RECOGTEST.exe	 System\Programs\T_RECOGTEST.exe	stack=0x8000
+
+REM t_ebookmark test module
+ECOM_PLUGIN(t_ebookmark.dll,101fd8d3.rsc)
+
+REM t_weburlrec test module
+ECOM_PLUGIN(t_weburlrec.dll,101fd8d1.rsc)
+
+REM t_recweb test module
+ECOM_PLUGIN(t_recweb.dll,101fd8d5.rsc)
+
+REM t_recwap test module
+ECOM_PLUGIN(t_recwap.dll,10272E63.rsc)
+
+REM test data
+data=\epoc32\data\z\recogtestdata\1.ebm			recogtestdata\1.ebm
+data=\epoc32\data\z\recogtestdata\2.ebm			recogtestdata\2.ebm
+data=\epoc32\data\z\recogtestdata\3.ebm			recogtestdata\3.ebm
+data=\epoc32\data\z\recogtestdata\4.notebm		recogtestdata\4.notebm
+data=\epoc32\data\z\recogtestdata\sample1		recogtestdata\sample1
+data=\epoc32\data\z\recogtestdata\sample1.html		recogtestdata\sample1.html
+data=\epoc32\data\z\recogtestdata\sample2		recogtestdata\sample2
+data=\epoc32\data\z\recogtestdata\sample2.htm		recogtestdata\sample2.htm
+data=\epoc32\data\z\recogtestdata\sample3		recogtestdata\sample3
+data=\epoc32\data\z\recogtestdata\sample3.xhtml		recogtestdata\sample3.xhtml
+data=\epoc32\data\z\recogtestdata\sample4		recogtestdata\sample4
+data=\epoc32\data\z\recogtestdata\sample4.xml		recogtestdata\sample4.xml
+
+data=\epoc32\data\z\recogtestdata\a.wml			recogtestdata\a.wml
+data=\epoc32\data\z\recogtestdata\a.wmlc		recogtestdata\a.wmlc
+data=\epoc32\data\z\recogtestdata\a.wmlsc		recogtestdata\a.wmlsc
+data=\epoc32\data\z\recogtestdata\a.wmls		recogtestdata\a.wmls
+data=\epoc32\data\z\recogtestdata\a.dtd			recogtestdata\a.dtd	
+data=\epoc32\data\z\recogtestdata\a.wbxml		recogtestdata\a.wbxml
+#endif

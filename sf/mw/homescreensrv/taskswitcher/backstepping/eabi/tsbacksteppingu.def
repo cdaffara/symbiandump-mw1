@@ -1,0 +1,10 @@
+EXPORTS
+	_ZN25CTsBacksteppingActivation4NewLER22MTsWindowGroupsMonitor @ 1 NONAME
+	_ZN25CTsBacksteppingActivationD0Ev @ 2 NONAME
+	_ZN25CTsBacksteppingActivationD1Ev @ 3 NONAME
+	_ZN25CTsBacksteppingActivationD2Ev @ 4 NONAME
+	_ZTI25CTsBacksteppingActivation @ 5 NONAME
+	_ZTV25CTsBacksteppingActivation @ 6 NONAME
+	_ZTI27CTsWindowGroupsObserverBase @ 7 NONAME
+	_ZTV27CTsWindowGroupsObserverBase @ 8 NONAME
+

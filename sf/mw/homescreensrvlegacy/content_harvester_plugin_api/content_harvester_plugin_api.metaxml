@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="2d512d96eac8f6d0172599b67f17c686" dataversion="2.0">
+<name>content_harvester_plugin_api</name>
+<description>Content harvester plugin API </description>
+<type>c++</type>
+<collection>contentpublishingsrv</collection>
+<libs>
+</libs>
+<release category="platform" sinceversion="0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

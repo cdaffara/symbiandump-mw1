@@ -1,0 +1,48 @@
+EXPORTS
+	_ZN14CSearchInfoImp12InternalizeLER11RReadStream @ 1 NONAME
+	_ZN14CSearchInfoImp15InfoLinearOrderERKS_S1_ @ 2 NONAME
+	_ZN14CSearchInfoImp15NewFromStreamLCER11RReadStream @ 3 NONAME
+	_ZN14CSearchInfoImp4NewLEv @ 4 NONAME
+	_ZN14CSearchInfoImp5NewLCEv @ 5 NONAME
+	_ZN15CSearchEventImp5NewLCER16CXIMPIdentityImpP22RXIMPObjOwningPtrArrayI14CSearchInfoImpE @ 6 NONAME
+	_ZN16CSearchDataCache12CleanExpiredEv @ 7 NONAME
+	_ZN16CSearchDataCache14CleanResourcesER15MXIMPPscContext @ 8 NONAME
+	_ZN16CSearchDataCache24SearchSubscriptionItemLCEv @ 9 NONAME
+	_ZN16CSearchDataCache4NewLER9MXIMPHost @ 10 NONAME
+	_ZN16CSearchDataCache8RemoveMeI23CSearchSubscriptionItemEEvRPT_S3_ @ 11 NONAME
+	_ZN17CSearchElementImp12InternalizeLER11RReadStream @ 12 NONAME
+	_ZN17CSearchElementImp15NewFromStreamLCER11RReadStream @ 13 NONAME
+	_ZN17CSearchElementImp4NewLEv @ 14 NONAME
+	_ZN17CSearchElementImp5NewLCEv @ 15 NONAME
+	_ZN23CSearchObjectFactoryImp4NewLEv @ 16 NONAME
+	_ZN23CSearchSubscriptionItem12SetSearchIdLER16CXIMPIdentityImp @ 17 NONAME
+	_ZN23CSearchSubscriptionItem16SetSearchResultsEP22RXIMPObjOwningPtrArrayI14CSearchInfoImpE @ 18 NONAME
+	_ZN23CSearchSubscriptionItemD0Ev @ 19 NONAME
+	_ZN23CSearchSubscriptionItemD1Ev @ 20 NONAME
+	_ZN23CSearchSubscriptionItemD2Ev @ 21 NONAME
+	_ZN32CSearchApiDataObjFactoryAccessor4NewLEv @ 22 NONAME
+	_ZTI16CSearchDataCache @ 23 NONAME ; #<TI>#
+	_ZTI23CSearchObjectFactoryImp @ 24 NONAME ; #<TI>#
+	_ZTI23CSearchSubscriptionItem @ 25 NONAME ; #<TI>#
+	_ZTV16CSearchDataCache @ 26 NONAME ; #<VT>#
+	_ZTV23CSearchObjectFactoryImp @ 27 NONAME ; #<VT>#
+	_ZTV23CSearchSubscriptionItem @ 28 NONAME ; #<VT>#
+	_ZThn28_N23CSearchSubscriptionItemD0Ev @ 29 NONAME ; #<thunk>#
+	_ZThn28_N23CSearchSubscriptionItemD1Ev @ 30 NONAME ; #<thunk>#
+	_ZN16CSearchDataCache28SearchKeysSubscriptionItemLCEv @ 31 NONAME
+	_ZN16CSearchDataCache8RemoveMeI27CSearchKeysSubscriptionItemEEvRPT_S3_ @ 32 NONAME
+	_ZN17CSearchKeyInfoImp11LinearOrderERKS_S1_ @ 33 NONAME
+	_ZN17CSearchKeyInfoImp12InternalizeLER11RReadStream @ 34 NONAME
+	_ZN17CSearchKeyInfoImp15NewFromStreamLCER11RReadStream @ 35 NONAME
+	_ZN17CSearchKeyInfoImp4NewLEv @ 36 NONAME
+	_ZN17CSearchKeyInfoImp5NewLCEv @ 37 NONAME
+	_ZN19CSearchKeysEventImp5NewLCEP22RXIMPObjOwningPtrArrayI17CSearchKeyInfoImpE @ 38 NONAME
+	_ZN27CSearchKeysSubscriptionItem15SetKeyInfoArrayEP22RXIMPObjOwningPtrArrayI17CSearchKeyInfoImpE @ 39 NONAME
+	_ZN27CSearchKeysSubscriptionItemD0Ev @ 40 NONAME
+	_ZN27CSearchKeysSubscriptionItemD1Ev @ 41 NONAME
+	_ZN27CSearchKeysSubscriptionItemD2Ev @ 42 NONAME
+	_ZTI27CSearchKeysSubscriptionItem @ 43 NONAME ; #<TI>#
+	_ZTV27CSearchKeysSubscriptionItem @ 44 NONAME ; #<VT>#
+	_ZThn28_N27CSearchKeysSubscriptionItemD0Ev @ 45 NONAME ; #<thunk>#
+	_ZThn28_N27CSearchKeysSubscriptionItemD1Ev @ 46 NONAME ; #<thunk>#
+

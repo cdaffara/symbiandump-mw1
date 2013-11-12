@@ -1,0 +1,79 @@
+// Copyright (c) 2007-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+/**
+ @file
+ @test
+ @internalComponent - Internal Symbian test code  
+*/
+
+
+target		ticonloaderandiconarrayforleaks.dll
+TARGETTYPE 	DLL
+UID         0x1000008D 0x102833D0 	
+VENDORID 	0x70000001
+
+CAPABILITY 	All -Tcb
+
+SOURCEPATH    	.
+SOURCE		TIconLoaderAndIconArrayForLeaks.cpp
+
+SOURCEPATH	../aplist
+SOURCE		 apsiconcaptionoverride.cpp
+source      aplapplist.cpp aplapplistitem.cpp aplappinforeader.cpp
+SOURCEPATH  ../apgrfx
+source      APGCTL.CPP apgdoor.cpp APGICNFL.CPP APGTASK.CPP
+source		APGWGNAM.CPP apgcli.cpp APGPRIV.CPP apgstart.cpp apgrecog.cpp
+source		apgnotif.cpp APSCLI.CPP apgconstdata.cpp
+source		apsecutils.cpp
+
+#ifdef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+SOURCE			apgupdate.cpp
+#endif
+
+SOURCEPATH	../apparc
+source 		apaid.cpp apastd.cpp
+
+
+USERINCLUDE   	.
+USERINCLUDE		../apgrfx
+USERINCLUDE 	../apserv
+USERINCLUDE		../inc
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+//SYSTEMINCLUDE 	/epoc32/include/techview
+ 
+library         euser.lib apparc.lib apmime.lib gdi.lib estor.lib efsrv.lib fbscli.lib
+library         bitgdi.lib ws32.lib bafl.lib
+library		centralrepository.lib
+library         apserv.lib apfile.lib aplist.lib
+#ifdef SYMBIAN_BAFL_SYSUTIL
+library sysutil.lib
+#endif
+
+#ifdef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+library 	scrclient.lib
+#endif
+
+macro 			UI_FRAMEWORKS_V1_REMNANT_FOR_JAVA_MIDLET_INSTALLER
+
+#ifdef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+	deffile ticonforleaks.def
+#else
+	deffile ticonforleaks_legacy.def
+#endif
+
+SMPSAFE
+

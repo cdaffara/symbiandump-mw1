@@ -1,0 +1,50 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// TZSERVER.EXE Time Zone Server
+// 
+//
+
+TARGET        tzserver.exe
+TARGETTYPE    exe
+
+CAPABILITY   readuserdata writeuserdata writedevicedata   protserv
+
+UID				0x10004019 	0x1020383E
+VENDORID		0x70000001
+
+SOURCEPATH		../Server/Source
+SOURCE			DataProvider.cpp
+SOURCE			readonlytzdb.cpp tzdbentities.cpp
+SOURCE			MAIN.CPP timezoneserver.cpp timezonesession.cpp timezoneconfig.cpp
+SOURCE			tzlocalizationdb.cpp
+SOURCE			tzuserdatacache.cpp
+SOURCE			tzuserdata.cpp
+SOURCE			tzsystemdata.cpp
+SOURCE			tzswiobserver.cpp
+
+USERINCLUDE		../Client/Include
+USERINCLUDE		../Server/Include
+USERINCLUDE		../Include
+USERINCLUDE             ../../../commonappservices/backuprestorenotification/inc
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY			efsrv.lib estor.lib euser.lib bafl.lib tzclient.lib backuprestorenotification.lib
+LIBRARY         centralrepository.lib sqldb.lib 
+LIBRARY			edbms.lib
+START WINS
+	baseaddress	0x40700000
+END
+
+SMPSAFE

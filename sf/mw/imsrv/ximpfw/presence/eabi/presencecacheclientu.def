@@ -1,0 +1,7 @@
+EXPORTS
+	_ZN20CPresenceCacheClient13CreateReaderLEv @ 1 NONAME
+	_ZN20CPresenceCacheClient13CreateWriterLEv @ 2 NONAME
+	_ZN20CPresenceCacheClient4NewLEv @ 3 NONAME
+	_ZTI20CPresenceCacheClient @ 4 NONAME ; #<TI>#
+	_ZTV20CPresenceCacheClient @ 5 NONAME ; #<VT>#
+

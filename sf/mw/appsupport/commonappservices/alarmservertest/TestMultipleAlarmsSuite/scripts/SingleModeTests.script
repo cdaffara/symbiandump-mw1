@@ -1,0 +1,231 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//Script file for running Single Alarm Notification Mode tests
+
+PRINT Running_Single_Alarm_Notification_Mode_Tests
+
+// Load the test
+LOAD_SUITE TestMultipleAlarmsServer -SharedData
+
+// Start alert server in single alarm notification mode
+RUN_TEST_STEP 	100 	TestMultipleAlarmsServer	TestStartAlertServerStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	start_single
+
+// Initial Cleanup
+RUN_TEST_STEP 	100	TestMultipleAlarmsServer	TestCleanupStep
+
+START_TESTCASE	PIM-APPSRV-ALMSRV-PREQ1118-I-001-HP-0001
+//! @file			TestMultipleAlarmsSuite.script
+//! @SYMTestCaseID		PIM-APPSRV-ALMSRV-PREQ1118-I-001-HP-0001
+//! @SYMTestCaseDesc 		Single alarm support
+//! @SYMFssID			<App-Services>/<AlarmServer>/039
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Start the Alarm Alert Serverwithout passing a value for aMaxAlarms value.
+//!				2.	Create many calendar entries with alarms that have imminent expiry times
+//!				3.	Wait for the alarms to expire.
+//!				4.	Verify that the test code is not notified of more than one alarm at a time. 
+//!				5.	Acknowledge the first alarm to be notified, and verify that the next alarm is notified.
+//! @SYMTestExpectedResults 	Only one alarm is notified at a time.
+//! @SYMTestType 		CIT
+//! @SYMTestCaseDependencies	The test can only run on a TEXTSHELL environment, as the Alert Server is loaded by the test code
+
+// Start alert server in single mode, create entries with imminent alarms and wait for the alarms to expire
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestCreateCalEntriesStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	createcalentries_4
+RUN_TEST_STEP			-1	TestMultipleAlarmsServer	TestWaitStep			Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	wait_5mins
+
+// 1st alarm must be notifying
+RUN_TEST_STEP 			100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	showingandplaying_1
+
+// The other 3 alarms must not have a corresponding alarm control object.
+RUN_TEST_STEP 	!Error=-1	100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_2
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_3
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_4
+
+// Acknowledge the first alarm and wait for sometime
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestAlarmClearStep		Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	clear_1
+DELAY 500
+
+// 2nd alarm must be notifying
+RUN_TEST_STEP 			100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	showingandplaying_2
+
+// The other alarms must not have a corresponding alarm control object.
+RUN_TEST_STEP 	!Error=-1	100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_1
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_3
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_4
+
+// Acknowledge the second alarm and wait for sometime
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestAlarmClearStep		Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	clear_2
+DELAY 500
+
+// 3rd alarm must be notifying
+RUN_TEST_STEP 			100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	showingandplaying_3
+
+// The other alarms must not have a corresponding alarm control object.
+RUN_TEST_STEP 	!Error=-1	100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_1
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_2
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_4
+
+// Acknowledge the third alarm and wait for sometime
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestAlarmClearStep		Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	clear_3
+DELAY 500
+
+// 4th alarm must be notifying
+RUN_TEST_STEP 			100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	showingandplaying_4
+
+// The other alarms must not have a corresponding alarm control object.
+RUN_TEST_STEP 	!Error=-1	100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_1
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_2
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_3
+
+// Acknowledge the fourth alarm and wait for sometime
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestAlarmClearStep		Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	clear_4
+DELAY 500
+
+// All 4 alarms must not have a corresponding alarm control object.
+RUN_TEST_STEP 	!Error=-1	100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_1
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_2
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_3
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_4
+
+// Cleanup
+RUN_TEST_STEP 			100	TestMultipleAlarmsServer	TestCleanupStep			
+END_TESTCASE	PIM-APPSRV-ALMSRV-PREQ1118-I-001-HP-0001
+
+
+START_TESTCASE	PIM-APPSRV-ALMSRV-PREQ1118-I-007-1-HP-0001
+//! @file			TestMultipleAlarmsSuite.script
+//! @SYMTestCaseID		PIM-APPSRV-ALMSRV-PREQ1118-I-007-1-HP-0001
+//! @SYMTestCaseDesc 		Clear all alarms in single alarms mode
+//! @SYMFssID			<App-Services>/<AlarmServer>/041
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Start the Alarm Alert Server without passing a value for aMaxAlarms value.
+//!				2.	Create many calendar entries with alarms that have imminent expiry times
+//!				3.	Wait for the alarms to expire.
+//!				4.	Verify that the test code is not notified of more than one alarm at a time. 
+//!				5.	Issue the Clear-all request
+//! @SYMTestExpectedResults 	1.	When the alarms expire, the alarms are displayed continuously, without waiting 
+//! 					for an action from the test code on the previous alarm.
+//!				2.	All the alarms are cleared.
+//! @SYMTestType 		CIT
+//! @SYMTestCaseDependencies	The test can only run on a TEXTSHELL environment, as the Alert Server is loaded by the test code
+
+// Start alert server in single mode, create entries with imminent alarms and wait for the alarms to expire
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestCreateCalEntriesStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	createcalentries_4
+RUN_TEST_STEP			-1	TestMultipleAlarmsServer	TestWaitStep			Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	wait_4mins
+
+// 1st alarm must be notifying
+RUN_TEST_STEP 			100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	showingandplaying_1
+
+// The other 3 alarms must not have a corresponding alarm control object.
+RUN_TEST_STEP 	!Error=-1	100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_2
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_3
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_4
+
+// Issue the clear-all request
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestAlarmClearStep		Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	clear_all
+DELAY 500
+
+// All 4 alarms must not have a corresponding alarm control object.
+RUN_TEST_STEP 	!Error=-1	100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_1
+RUN_TEST_STEP 	!Error=-1	100	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_2
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_3
+RUN_TEST_STEP 	!Error=-1	100 	TestMultipleAlarmsServer	TestAlarmControlStateStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	notshowing_4
+
+// Cleanup
+RUN_TEST_STEP 			100	TestMultipleAlarmsServer	TestCleanupStep	
+END_TESTCASE	PIM-APPSRV-ALMSRV-PREQ1118-I-007-1-HP-0001
+
+
+START_TESTCASE	PIM-APPSRV-ALMSRV-PREQ1118-I-008-1-AND-9-HP-0001
+//! @file			TestMultipleAlarmsSuite.script
+//! @SYMTestCaseID		PIM-APPSRV-ALMSRV-PREQ1118-I-008-1-AND-9-HP-0001
+//! @SYMTestCaseDesc 		Associated Data – URL - Single Alarms Mode, Reference to Calendar Entry
+//! @SYMFssID			<App-Engines>/<CalInterimAPI>/EAS 1.0, <App-Engines>/< AgnModel >/EAS 1.1
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Start the Alarm Alert Server without passing a value for aMaxAlarms value.
+//!				2.	Create many calendar entries with alarms that have the same expiry time. 
+//!					Set the 8-bit URL associated data for all the calendar entries during creation.
+//!				3.	Wait for the alarms to expire.
+//!				4.	Retreive the Alarm Data from the Alert Server for the notifying alarm
+//!				5.	Retrieve the corresponding Calendar entry’s details, e.g., GUID, recurrence id etc. 
+//!					from the Alarm Server for the notifying alarm
+//!				6.	Retrieve the Calendar entriy using the information received.
+//!				7.	Retrieve the associated data from the Calendar entry and compare with the original 
+//!					values used for setting them.
+//! @SYMTestExpectedResults 	The associated data is set and retrieved consistently.
+//! @SYMTestType 		CIT
+//! @SYMTestCaseDependencies	The test can only run on a TEXTSHELL environment, as the Alert Server is loaded by the test code
+
+// Start alert server in single mode, create entries with imminent alarms and wait for the alarms to expire
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestCreateCalEntriesStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	createcalentries_3
+RUN_TEST_STEP			-1	TestMultipleAlarmsServer	TestWaitStep			Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	wait_2mins
+
+// Test the associated data of the notifying alarm
+RUN_TEST_STEP			100	TestMultipleAlarmsServer	TestAssociatedDataStep		Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	createcalentries_3.entry1
+
+// Cleanup
+RUN_TEST_STEP 			100	TestMultipleAlarmsServer	TestCleanupStep
+END_TESTCASE	PIM-APPSRV-ALMSRV-PREQ1118-I-008-1-AND-9-HP-0001
+
+
+START_TESTCASE	PIM-APPSRV-ALMSRV-PREQ1118-I-010-1-HP-0001
+//! @file			TestMultipleAlarmsSuite.script
+//! @SYMTestCaseID		PIM-APPSRV-ALMSRV-PREQ1118-I-010-1-HP-0001
+//! @SYMTestCaseDesc 		Associated Data – MIME - Single Alarms Mode
+//! @SYMFssID			<App-Engines>/<CalInterimAPI>/EAS 1.0
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		High
+//! @SYMTestActions 		1.	Start the Alarm Alert Server without passing a value for aMaxAlarms value.
+//!				2.	Create many calendar entries with alarms that have the same expiry time. 
+//!					Set the MIME associated data for all the calendar entries during creation.
+//!				3.	Wait for the alarms to expire.
+//!				4.	Retreive the Alarm Data from the Alert Server for the notifying alarm
+//!				5.	Retrieve the corresponding Calendar entry’s details, e.g., GUID, recurrence id etc. 
+//!					from the Alarm Server for the notifying alarm
+//!				6.	Retrieve the Calendar entriy using the information received.
+//!				7.	Retrieve the associated data from the Calendar entry and compare with the original 
+//!					values used for setting them.
+//! @SYMTestExpectedResults 	The associated data is set and retrieved consistently.
+//! @SYMTestType 		CIT
+//! @SYMTestCaseDependencies	The test can only run on a TEXTSHELL environment, as the Alert Server is loaded by the test code
+
+// Start alert server in single mode, create entries with imminent alarms and wait for the alarms to expire
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestCreateCalEntriesStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	createcalentries_4
+RUN_TEST_STEP			-1	TestMultipleAlarmsServer	TestWaitStep			Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	wait_3mins
+
+// The first alarm has URL associated data. Clear it. So that the second one notifies
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestAlarmClearStep		Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	clear_1
+DELAY 500
+
+// Test the associated data of the notifying second alarm
+RUN_TEST_STEP			100	TestMultipleAlarmsServer	TestAssociatedDataStep		Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	createcalentries_4.entry2
+
+// Clear the second alarm. The third one too has MIME associated data. 
+RUN_TEST_STEP 			100 	TestMultipleAlarmsServer	TestAlarmClearStep		Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	clear_2
+DELAY 500
+
+// Test the associated data of the notifying third alarm
+RUN_TEST_STEP			100	TestMultipleAlarmsServer	TestAssociatedDataStep		Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	createcalentries_4.entry3
+
+// Cleanup
+RUN_TEST_STEP 			100	TestMultipleAlarmsServer	TestCleanupStep
+END_TESTCASE	PIM-APPSRV-ALMSRV-PREQ1118-I-010-1-HP-0001
+
+
+// Kill alert server thread
+RUN_TEST_STEP 	100	TestMultipleAlarmsServer	TestKillAlertServerStep	

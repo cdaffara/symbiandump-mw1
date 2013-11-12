@@ -1,0 +1,9 @@
+<ContextSourceSettings>
+    <SettingItem3 Attribute3="Attrvalue3">
+        <SettingItemParam3 Param3="Paramvalue3"/>
+    </SettingItem3>
+    <SettingItem3 Attribute3="Attrvalue3" Attribute3="Attrvalue3">
+        <SettingItemParam3 Param3="Paramvalue3"/>
+        <SettingItemParam3 Param3="Paramvalue3" Param3="Paramvalue3"/>
+    </SettingItem3>
+</ContextSourceSettings>

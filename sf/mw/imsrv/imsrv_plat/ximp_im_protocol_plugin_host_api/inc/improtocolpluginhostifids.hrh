@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Protocol Plugin Host API interface IDs.
+*
+*/
+
+#ifndef PROTOCOLIMPLUGINHOSTIFIDS_HRH
+#define PROTOCOLIMPLUGINHOSTIFIDS_HRH
+
+
+// Protocol plugin host IF id's
+// 40xx - ximp related
+// 41xx - presence related
+// 42xx - instant messaging related
+
+// Interface IDs for XIMPFw Protocol Plugin Host interfaces
+#define IM_IF_ID_PROTOCOL_GROUP_DATAHOST             4201
+#define IM_IF_ID_PROTOCOL_CONVERSATION_DATAHOST      4202
+#define IM_IF_ID_PROTOCOL_INVITATION_DATAHOST        4203
+#define IM_IF_ID_PROTOCOL_PLUGIN_HOST    						 4204
+#define IM_IF_ID_PROTOCOL_SEARCH_DATAHOST            4205
+#define IM_IF_ID_PROTOCOL_DATA_HOST                  4206
+
+// Interface UID for IMfeatures interface
+#define XIMP_ECOM_IF_UID_IM_PROCESSOR_INTERFACE             0xE0000003
+
+
+#endif // PROTOCOLIMPLUGINHOSTIFIDS_HRH
+
+

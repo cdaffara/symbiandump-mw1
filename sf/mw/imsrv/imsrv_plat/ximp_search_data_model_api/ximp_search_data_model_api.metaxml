@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="67998fbda77e658d4ae8862590cab3d7" dataversion="1.0">
+<name>ximp_search_data_model_api</name>
+<description>This is a API that provides data model for search related operations.</description>
+<type>c++</type>
+<subsystem>searchdatamodel</subsystem>
+<libs><lib name="searchdatamodel.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

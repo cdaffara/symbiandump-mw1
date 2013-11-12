@@ -1,0 +1,42 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __TZLOCALTESTSERVER_IBY__
+#define __TZLOCALTESTSERVER_IBY__
+
+//
+// This IBY file allows the TZ Localization integration tests to be run on
+// hardware without having to use TestDriver.  Once the test script and data
+// files are included in the ROM they can be copied to C: (which is where the
+// script expects to find the data files) using the tzlocaltest.bat file.
+//
+
+#include <TimeZoneLocalization.iby>
+#include <TzLocalizationRscFactory.iby>
+
+file=ABI_DIR\BUILD_DIR\TzLocalTestServer.exe			SYSTEM_BINDIR\TzLocalTestServer.exe
+
+data=DATAC_\tzlocaltest.bat								tzlocaltest.bat
+
+#ifdef __WINS__
+data=DATAZ_\tzlocintegtest.script						tzlocintegtest.script 
+#else
+data=DATAZ_\tzlocintegtesthw.script						tzlocintegtesthw.script
+#endif
+
+data=DATAC_\tzlocaltestdata.ini							tzlocaltestdata.ini
+
+#endif

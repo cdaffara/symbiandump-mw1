@@ -1,0 +1,35 @@
+/*
+* Copyright (c) 2004-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource file defining for "Accessory not supported" note.
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    Accn
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rh>
+#include <avkon.loc>
+#include <avkon.rsg>
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF r_text_unsupp_accessory_connected { buf = text_unsupp_accessory_connected; }
+
+
+// End of File

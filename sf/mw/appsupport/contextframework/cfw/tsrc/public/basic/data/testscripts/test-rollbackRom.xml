@@ -1,0 +1,11 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <contextUpdated>
+            <contextRef source='rollback' type='rollback.status'/>
+        </contextUpdated>
+        <actions>
+        	<rollback status='ok'/>
+        </actions>
+    </if>
+</script>

@@ -1,0 +1,58 @@
+// ssyreferenceplugin.mmp
+
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+
+
+#include <sensors/spi/sensrvresource.hrh> 
+
+TARGET          ssyreferenceplugin.dll
+TARGETTYPE      plugin
+VENDORID        0x70000001
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID             0x10009D8D 0x10205089
+
+CAPABILITY      SENSOR_PLUGIN_CAPABILITIES
+
+SOURCEPATH      ../src
+SOURCE          ssyreferencechanneldataprovider.cpp
+SOURCE          ssyreferencecontrol.cpp
+SOURCE          ssyreferencepropertyprovider.cpp
+SOURCE          ssyreferencechannel.cpp
+SOURCE          ssyreferenceconfig.cpp
+SOURCE          ssyreferencecmdhandler.cpp
+SOURCE          ecomentrypoint.cpp
+
+USERINCLUDE     ../src
+
+SYSTEMINCLUDE   /epoc32/include
+SYSTEMINCLUDE   /epoc32/include/ecom
+SYSTEMINCLUDE   /epoc32/include/sensors
+SYSTEMINCLUDE	/epoc32/include/sensors/spi
+SYSTEMINCLUDE   /epoc32/include/sensors/channels
+
+// The resource name should have to be same as the third UID above
+START RESOURCE  ../src/10205089.rss
+TARGET          ssyreferenceplugin.rsc
+END
+
+LIBRARY         euser.lib
+LIBRARY         ecom.lib
+LIBRARY         sensrvutil.lib
+LIBRARY         xmlparser.lib      // for XML parser
+LIBRARY         efsrv.lib
+LIBRARY         xmldom.lib

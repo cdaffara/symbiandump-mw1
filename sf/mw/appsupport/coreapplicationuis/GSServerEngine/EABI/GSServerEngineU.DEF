@@ -1,0 +1,24 @@
+EXPORTS
+	0 @ 1 ABSENT
+	_ZN15CGSServerEngine12AspectRatioLEv @ 2 NONAME
+	_ZN15CGSServerEngine12SetTvSystemLEi @ 3 NONAME
+	0 @ 4 ABSENT
+	_ZN15CGSServerEngine14FlickerFilterLEv @ 5 NONAME
+	_ZN15CGSServerEngine15SetAspectRatioLEi @ 6 NONAME
+	_ZN15CGSServerEngine17SetFlickerFilterLEi @ 7 NONAME
+	_ZN15CGSServerEngine4NewLEv @ 8 NONAME
+	_ZN15CGSServerEngine5NewLCEv @ 9 NONAME
+	_ZN15CGSServerEngine9TvSystemLEv @ 10 NONAME
+	_ZN15CGSServerEngineD0Ev @ 11 NONAME
+	_ZN15CGSServerEngineD1Ev @ 12 NONAME
+	_ZN15CGSServerEngineD2Ev @ 13 NONAME
+	_ZN15RGSServerClient5CloseEv @ 14 NONAME
+	_ZN15RGSServerClient7ConnectEv @ 15 NONAME
+	_ZN15RGSServerClientC1Ev @ 16 NONAME
+	_ZN15RGSServerClientC2Ev @ 17 NONAME
+	0 @ 18 ABSENT
+	0 @ 19 ABSENT
+	0 @ 20 ABSENT
+	0 @ 21 ABSENT
+	0 @ 22 ABSENT
+

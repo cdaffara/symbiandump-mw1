@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<api id="1f865404a640a4d9df89327079684420" dataversion="1.0">
+<name>ximp_im_data_model_api</name>
+<description>This is a API that provides data model for instant messaging related operations like conversations.</description>
+<type>c++</type>
+<subsystem>imdatamodel</subsystem>
+<libs><lib name="imdatamodel.lib"/>
+<lib name="ximputils.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

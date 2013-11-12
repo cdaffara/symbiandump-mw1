@@ -1,0 +1,62 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+CAPABILITY  ReadUserData WriteUserData WriteDeviceData PowerMgmt
+TARGET      t_preq1118_testsuite.exe
+TARGETTYPE  exe
+UID         0x1000007A 0x10272A36
+VENDORID 0x70000001
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+// Path for alarmserver.hrh
+USERINCLUDE	../../../../Server/Include
+
+USERINCLUDE     ../inc
+USERINCLUDE		../../..
+SOURCEPATH      ../src
+
+SOURCE		    CITAlarmTestServer.cpp
+SOURCE          TestCITAlarmServerBaseStep.cpp
+SOURCE          TestMultipleAlarmsStep.cpp
+SOURCE          TestAlarmPlayStep.cpp
+
+LIBRARY         euser.lib
+LIBRARY         alarmclient.lib
+LIBRARY         alarmshared.lib
+LIBRARY	 	    testexecuteutils.lib
+LIBRARY	    	testexecutelogclient.lib
+LIBRARY			antestclient.lib
+
+
+SOURCEPATH ../data
+START RESOURCE defaultinterval.rss
+TARGETPATH test/pim/alarmserver/config
+END
+
+START RESOURCE disableinterval.rss
+TARGETPATH test/pim/alarmserver/config
+END
+
+START RESOURCE stopinterval.rss
+TARGETPATH test/pim/alarmserver/config
+END
+
+START RESOURCE repeatlast.rss
+TARGETPATH test/pim/alarmserver/config
+END
+
+SMPSAFE
+

@@ -1,0 +1,80 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for Presence Framework Test Protocol
+*
+*/
+
+#include <platform_paths.hrh>
+#include "../prfwtestprotocols_resource.hrh"
+
+TARGET              pr_prfwtestprotocol.dll
+TARGETTYPE          PLUGIN
+UID                 XIMP_DLL_UID_ECOM_PLUGIN  PRFW_DLL_UID_PR_PRFWTESTPROTOCOL
+VENDORID            VID_DEFAULT
+CAPABILITY              ALL -TCB -DRM 
+
+
+//ECOM RESOURCE
+START RESOURCE      pr_prfwtestprotocol.rss
+TARGET              pr_prfwtestprotocol.rsc
+END                 // RESOURCE
+
+SOURCEPATH          .
+SOURCE              pr_prfwtestprotocol.cpp
+
+SOURCEPATH          ../../tsrcutils/testcaseutils
+SOURCE              prfwtestfilelogichelper.cpp
+SOURCE              prfwtestfiletool.cpp
+
+USERINCLUDE             ../../../../../ximpfw/core/srcdatamodel
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presentitygroups
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presencewatching
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presenceauthorization
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presencepublishing
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presenceinfo
+USERINCLUDE             ../../../../../ximpfw/core/srcutils
+USERINCLUDE             ../../tsrcprotocols
+USERINCLUDE             ../../tsrcutils/testcaseutils
+
+// TODO remove unnecessary
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/base
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/datamodel
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/protocolplugin
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/protocolpluginhost
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presencedatamodel
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presencemanagement
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presenceprotocolplugin
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presenceprotocolpluginhost
+
+
+
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/ecom
+
+
+LIBRARY             euser.lib
+LIBRARY             ecom.lib
+LIBRARY             bafl.lib
+LIBRARY             estor.lib
+LIBRARY             efsrv.lib
+LIBRARY             flogger.lib
+
+LIBRARY             ximpdatamodel.lib
+LIBRARY             presencedatamodel.lib
+LIBRARY             ximputils.lib
+LIBRARY             prfwtestcaseutils.lib
+
+
+// End of file

@@ -1,0 +1,25 @@
+<!-- Defines a rule which causes vibra to be activated -->
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <or>
+            <!-- Listen context 'Sensor: Event.DoubleTap'events -->
+            <equals>
+                <contextRef source='Sensor' type='Event.DoubleTap'/>
+                <string>X-Axis</string>
+            </equals>
+            <equals>
+                <contextRef source='Sensor' type='Event.DoubleTap'/>
+                <string>Y-Axis</string>
+            </equals>
+            <equals>
+                <contextRef source='Sensor' type='Event.DoubleTap'/>
+                <string>Z-Axis</string>
+            </equals>
+        </or>
+        <actions>
+            <!-- All time values in milliseconds -->
+            <Vibra Mode='Start' Delay='0' Repeats='2' RepeatInterval='200' Duration='50' Intensity='50'/>
+        </actions>
+    </if>
+</script>

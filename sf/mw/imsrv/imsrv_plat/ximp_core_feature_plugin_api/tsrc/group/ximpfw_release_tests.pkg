@@ -1,0 +1,56 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+;Header
+#{"XIMPFW ReleaseTests"}, (0x10282DE4), 1, 0, 0
+
+;Language
+&EN
+
+;Localised VendorID
+%{"Nokia"}
+
+;VendorID
+:"Nokia"
+
+
+;Supports Series 60 v 0.9
+(0x101F6F88), 0, 0, 0,
+{"Series60ProductID"}
+
+
+;Needed test protocols and test helpers
+"\EPOC32\RELEASE\ARMV5\UREL\pr_prfwtestprotocol.dll" - "!:\sys\bin\pr_prfwtestprotocol.dll"
+"\EPOC32\DATA\Z\Resource\Plugins\pr_prfwtestprotocol.RSC"-"!:\resource\plugins\pr_prfwtestprotocol.rsc"
+"\EPOC32\RELEASE\ARMV5\UREL\prfwtestcaseutils.dll" - "!:\sys\bin\prfwtestcaseutils.dll"
+
+
+;EUnit test dlls
+;"\EPOC32\RELEASE\ARMV5\UREL\t_presenceall.dll" - "!:\sys\bin\t_presenceall.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_rootservices.dll" - "!:\sys\bin\t_rootservices.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_sessionmng.dll" - "!:\sys\bin\t_sessionmng.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_presencepublishing.dll" - "!:\sys\bin\t_presencepublishing.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_presencewatching.dll" - "!:\sys\bin\t_presencewatching.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_presencegrouplistmngt.dll" - "!:\sys\bin\t_presencegrouplistmngt.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_presencegroupmembermngt.dll" - "!:\sys\bin\t_presencegroupmembermngt.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_presencewatcherlistmngt.dll" - "!:\sys\bin\t_presencewatcherlistmngt.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_presencegrantrequestmngt.dll" - "!:\sys\bin\t_presencegrantrequestmngt.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_presenceauthorization.dll" - "!:\sys\bin\t_presenceauthorization.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_presenceblocking.dll" - "!:\sys\bin\t_presenceblocking.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\t_utils.dll" - "!:\sys\bin\t_utils.dll"
+
+;ProcessMaster
+"\EPOC32\RELEASE\ARMV5\UREL\prfwtestprocessmaster.exe" - "!:\sys\bin\prfwtestprocessmaster.exe"
+

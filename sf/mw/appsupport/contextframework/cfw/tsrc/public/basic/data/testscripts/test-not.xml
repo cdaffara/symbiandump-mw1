@@ -1,0 +1,16 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <not>
+		        <equals>
+		            <contextRef source='Application.State'
+		            		 type='Foreground.View'/>
+		            <cep:string>Settings</cep:string>
+		        </equals>
+        </not>
+        <actions>
+            <!-- start calendar app -->
+            <startApp appUid='10005901' viewUid='00000001' msgUid='00000000' msg='msg'/>
+        </actions>
+    </if>
+</script>

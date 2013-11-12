@@ -1,0 +1,55 @@
+// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// chtmltocrtconverter.dll HTML to Symbian OS rich text converter
+// 
+//
+
+target          chtmltocrtconverter.dll
+targettype      PLUGIN
+CAPABILITY   All -TCB
+
+UID	0x10009D8D 0x10203591
+VENDORID 0x70000001
+
+SOURCE			../src/CHtmlToCrtConverter.cpp 
+SOURCE			../src/CHtmlToCrtConvBuffer.cpp
+SOURCE			../src/CHtmlToCrtConvHashTable.cpp
+SOURCE			../src/CHtmlToCrtConvActionProcessor.cpp
+SOURCE			../src/CHtmlToCrtConvParser.cpp
+SOURCE			../src/CHtmlToCrtConvActionProcessorCustom.cpp
+SOURCE			../src/CHtmlToCrtConvCharsetConvert.cpp
+
+userinclude		../inc
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+library euser.lib estor.lib etext.lib efsrv.lib gdi.lib conarc.lib bafl.lib charconv.lib
+
+START RESOURCE 10203591.rss
+TARGET chtmltocrtconverter.rsc
+END
+
+START RESOURCE  	1000a90e.rss
+HEADER
+TARGETPATH      	resource/convert
+LANG            	SC
+END
+
+START RESOURCE  	CHtmlToCrtConverter.rss
+HEADER
+TARGETPATH      	resource/convert
+LANG            	SC
+END
+
+SMPSAFE
+

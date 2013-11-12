@@ -1,0 +1,69 @@
+/*
+* Copyright (c) 2008-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          UT_CFOperationPluginManager.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../UT_CFOperationPluginManager
+SOURCE                  UT_CFOperationPluginManager.cpp
+SOURCE                  UT_CFOperationPluginManager_DllMain.cpp
+
+// Sources required by the test suite
+SOURCEPATH              ../../../../src/cfoperationpluginservices
+SOURCE                  cfoperationpluginmanager.cpp
+SOURCE                  cfoperationplugin.cpp
+
+USERINCLUDE             ../UT_CFOperationPluginManager
+USERINCLUDE             ../common
+
+// User include folders required by the tested code
+USERINCLUDE             ../../../../inc/common
+USERINCLUDE             ../../../../inc/cfserver
+USERINCLUDE             ../../../../inc/cfservices
+USERINCLUDE             ../../../../src/cfoperationpluginservices
+USERINCLUDE             ../../../../inc/cfscriptengine
+USERINCLUDE             ../../../../group
+USERINCLUDE             ../../../../inc/cfoperationpluginservices
+USERINCLUDE             ../../../../CenRep
+
+MW_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+// System include folders required by the tested code
+
+LIBRARY                 EUnit.lib
+LIBRARY                 EUnitUtil.lib
+LIBRARY                 euser.lib
+
+// Libraries required by the tested code
+LIBRARY                 bafl.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 ecom.lib
+LIBRARY                 centralrepository.lib
+LIBRARY                 cfservices.lib
+
+LIBRARY                 flogger.lib
+
+// End of file

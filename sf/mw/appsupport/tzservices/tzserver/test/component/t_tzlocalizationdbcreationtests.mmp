@@ -1,0 +1,32 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET			t_tzlocalizationdbcreationtests.exe
+TARGETTYPE		exe
+CAPABILITY		WriteDeviceData WriteUserData ReadUserData
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+USERINCLUDE		../../../../commonappservices/coreappstest/inc
+
+SOURCEPATH		.
+SOURCE			t_tzlocalizationdbcreationtests.cpp
+
+LIBRARY			euser.lib pimtestclient.lib tzclient.lib
+LIBRARY			edbms.lib
+LIBRARY			timezonelocalization.lib
+
+VENDORID		0x70000001
+
+SMPSAFE

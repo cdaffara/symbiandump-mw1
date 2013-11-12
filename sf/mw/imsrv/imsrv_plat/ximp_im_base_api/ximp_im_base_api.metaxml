@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="24a1055beb673b74dae8b860b8df4ee4" dataversion="1.0">
+<name>ximp_im_base_api</name>
+<description>This is a API that provides the common error codes, plugin UIDs and operation types of instant messaging base.</description>
+<type>c++</type>
+<subsystem>ximp_im_base_api</subsystem>
+<libs></libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

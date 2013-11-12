@@ -1,0 +1,30 @@
+EXPORTS
+	_Z11RunCaServerv @ 1 NONAME
+	_ZN13CCaMmcWatcher4NewLER3RFsP19MMmcWatcherCallback @ 2 NONAME
+	_ZN13CCaMmcWatcher5NewLCER3RFsP19MMmcWatcherCallback @ 3 NONAME
+	_ZN15CCaStorageProxy11CustomSortLERK6RArrayIiEi @ 4 NONAME
+	_ZN15CCaStorageProxy11DbPropertyLERK7TDesC16R6TDes16 @ 5 NONAME
+	_ZN15CCaStorageProxy11GetEntriesLEPK13CCaInnerQueryR13RPointerArrayI13CCaInnerEntryE @ 6 NONAME
+	_ZN15CCaStorageProxy14GetEntriesIdsLEPK13CCaInnerQueryR6RArrayIiE @ 7 NONAME
+	_ZN15CCaStorageProxy14LocalizeEntryLER20CCaLocalizationEntry @ 8 NONAME
+	_ZN15CCaStorageProxy14SetDBPropertyLERK7TDesC16S2_ @ 9 NONAME
+	_ZN15CCaStorageProxy17GetLocalizationsLER13RPointerArrayI20CCaLocalizationEntryE @ 10 NONAME
+	_ZN15CCaStorageProxy20LoadDataBaseFromRomLEv @ 11 NONAME
+	_ZN15CCaStorageProxy4AddLEP13CCaInnerEntryi15TItemAppearance @ 12 NONAME
+	_ZN15CCaStorageProxy6TouchLEP13CCaInnerEntry @ 13 NONAME
+	_ZN15CCaStorageProxy7RemoveLERK6RArrayIiE @ 14 NONAME
+	_ZN15CCaStorageProxy9OrganizeLERK6RArrayIiE18TCaOperationParams @ 15 NONAME
+	_ZN16CCaSrvMmcHistory4FindEj @ 16 NONAME
+	_ZN16CCaSrvMmcHistory5LoadLER3RFsRK7TDesC16 @ 17 NONAME
+	_ZN16CCaSrvMmcHistory5SaveLER3RFsRK7TDesC16 @ 18 NONAME
+	_ZN16CCaSrvMmcHistory7InsertLEj @ 19 NONAME
+	_ZN18CCaInstallNotifier4NewLER18MCaInstallListenerNS_17TNotificationTypeE @ 20 NONAME
+	_ZNK14CCaSrvEngUtils10GetAppInfoERK13CCaInnerEntryR11TApaAppInfo @ 21 NONAME
+	_ZNK14CCaSrvEngUtils13GetApaAppInfoE4TUidR11TApaAppInfo @ 22 NONAME
+	_ZTI15CCaStorageProxy @ 23 NONAME
+	_ZTV15CCaStorageProxy @ 24 NONAME
+	_ZN16CCaSrvMmcHistory4NewLEv @ 25 NONAME
+	_ZN15CCaStorageProxy16AddLocalizationLERK20CCaLocalizationEntry @ 26 NONAME
+	_ZN15CCaStorageProxy13SaveDatabaseLEv @ 27 NONAME
+	_ZN15CCaStorageProxy16RestoreDatabaseLEv @ 28 NONAME
+

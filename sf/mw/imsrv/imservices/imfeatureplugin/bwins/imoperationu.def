@@ -1,0 +1,6 @@
+EXPORTS
+	??0COperationLaunchCleaner@@QAE@XZ @ 1 NONAME ; COperationLaunchCleaner::COperationLaunchCleaner(void)
+	??0COperationReceiveMessage@@QAE@XZ @ 2 NONAME ; COperationReceiveMessage::COperationReceiveMessage(void)
+	??0COperationSendMessage@@QAE@XZ @ 3 NONAME ; COperationSendMessage::COperationSendMessage(void)
+	?NewL@CImOperationFactory@@SAPAV1@XZ @ 4 NONAME ; class CImOperationFactory * CImOperationFactory::NewL(void)
+

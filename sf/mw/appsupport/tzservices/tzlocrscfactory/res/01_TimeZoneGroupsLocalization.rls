@@ -1,0 +1,82 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __01_TzLocalization_RLS__
+#define __01_TzLocalization_RLS__
+
+// Groups of Cities =====================================================================
+
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_1 "Africa"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_2 "America"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_3 "Antarctica"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_4 "Asia"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_5 "Atlantic"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_6 "Australia"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_7 "Etc"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_8 "Europe"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_9  "Factory"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_10 "Indian"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_11 "Pacific"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_12 "WET"
+
+#endif // __01_TzLocalization_RLS__

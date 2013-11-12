@@ -1,0 +1,69 @@
+/*
+* Copyright (c) 2008-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          MT_CFScriptEngine.dll
+TARGETTYPE      dll
+TARGETPATH      /DigiaEUnit/Tests
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../MT_CFScriptEngine
+SOURCE                  MT_CFScriptEngineDllMain.cpp
+SOURCE                  MT_CFScriptEngine.cpp
+
+SOURCEPATH              ../common
+SOURCE                  cffakeenv.cpp
+SOURCE                  CFTestDelay.cpp
+SOURCE                  ScriptEventNotifierSession.cpp
+
+// Sources needed by the test
+SOURCEPATH              ../../../../src/cfserver
+SOURCE                  CFContextManager.cpp
+SOURCE                  CFUtils.cpp
+SOURCE                  CFCacheElement.cpp
+
+USERINCLUDE           ../common
+USERINCLUDE           ../MT_CFScriptEngine
+USERINCLUDE           ../../../../inc/common
+USERINCLUDE           ../../../../inc/cfserver
+USERINCLUDE           ../../../../inc/cfservices
+USERINCLUDE           ../../../../inc/cfscriptengine
+USERINCLUDE           ../../../../inc/basicoperationsplugin
+
+MW_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+LIBRARY                 bafl.lib
+LIBRARY                 centralrepository.lib
+LIBRARY                 CFScriptEngine.lib
+LIBRARY                 cfoperationpluginservices.lib
+LIBRARY                 cfservices.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 estor.lib
+LIBRARY                 EUnit.lib
+LIBRARY                 euser.lib
+LIBRARY                 ecom.lib
+
+LIBRARY                 flogger.lib
+
+// End of file

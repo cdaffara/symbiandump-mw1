@@ -1,0 +1,36 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Search Feature Plugin Data Model API interface IDs.
+*
+*/
+
+#ifndef SEARCHDATAMODELIFIDS_HRH
+#define SEARCHDATAMODELIFIDS_HRH
+
+// Data model IF id's
+// 20xx - ximp related
+// 21xx - presence related
+// 22xx - instant messaging related
+// 24xx - Search related
+
+
+#define SEARCH_IF_ID_SEARCH_OBJECT_FACTORY      2404
+#define SEARCH_IF_ID_SEARCH_INFO                2402
+#define SEARCH_IF_ID_SEARCH_KEY_INFO            2403
+
+
+#endif // SEARCHDATAMODELIFIDS_HRH
+
+
+

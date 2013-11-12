@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="41b4bfa2b5209c5a38f99f5cdc28cc25" dataversion="1.0">
+  <name>AI Plug-in Information API</name>
+  <description>Provides infomration about loaded active idle plug-ins</description>
+  <type>c++</type>
+  <subsystem>activeidle</subsystem>
+  <libs>
+    <lib name="aifw.lib" />
+  </libs>
+  <release category="domain"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>yes</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

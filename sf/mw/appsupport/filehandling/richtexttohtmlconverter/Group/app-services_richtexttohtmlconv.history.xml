@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="File Converter Plugins">
+  <purpose>
+    Plugin to File Converter Framework, converts an HTML file to a Symbian OS rich text object stored in a file, converts a Symbian OS rich text file to an HTML file and implementing specific conversions e.g. MS Excel, MS Word, MS font formats.
+  </purpose>
+</relnotes>

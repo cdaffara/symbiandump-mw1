@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api id="086de7c2f2a87e73b0c5674c24698c99" dataversion="2.0">
+  <name>taskswitcher_api</name>
+  <description>Task Switcher API controls appearance of application in task switcher as visibility and screenshot. It provides also keys for monitoring Task Switcher dialog visibility.</description>
+  <type>c++</type>
+  <collection>taskswitcher</collection>
+  <libs>
+    <lib name="tstaskmonitorclient.lib"/>
+  </libs>
+  <release category="platform" sinceversion="5.2"/>
+  <attributes>
+    <htmldocprovided>no</htmldocprovided>
+    <adaptation>no</adaptation>
+  </attributes>
+</api>

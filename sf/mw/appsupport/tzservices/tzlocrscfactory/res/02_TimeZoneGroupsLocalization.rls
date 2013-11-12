@@ -1,0 +1,82 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __01_TzLocalization_RLS__
+#define __01_TzLocalization_RLS__
+
+// Groups of Cities =====================================================================
+
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_1 "FRENCHAfrica"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_2 "FRENCHAmerica"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_3 "FRENCHFRENCHAntarctica"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_4 "FRENCHAsia"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_5 "FRENCHAtlantic"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_6 "FRENCHAustralia"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_7 "FRENCHEtc"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_8 "FRENCHEurope"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_9  "FRENCHFactory"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_10 "FRENCHIndian"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_11 "FRENCHPacific"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name_12 "FRENCHWET"
+
+#endif // __01_TzLocalization_RLS__

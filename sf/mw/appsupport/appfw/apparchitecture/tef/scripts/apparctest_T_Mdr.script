@@ -1,0 +1,39 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-MdrStep-testModelDoorL-0001
+//! @SYMTestCaseDesc 		Tests storing and restoring of Model door.
+//! @SYMTestPriority 		High 
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		The test creates a test model header and initializes its member variable iData. A model door object is created by passing
+//!				application model wrapper object to be embedded to CApaModelDoor::NewL(). A temporary store is created and CTestModelHeader::StoreL() is called to
+//!				store the model door. Call CApaModelDoor::NewL() specifying the store and stream to restore the stored model door. Test values from the restored
+//!				model door.
+//!				API Calls:
+//!				CApaModelDoor::NewL(CApaModelHeader* aHeader)
+//!				CApaModelDoor::StoreL(CStreamStore& aStore) const
+//!				CApaModelDoor::NewL(const CStreamStore& aStore,TStreamId aHeadStreamId,const MApaModelHeaderFactory* aFactory)
+//!				CApaModelDoor::ModelHeader()
+//! @SYMTestExpectedResults 	Test completes restoration of model door successfully.
+
+START_TESTCASE API-APPFWK-T-MdrStep-testModelDoorL-0001
+
+PRINT Run T_Mdr Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_Mdr
+
+END_TESTCASE API-APPFWK-T-MdrStep-testModelDoorL-0001

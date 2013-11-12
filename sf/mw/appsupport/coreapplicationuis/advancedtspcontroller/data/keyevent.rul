@@ -1,0 +1,161 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+         <and>
+            <equals>
+                <contextRef source='ContextFramework' type='Status'/>
+                <string>Ready</string>
+            </equals>
+            <equals>
+                <contextRef source='Tsp' type='Status'/>
+                <string>Ready</string>
+            </equals>
+         </and>
+            
+        <actions>
+            <!-- start context framework -->
+             
+            <Tsp
+            routingTable='01'
+            keyEventRemConVolumeUp='41'
+            keyEventRemConVolumeDown='42'
+            />
+            
+            <Tsp
+            routingTable='01'           
+	    ruleActiveAudio='00' 
+            ruleForeground='01'
+            ruleLastPlayedAudio='03'
+            ruleDefaultApp='02'
+            defaultApplicationPhone='100058B3'
+            />
+            
+            <Tsp
+            routingTable='02'
+            keyEventRemConForward='4b'
+            keyEventRemConBackward='4c'
+            />
+            
+            <Tsp
+            routingTable='02'
+            ruleActiveAudio='00'
+            ruleForeground='01'
+            ruleLastPlayedAudio='03'
+            ruleDefaultApp='02'
+            defaultApplicationPhone='100058B3'
+            />
+            
+            <Tsp
+            routingTable='03'
+            keyEventRemConExtCallLastNumberRedial='04'
+            keyEventRemConExtCallDialCall='05'
+            keyEventRemConExtCallSpeedDial='08'
+            />
+            
+            <Tsp
+            routingTable='03'
+            ruleDefaultApp='02'
+            defaultApplicationPhone='100058B3'
+            />
+            
+            <Tsp
+            routingTable='04'
+            keyEventRemConExtCallAnswerCall='00'
+            keyEventRemConExtCallEndCall='01'
+            keyEventRemConExtCallAnswerEnd='02'
+            />
+            
+            <Tsp
+            routingTable='04'
+            ruleForeground='01'
+            ruleActiveAudio='00'
+            ruleLastPlayedAudio='03'
+            />
+            
+            <Tsp
+            routingTable='05'
+            keyEventRemConRewind='48'
+            keyEventRemConFastForward='49'
+            />
+            
+            <Tsp
+            routingTable='05'
+            ruleActiveAudio='00'
+            ruleLastPlayedAudio='03'
+            ruleForeground='01'
+            ruleDefaultApp='02'
+            defaultApplicationPhone='100058B3'
+            />
+            
+            <Tsp
+            routingTable='06'
+            keyEventRemConMute='43'
+            keyEventRemConPausePlayFunction='61'
+            />
+            
+            <Tsp
+            routingTable='06'
+            ruleActiveAudio='00'
+            ruleLastPlayedAudio='03'
+            ruleForeground='01' 
+            ruleDefaultApp='02'
+            defaultApplicationPhone='100058B3'
+            />
+            
+            <Tsp
+            routingTable='07'
+            keyEventRemConPlay='44'
+            />
+            
+            <Tsp
+            routingTable='07'
+            ruleActiveAudio='00'
+            ruleLastPlayedAudio='03'
+            ruleForeground='01' 
+            ruleLaunchDefaultApp='04'
+            defaultLaunchApp='102072C3'
+            />
+
+            <Tsp
+            routingTable='08'
+            keyEventRemConPause='46'
+            />
+            
+            <Tsp
+            routingTable='08'
+            ruleActiveAudio='00'
+            ruleLastPlayedAudio='03'
+            ruleForeground='01'
+            ruleDefaultApp='02'
+            defaultApplicationPhone='100058B3'
+            />
+            
+           
+            <Tsp
+            routingTable='09'
+            keyEventRemConStop='45'
+            />
+            
+            <Tsp
+            routingTable='09'
+            ruleActiveAudio='00'
+            ruleForeground='01'
+            ruleLastPlayedAudio='03'
+            ruleDefaultApp='02'
+            defaultApplicationPhone='100058B3'
+            />
+            
+            <Tsp
+            routingTable='10'
+            KRemConSetAbsoluteVolume='1050'
+            KRemConAbsoluteVolumeNotification='0d31'
+            EGetFolderItemsOperationId='00'
+            />
+            
+            <Tsp
+            routingTable='10'
+            transparentApplicationBTAudioMan='10208971'
+            />
+        </actions>
+    </if>
+</script>

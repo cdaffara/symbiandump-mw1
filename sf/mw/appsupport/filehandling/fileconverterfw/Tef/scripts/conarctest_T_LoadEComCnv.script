@@ -1,0 +1,42 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID		API-APPFWK-TLoadEcomCnvStep-ExecuteL-0001
+//! @SYMREQ			REQ2689		
+//! @SYMTestCaseDesc 		Construct CCnaConverterList object and get the converter by uid as well as mime style
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released 
+//! @SYMTestActions  		To construct CCnaConverterList object and get the instance of the converter passing the relevant UID
+//!				Using the list object its following APIs are tested
+//!				API Calls:		
+//!				CCnaConverterList::NewLC();
+//!				CCnaConverterList::NewConverterL(TUid aUid);
+//!				CCnaConverterList::Count();
+//!				CCnaConverterList::ConvFromL(const TDataType& aMimeType);
+//!				CCnaConverterList::ConvToL(const TDataType& aMimeType);
+//!				CCnaConverterList::ConverterL(const TDataType& aFrom,const TDataType& aTo);
+//!				CTestEcomConverter::ConvertL(const TFileName& aSourceFile, const TFileName& aTargetFile, 
+//!					MConverterUiObserver* aObserver=NULL);
+//! @SYMTestExpectedResults 	Test should complete without any panic.
+
+START_TESTCASE API-APPFWK-TLoadEcomCnvStep-ExecuteL-0001
+
+PRINT Run TLoadEComCnv ConArc test
+//
+LOAD_SUITE TConArcTestServer
+RUN_TEST_STEP 100 TConArcTestServer TLoadEComCnv
+
+END_TESTCASE API-APPFWK-TLoadEcomCnvStep-ExecuteL-0001

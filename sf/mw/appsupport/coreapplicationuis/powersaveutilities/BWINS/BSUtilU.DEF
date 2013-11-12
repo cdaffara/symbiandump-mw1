@@ -1,0 +1,5 @@
+EXPORTS
+	?GetBatteryCapacity@CBSUtil@@QAEEXZ @ 1 NONAME ; unsigned char CBSUtil::GetBatteryCapacity(void)
+	?NewL@CBSUtil@@SAPAV1@XZ @ 2 NONAME ; class CBSUtil * CBSUtil::NewL(void)
+	?NewLC@CBSUtil@@SAPAV1@XZ @ 3 NONAME ; class CBSUtil * CBSUtil::NewLC(void)
+

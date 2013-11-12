@@ -1,0 +1,9 @@
+component	app-framework_amastart
+source	\sf\mw\appsupport\applaunchservices\aftermarketappstarter
+binary	\sf\mw\appsupport\applaunchservices\aftermarketappstarter\group	all
+exports	\sf\mw\appsupport\applaunchservices\aftermarketappstarter\group
+notes_source	\component_defs\release.src
+
+ipr E 
+ipr T \sf\mw\appsupport\applaunchservices\aftermarketappstarter\test
+

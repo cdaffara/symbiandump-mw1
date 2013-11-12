@@ -1,0 +1,19 @@
+EXPORTS
+	_Z12GateFunctionv @ 1 NONAME
+	_ZTI19CHtmlToCrtConverter @ 2 NONAME ; #<TI>#
+	_ZTI20CHtmlToCrtConvBuffer @ 3 NONAME ; #<TI>#
+	_ZTI20CHtmlToCrtConvParser @ 4 NONAME ; #<TI>#
+	_ZTI21CHtmlToCrtConvLibrary @ 5 NONAME ; #<TI>#
+	_ZTI23CHtmlToCrtConvAttribute @ 6 NONAME ; #<TI>#
+	_ZTI23CHtmlToCrtConvHashTable @ 7 NONAME ; #<TI>#
+	_ZTI28CHtmlToCrtConvCharsetConvert @ 8 NONAME ; #<TI>#
+	_ZTI29CHtmlToCrtConvActionProcessor @ 9 NONAME ; #<TI>#
+	_ZTV19CHtmlToCrtConverter @ 10 NONAME ; #<VT>#
+	_ZTV20CHtmlToCrtConvBuffer @ 11 NONAME ; #<VT>#
+	_ZTV20CHtmlToCrtConvParser @ 12 NONAME ; #<VT>#
+	_ZTV21CHtmlToCrtConvLibrary @ 13 NONAME ; #<VT>#
+	_ZTV23CHtmlToCrtConvAttribute @ 14 NONAME ; #<VT>#
+	_ZTV23CHtmlToCrtConvHashTable @ 15 NONAME ; #<VT>#
+	_ZTV28CHtmlToCrtConvCharsetConvert @ 16 NONAME ; #<VT>#
+	_ZTV29CHtmlToCrtConvActionProcessor @ 17 NONAME ; #<VT>#
+

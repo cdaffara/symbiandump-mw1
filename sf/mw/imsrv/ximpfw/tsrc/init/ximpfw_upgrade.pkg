@@ -1,0 +1,75 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: XIMP Framework Package File
+;
+;
+; Package file for presencefw SIS stub in ROM
+; and a ximp framework upgrade SIS.
+; Including the stub in ROM enables components
+; defined in stub to be updated by SIS installer.
+; When adding or removing components from presencefw
+; please update this pkg file and create an updated
+; stub to group directory.
+;
+; To create SIS stub: makesis -s ximpfw_upgrade.pkg ximpfwstub.sis
+; Copy ximpfwstub.sis to z:\system\install\ximpfwstub.sis
+; or use abld export to export it automatically.
+;
+
+;Language
+&EN
+
+;Header
+#{"PresenceFramework"}, (0x10282DDC), 1, 0, 0, TYPE=PU
+
+
+;Localised VendorID
+%{"Nokia"}
+
+;VendorID
+:"Nokia"
+
+(0x101F7961), 0, 0, 0, {"Series60ProductID"}
+
+
+;binaries
+"\EPOC32\RELEASE\ARMV5\UREL\ximpdatamodel.dll"-"z:\sys\bin\ximpdatamodel.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\ximpoperations.dll"-"z:\sys\bin\ximpoperations.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\ximpprocessor.dll"-"z:\sys\bin\ximpprocessor.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\ximpserver.exe"-"z:\sys\bin\ximpserver.exe"
+"\EPOC32\RELEASE\ARMV5\UREL\ximprootserver.exe"-"z:\sys\bin\ximprootserver.exe"
+"\EPOC32\RELEASE\ARMV5\UREL\ximpsrvclient.dll"-"z:\sys\bin\ximpsrvclient.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\ximpmanager.dll"-"z:\sys\bin\ximpmanager.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\ximpecomhook.dll"-"z:\sys\bin\ximpecomhook.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\ximputils.dll"-"z:\sys\bin\ximputils.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\presencemanager.dll"-"z:\sys\bin\presencemanager.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\presencedatamodel.dll"-"z:\sys\bin\presencedatamodel.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\presenceoperation.dll"-"z:\sys\bin\presenceoperation.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\presencecacheclient.dll"-"z:\sys\bin\presencecacheclient.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\presencecacheecomhook.dll"-"z:\sys\bin\presencecacheecomhook.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\presencecacheserver.exe"-"z:\sys\bin\presencecacheserver.exe"
+"\EPOC32\RELEASE\ARMV5\UREL\immanager.dll"-"z:\sys\bin\immanager.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\imdatamodel.dll"-"z:\sys\bin\imdatamodel.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\imoperation.dll"-"z:\sys\bin\imoperation.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\imdatamodelhook.dll"-"z:\sys\bin\imdatamodelhook.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\imecomhook.dll"-"z:\sys\bin\imecomhook.dll"
+
+;resources
+"\EPOC32\DATA\z\Resource\Plugins\ximpecomhook.RSC"-"z:\resource\plugins\ximpecomhook.rsc"
+"\EPOC32\DATA\z\Resource\Plugins\presenceecomhook.RSC"-"z:\resource\plugins\presenceecomhook.rsc"
+"\EPOC32\DATA\z\Resource\Plugins\presencedatamodelhook.RSC"-"z:\resource\plugins\presencedatamodelhook.rsc"
+"\EPOC32\DATA\z\Resource\Plugins\presencecacheecomhook.RSC"-"z:\resource\plugins\presencecacheecomhook.rsc"
+"\EPOC32\DATA\z\Resource\Plugins\imecomhook.RSC"-"z:\resource\plugins\imecomhook.rsc"
+"\EPOC32\DATA\z\Resource\Plugins\imdatamodelhook.RSC"-"z:\resource\plugins\imdatamodelhook.rsc"
+

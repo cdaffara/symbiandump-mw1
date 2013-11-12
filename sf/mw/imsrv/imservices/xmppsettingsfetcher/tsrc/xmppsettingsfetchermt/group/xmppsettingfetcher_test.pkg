@@ -1,0 +1,48 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: xmppsettingfetcher_test.pkg
+;
+;Header
+#{"XmppSettingFetcher"}, (0x10202BE9), 1, 2, 3, TYPE=SP
+
+;Language - standard language definitions
+&EN
+
+;Vendor ID
+:"Nokia Corporation"
+
+;Localised vendor
+%{"Vendor-EN"}
+
+;Supports Series 60 v 0.9
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+
+;rom will not allow to update it if name is testframework, after install need to rename it to testframework.ini
+;INI FILE
+"..\init\testframework.ini"        			-"c:\Testframework\ttestframework.ini"
+
+
+
+; Install keyspace in Central Repository private data cage
+"..\init\10282CE5.txt"                             -"c:\private\10202be9\10282CE5.txt"
+"..\init\1020E334.txt"                             -"c:\private\10202be9\1020E334.txt"
+"..\init\200195A9.txt"                             -"c:\private\10202be9\200195A9.txt"
+"..\init\2001B288.txt"                             -"c:\private\10202be9\2001B288.txt"
+
+
+;xmppsettingsfetchermt dll files
+
+"\EPOC32\RELEASE\ARMV5\UREL\xmppsettingsfetchermt.dll" 	-"!:\sys\bin\xmppsettingsfetchermt.dll"
+    

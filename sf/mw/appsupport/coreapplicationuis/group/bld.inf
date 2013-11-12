@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+PRJ_MMPFILES
+
+#include "../DbRecovery/Group/bld.inf"
+#include "../NspsWsPlugin/group/bld.inf"
+#include "../Rfs/group/bld.inf"
+#include "../rfsplugins/group/bld.inf"
+#include "../SysAp/Group/bld.inf"
+#include "../VariatedSettings/group/bld.inf"
+#include "../accfwuinotifier/group/bld.inf"
+#include "../kefmapper/group/bld.inf"
+#include "../advancedtspcontroller/group/bld.inf"
+#include "../gsserverenginestub/group/bld.inf"
+#include "../GSServerEngine/group/bld.inf"
+#include "../sensordatacompensatorplugin/group/bld.inf"
+
+PRJ_TESTMMPFILES
+
+//  End of File  

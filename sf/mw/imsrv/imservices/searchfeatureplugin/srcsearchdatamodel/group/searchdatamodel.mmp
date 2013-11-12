@@ -1,0 +1,77 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for search Feature Plugin
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/searchdlluids.hrh"
+
+TARGET                  searchdatamodel.dll
+TARGETTYPE              dll
+UID                     XIMP_SEARCH_DLL_UID_STATIC_INTERFACE  XIMP_DLL_UID_SEARCH_DATAMODEL                   
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+VERSION      10.0
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../search
+// ---------------------------------------------------------------------------
+
+SOURCE  				searchsubscriptionitem.cpp
+SOURCE                  searchelementimp.cpp
+SOURCE  				searcheventimp.cpp
+SOURCE  				searchinfoimp.cpp
+SOURCE  				searchkeyinfoimp.cpp
+SOURCE  				searchkeyseventimp.cpp
+SOURCE  				searchkeysubscriptionitem.cpp
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../../srcsearchdatamodel
+// ---------------------------------------------------------------------------
+SOURCE                  searchdatacacheimp.cpp
+SOURCE                  searchobjectfactoryimp.cpp
+
+SOURCE                  searchapidataobjfactory.cpp
+SOURCE                  searcheventcodec.cpp
+SOURCE                  searchapidataobjfactoryaccessor.cpp
+
+
+
+USERINCLUDE             ../../srcsearchdatamodel
+USERINCLUDE             ../../srcsearchdatamodel/search
+USERINCLUDE             ../../group
+
+
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 euser.lib
+LIBRARY                 bafl.lib
+LIBRARY                 estor.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 ecom.lib
+LIBRARY         		flogger.lib
+
+
+#if defined( ARMCC )
+DEFFILE ../../eabi/ 
+#elif defined ( WINSCW )
+deffile ../../bwins/ 
+#endif
+
+// End of file
+

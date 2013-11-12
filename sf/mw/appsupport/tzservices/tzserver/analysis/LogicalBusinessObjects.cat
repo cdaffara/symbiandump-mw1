@@ -1,0 +1,2294 @@
+
+(object Petal
+    version    	43
+    _written   	"Rose 6.5.9232.10"
+    charSet    	0)
+
+(object Class_Category "1. TZ Domain Model"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"35B678080064"
+    documentation 	
+|This model is optional.
+|The Business Object Model contains a set of interacting workers and business entity (domain) classes which collaborate to enact the business processes.  In some cases, only the business entity classes are documented.  The business entity classes as a whole are sometimes referred to as a 'domain model'.
+|
+|The business modeling workflow in Rational Unified Process produces two models: the business use-case model, and the business object model. Both show the business 
+|processes, but different aspects of them. In the business use-case model each business use case represents a business process, described (text and/or activity diagrams) from an "external" view point without worrying about who does what to whom inside of the organization. 
+|In the business object model, you include realizations of each business use case to show how workers and entities collaborate to perform the process. You do that using class diagrams, activity diagrams with swimlanes, collaboration diagrams, and/or interaction diagrams.
+|
+    
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "ActualisedRules"
+	    quid       	"418A0B100066"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iStartYear"
+		    quid       	"418A0B2402C8")
+		(object ClassAttribute "iEndYear"
+		    quid       	"418A0B2B019F")))
+	(object Class "ActualisedRule"
+	    quid       	"418A0B4500A5"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"418A0B8E01BF"
+		    label      	"actualised from"
+		    supplier   	"Logical View::Analysis Model::BClasses::RuleDefinition"
+		    quidu      	"40B3654800BF")
+		(object Uses_Relationship
+		    quid       	"418A0B910346"
+		    supplier   	"Logical View::Analysis Model::BClasses::RuleUse"
+		    quidu      	"40B3652A00A0")
+		(object Uses_Relationship
+		    quid       	"418A0B940058"
+		    supplier   	"Logical View::Analysis Model::BClasses::Rule"
+		    quidu      	"40D16795026D")
+		(object Uses_Relationship
+		    quid       	"418A0B9900A6"
+		    label      	"iStdOffset = iUTCOffset"
+		    supplier   	"Logical View::Analysis Model::BClasses::STDTimeAlignment"
+		    quidu      	"40B3658702F2"))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iTimeOfChange"
+		    quid       	"418A0BD800D6"
+		    type       	":TTime"
+		    derived    	TRUE)
+		(object ClassAttribute "iTimeChangeRef"
+		    quid       	"418A0C0200B7")
+		(object ClassAttribute "iStdOffset"
+		    quid       	"418A0C1D028C")
+		(object ClassAttribute "iDstOffset"
+		    quid       	"418A0C2401A2")))
+	(object Association "nominally aligns DST adjustment to"
+	    quid       	"407E8290034C"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$0"
+		    quid       	"407E829101C5"
+		    supplier   	"Logical View::Analysis Model::BClasses::DSTZone"
+		    quidu      	"407E6AC801E5"
+		    client_cardinality 	(value cardinality "1")
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$1"
+		    quid       	"407E829101C6"
+		    supplier   	"Logical View::Analysis Model::BClasses::Location"
+		    quidu      	"407E69D9001F"
+		    client_cardinality 	(value cardinality "1..n"))))
+	(object Association "adjusts DST using"
+	    quid       	"407E82980233"
+	    roles      	(list role_list
+		(object Role "Current"
+		    quid       	"407E829803C9"
+		    label      	"Current"
+		    supplier   	"Logical View::Analysis Model::BClasses::DST Rule"
+		    quidu      	"407E6A07035C"
+		    client_cardinality 	(value cardinality "1..n")
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$2"
+		    quid       	"407E829803CA"
+		    supplier   	"Logical View::Analysis Model::BClasses::DSTZone"
+		    quidu      	"407E6AC801E5")))
+	(object Association "aligns local time with"
+	    quid       	"407E83AE0281"
+	    roles      	(list role_list
+		(object Role "timeZone"
+		    quid       	"407E83AF006E"
+		    label      	"timeZone"
+		    supplier   	"Logical View::Analysis Model::BClasses::TimeZone"
+		    quidu      	"40D02EE4014B"
+		    client_cardinality 	(value cardinality "1..n")
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$3"
+		    quid       	"407E83AF006F"
+		    supplier   	"Logical View::Analysis Model::BClasses::Location"
+		    quidu      	"407E69D9001F"
+		    client_cardinality 	(value cardinality "1..n"))))
+	(object Association "[preferentially] adjusts DST using"
+	    quid       	"407E854700CB"
+	    roles      	(list role_list
+		(object Role "DSTRule"
+		    quid       	"407E854702FE"
+		    label      	"DSTRule"
+		    supplier   	"Logical View::Analysis Model::BClasses::DST Rule"
+		    quidu      	"407E6A07035C"
+		    client_cardinality 	(value cardinality "0..n")
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$4"
+		    quid       	"407E8547030D"
+		    supplier   	"Logical View::Analysis Model::BClasses::Location"
+		    quidu      	"407E69D9001F")))
+	(object Association "synchronises DST adjustment with"
+	    quid       	"407E8AC901C5"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$5"
+		    quid       	"407E8ACA009C"
+		    supplier   	"Logical View::Analysis Model::BClasses::DSTZone"
+		    quidu      	"407E6AC801E5"
+		    client_cardinality 	(value cardinality "0..1")
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$6"
+		    quid       	"407E8ACA009D"
+		    supplier   	"Logical View::Analysis Model::BClasses::TimeZone"
+		    quidu      	"40D02EE4014B")))
+	(object Association "belongs to"
+	    quid       	"4087D8FE01A2"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$7"
+		    quid       	"4087D8FF003B"
+		    supplier   	"Logical View::Analysis Model::BClasses::Country"
+		    quidu      	"4087D8DF026D"
+		    client_cardinality 	(value cardinality "1")
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$8"
+		    quid       	"4087D8FF003C"
+		    supplier   	"Logical View::Analysis Model::BClasses::Location"
+		    quidu      	"407E69D9001F"
+		    client_cardinality 	(value cardinality "1..n"))))
+	(object Association "aligns STD Time Adjustment with"
+	    quid       	"40D02FB9014E"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$9"
+		    quid       	"40D02FB902E4"
+		    supplier   	"Logical View::Analysis Model::BClasses::STDTimeZone"
+		    quidu      	"407E69FD00AC"
+		    client_cardinality 	(value cardinality "1..n")
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$10"
+		    quid       	"40D02FB902F4"
+		    supplier   	"Logical View::Analysis Model::BClasses::TimeZone"
+		    quidu      	"40D02EE4014B")))
+	(object Association "combines with"
+	    quid       	"40F3F9D20344"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$11"
+		    quid       	"40F3F9D301EC"
+		    supplier   	"Logical View::Analysis Model::BClasses::RuleLetter"
+		    quidu      	"40D6C8DF01AF"
+		    client_cardinality 	(value cardinality "0..n")
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$12"
+		    quid       	"40F3F9D301ED"
+		    supplier   	"Logical View::Analysis Model::BClasses::ZoneFormat"
+		    quidu      	"40B36506033F"))
+	    AssociationClass 	"Logical View::Analysis Model::BClasses::TimeZoneShortName")
+	(object Association "refered to by"
+	    quid       	"417FAA4103E1"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$13"
+		    quid       	"417FAA4202D7"
+		    supplier   	"Logical View::Analysis Model::BClasses::TimeZoneShortName"
+		    quidu      	"40F3ED1C0353"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$14"
+		    quid       	"417FAA4202D8"
+		    supplier   	"Logical View::Analysis Model::BClasses::Rule"
+		    quidu      	"40D16795026D")))
+	(object Association "$UNNAMED$15"
+	    quid       	"418A0B5703C2"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$16"
+		    quid       	"418A0B58025B"
+		    supplier   	"Logical View::Analysis Model::1. TZ Domain Model::ActualisedRule"
+		    quidu      	"418A0B4500A5"
+		    client_cardinality 	(value cardinality "1..n")
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$17"
+		    quid       	"418A0B58025C"
+		    supplier   	"Logical View::Analysis Model::1. TZ Domain Model::ActualisedRules"
+		    quidu      	"418A0B100066"
+		    is_aggregate 	TRUE)))
+	(object Association "covers"
+	    quid       	"418A6213039E"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$18"
+		    quid       	"418A62140237"
+		    supplier   	"Logical View::Analysis Model::BClasses::STDTimeAlignment"
+		    quidu      	"40B3658702F2"
+		    client_cardinality 	(value cardinality "1..n")
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$19"
+		    quid       	"418A62140247"
+		    supplier   	"Logical View::Analysis Model::1. TZ Domain Model::ActualisedRules"
+		    quidu      	"418A0B100066"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "1. Time Zones"
+	    quid       	"407E69C002CF"
+	    title      	"1. Time Zones"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object NoteView @1
+		    location   	(921, 322)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(571, 78)
+			fill_color 	13434879
+			nlines     	8
+			max_width  	665
+			label      	
+|TimeZone.name :=
+|<Region>'/'<MajorCity>
+|
+|where;
+|Region := Continent / Ocean
+|
+|example:
+|Europe/London
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	725
+		    height     	500)
+		(object NoteView @2
+		    location   	(2078, 2122)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1712, 1881)
+			fill_color 	13434879
+			nlines     	8
+			max_width  	696
+			label      	
+|[A DSTZone adjusts DST using only one rule at any time. There is no time overlapping membership]
+|
+|DST Rules for a zone may be changed.
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	756
+		    height     	494)
+		(object NoteView @3
+		    location   	(1737, 322)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1343, 81)
+			fill_color 	13434879
+			nlines     	8
+			max_width  	753
+			label      	
+|[A city can belong in only 1 time zone at any time; there is no time overlapping membership]
+|
+|Cities have been known to change time Zone;
+|Kentucky/USA switched from Central to Eastern time.
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	813
+		    height     	494)
+		(object NoteView @4
+		    location   	(2065, 841)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1762, 625)
+			fill_color 	13434879
+			nlines     	7
+			max_width  	571
+			label      	
+|Example of a rule;
+|"last Sunday in March through the last Sunday in October"
+|Rules needs to be bounded by the years in which they apply.
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	631
+		    height     	444)
+		(object NoteView @5
+		    location   	(681, 1756)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(468, 1581)
+			fill_color 	13434879
+			nlines     	6
+			max_width  	390
+			label      	"Some time zones do not use DST. E.g. Tropical cities have no need for it.")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	450
+		    height     	363)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::DST Rule" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1792, 1392)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1666, 1286)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	252
+			justify    	0
+			label      	"DST Rule")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407E6A07035C"
+		    width      	270
+		    height     	240
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AttachView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@6
+		    supplier   	@4
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::Location" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1408, 1264)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(1292, 1187)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	232
+			justify    	0
+			label      	"Location")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407E69D9001F"
+		    width      	250
+		    height     	182
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::DSTZone" @9
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1408, 1888)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(1282, 1782)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	252
+			justify    	0
+			label      	"DSTZone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407E6AC801E5"
+		    width      	270
+		    height     	240
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "adjusts DST using" @10
+		    location   	(1600, 1639)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @11
+			Parent_View 	@10
+			location   	(1497, 1583)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	2
+			max_width  	223
+			justify    	0
+			label      	"adjusts DST using"
+			pctDist    	-1.216667
+			height     	57
+			orientation 	0)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"407E82980233"
+		    roleview_list 	(list RoleViews
+			(object RoleView "Current" @12
+			    Parent_View 	@10
+			    location   	(1276, 282)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407E829803C9"
+			    client     	@10
+			    supplier   	@6
+			    line_style 	0
+			    label      	(object SegLabel @13
+				Parent_View 	@12
+				location   	(1692, 1589)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.595122
+				height     	42
+				orientation 	1))
+			(object RoleView "$UNNAMED$2" @14
+			    Parent_View 	@10
+			    location   	(1276, 282)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407E829803CA"
+			    client     	@10
+			    supplier   	@9
+			    line_style 	0)))
+		(object AttachView "" @15
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@10
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::STDTimeZone" @16
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(304, 1392)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(126, 1261)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	356
+			justify    	0
+			label      	"STDTimeZone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407E69FD00AC"
+		    width      	374
+		    height     	290
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::TimeZone" @17
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(912, 832)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(782, 755)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	260
+			justify    	0
+			label      	"TimeZone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40D02EE4014B"
+		    width      	278
+		    height     	182
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "aligns local time with" @18
+		    location   	(1160, 1047)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @19
+			Parent_View 	@18
+			location   	(1110, 1123)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	3
+			max_width  	170
+			justify    	0
+			label      	"aligns local time with"
+			pctDist    	-0.350000
+			height     	76
+			orientation 	1)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"407E83AE0281"
+		    roleview_list 	(list RoleViews
+			(object RoleView "timeZone" @20
+			    Parent_View 	@18
+			    location   	(360, -105)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407E83AF006E"
+			    client     	@18
+			    supplier   	@17
+			    line_style 	0
+			    label      	(object SegLabel @21
+				Parent_View 	@20
+				location   	(1101, 941)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.615735
+				height     	43
+				orientation 	1))
+			(object RoleView "$UNNAMED$3" @22
+			    Parent_View 	@18
+			    location   	(360, -105)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407E83AF006F"
+			    client     	@18
+			    supplier   	@8
+			    line_style 	0
+			    label      	(object SegLabel @23
+				Parent_View 	@22
+				location   	(1285, 1101)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.679080
+				height     	42
+				orientation 	0))))
+		(object AttachView "" @24
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@3
+		    supplier   	@18
+		    line_style 	0)
+		(object AttachView "" @25
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@1
+		    supplier   	@17
+		    line_style 	0)
+		(object AssociationViewNew "synchronises DST adjustment with" @26
+		    location   	(916, 1371)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @27
+			Parent_View 	@26
+			location   	(1085, 1416)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	4
+			max_width  	331
+			justify    	0
+			label      	"synchronises DST adjustment with"
+			pctDist    	3.333333
+			height     	45
+			orientation 	1)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"407E8AC901C5"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$5" @28
+			    Parent_View 	@26
+			    location   	(612, 571)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407E8ACA009C"
+			    client     	@26
+			    supplier   	@9
+			    vertices   	(list Points
+				(916, 1371)
+				(916, 1431)
+				(1279, 1767))
+			    line_style 	0
+			    label      	(object SegLabel @29
+				Parent_View 	@28
+				location   	(1224, 1654)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"0..1"
+				pctDist    	0.789138
+				height     	46
+				orientation 	0))
+			(object RoleView "$UNNAMED$6" @30
+			    Parent_View 	@26
+			    location   	(612, 571)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407E8ACA009D"
+			    client     	@26
+			    supplier   	@17
+			    line_style 	0)))
+		(object AssociationViewNew "aligns STD Time Adjustment with" @31
+		    location   	(636, 1084)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @32
+			Parent_View 	@31
+			location   	(419, 1113)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	5
+			max_width  	268
+			justify    	0
+			label      	"aligns STD Time Adjustment with"
+			pctDist    	-3.116667
+			height     	29
+			orientation 	1)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40D02FB9014E"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$9" @33
+			    Parent_View 	@31
+			    location   	(-311, 234)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D02FB902E4"
+			    client     	@31
+			    supplier   	@16
+			    line_style 	0
+			    label      	(object SegLabel @34
+				Parent_View 	@33
+				location   	(558, 1227)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.652764
+				height     	52
+				orientation 	0))
+			(object RoleView "$UNNAMED$10" @35
+			    Parent_View 	@31
+			    location   	(-311, 234)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D02FB902F4"
+			    client     	@31
+			    supplier   	@17
+			    line_style 	0)))
+		(object AttachView "" @36
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@5
+		    supplier   	@26
+		    line_style 	0)
+		(object NoteView @37
+		    location   	(265, 663)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@37
+			location   	(40, 469)
+			fill_color 	13434879
+			nlines     	6
+			max_width  	415
+			label      	"[Only a single STDTimeZone applies at a any time. There is no time overlapping membership]")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	475
+		    height     	400)
+		(object AttachView "" @38
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@31
+		    supplier   	@37
+		    line_style 	0)
+		(object NoteView @39
+		    location   	(315, 2234)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(84, 2049)
+			fill_color 	13434879
+			nlines     	6
+			max_width  	427
+			label      	"STDTimeZone.name is usually abreviated to a 3 letter word, e.g. GMT")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	487
+		    height     	382)
+		(object AttachView "" @40
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@16
+		    supplier   	@39
+		    line_style 	0)
+		(object NoteView @41
+		    location   	(1087, 2247)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(846, 2103)
+			fill_color 	13434879
+			nlines     	5
+			max_width  	447
+			label      	"DSTZone.name is usually abreviated to a 3 letter word, e.g. BST")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	507
+		    height     	300)
+		(object AttachView "" @42
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@9
+		    supplier   	@41
+		    line_style 	0)))
+	(object ClassDiagram "2. Time Zone Data Model"
+	    quid       	"40B3648C035D"
+	    title      	"2. Time Zone Data Model"
+	    zoom       	95
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	1290
+	    items      	(list diagram_item_list
+		(object NoteView @43
+		    location   	(1703, 552)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@43
+			location   	(1005, 88)
+			fill_color 	13434879
+			nlines     	17
+			max_width  	1361
+			label      	
+|A number of Rules have the same definition. We isolated RuleDefinition so it can be re-used to save space. 
+|
+|iOffset:
+|  specified in minutes wrt standard time
+|
+|iDayRule:= (
+|	/ FixedDate
+|	/ DayAfterDate
+|	/ DayBeforeDate
+|	/ DayInLastWeekOfMonth)
+|
+|iTimeOfChange:
+|  time of day the clock changes
+|
+|iTimeChangeRef:=
+|  (UTC / STD / WCLK) /* iTimeOfChange is w.r.t */
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	1421
+		    height     	941)
+		(object NoteView @44
+		    location   	(1793, 2812)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(1440, 2657)
+			fill_color 	13434879
+			nlines     	6
+			max_width  	671
+			label      	
+|iId :=
+|<Region>'/'<MajorCity>
+|
+|where;
+|Region := ( Continent / Ocean)
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	731
+		    height     	323)
+		(object NoteView @45
+		    location   	(1822, 2371)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(1413, 2180)
+			fill_color 	13434879
+			nlines     	7
+			max_width  	782
+			label      	
+|iName :=
+|  usually abreviated to a 3 letter word, e.g. GMT, BST etc
+|
+|iAltName :=
+|  is the previous name, specified as a link
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	842
+		    height     	395)
+		(object NoteView @46
+		    location   	(480, 351)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@46
+			location   	(38, 91)
+			fill_color 	13434879
+			nlines     	9
+			max_width  	848
+			label      	
+|the TZ database defines changes to summer time and winter time as separate rules
+|
+|Each redefinition of the rule specifies a letter, e.g. "S", "" or an empty string, that is added to a ZoneFormat (e.g. WE%ST) to get the actual time zone short name.
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	908
+		    height     	533)
+		(object NoteView @47
+		    location   	(315, 1154)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(15, 1075)
+			fill_color 	13434879
+			nlines     	3
+			max_width  	565
+			label      	
+|iName := 
+|  e.g "GB-Eire"
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	625
+		    height     	171)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::RuleLetter" @48
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1110, 1566)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@48
+			location   	(982, 1463)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	256
+			justify    	0
+			label      	"RuleLetter")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40D6C8DF01AF"
+		    width      	274
+		    height     	232
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::ZoneFormat" @49
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(889, 2143)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@49
+			location   	(738, 2040)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	302
+			justify    	0
+			label      	"ZoneFormat")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B36506033F"
+		    width      	320
+		    height     	232
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "combines with" @50
+		    location   	(998, 1854)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @51
+			Parent_View 	@50
+			location   	(880, 1884)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	2
+			max_width  	217
+			justify    	0
+			label      	"combines with"
+			pctDist    	-1.466667
+			height     	30
+			orientation 	1)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40F3F9D20344"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$11" @52
+			    Parent_View 	@50
+			    location   	(135, -397)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40F3F9D301EC"
+			    client     	@50
+			    supplier   	@48
+			    line_style 	0
+			    label      	(object SegLabel @53
+				Parent_View 	@52
+				location   	(1122, 1717)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"0..*"
+				pctDist    	0.935415
+				height     	66
+				orientation 	1))
+			(object RoleView "$UNNAMED$12" @54
+			    Parent_View 	@50
+			    location   	(135, -397)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40F3F9D301ED"
+			    client     	@50
+			    supplier   	@49
+			    line_style 	0)))
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::Zone" @55
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1192, 2824)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@55
+			location   	(1077, 2721)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	230
+			justify    	0
+			label      	"Zone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B364A5035D"
+		    width      	248
+		    height     	232
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AttachView "" @56
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@55
+		    supplier   	@44
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::RuleDefinition" @57
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1939, 1492)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@57
+			location   	(1756, 1217)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	366
+			justify    	0
+			label      	"RuleDefinition")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B3654800BF"
+		    width      	384
+		    height     	576
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AttachView "" @58
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@43
+		    supplier   	@57
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::STDTimeAlignment" @59
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(554, 2496)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@59
+			location   	(328, 2344)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	452
+			justify    	0
+			label      	"STDTimeAlignment")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B3658702F2"
+		    width      	470
+		    height     	330
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "aligns to time described by" @60
+		    location   	(790, 2822)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @61
+			Parent_View 	@60
+			location   	(734, 2933)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	4
+			max_width  	276
+			justify    	0
+			label      	"aligns to time described by"
+			pctDist    	-0.450000
+			height     	111
+			orientation 	1)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40D95B6101E9"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @62
+			    Parent_View 	@60
+			    location   	(-455, 23)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D95B6103BE"
+			    client     	@60
+			    supplier   	@59
+			    vertices   	(list Points
+				(790, 2822)
+				(687, 2822)
+				(621, 2661))
+			    line_style 	0
+			    label      	(object SegLabel @63
+				Parent_View 	@62
+				location   	(692, 2715)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.725305
+				height     	45
+				orientation 	1))
+			(object RoleView "" @64
+			    Parent_View 	@60
+			    location   	(-455, 23)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D95B6103CE"
+			    client     	@60
+			    supplier   	@55
+			    line_style 	0
+			    label      	(object SegLabel @65
+				Parent_View 	@64
+				location   	(1014, 2867)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.808752
+				height     	44
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::TimeZoneShortName" @66
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1430, 1942)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@66
+			location   	(1183, 1868)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	494
+			justify    	0
+			label      	"TimeZoneShortName")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40F3ED1C0353"
+		    width      	512
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "refered to by" @67
+		    location   	(1183, 2419)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @68
+			Parent_View 	@67
+			location   	(1062, 2382)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	298
+			justify    	0
+			label      	"refered to by"
+			pctDist    	-1.516667
+			height     	38
+			orientation 	0)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40D957C1020C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @69
+			    Parent_View 	@67
+			    location   	(698, -89)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D957C20086"
+			    client     	@67
+			    supplier   	@66
+			    line_style 	0)
+			(object RoleView "" @70
+			    Parent_View 	@67
+			    location   	(698, -89)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D957C20095"
+			    client     	@67
+			    supplier   	@59
+			    vertices   	(list Points
+				(1183, 2419)
+				(1145, 2493)
+				(789, 2494))
+			    line_style 	0)))
+		(object AttachView "" @71
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@45
+		    supplier   	@66
+		    line_style 	0)
+		(object AssocAttachView "" @72
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@50
+		    supplier   	@66
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::RuleUse" @73
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1000, 1217)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@73
+			location   	(878, 1089)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	244
+			justify    	0
+			label      	"RuleUse")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B3652A00A0"
+		    width      	262
+		    height     	282
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AttachView "" @74
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@46
+		    supplier   	@73
+		    line_style 	0)
+		(object AssociationViewNew "" @75
+		    location   	(1450, 1263)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @76
+			Parent_View 	@75
+			location   	(1419, 1165)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			hidden     	TRUE
+			anchor     	1
+			anchor_loc 	1
+			nlines     	3
+			max_width  	60
+			justify    	0
+			label      	""
+			pctDist    	-0.016667
+			height     	99
+			orientation 	0)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40D196A20142"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iRuleDefinition" @77
+			    Parent_View 	@75
+			    location   	(477, -562)
+			    label      	(object SegLabel @78
+				Parent_View 	@77
+				location   	(1556, 1407)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	266
+				justify    	0
+				label      	"-iRuleDefinition"
+				pctDist    	0.478384
+				height     	86
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D196A30058"
+			    client     	@75
+			    supplier   	@57
+			    line_style 	0
+			    label      	(object SegLabel @79
+				Parent_View 	@77
+				location   	(1644, 1300)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.588270
+				height     	50
+				orientation 	0))
+			(object RoleView "" @80
+			    Parent_View 	@75
+			    location   	(477, -562)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D196A30068"
+			    client     	@75
+			    supplier   	@73
+			    vertices   	(list Points
+				(1450, 1263)
+				(1385, 1233)
+				(1131, 1222))
+			    line_style 	0
+			    label      	(object SegLabel @81
+				Parent_View 	@80
+				location   	(1208, 1269)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.761481
+				height     	44
+				orientation 	0))))
+		(object AssocAttachView "" @82
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@75
+		    supplier   	@48
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::Rule" @83
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(373, 1702)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@83
+			location   	(258, 1599)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	230
+			justify    	0
+			label      	"Rule")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40D16795026D"
+		    width      	248
+		    height     	232
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AttachView "" @84
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@83
+		    supplier   	@47
+		    line_style 	0)
+		(object AssociationViewNew "adjusts local times to changes defined by" @85
+		    location   	(456, 2074)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @86
+			Parent_View 	@85
+			location   	(311, 2116)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	3
+			max_width  	310
+			justify    	0
+			label      	"adjusts local times to changes defined by"
+			pctDist    	-1.916667
+			height     	42
+			orientation 	1)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40D168210231"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iRuleSet" @87
+			    Parent_View 	@85
+			    location   	(-348, 150)
+			    label      	(object SegLabel @88
+				Parent_View 	@87
+				location   	(303, 1883)
+				font       	(object Font
+				    size       	12)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	226
+				justify    	0
+				label      	"+iRuleSet"
+				pctDist    	0.843582
+				height     	107
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D16822000E"
+			    client     	@85
+			    supplier   	@83
+			    line_style 	0
+			    label      	(object SegLabel @89
+				Parent_View 	@87
+				location   	(476, 1904)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"0..1"
+				pctDist    	0.614472
+				height     	57
+				orientation 	1))
+			(object RoleView "" @90
+			    Parent_View 	@85
+			    location   	(-348, 150)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D16822000F"
+			    client     	@85
+			    supplier   	@59
+			    line_style 	0
+			    label      	(object SegLabel @91
+				Parent_View 	@90
+				location   	(542, 2270)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.796731
+				height     	40
+				orientation 	0))))
+		(object AssocAttachView "" @92
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@85
+		    supplier   	@49
+		    line_style 	0)
+		(object AssociationViewNew "refered to by" @93
+		    location   	(923, 1727)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @94
+			Parent_View 	@93
+			location   	(754, 1655)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	309
+			justify    	0
+			label      	"refered to by"
+			pctDist    	-2.316667
+			height     	73
+			orientation 	0)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"417FAA4103E1"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$13" @95
+			    Parent_View 	@93
+			    location   	(550, 25)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"417FAA4202D7"
+			    client     	@93
+			    supplier   	@66
+			    line_style 	0)
+			(object RoleView "$UNNAMED$14" @96
+			    Parent_View 	@93
+			    location   	(550, 25)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"417FAA4202D8"
+			    client     	@93
+			    supplier   	@83
+			    vertices   	(list Points
+				(923, 1727)
+				(868, 1704)
+				(497, 1702))
+			    line_style 	0)))
+		(object AssociationViewNew "applicable during" @97
+		    location   	(682, 1460)
+		    label      	(object SegLabel @98
+			Parent_View 	@97
+			location   	(672, 1442)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	600
+			justify    	0
+			label      	"applicable during"
+			pctDist    	0.350000
+			height     	19
+			orientation 	0)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40B3655B0023"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @99
+			    Parent_View 	@97
+			    location   	(-506, 792)
+			    label      	(object SegLabel @100
+				Parent_View 	@99
+				location   	(791, 1454)
+				font       	(object Font
+				    size       	12)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	60
+				justify    	0
+				label      	""
+				pctDist    	0.387283
+				height     	62
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40B3655B0227"
+			    client     	@97
+			    supplier   	@73
+			    line_style 	0
+			    label      	(object SegLabel @101
+				Parent_View 	@99
+				location   	(784, 1328)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.686802
+				height     	44
+				orientation 	0))
+			(object RoleView "" @102
+			    Parent_View 	@97
+			    location   	(-506, 792)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40B3655B0228"
+			    client     	@97
+			    supplier   	@83
+			    line_style 	0
+			    label      	(object SegLabel @103
+				Parent_View 	@102
+				location   	(520, 1544)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.774628
+				height     	34
+				orientation 	1))))))
+	(object ClassDiagram "Rule Actualisation"
+	    quid       	"418A0AD303D0"
+	    title      	"Rule Actualisation"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	431
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::Zone" @104
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(192, 2436)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@104
+			location   	(80, 2330)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	224
+			justify    	0
+			label      	"Zone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B364A5035D"
+		    compartment 	(object Compartment
+			Parent_View 	@104
+			location   	(80, 2441)
+			font       	(object Font
+			    size       	10)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	2
+			max_width  	91)
+		    width      	242
+		    height     	240
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::RuleDefinition" @105
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1676, 799)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@105
+			location   	(1502, 518)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	348
+			justify    	0
+			label      	"RuleDefinition")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B3654800BF"
+		    compartment 	(object Compartment
+			Parent_View 	@105
+			location   	(1502, 629)
+			font       	(object Font
+			    size       	10)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	9
+			max_width  	344)
+		    width      	366
+		    height     	590
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::RuleUse" @106
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(1033, 445)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@106
+			location   	(912, 314)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	242
+			justify    	0
+			label      	"RuleUse")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B3652A00A0"
+		    compartment 	(object Compartment
+			Parent_View 	@106
+			location   	(912, 425)
+			font       	(object Font
+			    size       	10)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	3
+			max_width  	238)
+		    width      	260
+		    height     	290
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @107
+		    location   	(1327, 607)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @108
+			Parent_View 	@107
+			location   	(1296, 509)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			hidden     	TRUE
+			anchor     	1
+			anchor_loc 	1
+			nlines     	3
+			max_width  	60
+			justify    	0
+			label      	""
+			pctDist    	-0.016667
+			height     	99
+			orientation 	0)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40D196A20142"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iRuleDefinition" @109
+			    Parent_View 	@107
+			    location   	(354, -1218)
+			    label      	(object SegLabel @110
+				Parent_View 	@109
+				location   	(1338, 736)
+				font       	(object Font
+				    size       	12)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	346
+				justify    	0
+				label      	"-iRuleDefinition"
+				pctDist    	0.379364
+				height     	108
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D196A30058"
+			    client     	@107
+			    supplier   	@105
+			    line_style 	0
+			    label      	(object SegLabel @111
+				Parent_View 	@109
+				location   	(1448, 618)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.588270
+				height     	50
+				orientation 	0))
+			(object RoleView "" @112
+			    Parent_View 	@107
+			    location   	(354, -1218)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D196A30068"
+			    client     	@107
+			    supplier   	@106
+			    line_style 	0
+			    label      	(object SegLabel @113
+				Parent_View 	@112
+				location   	(1227, 591)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.507604
+				height     	34
+				orientation 	0))))
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::Rule" @114
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(148, 1339)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@114
+			location   	(36, 1233)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	224
+			justify    	0
+			label      	"Rule")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40D16795026D"
+		    compartment 	(object Compartment
+			Parent_View 	@114
+			location   	(36, 1344)
+			font       	(object Font
+			    size       	10)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	2
+			max_width  	166)
+		    width      	242
+		    height     	240
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "applicable during" @115
+		    location   	(583, 896)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @116
+			Parent_View 	@115
+			location   	(573, 878)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	600
+			justify    	0
+			label      	"applicable during"
+			pctDist    	0.350000
+			height     	19
+			orientation 	0)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40B3655B0023"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @117
+			    Parent_View 	@115
+			    location   	(-605, 228)
+			    label      	(object SegLabel @118
+				Parent_View 	@117
+				location   	(750, 816)
+				font       	(object Font
+				    size       	12)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	60
+				justify    	0
+				label      	""
+				pctDist    	0.387283
+				height     	62
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40B3655B0227"
+			    client     	@115
+			    supplier   	@106
+			    line_style 	0
+			    label      	(object SegLabel @119
+				Parent_View 	@117
+				location   	(803, 578)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.841095
+				height     	68
+				orientation 	0))
+			(object RoleView "" @120
+			    Parent_View 	@115
+			    location   	(-605, 228)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40B3655B0228"
+			    client     	@115
+			    supplier   	@114
+			    line_style 	0
+			    label      	(object SegLabel @121
+				Parent_View 	@120
+				location   	(313, 1123)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.774628
+				height     	34
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::Analysis Model::1. TZ Domain Model::ActualisedRule" @122
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1059, 1366)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@122
+			location   	(803, 1208)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	512
+			justify    	0
+			label      	"ActualisedRule")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"418A0B4500A5"
+		    compartment 	(object Compartment
+			Parent_View 	@122
+			location   	(803, 1275)
+			font       	(object Font
+			    size       	10)
+			icon_style 	"Icon"
+			fill_color 	13434879
+			anchor     	2
+			nlines     	5
+			max_width  	509)
+		    width      	530
+		    height     	344
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "actualised from" @123
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@123
+			location   	(1368, 1078)
+			anchor_loc 	1
+			nlines     	1
+			max_width  	287
+			justify    	0
+			label      	"actualised from")
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418A0B8E01BF"
+		    client     	@122
+		    supplier   	@105
+		    line_style 	0)
+		(object UsesView "" @124
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418A0B910346"
+		    client     	@122
+		    supplier   	@106
+		    line_style 	0)
+		(object UsesView "" @125
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418A0B940058"
+		    client     	@122
+		    supplier   	@114
+		    line_style 	0)
+		(object NoteView @126
+		    location   	(2140, 1456)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@126
+			location   	(1746, 1169)
+			fill_color 	13434879
+			nlines     	10
+			max_width  	752
+			label      	
+|derives ActualisedRule::iTimeofChange from RuleDefinition::
+|iMonth, iDayRule, iDayOfMonth, iDayOfWeek, iTimeOfChange.
+|
+|RuleDefinition.iTimeOfChange is in minutes form midnight
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	812
+		    height     	587)
+		(object ClassView "Class" "Logical View::Analysis Model::1. TZ Domain Model::ActualisedRules" @127
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1747, 1985)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@127
+			location   	(1550, 1877)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	394
+			justify    	0
+			label      	"ActualisedRules")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"418A0B100066"
+		    compartment 	(object Compartment
+			Parent_View 	@127
+			location   	(1550, 1944)
+			font       	(object Font
+			    size       	10)
+			icon_style 	"Icon"
+			fill_color 	13434879
+			anchor     	2
+			nlines     	3
+			max_width  	231)
+		    width      	412
+		    height     	244
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$15" @128
+		    location   	(1431, 1700)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418A0B5703C2"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$16" @129
+			    Parent_View 	@128
+			    location   	(-539, -452)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"418A0B58025B"
+			    client     	@128
+			    supplier   	@122
+			    line_style 	0
+			    label      	(object SegLabel @130
+				Parent_View 	@129
+				location   	(1373, 1577)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.523570
+				height     	54
+				orientation 	1))
+			(object RoleView "$UNNAMED$17" @131
+			    Parent_View 	@128
+			    location   	(-539, -452)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"418A0B58025C"
+			    client     	@128
+			    supplier   	@127
+			    line_style 	0)))
+		(object ClassView "Class" "Logical View::Analysis Model::BClasses::STDTimeAlignment" @132
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(855, 1986)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@132
+			location   	(629, 1830)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	452
+			justify    	0
+			label      	"STDTimeAlignment")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B3658702F2"
+		    compartment 	(object Compartment
+			Parent_View 	@132
+			location   	(629, 1941)
+			font       	(object Font
+			    size       	10)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	4
+			max_width  	347)
+		    width      	470
+		    height     	340
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "aligns to time described by" @133
+		    location   	(466, 2247)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @134
+			Parent_View 	@133
+			location   	(476, 2295)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	4
+			max_width  	276
+			justify    	0
+			label      	"aligns to time described by"
+			pctDist    	0.666667
+			height     	48
+			orientation 	1)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40D95B6101E9"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @135
+			    Parent_View 	@133
+			    location   	(-779, -552)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D95B6103BE"
+			    client     	@133
+			    supplier   	@132
+			    line_style 	0
+			    label      	(object SegLabel @136
+				Parent_View 	@135
+				location   	(600, 2210)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.725305
+				height     	45
+				orientation 	1))
+			(object RoleView "" @137
+			    Parent_View 	@133
+			    location   	(-779, -552)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D95B6103CE"
+			    client     	@133
+			    supplier   	@104
+			    line_style 	0
+			    label      	(object SegLabel @138
+				Parent_View 	@137
+				location   	(319, 2296)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.808752
+				height     	44
+				orientation 	1))))
+		(object AssociationViewNew "adjusts local times to changes defined by" @139
+		    location   	(469, 1632)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @140
+			Parent_View 	@139
+			location   	(363, 1751)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	3
+			max_width  	310
+			justify    	0
+			label      	"adjusts local times to changes defined by"
+			pctDist    	-1.283333
+			height     	119
+			orientation 	1)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40D168210231"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iRuleSet" @141
+			    Parent_View 	@139
+			    location   	(-335, -292)
+			    label      	(object SegLabel @142
+				Parent_View 	@141
+				location   	(230, 1557)
+				font       	(object Font
+				    size       	12)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	226
+				justify    	0
+				label      	"+iRuleSet"
+				pctDist    	0.843582
+				height     	107
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D16822000E"
+			    client     	@139
+			    supplier   	@114
+			    line_style 	0
+			    label      	(object SegLabel @143
+				Parent_View 	@141
+				location   	(385, 1479)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"0..1"
+				pctDist    	0.614472
+				height     	57
+				orientation 	1))
+			(object RoleView "" @144
+			    Parent_View 	@139
+			    location   	(-335, -292)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40D16822000F"
+			    client     	@139
+			    supplier   	@132
+			    line_style 	0
+			    label      	(object SegLabel @145
+				Parent_View 	@144
+				location   	(655, 1731)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.753139
+				height     	53
+				orientation 	0))))
+		(object UsesView "iStdOffset = iUTCOffset" @146
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@146
+			location   	(955, 1677)
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"iStdOffset = iUTCOffset")
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418A0B9900A6"
+		    client     	@122
+		    supplier   	@132
+		    line_style 	0)
+		(object AssociationViewNew "covers" @147
+		    location   	(1315, 1985)
+		    font       	(object Font
+			size       	12)
+		    label      	(object SegLabel @148
+			Parent_View 	@147
+			location   	(1345, 1944)
+			font       	(object Font
+			    size       	12
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	113
+			justify    	0
+			label      	"covers"
+			pctDist    	1.000000
+			height     	42
+			orientation 	0)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418A6213039E"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$18" @149
+			    Parent_View 	@147
+			    location   	(-504, -56)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"418A62140237"
+			    client     	@147
+			    supplier   	@132
+			    line_style 	0
+			    label      	(object SegLabel @150
+				Parent_View 	@149
+				location   	(1172, 1947)
+				font       	(object Font
+				    size       	12)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.695586
+				height     	39
+				orientation 	1))
+			(object RoleView "$UNNAMED$19" @151
+			    Parent_View 	@147
+			    location   	(-504, -56)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"418A62140247"
+			    client     	@147
+			    supplier   	@127
+			    line_style 	0)))
+		(object AttachView "" @152
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@126
+		    supplier   	@123
+		    vertices   	(list Points
+			(1733, 1400)
+			(1597, 1382)
+			(1368, 1078))
+		    line_style 	0)))))

@@ -1,0 +1,44 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+//
+// ServiceRegistry
+//
+
+/**
+@file
+
+@SYMPurpose ServiceRegistry.dll Service Registry
+*/
+
+
+target          serviceregistry.dll
+CAPABILITY All -Tcb
+targettype      DLL
+UID		0x1000008D 0x1020D703
+VENDORID 0x70000001
+
+option MSVC /Od
+
+userinclude		../inc
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+sourcepath	../ServiceRegistry
+
+source          ServiceRegistry.cpp
+library         euser.lib apgrfx.lib
+
+SMPSAFE

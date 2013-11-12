@@ -1,0 +1,19 @@
+EXPORTS
+	_ZN15CXmppParameters10ServerPortEv @ 1 NONAME
+	_ZN15CXmppParameters10SettingsIdEv @ 2 NONAME
+	_ZN15CXmppParameters11ProxyServerEv @ 3 NONAME
+	_ZN15CXmppParameters13ServerAddressEv @ 4 NONAME
+	_ZN15CXmppParameters3SslEv @ 5 NONAME
+	_ZN15CXmppParameters4NewLEv @ 6 NONAME
+	_ZN15CXmppParameters5IapIdEv @ 7 NONAME
+	_ZN15CXmppParameters6PasswdEv @ 8 NONAME
+	_ZN15CXmppParameters8ResourceEv @ 9 NONAME
+	_ZN15CXmppParameters8UserNameEv @ 10 NONAME
+	_ZN15CXmppParameters9ProxyPortEv @ 11 NONAME
+	_ZN20CXmppSettingsFetcher13ReadSettingsLEmR15CXmppParameters @ 12 NONAME
+	_ZTI15CXmppParameters @ 13 NONAME ; #<TI>#
+	_ZTV15CXmppParameters @ 14 NONAME ; #<VT>#
+	_ZN15CXmppParameters10ConnMgrBusEv @ 15 NONAME
+	_ZN15CXmppParameters11ConnMgrPathEv @ 16 NONAME
+	_ZN15CXmppParameters8ProtocolEv @ 17 NONAME
+

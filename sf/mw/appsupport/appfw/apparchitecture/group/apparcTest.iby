@@ -1,0 +1,361 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __APPARCTEST_IBY__
+#define __APPARCTEST_IBY__
+
+REM Application Architecture Framework unit test iby file
+
+
+#ifndef __APPFWK_TEST_FRAMEWORK_IBY__
+	#include <appfwk_test_framework.iby>
+#endif
+
+
+file=ABI_DIR\BUILD_DIR\texe.exe				sys\bin\texe.exe
+
+file=ABI_DIR\BUILD_DIR\TCmdLineExe.exe  	sys\bin\TCmdLineExe.exe
+
+file=ABI_DIR\BUILD_DIR\m_ctrl.exe											sys\bin\m_ctrl.exe
+data=ZRESOURCE\apps\m_ctrl.rsc												Resource\Apps\m_ctrl.rsc
+data=ZRESOURCE\apps\m_ctrl_loc.rsc											Resource\Apps\m_ctrl_loc.rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\import\apps\m_ctrl_reg.rsc		private\10003a3f\import\apps\m_ctrl_reg.rsc
+
+file=ABI_DIR\BUILD_DIR\TestAppInstall.exe									sys\bin\TestAppInstall.exe
+data=EPOCROOT##epoc32\data\Z\Apparctest\TestAppInstall_reg.rsc				ApparcTest\TestAppInstall_reg.rsc
+file=ABI_DIR\BUILD_DIR\tstapp.exe											sys\bin\tstapp.exe
+data=EPOCROOTepoc32\data\Z\private\10003a3f\import\apps\tstapp_reg.rsc		private\10003a3f\import\apps\tstapp_reg.rsc
+ECOM_PLUGIN(tstapp_embedded.dll,10004c66.rsc)
+data=ZRESOURCE\apps\testappinstall.rsc 										Resource\apps\testappinstall.rsc
+data=ZRESOURCE\apps\tstapp.rsc 										Resource\apps\tstapp.rsc
+data=ZRESOURCE\apps\tstapp_loc.r01 									Resource\apps\tstapp_loc.r01
+data=ZRESOURCE\apps\tstapp_loc.r02 									Resource\apps\tstapp_loc.r02
+data=ZRESOURCE\apps\tstapp_loc.r03 									Resource\apps\tstapp_loc.r03
+data=ZRESOURCE\apps\tstapp_loc.r04 									Resource\apps\tstapp_loc.r04
+data=ZRESOURCE\apps\tstapp_loc.r05 									Resource\apps\tstapp_loc.r05
+data=ZRESOURCE\apps\tstapp_loc.rsc 									Resource\apps\tstapp_loc.rsc
+data=ZRESOURCE\apps\tstapp.mbm 					Resource\apps\tstapp.mbm
+data=ZRESOURCE\apps\tstapp02.m02 					Resource\apps\tstapp02.m02
+data=ZRESOURCE\apps\tstappview01.m01 					Resource\apps\tstappview01.m01
+data=ZRESOURCE\apps\tstappview02.k 					Resource\apps\tstappview02.k
+data=ZRESOURCE\apps\tstappview01.m02 					Resource\apps\tstappview01.m02
+data=ZRESOURCE\apps\tstappview					Resource\apps\tstappview
+data=ZRESOURCE\apps\tstappviewneg.xyz 					Resource\apps\tstappviewneg.xyz
+data=ZRESOURCE\apps\tstappviewneg.mbm 					Resource\apps\tstappviewneg.mbm
+data=ZRESOURCE\apps\zerosizedicon.mbm 					Resource\apps\zerosizedicon.mbm
+
+file=ABI_DIR\BUILD_DIR\ticoncaptionoverride.exe						sys\bin\ticoncaptionoverride.exe
+data=EPOCROOTepoc32\data\Z\private\10003a3f\import\apps\ticoncaptionoverride_reg.rsc		private\10003a3f\import\apps\ticoncaptionoverride_reg.rsc
+data=ZRESOURCE\apps\ticoncaptionoverride.rsc 						Resource\apps\ticoncaptionoverride.rsc
+data=ZRESOURCE\apps\ticoncaptionoverride_loc.r01 									Resource\apps\ticoncaptionoverride_loc.r01
+data=ZRESOURCE\apps\ticoncaptionoverride_loc.r02 									Resource\apps\ticoncaptionoverride_loc.r02
+data=ZRESOURCE\apps\ticoncaptionoverride_loc.r03 									Resource\apps\ticoncaptionoverride_loc.r03
+data=ZRESOURCE\apps\ticoncaptionoverride_loc.rsc   									Resource\apps\ticoncaptionoverride_loc.rsc
+data=ZRESOURCE\apps\ticoncapoverride.mbm 					Resource\apps\ticoncapoverride.mbm
+data=ZRESOURCE\apps\ticoncapoverride02.m02 					Resource\apps\ticoncapoverride02.m02
+
+
+data=ABI_DIR\BUILD_DIR\tstapp.doc				System\data\tstapp.doc
+data=ABI_DIR\BUILD_DIR\zero_len.txt				System\data\zero_len.txt	
+data=ABI_DIR\BUILD_DIR\one_byte.txt				System\data\one_byte.txt
+
+
+#ifdef SYMBIAN_DISTINCT_LOCALE_MODEL
+REM Copy new locale language dlls to ROM SFTB10.1 onwards
+file=ABI_DIR\BUILD_DIR\elocl_lan.002					Sys\bin\elocl_lan.002
+file=ABI_DIR\BUILD_DIR\elocl_lan.004					Sys\bin\elocl_lan.004
+file=ABI_DIR\BUILD_DIR\elocl_lan.005					Sys\bin\elocl_lan.005
+file=ABI_DIR\BUILD_DIR\elocl_lan.032					Sys\bin\elocl_lan.032
+#else
+// These are pre SYMBIAN_DISTINCT_LOCALE_MODEL language locale dlls.Not to be use SFTB10.1 onwards. 
+file=ABI_DIR\BUILD_DIR\ELOCL.01					Sys\bin\ELOCL.01
+file=ABI_DIR\BUILD_DIR\ELOCL.02					Sys\bin\ELOCL.02
+file=ABI_DIR\BUILD_DIR\ELOCL.03					Sys\bin\ELOCL.03
+file=ABI_DIR\BUILD_DIR\ELOCL.04					Sys\bin\ELOCL.04
+file=ABI_DIR\BUILD_DIR\ELOCL.05					Sys\bin\ELOCL.05
+file=ABI_DIR\BUILD_DIR\ELOCL.10					Sys\bin\ELOCL.10
+file=ABI_DIR\BUILD_DIR\ELOCL.32					Sys\bin\ELOCL.32
+#endif
+// This is now included in techview, from initlocale.iby
+//file=ABI_DIR\BUILD_DIR\ELOCL.LOC				Sys\bin\ELOCL.LOC
+
+file=ABI_DIR\BUILD_DIR\UnProctectedUidApp.exe 		Sys\bin\UnProctectedUidApp.exe
+data=EPOCROOTepoc32\data\z\Resource\apps\UnProctectedUidApp.rsc						Resource\apps\UnProctectedUidApp.rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\UnProctectedUidApp_reg.rsc		private\10003a3f\apps\UnProctectedUidApp_reg.rsc
+
+file=ABI_DIR\BUILD_DIR\SimpleApparcTestApp.exe 					sys\bin\SimpleApparcTestApp.exe
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\SimpleApparcTestApp_reg.rsc	private\10003a3f\apps\SimpleApparcTestApp_reg.rsc
+data=ZRESOURCE\apps\SimpleApparcTestApp.rsc 									resource\apps\SimpleApparcTestApp.rsc
+
+data=EPOCROOT##epoc32\data\Z\Apparctest\AAA_reg.rsc											ApparcTest\AAA_reg.rsc
+data=EPOCROOT##epoc32\data\Z\Apparctest\Corrupted_reg.rsc									ApparcTest\Corrupted_reg.rsc
+data=EPOCROOT##epoc32\data\Z\Apparctest\zerosizedicon_loc.rsc								ApparcTest\zerosizedicon_loc.rsc
+data=EPOCROOT##epoc32\data\Z\Apparctest\zerosizedicon_reg.rsc								ApparcTest\zerosizedicon_reg.rsc
+data=EPOCROOT##epoc32\data\Z\System\data\App_ctrl.MBM 										resource\Apps\App_ctrl.MBM
+data=EPOCROOT##epoc32\data\z\system\data\svg_icon.svg 										resource\apps\svg_icon.svg
+data=EPOCROOT##epoc32\data\z\system\data\Testpath\file1.txt									System\data\Testpath\file1.txt
+data=EPOCROOT##epoc32\data\z\system\data\Testpath\file2.txt									System\data\Testpath\file2.txt
+data=EPOCROOT##epoc32\data\z\system\data\Testpath\FilterTests\testfile1.txt					System\data\Testpath\FilterTests\testfile1.txt
+data=EPOCROOT##epoc32\data\z\system\data\Testpath\FilterTests\testfile2.txt					System\data\Testpath\FilterTests\testfile2.txt
+data=EPOCROOT##epoc32\data\z\system\data\Testpath\FilterTests\testfile3.txt					System\data\Testpath\FilterTests\testfile3.txt
+data=EPOCROOT##epoc32\data\z\system\data\Testpath\FilterTests\testfile4.txt					System\data\Testpath\FilterTests\testfile4.txt
+data=EPOCROOT##epoc32\data\z\system\data\FileWithUnknownMimeType.UnrecognisableExtention	System\data\FileWithUnknownMimeType.UnrecognisableExtention
+data=ABI_DIR\BUILD_DIR\z\system\data\recmime_1.rsc								System\data\recmime_1.rsc
+data=ABI_DIR\BUILD_DIR\z\system\data\recmime_armv5.dll							System\data\recmime_armv5.dll
+data=ABI_DIR\BUILD_DIR\z\system\data\TApsRecogAppTest.mmr							System\data\TApsRecogAppTest.mmr
+data=ABI_DIR\BUILD_DIR\z\system\data\recupgrade.rsc								System\data\recupgrade.rsc
+data=ABI_DIR\BUILD_DIR\z\system\data\recupgrade2.rsc							System\data\recupgrade2.rsc
+data=ABI_DIR\BUILD_DIR\z\system\data\recupgrade_armv5_rel.dll					System\data\recupgrade_armv5_rel.dll
+data=ABI_DIR\BUILD_DIR\z\system\data\recupgrade2_armv5_rel.dll					System\data\recupgrade2_armv5_rel.dll
+data=ABI_DIR\BUILD_DIR\z\system\data\TApsRecogUpgradeTest.upg					System\data\TApsRecogUpgradeTest.upg
+data=ABI_DIR\BUILD_DIR\z\system\data\TApsRecogUpgradeTest.upr					System\data\TApsRecogUpgradeTest.upr
+data=ABI_DIR\BUILD_DIR\z\system\data\testupdregappuninstallation_reg.rsc		System\data\testupdregappuninstallation_reg.rsc
+data=ABI_DIR\BUILD_DIR\z\system\data\testupgradeupdregappuninstallation_reg.rsc				System\data\testupgradeupdregappuninstallation_reg.rsc
+
+data=EPOCROOT##epoc32\data\Z\Apparctest\testforceregistrationapp1_reg.rsc			ApparcTest\testforceregistrationapp1_reg.rsc
+data=EPOCROOT##epoc32\data\Z\Apparctest\testforceregistrationapp1_loc.rsc			ApparcTest\testforceregistrationapp1_loc.rsc
+
+data=EPOCROOTepoc32\data\Z\private\10003a3f\import\apps\CustomiseDefaultIconApp_reg.RSC		private\10003a3f\import\apps\CustomiseDefaultIconApp_reg.RSC
+data=EPOCROOTepoc32\data\Z\resource\apps\CustomiseDefaultIconApp_loc.RSC					resource\apps\CustomiseDefaultIconApp_loc.RSC
+data=EPOCROOTepoc32\data\Z\resource\apps\default_app_icon.m02								resource\apps\default_app_icon.m02
+
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\TCtrlPnlApp_reg.RSC						private\10003a3f\apps\TCtrlPnlApp_reg.RSC
+
+data=EPOCROOTepoc32\data\Z\private\10202be9\1028583d.txt				         private\10202be9\1028583d.txt
+
+
+// Change for Control panel Start
+file=ABI_DIR\BUILD_DIR\app_ctrl.exe											Sys\bin\app_ctrl.exe
+file=ABI_DIR\BUILD_DIR\app_ctrl2.exe										Sys\bin\app_ctrl2.exe
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\App_CTRL_reg.Rsc			private\10003a3f\apps\App_CTRL_reg.Rsc
+data=EPOCROOTepoc32\data\z\Resource\apps\App_CTRL_loc.Rsc					Resource\apps\App_CTRL_loc.Rsc
+data=EPOCROOTepoc32\data\z\Resource\apps\App_CTRL.Rsc						Resource\apps\App_CTRL.Rsc
+data=EPOCROOTepoc32\data\z\private\10003a3f\import\apps\App_CTRL2_reg.Rsc	private\10003a3f\import\apps\App_CTRL2_reg.Rsc
+data=EPOCROOTepoc32\data\z\Resource\apps\App_CTRL2.Rsc						Resource\apps\App_CTRL2.Rsc
+// Change for Control panel End
+
+file=ABI_DIR\BUILD_DIR\TAppNotEmbeddable.exe											sys\bin\TAppNotEmbeddable.exe		
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TAppNotEmbeddable_reg.Rsc				private\10003a3f\apps\TAppNotEmbeddable_reg.Rsc
+file=ABI_DIR\BUILD_DIR\TAppEmbeddable.exe												sys\bin\TAppEmbeddable.exe		
+ECOM_PLUGIN(TAppEmbeddable_embedded.DLL,10004c5b.rsc)
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TAppEmbeddable_reg.Rsc					private\10003a3f\apps\TAppEmbeddable_reg.Rsc
+ECOM_PLUGIN(TAppEmbeddableOnly.DLL,10004c5c.rsc)
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TAppEmbeddableOnly_reg.Rsc				private\10003a3f\apps\TAppEmbeddableOnly_reg.Rsc
+file=ABI_DIR\BUILD_DIR\TAppEmbeddableUiOrStandAlone.exe									sys\bin\TAppEmbeddableUiOrStandAlone.exe
+ECOM_PLUGIN(TAppEmbeddableUiOrStandAlone_embedded.DLL,10004c5d.rsc)
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TAppEmbeddableUiOrStandAlone_reg.Rsc	private\10003a3f\apps\TAppEmbeddableUiOrStandAlone_reg.Rsc
+ECOM_PLUGIN(TAppEmbeddableUiNotStandAlone.DLL,10004c5e.rsc)
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TAppEmbeddableUiNotStandAlone_reg.Rsc	private\10003a3f\apps\TAppEmbeddableUiNotStandAlone_reg.Rsc
+
+ECOM_PLUGIN(TLongUrlRecognizer.DLL,10004c4e.rsc)
+ECOM_PLUGIN(TBufferOnlyRec.DLL, 10207f88.rsc)
+
+file=ABI_DIR\BUILD_DIR\TStartDocApp.exe									sys\bin\TStartDocApp.exe
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TStartDocApp_reg.Rsc	private\10003a3f\apps\TStartDocApp_reg.Rsc
+
+file=ABI_DIR\BUILD_DIR\T_WinChainChild.exe									sys\bin\T_WinChainChild.exe
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\T_WinChainChild_reg.Rsc	private\10003a3f\apps\T_WinChainChild_reg.Rsc
+file=ABI_DIR\BUILD_DIR\T_WinChainLaunch.exe									sys\bin\T_WinChainLaunch.exe
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\T_WinChainLaunch_reg.Rsc	private\10003a3f\apps\T_WinChainLaunch_reg.Rsc
+
+data=ABI_DIR\BUILD_DIR\z\system\data\TRApaLsSessionStartAppTest.tst						System\data\TRApaLsSessionStartAppTest.tst
+file=ABI_DIR\BUILD_DIR\TRApaLsSessionStartAppTestApp.exe								sys\bin\TRApaLsSessionStartAppTestApp.exe
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TRApaLsSessionStartAppTestApp_reg.Rsc	private\10003a3f\apps\TRApaLsSessionStartAppTestApp_reg.Rsc
+ECOM_PLUGIN(TRApaLsSessionStartAppTestRecognizer.DLL,10000182.rsc)
+
+file=ABI_DIR\BUILD_DIR\TRuleBasedApp1.exe											sys\bin\TRuleBasedApp1.exe		
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TRuleBasedApp1_reg.Rsc				private\10003a3f\apps\TRuleBasedApp1_reg.Rsc
+data=ZRESOURCE\apps\TRuleBasedApp1.rsc 												resource\apps\TRuleBasedApp1.rsc
+file=ABI_DIR\BUILD_DIR\TRuleBasedApp2.exe											sys\bin\TRuleBasedApp2.exe		
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TRuleBasedApp2_reg.Rsc				private\10003a3f\apps\TRuleBasedApp2_reg.Rsc
+data=ZRESOURCE\apps\TRuleBasedApp2.rsc 												resource\apps\TRuleBasedApp2.rsc
+file=ABI_DIR\BUILD_DIR\TRuleBasedApp3.exe											sys\bin\TRuleBasedApp3.exe		
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TRuleBasedApp3_reg.Rsc				private\10003a3f\apps\TRuleBasedApp3_reg.Rsc
+data=ZRESOURCE\apps\TRuleBasedApp3.rsc 												resource\apps\TRuleBasedApp3.rsc
+file=ABI_DIR\BUILD_DIR\TRuleBasedApp4.exe											sys\bin\TRuleBasedApp4.exe		
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\TRuleBasedApp4_reg.Rsc				private\10003a3f\apps\TRuleBasedApp4_reg.Rsc
+data=ZRESOURCE\apps\TRuleBasedApp4.rsc 												resource\apps\TRuleBasedApp4.rsc
+
+file=ABI_DIR\BUILD_DIR\EndTaskTestApp.exe											sys\bin\EndTaskTestApp.exe
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\EndTask_reg.rsc					private\10003a3f\apps\EndTask_reg.rsc
+data=ZRESOURCE\apps\EndTaskTestApp.rsc 												resource\apps\EndTaskTestApp.rsc
+
+ECOM_PLUGIN(TAppLaunchChecker.DLL,1020d465.rsc)
+ECOM_PLUGIN(TAppLaunchChecker2.DLL,102722ba.rsc)
+ECOM_PLUGIN(TNonNativeAppLaunchChecker.DLL,A0000B70.rsc)
+
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\serverapp_reg.Rsc		private\10003a3f\apps\serverapp_reg.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\serverapp2_reg.Rsc		private\10003a3f\apps\serverapp2_reg.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\serverapp3_reg.Rsc		private\10003a3f\apps\serverapp3_reg.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\serverapp4_reg.Rsc		private\10003a3f\apps\serverapp4_reg.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\serverapp6_reg.Rsc		private\10003a3f\apps\serverapp6_reg.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\serverapp7_reg.Rsc		private\10003a3f\apps\serverapp7_reg.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\openservice1a.Rsc		private\10003a3f\apps\openservice1a.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\openservice1b.Rsc		private\10003a3f\apps\openservice1b.Rsc
+data=EPOCROOTepoc32\data\Z\resource\apps\serverapp_loc.Rsc				resource\apps\serverapp_loc.Rsc
+
+file=ABI_DIR\BUILD_DIR\T_DataPrioritySystem1.exe	Sys\bin\T_DataPrioritySystem1.exe
+file=ABI_DIR\BUILD_DIR\T_DataPrioritySystem2.exe	Sys\bin\T_DataPrioritySystem2.exe
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\T_DataPrioritySystem1_reg.rsc	private\10003a3f\apps\T_DataPrioritySystem1_reg.rsc
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\T_DataPrioritySystem2_reg.rsc	private\10003a3f\apps\T_DataPrioritySystem2_reg.rsc
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\T_DataPrioritySystem3_reg.rsc 	private\10003a3f\apps\T_DataPrioritySystem3_reg.rsc
+data=EPOCROOTepoc32\data\z\Resource\apps\T_DataPrioritySystem1_loc.rsc	Resource\apps\T_DataPrioritySystem1_loc.rsc
+data=EPOCROOTepoc32\data\z\Resource\apps\T_DataPrioritySystem2_loc.rsc	Resource\apps\T_DataPrioritySystem2_loc.rsc
+
+file=ABI_DIR\BUILD_DIR\ParentProcess.exe				Sys\bin\ParentProcess.exe
+file=ABI_DIR\BUILD_DIR\ChildI.exe					Sys\bin\ChildI.exe
+file=ABI_DIR\BUILD_DIR\ChildII.exe					Sys\bin\ChildII.exe
+file=ABI_DIR\BUILD_DIR\ChildIII.exe					Sys\bin\ChildIII.exe
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\ParentProcess_reg.Rsc	private\10003a3f\apps\ParentProcess_reg.RSC
+data=EPOCROOTepoc32\data\z\Resource\apps\ParentProcess.Rsc		Resource\apps\ParentProcess.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\ChildI_reg.RSC		private\10003a3f\apps\ChildI_reg.RSC
+data=EPOCROOTepoc32\data\z\Resource\apps\ChildI.Rsc			Resource\apps\ChildI.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\ChildII_reg.RSC	private\10003a3f\apps\ChildII_reg.RSC
+data=EPOCROOTepoc32\data\z\Resource\apps\ChildII.Rsc			Resource\apps\ChildII.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\ChildIII_reg.RSC	private\10003a3f\apps\ChildIII_reg.RSC
+data=EPOCROOTepoc32\data\z\Resource\apps\ChildIII.Rsc			Resource\apps\ChildIII.Rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\import\apps\TestUnTrustedPriorityApp1_reg.rsc		private\10003a3f\import\apps\TestUnTrustedPriorityApp1_reg.rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\import\apps\TestUnTrustedPriorityApp2_reg.rsc		private\10003a3f\import\apps\TestUnTrustedPriorityApp2_reg.rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\TestTrustedPriorityApp1_reg.rsc		private\10003a3f\apps\TestTrustedPriorityApp1_reg.rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\TestTrustedPriorityApp2_reg.rsc		private\10003a3f\apps\TestTrustedPriorityApp2_reg.rsc
+
+file=ABI_DIR\BUILD_DIR\T_EnvSlots.EXE 									sys\bin\T_EnvSlots.EXE
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\T_EnvSlots_reg.Rsc		private\10003a3f\apps\T_EnvSlots_reg.Rsc
+data=EPOCROOTepoc32\data\Z\resource\apps\T_EnvSlots_loc.Rsc				resource\apps\T_EnvSlots_loc.Rsc
+ECOM_PLUGIN(testrec.dll,102032A5.rsc)
+
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\T_groupname_reg.rsc	   	private\10003a3f\apps\T_groupname_reg.rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\T_groupnamever1_reg.rsc   	private\10003a3f\apps\T_groupnamever1_reg.rsc
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\T_groupnamever2_reg.rsc   	private\10003a3f\apps\T_groupnamever2_reg.rsc
+data=EPOCROOTepoc32\data\Z\resource\apps\T_groupname_loc.rsc		   		resource\apps\T_groupname_loc.rsc
+data=EPOCROOTepoc32\data\Z\resource\apps\T_groupnamever1_loc.rsc	   		resource\apps\T_groupnamever1_loc.rsc	
+data=EPOCROOTepoc32\data\Z\resource\apps\T_groupnamever2_loc.rsc	   		resource\apps\T_groupnamever2_loc.rsc
+
+file=ABI_DIR\BUILD_DIR\TApparcTestApp.exe										Sys\bin\TApparcTestApp.exe
+data=EPOCROOTepoc32\data\z\private\10003a3f\IMPORT\apps\TApparcTestApp_reg.Rsc 	private\10003a3f\IMPORT\apps\TApparcTestApp_reg.Rsc
+data=EPOCROOTepoc32\data\z\Resource\apps\TApparcTestApp.Rsc						Resource\apps\TApparcTestApp.Rsc
+data=EPOCROOTepoc32\data\z\resource\apps\tapparctestapp_loc.rsc					resource\apps\tapparctestapp_loc.Rsc
+
+file=ABI_DIR\BUILD_DIR\tssaac.exe                							sys\bin\tssaac.exe
+file=ABI_DIR\BUILD_DIR\tssaac_tapp.exe 										sys\bin\tssaac_tapp.exe
+data=EPOCROOTepoc32\data\Z\private\10003a3f\apps\tssaac_tapp_reg.rsc		private\10003a3f\apps\tssaac_tapp_reg.rsc
+data=ZRESOURCE\apps\tssaac_tapp.rsc 										resource\apps\tssaac_tapp.rsc
+data=ZRESOURCE\apps\tssaac_tapp_loc.rsc 									resource\apps\tssaac_tapp_loc.rsc
+
+file=ABI_DIR\BUILD_DIR\TNNAPP1.EXE										Sys\bin\TNNAPP1.EXE
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\tnnapp1_reg.rsc		private\10003a3f\apps\tnnapp1_reg.rsc
+file=ABI_DIR\BUILD_DIR\TNNAPP2.EXE										Sys\bin\TNNAPP2.EXE 
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\tnnapp2_reg.rsc		private\10003a3f\apps\tnnapp2_reg.rsc
+ECOM_PLUGIN(TNonNativeRec.DLL, 10207f95.rsc)
+data=EPOCROOTepoc32\data\Z\private\101F289C\gif.nna1	   				private\101F289C\gif.nna1
+data=EPOCROOTepoc32\data\Z\private\101F289C\html.nna2	   				private\101F289C\html.nna2
+data=EPOCROOTepoc32\data\Z\private\101F289C\contact.nna3	   			private\101F289C\contact.nna3
+data=EPOCROOTepoc32\data\Z\private\101F289C\txt.nna4	   				private\101F289C\txt.nna4
+
+file=ABI_DIR\BUILD_DIR\tlargestackapp.exe										Sys\bin\tlargestackapp.exe
+data=EPOCROOTepoc32\data\z\private\10003a3f\apps\tlargestackapp_reg.rsc 		private\10003a3f\apps\tlargestack_reg.RSC
+data=EPOCROOTepoc32\data\z\Resource\apps\tlargestackapp.rsc						Resource\apps\tlargestackapp.rsc
+data=EPOCROOTepoc32\data\z\system\data\tnotifydrivesapp_reg.rsc					system\data\tnotifydrivesapp_reg.rsc
+
+data=EPOCROOT##epoc32\data\z\system\data\fl_goo.dm					System\data\fl_goo.dm
+data=EPOCROOT##epoc32\data\z\system\data\jpeg_wes.dm				System\data\jpeg_wes.dm
+data=EPOCROOT##epoc32\data\z\system\data\gif_wallpaper.gif				System\data\gif_wallpaper.gif
+data=EPOCROOT##epoc32\data\z\system\data\propelli.jpg	 				System\data\propelli.jpg
+data=EPOCROOT##epoc32\data\z\system\data\type-r.jpg					System\data\type-r.jpg
+data=EPOCROOT##epoc32\data\z\system\data\sd_goo.dcf	 				System\data\sd_goo.dcf
+
+ECOM_PLUGIN(recmime.DLL, 102822B7.rsc)
+data=EPOCROOTepoc32\data\z\Resource\Plugins\recmime.RSC     			apparctest\dummy.rsc
+
+ECOM_PLUGIN(TestSidChecker.dll, testsidchecker.rsc)
+ECOM_PLUGIN(recupgrade.DLL, recupgrade.rsc)
+
+data=ABI_DIR\DEBUG_DIR\ApparcTestServer.exe							sys\bin\ApparcTestServer.exe
+data=ABI_DIR\DEBUG_DIR\TIconLoaderAndIconArrayForLeaks.dll			sys\bin\TIconLoaderAndIconArrayForLeaks.dll
+
+data=DATAZ_\apparctest\apparctest_run.bat                     		\apparctest_run.bat
+
+data=DATAZ_\apparctest\apparctest_t_ApsScan.script            		\apparctest\apparctest_t_ApsScan.script
+data=DATAZ_\apparctest\apparctest_t_AppList.script            		\apparctest\apparctest_t_AppList.script
+data=DATAZ_\apparctest\apparctest_t_AppListFileUpdate.script            \apparctest\apparctest_t_AppListFileUpdate.script
+data=DATAZ_\apparctest\apparctest_t_AutoMMCReaderOpen.script  		\apparctest\apparctest_t_AutoMMCReaderOpen.script
+data=DATAZ_\apparctest\apparctest_t_Backup.script             		\apparctest\apparctest_t_Backup.script
+data=DATAZ_\apparctest\apparctest_t_Capability1.script        		\apparctest\apparctest_t_Capability1.script
+data=DATAZ_\apparctest\apparctest_t_Capability2.script        		\apparctest\apparctest_t_Capability2.script
+data=DATAZ_\apparctest\apparctest_t_DataTypeMappingWithSid.script  \apparctest\apparctest_t_DataTypeMappingWithSid.script
+data=DATAZ_\apparctest\apparctest_t_Caption.script            		\apparctest\apparctest_t_Caption.script
+data=DATAZ_\apparctest\apparctest_t_Cmdln.script              		\apparctest\apparctest_t_Cmdln.script
+data=DATAZ_\apparctest\apparctest_t_ControlPanelTest.script   		\apparctest\apparctest_t_ControlPanelTest.script
+data=DATAZ_\apparctest\apparctest_T_DataMappingPersistenceA.script	\apparctest\apparctest_T_DataMappingPersistenceA.script
+data=DATAZ_\apparctest\apparctest_T_DataMappingPersistenceB.script	\apparctest\apparctest_T_DataMappingPersistenceB.script
+data=DATAZ_\apparctest\apparctest_T_DataMappingPersistenceC.script	\apparctest\apparctest_T_DataMappingPersistenceC.script
+data=DATAZ_\apparctest\apparctest_t_EndTask.script             		\apparctest\apparctest_t_EndTask.script
+data=DATAZ_\apparctest\apparctest_t_Exe.script                		\apparctest\apparctest_t_Exe.script
+data=DATAZ_\apparctest\apparctest_t_File2.script               		\apparctest\apparctest_t_File2.script
+data=DATAZ_\apparctest\apparctest_t_File3.script               		\apparctest\apparctest_t_File3.script
+data=DATAZ_\apparctest\apparctest_t_Foreground.script         		\apparctest\apparctest_t_Foreground.script
+data=DATAZ_\apparctest\apparctest_t_GroupName.script          		\apparctest\apparctest_t_GroupName.script
+data=DATAZ_\apparctest\apparctest_t_GroupName_ver1.script     		\apparctest\apparctest_t_GroupName_ver1.script
+data=DATAZ_\apparctest\apparctest_t_GroupName_ver2.script     		\apparctest\apparctest_t_GroupName_ver2.script
+data=DATAZ_\apparctest\apparctest_t_Locale.script             		\apparctest\apparctest_t_Locale.script
+data=DATAZ_\apparctest\apparctest_t_Mdr.script                		\apparctest\apparctest_t_Mdr.script
+data=DATAZ_\apparctest\apparctest_t_mimecontentpolicy.script                  \apparctest\apparctest_t_mimecontentpolicy.script
+data=DATAZ_\apparctest\apparctest_t_Mru.script                		\apparctest\apparctest_t_Mru.script
+data=DATAZ_\apparctest\apparctest_t_NonNativeApps.script            \apparctest\apparctest_t_NonNativeApps.script
+data=DATAZ_\apparctest\apparctest_t_Notif.script              		\apparctest\apparctest_t_Notif.script
+data=DATAZ_\apparctest\apparctest_t_OOM.script                		\apparctest\apparctest_t_OOM.script
+data=DATAZ_\apparctest\apparctest_t_Pro.script                		\apparctest\apparctest_t_Pro.script
+data=DATAZ_\apparctest\apparctest_t_Proc.script              		\apparctest\apparctest_t_Proc.script
+data=DATAZ_\apparctest\apparctest_t_RApaLsSession.script      		\apparctest\apparctest_t_RApaLsSession.script
+data=DATAZ_\apparctest\apparctest_t_RuleBasedLaunching.script 		\apparctest\apparctest_t_RuleBasedLaunching.script
+data=DATAZ_\apparctest\apparctest_t_Serv2.script              		\apparctest\apparctest_t_Serv2.script
+data=DATAZ_\apparctest\apparctest_t_Serv3.script              		\apparctest\apparctest_t_Serv3.script
+data=DATAZ_\apparctest\apparctest_t_ServiceRegistry.script    		\apparctest\apparctest_t_ServiceRegistry.script
+data=DATAZ_\apparctest\apparctest_t_Services.script           		\apparctest\apparctest_t_Services.script
+data=DATAZ_\apparctest\apparctest_t_StartApp.script           		\apparctest\apparctest_t_StartApp.script
+data=DATAZ_\apparctest\apparctest_t_StartDoc.script           		\apparctest\apparctest_t_StartDoc.script
+data=DATAZ_\apparctest\apparctest_t_WindowChaining.script     		\apparctest\apparctest_t_WindowChaining.script
+data=DATAZ_\apparctest\apparctest_t_Wgnam.script              		\apparctest\apparctest_t_Wgnam.script
+data=DATAZ_\apparctest\apparctest_t_IntegritySupport.script		\apparctest\apparctest_t_IntegritySupport.script
+data=DATAZ_\apparctest\apparctest_t_IntegritySupportReboot1.script	\apparctest\apparctest_t_IntegritySupportReboot1.script
+data=DATAZ_\apparctest\apparctest_t_IntegritySupportReboot2.script	\apparctest\apparctest_t_IntegritySupportReboot2.script
+data=DATAZ_\apparctest\apparctest_t_largestack.script				\apparctest\apparctest_t_largestack.script
+data=DATAZ_\apparctest\apparctest_t_drivenotification.script			\apparctest\apparctest_t_drivenotification.script
+data=DATAZ_\apparctest\apparctest_t_servicebase.script			\apparctest\apparctest_t_servicebase.script
+data=DATAZ_\apparctest\apparctest_t_RecUpgrade.script			\apparctest\apparctest_t_RecUpgrade.script
+
+REM SysStart Apparc Scripts
+data=DATAZ_\apparctest\apparctest_T_TestStartApp1L.script		\apparctest\apparctest_T_TestStartApp1L.script		
+data=DATAZ_\apparctest\apparctest_T_TestStartApp2L.script		\apparctest\apparctest_T_TestStartApp2L.script		
+data=DATAZ_\apparctest\apparctest_T_TestStartApp3L.script		\apparctest\apparctest_T_TestStartApp3L.script		
+data=DATAZ_\apparctest\apparctest_T_TestStartApp4L.script		\apparctest\apparctest_T_TestStartApp4L.script		
+data=DATAZ_\apparctest\apparctest_T_TestStartApp5L.script		\apparctest\apparctest_T_TestStartApp5L.script		
+data=DATAZ_\apparctest\apparctest_T_TestStartApp6L.script		\apparctest\apparctest_T_TestStartApp6L.script		
+data=DATAZ_\apparctest\apparctest_T_TestGetAllApps.script     		\apparctest\apparctest_T_TestGetAllApps.script     	
+data=DATAZ_\apparctest\apparctest_T_TestInsertDataTypeL.script		\apparctest\apparctest_T_TestInsertDataTypeL.script	
+data=DATAZ_\apparctest\apparctest_T_TestAppForDataTypeL.script		\apparctest\apparctest_T_TestAppForDataTypeL.script	
+data=DATAZ_\apparctest\apparctest_T_TestDeleteDataTypeL.script		\apparctest\apparctest_T_TestDeleteDataTypeL.script	
+data=DATAZ_\apparctest\apparctest_T_TestServiceDiscovery.script		\apparctest\apparctest_T_TestServiceDiscovery.script	
+data=DATAZ_\apparctest\apparctest_T_TestGetAppInfo.script     		\apparctest\apparctest_T_TestGetAppInfo.script     	
+data=DATAZ_\apparctest\apparctest_T_TestAppCount.script     		\apparctest\apparctest_T_TestAppCount.script     	
+data=DATAZ_\apparctest\apparctest_T_TestCreateDoc.script      		\apparctest\apparctest_T_TestCreateDoc.script      	
+data=DATAZ_\apparctest\apparctest_T_TestLocalisedCaptionL.script	\apparctest\apparctest_T_TestLocalisedCaptionL.script
+
+REM End of Application Architecture Framework unit test iby file
+
+patchdata apgrfx.dll @ KMinApplicationStackSize 0xf000
+patchdata apserv.dll @ KApaDrivesToMonitor 4
+#endif

@@ -1,0 +1,71 @@
+;
+; Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:   Example PKG file for branding installer
+;
+
+; -------- general --------
+
+; Languages
+&EN
+
+; Package header (one name for each supported language)
+#{"?Example Brand 1?"}, (0x102828E0), 1, 0, 0
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; -------- files --------
+
+;------------------------------------------------------------------------------
+; Brand XML Data
+;
+; Add branding XML files here. All xml files must go to:
+; "c:\private\102828E1\import\"
+;------------------------------------------------------------------------------
+;
+"import_data\brand_data.xml"            -"c:\private\102828E1\import\brand.xml"
+
+
+;------------------------------------------------------------------------------
+; Brand files
+;
+; Add physical brand files here. Files should go to:
+; "c:\private\102828DD\import\", but any publicly readable directory is valid.
+;------------------------------------------------------------------------------
+;
+"import_data\file.jpg"                  -"c:\private\102828DD\import\file.jpg"
+
+
+;------------------------------------------------------------------------------
+; Brand installer notifier
+;
+; This file notifies the server to install new brands! This file also contains
+; the information of which brands to remove when this sis package is
+; uninstalled. Content of this file is not important, and it's adviced to
+; leave it empty. Only the name of the file makes the difference.
+;
+; NOTE! name of this file needs to be unique. Use version section in the file
+; below to install updates to previous packages.
+;
+; HINT! Sis package can contain multiple install files. it's possible to
+; install and remove multiple brands with single sis file.
+;
+; Format of this file: "[brand_id]$[application_id]$[version].install".
+; version part is optional.
+;------------------------------------------------------------------------------
+;
+"import_data\install.txt"  -"c:\private\102828DD\import\install\brand_id$app_id$001.install"

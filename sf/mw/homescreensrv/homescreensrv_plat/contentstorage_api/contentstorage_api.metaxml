@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api id="d782ad60750b29f0c7a73a8baf35920f" dataversion="2.0">
+  <name>contentstorage_api</name>
+  <description>Content Storage API provides data model for homescreenapp, it provides list of application, widgets, urls as well as collections.</description>
+  <type>c++</type>
+  <collection>contentstorage</collection>
+  <libs>
+    <lib name="caclient.lib"/>
+  </libs>
+  <release category="platform" sinceversion="5.2"/>
+  <attributes>
+    <htmldocprovided>no</htmldocprovided>
+    <adaptation>no</adaptation>
+  </attributes>
+</api>

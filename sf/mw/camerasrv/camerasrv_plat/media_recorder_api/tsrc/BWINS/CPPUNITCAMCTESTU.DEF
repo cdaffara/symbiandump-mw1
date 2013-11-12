@@ -1,0 +1,3 @@
+EXPORTS
+	?CreateTopFct@@YAPAVMTest@@XZ @ 1 NONAME ; class MTest * __cdecl CreateTopFct(void)
+

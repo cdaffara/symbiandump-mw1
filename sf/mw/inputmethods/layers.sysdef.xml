@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_4_0.dtd" [
+  <!ENTITY layer_real_source_path "sf/mw/inputmethods" >
+]>
+
+<SystemDefinition name="inputmethods" schema="1.4.0">
+  <systemModel>
+    <layer name="mw_layer">
+      <module name="inputmethods">
+        <unit unitID="abs.inputmethods" mrp="" bldFile="&layer_real_source_path;/group" name="inputmethods" />
+      </module>
+    </layer>
+
+<layer name="api_test_layer">
+  <module name="inputmethods_api_tests">
+    <unit unitID="abs.inputmethods.tsrc.all" mrp="" bldFile="&layer_real_source_path;/tsrc/group" name="inputmethods_tsrc_all" />
+  </module>
+</layer>
+    
+  </systemModel>
+</SystemDefinition>

@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN7CBSUtil18GetBatteryCapacityEv @ 1 NONAME
+	_ZN7CBSUtil4NewLEv @ 2 NONAME
+	_ZN7CBSUtil5NewLCEv @ 3 NONAME
+

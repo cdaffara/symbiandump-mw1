@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_4_0.dtd" [
+  <!ENTITY layer_real_source_path "sf/mw/camerasrv" >
+]>
+
+<SystemDefinition name="camerasrv" schema="1.4.0">
+  <systemModel>
+    <layer name="mw_layer">
+      <module name="camerasrv">
+        <unit unitID="imm.camerasrv" mrp="" bldFile="&layer_real_source_path;/group" name="camerasrv" />
+      </module>
+    </layer>
+    
+    <layer name="api_test_layer">
+      <module name="camerasrv_api_tests">
+      	<unit unitID="imm.camerasrv.imaging_configuration_manager_api" mrp="" bldFile="sf/mw/camerasrv/camerasrv_plat/imaging_configuration_manager_api/tsrc/group"  name="imaging_configuration_manager_api"  />
+      	<unit unitID="imm.camerasrv.media_recorder_api" mrp="" bldFile="sf/mw/camerasrv/camerasrv_plat/media_recorder_api/tsrc/group"  name="media_recorder_api"  />
+      </module>
+    </layer>
+    
+    <layer name="unit_test_layer">
+      <module name="camerasrv_unit_tests">
+      </module>
+    </layer>
+    
+  </systemModel>
+</SystemDefinition>

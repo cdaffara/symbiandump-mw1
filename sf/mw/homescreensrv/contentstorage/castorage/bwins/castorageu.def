@@ -1,0 +1,3 @@
+EXPORTS
+	?NewDatabaseL@CaStorageFactory@@SAPAVCCaStorage@@XZ @ 1 NONAME ; class CCaStorage * CaStorageFactory::NewDatabaseL(void)
+

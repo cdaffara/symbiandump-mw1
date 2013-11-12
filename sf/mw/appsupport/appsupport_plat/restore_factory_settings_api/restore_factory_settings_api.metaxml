@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<api id="df13d5c16465645d47ae162d87e3c475" dataversion="2.0">
+  <name>Restore Factory Settings API</name>
+  <description>Interface for starting and performing RFS</description>
+  <type>c++</type>
+  <collection>coreapplicationuis</collection>
+  <libs>
+    <lib name="rfs.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

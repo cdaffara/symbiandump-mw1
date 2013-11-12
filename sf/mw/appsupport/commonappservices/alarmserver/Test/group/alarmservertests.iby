@@ -1,0 +1,47 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __ALARMSERVERTEST_IBY__
+#define __ALARMSERVERTEST_IBY__
+
+#include <CoreAppsTest.iby>
+
+REM Alarm Server Testing
+file=ABI_DIR\DEBUG_DIR\alarmtest.dll			System\Libs\alarmtest.dll
+
+
+//test executables
+file=ABI_DIR\DEBUG_DIR\TALARMDATA.EXE			System\Programs\alarmserver\TALARMDATA.EXE
+file=ABI_DIR\DEBUG_DIR\TALARMIDARRAYS.EXE		System\Programs\alarmserver\TALARMIDARRAYS.EXE
+file=ABI_DIR\DEBUG_DIR\TALARMINFO.EXE			System\Programs\alarmserver\TALARMINFO.EXE
+file=ABI_DIR\DEBUG_DIR\TALARMLOCALECHANGES.EXE		System\Programs\alarmserver\TALARMLOCALECHANGES.EXE
+file=ABI_DIR\DEBUG_DIR\TALARMNOTIFICATIONS.EXE		System\Programs\alarmserver\TALARMNOTIFICATIONS.EXE
+file=ABI_DIR\DEBUG_DIR\TBACKUPALARMS.EXE		System\Programs\alarmserver\TBACKUPALARMS.EXE
+file=ABI_DIR\DEBUG_DIR\TBASICALARMS.EXE			System\Programs\alarmserver\TBASICALARMS.EXE
+file=ABI_DIR\DEBUG_DIR\TBITWISEOPS.EXE			System\Programs\alarmserver\TBITWISEOPS.EXE
+file=ABI_DIR\DEBUG_DIR\TCLIENTSESSION.EXE		System\Programs\alarmserver\TCLIENTSESSION.EXE
+file=ABI_DIR\DEBUG_DIR\TOOMTEST.EXE			System\Programs\alarmserver\TOOMTEST.EXE
+file=ABI_DIR\DEBUG_DIR\TPSEUDOCLOCKALARMS.EXE		System\Programs\alarmserver\TPSEUDOCLOCKALARMS.EXE
+file=ABI_DIR\DEBUG_DIR\TQUEUERESTORATION.EXE		System\Programs\alarmserver\TQUEUERESTORATION.EXE
+file=ABI_DIR\DEBUG_DIR\TREPEATDEFINITIONS.EXE		System\Programs\alarmserver\TREPEATDEFINITIONS.EXE	
+file=ABI_DIR\DEBUG_DIR\TSERVERSESSIONENGINE.EXE		System\Programs\alarmserver\TSERVERSESSIONENGINE.EXE
+file=ABI_DIR\DEBUG_DIR\TSESSIONALARMS.EXE		System\Programs\alarmserver\TSESSIONALARMS.EXE
+file=ABI_DIR\DEBUG_DIR\TSOUNDCONTROL.EXE		System\Programs\alarmserver\TSOUNDCONTROL.EXE
+file=ABI_DIR\DEBUG_DIR\TSTARTUPEXPIRE.EXE		System\Programs\alarmserver\TSTARTUPEXPIRE.EXE
+file=ABI_DIR\DEBUG_DIR\talarmrobustness.EXE		System\Programs\alarmserver\talarmrobustness.EXE
+file=ABI_DIR\DEBUG_DIR\twakeupalarms.EXE		System\Programs\alarmserver\twakeupalarms.EXE
+file=ABI_DIR\DEBUG_DIR\tuserdefinedtzalarms.EXE		System\Programs\alarmserver\tuserdefinedtzalarms.EXE
+
+#endif

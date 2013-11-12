@@ -1,0 +1,61 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for Presence Cache Server
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "presencedlluids.hrh"
+
+
+TARGET                  presencecacheserver.exe
+TARGETTYPE              exe
+UID                     XIMP_PRESENCE_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_PRESENCE_CACHE_SERVER
+
+CAPABILITY              CAP_SERVER
+VENDORID                VID_DEFAULT
+
+
+SOURCEPATH              ../srcpresencecache/presencecacheserver
+SOURCE                  presencecacheserver.cpp
+SOURCE                  presencecachesession.cpp
+SOURCE                  presencecachebuddystore.cpp
+SOURCE                  presencecacheservicestore.cpp
+
+
+USERINCLUDE             ../srcpresencecache/presencecacheserver
+USERINCLUDE             ../srcpresencecache/presencecacheclient
+USERINCLUDE             ../srcpresencedatamodel/presencepublishing
+USERINCLUDE             ../srcpresencedatamodel/presenceinfo
+USERINCLUDE             ../srcpresencedatamodel
+USERINCLUDE             ../srcpresencedatamodel/presencecache
+USERINCLUDE             ../../core/srcdatamodel
+USERINCLUDE             ../../core/srcutils
+
+SYSTEMINCLUDE           /epoc32/include/ecom
+
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY             	euser.lib
+LIBRARY                 flogger.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 estor.lib   // streams
+LIBRARY                 presencedatamodel.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 ecom.lib
+
+// End of file
+

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_4_0.dtd" [
+  <!ENTITY layer_real_source_path "sf/mw/helix" >
+]> 
+
+<SystemDefinition name="helix" schema="1.4.0">
+	<systemModel>
+  <!-- Common file for prebuild layers-->
+  	<layer name="mw_layer">
+			<module name="helix">
+				<unit unitID="helix" mrp="" bldFile="&layer_real_source_path;/group" filter="!sf_build" name="helix" />
+				<unit unitID="helix_stub" mrp="" bldFile="&layer_real_source_path;/helix_ren/helix_stub/group" filter="sf_build" name="helix_stub" />
+			</module>
+    </layer>
+
+  	<layer name="mw_helix_layer">
+			<module name="helix_group">
+				<unit unitID="helix_group" mrp="" bldFile="&layer_real_source_path;/group" filter="!sf_build" name="helix_group" />
+				<unit unitID="helix_stub_group" mrp="" bldFile="&layer_real_source_path;/helix_ren/helix_stub/group" filter="sf_build" name="helix_stub_group" /> 
+			</module>
+    </layer>
+
+    
+  </systemModel>
+</SystemDefinition>

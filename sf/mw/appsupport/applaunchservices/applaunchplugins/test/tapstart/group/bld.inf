@@ -1,0 +1,38 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+// test code only
+
+PRJ_MMPFILES
+// test code only
+
+PRJ_TESTMMPFILES
+tapstart_server.mmp
+
+PRJ_TESTEXPORTS
+
+../group/apstarttest_apstart.iby		/epoc32/rom/include/apstarttest_apstart.iby
+
+// apstart batch files for emulator / hardware test execution
+../scripts/apstarttest_apstart_run.bat                     /epoc32/data/z/apstarttest/apstarttest_apstart_run.bat
+../scripts/apstarttest_apstart_run.bat                     /epoc32/release/winscw/udeb/apstarttest_apstart_run.bat 
+../scripts/apstarttest_apstart_run.bat                     /epoc32/release/winscw/urel/apstarttest_apstart_run.bat 
+
+// apstart scripts
+../scripts/apstarttest_apstart.script						z:/apstarttest/apstarttest_apstart.script

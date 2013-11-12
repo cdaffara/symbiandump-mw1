@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project OrientationSwitchActionPlugIn
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../inc/traceconfiguration.hrh"
+#include "../inc/orientationactionpluginconst.hrh"
+
+TARGET          orientationactionplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D KOrientationActionPlugInDllUid
+CAPABILITY      CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../src
+SOURCE          main.cpp
+SOURCE          orientationactionplugin.cpp
+SOURCE          orientationaction.cpp
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+
+MW_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../data
+START RESOURCE  orientationactionplugin.rss
+TARGET          orientationactionplugin.rsc
+TARGETPATH      /resource/plugins
+END
+
+LIBRARY         euser.lib
+LIBRARY         bafl.lib
+LIBRARY         ws32.lib
+LIBRARY         eikcore.lib
+LIBRARY         apparc.lib
+LIBRARY         akncapserverclient.lib
+LIBRARY         cfactivatorengine.lib
+LIBRARY         cfservices.lib
+LIBRARY         centralrepository.lib
+LIBRARY         avkon.lib
+LIBRARY         apgrfx.lib
+#ifdef TRACE_INTO_FILE
+LIBRARY         flogger.lib
+#endif

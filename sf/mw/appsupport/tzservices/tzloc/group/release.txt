@@ -1,0 +1,102 @@
+============================
+Release: 024 by Shazia Murtaza
+Date: 	 23/04/09
+Title:   PDEF138471: Raptor issues in app support  
+============================
+Release: 023 by Xavier Leclercq
+Date: 	 31/12/08
+Title:   DEF131406: Fxing a few remarks in PIM builds
+============================
+Release: 022 by Xavier Leclercq
+Date: 	 31/12/08
+Title:   DEF129166: Small tidy up of tz and timezonelocalization code
+============================
+Release: 021 by Beibei Wang
+Date: 	 17/11/08
+Title:   DEF129090: T_LOGVIEW2 test failing v9.5 onwards 
+============================
+Release: 020 by Andrew Smith
+Date: 	 14/05/08
+Title:   DEF122252 URL with trailing "." in in-source documentation incorrectly translated to SDL	
+============================
+Release: 019 by Andrew Smith
+Date:    09/04/08
+Title:   PDEF120015: PIM_FailingTestHarness_TzLocalization failing on ONB
+============================
+Release: 018 by Kalyan Reddy
+Date: 	 08/01/2008
+Title:   DEF115616: SetTimeZoneL leaves by passing valid Timezone ID, which called in 3 more threads
+============================
+Release: 017 by Shazia Murtaza
+Date: 	 18/12/2007
+Title: 	 PDEF115729: boot fails with invalid time zone database 	
+============================
+Release: 016 by Xing Jin
+Date:	 16/10/2007
+Title:	 PDEF112948: Indonesian variant testing - Brazillian cities listed under USA in ADD loc 
+============================
+Release: 015 by Tomas Sommergyll
+Date:	 08/08/2007
+Title:	 PDEF110180: Number of timezone groups restricted by resource reading implementation
+============================
+Release: 014 by Michael Coffey
+Date:	 13/02/2007
+Title:	 PDEF102063: boot fails with invalid time zone database
+============================
+Release: 013 by Konstantin Zheludev
+Date:	 08/11/2006
+Title:	 DEF097320: DUC-INT : Interested city in 'location' alters after switching MMI language
+============================
+Release: 012 by Konstantin Zheludev
+Date:	 29/09/2006
+Title:	 DEF093327: Tag Scan Error Report for Pim component
+============================
+Release: 011 by Michael Coffey
+Date:	 21/08/2006
+Title:	 DEF094481: City names not visible, TzLocalizationRscFactory build error
+============================
+Release: 010 by Michael Coffey
+Date:	 16/08/2006
+Title:	 DEF092506: TzLocalizationRscFactory build error
+============================
+Release: 009 by Konstantin Zheludev
+Date:	 28/07/2006
+Title:	 DEF091901 Interested city in 'location' alters after switching MMI language
+============================
+Release: 008 by Francesco Lodolo
+Date:	 07/06/2006
+Title:	 DEF087623: Timezone setting is not restored correctly from backup
+============================
+Release: 007 by Konstantin Zheludev
+Date:	 12/12/2005
+Title:	 DEF075533: Unable to boot phone due to TimeZoneLocalization db race condition
+============================
+Release: 006 by Shazia Murtaza
+Date:	 01/12/2005
+Title:	 DEF074872: Timezone does not create correctly localisable files 
+============================
+Release: 005 by Kalyan Reddy
+Date:	 26/10/2005
+Title : DEF070459: TzLocalization.db will fail to backup
+============================
+Release: 004 by M.Armstrong
+Date:	 28/09/2005
+Title : DEF066005: Notification Required from TZ Component when current time zone changes
+============================
+Release: 003 by S.Chatzikyriakos
+Date:	 03/06/2005
+Title : DEF061977: inconsistencies between resource files and TZ test scripts
+============================
+Release: 002 by S.Chatzikyriakos
+Date:	 23/05/2005
+Title :  
+Fix for: DEF060165: Test execute TZ test failing on wincw 9.1
+============================
+Release: 001 by J.Owen
+Date:	 15/02/2005
+Title :  Submission for: PREQ875 
+
+PREQ 875 - Streamline locale translation for the Time Zone Server (PIM and Internet)
+TimeZoneLocalization provides localization support for  Standard, Daylight, Short Standard and Short Daylight names for time zones.  Localized names are stored in the resource file framework. Users can create cities and link them with time zone information. 
+============================
+

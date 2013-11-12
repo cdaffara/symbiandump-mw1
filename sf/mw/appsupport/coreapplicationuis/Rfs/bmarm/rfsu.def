@@ -1,0 +1,14 @@
+EXPORTS
+	__11CRfsHandler @ 1 NONAME R3UNUSED ; CRfsHandler::CRfsHandler(void)
+	Cancel__11CRfsHandler @ 2 NONAME R3UNUSED ; CRfsHandler::Cancel(void)
+	Close__10RRfsClient @ 3 NONAME R3UNUSED ; RRfsClient::Close(void)
+	Connect__10RRfsClient @ 4 NONAME R3UNUSED ; RRfsClient::Connect(void)
+	PerformPostEikonRfs__10RRfsClient8TRfsType @ 5 NONAME R3UNUSED ; RRfsClient::PerformPostEikonRfs(TRfsType)
+	PerformRfs__10RRfsClient8TRfsTypei @ 6 NONAME R3UNUSED ; RRfsClient::PerformRfs(TRfsType, int)
+	RunScriptInDescriptor__10RRfsClientRC7TDesC16 @ 7 NONAME R3UNUSED ; RRfsClient::RunScriptInDescriptor(TDesC16 const &)
+	RunScriptInFile__10RRfsClientRC7TDesC16 @ 8 NONAME R3UNUSED ; RRfsClient::RunScriptInFile(TDesC16 const &)
+	ThreadStart__10CRfsServerRQ210CRfsServer7TSignal @ 9 NONAME R3UNUSED ; CRfsServer::ThreadStart(CRfsServer::TSignal &)
+	"_._11CRfsHandler" @ 10 NONAME R3UNUSED ; CRfsHandler::~CRfsHandler(void)
+	__10RRfsClient @ 11 NONAME R3UNUSED ; RRfsClient::RRfsClient(void)
+	ActivateRfsL__11CRfsHandler8TRfsTypei @ 12 NONAME R3UNUSED ; CRfsHandler::ActivateRfsL(TRfsType, int)
+

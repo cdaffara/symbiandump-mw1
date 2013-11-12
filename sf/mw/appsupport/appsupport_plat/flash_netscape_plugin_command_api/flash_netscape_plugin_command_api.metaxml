@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="81a1e8d92d110a89d902d04f1a756412" dataversion="2.0">
+<name>Flash Netscape plug-in command API</name>
+<description>xposes command for controlling flash playout. Applications trying to utilize flash as plug-in through NS plug-in API.</description>
+<type>c++</type>
+<subsystem>flashliteapi_3_0</subsystem>
+<libs></libs>
+<release category="platform" sinceversion="5.0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

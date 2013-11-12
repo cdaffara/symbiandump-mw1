@@ -1,0 +1,1958 @@
+
+(object Petal
+    version    	43
+    _written   	"Rose 6.5.9232.10"
+    charSet    	0)
+
+(object Class_Category "6. Location Names Service - Analysis"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"411880E90190"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "CExampleTZLocations"
+	    quid       	"411891AE015A"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"411891CE0264"
+		    supplier   	"Logical View::Analysis Model::LTClasses::CECOMTZLocations"
+		    quidu      	"41188F400058")
+		(object Inheritance_Relationship
+		    quid       	"411891E200CE"
+		    supplier   	"Logical View::Analysis Model::LTClasses::MTimeZoneLocations"
+		    quidu      	"4112365D004C"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"411891FC01D8"
+		    supplier   	"Logical View::Analysis Model::LTClasses::CTzId"
+		    quidu      	"411209EF00C4"))
+	    operations 	(list Operations
+		(object Operation "NewL"
+		    quid       	"4118A13B0352"
+		    stereotype 	"static"
+		    result     	"CECOMTZLocations"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Mechanism @1
+	    logical_models 	(list unit_reference_list
+		(object Object "$UNNAMED$0"
+		    quid       	"4121D845019C"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121D8950045"
+			    supplier   	"$UNNAMED$1"
+			    quidu      	"4121D88E03C0"
+			    messages   	(list Messages
+				(object Message "SetCity(CityName)"
+				    quid       	"4121D8950046"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1"
+				    ordinal    	0
+				    Operation  	"SetCity(Name)"))))
+		    class      	"Use Case View::Use-Case Model::Actors::User Application Client"
+		    quidu      	"407D5E57034C"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$1"
+		    quid       	"4121D88E03C0"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121D8B901AD"
+			    supplier   	"$UNNAMED$1"
+			    quidu      	"4121D88E03C0"
+			    messages   	(list Messages
+				(object Message "TimeZoneId = GetTimeZoneId(CityName)"
+				    quid       	"4121D8B901BD"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.1"
+				    ordinal    	1)))
+			(object Link
+			    quid       	"4121D9020306"
+			    supplier   	"$UNNAMED$2"
+			    quidu      	"4121D8FD020C"
+			    messages   	(list Messages
+				(object Message "SetTimeZoneL()"
+				    quid       	"4121D9020307"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.2"
+				    ordinal    	2
+				    quidu      	"40B1D03303A5"))))
+		    class      	"Logical View::Analysis Model::SysClasses::WorldServer"
+		    quidu      	"4121D7CD016B"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$2"
+		    quid       	"4121D8FD020C"
+		    class      	"Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTzConverter"
+		    quidu      	"40A487AF039A"
+		    persistence 	"Transient"
+		    multi      	FALSE)))
+	(object Mechanism @2
+	    logical_models 	(list unit_reference_list
+		(object Object "$UNNAMED$3"
+		    quid       	"4121DADA030C"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121DADA030D"
+			    supplier   	"$UNNAMED$4"
+			    quidu      	"4121DADA0311")
+			(object Link
+			    quid       	"4121DAFE035A"
+			    supplier   	"$UNNAMED$5"
+			    quidu      	"4121DADA0314"
+			    messages   	(list Messages
+				(object Message "SetTimeZoneL()"
+				    quid       	"4121DAFE035B"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"5"
+				    ordinal    	12
+				    quidu      	"40B1D03303A5")))
+			(object Link
+			    quid       	"4121DE5800B6"
+			    supplier   	"$UNNAMED$6"
+			    quidu      	"4121DBB600BD"
+			    messages   	(list Messages
+				(object Message "max = Count( )"
+				    quid       	"4121DE5800B7"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"2"
+				    ordinal    	3)
+				(object Message "[while index < max] cityname = GetLocationNameL(index )"
+				    quid       	"4121DE8601FE"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"3"
+				    ordinal    	6)
+				(object Message "NewL( )"
+				    quid       	"4121DEC9002B"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1"
+				    ordinal    	0
+				    quidu      	"41188C5F0261")
+				(object Message "TimeZoneId = GetGetZoneIdL( index)"
+				    quid       	"4121E2590111"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"4"
+				    ordinal    	9))))
+		    class      	"Use Case View::Use-Case Model::Actors::User Application Client"
+		    quidu      	"407D5E57034C"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$4"
+		    quid       	"4121DADA0311"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121DADA0310"
+			    supplier   	"$UNNAMED$4"
+			    quidu      	"4121DADA0311")
+			(object Link
+			    quid       	"4121DADA0312"
+			    supplier   	"$UNNAMED$5"
+			    quidu      	"4121DADA0314"))
+		    class      	"Logical View::Analysis Model::SysClasses::WorldServer"
+		    quidu      	"4121D7CD016B"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$5"
+		    quid       	"4121DADA0314"
+		    class      	"Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTzConverter"
+		    quidu      	"40A487AF039A"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$7"
+		    quid       	"4121DB86003F"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121DFA10118"
+			    supplier   	"$UNNAMED$4"
+			    quidu      	"4121DADA0311"
+			    messages   	(list Messages
+				(object Message "CityCount()"
+				    quid       	"4121E00B035B"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"2.1.1"
+				    ordinal    	5)
+				(object Message "GetCityName(index)"
+				    quid       	"4121E2050064"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"3.1.1"
+				    ordinal    	8)
+				(object Message "GetCityZoneIdL(index)"
+				    quid       	"4121E29E0095"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"4.1.1"
+				    ordinal    	11))))
+		    class      	"Logical View::Analysis Model::6. Location Names Service - Analysis::CExampleTZLocations"
+		    quidu      	"411891AE015A"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$6"
+		    quid       	"4121DBB600BD"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121DED703E4"
+			    supplier   	"$UNNAMED$7"
+			    quidu      	"4121DB86003F"
+			    messages   	(list Messages
+				(object Message "Count( )"
+				    quid       	"4121DF7B02EC"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"2.1"
+				    ordinal    	4
+				    quidu      	"411237AD00DD")
+				(object Message "GetLocationNameL(index )"
+				    quid       	"4121E04301C6"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"3.1"
+				    ordinal    	7
+				    Operation  	"GetLocationNameL( )"
+				    quidu      	"41188C0D005D")
+				(object Message "GetZoneIdL(index)"
+				    quid       	"4121E28B023A"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"4.1"
+				    ordinal    	10
+				    Operation  	"GetZoneIdL()"
+				    quidu      	"41123E6C0316")))
+			(object Link
+			    quid       	"4121DF45002C"
+			    supplier   	"$UNNAMED$8"
+			    quidu      	"4121DF2300A9"
+			    messages   	(list Messages
+				(object Message "CreateImplementationL()"
+				    quid       	"4121DF45002D"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.1"
+				    ordinal    	1
+				    Operation  	"CreateImplementationL"))))
+		    class      	"Logical View::Analysis Model::LTClasses::CTimeZoneLocations"
+		    quidu      	"4118881902E0"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$8"
+		    quid       	"4121DF2300A9"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121E0D20216"
+			    supplier   	"$UNNAMED$7"
+			    quidu      	"4121DB86003F"
+			    messages   	(list Messages
+				(object Message "NewL( )"
+				    quid       	"4121E0D20217"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.1.1"
+				    ordinal    	2
+				    quidu      	"4118A13B0352"))))
+		    class      	"Logical View::Analysis Model::SysClasses::RECOMSession"
+		    quidu      	"4121DF0D01E1"
+		    persistence 	"Transient"
+		    multi      	FALSE)))
+	(object Mechanism @3
+	    logical_models 	(list unit_reference_list
+		(object Object "$UNNAMED$9"
+		    quid       	"4121E45700AA"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121E45700AC"
+			    supplier   	"$UNNAMED$10"
+			    quidu      	"4121E45700B3")
+			(object Link
+			    quid       	"4121E45700AE"
+			    supplier   	"$UNNAMED$11"
+			    quidu      	"4121E45700B6")
+			(object Link
+			    quid       	"4121E49501A5"
+			    supplier   	"$UNNAMED$12"
+			    quidu      	"4121E45700C0"
+			    messages   	(list Messages
+				(object Message "SetCity(CityName)"
+				    quid       	"4121E49501A6"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1"
+				    ordinal    	0))))
+		    class      	"Use Case View::Use-Case Model::Actors::User Application Client"
+		    quidu      	"407D5E57034C"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$12"
+		    quid       	"4121E45700C0"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121E4BA0177"
+			    supplier   	"$UNNAMED$11"
+			    quidu      	"4121E45700B6"
+			    messages   	(list Messages
+				(object Message "NewL( )"
+				    quid       	"4121E4BA0178"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.1"
+				    ordinal    	1
+				    quidu      	"41188C5F0261")
+				(object Message "TimeZoneId = GetZoneIdL(CityName)"
+				    quid       	"4121E59501B8"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.2"
+				    ordinal    	4)))
+			(object Link
+			    quid       	"4121E5540001"
+			    supplier   	"$UNNAMED$10"
+			    quidu      	"4121E45700B3"
+			    messages   	(list Messages
+				(object Message "NewL( )"
+				    quid       	"4121E5540002"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.3"
+				    ordinal    	6
+				    quidu      	"4112110D02BF")
+				(object Message "SetTimeZoneL()"
+				    quid       	"4121E611012D"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.4"
+				    ordinal    	7
+				    quidu      	"40B1D03303A5"))))
+		    class      	"Logical View::Analysis Model::SysClasses::WorldServer"
+		    quidu      	"4121D7CD016B"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$10"
+		    quid       	"4121E45700B3"
+		    class      	"Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTzConverter"
+		    quidu      	"40A487AF039A"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$13"
+		    quid       	"4121E45700C5"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121E45700C4"
+			    supplier   	"$UNNAMED$14"
+			    quidu      	"4121E45700BD"
+			    messages   	(list Messages
+				(object Message "NewL( )"
+				    quid       	"4121E45700C3"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"2.1"
+				    ordinal    	3
+				    quidu      	"4118A13B0352"))))
+		    class      	"Logical View::Analysis Model::SysClasses::RECOMSession"
+		    quidu      	"4121DF0D01E1"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$11"
+		    quid       	"4121E45700B6"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121E45700B5"
+			    supplier   	"$UNNAMED$14"
+			    quidu      	"4121E45700BD"
+			    messages   	(list Messages
+				(object Message "GetZoneIdL(CityName)"
+				    quid       	"4121E5BB02D2"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.2.1"
+				    ordinal    	5
+				    Operation  	"GetZoneIdL()"
+				    quidu      	"41123E6C0316")))
+			(object Link
+			    quid       	"4121E45700B7"
+			    supplier   	"$UNNAMED$13"
+			    quidu      	"4121E45700C5"
+			    messages   	(list Messages
+				(object Message "CreateImplementationL()"
+				    quid       	"4121E45700B8"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"2"
+				    ordinal    	2
+				    Operation  	"CreateImplementationL"))))
+		    class      	"Logical View::Analysis Model::LTClasses::CTimeZoneLocations"
+		    quidu      	"4118881902E0"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$14"
+		    quid       	"4121E45700BD"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4121E45700BC"
+			    supplier   	"$UNNAMED$12"
+			    quidu      	"4121E45700C0"))
+		    class      	"Logical View::Analysis Model::6. Location Names Service - Analysis::CExampleTZLocations"
+		    quidu      	"411891AE015A"
+		    persistence 	"Transient"
+		    multi      	FALSE))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "1. Localised Locations Name Service API"
+	    quid       	"411882AD0251"
+	    title      	"1. Localised Locations Name Service API"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::Analysis Model::LTClasses::CTzId" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1348, 1095)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1267, 1043)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"CTzId")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"411209EF00C4"
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::LTClasses::MTimeZoneLocations" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1017, 534)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(753, 302)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	528
+			justify    	0
+			label      	"MTimeZoneLocations")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@5
+			location   	(753, 252)
+			fill_color 	13434879
+			anchor     	10
+			nlines     	1
+			max_width  	528
+			justify    	0
+			label      	"<<Interface>>")
+		    icon       	"Interface"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4112365D004C"
+		    width      	546
+		    height     	588
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::LTClasses::CECOMTZLocations" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(493, 1081)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(240, 974)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	506
+			justify    	0
+			label      	"CECOMTZLocations")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@6
+			location   	(240, 924)
+			fill_color 	13434879
+			anchor     	10
+			nlines     	1
+			max_width  	506
+			justify    	0
+			label      	"<<abstract>>")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"41188F400058"
+		    width      	524
+		    height     	338
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Use Case View::Use-Case Model::Actors::Localised TZ Location Names Service Client" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(214, 130)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(214, 290)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	429
+			justify    	0
+			label      	"Localised TZ Location Names Service Client")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"41189027024F"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::6. Location Names Service - Analysis::CExampleTZLocations" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1050, 1500)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(828, 1419)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	444
+			justify    	0
+			label      	"CExampleTZLocations")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"411891AE015A"
+		    width      	462
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object NoteView @9
+		    location   	(1653, 1984)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(1172, 1696)
+			fill_color 	13434879
+			nlines     	11
+			max_width  	927
+			label      	
+|An example concrete ECOM component class responsible for providing the Localised TZ Location Names.
+|
+|Licensees develop their own concrete version following the pattern of this example:
+|
+|static CECOMTZLocations* NewL():
+|  Factory Method used in the ECOM Abstract Factory manifest table
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	987
+		    height     	588)
+		(object ClassView "Class" "Logical View::Analysis Model::SysClasses::CBase" @10
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(315, 594)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(189, 520)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	252
+			justify    	0
+			label      	"CBase")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40D7E5240359"
+		    width      	270
+		    height     	172
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @11
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41189FD302C0"
+		    client     	@6
+		    supplier   	@10
+		    line_style 	3
+		    origin_attachment 	(338, 911)
+		    terminal_attachment 	(338, 679))
+		(object UsesView "" @12
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41123680031B"
+		    client     	@5
+		    supplier   	@4
+		    vertices   	(list Points
+			(1003, 828)
+			(1003, 1089)
+			(1258, 1089))
+		    line_style 	3
+		    origin_attachment 	(1003, 828)
+		    terminal_attachment 	(1258, 1089))
+		(object AttachView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@9
+		    supplier   	@8
+		    line_style 	0)
+		(object InheritView "" @14
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"411891CE0264"
+		    client     	@8
+		    supplier   	@6
+		    vertices   	(list Points
+			(819, 1500)
+			(616, 1500)
+			(616, 1250))
+		    line_style 	3
+		    origin_attachment 	(819, 1500)
+		    terminal_attachment 	(616, 1250))
+		(object InheritView "" @15
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"411891E200CE"
+		    client     	@8
+		    supplier   	@5
+		    line_style 	3
+		    origin_attachment 	(928, 1407)
+		    terminal_attachment 	(928, 828))
+		(object UsesView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"411891FC01D8"
+		    client     	@8
+		    supplier   	@4
+		    vertices   	(list Points
+			(1022, 1407)
+			(1022, 1149)
+			(1258, 1149))
+		    line_style 	3
+		    origin_attachment 	(1022, 1407)
+		    terminal_attachment 	(1258, 1149))
+		(object UsesView "" @17
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41188F8200F5"
+		    client     	@6
+		    supplier   	@5
+		    vertices   	(list Points
+			(755, 1084)
+			(875, 1084)
+			(875, 828))
+		    line_style 	3
+		    origin_attachment 	(755, 1084)
+		    terminal_attachment 	(875, 828))
+		(object NoteView @18
+		    location   	(578, 1887)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(50, 1696)
+			fill_color 	13434879
+			nlines     	9
+			max_width  	1021
+			label      	
+|Baselined ECOM TZ Location Names Provider Base class (Abstract).
+|
+|virtual MTimeZoneLocations* 
+|   GetTZLocationsProvider() = 0:
+|  returns the location names provider interface
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	1081
+		    height     	394)
+		(object AttachView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@18
+		    supplier   	@6
+		    line_style 	0)
+		(object UsesView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4118907F0230"
+		    client     	@7
+		    supplier   	@5
+		    vertices   	(list Points
+			(271, 98)
+			(906, 98)
+			(906, 240))
+		    line_style 	3
+		    origin_attachment 	(271, 98)
+		    terminal_attachment 	(906, 240))
+		(object UsesView "" @21
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4118908F01D3"
+		    client     	@7
+		    supplier   	@6
+		    vertices   	(list Points
+			(271, 113)
+			(558, 113)
+			(558, 912))
+		    line_style 	3
+		    origin_attachment 	(271, 113)
+		    terminal_attachment 	(558, 912))
+		(object UsesView "" @22
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"411890E3037A"
+		    client     	@7
+		    supplier   	@4
+		    vertices   	(list Points
+			(271, 88)
+			(1356, 88)
+			(1356, 1031))
+		    line_style 	3
+		    origin_attachment 	(271, 88)
+		    terminal_attachment 	(1356, 1031))))
+	(object InteractionDiagram "Setting Time Zone through WorldServer a LTZLNRM"
+	    mechanism_ref 	@1
+	    quid       	"4121D7E90033"
+	    title      	"Setting Time Zone through WorldServer a LTZLNRM"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object Label @23
+		    location   	(50, 1141)
+		    nlines     	1
+		    max_width  	1263
+		    label      	"WorldServer As The Localised Location Names Resource Manager")
+		(object InterObjView "$UNNAMED$0" @24
+		    location   	(181, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(181, 264)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	360
+			justify    	0
+			label      	"")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121D845019C"
+		    width      	336
+		    height     	660
+		    icon_height 	162
+		    icon_width 	120
+		    icon_y_offset 	-14
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @25
+			location   	(181, 416)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	379
+			y_coord    	319
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$1" @26
+		    location   	(800, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(800, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	282
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121D88E03C0"
+		    width      	300
+		    height     	660
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @27
+			location   	(800, 416)
+			line_color 	3342489
+			InterObjView 	@26
+			height     	319
+			y_coord    	259
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @28
+			location   	(800, 475)
+			line_color 	3342489
+			InterObjView 	@26
+			height     	60
+			y_coord    	0
+			Nested     	TRUE))
+		(object InterObjView "$UNNAMED$2" @29
+		    location   	(1706, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(1706, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	388
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121D8FD020C"
+		    width      	406
+		    height     	660
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @30
+			location   	(1706, 615)
+			line_color 	3342489
+			InterObjView 	@29
+			height     	60
+			y_coord    	0
+			Nested     	FALSE))
+		(object InterMessView "" @31
+		    location   	(0, 416)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @32
+			Parent_View 	@31
+			location   	(490, 372)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121D8950046"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	338
+			justify    	0
+			label      	"SetCity(CityName)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@26
+		    Focus_Src  	@25
+		    Focus_Entry 	@27
+		    origin     	(196, 416)
+		    terminus   	(784, 416)
+		    ordinal    	0)
+		(object SelfMessView "" @33
+		    location   	(0, 475)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @34
+			Parent_View 	@33
+			location   	(1209, 445)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121D8B901BD"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	860
+			justify    	0
+			label      	"TimeZoneId = GetTimeZoneId(CityName)"
+			pctDist    	2.520000
+			height     	30
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@26
+		    supplier   	@26
+		    Focus_Src  	@27
+		    Focus_Entry 	@28
+		    origin     	(831, 475)
+		    terminus   	(981, 475)
+		    ordinal    	1)
+		(object InterMessView "" @35
+		    location   	(0, 615)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @36
+			Parent_View 	@35
+			location   	(1250, 571)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121D9020307"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	469
+			justify    	0
+			label      	"SetTimeZoneL()"
+			pctDist    	0.498155
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@26
+		    supplier   	@29
+		    Focus_Src  	@27
+		    Focus_Entry 	@30
+		    origin     	(815, 615)
+		    terminus   	(1690, 615)
+		    ordinal    	2)))
+	(object InteractionDiagram "Getting Time Zone Id From WorldServer a LTZLNRM"
+	    mechanism_ref 	@2
+	    quid       	"4121DAC30117"
+	    title      	"Getting Time Zone Id From WorldServer a LTZLNRM"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	184
+	    origin_y   	-759
+	    items      	(list diagram_item_list
+		(object Label @37
+		    location   	(131, 2375)
+		    font       	(object Font
+			size       	10)
+		    nlines     	1
+		    max_width  	1263
+		    label      	"WorldServer As The Localised Location Names Resource Manager")
+		(object InterObjView "$UNNAMED$3" @38
+		    location   	(200, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(200, 265)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	360
+			justify    	0
+			label      	"")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121DADA030C"
+		    width      	336
+		    height     	1993
+		    icon_height 	162
+		    icon_width 	120
+		    icon_y_offset 	-15
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @39
+			location   	(200, 416)
+			line_color 	3342489
+			InterObjView 	@38
+			height     	1541
+			y_coord    	1481
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @40
+			location   	(200, 2008)
+			line_color 	3342489
+			InterObjView 	@38
+			height     	120
+			y_coord    	60
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$4" @41
+		    location   	(2116, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(2116, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	282
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121DADA0311"
+		    width      	300
+		    height     	1993
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @42
+			location   	(2116, 1033)
+			line_color 	3342489
+			InterObjView 	@41
+			height     	60
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @43
+			location   	(2116, 1395)
+			line_color 	3342489
+			InterObjView 	@41
+			height     	60
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @44
+			location   	(2116, 1717)
+			line_color 	3342489
+			InterObjView 	@41
+			height     	60
+			y_coord    	0
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$5" @45
+		    location   	(2497, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(2497, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	388
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121DADA0314"
+		    width      	406
+		    height     	1993
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @46
+			location   	(2497, 2008)
+			line_color 	3342489
+			InterObjView 	@45
+			height     	60
+			y_coord    	0
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$8" @47
+		    location   	(1256, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(1256, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	296
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121DF2300A9"
+		    width      	314
+		    height     	1993
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @48
+			location   	(1256, 514)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	195
+			y_coord    	135
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$6" @49
+		    location   	(756, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@49
+			location   	(756, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	382
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121DBB600BD"
+		    width      	400
+		    height     	1993
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @50
+			location   	(756, 441)
+			line_color 	3342489
+			InterObjView 	@49
+			height     	328
+			y_coord    	268
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @51
+			location   	(756, 942)
+			line_color 	3342489
+			InterObjView 	@49
+			height     	271
+			y_coord    	211
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @52
+			location   	(756, 1286)
+			line_color 	3342489
+			InterObjView 	@49
+			height     	289
+			y_coord    	229
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @53
+			location   	(756, 1631)
+			line_color 	3342489
+			InterObjView 	@49
+			height     	266
+			y_coord    	206
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$7" @54
+		    location   	(1687, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@54
+			location   	(1687, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	402
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121DB86003F"
+		    width      	420
+		    height     	1993
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @55
+			location   	(1687, 589)
+			line_color 	3342489
+			InterObjView 	@54
+			height     	60
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @56
+			location   	(1687, 976)
+			line_color 	3342489
+			InterObjView 	@54
+			height     	177
+			y_coord    	117
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @57
+			location   	(1687, 1333)
+			line_color 	3342489
+			InterObjView 	@54
+			height     	182
+			y_coord    	122
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @58
+			location   	(1687, 1663)
+			line_color 	3342489
+			InterObjView 	@54
+			height     	174
+			y_coord    	114
+			Nested     	FALSE))
+		(object InterMessView "" @59
+		    location   	(0, 2008)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @60
+			Parent_View 	@59
+			location   	(1178, 1970)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121DAFE035B"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	469
+			justify    	0
+			label      	"SetTimeZoneL()"
+			pctDist    	0.425131
+			height     	39
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@38
+		    supplier   	@45
+		    Focus_Src  	@40
+		    Focus_Entry 	@46
+		    origin     	(215, 2008)
+		    terminus   	(2481, 2008)
+		    ordinal    	12)
+		(object InterMessView "" @61
+		    location   	(0, 942)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @62
+			Parent_View 	@61
+			location   	(477, 898)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121DE5800B7"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	272
+			justify    	0
+			label      	"max = Count( )"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@38
+		    supplier   	@49
+		    Focus_Src  	@39
+		    Focus_Entry 	@51
+		    origin     	(215, 942)
+		    terminus   	(740, 942)
+		    ordinal    	3)
+		(object InterMessView "" @63
+		    location   	(0, 1286)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @64
+			Parent_View 	@63
+			location   	(468, 1209)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121DE8601FE"
+			anchor_loc 	1
+			nlines     	3
+			max_width  	507
+			justify    	0
+			label      	"[while index < max] cityname = GetLocationNameL(index )"
+			pctDist    	0.483165
+			height     	78
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@38
+		    supplier   	@49
+		    Focus_Src  	@39
+		    Focus_Entry 	@52
+		    origin     	(215, 1286)
+		    terminus   	(740, 1286)
+		    ordinal    	6)
+		(object InterMessView "" @65
+		    location   	(0, 441)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @66
+			Parent_View 	@65
+			location   	(477, 397)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121DEC9002B"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	138
+			justify    	0
+			label      	"NewL( )"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@38
+		    supplier   	@49
+		    Focus_Src  	@39
+		    Focus_Entry 	@50
+		    origin     	(215, 441)
+		    terminus   	(740, 441)
+		    ordinal    	0)
+		(object InterMessView "" @67
+		    location   	(0, 514)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @68
+			Parent_View 	@67
+			location   	(1021, 477)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121DF45002D"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	441
+			justify    	0
+			label      	"CreateImplementationL()"
+			pctDist    	0.533333
+			height     	38
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@49
+		    supplier   	@47
+		    Focus_Src  	@50
+		    Focus_Entry 	@48
+		    origin     	(771, 514)
+		    terminus   	(1240, 514)
+		    ordinal    	1)
+		(object InterMessView "" @69
+		    location   	(0, 976)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @70
+			Parent_View 	@69
+			location   	(1126, 933)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121DF7B02EC"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	144
+			justify    	0
+			label      	"Count( )"
+			pctDist    	0.395062
+			height     	44
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@49
+		    supplier   	@54
+		    Focus_Src  	@51
+		    Focus_Entry 	@56
+		    origin     	(771, 976)
+		    terminus   	(1671, 976)
+		    ordinal    	4)
+		(object InterMessView "" @71
+		    location   	(0, 1033)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @72
+			Parent_View 	@71
+			location   	(1901, 989)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121E00B035B"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	203
+			justify    	0
+			label      	"CityCount()"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@54
+		    supplier   	@41
+		    Focus_Src  	@56
+		    Focus_Entry 	@42
+		    origin     	(1702, 1033)
+		    terminus   	(2100, 1033)
+		    ordinal    	5)
+		(object InterMessView "" @73
+		    location   	(0, 1333)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @74
+			Parent_View 	@73
+			location   	(1219, 1290)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121E04301C6"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	482
+			justify    	0
+			label      	"GetLocationNameL(index )"
+			pctDist    	0.498316
+			height     	44
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@49
+		    supplier   	@54
+		    Focus_Src  	@52
+		    Focus_Entry 	@57
+		    origin     	(771, 1333)
+		    terminus   	(1671, 1333)
+		    ordinal    	7)
+		(object InterMessView "" @75
+		    location   	(0, 589)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @76
+			Parent_View 	@75
+			location   	(1471, 545)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121E0D20217"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	138
+			justify    	0
+			label      	"NewL( )"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@54
+		    Focus_Src  	@48
+		    Focus_Entry 	@55
+		    origin     	(1271, 589)
+		    terminus   	(1671, 589)
+		    ordinal    	2)
+		(object InterMessView "" @77
+		    location   	(0, 1395)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @78
+			Parent_View 	@77
+			location   	(1901, 1351)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121E2050064"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	366
+			justify    	0
+			label      	"GetCityName(index)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@54
+		    supplier   	@41
+		    Focus_Src  	@57
+		    Focus_Entry 	@43
+		    origin     	(1702, 1395)
+		    terminus   	(2100, 1395)
+		    ordinal    	8)
+		(object InterMessView "" @79
+		    location   	(0, 1631)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @80
+			Parent_View 	@79
+			location   	(477, 1587)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121E2590111"
+			anchor_loc 	1
+			nlines     	3
+			max_width  	462
+			justify    	0
+			label      	"TimeZoneId = GetGetZoneIdL( index)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@38
+		    supplier   	@49
+		    Focus_Src  	@39
+		    Focus_Entry 	@53
+		    origin     	(215, 1631)
+		    terminus   	(740, 1631)
+		    ordinal    	9)
+		(object InterMessView "" @81
+		    location   	(0, 1663)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @82
+			Parent_View 	@81
+			location   	(1221, 1619)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121E28B023A"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	328
+			justify    	0
+			label      	"GetZoneIdL(index)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@49
+		    supplier   	@54
+		    Focus_Src  	@53
+		    Focus_Entry 	@58
+		    origin     	(771, 1663)
+		    terminus   	(1671, 1663)
+		    ordinal    	10)
+		(object InterMessView "" @83
+		    location   	(0, 1717)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @84
+			Parent_View 	@83
+			location   	(1901, 1673)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121E29E0095"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	400
+			justify    	0
+			label      	"GetCityZoneIdL(index)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@54
+		    supplier   	@41
+		    Focus_Src  	@58
+		    Focus_Entry 	@44
+		    origin     	(1702, 1717)
+		    terminus   	(2100, 1717)
+		    ordinal    	11)))
+	(object InteractionDiagram "Setting Time Zone through a Simple World Server"
+	    mechanism_ref 	@3
+	    quid       	"4121E41E031A"
+	    title      	"Setting Time Zone through a Simple World Server"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object Label @85
+		    location   	(75, 1859)
+		    font       	(object Font
+			size       	10)
+		    nlines     	1
+		    max_width  	1507
+		    label      	"WorldServer Using an External Localised Location Names Resource Manager")
+		(object InterObjView "$UNNAMED$9" @86
+		    location   	(200, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@86
+			location   	(200, 265)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	360
+			justify    	0
+			label      	"")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121E45700AA"
+		    width      	336
+		    height     	1450
+		    icon_height 	162
+		    icon_width 	120
+		    icon_y_offset 	-15
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @87
+			location   	(200, 416)
+			line_color 	3342489
+			InterObjView 	@86
+			height     	1169
+			y_coord    	1109
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$12" @88
+		    location   	(650, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@88
+			location   	(650, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	282
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121E45700C0"
+		    width      	300
+		    height     	1450
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @89
+			location   	(650, 481)
+			line_color 	3342489
+			InterObjView 	@88
+			height     	1044
+			y_coord    	984
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$10" @90
+		    location   	(2341, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@90
+			location   	(2341, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	388
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121E45700B3"
+		    width      	406
+		    height     	1450
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @91
+			location   	(2341, 1276)
+			line_color 	3342489
+			InterObjView 	@90
+			height     	60
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @92
+			location   	(2341, 1405)
+			line_color 	3342489
+			InterObjView 	@90
+			height     	60
+			y_coord    	0
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$13" @93
+		    location   	(1511, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@93
+			location   	(1511, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	296
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121E45700C5"
+		    width      	314
+		    height     	1450
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @94
+			location   	(1511, 617)
+			line_color 	3342489
+			InterObjView 	@93
+			height     	195
+			y_coord    	135
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$11" @95
+		    location   	(1100, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@95
+			location   	(1100, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	382
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121E45700B6"
+		    width      	400
+		    height     	1450
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @96
+			location   	(1100, 561)
+			line_color 	3342489
+			InterObjView 	@95
+			height     	311
+			y_coord    	251
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @97
+			location   	(1100, 1043)
+			line_color 	3342489
+			InterObjView 	@95
+			height     	170
+			y_coord    	110
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$14" @98
+		    location   	(1905, 225)
+		    font       	(object Font
+			size       	10
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@98
+			location   	(1905, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	402
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4121E45700BD"
+		    width      	420
+		    height     	1450
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @99
+			location   	(1905, 692)
+			line_color 	3342489
+			InterObjView 	@98
+			height     	60
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @100
+			location   	(1905, 1093)
+			line_color 	3342489
+			InterObjView 	@98
+			height     	60
+			y_coord    	0
+			Nested     	FALSE))
+		(object InterMessView "" @101
+		    location   	(0, 617)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @102
+			Parent_View 	@101
+			location   	(1393, 568)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121E45700B8"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	441
+			justify    	0
+			label      	"CreateImplementationL()"
+			pctDist    	0.733696
+			height     	50
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@95
+		    supplier   	@93
+		    Focus_Src  	@96
+		    Focus_Entry 	@94
+		    origin     	(1115, 617)
+		    terminus   	(1495, 617)
+		    ordinal    	2)
+		(object InterMessView "" @103
+		    location   	(0, 692)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @104
+			Parent_View 	@103
+			location   	(1707, 648)
+			font       	(object Font
+			    size       	10)
+			quidu      	"4121E45700C3"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	138
+			justify    	0
+			label      	"NewL( )"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@93
+		    supplier   	@98
+		    Focus_Src  	@94
+		    Focus_Entry 	@99
+		    origin     	(1526, 692)
+		    terminus   	(1889, 692)
+		    ordinal    	3)
+		(object InterMessView "" @105
+		    location   	(0, 481)
+		    label      	(object SegLabel @106
+			Parent_View 	@105
+			location   	(424, 437)
+			quidu      	"4121E49501A6"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	323
+			justify    	0
+			label      	"SetCity(CityName)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@86
+		    supplier   	@88
+		    Focus_Src  	@87
+		    Focus_Entry 	@89
+		    origin     	(215, 481)
+		    terminus   	(634, 481)
+		    ordinal    	0)
+		(object InterMessView "" @107
+		    location   	(0, 561)
+		    label      	(object SegLabel @108
+			Parent_View 	@107
+			location   	(874, 517)
+			quidu      	"4121E4BA0178"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	134
+			justify    	0
+			label      	"NewL( )"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@88
+		    supplier   	@95
+		    Focus_Src  	@89
+		    Focus_Entry 	@96
+		    origin     	(665, 561)
+		    terminus   	(1084, 561)
+		    ordinal    	1)
+		(object InterMessView "" @109
+		    location   	(0, 1276)
+		    label      	(object SegLabel @110
+			Parent_View 	@109
+			location   	(1372, 1237)
+			quidu      	"4121E5540002"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	134
+			justify    	0
+			label      	"NewL( )"
+			pctDist    	0.426506
+			height     	40
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@88
+		    supplier   	@90
+		    Focus_Src  	@89
+		    Focus_Entry 	@91
+		    origin     	(665, 1276)
+		    terminus   	(2325, 1276)
+		    ordinal    	6)
+		(object InterMessView "" @111
+		    location   	(0, 1043)
+		    label      	(object SegLabel @112
+			Parent_View 	@111
+			location   	(879, 962)
+			quidu      	"4121E59501B8"
+			anchor_loc 	1
+			nlines     	2
+			max_width  	507
+			justify    	0
+			label      	"TimeZoneId = GetZoneIdL(CityName)"
+			pctDist    	0.510740
+			height     	81
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@88
+		    supplier   	@95
+		    Focus_Src  	@89
+		    Focus_Entry 	@97
+		    origin     	(665, 1043)
+		    terminus   	(1084, 1043)
+		    ordinal    	4)
+		(object InterMessView "" @113
+		    location   	(0, 1093)
+		    label      	(object SegLabel @114
+			Parent_View 	@113
+			location   	(1502, 1049)
+			quidu      	"4121E5BB02D2"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	403
+			justify    	0
+			label      	"GetZoneIdL(CityName)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@95
+		    supplier   	@98
+		    Focus_Src  	@97
+		    Focus_Entry 	@100
+		    origin     	(1115, 1093)
+		    terminus   	(1889, 1093)
+		    ordinal    	5)
+		(object InterMessView "" @115
+		    location   	(0, 1405)
+		    label      	(object SegLabel @116
+			Parent_View 	@115
+			location   	(1495, 1361)
+			quidu      	"4121E611012D"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	256
+			justify    	0
+			label      	"SetTimeZoneL()"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@88
+		    supplier   	@90
+		    Focus_Src  	@89
+		    Focus_Entry 	@92
+		    origin     	(665, 1405)
+		    terminus   	(2325, 1405)
+		    ordinal    	7)))))

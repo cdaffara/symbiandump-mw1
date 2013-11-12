@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<test>
+    <name>CoreApplicationUIs Automated Tests</name>
+    <target>
+        <device rank="none" alias="DEFAULT">
+            <property name="HARNESS" value="EUNIT" />
+            <property name="TYPE" value="Ariane" />
+        </device>
+    </target>
+    <plan name="coreapplicationuis automated test plan" harness="EUNIT" enabled="true" passrate="100">
+        <session name="session" harness="EUNIT" enabled="true" passrate="100">
+            <set name="set" harness="EUNIT" enabled="true" passrate="100">
+                <target>
+                    <device rank="master" alias="DEFAULT"/>
+                </target>
+                <case name="Test Case 1" harness="EUNIT" enabled="true" passrate="100">
+                    <flash target-alias="DEFAULT" images="ATS3Drop/images/sydo_coreapplicationuis_ats3_image.fpsx" />
+                    <flash target-alias="DEFAULT" images="ATS3Drop/images/sydo_coreapplicationuis_ats3_image_udaerase.fpsx" />
+                    <!-- Create CTC coverage result folder -->
+                    <step name="Create CTC log dir" harness="EUNIT" enabled="true" passrate="100" significant="false">
+                        <command>makedir</command>
+                        <params>
+                            <param dir="c:\data\ctc\"/>
+                        </params>
+                    </step>
+                    <!-- Install test module MT_CFClient -->
+                    <step name="Install testmodule MT_Rfs DLL" harness="EUNIT" enabled="true" passrate="100" significant="false">
+                        <command>install</command>
+                        <params>
+                            <param component-path="ATS3Drop"/>
+                            <param type="binary"/>
+                            <param src="MT_Rfs.dll"/>
+                            <param dst="c:\sys\bin\MT_Rfs.dll"/>
+                        </params> 
+                    </step>
+                    <!-- Install test module MT_kefmapper -->
+                    <step name="Install testmodule MT_kefmapper DLL" harness="EUNIT" enabled="true" passrate="100" significant="false">
+                        <command>install</command>
+                        <params>
+                            <param component-path="ATS3Drop"/>
+                            <param type="binary"/>
+                            <param src="MT_kefmapper.dll"/>
+                            <param dst="c:\sys\bin\MT_kefmapper.dll"/>
+                        </params> 
+                    </step>
+                    <!-- Install test module MT_CPhoneHandler -->
+                    <step name="Install testmodule MT_CPhoneHandler DLL" harness="EUNIT" enabled="true" passrate="100" significant="false">
+                        <command>install</command>
+                        <params>
+                            <param component-path="ATS3Drop"/>
+                            <param type="binary"/>
+                            <param src="MT_CPhoneHandler.dll"/>
+                            <param dst="c:\sys\bin\MT_CPhoneHandler.dll"/>
+                        </params> 
+                    </step>
+                    
+                    <!-- Start CTC manager -->
+                    <step name="CTC start" harness="EUNIT" enabled="true" passrate="100" significant="false">
+                        <command>execute</command>
+                        <params>
+                            <param file="z:\sys\bin\ctcman.exe"/>
+                        </params>
+                    </step>
+                    <!-- Create EUnit log dir -->
+                    <step name="Create EUnit log dir" harness="EUNIT" enabled="true" passrate="100" significant="false">
+                        <command>makedir</command>
+                        <params>
+                            <param dir="c:\shared\eunit\logs\"/>
+                        </params>
+                    </step>
+                    <!-- Execute tests -->
+                    <step name="Execute tests" harness="EUNIT" enabled="true" passrate="100" significant="true">
+                        <command>execute</command>
+                        <params>
+                            <param parameters="/l xml /e s60appenv /p All /w 30 MT_Rfs MT_kefmapper MT_CPhoneHandler"/>
+                            <param timeout="360"/>
+                            <param result-file="c:\shared\eunit\logs\EUnit_log.xml"/>
+                            <param file="z:\sys\bin\EUNITEXERUNNER.EXE"/>
+                        </params>
+                    </step>
+                    <!-- Save CTC coverage data -->
+                    <step name="Save CTC data" harness="EUNIT" enabled="true" passrate="100" significant="false">
+                        <command>execute</command>
+                        <params>
+                            <param parameters="writefile"/>
+                            <param file="z:\sys\bin\ctcman.exe"/>
+                        </params>
+                    </step>
+                    <!-- Fetch and clean CTC data -->
+                    <step name="Fetch and clean CTC data" harness="EUNIT" enabled="true" passrate="100" significant="false">
+                        <command>fetch-log</command>
+                        <params>
+                            <param delete="true"/>
+                            <param path="c:\data\ctc\ctcdata.txt"/>
+                        </params>
+                    </step>
+                </case>
+            </set>
+        </session>
+    </plan>
+    <files>
+        <file>ATS3Drop/images/sydo_coreapplicationuis_ats3_image.fpsx</file>
+        <file>ATS3Drop/images/sydo_coreapplicationuis_ats3_image_udaerase.fpsx</file>
+        <file>ATS3Drop/armv5_urel/MT_Rfs.dll</file>
+        <file>ATS3Drop/armv5_urel/MT_kefmapper.dll</file>
+        <file>ATS3Drop/armv5_urel/MT_CPhoneHandler.dll</file>
+        <file>ATS3Drop/data/rfs/rfs_testscript0.txt</file>
+    </files>
+    <postAction>
+        <type>SendEmailAction</type>
+        <params>
+            <param name="type" value="ATS3_REPORT"/>
+            <param name="to" value="mika.kalkainen@nokia.com;ext-yang.1.lu@nokia.com"/>
+            <param name="subject" value="ATS3 report for §RUN_NAME§ §RUN_START_DATE§ §RUN_START_TIME§"/>
+            <param name="send-files" value="true"/>
+        </params>
+    </postAction>
+    <postAction>
+        <type>FileStoreAction</type>
+        <params>
+            <param name="to-folder" value="\\ousrv058\data$\ATS3Reports\S60_5_0\SyDo\systemswservices\coreapplicationuis\"/>
+        </params>
+    </postAction>
+</test>

@@ -1,0 +1,56 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run TzLocalization Speed Tests 
+//
+LOAD_SUITE TzLocalizationTestServer
+//
+
+// Clean up DB
+RUN_UTILS DeleteFile c:\private\100012a5\DBS_10206a8b_TZLOCALIZATION.DB
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzTimeZonesSpeedTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+SpeedTest1
+SpeedTest2
+SpeedTest3
+SpeedTest6
+SpeedTest7
+SpeedTest8
+SpeedTest9
+SpeedTest10
+SpeedTest11
+SpeedTest12
+SpeedTest13
+REMOVE_PREFIX
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzCitiesSpeedTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+SpeedTest1
+SpeedTest2
+SpeedTest3
+SpeedTest4
+SpeedTest5
+REMOVE_PREFIX
+
+PREFIX RUN_TEST_STEP 100 TzLocalizationTestServer TzGroupsSpeedTestStep  c:\TzLocalizationTestScripts\TzLocalizationTest.ini
+SpeedTest1
+SpeedTest2
+SpeedTest3
+SpeedTest4
+SpeedTest5
+REMOVE_PREFIX
+
+
+// Clean up DB
+RUN_UTILS DeleteFile c:\private\100012a5\DBS_10206a8b_TZLOCALIZATION.DB

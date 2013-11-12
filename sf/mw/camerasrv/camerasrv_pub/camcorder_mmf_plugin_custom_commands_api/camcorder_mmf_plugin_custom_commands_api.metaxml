@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api id="1e3bc3f3ac7d0be920052af8a7e42113" dataversion="2.0">
+  <name>Camcorder MMF Plug-in Custom Commands API</name>
+  <description>Custom commands to optimize video recording use cases when using Camcorder MMF Plug-in</description>
+  <type>c++</type>
+  <collection>camcordermmfplugin</collection>
+  <libs/>
+  <release category="public" sinceversion="5.2"/>
+  <attributes>
+    <htmldocprovided>no</htmldocprovided>
+    <adaptation>no</adaptation>
+  </attributes>
+</api>

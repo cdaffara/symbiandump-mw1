@@ -1,0 +1,36 @@
+EXPORTS
+	?componentInstallValue@CaSoftwareRegistry@@SA?AVQString@@XZ @ 1 NONAME ; class QString CaSoftwareRegistry::componentInstallValue(void)
+	??1CaSoftwareRegistry@@EAE@XZ @ 2 NONAME ; CaSoftwareRegistry::~CaSoftwareRegistry(void)
+	?componentTimeKey@CaSoftwareRegistry@@SA?AVQString@@XZ @ 3 NONAME ; class QString CaSoftwareRegistry::componentTimeKey(void)
+	?componentHiddenValue@CaSoftwareRegistry@@SA?AVQString@@XZ @ 4 NONAME ; class QString CaSoftwareRegistry::componentHiddenValue(void)
+	?m_instance@CaSoftwareRegistry@@0V?$QWeakPointer@VCaSoftwareRegistry@@@@A @ 5 NONAME ; class QWeakPointer<class CaSoftwareRegistry> CaSoftwareRegistry::m_instance
+	?staticMetaObject@CaSoftwareRegistry@@2UQMetaObject@@B @ 6 NONAME ; struct QMetaObject const CaSoftwareRegistry::staticMetaObject
+	?componentVendorKey@CaSoftwareRegistry@@SA?AVQString@@XZ @ 7 NONAME ; class QString CaSoftwareRegistry::componentVendorKey(void)
+	?NewL@CCaProgresScanner@@SAPAV1@PAVIUninstallObserver@@@Z @ 8 NONAME ; class CCaProgresScanner * CCaProgresScanner::NewL(class IUninstallObserver *)
+	?qt_metacall@CaSoftwareRegistry@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 9 NONAME ; int CaSoftwareRegistry::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?componentOperationTypeKey@CaSoftwareRegistry@@SA?AVQString@@XZ @ 10 NONAME ; class QString CaSoftwareRegistry::componentOperationTypeKey(void)
+	?metaObject@CaSoftwareRegistry@@UBEPBUQMetaObject@@XZ @ 11 NONAME ; struct QMetaObject const * CaSoftwareRegistry::metaObject(void) const
+	?tr@CaSoftwareRegistry@@SA?AVQString@@PBD0H@Z @ 12 NONAME ; class QString CaSoftwareRegistry::tr(char const *, char const *, int)
+	?tr@CaSoftwareRegistry@@SA?AVQString@@PBD0@Z @ 13 NONAME ; class QString CaSoftwareRegistry::tr(char const *, char const *)
+	?componentTypeKey@CaSoftwareRegistry@@SA?AVQString@@XZ @ 14 NONAME ; class QString CaSoftwareRegistry::componentTypeKey(void)
+	?getStaticMetaObject@CaSoftwareRegistry@@SAABUQMetaObject@@XZ @ 15 NONAME ; struct QMetaObject const & CaSoftwareRegistry::getStaticMetaObject(void)
+	?componentDriveInfoKey@CaSoftwareRegistry@@SA?AVQString@@XZ @ 16 NONAME ; class QString CaSoftwareRegistry::componentDriveInfoKey(void)
+	??_ECaSoftwareRegistry@@UAE@I@Z @ 17 NONAME ; CaSoftwareRegistry::~CaSoftwareRegistry(unsigned int)
+	?componentUninstallValue@CaSoftwareRegistry@@SA?AVQString@@XZ @ 18 NONAME ; class QString CaSoftwareRegistry::componentUninstallValue(void)
+	?createUninstallNotifier@CaSoftwareRegistry@@QBEPAVCaUninstallNotifier@@XZ @ 19 NONAME ; class CaUninstallNotifier * CaSoftwareRegistry::createUninstallNotifier(void) const
+	?entryDetails@CaSoftwareRegistry@@QBE?AV?$QHash@VQString@@V1@@@H@Z @ 20 NONAME ; class QHash<class QString, class QString> CaSoftwareRegistry::entryDetails(int) const
+	?componentSizeKey@CaSoftwareRegistry@@SA?AVQString@@XZ @ 21 NONAME ; class QString CaSoftwareRegistry::componentSizeKey(void)
+	??0CaSoftwareRegistry@@AAE@PAVQObject@@@Z @ 22 NONAME ; CaSoftwareRegistry::CaSoftwareRegistry(class QObject *)
+	?getApplicationsUids@CaSoftwareRegistry@@QAE_NHAAVQStringList@@@Z @ 23 NONAME ; bool CaSoftwareRegistry::getApplicationsUids(int, class QStringList &)
+	?componentNameKey@CaSoftwareRegistry@@SA?AVQString@@XZ @ 24 NONAME ; class QString CaSoftwareRegistry::componentNameKey(void)
+	?trUtf8@CaSoftwareRegistry@@SA?AVQString@@PBD0@Z @ 25 NONAME ; class QString CaSoftwareRegistry::trUtf8(char const *, char const *)
+	?componentProtectionDomainKey@CaSoftwareRegistry@@SA?AVQString@@XZ @ 26 NONAME ; class QString CaSoftwareRegistry::componentProtectionDomainKey(void)
+	?trUtf8@CaSoftwareRegistry@@SA?AVQString@@PBD0H@Z @ 27 NONAME ; class QString CaSoftwareRegistry::trUtf8(char const *, char const *, int)
+	?getUninstallDetails@CaSoftwareRegistry@@QAE_NHAAVQString@@AAVQStringList@@0@Z @ 28 NONAME ; bool CaSoftwareRegistry::getUninstallDetails(int, class QString &, class QStringList &, class QString &)
+	?create@CaSoftwareRegistry@@SA?AV?$QSharedPointer@VCaSoftwareRegistry@@@@XZ @ 29 NONAME ; class QSharedPointer<class CaSoftwareRegistry> CaSoftwareRegistry::create(void)
+	?componentUpgradeValue@CaSoftwareRegistry@@SA?AVQString@@XZ @ 30 NONAME ; class QString CaSoftwareRegistry::componentUpgradeValue(void)
+	?componentDescriptionKey@CaSoftwareRegistry@@SA?AVQString@@XZ @ 31 NONAME ; class QString CaSoftwareRegistry::componentDescriptionKey(void)
+	?componentVersionKey@CaSoftwareRegistry@@SA?AVQString@@XZ @ 32 NONAME ; class QString CaSoftwareRegistry::componentVersionKey(void)
+	?retrieveLogEntries@CaSoftwareRegistry@@QBE?AV?$QList@V?$QHash@VQString@@V1@@@@@XZ @ 33 NONAME ; class QList<class QHash<class QString, class QString> > CaSoftwareRegistry::retrieveLogEntries(void) const
+	?qt_metacast@CaSoftwareRegistry@@UAEPAXPBD@Z @ 34 NONAME ; void * CaSoftwareRegistry::qt_metacast(char const *)
+

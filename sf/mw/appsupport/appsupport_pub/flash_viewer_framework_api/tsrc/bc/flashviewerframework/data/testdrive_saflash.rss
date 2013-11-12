@@ -1,0 +1,82 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:      
+*
+*/
+
+
+
+
+
+
+NAME SATD    // 4 letter ID
+#include <eikon.rh>
+#include <avkon.rh>
+#include <avkon.rsg>
+
+//#ifdef __FLASHLITE_BETA3
+#include <AppInfo.rh>
+//#endif //__FLASHLITE_BETA3
+
+//#ifdef __FLASHLITE2.0_REL3.1
+#include "td_saflash3.loc"
+//#endif //__FLASHLITE2.0_REL3.1
+
+RESOURCE RSS_SIGNATURE
+{
+}
+
+RESOURCE TBUF r_default_document_name
+{
+    buf="SATD";
+}
+
+RESOURCE EIK_APP_INFO
+{
+    menubar = r_saflash2_menubar;
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+}
+
+
+RESOURCE MENU_BAR r_saflash2_menubar
+{
+    titles =
+    {
+        MENU_TITLE { menu_pane = r_saflash2_menu; }
+    };
+}
+
+
+RESOURCE MENU_PANE r_saflash2_menu
+{
+    items =
+    {
+        MENU_ITEM
+        {
+            command = EAknSoftkeyExit;
+            txt = "Exit";
+        }
+    };
+}
+RESOURCE LOCALISABLE_APP_INFO r_tt_01_localisable_app_info
+{
+    short_caption = qtn_apps_flite_grid3; 
+                                     
+    caption_and_icon =
+        CAPTION_AND_ICON_INFO
+        {
+        caption = qtn_apps_flite_list3;
+                         
+        };
+}

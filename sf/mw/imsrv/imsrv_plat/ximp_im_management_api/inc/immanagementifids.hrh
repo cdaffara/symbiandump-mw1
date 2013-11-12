@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Im Feature Plugin Management API interface IDs.
+*
+*/
+
+#ifndef IMMANAGEMENTIFUIDS_HRH
+#define IMMANAGEMENTIFUIDS_HRH
+
+
+
+
+
+// Management IF id's
+// 20xx - ximp related
+// 21xx - presence related
+// 22xx - instant messaging related
+
+
+
+// Interface IDs for Im Feature Plugin Management API interfaces
+#define IM_IF_ID_SEARCH                        2211
+#define IM_IF_ID_GROUPS                        2212
+#define IM_IF_ID_CONVERSATION                  2213
+#define IM_IF_ID_INVITATION                    2214
+#define IM_IF_ID_GROUP_EVENT                   2215
+#define IM_IF_ID_CONVERSATION_EVENT            2216
+#define IM_IF_ID_INVITATION_EVENT              2217
+#define IM_IF_ID_SEARCH_EVENT                  2218
+#define IM_IF_ID_PROTOCOL_IM_FEATURES          2219
+#define IM_IF_ID_ACCESSCONTROL_LIST            2220
+#define IM_CLSID_CIMFEATURESIMP                2221
+#define IM_IF_ID_SEARCHREQUEST								2222
+
+
+// Interface UID for IMfeatures interface
+#define XIMP_ECOM_IF_UID_IM_INTERFACE             0x2000B5F4
+
+// Default implementation resulution data
+// for XIMP imfeature interterface Base ECom interface
+#define XIMP_ECOM_DEFAULT_DATA_IM_INTERFACE         "default"
+
+
+
+#endif // IMMANAGEMENTIFUIDS_HRH
+

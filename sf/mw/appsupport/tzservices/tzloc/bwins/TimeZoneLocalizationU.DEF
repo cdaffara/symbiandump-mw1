@@ -1,0 +1,71 @@
+EXPORTS
+	??1CTzLocalizer@@UAE@XZ @ 1 NONAME ; CTzLocalizer::~CTzLocalizer(void)
+	?AddCityL@CTzLocalizer@@QAEPAVCTzLocalizedCity@@HABVTDesC16@@H@Z @ 2 NONAME ; class CTzLocalizedCity * CTzLocalizer::AddCityL(int, class TDesC16 const &, int)
+	?AppendL@CTzLocalizedCityArray@@QAEXPAVCTzLocalizedCity@@@Z @ 3 NONAME ; void CTzLocalizedCityArray::AppendL(class CTzLocalizedCity *)
+	?AppendL@CTzLocalizedCityGroupArray@@QAEXPAVCTzLocalizedCityGroup@@@Z @ 4 NONAME ; void CTzLocalizedCityGroupArray::AppendL(class CTzLocalizedCityGroup *)
+	?AppendL@CTzLocalizedTimeZoneArray@@QAEXPAVCTzLocalizedTimeZone@@@Z @ 5 NONAME ; void CTzLocalizedTimeZoneArray::AppendL(class CTzLocalizedTimeZone *)
+	?At@CTzLocalizedCityArray@@QBEAAVCTzLocalizedCity@@H@Z @ 6 NONAME ; class CTzLocalizedCity & CTzLocalizedCityArray::At(int) const
+	?At@CTzLocalizedCityGroupArray@@QBEAAVCTzLocalizedCityGroup@@H@Z @ 7 NONAME ; class CTzLocalizedCityGroup & CTzLocalizedCityGroupArray::At(int) const
+	?At@CTzLocalizedTimeZoneArray@@QBEAAVCTzLocalizedTimeZone@@H@Z @ 8 NONAME ; class CTzLocalizedTimeZone & CTzLocalizedTimeZoneArray::At(int) const
+	?CheckLanguage@CTzLocalizer@@QAEHXZ @ 9 NONAME ; int CTzLocalizer::CheckLanguage(void)
+	?Count@CTzLocalizedCityArray@@QBEHXZ @ 10 NONAME ; int CTzLocalizedCityArray::Count(void) const
+	?Count@CTzLocalizedCityGroupArray@@QBEHXZ @ 11 NONAME ; int CTzLocalizedCityGroupArray::Count(void) const
+	?Count@CTzLocalizedTimeZoneArray@@QBEHXZ @ 12 NONAME ; int CTzLocalizedTimeZoneArray::Count(void) const
+	?DaylightName@CTzLocalizedTimeZone@@QBE?AVTPtrC16@@XZ @ 13 NONAME ; class TPtrC16 CTzLocalizedTimeZone::DaylightName(void) const
+	?Find@CTzLocalizedCityArray@@QAEHPAVCTzLocalizedCity@@V?$TIdentityRelation@VCTzLocalizedCity@@@@@Z @ 14 NONAME ; int CTzLocalizedCityArray::Find(class CTzLocalizedCity *, class TIdentityRelation<class CTzLocalizedCity>)
+	?Find@CTzLocalizedCityGroupArray@@QAEHPAVCTzLocalizedCityGroup@@V?$TIdentityRelation@VCTzLocalizedCityGroup@@@@@Z @ 15 NONAME ; int CTzLocalizedCityGroupArray::Find(class CTzLocalizedCityGroup *, class TIdentityRelation<class CTzLocalizedCityGroup>)
+	?Find@CTzLocalizedTimeZoneArray@@QAEHPAVCTzLocalizedTimeZone@@V?$TIdentityRelation@VCTzLocalizedTimeZone@@@@@Z @ 16 NONAME ; int CTzLocalizedTimeZoneArray::Find(class CTzLocalizedTimeZone *, class TIdentityRelation<class CTzLocalizedTimeZone>)
+	?FindCityByNameL@CTzLocalizer@@QAEPAVCTzLocalizedCity@@ABVTDesC16@@H@Z @ 17 NONAME ; class CTzLocalizedCity * CTzLocalizer::FindCityByNameL(class TDesC16 const &, int)
+	?FindCityGroupByNameL@CTzLocalizer@@QAEPAVCTzLocalizedCityGroup@@ABVTDesC16@@@Z @ 18 NONAME ; class CTzLocalizedCityGroup * CTzLocalizer::FindCityGroupByNameL(class TDesC16 const &)
+	?FindTimeZoneByNameL@CTzLocalizer@@QAEPAVCTzLocalizedTimeZone@@ABVTDesC16@@@Z @ 19 NONAME ; class CTzLocalizedTimeZone * CTzLocalizer::FindTimeZoneByNameL(class TDesC16 const &)
+	?GetAllCityGroupsL@CTzLocalizer@@QBEPAVCTzLocalizedCityGroupArray@@W4TTzSortOrder@1@@Z @ 20 NONAME ; class CTzLocalizedCityGroupArray * CTzLocalizer::GetAllCityGroupsL(enum CTzLocalizer::TTzSortOrder) const
+	?GetAllTimeZonesL@CTzLocalizer@@QAEPAVCTzLocalizedTimeZoneArray@@W4TTzSortOrder@1@@Z @ 21 NONAME ; class CTzLocalizedTimeZoneArray * CTzLocalizer::GetAllTimeZonesL(enum CTzLocalizer::TTzSortOrder)
+	?GetFrequentlyUsedZoneCityL@CTzLocalizer@@QAEPAVCTzLocalizedCity@@W4TTzFrequentlyUsedZone@CTzLocalizedTimeZone@@@Z @ 22 NONAME ; class CTzLocalizedCity * CTzLocalizer::GetFrequentlyUsedZoneCityL(enum CTzLocalizedTimeZone::TTzFrequentlyUsedZone)
+	?GetFrequentlyUsedZoneL@CTzLocalizer@@QAEPAVCTzLocalizedTimeZone@@W4TTzFrequentlyUsedZone@2@@Z @ 23 NONAME ; class CTzLocalizedTimeZone * CTzLocalizer::GetFrequentlyUsedZoneL(enum CTzLocalizedTimeZone::TTzFrequentlyUsedZone)
+	?GetCitiesInGroupL@CTzLocalizer@@QAEPAVCTzLocalizedCityArray@@ABVCTzLocalizedCity@@W4TTzSortOrder@1@@Z @ 24 NONAME ; class CTzLocalizedCityArray * CTzLocalizer::GetCitiesInGroupL(class CTzLocalizedCity const &, enum CTzLocalizer::TTzSortOrder)
+	?GetCitiesInGroupL@CTzLocalizer@@QAEPAVCTzLocalizedCityArray@@ABVCTzLocalizedCityGroup@@W4TTzSortOrder@1@@Z @ 25 NONAME ; class CTzLocalizedCityArray * CTzLocalizer::GetCitiesInGroupL(class CTzLocalizedCityGroup const &, enum CTzLocalizer::TTzSortOrder)
+	?GetCitiesInGroupL@CTzLocalizer@@QAEPAVCTzLocalizedCityArray@@HW4TTzSortOrder@1@@Z @ 26 NONAME ; class CTzLocalizedCityArray * CTzLocalizer::GetCitiesInGroupL(int, enum CTzLocalizer::TTzSortOrder)
+	?GetCitiesL@CTzLocalizer@@QAEPAVCTzLocalizedCityArray@@ABVCTzLocalizedCity@@W4TTzSortOrder@1@@Z @ 27 NONAME ; class CTzLocalizedCityArray * CTzLocalizer::GetCitiesL(class CTzLocalizedCity const &, enum CTzLocalizer::TTzSortOrder)
+	?GetCitiesL@CTzLocalizer@@QAEPAVCTzLocalizedCityArray@@ABVCTzLocalizedTimeZone@@W4TTzSortOrder@1@@Z @ 28 NONAME ; class CTzLocalizedCityArray * CTzLocalizer::GetCitiesL(class CTzLocalizedTimeZone const &, enum CTzLocalizer::TTzSortOrder)
+	?GetCitiesL@CTzLocalizer@@QAEPAVCTzLocalizedCityArray@@HW4TTzSortOrder@1@@Z @ 29 NONAME ; class CTzLocalizedCityArray * CTzLocalizer::GetCitiesL(int, enum CTzLocalizer::TTzSortOrder)
+	?GetCitiesL@CTzLocalizer@@QAEPAVCTzLocalizedCityArray@@W4TTzSortOrder@1@@Z @ 30 NONAME ; class CTzLocalizedCityArray * CTzLocalizer::GetCitiesL(enum CTzLocalizer::TTzSortOrder)
+	?GetCitiesWithUTCOffsetL@CTzLocalizer@@QAEPAVCTzLocalizedCityArray@@HW4TTzSortOrder@1@@Z @ 31 NONAME ; class CTzLocalizedCityArray * CTzLocalizer::GetCitiesWithUTCOffsetL(int, enum CTzLocalizer::TTzSortOrder)
+	?GetCityGroupL@CTzLocalizer@@QBEPAVCTzLocalizedCityGroup@@ABVCTzLocalizedCity@@@Z @ 32 NONAME ; class CTzLocalizedCityGroup * CTzLocalizer::GetCityGroupL(class CTzLocalizedCity const &) const
+	?GetCityGroupL@CTzLocalizer@@QBEPAVCTzLocalizedCityGroup@@H@Z @ 33 NONAME ; class CTzLocalizedCityGroup * CTzLocalizer::GetCityGroupL(int) const
+	?GetDefaultCityL@CTzLocalizer@@QBEPAVCTzLocalizedCity@@ABV2@@Z @ 34 NONAME ; class CTzLocalizedCity * CTzLocalizer::GetDefaultCityL(class CTzLocalizedCity const &) const
+	?GetDefaultCityL@CTzLocalizer@@QBEPAVCTzLocalizedCity@@ABVCTzLocalizedTimeZone@@@Z @ 35 NONAME ; class CTzLocalizedCity * CTzLocalizer::GetDefaultCityL(class CTzLocalizedTimeZone const &) const
+	?GetDefaultCityL@CTzLocalizer@@QBEPAVCTzLocalizedCity@@H@Z @ 36 NONAME ; class CTzLocalizedCity * CTzLocalizer::GetDefaultCityL(int) const
+	?GetLocalizedTimeZoneL@CTzLocalizer@@QBEPAVCTzLocalizedTimeZone@@ABVCTzLocalizedCity@@@Z @ 37 NONAME ; class CTzLocalizedTimeZone * CTzLocalizer::GetLocalizedTimeZoneL(class CTzLocalizedCity const &) const
+	?GetLocalizedTimeZoneL@CTzLocalizer@@QBEPAVCTzLocalizedTimeZone@@H@Z @ 38 NONAME ; class CTzLocalizedTimeZone * CTzLocalizer::GetLocalizedTimeZoneL(int) const
+	?GetTimeZonesWithUTCOffsetL@CTzLocalizer@@QAEPAVCTzLocalizedTimeZoneArray@@HW4TTzSortOrder@1@@Z @ 39 NONAME ; class CTzLocalizedTimeZoneArray * CTzLocalizer::GetTimeZonesWithUTCOffsetL(int, enum CTzLocalizer::TTzSortOrder)
+	?GroupId@CTzLocalizedCity@@QBEEXZ @ 40 NONAME ; unsigned char CTzLocalizedCity::GroupId(void) const
+	?Id@CTzLocalizedCityGroup@@QBEEXZ @ 41 NONAME ; unsigned char CTzLocalizedCityGroup::Id(void) const
+	?Name@CTzLocalizedCity@@QBE?AVTPtrC16@@XZ @ 42 NONAME ; class TPtrC16 CTzLocalizedCity::Name(void) const
+	?Name@CTzLocalizedCityGroup@@QBE?AVTPtrC16@@XZ @ 43 NONAME ; class TPtrC16 CTzLocalizedCityGroup::Name(void) const
+	?NewL@CTzLocalizedCityArray@@SAPAV1@XZ @ 44 NONAME ; class CTzLocalizedCityArray * CTzLocalizedCityArray::NewL(void)
+	?NewL@CTzLocalizedCityGroupArray@@SAPAV1@XZ @ 45 NONAME ; class CTzLocalizedCityGroupArray * CTzLocalizedCityGroupArray::NewL(void)
+	?NewL@CTzLocalizedTimeZoneArray@@SAPAV1@XZ @ 46 NONAME ; class CTzLocalizedTimeZoneArray * CTzLocalizedTimeZoneArray::NewL(void)
+	?NewL@CTzLocalizer@@SAPAV1@XZ @ 47 NONAME ; class CTzLocalizer * CTzLocalizer::NewL(void)
+	?NewLC@CTzLocalizedCityArray@@SAPAV1@XZ @ 48 NONAME ; class CTzLocalizedCityArray * CTzLocalizedCityArray::NewLC(void)
+	?NewLC@CTzLocalizedCityGroupArray@@SAPAV1@XZ @ 49 NONAME ; class CTzLocalizedCityGroupArray * CTzLocalizedCityGroupArray::NewLC(void)
+	?NewLC@CTzLocalizedTimeZoneArray@@SAPAV1@XZ @ 50 NONAME ; class CTzLocalizedTimeZoneArray * CTzLocalizedTimeZoneArray::NewLC(void)
+	?NewLC@CTzLocalizer@@SAPAV1@XZ @ 51 NONAME ; class CTzLocalizer * CTzLocalizer::NewLC(void)
+	?Remove@CTzLocalizedCityArray@@QAEXH@Z @ 52 NONAME ; void CTzLocalizedCityArray::Remove(int)
+	?Remove@CTzLocalizedCityGroupArray@@QAEXH@Z @ 53 NONAME ; void CTzLocalizedCityGroupArray::Remove(int)
+	?Remove@CTzLocalizedTimeZoneArray@@QAEXH@Z @ 54 NONAME ; void CTzLocalizedTimeZoneArray::Remove(int)
+	?RemoveCityL@CTzLocalizer@@QAEXPAVCTzLocalizedCity@@@Z @ 55 NONAME ; void CTzLocalizer::RemoveCityL(class CTzLocalizedCity *)
+	?SetFrequentlyUsedZoneL@CTzLocalizer@@QAEXABVCTzLocalizedCity@@W4TTzFrequentlyUsedZone@CTzLocalizedTimeZone@@@Z @ 56 NONAME ; void CTzLocalizer::SetFrequentlyUsedZoneL(class CTzLocalizedCity const &, enum CTzLocalizedTimeZone::TTzFrequentlyUsedZone)
+	?SetFrequentlyUsedZoneL@CTzLocalizer@@QAEXABVCTzLocalizedTimeZone@@W4TTzFrequentlyUsedZone@2@@Z @ 57 NONAME ; void CTzLocalizer::SetFrequentlyUsedZoneL(class CTzLocalizedTimeZone const &, enum CTzLocalizedTimeZone::TTzFrequentlyUsedZone)
+	?SetFrequentlyUsedZoneL@CTzLocalizer@@QAEXHW4TTzFrequentlyUsedZone@CTzLocalizedTimeZone@@@Z @ 58 NONAME ; void CTzLocalizer::SetFrequentlyUsedZoneL(int, enum CTzLocalizedTimeZone::TTzFrequentlyUsedZone)
+	?SetTimeZoneL@CTzLocalizer@@QAEXH@Z @ 59 NONAME ; void CTzLocalizer::SetTimeZoneL(int)
+	?ShortDaylightName@CTzLocalizedTimeZone@@QBE?AVTPtrC16@@XZ @ 60 NONAME ; class TPtrC16 CTzLocalizedTimeZone::ShortDaylightName(void) const
+	?ShortStandardName@CTzLocalizedTimeZone@@QBE?AVTPtrC16@@XZ @ 61 NONAME ; class TPtrC16 CTzLocalizedTimeZone::ShortStandardName(void) const
+	?Sort@CTzLocalizedCityArray@@QAEXV?$TLinearOrder@VCTzLocalizedCity@@@@@Z @ 62 NONAME ; void CTzLocalizedCityArray::Sort(class TLinearOrder<class CTzLocalizedCity>)
+	?Sort@CTzLocalizedCityGroupArray@@QAEXV?$TLinearOrder@VCTzLocalizedCityGroup@@@@@Z @ 63 NONAME ; void CTzLocalizedCityGroupArray::Sort(class TLinearOrder<class CTzLocalizedCityGroup>)
+	?Sort@CTzLocalizedTimeZoneArray@@QAEXV?$TLinearOrder@VCTzLocalizedTimeZone@@@@@Z @ 64 NONAME ; void CTzLocalizedTimeZoneArray::Sort(class TLinearOrder<class CTzLocalizedTimeZone>)
+	?StandardName@CTzLocalizedTimeZone@@QBE?AVTPtrC16@@XZ @ 65 NONAME ; class TPtrC16 CTzLocalizedTimeZone::StandardName(void) const
+	?TimeZoneId@CTzLocalizedCity@@QBEGXZ @ 66 NONAME ; unsigned short CTzLocalizedCity::TimeZoneId(void) const
+	?TimeZoneId@CTzLocalizedTimeZone@@QBEGXZ @ 67 NONAME ; unsigned short CTzLocalizedTimeZone::TimeZoneId(void) const
+	?SetDataSource@CTzLocalizer@@QAEXI@Z @ 68  NONAME ; void CTzLocalizer::SetDataSource(unsigned int)
+
+

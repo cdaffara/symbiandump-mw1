@@ -1,0 +1,24 @@
+/* Generated automatically */
+#ifndef have_Src_subst_globals
+#define have_Src_subst_globals
+
+extern char nulstring[];
+extern mod_import_function void prefork _((LinkList list,int flags));
+extern void quotesubst _((char*str));
+extern mod_import_function void globlist _((LinkList list,int nountok));
+extern mod_import_function void singsub _((char**s));
+extern mod_import_function void filesub _((char**namptr,int assign));
+extern mod_import_function int filesubstr _((char**namptr,int assign));
+extern int strpcmp _((const void*a,const void*b));
+extern int invstrpcmp _((const void*a,const void*b));
+extern int cstrpcmp _((const void*a,const void*b));
+extern int invcstrpcmp _((const void*a,const void*b));
+extern int nstrpcmp _((const void*a,const void*b));
+extern int invnstrpcmp _((const void*a,const void*b));
+extern int instrpcmp _((const void*a,const void*b));
+extern int invinstrpcmp _((const void*a,const void*b));
+extern char*get_strarg _((char*s));
+extern LinkNode paramsubst _((LinkList l,LinkNode n,char**str,int qt,int ssub));
+extern void modify _((char**str,char**ptr));
+
+#endif /* !have_Src_subst_globals */

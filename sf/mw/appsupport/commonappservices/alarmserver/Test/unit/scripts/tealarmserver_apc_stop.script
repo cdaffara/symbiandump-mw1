@@ -1,0 +1,42 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE alarmserverunittestserver
+
+//! @SYMTestCaseID PIM-UCT-PREQ1118-APC-AS-0011
+//! @SYMTestCaseDesc RSC file overrides default hard-coded values
+//! @SYMFssID <App-Services>/<AlarmServer>/EAS.001
+//! @SYMTestStatus Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions Place compiled Resource file in the private folder of the AlarmServer, containing settings that differ from the default hardcoded settings of the AlarmServer. Make sure there is no .ini file in the folder. Startup the AlarmServer. Verify APC settings read at startup.
+//! @SYMTestExpectedResults the AlarmServer should have settings acquired from the resource file.
+//! @SYMTestType CT
+
+START_TESTCASE PIM-UCT-PREQ1118-APC-AS-0023
+//! @SYMTestCaseID PIM-UCT-PREQ1118-APC-AS-0023
+//! @SYMTestCaseDesc No Repeat option
+//! @SYMFssID <App-Services>/<AlarmServer>/EAS.003
+//! @SYMTestStatus Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions Use Resource file with RepeatSetting=Stop. Start the AlarmServer. Add an alarm, enable and wait for expiry. Verify that alarm stops playing after the end of the sequence is reached.
+//! @SYMTestExpectedResults ASPS shall stop when the end is reached
+//! @SYMTestType CT
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 150 alarmserverunittestserver AlarmPlayConfig \testdata\config\TEAlarmServer_apc.ini stop
+END_TESTCASE PIM-UCT-PREQ1118-APC-AS-0023

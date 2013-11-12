@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+    <name>caapphandlerplugin</name>
+    <filepath>caapphandlerplugin</filepath>
+    <description></description>
+    <interface>
+        <name>com.nokia.homescreen.ICommandHandler</name>
+        <version>1.0</version>
+        <description></description>
+        <capabilities></capabilities>
+        <customproperty key="entryTypeName">application</customproperty>
+    </interface>
+</service>

@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project Context Framework
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+//Configuration tool migration
+../conf/contextframework.confml             MW_LAYER_CONFML(contextframework.confml)
+../conf/contextframework_2000B195.crml 	    MW_LAYER_CRML(contextframework_2000B195.crml)
+../conf/contextframework_2000CFD9.crml 	    MW_LAYER_CRML(contextframework_2000CFD9.crml)
+../conf/contextframework_10282BCC.crml 	    MW_LAYER_CRML(contextframework_10282BCC.crml)
+../conf/contextframework_10282BCD.crml 	    MW_LAYER_CRML(contextframework_10282BCD.crml)
+../conf/contextframework_10282BCE.crml 	    MW_LAYER_CRML(contextframework_10282BCE.crml)
+../conf/contextframework_200159ED.crml 	    MW_LAYER_CRML(contextframework_200159ED.crml)
+
+../data/backup_registration.xml /epoc32/data/z/private/10282bc4/backup_registration.xml
+../data/backup_registration.xml /epoc32/release/winscw/udeb/z/private/10282bc4/backup_registration.xml
+../data/backup_registration.xml /epoc32/release/winscw/urel/z/private/10282bc4/backup_registration.xml
+
+#ifdef RD_CONTEXT_FRAMEWORK
+../rom/ContextFramework.iby CORE_MW_LAYER_IBY_EXPORT_PATH(ContextFramework.iby)
+#endif // RD_CONTEXT_FRAMEWORK
+
+PRJ_MMPFILES
+#ifdef RD_CONTEXT_FRAMEWORK
+cfservices.mmp
+cfoperationpluginservices.mmp
+cfscriptengine.mmp
+cfactivatorengine.mmp
+cfcontextsourcesettingsmanager.mmp
+cfcontextsourcemanager.mmp
+cfserver.mmp
+cfclient.mmp
+basicoperationsplugin.mmp
+
+//GNUMAKEFILE binarymover.make
+#endif // RD_CONTEXT_FRAMEWORK

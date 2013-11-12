@@ -1,0 +1,176 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <!-- Switch to landscape mode -->
+    <if>
+        <and>
+            <!-- Sensor settings enabled -->
+            <equals>
+                <contextRef source='Sensor' type='Setting.Active'/>
+                <string>On</string>
+            </equals>
+            <!-- Foreground application -->
+            <or>
+                <!-- Foreground application BrowserNG -->
+	            <equals>
+	                <contextRef source='Application.State' type='Foreground.Application'/>
+	                <string>BrowserNG</string>
+	            </equals>
+            	<!-- Foreground application Gallery -->
+	            <equals>
+	                <contextRef source='Application.State' type='Foreground.Application'/>
+	                <string>Gallery</string>
+	            </equals>
+            	<!-- Foreground application ImageViewer -->
+	            <equals>
+	                <contextRef source='Application.State' type='Foreground.Application'/>
+	                <string>ImageViewer</string>
+	            </equals>
+            </or>
+            <!-- Orientation must have been changed -->
+            <contextUpdated>
+                <contextRef source='Sensor' type='Event.Orientation'/>
+            </contextUpdated>
+            <!-- Orientation value -->
+            <or>
+                <!-- Orientation DisplayLeftUp -->
+                <equals>
+                    <contextRef source='Sensor' type='Event.Orientation'/>
+                    <string>DisplayLeftUp</string>
+                </equals>
+                <!-- Orientation DisplayRightUp -->
+                <equals>
+                    <contextRef source='Sensor' type='Event.Orientation'/>
+                    <string>DisplayRightUp</string>
+                </equals>
+            </or>
+        </and>
+        <actions>
+            <!-- Switch to landscape mode -->
+            <Orientation Mode='Landscape'/>
+        </actions>
+    </if>
+    <!-- Switch to portrait mode -->
+    <elseIf>
+        <and>
+            <!-- Sensor settings enabled -->
+            <equals>
+                <contextRef source='Sensor' type='Setting.Active'/>
+                <string>On</string>
+            </equals>
+	        <!-- Foreground application -->
+            <or>
+	            <!-- Foreground application is BrowserNG -->
+	            <equals>
+	                <contextRef source='Application.State' type='Foreground.Application'/>
+	                <string>BrowserNG</string>
+	            </equals>
+	          	<!-- Foreground application is Gallery -->
+	            <equals>
+	                <contextRef source='Application.State' type='Foreground.Application'/>
+	                <string>Gallery</string>
+	            </equals>
+            	<!-- Foreground application ImageViewer -->
+	            <equals>
+	                <contextRef source='Application.State' type='Foreground.Application'/>
+	                <string>ImageViewer</string>
+	            </equals>
+            </or>
+            <!-- Orientation must have been changed -->
+            <contextUpdated>
+                <contextRef source='Sensor' type='Event.Orientation'/>
+            </contextUpdated>
+            <or>
+                <!-- Orientation DisplayUp -->
+                <equals>
+                    <contextRef source='Sensor' type='Event.Orientation'/>
+                    <string>DisplayUp</string>
+                </equals>
+                <!-- Orientation DisplayDown -->
+                <equals>
+                    <contextRef source='Sensor' type='Event.Orientation'/>
+                    <string>DisplayDown</string>
+                </equals>
+            </or>
+        </and>
+        <actions>
+            <!-- Switch to portrait mode -->
+            <Orientation Mode='Portrait'/>
+        </actions>
+    </elseIf>
+    <!-- Activate orientation events from sensor -->
+    <elseIf>
+        <and>
+            <!-- Sensor settings enabled -->
+            <equals>
+                <contextRef source='Sensor' type='Setting.Active'/>
+                <string>On</string>
+            </equals>
+            <!-- Orientation must have been changed -->
+            <contextUpdated>
+		        <contextRef source='Application.State' type='Foreground.Application'/>
+		    </contextUpdated>
+		    <or>
+		        <!-- Foreground application is BrowserNG -->
+			    <equals>
+			        <contextRef source='Application.State' type='Foreground.Application'/>
+			        <string>BrowserNG</string>
+                </equals>
+                <!-- Foreground application is Gallery -->
+			    <equals>
+			        <contextRef source='Application.State' type='Foreground.Application'/>
+			        <string>Gallery</string>
+			    </equals>
+            	<!-- Foreground application ImageViewer -->
+	            <equals>
+	                <contextRef source='Application.State' type='Foreground.Application'/>
+	                <string>ImageViewer</string>
+	            </equals>
+		    </or>
+        </and>
+        <actions>
+            <!-- Activate orientation events from sensor -->
+            <publishContext>
+                <contextRef source='Sensor' type='Event' value='Orientation.Activate'/>
+            </publishContext>
+        </actions>
+    </elseIf>
+    <!-- Deactivate orientation events from sensor -->
+    <elseIf>
+        <and>
+            <!-- Sensor settings enabled -->
+            <equals>
+                <contextRef source='Sensor' type='Setting.Active'/>
+                <string>On</string>
+            </equals>
+            <!-- Orientation must have been changed -->
+		    <contextUpdated>
+		        <contextRef source='Application.State' type='Background.Application'/>
+		    </contextUpdated>
+		    <or>
+		        <!-- Foreground application is BrowserNG -->
+			    <equals>
+				    <contextRef source='Application.State' type='Background.Application'/>
+				    <string>BrowserNG</string>
+				</equals>
+				<!-- Foreground application is Gallery -->
+				<equals>
+				    <contextRef source='Application.State' type='Background.Application'/>
+				    <string>Gallery</string>
+				</equals>
+            	<!-- Foreground application ImageViewer -->
+	            <equals>
+	                <contextRef source='Application.State' type='Background.Application'/>
+	                <string>ImageViewer</string>
+	            </equals>
+		    </or>
+        </and>
+        <actions>
+            <!-- Deactivate orientation events from sensor -->
+            <publishContext>
+                <contextRef source='Sensor' type='Event' value='Orientation.Deactivate'/>
+            </publishContext>
+            <!-- Switch to portrait mode when exiting -->
+            <Orientation Mode='Portrait'/>
+        </actions>
+    </elseIf>
+</script>

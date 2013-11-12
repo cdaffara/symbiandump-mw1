@@ -1,0 +1,8 @@
+EXPORTS
+	?NewL@CSAnimCtrl@@SAPAV1@ABVTRect@@ABVCCoeControl@@@Z @ 1 NONAME ; class CSAnimCtrl * CSAnimCtrl::NewL(class TRect const &, class CCoeControl const &)
+	?BaseConstructL@CSAnimCtrl@@IAEXABVTRect@@ABVCCoeControl@@@Z @ 2 NONAME ; void CSAnimCtrl::BaseConstructL(class TRect const &, class CCoeControl const &)
+	??0CSAnimCtrl@@IAE@XZ @ 3 NONAME ; CSAnimCtrl::CSAnimCtrl(void)
+	?NewL@CSAnimStartupCtrl@@SAPAV1@ABVTRect@@ABVCCoeControl@@@Z @ 4 NONAME ; class CSAnimStartupCtrl * CSAnimStartupCtrl::NewL(class TRect const &, class CCoeControl const &)
+	?ConstructL@CSAnimStartupCtrl@@IAEXABVTRect@@ABVCCoeControl@@@Z @ 5 NONAME ; void CSAnimStartupCtrl::ConstructL(class TRect const &, class CCoeControl const &)
+	??0CSAnimStartupCtrl@@IAE@XZ @ 6 NONAME ; CSAnimStartupCtrl::CSAnimStartupCtrl(void)
+

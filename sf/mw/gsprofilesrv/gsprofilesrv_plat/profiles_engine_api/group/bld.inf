@@ -1,0 +1,76 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                Profiles Engine API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/ProfileEngineDomainConstants.h   MW_LAYER_PLATFORM_EXPORT_PATH(ProfileEngineDomainConstants.h)
+../inc/CProfileChangeNotifyHandler.h    MW_LAYER_PLATFORM_EXPORT_PATH(CProfileChangeNotifyHandler.h)
+../inc/ProfileInternal.hrh              MW_LAYER_PLATFORM_EXPORT_PATH(ProfileInternal.hrh)
+../inc/MProfileEngine.h                 MW_LAYER_PLATFORM_EXPORT_PATH(MProfileEngine.h)
+../inc/MProfilePttSettings.h            MW_LAYER_PLATFORM_EXPORT_PATH(MProfilePttSettings.h)
+../inc/MProfileFeedbackSettings.h       MW_LAYER_PLATFORM_EXPORT_PATH(MProfileFeedbackSettings.h)
+../inc/MProfile3DToneSettings.h         MW_LAYER_PLATFORM_EXPORT_PATH(MProfile3DToneSettings.h)
+../inc/MProfileExtraSettings.h          MW_LAYER_PLATFORM_EXPORT_PATH(MProfileExtraSettings.h)
+../inc/ProfileEngineDomainCRKeys.h      MW_LAYER_PLATFORM_EXPORT_PATH(ProfileEngineDomainCRKeys.h)
+../inc/ProfilesVariant.hrh              MW_LAYER_PLATFORM_EXPORT_PATH(ProfilesVariant.hrh)
+../inc/TProfileToneSettings.h           MW_LAYER_PLATFORM_EXPORT_PATH(TProfileToneSettings.h)
+../inc/MProfileChangeObserver.h         MW_LAYER_PLATFORM_EXPORT_PATH(MProfileChangeObserver.h)
+../inc/MProfilesNamesArray.h            MW_LAYER_PLATFORM_EXPORT_PATH(MProfilesNamesArray.h)
+../inc/MProfileExtraTones.h             MW_LAYER_PLATFORM_EXPORT_PATH(MProfileExtraTones.h)
+../inc/MProfileTones.h                  MW_LAYER_PLATFORM_EXPORT_PATH(MProfileTones.h)
+../inc/MProfileName.h                   MW_LAYER_PLATFORM_EXPORT_PATH(MProfileName.h)
+../inc/MProfile.h                       MW_LAYER_PLATFORM_EXPORT_PATH(MProfile.h)
+
+/* Since 10.1 */
+../inc/MProfileVibraSettings.h          MW_LAYER_PLATFORM_EXPORT_PATH(MProfileVibraSettings.h)
+../inc/MProfileExtraTones2.h            MW_LAYER_PLATFORM_EXPORT_PATH(MProfileExtraTones2.h)
+../inc/MProfileSetExtraTones2.h         MW_LAYER_PLATFORM_EXPORT_PATH(MProfileSetExtraTones2.h)
+../inc/MProfileExtended2.h              MW_LAYER_PLATFORM_EXPORT_PATH(MProfileExtended2.h)
+../inc/MProfileEngineExtended2.h        MW_LAYER_PLATFORM_EXPORT_PATH(MProfileEngineExtended2.h)
+
+../inc/MProfileEngineExtended.h         MW_LAYER_PLATFORM_EXPORT_PATH(MProfileEngineExtended.h)
+../inc/MProfileExtended.h               MW_LAYER_PLATFORM_EXPORT_PATH(MProfileExtended.h)
+../inc/MProfilePresence.h               MW_LAYER_PLATFORM_EXPORT_PATH(MProfilePresence.h)
+../inc/MProfileSetPresence.h            MW_LAYER_PLATFORM_EXPORT_PATH(MProfileSetPresence.h)
+../inc/ProfileEng.hrh                   MW_LAYER_PLATFORM_EXPORT_PATH(ProfileEng.hrh)
+../inc/ProfileEngineConstants.h         MW_LAYER_PLATFORM_EXPORT_PATH(ProfileEngineConstants.h)
+../inc/MProfileSetExtraTones.h          MW_LAYER_PLATFORM_EXPORT_PATH(MProfileSetExtraTones.h)
+../inc/MProfileSetName.h                MW_LAYER_PLATFORM_EXPORT_PATH(MProfileSetName.h)
+../inc/ProfileEng.rh                    MW_LAYER_PLATFORM_EXPORT_PATH(ProfileEng.rh)
+../inc/MProfilesLocalFeatures.h         MW_LAYER_PLATFORM_EXPORT_PATH(MProfilesLocalFeatures.h)
+../inc/MProfileUtilitySingleton.h       MW_LAYER_PLATFORM_EXPORT_PATH(MProfileUtilitySingleton.h)
+../inc/ProfileEngineInternalCRKeys.h    MW_LAYER_PLATFORM_EXPORT_PATH(ProfileEngineInternalCRKeys.h)
+../inc/ProfileEngineInternalPSKeys.h    MW_LAYER_PLATFORM_EXPORT_PATH(ProfileEngineInternalPSKeys.h)
+
+../inc/MProfileSet3DToneSettings.h      MW_LAYER_PLATFORM_EXPORT_PATH(MProfileSet3DToneSettings.h)
+../inc/MProfileSetExtraSettings.h       MW_LAYER_PLATFORM_EXPORT_PATH(MProfileSetExtraSettings.h)
+../inc/MProfileSetFeedbackSettings.h    MW_LAYER_PLATFORM_EXPORT_PATH(MProfileSetFeedbackSettings.h)
+../inc/MProfileSetPttSettings.h         MW_LAYER_PLATFORM_EXPORT_PATH(MProfileSetPttSettings.h)
+../inc/MProfileSetTones.h               MW_LAYER_PLATFORM_EXPORT_PATH(MProfileSetTones.h)
+//Since 10.1
+../inc/MProfileSetVibraSettings.h       MW_LAYER_PLATFORM_EXPORT_PATH(MProfileSetVibraSettings.h)
+
+../inc/SecondaryDisplayProfilesAPI.h    MW_LAYER_PLATFORM_EXPORT_PATH(secondarydisplay/SecondaryDisplayProfilesAPI.h)
+
+../inc/ProfileEnginePrivatePSKeys.h	MW_LAYER_PLATFORM_EXPORT_PATH(ProfileEnginePrivatePSKeys.h)

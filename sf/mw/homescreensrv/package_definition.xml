@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition xmlns:qt="http://www.nokia.com/qt" schema="3.0.0">
+ <package id="homescreensrv" name="Home Screen Services" levels="plugin framework server generic specific">
+  <collection id="homescreensrv_plat" name="Home Screen Services Platform Interfaces" level="specific">
+   <component id="menu_sat_interface_api" name="Menu SAT Interface API" class="api" filter="s60">
+    <meta rel="Api" href="homescreensrv_plat/menu_sat_interface_api/menu_sat_interface_api.metaxml"/>
+    <unit bldFile="homescreensrv_plat/menu_sat_interface_api" qt:proFile="menu_sat_interface_api.pro"/>
+   </component>
+   <component id="contentstorage_api" name="Content Storage API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="homescreensrv_plat/contentstorage_api" qt:proFile="contentstorage_api.pro"/>
+   </component>
+   <component id="hswidgetmodel_api" name="HS Widget Model API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="homescreensrv_plat/hswidgetmodel_api" qt:proFile="hswidgetmodel_api.pro"/>
+   </component>
+   <component id="homescreen_information_api" name="Homescreen Information API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="homescreensrv_plat/homescreen_information_api" qt:proFile="homescreen_information_api.pro"/>
+   </component>
+   <component id="taskswitcher_api" name="Task Switcher API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="homescreensrv_plat/taskswitcher_api" qt:proFile="taskswitcher_api.pro"/>
+   </component>
+   <component id="activity_framework_api" name="Activity Framework API" class="api" filter="s60" introduced="^4">
+    <unit bldFile="homescreensrv_plat/activity_framework_api" qt:proFile="activity_framework_api.pro"/>
+   </component>
+  </collection>
+  <collection id="hswidgetmodel" name="Home Screen Widget Model" level="framework">
+     <component id="hswidgetmodel_build" name="Home Screen Widget Model Build" introduced="^4" filter="s60">
+      <unit bldFile="hswidgetmodel" qt:proFile="hswidgetmodel.pro"/>
+     </component>
+  </collection>
+    <collection id="contentstorage" name="Content Storage" level="framework">
+     <component id="cautils" name="Content Arsenal Utils" introduced="^4" filter="s60">
+      <unit bldFile="contentstorage/cautils" qt:proFile="cautils.pro"/>
+     </component>
+     <component id="contentstorage_build" name="Content Storage Build" introduced="^4" filter="s60">
+      <unit bldFile="contentstorage/group" qt:proFile="group.pro"/>
+     </component>
+     <component id="casrv/calocalizerscanner" name="Content Arsenal Server Localizer Scanner" introduced="^4" filter="s60">
+      <unit bldFile="contentstorage/casrv/calocalizerscanner" qt:proFile="calocalizerscanner.pro"/>
+     </component>
+     <component id="cahandler" name="Content Arsenal Handler" introduced="^4" filter="s60">
+      <unit bldFile="contentstorage/cahandler" qt:proFile="cahandler.pro"/>
+     </component>
+     <component id="camificonengine" name="Content Arsenal MIF Icon Engine" introduced="^4" filter="s60">
+      <unit bldFile="contentstorage/camificonengine" qt:proFile="camificonengine.pro"/>
+     </component>
+     <component id="caclient" name="Content Arsenal Client" introduced="^4" filter="s60">
+      <unit bldFile="contentstorage/caclient" qt:proFile="caclient.pro"/>
+     </component>
+     <component id="casoftwareregistry" name="Content Arsenal Software Registry" introduced="^4" filter="s60">
+      <unit bldFile="contentstorage/casoftwareregistry" qt:proFile="casoftwareregistry.pro"/>
+     </component>
+  </collection>
+  <collection id="hsactivityfw" name="Activity Framework" level="fw">
+     <component id="hsactivityfw_build" name="Activity Framework Build" introduced="^4" filter="s60">
+      <unit bldFile="activityfw" qt:proFile="activityfw.pro"/>
+     </component>
+  </collection>
+  <collection id="hsappkeyhandler" name="HS Appplication Key Handler" level="server">
+     <component id="hsappkeyhandler_build" name="Appplication Key Handler Build" introduced="^4" filter="s60">
+      <unit bldFile="hsappkeyhandler" qt:proFile="hsappkeyhandler.pro"/>
+     </component>
+  </collection> 
+   <collection id="taskswitcher" name="Task Switcher" level="framework">
+     <component id="ts_client" name="Task Switcher Client" introduced="^4" filter="s60">
+      <unit bldFile="taskswitcher/client" qt:proFile="client.pro"/>
+     </component>
+     <component id="ts_backstepping" name="Task Switcher Backstepping" introduced="^4" filter="s60">
+      <unit bldFile="taskswitcher/backstepping" qt:proFile="backstepping.pro"/>
+     </component>
+     <component id="ts_server" name="Task Switcher Server" introduced="^4" filter="s60">
+      <unit bldFile="taskswitcher/server" qt:proFile="server.pro"/>
+     </component>
+     <component id="ts_screenshotplugin" name="Task Switcher Screenshot Plugin" introduced="^4" filter="s60" class="plugin">
+      <unit bldFile="taskswitcher/screenshotplugin" qt:proFile="screenshotplugin.pro"/>
+     </component>
+     <component id="ts_activitytsplugin" name="Task Switcher Activity Plugin" introduced="^4" filter="s60" class="plugin">
+      <unit bldFile="taskswitcher/activitytsplugin" qt:proFile="activitytsplugin.pro"/>
+     </component>
+     <component id="ts_devicedialogplugin" name="Task Switcher Device Dialog Plugin" introduced="^4" filter="s60" class="plugin">
+      <unit bldFile="taskswitcher/tsdevicedialogplugin" qt:proFile="tsdevicedialogplugin.pro"/>
+     </component>
+     <component id="taskswitcher_rom" name="Task Switcher ROM" introduced="^4" filter="s60" class="config">
+      <unit bldFile="taskswitcher/rom"/>
+     </component>
+   </collection>
+    <collection id="homescreensrv_info" name="Home Screen Services Info" level="specific">
+     <component id="homescreensrv_rom" name="Home Screen Services ROM" class="config" introduced="^4" filter="s60">
+      <unit bldFile="rom"/>
+     </component>
+     <component id="homescreensrv_config" name="Home Screen Services config" class="config" introduced="^4" filter="s60">
+      <unit bldFile="group"/>
+     </component>
+     <component id="homescreensrv_test" name="Home Screen Services Test" filter="s60,test,unit_test" introduced="^4">
+      <unit bldFile="tsrc" qt:qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN" qt:proFile="tsrc.pro"/>
+     </component>
+    </collection>
+ </package>
+</SystemDefinition>
+

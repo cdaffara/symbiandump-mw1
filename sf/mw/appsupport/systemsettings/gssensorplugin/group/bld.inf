@@ -1,0 +1,43 @@
+/*
+* Copyright (c) 2006-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project gssensorplugin
+*
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+//Configuration tool migration
+../conf/sensorplugin.confml         MW_LAYER_CONFML(sensorplugin.confml)
+../conf/sensorplugin_10282DF0.crml  MW_LAYER_CRML(sensorplugin_10282DF0.crml)
+
+// ../loc/gssensorplugin.loc           MW_LAYER_LOC_EXPORT_PATH(gssensorplugin.loc)
+
+// Iby file exports
+// ../rom/gssensorplugin.iby           CORE_MW_LAYER_IBY_EXPORT_PATH(gssensorplugin.iby)
+// ../rom/gssenpluginresources.iby     LANGUAGE_MW_LAYER_IBY_EXPORT_PATH(gssenpluginresources.iby)
+
+PRJ_MMPFILES
+// gssensorplugin.mmp
+
+PRJ_EXTENSIONS
+
+START EXTENSION s60/mifconv
+    OPTION TARGETFILE gssenplugin.mif
+    OPTION HEADERFILE gssenplugin.mbg
+    OPTION SOURCES -c8,8 qgn_prop_set_gene_sensor
+END

@@ -1,0 +1,39 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+target        tzswiobserverplugin.dll
+capability    protserv
+targettype    plugin
+uid           0x10009D8D 0x1028649C
+
+vendorid 	  0x70000001
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+userinclude		../swiobserverplugin/include
+
+sourcepath    ../swiobserverplugin/source
+source        tzswiobserverplugin.cpp
+
+start resource	1028649C.rss
+target			tzswiobserverplugin.rsc
+end
+
+library	euser.lib efsrv.lib estor.lib
+library	swiobserverplugin.lib
+library swiobservedinfo.lib
+library tzclient.lib
+
+SMPSAFE

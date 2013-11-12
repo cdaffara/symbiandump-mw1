@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="f6d94742009b5c62b40550fd0fc105e9" dataversion="1.0">
+<name>ximp_search_protocol_plugin_host_api</name>
+<description>Interface for managing cached search information. Interface is used by protocol adaptations to manage search related information, this interface is implemented by Search plugin Protocol adaptation.</description>
+<type>c++</type>
+<subsystem>searchprocessor</subsystem>
+<libs><lib name="searchprocessor.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

@@ -1,0 +1,7 @@
+EXPORTS
+	?NewL@CCdcCommsDatCreator@@SAPAV1@XZ @ 1 NONAME ; class CCdcCommsDatCreator * CCdcCommsDatCreator::NewL(void)
+	?CreateCommsDatL@CCdcCommsDatCreator@@QAEXABV?$TBuf@$0BAA@@@@Z @ 2 NONAME ; void CCdcCommsDatCreator::CreateCommsDatL(class TBuf<256> const &)
+	?DumpCommsDatL@CCdcCommsDatCreator@@QAEXABV?$TBuf@$0BAA@@@@Z @ 3 NONAME ; void CCdcCommsDatCreator::DumpCommsDatL(class TBuf<256> const &)
+	?NewLC@CCdcCommsDatCreator@@SAPAV1@XZ @ 4 NONAME ; class CCdcCommsDatCreator * CCdcCommsDatCreator::NewLC(void)
+	?CreateTablesL@CCdcCommsDatCreator@@QAEXXZ @ 5 NONAME ; void CCdcCommsDatCreator::CreateTablesL(void)
+

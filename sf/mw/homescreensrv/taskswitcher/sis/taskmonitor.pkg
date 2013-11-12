@@ -1,0 +1,42 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"taskmonitor"},(0x200267B0),1,0,0,TYPE=SA, RU
+
+;Localized Vendor Name
+%{"Nokia"}
+
+;Unique Vendor name
+:"Nokia"
+
+
+"/epoc32/release/armv5/urel/hsrunningappmonitor.exe" - "!:\sys\bin\hsrunningappmonitor.exe"
+"/epoc32/release/armv5/urel/tstaskmonitorclient.dll"-"!:\sys\bin\tstaskmonitorclient.dll"
+"/epoc32/release/armv5/urel/tsscreenshotplugin.dll"-"!:\sys\bin\tsscreenshotplugin.dll"
+"/epoc32/data/z/resource/plugins/tsscreenshotplugin.rsc"-"!:\resource\plugins\tsscreenshotplugin.rsc"
+"/epoc32/release/armv5/urel/tsbackstepping.dll"-"!:\sys\bin\tsbackstepping.dll"
+
+"/epoc32/release/armv5/urel/activitytsplugin.dll" - "!:\sys\bin\activitytsplugin.dll"
+"/epoc32/data/z/resource/qt/plugins/activitytsplugin.qtplugin" - "!:\resource\qt\plugins\activitytsplugin.qtplugin"
+"/epoc32/data/z/resource/taskswitcher/activitytsplugin.xml" - "!:\resource\taskswitcher\activitytsplugin.xml"
+
+"/epoc32/data/z/resource/qt/translations/taskswitcher.qm"-"!:\resource\qt\translations\taskswitcher.qm"
+"/epoc32/release/armv5/urel/tsdevicedialogplugin.dll"-"!:\sys\bin\tsdevicedialogplugin.dll"
+"/epoc32/data/z/resource/plugins/devicedialogs/tsdevicedialogplugin.qtplugin"-"!:\resource\plugins\devicedialogs\tsdevicedialogplugin.qtplugin"

@@ -1,0 +1,41 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+;Languages
+&EN
+
+
+;Localised Vendor name
+%{"timezonetests.pkg EN"}
+
+; Vendor name
+: "timezonetests"
+
+"\epoc32\data\c\dstscripts\LocationTest.script"-"c:\Dstscripts\LocationTest.script"
+"\epoc32\data\c\dstscripts\ConversionTest.script"-"c:\Dstscripts\ConversionTest.script"
+"\epoc32\data\c\dstscripts\VCalTest.script"-"c:\Dstscripts\VCalTest.script"
+"\epoc32\data\c\dstscripts\PerformanceTest.script"-"c:\Dstscripts\PerformanceTest.script"
+"\epoc32\data\c\dstscripts\autoupdatetest.script"-"c:\Dstscripts\autoupdatetest.script"
+"\epoc32\data\c\dstscripts\utcoffsettest.script"-"c:\Dstscripts\utcoffsettest.script"
+"\epoc32\data\c\dstscripts\autoupdatenotificationtest.script"-"c:\Dstscripts\autoupdatenotificationtest.script"
+"\epoc32\data\c\dstscripts\utcalarmtest.script"-"c:\Dstscripts\utcalarmtest.script"
+"\epoc32\data\c\dstscripts\isdaylightsavingontest.script"-"c:\Dstscripts\isdaylightsavingontest.script"
+"\epoc32\data\c\dstscripts\ServerMsgSender.script"-"c:\Dstscripts\ServerMsgSender.script"
+"\epoc32\data\c\dstscripts\BackupRestore.script"-"c:\Dstscripts\BackupRestore.script"
+"\epoc32\data\c\dstscripts\TimeZoneOffsetCheck.script"-"c:\Dstscripts\TimeZoneOffsetCheck.script"
+"\epoc32\data\c\Dstscripts\unittest.script"-"c:\Dstscripts\unittest.script"
+"\epoc32\data\c\dstscripts\NextDSTChange.script"-"c:\Dstscripts\NextDSTChange.script"
+"\epoc32\data\c\dstscripts\UnknownZoneTime.script"-"c:\Dstscripts\UnknownZoneTime.script"

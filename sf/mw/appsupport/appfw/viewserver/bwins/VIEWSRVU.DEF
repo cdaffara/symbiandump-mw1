@@ -1,0 +1,6 @@
+EXPORTS
+	??1CVwsServer@@UAE@XZ @ 1 NONAME ; public: virtual __thiscall CVwsServer::~CVwsServer(void)
+	?NewL@CVwsServer@@SAPAV1@AAVMVwsAppStarter@@@Z @ 2 NONAME ; public: static class CVwsServer * __cdecl CVwsServer::NewL(class MVwsAppStarter &)
+	?KVwsBoostAppPriorityBeforePanic@@3HB @ 3 NONAME ; int const KVwsBoostAppPriorityBeforePanic
+	?KTimeoutValueForPreemptedProcess@@3HB @ 4 NONAME ; int const KTimeoutValueForPreemptedProcess
+

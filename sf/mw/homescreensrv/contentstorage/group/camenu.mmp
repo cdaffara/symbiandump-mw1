@@ -1,0 +1,77 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*  Version     : %version: 19.1.13 % << Don't touch! Updated by Synergy at check-out.
+*
+*/
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+#include <data_caging_paths.hrh>
+#include "../inc/cauid.hrh"
+
+TARGET          camenu.dll
+TARGETTYPE      dll
+UID             0x1000008D CA_DLL_UID3
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+
+// Server code
+SOURCEPATH      ../srvsrc
+SOURCE          casrvsession.cpp
+SOURCE          casrv.cpp
+SOURCE          casrvmmchistory.cpp
+SOURCE          cainstallnotifier.cpp
+SOURCE          cammcwatcher.cpp
+SOURCE          casrvengutils.cpp
+SOURCE	        casrvnotifier.cpp
+SOURCE          castorageproxy.cpp
+SOURCE          cabackupnotifier.cpp
+
+
+USERINCLUDE     ../srvinc
+USERINCLUDE     ../inc
+USERINCLUDE     ../cautils/inc
+USERINCLUDE     ../castorage/inc
+USERINCLUDE     ../casrv/casrvmgr/inc
+
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY         apparc.lib
+LIBRARY         apgrfx.lib
+LIBRARY         cautils.lib
+LIBRARY         castorage.lib
+LIBRARY         sysutil.lib
+LIBRARY         platformenv.lib
+
+LIBRARY         ws32.lib
+LIBRARY         bafl.lib
+LIBRARY         casrvmanager.lib
+
+LIBRARY         scrclient.lib
+LIBRARY         sifnotification.lib
+
+// HB LIBRARIES
+SYSTEMINCLUDE		/epoc32/include/mw/hb/hbcore
+LIBRARY		HbCore.lib
+
+
+
+
+SMPSAFE

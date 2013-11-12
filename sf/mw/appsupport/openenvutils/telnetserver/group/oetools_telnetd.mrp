@@ -1,0 +1,10 @@
+component oetools_telnetd
+source \sf\mw\appsupport\openenvutils\telnetserver
+
+binary \sf\mw\appsupport\openenvutils\telnetserver\group all
+exports \sf\mw\appsupport\openenvutils\telnetserver\group
+
+notes_source \component_defs\release.src
+
+ipr T
+

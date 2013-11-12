@@ -1,0 +1,11 @@
+EXPORTS
+	_ZN28CCFContextSourceSettingArray4NewLEv @ 1 NONAME
+	_ZN28CCFContextSourceSettingArray5NewLCEv @ 2 NONAME
+	_ZN31CCFContextSourceSettingsManager4NewLER3RFs @ 3 NONAME
+	_ZN31CCFContextSourceSettingsManager5NewLCER3RFs @ 4 NONAME
+	_ZN35CCFContextSourceSettingsManagerImpl4NewLER3RFs @ 5 NONAME
+	_ZN35CCFContextSourceSettingsManagerImpl5NewLCER3RFs @ 6 NONAME
+	_ZN35CCFContextSourceSettingsManagerImplD0Ev @ 7 NONAME
+	_ZN35CCFContextSourceSettingsManagerImplD1Ev @ 8 NONAME
+	_ZN35CCFContextSourceSettingsManagerImplD2Ev @ 9 NONAME
+

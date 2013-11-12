@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<confml:configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.s60.com/xml/confml/2" xmlns:confml="http://www.s60.com/xml/confml/2" xsi:schemaLocation="http://www.s60.com/xml/confml/2 http://www.s60.com/xml/confml/1#//confml2" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="Content storage database settings">
+    <confml:data>
+        <confml:CaStorageDbSetting>
+     
+            <Collections template="true">
+                <LocalizeNames>false</LocalizeNames>
+                <TranslationFile>contentstorage</TranslationFile>
+                <Icon><localPath>dummy</localPath></Icon>
+            </Collections>
+
+            <OperatorCollections template="true">
+                <Icon><localPath>dummy</localPath></Icon>
+            </OperatorCollections>
+            
+            <URLs template="true">
+                <URLIcon><localPath>dummy</localPath></URLIcon>
+            </URLs>
+            
+            <OperatorURLs template="true">
+                 <URLIcon><localPath>dummy</localPath></URLIcon>
+            </OperatorURLs>
+            
+            <Collections extensionPolicy="append"><LocalizeNames>true</LocalizeNames><TranslationFile>contentstorage</TranslationFile><Name>txt_applib_dblist_essentials</Name>
+                <ShortName>txt_applib_dblist_essentials</ShortName><TitleName>txt_applib_subtitle_essentials</TitleName><GroupName>Favorites</GroupName><Locked>false</Locked>
+                <Icon><localPath>dummy</localPath></Icon><IconSkinId>qtg_large_applications_essential</IconSkinId>
+            </Collections>
+            
+            <confml:Items extensionPolicy="append"><confml:Type>1</confml:Type><confml:Application>10005901</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>Calendar</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>101F857A</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>Camera</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>20022EF9</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>Contacts</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>20025FD9</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>Control panel</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>200255BA</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>Email</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>2002FF4E</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>FM Radio</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>20001F63</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>Maps</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>2001FE79</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>Messaging</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>10207C62</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>Music</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>20000A14</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>Photos</Comments></confml:Items>                
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>200211FE</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>Videos</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>10008D39</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>NokiaBrowser</Comments></confml:Items>
+            <confml:Items><confml:Type>1</confml:Type><confml:Application>2002D07F</confml:Application><ColName map="CaStorageDbSetting/Collections[@key='txt_applib_dblist_essentials']"></ColName>
+                <Comments>OVI</Comments></confml:Items>
+        </confml:CaStorageDbSetting>
+    </confml:data>
+
+</confml:configuration>

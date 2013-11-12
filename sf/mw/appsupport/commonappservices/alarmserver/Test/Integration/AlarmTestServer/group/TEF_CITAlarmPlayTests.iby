@@ -1,0 +1,79 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+// These hardware tests must be run as manual tests as a textshell only ROM is required.
+// This file must be manually copied to epoc32\rom\include
+// The build rom command needed is given below:-
+//
+// buildrom.cmd  -D_SERIAL_DOWNLOAD -DTEXT_ONLY_ROM -DRVCT -D_EABI=ARMV5 PlatSec PlatSecDiagnostics -D_DEBUG h2 textshell.oby -orombld.img
+// 
+// The textshell.oby is stored in the alarmserver/Test/Integration/AlarmTestServer/group/ directory and must
+// be manually copied to the epoc32\rom\include directory as it is not exported.
+// The -DTEXT_ONLY_ROM command line parameter is used to indicate a textshell only ROM is being built
+// 
+// The multiple alarms tests can be run by calling the multialarms.bat batch file which invokes the citmultiplealarmtests.script
+// In order to build the alarm play interval tests one of the macros defined below must be copied to the .hrh file prior to running
+// the build rom command. After running the buildrom command the tests need to be run as follows
+// testexecute z:\test\pim\alarmserver\scripts\xyz.script.
+// This process must be repeated for different resource file combinations by choosing the correct macro for inclusion in the .hrh.
+//
+//
+#ifndef __TEF_CITALARMPLAYTESTS_IBY__
+#define __TEF_CITALARMPLAYTESTS_IBY__
+
+#include <AlarmServer.iby>
+#include <testexecute.iby>
+#include <RFileLogger.iby>
+
+
+file=ABI_DIR\DEBUG_DIR\T_PREQ1118_TestSuite.exe			        SYSTEM_BINDIR\T_PREQ1118_TestSuite.exe
+data=DATAZ_\test\pim\alarmserver\data\citalarmplaytestdata.ini 		\test\pim\alarmserver\data\citalarmplaytestdata.ini
+data=DATAZ_\test\pim\alarmserver\data\citmultiplealarmtestdata.ini 	\test\pim\alarmserver\data\citmultiplealarmtestdata.ini
+data=DATAZ_\test\pim\alarmserver\scripts\citmultiplealarmtests.script 	\test\pim\alarmserver\scripts\citmultiplealarmtests.script
+data=DATAZ_\test\pim\alarmserver\scripts\multialarms.bat 	        \multialarms.bat
+
+file=ABI_DIR\DEBUG_DIR\ConsoleAlarmAlertServer.exe	                System\Programs\ConsoleAlarmAlertServer.exe
+file=ABI_DIR\DEBUG_DIR\ANTestClient.dll				        SYSTEM_BINDIR\ANTestClient.dll
+
+#if defined (DEFAULT)
+
+data=DATAZ_\test\pim\alarmserver\scripts\defaultinterval.script 	\test\pim\alarmserver\scripts\defaultinterval.script
+data=DATAZ_\test\pim\alarmserver\config\defaultinterval.rsc		\Private\101F5027\AlarmServer.rsc
+
+#else
+#if defined (REPEATLAST)
+
+data=DATAZ_\test\pim\alarmserver\scripts\repeatlast.script 		\test\pim\alarmserver\scripts\repeatlast.script
+data=DATAZ_\test\pim\alarmserver\config\repeatlast.rsc		        \Private\101F5027\AlarmServer.rsc
+              
+#else
+#if defined (STOP)
+
+data=DATAZ_\test\pim\alarmserver\scripts\stopinterval.script 		\test\pim\alarmserver\scripts\stopinterval.script
+data=DATAZ_\test\pim\alarmserver\config\stopinterval.rsc		\Private\101F5027\AlarmServer.rsc
+        
+#else
+#if defined (DISABLED)
+
+data=DATAZ_\test\pim\alarmserver\scripts\disableinterval.script	 	\test\pim\alarmserver\scripts\disableinterval.script
+data=DATAZ_\test\pim\alarmserver\config\disableinterval.rsc	        \Private\101F5027\AlarmServer.rsc
+					
+#endif // DISABLED
+#endif // STOP
+#endif // REPEATLAST
+#endif // DEFAULT
+
+
+#endif // __TEF_CITALARMPLAYTESTS_IBY__

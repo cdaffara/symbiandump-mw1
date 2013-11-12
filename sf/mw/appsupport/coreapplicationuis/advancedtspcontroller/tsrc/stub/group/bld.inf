@@ -1,0 +1,29 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_TESTEXPORTS
+remconservercaps.mmh /epoc32/include/remcon/remconservercaps.mmh
+../data/keyevent.rul /epoc32/data/z/private/10282bc4/rules/keyevent.rul
+../data/keyevent.rul /epoc32/release/winscw/udeb/z/private/10282BC4/Rules/keyevent.rul
+../data/keyincall.rul /epoc32/data/z/private/10282bc4/rules/keyincall.rul
+../data/keyincall.rul /epoc32/release/winscw/udeb/z/private/10282BC4/Rules/keyincall.rul
+
+PRJ_TESTMMPFILES
+../../../group/RemConTspController.mmp

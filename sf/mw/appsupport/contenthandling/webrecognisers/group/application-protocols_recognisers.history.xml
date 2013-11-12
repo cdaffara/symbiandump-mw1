@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="Web Recognisers">
+  <purpose>
+    Web URL and bookmark recognizers, plugins to the MIME recognizer Framework. Each recognizer is a Symbian OS Application Architecture compliant recognition model.
+  </purpose>
+  
+  <defect number="PDEF127939" title="TRUE - Active notes are received as zip when sent using bluetooth and it is not" revision="003">
+    Implementation done as per  BR2505.2, In case of files with out extension and having  more than 3 html tags confidence level will be returned as EProbable.
+  </defect>
+
+  <preq number="1182" title="GNU Make-based build system" revision="002">
+    Phase-I of Preq-1182 GNU Make-based build system, Filename Policy check updations
+  </preq>
+
+  <minorchange revision="001">
+    Modified bad distribution.policy files
+  </minorchange>
+</relnotes>

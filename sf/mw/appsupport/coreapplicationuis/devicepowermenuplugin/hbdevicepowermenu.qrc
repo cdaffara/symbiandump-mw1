@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/xml" >
+        <file alias="powermenu.docml" >docml/powermenu.docml</file>
+    </qresource>
+    <qresource prefix="/images" >
+        <file alias="decrement.svg" >images/decrement.svg</file>
+        <file alias="increment.svg" >images/increment.svg</file>
+        <file alias="muted.svg" >images/muted.svg</file>
+        <file alias="unmuted.svg" >images/unmuted.svg</file>
+    </qresource>
+</RCC>

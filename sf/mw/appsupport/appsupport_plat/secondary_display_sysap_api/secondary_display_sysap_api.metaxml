@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="6e274d2faf13a636e5a457e10deb5767" dataversion="2.0">
+  <name>Secondary Display SysAp API</name>
+  <description>An interface for communicating with Secondary Display applications.</description>
+  <type>c++</type>
+  <collection>coreapplicationuis</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

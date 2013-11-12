@@ -1,0 +1,50 @@
+;Languages
+&EN
+
+#{"t_oomtestapps"},(0x101FB3E7),1,0,0,TYPE=SA
+
+;Localised Vendor name
+%{"t_oomtestapps EN"}
+
+; Vendor name
+: "t_oomtestapps"
+
+"\epoc32\release\armv5\urel\t_oomtestapp.exe"-"!:\sys\bin\t_oomtestapp.exe"
+"\epoc32\data\z\resource\apps\t_oomtestapp.rsc"-"!:\resource\apps\t_oomtestapp.rsc"
+"\epoc32\data\z\private\10003a3f\apps\t_oomtestapp_reg.rsc"-"!:\private\10003a3f\import\apps\t_oomtestapp_reg.rsc"
+
+"\epoc32\release\armv5\urel\t_oomtestapp2.exe"-"!:\sys\bin\t_oomtestapp2.exe"
+"\epoc32\data\z\resource\apps\t_oomtestapp2.rsc"-"!:\resource\apps\t_oomtestapp2.rsc"
+"\epoc32\data\z\private\10003a3f\apps\t_oomtestapp2_reg.rsc"-"!:\private\10003a3f\import\apps\t_oomtestapp2_reg.rsc"
+
+"\epoc32\release\armv5\urel\t_oomtestapp3.exe"-"!:\sys\bin\t_oomtestapp3.exe"
+"\epoc32\data\z\resource\apps\t_oomtestapp3.rsc"-"!:\resource\apps\t_oomtestapp3.rsc"
+"\epoc32\data\z\private\10003a3f\apps\t_oomtestapp3_reg.rsc"-"!:\private\10003a3f\import\apps\t_oomtestapp3_reg.rsc"
+
+"\epoc32\release\armv5\urel\t_oomtestapp4.exe"-"!:\sys\bin\t_oomtestapp4.exe"
+"\epoc32\data\z\resource\apps\t_oomtestapp4.rsc"-"!:\resource\apps\t_oomtestapp4.rsc"
+"\epoc32\data\z\private\10003a3f\apps\t_oomtestapp4_reg.rsc"-"!:\private\10003a3f\import\apps\t_oomtestapp4_reg.rsc"
+
+"\epoc32\release\armv5\urel\t_oomtestapp5.exe"-"!:\sys\bin\t_oomtestapp5.exe"
+"\epoc32\data\z\resource\apps\t_oomtestapp5.rsc"-"!:\resource\apps\t_oomtestapp5.rsc"
+"\epoc32\data\z\private\10003a3f\apps\t_oomtestapp5_reg.rsc"-"!:\private\10003a3f\import\apps\t_oomtestapp5_reg.rsc"
+
+"\epoc32\release\armv5\urel\t_oomtestapp6.exe"-"!:\sys\bin\t_oomtestapp6.exe"
+"\epoc32\data\z\resource\apps\t_oomtestapp6.rsc"-"!:\resource\apps\t_oomtestapp6.rsc"
+"\epoc32\data\z\private\10003a3f\apps\t_oomtestapp6_reg.rsc"-"!:\private\10003a3f\import\apps\t_oomtestapp6_reg.rsc"
+
+"\epoc32\release\armv5\urel\t_oomtestapp7.exe"-"!:\sys\bin\t_oomtestapp7.exe"
+"\epoc32\data\z\resource\apps\t_oomtestapp7.rsc"-"!:\resource\apps\t_oomtestapp7.rsc"
+"\epoc32\data\z\private\10003a3f\apps\t_oomtestapp7_reg.rsc"-"!:\private\10003a3f\import\apps\t_oomtestapp7_reg.rsc"
+
+"\epoc32\release\armv5\urel\t_oomtestapp8.exe"-"!:\sys\bin\t_oomtestapp8.exe"
+"\epoc32\data\z\resource\apps\t_oomtestapp8.rsc"-"!:\resource\apps\t_oomtestapp8.rsc"
+"\epoc32\data\z\private\10003a3f\apps\t_oomtestapp8_reg.rsc"-"!:\private\10003a3f\import\apps\t_oomtestapp8_reg.rsc"
+
+"\epoc32\release\armv5\urel\t_oomtestapp9.exe"-"!:\sys\bin\t_oomtestapp9.exe"
+"\epoc32\data\z\resource\apps\t_oomtestapp9.rsc"-"!:\resource\apps\t_oomtestapp9.rsc"
+"\epoc32\data\z\private\10003a3f\apps\t_oomtestapp9_reg.rsc"-"!:\private\10003a3f\import\apps\t_oomtestapp9_reg.rsc"
+
+"\epoc32\release\armv5\urel\t_oomtestapp10.exe"-"!:\sys\bin\t_oomtestapp10.exe"
+"\epoc32\data\z\resource\apps\t_oomtestapp10.rsc"-"!:\resource\apps\t_oomtestapp10.rsc"
+"\epoc32\data\z\private\10003a3f\apps\t_oomtestapp10_reg.rsc"-"!:\private\10003a3f\import\apps\t_oomtestapp10_reg.rsc"

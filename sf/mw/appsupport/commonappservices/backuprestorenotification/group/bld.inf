@@ -1,0 +1,32 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Backup and Restore Notification "Wrapper" for Core Apps.
+// 
+//
+
+PRJ_PLATFORMS
+DEFAULT 
+
+PRJ_EXPORTS
+BackupRestoreNotification.iby	/epoc32/rom/include/backuprestorenotification.iby   
+
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+../inc/MBackupRestoreNotificationObserver.h /epoc32/include/app-services/private/mbackuprestorenotificationobserver.h
+#endif
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+../inc/CBackupRestoreNotification.h /epoc32/include/app-services/private/cbackuprestorenotification.h
+#endif
+
+PRJ_MMPFILES
+BackupRestoreNotification.mmp

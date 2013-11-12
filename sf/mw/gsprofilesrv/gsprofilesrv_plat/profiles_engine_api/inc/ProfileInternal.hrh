@@ -1,0 +1,98 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Profiles Engine enumeration TProfilePttStatus
+*
+*/
+
+
+#ifndef PROFILEINTERNAL_HRH
+#define PROFILEINTERNAL_HRH
+
+// DATA TYPES
+enum TProfilePttStatus
+    {
+    EProfilePttActive = 0,
+    EProfilePttSilent = 1,
+    EProfilePttDoNotDisturb = 2
+    };
+
+enum TProfileTactileFeedback
+    {
+    EProfileTactileFeedbackOff		= 0,
+    EProfileTactileFeedbackLevel1	= 1,
+    EProfileTactileFeedbackLevel2	= 2,
+    EProfileTactileFeedbackLevel3	= 3,
+    //Since 10.1
+    EProfileTactileFeedbackLevel4   = 4,
+    EProfileTactileFeedbackLevel5   = 5
+    };
+
+enum TProfileAudioFeedback
+    {
+    EProfileAudioFeedbackOff		= 0,
+    EProfileAudioFeedbackLevel1		= 1,
+    EProfileAudioFeedbackLevel2		= 2,
+    EProfileAudioFeedbackLevel3		= 3,
+    //Since 10.1
+    EProfileAudioFeedbackLevel4     = 4,
+    EProfileAudioFeedbackLevel5     = 5
+    };
+
+enum TProfile3DToneEffect
+    {
+    EProfile3DEffectOff                 = 0,
+    EProfile3DEffectCircle              = 1,
+    EProfile3DEffectFlyby               = 2,
+    EProfile3DEffectZigZag              = 3,
+    EProfile3DEffectRandomWalk          = 4,
+    EProfile3DEffectChaos               = 5,
+    EProfile3DEffectStereoWidening      = 6
+    };
+
+// The magic numbers come from CEnvironmentalReverbUtility, although they are
+// not documented anywhere:
+enum TProfile3DToneEcho
+    {
+    EProfile3DEchoOff           = 0,
+    EProfile3DEchoLivingRoom    = 14,
+    EProfile3DEchoCave          = 5,
+    EProfile3DEchoStoneCorridor = 26,
+    EProfile3DEchoForest        = 8,
+    EProfile3DEchoSewerPipe     = 24,
+    EProfile3DEchoUnderwater    = 28
+    };
+
+// Since 10.1
+enum TProfileAlertVibra
+    {
+    EProfileNoAlertVibra       = 0x00000000,
+    EProfileRingAlertVibra     = 0x00000001,
+    EProfileMessageAlertVibra  = 0x00000002,
+    EProfileEmailAlertVibra    = 0x00000004,
+    EProfileReminderAlarmVibra = 0x00000008,
+    EProfileClockAlarmVibra    = 0x00000010,
+    EProfileInformationVibra   = 0x00000020
+    };
+
+// Deprecated Since 10.1
+enum TProfileMasterVolume
+    {
+    EProfileMasterVolumeSoft = 1,
+    EProfileMasterVolumeMed  = 5,
+    EProfileMasterVolumeLoud = 10	
+    };
+
+#endif // PROFILEINTERNAL_HRH
+
+// End of File

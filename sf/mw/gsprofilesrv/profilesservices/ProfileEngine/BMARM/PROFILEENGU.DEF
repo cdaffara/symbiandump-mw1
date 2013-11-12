@@ -1,0 +1,5 @@
+EXPORTS
+	CreateProfileEngineExtendedL__Fv @ 1 NONAME R3UNUSED ; CreateProfileEngineExtendedL(void)
+	CreateProfileEngineL__Fv @ 2 NONAME R3UNUSED ; CreateProfileEngineL(void)
+	NewL__27CProfileChangeNotifyHandlerP22MProfileChangeObserver @ 3 NONAME R3UNUSED ; CProfileChangeNotifyHandler::NewL(MProfileChangeObserver *)
+

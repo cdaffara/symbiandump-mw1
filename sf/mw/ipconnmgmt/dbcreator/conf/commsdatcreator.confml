@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.s60.com/xml/confml/2" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="Default CommsDat settings" version="1">
+  <feature ref="Global" name="Global Settings">
+    <setting ref="DefaultDnIcon" name="Default icon for DNs" type="selection">
+      <desc>
+      Default icon for destination networks.
+      </desc>
+      <option name="internet" value="0"/>
+      <option name="wap" value="1"/>
+      <option name="mms" value="2"/>
+      <option name="intranet" value="3"/>
+      <option name="operator" value="4"/>
+      <option name="icon1" value="5"/>
+      <option name="icon2" value="6"/>
+      <option name="icon3" value="7"/>
+      <option name="icon4" value="8"/>
+      <option name="icon5" value="9"/>
+      <option name="icon6" value="10"/>
+      <option name="default" value="11"/>
+    </setting>
+    <setting ref="PriorityLan" name="LAN bearer default priority" type="string">
+      <desc>
+    	Default priority for LAN bearer type.
+    	</desc>
+    </setting>
+    <setting ref="PriorityWlan" name="WLAN bearer default priority" type="string">
+      <desc>
+    	Default priority for WLAN bearer type.
+    	</desc>
+    </setting>
+    <setting ref="PriorityPan" name="PAN bearer default priority" type="string">
+      <desc>
+    	Default priority for PAN bearer type.
+    	</desc>
+    </setting>
+    <setting ref="PriorityGprsOut" name="Outgoing GPRS bearer default priority" type="string">
+      <desc>
+    	Default priority for outgoing GPRS bearer type.
+    	</desc>
+    </setting>
+    <setting ref="PriorityGprsIn" name="Incoming GPRS bearer default priority" type="string">
+      <desc>
+    	Default priority for incoming GPRS bearer type.
+    	</desc>
+    </setting>
+    <setting ref="PriorityDialOut" name="DialOut ISP bearer default priority" type="string">
+      <desc>
+    	Default priority for outgoing dial bearer type.
+    	</desc>
+    </setting>
+    <setting ref="PriorityDialIn" name="DialIn ISP bearer default priority" type="string">
+      <desc>
+    	Default priority for incoming dial bearer type.
+    	</desc>
+    </setting>
+    <setting ref="PriorityVpn" name="VPN bearer default priority" type="string">
+      <desc>
+    	Default priority for VPN bearer type.
+    	</desc>
+    </setting>
+    <setting ref="PriorityMip" name="MIP bearer default priority" type="string">
+      <desc>
+    	Default priority for MIP bearer type.
+    	</desc>
+    </setting>
+    <setting ref="UIPriorityLan" name="LAN bearer default UI priority" type="string">
+      <desc>
+    	Default UI priority of LAN connection.
+    	</desc>
+    </setting>
+    <setting ref="UIPriorityWlan" name="WLAN bearer default UI priority" type="string">
+      <desc>
+    	Default UI priority for WLAN bearer type.
+    	</desc>
+    </setting>
+    <setting ref="UIPriorityPan" name="PAN bearer default UI priority" type="string">
+      <desc>
+    	Default UI priority for PAN bearer type.
+    	</desc>
+    </setting>
+    <setting ref="UIPriorityGprsOut" name="Outgoing GPRS bearer default UI priority" type="string">
+      <desc>
+    	Default UI priority for outgoing GPRS bearer type.
+    	</desc>
+    </setting>
+    <setting ref="UIPriorityGprsIn" name="Incoming GPRS bearer default UI priority" type="string">
+      <desc>
+    	Default UI priority for incoming GPRS bearer type.
+    	</desc>
+    </setting>
+    <setting ref="UIPriorityDialOut" name="DialOut ISP bearer default UI priority" type="string">
+      <desc>
+    	Default UI priority for outgoing dial bearer type.
+    	</desc>
+    </setting>
+    <setting ref="UIPriorityDialIn" name="DialIn ISP bearer default UI priority" type="string">
+      <desc>
+    	Default UI priority for incoming dial bearer type.
+    	</desc>
+    </setting>
+    <setting ref="UIPriorityVpn" name="VPN bearer default UI priority" type="string">
+      <desc>
+    	Default UI priority for VPN bearer type.
+    	</desc>
+    </setting>
+    <setting ref="UIPriorityMip" name="MIP bearer default UI priority" type="string">
+      <desc>
+    	Default UI priority for MIP bearer type.
+    	</desc>
+    </setting>
+    <setting ref="WlanUseDefSettings" name="WLAN use default settings" type="selection">
+      <desc>Defines whether default values are being used for the advanced WLAN settings (recommended). </desc>
+      <option name="No" value="0"/>
+      <option name="Yes" value="1"/>
+    </setting>
+    <setting ref="WlanLongRetry" name="WLAN long retry limit" type="string">
+      <desc>Defines how many times packets bigger than RTS Threshold are been resent.</desc>
+    </setting>
+    <setting ref="WlanShortRetry" name="WLAN short retry limit" type="string">
+      <desc>Defines how many times packets smaller than RTS Threshold are been resent.</desc>
+    </setting>
+    <setting ref="WlanRTS" name="WLAN RTS threshold" type="string">
+      <desc>Minimum size of a packet for which CTS/RTS handshake has been used.</desc>
+    </setting>
+    <setting ref="WlanTxPowerLevel" name="WLAN TX power level" type="selection">
+      <desc>Transmission power level in use. In mWs. 4, 10 or 100 mW.</desc>
+      <option name="100 mW" value="100"/>
+      <option name="10 mW" value="10"/>
+      <option name="4 mW" value="4"/>
+    </setting>
+    <setting ref="WlanRadioMeasurements" name="WLAN allow radio measurements" type="selection">
+      <desc>Defines whether the CCX radio measurements are allowed.</desc>
+      <option name="No" value="0"/>
+      <option name="Yes" value="1"/>
+    </setting>
+    <setting ref="WlanPowerMode" name="WLAN power save" type="selection">
+      <desc>Defines whether power saving methods are active. Disabling WLAN
+      power save might increase interoperability but will dramatically shorten battery life.</desc>
+      <option name="On" value="1"/>
+      <option name="Off" value="0"/>
+    </setting>
+  </feature>
+  <feature ref="LAN_APs" name="LAN Access Points" relevant="">
+    <desc>LAN connection methods</desc>
+    <setting ref="LAN_AP" relevant="" name="LAN" constraint="" type="sequence" minOccurs="0" maxOccurs="99">
+      <desc>LAN connection method</desc>
+      <setting ref="ConnectionName" name="Connection Name" type="string">
+        <desc>The CM name that is visible to the user.</desc>
+      </setting>
+      <setting ref="ConnectionId" name="Connection ID">
+        <desc>The CommsDat record id can be manually specified here. If left empty it is allocated automatically.
+      	Note: It needs to be verified carefully that the IDs are globally unique if allocated manually! 
+      	So a good idea is to either specify all the IDs manually or none at all.</desc>
+      </setting>
+      <setting ref="Protected" name="Protected" type="selection">
+        <desc>Defines whether connection method is protected (= cannot be edited by the user).</desc>
+        <option name="No" value="No"/>
+        <option name="Yes" value="Yes"/>
+      </setting>
+      <setting ref="Hidden" name="Hidden" type="selection">
+        <desc>Defines whether connection method is hidden.</desc>
+        <option name="No" value="No"/>
+        <option name="Yes" value="Yes"/>
+      </setting>
+      <setting ref="HiddenAgent" name="Hidden Agent" type="selection">
+        <desc>Connection method is hidden in CConnDlg or not (used to divide MMS and non-MMS CMs).</desc>
+        <option name="No" value="No"/>
+        <option name="Yes" value="Yes"/>
+      </setting>
+      <setting ref="Highlighted" name="Highlighted" type="selection">
+        <desc>Connection method is highlighted or not.</desc>
+        <option name="No" value="No"/>
+        <option name="Yes" value="Yes"/>
+      </setting>
+      <setting ref="Seamlessness" name="Seamlessness" type="selection">
+        <desc>Defines whether an IAP can be roamed to.</desc>
+        <option name="Confirm First" value="ConfirmFirst"/>
+        <option name="Show Progress" value="ShowProgress"/>
+      </setting>
+      <setting ref="WAPGatewayIP" name="WAP Gateway IP" type="string">
+        <desc>WAP gateway IP address.</desc>
+      </setting>
+      <setting ref="StartingPage" name="Starting Page" type="string">
+        <desc>Start page of the connection method.</desc>
+      </setting>
+      <setting ref="WTLS_Security" name="WTLS Security" type="selection">
+        <desc>Attempts a secure WTLS connection to the gateway.</desc>
+        <option name="On" value="On"/>
+        <option name="Off" value="Off"/>
+      </setting>
+      <setting ref="WAP_ConnectionType" name="Connection type" type="selection">
+        <desc>Indicates whether a connection-oriented or connectionless API should be used.</desc>
+        <option name="Continuous" value="Continuous"/>
+        <option name="Temporary" value="Temporary"/>
+      </setting>
+      <setting ref="ProxyServerAddress" name="Proxy Server Address" type="string">
+        <desc>Address of the HTTP/HTTPS proxy server.</desc>
+      </setting>
+      <setting ref="ProxyPortNumber" name="Proxy Port Number" type="string">
+        <desc>Port number of the HTTP/HTTPS proxy server.</desc>
+      </setting>
+      <setting ref="ProxyProtocolName" name="Proxy protocol Name" type="string">
+        <desc>Name of the protocol for which this proxy can be used. 
+        Typically http or https.</desc>
+      </setting>
+      <setting ref="LanIfNetworks" name="LAN If Networks" type="string">
+        <desc>LAN interface networks.</desc>
+      </setting>
+      <setting ref="LanIpNetmask" name="LAN IP Netmask" type="string">
+        <desc>LAN interface netmask.</desc>
+      </setting>
+      <setting ref="LanIpGateway" name="LAN IP Gateway" type="string">
+        <desc>LAN IP Gateway.</desc>
+      </setting>
+      <setting ref="PhoneIP" name="IPv4 Phone IP address" type="string">
+        <desc>IP address of the interface. 
+        Typically allocated automatically so this can be left empty.</desc>
+      </setting>
+      <setting ref="PrimaryNameServer" name="IPv4 Primary Name Server" type="string">
+        <desc>Address of the primary DNS server that resolves host names. 
+        Typically allocated automatically so this can be left empty.</desc>
+      </setting>
+      <setting ref="SecondaryNameServer" name="IPv4 Secondary Name Server" type="string">
+        <desc>Address of the secondary DNS server to connect if the primary DNS server is not available.
+        Typically allocated automatically so this can be left empty.</desc>
+      </setting>
+      <setting ref="PrimaryIP6NameServer" name="IPv6 Primary Name Server" type="string">
+        <desc>Address of the primary DNS server that resolves host names.
+        Typically allocated automatically so this can be left empty.</desc>
+      </setting>
+      <setting ref="SecondaryIP6NameServer" name="IPv6 Secondary Name Server" type="string">
+        <desc>Address of the secondary DNS server to connect if the primary DNS server is not available.
+        Typically allocated automatically so this can be left empty.</desc>
+      </setting>
+    </setting>
+  </feature>
+  <feature ref="VPN_APs" name="VPN Access Points" relevant="">
+    <desc>Virtual Private Network connection methods</desc>
+    <setting ref="VPN_AP" relevant="" name="VPN" constraint="" type="sequence" minOccurs="0" maxOccurs="99">
+      <desc>Virtual Private Network connection methods</desc>
+      <setting ref="ConnectionName" name="Connection Name" type="string">
+        <desc>The CM name that is visible to the user.</desc>
+      </setting>
+      <setting ref="ConnectionId" name="Connection ID">
+        <desc>The CommsDat record id can be manually specified here. If left empty it is allocated automatically.
+      	Note: It needs to be verified carefully that the IDs are globally unique if allocated manually! 
+      	So a good idea is to either specify all the IDs manually or none at all.</desc>
+      </setting>
+      <setting ref="Protected" name="Protected" type="selection">
+        <desc>Defines whether connection method is protected (= cannot be edited by the user).</desc>
+        <option name="No" value="No"/>
+        <option name="Yes" value="Yes"/>
+      </setting>
+      <setting ref="Hidden" name="Hidden" type="selection">
+        <desc>Defines whether connection method is hidden.</desc>
+        <option name="No" value="No"/>
+        <option name="Yes" value="Yes"/>
+      </setting>
+      <setting ref="HiddenAgent" name="Hidden Agent" type="selection">
+        <desc>Connection method is hidden in CConnDlg or not (used to divide MMS and non-MMS CMs).</desc>
+        <option name="No" value="No"/>
+        <option name="Yes" value="Yes"/>
+      </setting>
+      <setting ref="Highlighted" name="Highlighted" type="selection">
+        <desc>Connection method is highlighted or not.</desc>
+        <option name="No" value="No"/>
+        <option name="Yes" value="Yes"/>
+      </setting>
+      <setting ref="Seamlessness" name="Seamlessness" type="selection">
+        <desc>Defines whether an IAP can be roamed to.</desc>
+        <option name="Confirm First" value="ConfirmFirst"/>
+        <option name="Show Progress" value="ShowProgress"/>
+      </setting>
+      <setting ref="ProxyServerAddress" name="Proxy Server Address" type="string">
+        <desc>Address of the HTTP/HTTPS proxy server.</desc>
+      </setting>
+      <setting ref="ProxyPortNumber" name="Proxy Port Number" type="string">
+        <desc>Port number of the HTTP/HTTPS proxy server.</desc>
+      </setting>
+      <setting ref="ProxyProtocolName" name="Proxy protocol Name" type="string">
+        <desc>Name of the protocol for which this proxy can be used. 
+        Typically http or https.</desc>
+      </setting>
+      <setting ref="IAP_Name" name="Underlying IAP Name" type="string">
+        <desc>The network connection provider IAP name.</desc>
+      </setting>
+      <setting ref="ServicePolicy" name="Service Policy" type="string">
+        <desc>Service policy.</desc>
+      </setting>
+    </setting>
+  </feature>
+  <data>
+    <DNs>
+      <DN template="true">
+        <Metadata>User Defined</Metadata>
+        <Protection>0</Protection>
+        <Hidden>No</Hidden>
+        <HiddenAgent>No</HiddenAgent>
+        <Highlighted>No</Highlighted>
+        <Icon>11</Icon>
+      </DN>
+      <DN>
+        <Name>Internet</Name>
+        <DNId>1</DNId>
+        <Metadata>Internet</Metadata>
+        <Protection>2</Protection>
+        <Hidden>No</Hidden>
+        <HiddenAgent>No</HiddenAgent>
+        <Highlighted>Yes</Highlighted>
+        <Icon>0</Icon>
+      </DN>
+      <DN>
+        <Name>MMS</Name>
+        <DNId>2</DNId>
+        <Metadata>MMS</Metadata>
+        <Protection>2</Protection>
+        <Hidden>No</Hidden>
+        <HiddenAgent>Yes</HiddenAgent>
+        <Highlighted>No</Highlighted>
+        <Icon>2</Icon>
+      </DN>
+      <DN>
+        <Name>Operator</Name>
+        <DNId>3</DNId>
+        <Metadata>Operator</Metadata>
+        <Protection>2</Protection>
+        <Hidden>No</Hidden>
+        <HiddenAgent>No</HiddenAgent>
+        <Highlighted>No</Highlighted>
+        <Icon>4</Icon>
+      </DN>
+    </DNs>
+    <Global>
+      <Attachmode>whenavailable</Attachmode>
+      <DefaultDnIcon>11</DefaultDnIcon>
+      <DefaultConnectionType>Destination</DefaultConnectionType>
+      <DefaultConnectionName>Internet</DefaultConnectionName>
+      <UsageOfWlan>Known</UsageOfWlan>
+      <CellularDataUsageHome>Automatic</CellularDataUsageHome>
+      <CellularDataUsageVisitor>Confirm</CellularDataUsageVisitor>
+      <DefaultAP/>
+      <WlanUseDefSettings>1</WlanUseDefSettings>
+      <WlanBGScanInterval>-1</WlanBGScanInterval>
+      <WlanTxPowerLevel>100</WlanTxPowerLevel>
+      <WlanRadioMeasurements>1</WlanRadioMeasurements>
+      <WlanPowerMode>1</WlanPowerMode>
+      <PriorityLan>0</PriorityLan>
+      <PriorityWlan>1</PriorityWlan>
+      <PriorityPan>2</PriorityPan>
+      <PriorityGprsOut>3</PriorityGprsOut>
+      <PriorityGprsIn>4</PriorityGprsIn>
+      <PriorityDialOut>6</PriorityDialOut>
+      <PriorityDialIn>7</PriorityDialIn>
+      <PriorityVpn>256</PriorityVpn>
+      <PriorityMip>256</PriorityMip>
+      <UIPriorityLan>9</UIPriorityLan>
+      <UIPriorityWlan>0</UIPriorityWlan>
+      <UIPriorityPan>8</UIPriorityPan>
+      <UIPriorityGprsOut>1</UIPriorityGprsOut>
+      <UIPriorityGprsIn>2</UIPriorityGprsIn>
+      <UIPriorityDialOut>4</UIPriorityDialOut>
+      <UIPriorityDialIn>5</UIPriorityDialIn>
+      <UIPriorityVpn>6</UIPriorityVpn>
+      <UIPriorityMip>7</UIPriorityMip>
+      <WlanLongRetry>4</WlanLongRetry>
+      <WlanShortRetry>7</WlanShortRetry>
+      <WlanRTS>2347</WlanRTS>
+      <WlanLastSocketActivityTimeout>-1</WlanLastSocketActivityTimeout>
+      <WlanLastSessionClosedTimeout>1</WlanLastSessionClosedTimeout>
+      <WlanLastSocketClosedTimeout>-1</WlanLastSocketClosedTimeout>
+      <GprsLastSocketActivityTimeout>-1</GprsLastSocketActivityTimeout>
+      <GprsLastSessionClosedTimeout>1</GprsLastSessionClosedTimeout>
+      <GprsLastSocketClosedTimeout>-1</GprsLastSocketClosedTimeout>
+    </Global>
+    <APs>
+      <AP template="true">
+      <Protected>No</Protected>
+      <Hidden>No</Hidden>
+      <HiddenAgent>No</HiddenAgent>
+      <Highlighted>No</Highlighted>
+      <Seamlessness>ConfirmFirst</Seamlessness>
+      <NetworkType>IPv4</NetworkType>
+      <PromptPassword>No</PromptPassword>
+      <PasswordAuthenticationType>Normal</PasswordAuthenticationType>
+      <WTLS_Security>On</WTLS_Security>
+      <WAP_ConnectionType>Continuous</WAP_ConnectionType>
+      <GprsUseEdge>Yes</GprsUseEdge>
+      </AP>
+    </APs>
+    <LAN_APs>
+      <LAN_AP template="true">
+      <Protected>No</Protected>
+      <Hidden>No</Hidden>
+      <HiddenAgent>No</HiddenAgent>
+      <Highlighted>No</Highlighted>
+      <Seamlessness>ConfirmFirst</Seamlessness>
+      <WTLS_Security>On</WTLS_Security>
+      <WAP_ConnectionType>Continuous</WAP_ConnectionType>
+      </LAN_AP>
+    </LAN_APs>
+    <WLAN_APs>
+      <WLAN_AP template="true">
+      <Protected>No</Protected>
+      <Hidden>No</Hidden>
+      <HiddenAgent>No</HiddenAgent>
+      <Highlighted>No</Highlighted>
+      <Seamlessness>ShowProgress</Seamlessness>
+      <NetworkMode>Infrastructure</NetworkMode>
+      <SecurityMode>Open</SecurityMode>
+      <WLANScanSSID>No</WLANScanSSID>
+      <WEPKeyInUse>key1</WEPKeyInUse>
+      <WEPAuthType>Shared</WEPAuthType>
+      <WEPKey1Length>64</WEPKey1Length>
+      <WEPKey1Format>ASCII</WEPKey1Format>
+      <WEPKey2Length>64</WEPKey2Length>
+      <WEPKey2Format>ASCII</WEPKey2Format>
+      <WEPKey3Length>64</WEPKey3Length>
+      <WEPKey3Format>ASCII</WEPKey3Format>
+      <WEPKey4Length>64</WEPKey4Length>
+      <WEPKey4Format>ASCII</WEPKey4Format>
+      <WPAUseOfPresharedKey>No</WPAUseOfPresharedKey>
+      <WPAKeyLength>0</WPAKeyLength>
+      </WLAN_AP>
+    </WLAN_APs>
+    <VPN_APs>
+      <VPN_AP template="true">
+      <Protected>No</Protected>
+      <Hidden>No</Hidden>
+      <HiddenAgent>No</HiddenAgent>
+      <Highlighted>No</Highlighted>
+      <Seamlessness>ConfirmFirst</Seamlessness>
+      </VPN_AP>
+    </VPN_APs>
+  </data>
+</configuration>

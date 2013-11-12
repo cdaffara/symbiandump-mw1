@@ -1,0 +1,9 @@
+EXPORTS
+	_ZN16CCFScriptHandler4NewLER27MCFExtendedContextInterfaceR3RFsR16MCFActionHandlerR18MCFSecurityChecker @ 1 NONAME
+	_ZN16CCFScriptHandler5NewLCER27MCFExtendedContextInterfaceR3RFsR16MCFActionHandlerR18MCFSecurityChecker @ 2 NONAME
+	_ZN16CCFScriptHandlerD0Ev @ 3 NONAME
+	_ZN16CCFScriptHandlerD1Ev @ 4 NONAME
+	_ZN16CCFScriptHandlerD2Ev @ 5 NONAME
+	_ZThn8_N16CCFScriptHandlerD0Ev @ 6 NONAME ; #<thunk>#
+	_ZThn8_N16CCFScriptHandlerD1Ev @ 7 NONAME ; #<thunk>#
+

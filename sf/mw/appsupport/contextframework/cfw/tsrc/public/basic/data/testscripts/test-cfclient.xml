@@ -1,0 +1,32 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <and>
+            <contextUpdated>
+                <contextRef source='TestSourceA' type='TestTypeA'/>
+            </contextUpdated>
+            <equals>
+                <contextRef source='TestSourceA' type='TestTypeA'/>
+                <string>TestValueA</string>
+            </equals>
+        </and>
+        <actions>
+            <TestActionA ParamA1='ValueA1'/>
+        </actions>
+    </if>
+    <elseIf>
+        <and>
+            <contextUpdated>
+                <contextRef source='TestSourceA' type='TestTypeA'/>
+            </contextUpdated>
+            <equals>
+                <contextRef source='TestSourceA' type='TestTypeA'/>
+                <string>TestValueB</string>
+            </equals>
+        </and>
+        <actions>
+            <TestActionA ParamA1='ValueA1'/>
+            <TestActionB ParamB1='ValueB1' ParamB2='ValueB2'/>
+        </actions>
+    </elseIf>
+</script>

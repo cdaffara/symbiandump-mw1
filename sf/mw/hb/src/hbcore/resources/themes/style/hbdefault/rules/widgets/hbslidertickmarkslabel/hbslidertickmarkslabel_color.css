@@ -1,0 +1,19 @@
+HbSliderPopupContentWidget > HbSlider > HbSliderTickmarksLabel::tickmark-majorlabel
+{
+    color: var(qtc_popup_trans_normal);
+}
+
+HbSliderPopupContentWidget > HbSlider >  HbSliderTickmarksLabel::tickmark-minorlabel
+{
+    color: var(qtc_popup_trans_normal);
+}
+
+HbSliderTickmarksLabel::tickmark-majorlabel
+{
+    color: var(qtc_default_main_pane_normal);
+}
+
+HbSliderTickmarksLabel::tickmark-minorlabel	
+{
+    color: var(qtc_default_main_pane_normal);
+}

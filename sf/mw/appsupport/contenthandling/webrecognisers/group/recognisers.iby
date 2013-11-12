@@ -1,0 +1,45 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __RECOGNISERS_IBY__
+#define __RECOGNISERS_IBY__
+
+REM Application Protocol recognisers
+
+#ifdef __UI_FRAMEWORKS_V2__
+
+ECOM_PLUGIN(WebUrlRec.dll, 100064DE.rsc)
+ECOM_PLUGIN(RecBmark.dll, 10008ED4.rsc)
+ECOM_PLUGIN(RecWeb.dll, 10001315.rsc)
+
+#else
+
+REM polymorphi dll recognisers
+file=ABI_DIR\BUILD_DIR\WEBURLREC.MDL	System\Recogs\WebUrlRec.mdl
+file=ABI_DIR\BUILD_DIR\EBOOKMARKREC.MDL	System\Recogs\EBookmarkrec.mdl
+file=ABI_DIR\BUILD_DIR\RECWEB.MDL	System\Recogs\RecWeb.mdl
+
+#endif //__UI_FRAMEWORKS_V2__
+
+
+// Recognizer
+#ifdef __UI_FRAMEWORKS_V2__
+ECOM_PLUGIN(recwap.dll, 1000515E.rsc)
+#else
+file=ABI_DIR\BUILD_DIR\recwap.mdl				System\Recogs\Recwap.mdl
+#endif __UI_FRAMEWORKS_V2__
+
+#endif
+

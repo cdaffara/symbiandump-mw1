@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                XIMP IM Data Model API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/imdatamodelifids.hrh     MW_LAYER_PLATFORM_EXPORT_PATH(imdatamodelifids.hrh)
+../inc/imconversationinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(imconversationinfo.h)
+../inc/imgroupinfo.h     				MW_LAYER_PLATFORM_EXPORT_PATH(imgroupinfo.h)
+../inc/imobjectfactory.h     		MW_LAYER_PLATFORM_EXPORT_PATH(imobjectfactory.h)
+../inc/imsearchinfo.h     			MW_LAYER_PLATFORM_EXPORT_PATH(imsearchinfo.h)
+../inc/iminvitationinfo.h     	MW_LAYER_PLATFORM_EXPORT_PATH(iminvitationinfo.h)
+

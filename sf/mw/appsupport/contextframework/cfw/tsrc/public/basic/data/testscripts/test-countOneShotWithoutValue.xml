@@ -1,0 +1,11 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <count oneShotAt='2'>
+            <contextRef source='Test' type='Counting'/>
+        </count>
+        <actions>
+            <testAction/>
+        </actions>
+    </if>
+</script>

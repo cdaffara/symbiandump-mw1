@@ -1,0 +1,27 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_TESTEXPORTS
+../scripts/TestCITAlarmServer.script		c:/citalarmserver/scripts/testcitalarmserver.script
+../scripts/TestCITAlarmServerNaiad.script	c:/citalarmserver/scripts/testcitalarmservernaiad.script
+../testdata/TestAlarmServerData.ini		c:/citalarmserver/testdata/testalarmserverdata.ini
+../testdata/TestAlarmServerData1.ini		c:/citalarmserver/testdata/testalarmserverdata1.ini
+../testdata/TestAlarmServerData2.ini		c:/citalarmserver/testdata/testalarmserverdata2.ini
+../testdata/TestAlarmServerData3.ini		c:/citalarmserver/testdata/testalarmserverdata3.ini
+../testdata/TestAlarmServerData4.ini		c:/citalarmserver/testdata/testalarmserverdata4.ini
+TEF_AlarmServerCIT.iby						/epoc32/rom/include/TEF_AlarmServerCIT.iby
+
+PRJ_TESTMMPFILES
+TestCITAlarmServersuite.mmp

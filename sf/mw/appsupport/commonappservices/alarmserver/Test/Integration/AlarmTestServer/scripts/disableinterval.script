@@ -1,0 +1,64 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE T_PREQ1118_TestSuite
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0016
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0016
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Disable Alarm Server Control of Play Interval with Resource File 
+//! @SYMTestActions  Resource File has an empty play interval defined. Add alarm and
+//!                  wait for alarm to expire, check for alarm play start.
+//! @SYMTestExpectedResults Alarm Server does not issue an StartPlayingSound to Alert Server.
+
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+
+RUN_TEST_STEP 400 T_PREQ1118_TestSuite TestDisablePlayStep \test\pim\alarmserver\data\citalarmplaytestdata.ini DisablePlayIntervals
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0016
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0017
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0017
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 036
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Attempt to Override Resource File Control of Play Intervals
+//!                  Where Alarm Server Control of Play Intervals Has Been Disabled
+//! @SYMTestActions  Resource File should have an empty play interval defined.
+//!                  Attempt to change alarm play interval with the run-time option and specifying
+//!                  a valid play sequence. Add and enable the alarm and check output when alarm expires.
+//! @SYMTestExpectedResults Alarm Server does not issue an AlarmPlayStart to Alert Server.
+
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+
+RUN_TEST_STEP 400 T_PREQ1118_TestSuite TestOverrideResourceFileStep \test\pim\alarmserver\data\citalarmplaytestdata.ini OverrideResourceFile
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0017

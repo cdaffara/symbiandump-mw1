@@ -1,0 +1,10 @@
+component	app-services_tzdb
+source	\sf\mw\appsupport\tzservices\tzdatabase
+binary	\sf\mw\appsupport\tzservices\tzdatabase\group	all
+
+exports	\sf\mw\appsupport\tzservices\tzdatabase\group
+
+notes_source	\component_defs\release.src
+
+ipr E 
+

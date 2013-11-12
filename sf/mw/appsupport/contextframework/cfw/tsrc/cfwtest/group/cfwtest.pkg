@@ -1,0 +1,44 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  ?Description
+;
+
+
+;Languages
+&EN
+
+#{"cfwtest"},(0x101FB3E7),1,0,0,TYPE=SA
+
+;Localised Vendor name
+%{"cfwtest EN"}
+
+; Vendor name
+: "cfwtest"
+
+"\epoc32\release\armv5\urel\UT_CFContextSourceSettingsManager.dll"-"c:\sys\bin\UT_CFContextSourceSettingsManager.dll"
+"\epoc32\release\armv5\urel\MT_CFActionPlugIn.dll"-"c:\sys\bin\MT_CFActionPlugIn.dll"
+"\epoc32\release\armv5\urel\MT_CFClient.dll"-"c:\sys\bin\MT_CFClient.dll"
+"\epoc32\release\armv5\urel\UT_CFContextSourceManager.dll"-"c:\sys\bin\UT_CFContextSourceManager.dll"
+"\epoc32\release\armv5\urel\UT_CFActivatorEngine.dll"-"c:\sys\bin\UT_CFActivatorEngine.dll"
+"\epoc32\release\armv5\urel\UT_CCFEngine.dll"-"c:\sys\bin\UT_CCFEngine.dll"
+"\epoc32\release\armv5\urel\UT_CCFContextManager.dll"-"c:\sys\bin\UT_CCFContextManager.dll"
+"\epoc32\release\armv5\urel\MT_CFServices.dll"-"c:\sys\bin\MT_CFServices.dll"
+"\epoc32\release\armv5\urel\MT_CFScriptEngine.dll"-"c:\sys\bin\MT_CFScriptEngine.dll"
+"\epoc32\release\armv5\urel\MT_CFContextSourceSettingsManager.dll"-"c:\sys\bin\MT_CFContextSourceSettingsManager.dll"
+"\epoc32\release\armv5\urel\MT_CFContextSourceManager.dll"-"c:\sys\bin\MT_CFContextSourceManager.dll"
+"\epoc32\release\armv5\urel\UT_CFOperationPluginManager.dll"-"c:\sys\bin\UT_CFOperationPluginManager.dll"
+"\epoc32\release\armv5\urel\MT_CFOperationPluginManager.dll"-"c:\sys\bin\MT_CFOperationPluginManager.dll"
+"\epoc32\release\armv5\urel\mt_basicoperationsplugin.dll"-"c:\sys\bin\mt_basicoperationsplugin.dll"
+; sis-upgrade tests removed temporarily for ATS because of installer problems
+; "\epoc32\release\armv5\urel\mt_cfsisupgrade.dll"-"c:\sys\bin\mt_cfsisupgrade.dll"

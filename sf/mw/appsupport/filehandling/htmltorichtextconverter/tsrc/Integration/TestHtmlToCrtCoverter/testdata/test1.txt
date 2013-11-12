@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<META http-equiv="Content-Type" content="text/html; charset = us-ascii>
+
+<title>test 1 - all tags</title>
+
+block level tags:
+<p align= center>this text is centred
+<pre>pre tag (should cancel alignment)
+
+<p align=right>this text is right aligned
+<div>div tag (should cancel alignment)
+
+here's the blockquote tag:
+<blockquote>They went in single file, running like hounds on a strong scent, and an
+ eager light was in their eyes. Nearly due west the broad swath of the marching Orcs
+ tramped its ugly slot; the sweet grass of Rohan had been bruised and blackened as
+ they passed. 
+<p><i>from "The Two Towers" by J.R.R. Tolkien</I>
+</blockquote>
+end of blockquote tag
+
+<p>here's the center tag:
+<center>centred text</center>
+end of center tag
+
+<p>text with a<br>br tag
+
+<p>here's the headings 1-6:
+<h1>h1</h1>
+<h2>h2</h2>
+<h3 align = center>h3 with center alignment</h3>
+<h4>h4</h4>
+<h5>h5</h5>
+<h6>h6</h6>
+end of the headings
+
+<p>formatted text tags:
+<p><b>bold</b> normal
+<i>italics</i> normal
+<u>underline</u> normal
+<em>emphasis</em> normal
+<strong>strong</strong> normal
+<sub>subscript</sub> normal
+<sup>superscript</sup> normal
+<strike>strikethrough</strike> normal
+<dfn>dfn</dfn> normal
+<var>var</var> normal
+<cite>cite</cite> normal
+<p><i>italics <b>and bold <u>and underline</u> just bold and italics</b> and just italics</i> normal
+
+<p>here's a table:
+<table BORDER="2" ALIGN="left" CELLPADDING="5" BORDERCOLOR="#ff0000" WIDTH="75%">
+<caption ALIGN="top">table caption</caption>
+<tr> <th>table header row 1</th> <th>table header row 1</th></tr>
+<tr> <td>table data row 2</td> <td>table data row 2</td></tr>
+<tr> <td>table data row 3</td> <td>table data row 3</td></tr>
+</table>
+
+<p>unordered list:
+<ul TYPE="square">
+<li>unordered list item 1
+<li>unordered list item 2
+<li>unordered list item 3
+</ul>
+
+<p>ordered list:
+<ol TYPE="A" START="3">
+<li>ordered list item 1
+<li>ordered list item 2
+<li>ordered list item 3
+</ol>
+
+<p>definition list:
+<DL>
+<DT>Term 1<dd>This is the definition of the first term.
+<DT>Term 2<dd>This is the definition of the second term.
+</DL>
+
+<p>here's the form tag (contents should be ignored): 
+<form METHOD="get" ACTION="http://hoohoo.ncsa.uiuc.edu/htbin/query" ENCTYPE="application/x-www-form-urlencoded">
+all contents of the form tag should be ignored
+<input TYPE="password" NAME="foo">
+</form>
+and the end of the form tag
+
+<p>here's the IMG tag:
+
+<p><img src=URL alt=description> src then alt
+<p><img alt=description src=URL> alt then src
+<p><img src=URL> src only
+
+<p>here's the A tag
+<a href = "www.link.com">the link</a> end of A tag
+
+<p>the following tags are not recognised:
+<html> html
+<style> style
+<script> script
+<isindex> isindex
+<base> base
+<meta> meta
+<link> link
+<head> head
+<body> body
+<address> address
+<dir> dir
+<menu> menu
+<input> input
+<select> select
+<option> option
+<textarea> textarea
+<applet> applet
+<font> font
+<basefont> basefont
+<map> map
+<area> area
+<tt> tt
+<big> big
+<small> small
+<code> code
+<samp> samp
+<kbd> kbd
+
+<p><!--javascript - should <b>be <i>ignored-->
+
+<p align = "right">new paragraph right aligned
+</html>

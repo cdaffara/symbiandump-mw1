@@ -1,0 +1,17 @@
+EXPORTS
+	??0TASShdAlarm@@QAE@XZ @ 1 NONAME ; public: __thiscall TASShdAlarm::TASShdAlarm(void)
+	?ExternalizeL@TASShdAlarm@@QBEXAAVRWriteStream@@@Z @ 2 NONAME ; public: void __thiscall TASShdAlarm::ExternalizeL(class RWriteStream &)const 
+	?InternalizeL@TASShdAlarm@@QAEXAAVRReadStream@@@Z @ 3 NONAME ; public: void __thiscall TASShdAlarm::InternalizeL(class RReadStream &)
+	?Reset@TASShdAlarm@@QAEXXZ @ 4 NONAME ; public: void __thiscall TASShdAlarm::Reset(void)
+	?SetUtcNextDueTime@TASShdAlarm@@QAEXVTTime@@@Z @ 5 NONAME ; void TASShdAlarm::SetUtcNextDueTime(class TTime)
+	?SetDeQueueIfDueTimeInPast@TASShdAlarm@@QAEXXZ @ 6 NONAME ; void TASShdAlarm::SetDeQueueIfDueTimeInPast(void)
+	?IsWakeup@TASShdAlarm@@QBEHXZ @ 7 NONAME ; int TASShdAlarm::IsWakeup(void) const
+	?SetWakeup@TASShdAlarm@@QAEXH@Z @ 8 NONAME ; void TASShdAlarm::SetWakeup(int)
+	?AlarmDays@TASShdAlarm@@QBEEXZ @ 9 NONAME ; unsigned char TASShdAlarm::AlarmDays(void) const
+	?SetAlarmDays@TASShdAlarm@@QAEHE@Z @ 10 NONAME ; int TASShdAlarm::SetAlarmDays(unsigned char)
+	?Continuous@TASShdAlarm@@QAEHXZ @ 11 NONAME ; int TASShdAlarm::Continuous(void)
+	?SetContinuous@TASShdAlarm@@QAEXH@Z @ 12 NONAME ; void TASShdAlarm::SetContinuous(int)
+	?HasBecomeOrphaned@TASShdAlarm@@QBEHXZ @ 13 NONAME ; int TASShdAlarm::HasBecomeOrphaned(void) const
+	?HasOwningSession@TASShdAlarm@@QBEHXZ @ 14 NONAME ; int TASShdAlarm::HasOwningSession(void) const
+	?HasAssociatedData@TASShdAlarm@@QBEHXZ @ 15 NONAME ; int TASShdAlarm::HasAssociatedData(void) const
+

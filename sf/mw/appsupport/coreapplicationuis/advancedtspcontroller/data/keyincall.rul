@@ -1,0 +1,76 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <!-- Check if we just have incoming call -->
+    <if>
+        <or>
+            <equals>
+                <contextRef source='Call' type='State'/>
+                <string>Ringing</string>
+            </equals>
+            <equals>
+                <contextRef source='Call' type='State'/>
+                <string>Connected</string>
+            </equals>
+            <equals>
+                <contextRef source='Call' type='State'/>
+                <string>Alerting</string>
+            </equals>
+            
+        </or>
+        <actions>
+            <!-- Store and replace the volume event handling table -->
+            <Tsp
+            storeRoutingTable='01'/>
+
+            <Tsp
+            routingTable='01'
+            keyEventRemConVolumeUp='41'
+            keyEventRemConVolumeDown='42'
+            />
+            
+            <Tsp
+            routingTable='01'
+	    ruleActiveAudio='00'            
+	    ruleDefaultApp='02'
+            defaultApplicationPhone='100058B3'
+            ruleForeground='01'
+            ruleLastPlayedAudio='03'
+            />
+            
+            <!-- Store and replace call state routing table -->
+            <Tsp
+            storeRoutingTable='04'/>
+            
+            <Tsp
+            routingTable='04'
+            keyEventRemConExtCallAnswerCall='00'
+            keyEventRemConExtCallEndCall='01'
+            keyEventRemConExtCallAnswerEnd='02'
+            keyEventRemConExtCall3WaysCalling='06'
+            keyEventRemConExtCallGenerateDTMF='07'/>
+            
+            <Tsp
+            routingTable='04'
+    	    ruleDefaultApp='02'
+    	    defaultApplicationPhone='100058B3'
+    	    transparentApplicationContextFW='10282BC4'
+    	    />
+        </actions>
+    </if>
+    <elseIf>
+
+        <equals>
+            <contextRef source='Call' type='State'/>
+            <string>Disconnecting</string>
+        </equals>
+
+        <actions>
+            <!-- restore default settins -->
+            <Tsp 
+            restoreRoutingTable='01'/>
+
+            <Tsp
+            restoreRoutingTable='04'/>
+        </actions>
+    </elseIf>
+</script>

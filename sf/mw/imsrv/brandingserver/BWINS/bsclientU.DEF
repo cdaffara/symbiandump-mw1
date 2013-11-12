@@ -1,0 +1,21 @@
+EXPORTS
+	??1CBSBitmap@@UAE@XZ @ 1 NONAME ; CBSBitmap::~CBSBitmap(void)
+	??1CBSFactory@@UAE@XZ @ 2 NONAME ; CBSFactory::~CBSFactory(void)
+	?BitmapFileId@CBSBitmap@@QBEABVTDesC8@@XZ @ 3 NONAME ; class TDesC8 const & CBSBitmap::BitmapFileId(void) const
+	?BitmapId@CBSBitmap@@QBEHXZ @ 4 NONAME ; int CBSBitmap::BitmapId(void) const
+	?BitmapMaskId@CBSBitmap@@QBEHXZ @ 5 NONAME ; int CBSBitmap::BitmapMaskId(void) const
+	?CreateAccessL@CBSFactory@@QAEPAVMBSAccess@@ABVTDesC8@@W4TLanguage@@HH@Z @ 6 NONAME ; class MBSAccess * CBSFactory::CreateAccessL(class TDesC8 const &, enum TLanguage, int, int)
+	?CreateAccessLC@CBSFactory@@QAEPAVMBSAccess@@ABVTDesC8@@W4TLanguage@@HH@Z @ 7 NONAME ; class MBSAccess * CBSFactory::CreateAccessLC(class TDesC8 const &, enum TLanguage, int, int)
+	?CreateBSElementL@BSElementFactory@@SAPAVMBSElement@@ABVTDesC8@@W4TBSElementType@@0@Z @ 8 NONAME ; class MBSElement * BSElementFactory::CreateBSElementL(class TDesC8 const &, enum TBSElementType, class TDesC8 const &)
+	?CreateBSElementL@BSElementFactory@@SAPAVMBSElement@@ABVTDesC8@@W4TBSElementType@@AAV?$RBSObjOwningPtrArray@VMBSElement@@@@@Z @ 9 NONAME ; class MBSElement * BSElementFactory::CreateBSElementL(class TDesC8 const &, enum TBSElementType, class RBSObjOwningPtrArray<class MBSElement> &)
+	?CreateBSElementL@BSElementFactory@@SAPAVMBSElement@@ABVTDesC8@@W4TBSElementType@@ABVTDesC16@@@Z @ 10 NONAME ; class MBSElement * BSElementFactory::CreateBSElementL(class TDesC8 const &, enum TBSElementType, class TDesC16 const &)
+	?CreateBSElementL@BSElementFactory@@SAPAVMBSElement@@ABVTDesC8@@W4TBSElementType@@H@Z @ 11 NONAME ; class MBSElement * BSElementFactory::CreateBSElementL(class TDesC8 const &, enum TBSElementType, int)
+	?CreateBSElementL@BSElementFactory@@SAPAVMBSElement@@ABVTDesC8@@W4TBSElementType@@PAVCBSBitmap@@@Z @ 12 NONAME ; class MBSElement * BSElementFactory::CreateBSElementL(class TDesC8 const &, enum TBSElementType, class CBSBitmap *)
+	?CreateUpdaterL@CBSFactory@@QAEPAVMBSUpdater@@XZ @ 13 NONAME ; class MBSUpdater * CBSFactory::CreateUpdaterL(void)
+	?CreateUpdaterLC@CBSFactory@@QAEPAVMBSUpdater@@XZ @ 14 NONAME ; class MBSUpdater * CBSFactory::CreateUpdaterLC(void)
+	?NewL@CBSBitmap@@SAPAV1@HHHHABVTDesC8@@@Z @ 15 NONAME ; class CBSBitmap * CBSBitmap::NewL(int, int, int, int, class TDesC8 const &)
+	?NewL@CBSFactory@@SAPAV1@ABVTDesC8@@0@Z @ 16 NONAME ; class CBSFactory * CBSFactory::NewL(class TDesC8 const &, class TDesC8 const &)
+	?NewLC@CBSBitmap@@SAPAV1@HHHHABVTDesC8@@@Z @ 17 NONAME ; class CBSBitmap * CBSBitmap::NewLC(int, int, int, int, class TDesC8 const &)
+	?SkinIdMajor@CBSBitmap@@QBEHXZ @ 18 NONAME ; int CBSBitmap::SkinIdMajor(void) const
+	?SkinIdMinor@CBSBitmap@@QBEHXZ @ 19 NONAME ; int CBSBitmap::SkinIdMinor(void) const
+

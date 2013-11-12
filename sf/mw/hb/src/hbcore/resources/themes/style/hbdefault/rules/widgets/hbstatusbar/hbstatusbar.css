@@ -1,0 +1,42 @@
+HbStatusBar
+{
+    layout:default;
+    layout-direction: left-to-right;
+}
+
+HbStatusBar::timetext
+{
+    font-variant: secondary;
+    text-align: center;
+    size-policy-horizontal: ignored;
+    text-line-count-min: 1;
+    text-line-count-max: 1;
+    text-wrap-mode: no-wrap;
+    fixed-height: 2.5un;
+}
+
+HbStatusBar::signal
+{
+    fixed-width: var(hb-param-widget-chrome-height);
+    fixed-height: 2.5un;	
+}
+
+HbStatusBar::battery
+{
+    fixed-width: var(hb-param-widget-chrome-height);
+    fixed-height: 2.5un;	
+}
+
+HbStatusBar::notificationindicators
+{
+    fixed-width: 11.5un;
+    fixed-height: 2.5un;
+}
+
+HbStatusBar::settingsindicators
+{
+    fixed-width: 11.5un;
+    fixed-height: 2.5un;
+}
+
+

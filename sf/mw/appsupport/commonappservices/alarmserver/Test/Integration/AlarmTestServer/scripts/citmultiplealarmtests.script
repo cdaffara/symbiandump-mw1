@@ -1,0 +1,230 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE T_PREQ1118_TestSuite
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 037 038
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Notification of multiple alarms. The test uses three alarms, Alarm1, Alarm2 and Alarm3.
+//! @SYMTestActions  Add three alarms with overlapping expiry times. Wait for alarms to expire, check sound and states
+//!                  using the alarm server notification and checking the console alert server output.
+//! @SYMTestExpectedResults Notification from alarm server should should show each alarm transitioning to the
+//!                         Notifying state with a new sound being started for each expiring alarm. Only one sound at a
+//!                         time is played. The alarm server should notify that all alarms are in the Notifying state.
+//!                         Theconsole alert server will show the commands SetAlarm, SetState, SetVisibility,StartPlayingSound
+//!                         and StopPlayingSound.
+
+RUN_TEST_STEP 450 T_PREQ1118_TestSuite TestMultipleAlarmsStep \test\pim\alarmserver\data\citmultiplealarmtestdata.ini MultipleAlarmsTest
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0001
+
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0002
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0002
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Add multiple alarms with the same expiry times.
+//!                  The test uses three alarms, Alarm1, Alarm2 and Alarm3.
+//! @SYMTestActions  Add and enable three alarms with the same expiry time. Check the alarm notification of sound playing and check states.
+//!                  Also check ouput of console alert server
+//! @SYMTestExpectedResults All three alarms are expected to be in the Notifying state. Only one sound at a time is played.
+//!                         The console alert server will show the commands SetAlarm, SetState, SetVisibility, StartPlayingSound.
+
+RUN_TEST_STEP 400 T_PREQ1118_TestSuite TestSameTimeMultipleAlarmsStep \test\pim\alarmserver\data\citmultiplealarmtestdata.ini SameTimeMultiAlarmsTest
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0002
+
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0003
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0003
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 040
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Notification of multiple expired alarms with snooze                 
+//! @SYMTestActions  Add three alarms, snooze one alarm with a valid alarm ID.                  
+//! @SYMTestExpectedResults After snooze finished alarm which was snoozed moves into notifying state and plays a sound.
+  
+RUN_TEST_STEP 700 T_PREQ1118_TestSuite TestMultipleAlarmsSnoozeStep \test\pim\alarmserver\data\citmultiplealarmtestdata.ini MultipleAlarmsSnooze
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0003
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0004
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0004
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 040
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Notification of multiple expired alarms with invalid snooze                   
+//! @SYMTestActions  Add three alarms, wait for expiry. Snooze alarm1 then attempt to snooze alarm2 with an invalid ID                  
+//! @SYMTestExpectedResults The action of snoozing with an invalid alarm ID does not affect the valid snoozed alarm
+  
+RUN_TEST_STEP 700 T_PREQ1118_TestSuite TestMultipleAlarmsInvalidSnoozeStep \test\pim\alarmserver\data\citmultiplealarmtestdata.ini MultipleAlarmsInvalidSnooze
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0004
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0005
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0005
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Notification of Multiple Alarms, Pause Sound Playing               
+//! @SYMTestActions  Add an alarm, then add two further alarms with the same expiry time.
+//!                  Wait for first alarm to expire then pause the sound playing. Wait for second and third
+//!                  alarms to expire and check states.                  
+//! @SYMTestExpectedResults Alarm which is paused is moved to the snoozed state due to a number
+//!                         of alarms in the notifying state.  
+
+RUN_TEST_STEP 1200 T_PREQ1118_TestSuite TestMultiAlarmsPauseSoundStep \test\pim\alarmserver\data\citmultiplealarmtestdata.ini MultipleAlarmsPauseSound
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0005
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0006
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0006
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 041
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Notification of Multiple Expired Alarms with Clear               
+//! @SYMTestActions  Add three alarms withe overlapping expiry time. Wait for alarm1
+//!                  to expire, check all states and sound play for alarm1. Wait for alarm2 to expire, 
+//!                  check all alarm states and sound play for alarm2. Clear alarm2 only, wait for alarm3 to expire.
+//!
+//! @SYMTestExpectedResults  Clearing alarm2 moves the state to notified and stops sound play. Alarm1 is still in the notifying state and sound
+//!                          play should start for this alarm. After alarm3 expires the alarm moves to notifying and starts sound playing.
+
+RUN_TEST_STEP 600 T_PREQ1118_TestSuite TestMultipleAlarmsClearStep \test\pim\alarmserver\data\citmultiplealarmtestdata.ini MultipleAlarmsClear
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0006
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0007
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0007
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 041
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Notification of Multiple Expired Alarms with Invalid Clear               
+//! @SYMTestActions  Add three alarms withe overlapping expiry time. Wait for alarm1 to expire, check all states and sound play for alarm1.
+//!                  Wait for alarm2 to expire, check all alarm states and sound play for alarm2. Attempt to clear alarm with an invalid
+//!                  alarm ID. Wait for alarm3 to expire.
+//!
+//! @SYMTestExpectedResults  Attempting to clear using and invalid alarm ID should not affect any of the expired alarms, all alarms
+//!                          should finally be in the notifying state.
+
+RUN_TEST_STEP 600 T_PREQ1118_TestSuite TestMultiAlarmsInvalidClearStep \test\pim\alarmserver\data\citmultiplealarmtestdata.ini MultipleAlarmsInvalidClear
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0007
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0008
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0008
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 041
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc AlarmServer Queues Multiple Alarms that Cannot be Notified              
+//! @SYMTestActions  Ensure that Console Alert Server can handle max two alarms. Add three alarms and enable. Check alarm states for all
+//!                  alarms after alarm1 and alarm2 have expired. Wait for alarm3 to expire and check states.Clear alarm2 then
+//!                  check alarms states and check alarm sound play for alarm3.
+//!                  For the second part of the test add three alarms, wait for alarm1 to expire and play
+//!                  sound then pause it. Wait for alarm2 and alarm3 to expire, check states of all alarms. Wait for pause period
+//!                  on alarm1 to expire, check all alarm states.
+//!                  
+//! @SYMTestExpectedResults  For the first part of the test the first two alarms should go into the notifying state. After alarm3 expires it gets
+//!                          queued in waiting to notify state. After clearing alarm2 then alarm3 should move to the notifying state and sound play
+//!                          will start for this alarm.
+//!                          For the second part of the test after alarm1 is paused and the other two alarms expire then
+//!                          alarm1 should move into the snoozed state while the other two will move to notify. After the pause timer on alarm1 expires
+//!                          it should move to state waiting to notify.
+
+RUN_TEST_STEP 1000 T_PREQ1118_TestSuite TestMultipleAlarmsQueueStep \test\pim\alarmserver\data\citmultiplealarmtestdata.ini MultipleAlarmsQueue
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0008
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0009
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0009
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 039
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Silence Playing Alarm in the Notifying State             
+//! @SYMTestActions Add two alarms and ebale, wait for alarm1 to expire and
+//!                 check alarm state and sound play. Wait for Alarm2 to expire and check
+//!                 alarm state and sound play start. Silence alarm2 via the console alert
+//!                 server then check alarm sound stop and alarm states. Wait 
+//!                  
+//! @SYMTestExpectedResults After silencing alarm2 the state should stii be
+//!                         Notifying, when alarm play interval starts again the state should stay
+//!                         as Notifying and a sound play start notification should be received.
+//!
+RUN_TEST_STEP 400 T_PREQ1118_TestSuite TestSilenceAlarmStep \test\pim\alarmserver\data\citmultiplealarmtestdata.ini MultiAlarmSilenceStep
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0009
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0010
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0010
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 039
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Backwards Compatibility for Single Alarm Notification              
+//! @SYMTestActions  Set the cosole alert server to handle single expired alarms. Add three alarms and enable. Wait for first alarm to notify, check
+//!                  state and  alarm sound play. Wait for second and third alarm to expire and check states. After all alarms have expired
+//!                  acknowledge first alarm and check states, continue to do the same for the other two alarms.
+//!                  
+//! @SYMTestExpectedResults After the three alarms have expired only the first alarm should be in state notifying, the others should be queued, alarm
+//!                         sound should be playing.After clearing the first alarm the secon alarm should move to notifying, and again after acking the
+//!                         second the third alarm should move to notifying. This is the old behaviour. 
+//!
+RUN_TEST_STEP 400 T_PREQ1118_TestSuite TestBackwardsCompatibility \test\pim\alarmserver\data\citmultiplealarmtestdata.ini BackwardsComp
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0010
+
+
+
+

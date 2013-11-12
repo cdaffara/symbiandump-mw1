@@ -1,0 +1,43 @@
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// recupgrade_1.mmp
+//
+
+
+
+/**
+ @file
+ @test
+ @internalComponent - Internal Symbian test code
+*/
+
+target 		recupgrade.dll
+targettype 	plugin 
+uid			0x10009d8d 0xA000B461
+VENDORID 	0x70000001
+CAPABILITY	All -Tcb
+VERSION		10.2
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+SOURCEPATH	.
+source			recupgrade_2.cpp
+
+library         EUSER.LIB APMIME.LIB EFSRV.LIB
+
+start resource A000B461.rss
+target recupgrade.rsc
+end
+
+SMPSAFE

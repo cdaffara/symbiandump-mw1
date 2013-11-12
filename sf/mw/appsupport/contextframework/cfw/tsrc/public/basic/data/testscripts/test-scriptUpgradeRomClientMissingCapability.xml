@@ -1,0 +1,14 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+	<upgradeSecurity>
+		<capability>TCB</capability>
+	</upgradeSecurity>
+    <if>
+        <contextUpdated>
+            <contextRef source='test' type='romUpgradeNeverFires'/>
+        </contextUpdated>
+        <actions>
+        	<romUpgrade id='true'/>
+        </actions>
+    </if>
+</script>

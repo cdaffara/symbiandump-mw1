@@ -1,0 +1,373 @@
+// Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+//! @file
+//! @SYMTestSuiteName	DstIntServer
+//! @SYMScriptTestEnvironment
+
+PRINT Run Naiad Quality Time Zones Test
+
+LOAD_SUITE DstIntServer
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0007AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0007AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM Retrieving offset for various numeric ids
+//! @SYMTestActions Retrieve offsets for various numeric ids (in OOM conditions).
+//! @SYMTestActions Verify that these offsets are correct.
+//! @SYMTestExpectedResults The offsets retrieved should be for those numeric ids specified.
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini london
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini offsetandids
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0007AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0008AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0008AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM Retrieving offset for invalid numeric ids
+//! @SYMTestActions Retrieve offsets for invalid numeric ids (in OOM conditions).
+//! @SYMTestActions Verify that the offset returned is 0.
+//! @SYMTestExpectedResults The offset returned should be 0 for invalid numeric ids
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini london
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini invalidnumericid
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0008AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0009AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0009AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM Retrieving offset when DST ON and OFF
+//! @SYMTestActions Set time zone to Auckland.
+//! @SYMTestActions Set system time so DST is ON.
+//! @SYMTestActions Verify the offset.
+//! @SYMTestActions Set system time so DST is OFF.
+//! @SYMTestActions Verify offset.
+//! @SYMTestExpectedResults The offset retrieved should be the standard offset regardless whether DST is ON or OFF
+
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini aukland
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTONAuckland
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini aucklandON
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTOFFAuckland
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini aucklandOFF
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0009AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0010AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0010AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM Time Conversions
+//! @SYMTestActions Convert times to local/universal times using current and specified time zone (in OOM conditions).
+//! @SYMTestActions Verify the conversions were successful.
+//! @SYMTestExpectedResults Should not panic, and times should be converted successfully
+
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimeconversions
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimeconversions1
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimeconversions2
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimeconversions3
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimeconversions4
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimeconversions5
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0010AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0011AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0011AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM Get Current Time Zone
+//! @SYMTestActions Set time zone.
+//! @SYMTestActions Retrieve the time zone in OOM conditions.
+//! @SYMTestActions Verify that it has been set correctly.
+//! @SYMTestExpectedResults The time zone retrieved should be the same with the time zone used to set the system's time zone
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini london
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini stanley
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini aukland
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini sydney
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini tirane
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini newyork
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini tokyo
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini nairobi
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini sofia
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini seoul
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0011AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0012AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0012AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM/Soak Set System Time Zone
+//! @SYMTestActions Set/Get time zone multiple times.
+//! @SYMTestActions Verify that it has no effect.
+//! @SYMTestExpectedResults Setting and getting time zone multiple times should have no effect
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini london
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone1
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini stanley
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone1                           
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini aukland
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone1
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini nairobi
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0012AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0013AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0013AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM Setting and getting invalid Time Zone
+//! @SYMTestActions Set invalid time zone.
+//! @SYMTestActions Get time zone (in OOM conditions).
+//! @SYMTestActions Verify that time zone retrieved is correct.
+//! @SYMTestExpectedResults Should not panic, and the time zone retrieved should be correct
+
+RUN_ERROR_STEP_RESULT  100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini China
+RUN_ERROR_STEP_RESULT 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini invalid
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMtimezone1
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0013AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0014AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0014AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Time Zone Numeric ID
+//! @SYMTestActions Set time zone.
+//! @SYMTestActions Retrieve the numeric id for that zone.
+//! @SYMTestActions Verify the numeric id is correct.
+//! @SYMTestExpectedResults The numeric id of the time zone should be correct
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini london
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini stanley
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId1
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini aukland
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId2
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini nairobi
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId3
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini wet
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId4
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini met
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId5
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini eet
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId6
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini cet
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId7
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini etc1
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId8
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini etc2
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId10
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini etc3
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId11
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini etc4
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId12
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini etc5
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId13
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini etc6
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini timezoneNumericId14
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0014AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0015AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0015AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM Daylight Saving
+//! @SYMTestActions Set time zone.
+//! @SYMTestActions Set system time.
+//! @SYMTestActions Test whether DST is ON or OFF (in OOM conditions) relatively to the time zone and system time
+//! @SYMTestExpectedResults The boolean DST status should be correct at all times
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini london
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTONLondon
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMDaylightSavingON
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTOFFLondon
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMDaylightSavingOFF
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini aukland
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTONAuckland
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMDaylightSavingON
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTOFFAuckland
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMDaylightSavingOFF
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini Santiago
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTONSantiago
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMDaylightSavingON
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTOFFSantiago
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMDaylightSavingOFF
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini Santiago
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTONSantiago1
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMDaylightSavingON
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTOFFSantiago1
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMDaylightSavingOFF
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0015AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0016AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0016AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM Invalid Daylight Saving
+//! @SYMTestActions Set invalid time zone.
+//! @SYMTestActions Check whether DST is ON or OFF (in OOM conditions), and it should be OFF.
+//! @SYMTestExpectedResults DST should be OFF for invalid time zones
+
+RUN_ERROR_STEP_RESULT 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini invalid
+RUN_TEST_STEP 100 DstIntServer SetSysTime \dstscripts\TestNaiadTZServer.ini STDSTOFFSantiago1
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini OOMDaylightSavingOFF
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0016AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0017AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0017AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc OOM NULL Time Zone
+//! @SYMTestActions Set NULL time zone.
+//! @SYMTestActions Get time zone (in OOM conditions).
+//! @SYMTestActions Verify that it returns NULL
+//! @SYMTestExpectedResults Time Zone returned should be NULL
+
+RUN_ERROR_STEP_RESULT 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini nullTZ
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0017AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0018AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0018AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Constructing TZ Converter
+//! @SYMTestActions Attempt to construct TZ Converter, without the TZ server being connected.
+//! @SYMTestExpectedResults Error code returned should be KErrNotReady 
+
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini TZConverter
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0018AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0019AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0019AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Multiple TZ Converter's
+//! @SYMTestActions Construct Mulitple TZ Converter's (which use the same TZ server).
+//! @SYMTestActions Convert times using each TZ Converter.
+//! @SYMTestExpectedResults Should have no effect using multiple TZ Converter's
+
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini MultipleTZConverter
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0019AP-NaiadHP-0001
+
+
+START_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0020AP-NaiadHP-0001
+//! @file
+//! @SYMTestCaseID PIM-APPENG-CallnterimAPI-CIT-TZ-0020AP-NaiadHP-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMComponent TZ
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Multiple TZ Server's
+//! @SYMTestActions Connect to multiple Time Zone servers.
+//! @SYMTestActions Retrieve the current time zone from each Time Zone server.
+//! @SYMTestExpectedResults Should be able to retrieve the current time zone using each TZ server
+
+RUN_TEST_STEP 100 DstIntServer SetTz \dstscripts\TestNaiadTZServer.ini london
+RUN_TEST_STEP 100 DstIntServer TestTZServer \dstscripts\TestNaiadTZServer.ini MultipleTZServer
+END_TESTCASE PIM-APPENG-CallnterimAPI-CIT-TZ-0020AP-NaiadHP-0001
+
+PRINT Complete Naiad Quality Time Zones Tests
+
+

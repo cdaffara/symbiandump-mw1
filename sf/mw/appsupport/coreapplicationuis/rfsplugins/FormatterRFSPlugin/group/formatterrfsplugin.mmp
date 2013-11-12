@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2006-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project FormatterRfsPlugin
+*
+*/
+
+
+// To get macro definitions for include paths
+#include <platform_paths.hrh>
+
+TARGET          formatterrfsplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D 0x2001CB73
+
+CAPABILITY      CAP_ECOM_PLUGIN ALLFILES
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../src
+SOURCE          formatterrfsplugin.cpp
+SOURCE          proxy.cpp
+
+USERINCLUDE     ../cenrep
+USERINCLUDE     ../inc
+
+MW_LAYER_SYSTEMINCLUDE
+
+START RESOURCE  ../data/2001cb73.rss
+TARGET          formatterrfsplugin.rsc
+END
+
+LIBRARY         centralrepository.lib   // Central Repository
+LIBRARY         ecom.lib                // ECom library
+LIBRARY         efsrv.lib               // File Server
+LIBRARY         euser.lib               // Base library
+LIBRARY         platformenv.lib         // PathInfo

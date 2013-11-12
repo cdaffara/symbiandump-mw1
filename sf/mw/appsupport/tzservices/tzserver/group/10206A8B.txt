@@ -1,0 +1,10 @@
+[database]
+read
+capability =  ReadUserData
+write
+capability = WriteUserData
+schema
+capability = WriteUserData
+
+[BACKUP]
+SID = 10205EA6

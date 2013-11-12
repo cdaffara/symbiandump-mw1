@@ -1,0 +1,66 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// recweb.mdl Basic reference URL recogniser
+// 
+//
+
+/**
+ @file
+*/
+
+
+#ifdef __UI_FRAMEWORKS_V2__
+
+TARGET recweb.dll
+TARGETTYPE plugin
+UID			0x10009D8D 0x10001315
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+
+start resource 10001315.rss
+#ifdef SYMBIAN_SECURE_ECOM
+TARGET recweb.rsc
+#endif
+end
+
+#else
+
+TARGET			RECWEB.MDL
+TARGETTYPE		DLL
+TARGETPATH		/system/recogs\
+
+uid			0x10003A19 0x10001315
+
+deffile			RecWeb.DEF
+
+start WINS
+	baseaddress	0x70900000
+end
+
+#endif //__UI_FRAMEWORKS_V2__
+
+VENDORID 0x70000001
+
+CAPABILITY TrustedUI ProtServ
+
+sourcepath		.
+
+source			RECWEB.CPP
+
+library 	        euser.lib apmime.lib
+
+START MARM
+END
+SMPSAFE

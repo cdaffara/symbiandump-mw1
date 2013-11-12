@@ -1,0 +1,66 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Profiles Engine wrapper tests.
+*
+*/
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+TARGET          T_ProfileEngineWrapper.dll
+TARGETTYPE      dll
+
+UID             0x1000af5a 0x01700000
+
+CAPABILITY      ALL -TCB
+
+SOURCEPATH              ../src
+SOURCE                  MT_CSchedulerUtility.cpp
+SOURCE                  MT_ProfileEngineDllMain.cpp
+SOURCE                  T_ProfileTestTools.cpp
+SOURCE                  MT_ProEngFactory.cpp
+SOURCE                  MT_MProEngNotifyHandler.cpp
+SOURCE                  MT_MProEngAlertToneSeeker.cpp
+SOURCE                  MT_MProEngProfile.cpp
+SOURCE                  MT_MProEngProfileName.cpp
+SOURCE                  MT_MProEngTones.cpp
+SOURCE                  MT_MProEngToneSettings.cpp
+SOURCE                  MT_MProEngProfileNameArray.cpp
+SOURCE                  MT_MProEngEngine.cpp
+
+USERINCLUDE		../inc
+USERINCLUDE		../../../../../EngInc
+SYSTEMINCLUDE   	../../../../../WrapperInc
+SYSTEMINCLUDE		../../../../../../../inc
+SYSTEMINCLUDE   	/epoc32/include/digia/EUnit
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY                 aknnotify.lib
+LIBRARY                 apgrfx.lib
+LIBRARY                 apmime.lib
+LIBRARY                 bafl.lib
+LIBRARY                 centralrepository.lib
+LIBRARY                 ContentListingFramework.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 EUnit.lib
+LIBRARY                 euser.lib
+LIBRARY                 PlatformEnv.lib
+LIBRARY                 profileeng.lib
+LIBRARY                 ProfileEngine.lib
+LIBRARY                 PbkEng.lib
+LIBRARY                 cntmodel.lib
+
+// End of file

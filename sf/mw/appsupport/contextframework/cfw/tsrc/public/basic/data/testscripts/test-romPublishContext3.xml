@@ -1,0 +1,18 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <contextUpdated>
+            <contextRef
+            	source='source.romPublishContext3'
+            	type='type.romPublishContext3'
+            	value='true'/>
+        </contextUpdated>
+        <actions>
+			<publishContext define='false'>
+				<contextRef source='source.romPublishContext3'
+					type='type.romPublishContext3.reply'
+					value='true'/>
+			</publishContext>
+        </actions>
+    </if>
+</script>

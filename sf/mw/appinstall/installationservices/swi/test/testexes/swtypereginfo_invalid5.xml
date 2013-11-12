@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE LayeredExecutionEnvironments SYSTEM "swtype.dtd">
+<LayeredExecutionEnvironments>
+	<SoftwareType Name="testSoftwareType">
+		<LocalizedName Language="15">testSwTypeLoc15</LocalizedName>
+		<LocalizedName Language="31">testSwTypeLoc31</LocalizedName>
+		<MimeType>text/sif-testpkg</MimeType>
+		<SifPluginUid>102866EF</SifPluginUid>
+		<CustomAccess SecureId="10285BCB" AccessMode="1"/>
+		<CustomAccess SecureId="80285DE0" AccessMode="1"/>
+		<LauncherExecutable>testExeinvalid5a</LauncherExecutable>
+	</SoftwareType>
+	<SoftwareType Name="native">
+		<LocalizedName Language="15">testSwTypeLoc15</LocalizedName>
+		<LocalizedName Language="31">testSwTypeLoc31</LocalizedName>
+		<MimeType>text/sif-testpkg2</MimeType>
+		<SifPluginUid>C02866EF</SifPluginUid>
+		<CustomAccess SecureId="C0285BCB" AccessMode="1"/>
+		<CustomAccess SecureId="C0285DE0" AccessMode="1"/>
+		<LauncherExecutable>testExeinvalid5b</LauncherExecutable>
+	</SoftwareType>
+</LayeredExecutionEnvironments>

@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+
+<!-- Copyright (c) 2008, Nokia. Inc. All Rights Reserved -->
+<!-- Helix backup registration file -->
+
+<backup_registration version="1.0">
+
+    <passive_backup>
+    
+        <include_file name= "C:\Data\R1_Mobile_4_0.cfg" />
+  
+    </passive_backup>
+    
+    <proxy_data_manager sid = "0x10202BE9" />
+
+    <restore requires_reboot = "no"/>
+
+</backup_registration>
+

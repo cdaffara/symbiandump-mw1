@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This file contains all the resources for the module.
+*
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+
+NAME    RFS        // 4 letter ID
+
+//  INCLUDES
+
+#include "rfs.loc"
+#include <eikon.rsg>
+#include <eikon.rh>
+
+
+// RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE {}
+
+RESOURCE TBUF { buf=""; }
+
+RESOURCE TBUF r_active_calls { buf = qtn_rfs_note_active_calls; }
+
+RESOURCE TBUF r_device_restart { buf = qtn_rfs_note_device_restart; }
+
+
+RESOURCE TBUF r_confirm_rfs { buf = qtn_rfs_restore_query; }
+
+RESOURCE TBUF r_confirm_deep_rfs { buf = qtn_rfs_reset_phone_settings; }
+
+RESOURCE TBUF r_closing_connections { buf = qtn_rfs_note_closing_connections; }
+
+
+// End of File

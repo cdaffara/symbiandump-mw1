@@ -1,0 +1,242 @@
+CONARC 044
+---------
+Made by Diana Bettoney 26 October 1999
+
+Not to be included in mainline builds yet
+
+Correct includes in conlist.h
+Correct various CleanupStack omissions and now derive CMimeInfo from CBase.
+
+CONARC 043
+---------
+Made by Diana Bettoney 22 October 1999
+
+Not to be included in mainline builds yet
+
+Changed functions CCnaConverterList::ConvFromListL and CCnaConverterList::ConvToListL to
+return useful information in structure SConverterInfo
+
+Fixed test tloadcnv which was broken in release 041 by change to CConverterBase
+Fixed base converters that were broken by this change.
+
+Warning to all users of class CConverterBase
+
+The  parameter MConverterObserver* is no longer const so all converters using any convert functions
+will need to be changed.
+
+class CConverterBase : public CBase
+// abstract base class for all converters
+	{
+public:
+	enum TCapability
+		{
+		EConvertsFiles=0x01,
+		EConvertsObjects=0x02,
+		EConvertsExtract=0x04
+		};
+public:
+	IMPORT_C virtual void ConvertL(const TFileName& aSourceFile, const TFileName& aTargetFile, MConverterObserver* aObserver=NULL); // These default to calling the async versions in a loop
+	IMPORT_C virtual void ConvertObjectL(RReadStream& aReadStream, RWriteStream& aWriteStream, MConverterObserver* aObserver=NULL);
+	IMPORT_C virtual void ConvertAL(const TFileName& aSourceFile, const TFileName& aTargetFile, MConverterObserver* aObserver=NULL); // these default to leaving with KErrNotSupported
+	IMPORT_C virtual void ConvertObjectAL(RReadStream& aReadStream, RWriteStream& aWriteStream, MConverterObserver* aObserver=NULL); // these default to leaving with KErrNotSupported
+	IMPORT_C virtual TBool DoConvertL(); // these default to leaving with KErrNotSupported
+	virtual TUid Uid() =0;
+	IMPORT_C virtual TInt Capabilities(); // defaults to "everything"
+	IMPORT_C virtual void CancelConvert(); // for any cleanup
+	};
+
+CONARC 042
+----------
+Made by Diana Bettoney 28 September 1999
+
+Not to be included in mainline builds yet
+
+Fixed bug in CNFTOOL.CPP introduced in version 40.
+
+To Build and run CNFTOOL
+
+On the line for Cnftool in the BLD.INF file remove the ignore.
+You will then be able to create a makefile for cnftool and build it using bldmake and abld.
+Copy your RSS file to the CNFTOOL directory and run CNFTOOL.BAT with the name of your RSS file
+to create the CNF file.
+
+CONARC 041
+----------
+Made by SimonC 14 September 1999
+
+Uses baseline 00008
+
+Not to be included in mainline builds yet
+
+Not source or binary compatible with 040
+
+Various changes suggested by Paul Stevens:
+
+1) Renamed the method:
+   CConverterBase* CCnaConverterList::Converter(TUid aUid)
+to 
+   CConverterBase* CCnaConverterList::NewConverterL(TUid aUid)
+
+2) Added EConvertsExtract to CConverterBase::TCapability
+
+3) Added the following methods to MConverterObserver
+	TBool GetEmbeddedFileName(TFileName& aFileName);
+and
+	HBufC* QueryPasswordL(const TDesC& aClue);
+
+4) Added the utility function
+	TUid ConverterL(const TDataType& aFrom,const TDataType& aTo);
+to CCnaConverterList
+
+
+
+CONARC 040
+----------
+Made by Diana Bettoney 3 September 1999
+
+Add support for translations of mimetypes in the cnf file.
+Improved test code to give better instructions to user as tests fail if files are not
+copied to the correct locations.
+Added test code to test translations.
+
+CONARC 033
+----------
+Made by Steph Rolland 26 August 1999
+
+Removed warnings
+Fixed unicode defect in text/Etext conversion
+
+CONARC 032
+----------
+Made by Darren Jones 19 May 1999
+
+Changes in preparation for auto-building
+
+
+CONARC 031
+----------
+Made by Darren Jones 16 Mar 1999
+
+More development/fixes for unicode builds and ER5u
+
+
+CONARC 030
+----------
+Made by Darren Jones 3 Mar 1999
+
+Development/fixes for unicode builds and ER5u
+
+CONARC 010
+----------
+Made by MattM 25 Jan 1999
+
+Fixed:
+EDN028229 Missing forward declaration in CONLIST.H
+EDN881056 vcard notes with embedded = are not exported properly
+EDN263447 Conarc needs boilerplated comments
+
+Fixed some madness with =CRLF conversion, these should be thrown away on decoding.
+
+CONARC 009
+----------
+Made by MattM 4 Jan 1999
+
+Removed internal converter exports - the implementation of these is now
+completely transparent to clients.
+
+Fixed:
+EDN060426 QP encoder is broken
+
+CONARC 008
+----------
+Made by MattM 22 December 1998
+
+Made the internal converters transparent to clients.  No changes are needed to
+use these.
+
+CONARC 007
+----------
+Made by MattM 18 December 1998
+
+Fixed many errors in OOM (thanks to CNTMODEL for the testing)
+
+Moved the Quoted Printable, Base64 and ETEXT->Text converters into the
+converter architecture as utility converters.
+
+This adds a Header only dependency on ETEXT
+
+ROM builders!
+
+the following converters are no longer required in a ROM:
+
+QPCONV.CNF
+QPCONV.CNV
+TXCONV.CNF
+TXCONV.CNV
+B64CONV.CNF
+B64CONV.CNV
+
+Fixed ebld defect where "all" or "conarc" was required for build
+
+CONARC 006
+----------
+Made by MattM 16 December 1998
+
+Fixed
+EDN885611 Constructing a converter finder can leave if an invalid converter pair exist
+EDN97E-02 CONFNDR.H declares a local function without implementing it
+
+Fixed leaky RFs session.
+
+CONARC 005
+----------
+Made by MattM 4 November 1998
+
+Changed CNF file UID's in unicode build back to same as narrow build
+CNF files are build invariant.
+
+CONARC 004
+----------
+Made by MattM 29 October 1998
+
+Deb/Rel and Unicode UID release.
+
+UID's for Converter DLL's are now:
+
+uid				0x10000C61
+unicodeuid		0x10003A30
+
+
+CONARC 003
+----------
+Made by MattM 7 October 1998
+
+Fixed MNT GETREL
+
+Fixed converter load failure in WINS REL and UREL builds
+
+Passes tests on
+
+WINS REL, WINS DEB, WINS UREL, WINS UDEB
+MARM REL
+
+Other MARM variants not tested.
+
+CONARC 002
+----------
+Made by MattM 5 Octover 1998
+
+Tidied up releaseables.
+
+Added MARM freeze files for converter DLLs
+
+CONARC 001
+----------
+Made by MattM 16 September 1998
+
+This release is uninteresting - everything other than MNT files is as of CONVERT 020
+
+Split converters architecture from concrete converters
+
+Concrete converters and test code now live in \convert
+Architecture lives in \conarc

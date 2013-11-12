@@ -1,0 +1,92 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Protocol agnostic error codes for XIMP Framework.
+*
+*/
+
+#ifndef XIMPERRORS_HRH
+#define XIMPERRORS_HRH
+
+
+
+/**
+ * XIMP Framework core error codes.
+ *
+ * Error codes returned from XIMP Framework core are either:
+ * -# System wide Symbian OS error codes (KErrNone, KErrNoMemory, etc.)
+ * -# Protocol agnostic core related error codes defined here.
+ *    These error codes have range: KXIMPErrBase ... KXIMPErrLow.
+ *
+ * @ingroup ximpfwbaseapi
+ * @since S60 v3.2
+ */
+enum
+    {
+    KXIMPErrBase = -30131,
+
+    /**
+     * Generic error code to indicate that request processing
+     * has failed on ximp protocol level to some error,
+     * which isn't mapped to any other more detailed
+     * error code.
+     */
+    KXIMPErrServiceGeneralError = KXIMPErrBase,
+
+
+    /**
+     * Error code to indicate that ximp service
+     * doesn't support the request issued by the client.
+     */
+    KXIMPErrServiceRequestTypeNotSupported = KXIMPErrBase - 1,
+
+
+    /**
+     * Error code to indicate that request handling has
+     * failed because because the ximp service is
+     * shutting down.
+     */
+    KXIMPErrServiceShutdown = KXIMPErrBase - 2,
+
+
+    /**
+     * Error code to indicate that ximp service
+     * has terminated the ximp session.
+     */
+    KXIMPErrServiceForceClosedSession = KXIMPErrBase - 3,
+
+
+    /**
+     * Error code to indicate that request handling has
+     * failed on ximp protocol level to insufficient
+     * user authentication.
+     */
+    KXIMPErrServiceAuthenticationFailed = KXIMPErrBase - 4,
+
+
+    /**
+     * Error code to indicate that request handling has
+     * timeouted on ximp protocol level.
+     */
+    KXIMPErrServicRequestTimeouted = KXIMPErrBase - 5,
+    
+    KXIMPErrLow = -30137
+    
+    // Note that presence uses codes from -30138 to -30150
+
+    };
+
+
+#endif // XIMPERRORS_HRH
+
+

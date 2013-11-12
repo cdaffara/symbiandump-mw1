@@ -1,0 +1,93 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+// Load the DST test server
+LOAD_SUITE DstIntServer -SharedData
+
+START_TESTCASE   PIM-UTCOFFSETTEST-0001
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0001
+
+
+PREFIX RUN_UTILS
+DeleteFile c:\private\1020383e\tzdb.dbz
+DeleteFile c:\private\1020383e\SQLite__tzuserdata.db
+DeleteFile c:\private\100012a5\DBS_2000836D_DBS_DSC.db
+DeleteFile c:\private\100012a5\DBS_10206A8B_TzLocalization.db
+REMOVE_PREFIX
+
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest01
+END_TESTCASE   PIM-UTCOFFSETTEST-0001
+START_TESTCASE   PIM-UTCOFFSETTEST-0002
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0002
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest02
+END_TESTCASE   PIM-UTCOFFSETTEST-0002
+START_TESTCASE   PIM-UTCOFFSETTEST-0003
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0003
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest03
+END_TESTCASE   PIM-UTCOFFSETTEST-0003
+START_TESTCASE   PIM-UTCOFFSETTEST-0004
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0004
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest04
+END_TESTCASE   PIM-UTCOFFSETTEST-0004
+START_TESTCASE   PIM-UTCOFFSETTEST-0005
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0005
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest05
+END_TESTCASE   PIM-UTCOFFSETTEST-0005
+START_TESTCASE   PIM-UTCOFFSETTEST-0006
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0006
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest06
+END_TESTCASE   PIM-UTCOFFSETTEST-0006
+START_TESTCASE   PIM-UTCOFFSETTEST-0007
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0007
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest07
+END_TESTCASE   PIM-UTCOFFSETTEST-0007
+START_TESTCASE   PIM-UTCOFFSETTEST-0008
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0008
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest08
+END_TESTCASE   PIM-UTCOFFSETTEST-0008
+START_TESTCASE   PIM-UTCOFFSETTEST-0009
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0009
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest09
+END_TESTCASE   PIM-UTCOFFSETTEST-0009
+START_TESTCASE   PIM-UTCOFFSETTEST-0010
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0010
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest10
+END_TESTCASE   PIM-UTCOFFSETTEST-0010
+START_TESTCASE   PIM-UTCOFFSETTEST-0011
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0011
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest11
+END_TESTCASE   PIM-UTCOFFSETTEST-0011
+START_TESTCASE   PIM-UTCOFFSETTEST-0012
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0012
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest12
+END_TESTCASE   PIM-UTCOFFSETTEST-0012
+START_TESTCASE   PIM-UTCOFFSETTEST-0013
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0013
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest13
+END_TESTCASE   PIM-UTCOFFSETTEST-0013
+START_TESTCASE   PIM-UTCOFFSETTEST-0014
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0014
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest14
+END_TESTCASE   PIM-UTCOFFSETTEST-0014
+START_TESTCASE   PIM-UTCOFFSETTEST-0015
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0015
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest15
+END_TESTCASE   PIM-UTCOFFSETTEST-0015
+START_TESTCASE   PIM-UTCOFFSETTEST-0016
+//! @SYMTestCaseID   PIM-UTCOFFSETTEST-0016
+RUN_TEST_STEP 100 DstIntServer UTCOffset \dstscripts\utcoffset.ini UTCOffsetTest16
+END_TESTCASE   PIM-UTCOFFSETTEST-0016
+
+

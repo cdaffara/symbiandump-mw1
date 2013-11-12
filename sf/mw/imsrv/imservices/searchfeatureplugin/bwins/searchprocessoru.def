@@ -1,0 +1,6 @@
+EXPORTS
+	?NewL@CProtocolDataHostImp@@SAPAV1@AAVMXIMPHost@@@Z @ 1 NONAME ; class CProtocolDataHostImp * CProtocolDataHostImp::NewL(class MXIMPHost &)
+	?NewL@CProtocolSearchFeatureDataHostImp@@SAPAV1@AAVMXIMPHost@@@Z @ 2 NONAME ; class CProtocolSearchFeatureDataHostImp * CProtocolSearchFeatureDataHostImp::NewL(class MXIMPHost &)
+	?NewLC@CProtocolDataHostImp@@SAPAV1@AAVMXIMPHost@@@Z @ 3 NONAME ; class CProtocolDataHostImp * CProtocolDataHostImp::NewLC(class MXIMPHost &)
+	?SearchDataCache@CProtocolSearchDataHostImp@@QAEAAVCSearchDataCache@@XZ @ 4 NONAME ; class CSearchDataCache & CProtocolSearchDataHostImp::SearchDataCache(void)
+

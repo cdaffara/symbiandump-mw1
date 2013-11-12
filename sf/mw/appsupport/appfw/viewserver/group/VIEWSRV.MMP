@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+/**
+@file
+
+@SYMPurpose viewsrv.dll View server
+*/
+
+
+target			viewsrv.dll
+CAPABILITY All -Tcb
+targettype		DLL
+uid				0x1000008D 0x10003F3C
+VENDORID 0x70000001
+
+sourcepath		../server
+
+userinclude		../inc
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+source			VWSMAIN.CPP   VWSERVER.CPP  VWSSESSN.CPP  VWSQUEUE.CPP
+source			VWSEVENT.CPP  VWSSEVNT.CPP  VWSWEVNT.CPP  VWSDEBUG.CPP
+source			vwspatchdata.cpp
+
+library			euser.lib  ws32.lib bafl.lib ssmcmn.lib
+library			apgrfx.lib
+library	efsrv.lib
+
+START WINS
+	baseaddress		0x48500000
+END
+
+SMPSAFE

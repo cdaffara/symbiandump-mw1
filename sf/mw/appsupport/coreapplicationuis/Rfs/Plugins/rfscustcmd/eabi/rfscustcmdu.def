@@ -1,0 +1,6 @@
+EXPORTS
+	_ZN17RfsCustCmdFactory23RfsCustCmdFirstBootNewLEv @ 1 NONAME
+	_ZN17RfsCustCmdFactory18RfsCustCmdDeepNewLEv @ 2 NONAME
+	_ZN17RfsCustCmdFactory19RfsCustCmdPreUiNewLEv @ 3 NONAME
+	_ZN17RfsCustCmdFactory20RfsCustCmdPostUiNewLEv @ 4 NONAME
+

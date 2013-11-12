@@ -1,0 +1,43 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET      	testbackuprestorenotificationserversuite.exe
+TARGETTYPE 	exe
+UID        	0x1000007A 0x102732A5
+CAPABILITY 	ReadUserData WriteUserData ReadDeviceData WriteDeviceData AllFiles
+VENDORID   	0x70000001
+
+SOURCEPATH  	../src
+SOURCE	    	TestBackupRestoreNotificationServerSuite.cpp
+SOURCE	    	TestBackupRestoreNotificationStep.cpp
+
+
+USERINCLUDE	../inc
+USERINCLUDE	../../../../../inc
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY		testexecutelogclient.lib
+LIBRARY 	testexecuteutils.lib
+LIBRARY		bafl.lib
+LIBRARY		euser.lib 
+LIBRARY		efsrv.lib
+LIBRARY		estor.lib
+LIBRARY		etext.lib
+LIBRARY		sbeclient.lib
+LIBRARY		backuprestorenotification.lib
+
+SMPSAFE
+

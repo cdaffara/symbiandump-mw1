@@ -1,0 +1,211 @@
+EXPORTS
+	??0RTz@@QAE@XZ @ 1 NONAME ; RTz::RTz(void)
+	??1CTzActualisedRules@@UAE@XZ @ 2 NONAME ABSENT ; CTzActualisedRules::~CTzActualisedRules(void)
+	??1CTzConverter@@UAE@XZ @ 3 NONAME ; CTzConverter::~CTzConverter(void)
+	??1CTzId@@UAE@XZ @ 4 NONAME ; CTzId::~CTzId(void)
+	??1RTz@@QAE@XZ @ 5 NONAME ; RTz::~RTz(void)
+	??8CTzId@@QBEHABV0@@Z @ 6 NONAME ; int CTzId::operator==(class CTzId const &) const
+	??ACTzActualisedRules@@QAEAAVTTzActualisedRule@@H@Z @ 7 NONAME ABSENT ; class TTzActualisedRule & CTzActualisedRules::operator[](int)
+	?AddRuleL@CTzActualisedRules@@QAEXABVTTzActualisedRule@@@Z @ 8 NONAME ABSENT ; void CTzActualisedRules::AddRuleL(class TTzActualisedRule const &)
+	?CloneL@CTzId@@QBEPAV1@XZ @ 9 NONAME ; class CTzId * CTzId::CloneL(void) const
+	?Close@RTz@@QAEXXZ @ 10 NONAME ; void RTz::Close(void)
+	?Connect@RTz@@QAEHXZ @ 11 NONAME ; int RTz::Connect(void)
+	?ConvertTime@CTzActualisedRules@@QBEHAAVTTime@@W4TTzTimeReference@@@Z @ 12 NONAME ABSENT ; int CTzActualisedRules::ConvertTime(class TTime &, enum TTzTimeReference) const
+	?ConvertToLocalTime@CTzConverter@@QAEHAAVTTime@@@Z @ 13 NONAME ; int CTzConverter::ConvertToLocalTime(class TTime &)
+	?ConvertToLocalTime@CTzConverter@@QAEHAAVTTime@@ABVCTzId@@@Z @ 14 NONAME ; int CTzConverter::ConvertToLocalTime(class TTime &, class CTzId const &)
+	?ConvertToLocalTime@RTz@@QBEHAAVTTime@@@Z @ 15 NONAME ; int RTz::ConvertToLocalTime(class TTime &) const
+	?ConvertToLocalTime@RTz@@QBEHAAVTTime@@ABVCTzId@@@Z @ 16 NONAME ; int RTz::ConvertToLocalTime(class TTime &, class CTzId const &) const
+	?ConvertToUniversalTime@CTzConverter@@QAEHAAVTTime@@@Z @ 17 NONAME ; int CTzConverter::ConvertToUniversalTime(class TTime &)
+	?ConvertToUniversalTime@CTzConverter@@QAEHAAVTTime@@ABVCTzId@@@Z @ 18 NONAME ; int CTzConverter::ConvertToUniversalTime(class TTime &, class CTzId const &)
+	?ConvertToUniversalTime@RTz@@QBEHAAVTTime@@@Z @ 19 NONAME ; int RTz::ConvertToUniversalTime(class TTime &) const
+	?ConvertToUniversalTime@RTz@@QBEHAAVTTime@@ABVCTzId@@@Z @ 20 NONAME ; int RTz::ConvertToUniversalTime(class TTime &, class CTzId const &) const
+	?Count@CTzActualisedRules@@QBEHXZ @ 21 NONAME ABSENT ; int CTzActualisedRules::Count(void) const
+	?ExternalizeL@CTzActualisedRules@@QBEXAAVRWriteStream@@@Z @ 22 NONAME ABSENT ; void CTzActualisedRules::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@CTzId@@QBEXAAVRWriteStream@@@Z @ 23 NONAME ; void CTzId::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@TTzActualisedRule@@QBEXAAVRWriteStream@@@Z @ 24 NONAME ; void TTzActualisedRule::ExternalizeL(class RWriteStream &) const
+	?GetLocalTimeOffset@CTzActualisedRules@@QBEHABVTTime@@W4TTzTimeReference@@@Z @ 25 NONAME ABSENT ; int CTzActualisedRules::GetLocalTimeOffset(class TTime const &, enum TTzTimeReference) const
+	?GetOffsetsForTimeZoneIdsL@RTz@@QBEXABV?$RArray@H@@AAV2@@Z @ 26 NONAME ; void RTz::GetOffsetsForTimeZoneIdsL(class RArray<int> const &, class RArray<int> &) const
+	?GetTimeZoneIdL@RTz@@QBEPAVCTzId@@XZ @ 27 NONAME ; class CTzId * RTz::GetTimeZoneIdL(void) const
+	?InternalizeL@CTzActualisedRules@@QAEXAAVRReadStream@@@Z @ 28 NONAME ABSENT ; void CTzActualisedRules::InternalizeL(class RReadStream &)
+	?InternalizeL@CTzId@@QAEXAAVRReadStream@@@Z @ 29 NONAME ; void CTzId::InternalizeL(class RReadStream &)
+	?InternalizeL@TTzActualisedRule@@QAEXAAVRReadStream@@@Z @ 30 NONAME ; void TTzActualisedRule::InternalizeL(class RReadStream &)
+	?NewL@CTzActualisedRules@@SAPAV1@AAVRReadStream@@@Z @ 31 NONAME ABSENT ; class CTzActualisedRules * CTzActualisedRules::NewL(class RReadStream &)
+	?NewL@CTzActualisedRules@@SAPAV1@HH@Z @ 32 NONAME ABSENT ; class CTzActualisedRules * CTzActualisedRules::NewL(int, int)
+	?NewL@CTzConverter@@SAPAV1@AAVRTz@@@Z @ 33 NONAME ; class CTzConverter * CTzConverter::NewL(class RTz &)
+	?NewL@CTzId@@SAPAV1@AAVRReadStream@@@Z @ 34 NONAME ; class CTzId * CTzId::NewL(class RReadStream &)
+	?NewL@CTzId@@SAPAV1@ABVTDesC8@@@Z @ 35 NONAME ; class CTzId * CTzId::NewL(class TDesC8 const &)
+	?NewL@CTzId@@SAPAV1@I@Z @ 36 NONAME ; class CTzId * CTzId::NewL(unsigned int)
+	?Panic@RTz@@SAXW4TPanic@1@@Z @ 37 NONAME ; void RTz::Panic(enum RTz::TPanic)
+	?RuleApplies@CTzActualisedRules@@QBEHABVTTime@@W4TTzTimeReference@@@Z @ 38 NONAME ABSENT ; int CTzActualisedRules::RuleApplies(class TTime const &, enum TTzTimeReference) const
+	?SetId@CTzId@@QAEXI@Z @ 39 NONAME ; void CTzId::SetId(unsigned int)
+	?SetIdL@CTzId@@QAEXABVTDesC8@@@Z @ 40 NONAME ; void CTzId::SetIdL(class TDesC8 const &)
+	?SetTimeZoneL@RTz@@QBEXAAVCTzId@@@Z @ 41 NONAME ; void RTz::SetTimeZoneL(class CTzId &) const
+	?TimeZoneNameID@CTzId@@QBEABVTDesC8@@XZ @ 42 NONAME ; class TDesC8 const & CTzId::TimeZoneNameID(void) const
+	?TimeZoneNumericID@CTzId@@QBEIXZ @ 43 NONAME ; unsigned int CTzId::TimeZoneNumericID(void) const
+	?SetAutoUpdateBehaviorL@RTz@@QAEXW4TTzAutoDSTUpdateModes@1@@Z @ 44 NONAME ; void RTz::SetAutoUpdateBehaviorL(enum RTz::TTzAutoDSTUpdateModes)
+	?SetHomeTime@RTz@@QBEHABVTTime@@@Z @ 45 NONAME ; int RTz::SetHomeTime(class TTime const &) const
+	?IsDaylightSavingOn@CTzActualisedRules@@QBEHAAVTTime@@@Z @ 46 NONAME ABSENT ; int CTzActualisedRules::IsDaylightSavingOn(class TTime &) const
+	?IsDaylightSavingOnL@RTz@@QBEHAAVCTzId@@@Z @ 47 NONAME ; int RTz::IsDaylightSavingOnL(class CTzId &) const
+	??0TTzRule@@QAE@ABV0@@Z @ 48 NONAME ; TTzRule::TTzRule(class TTzRule const &)
+	??0TTzRule@@QAE@FFFFW4TMonth@@W4TTzRuleDay@@EEW4TTzTimeReference@@G@Z @ 49 NONAME ; TTzRule::TTzRule(short, short, short, short, enum TMonth, enum TTzRuleDay, unsigned char, unsigned char, enum TTzTimeReference, unsigned short)
+	??0TTzRule@@QAE@XZ @ 50 NONAME ; TTzRule::TTzRule(void)
+	??0TVTzActualisedRule@@QAE@XZ @ 51 NONAME ; TVTzActualisedRule::TVTzActualisedRule(void)
+	??1CTzRules@@UAE@XZ @ 52 NONAME ; CTzRules::~CTzRules(void)
+	??4TVTzActualisedRule@@QAEXV0@@Z @ 53 NONAME ; void TVTzActualisedRule::operator=(class TVTzActualisedRule)
+	??ACTzRules@@QAEAAVTTzRule@@H@Z @ 54 NONAME ; class TTzRule & CTzRules::operator[](int)
+	?Actualise@TTzRule@@QBE?AVTVTzActualisedRule@@H@Z @ 55 NONAME ; class TVTzActualisedRule TTzRule::Actualise(int) const
+	?AddRuleL@CTzRules@@QAEXVTTzRule@@@Z @ 56 NONAME ; void CTzRules::AddRuleL(class TTzRule)
+	?ConvertToLocalL@CTzRules@@QBEXAAVTTime@@@Z @ 57 NONAME ; void CTzRules::ConvertToLocalL(class TTime &) const
+	?ConvertToUtcL@CTzRules@@QBEXAAVTTime@@@Z @ 58 NONAME ; void CTzRules::ConvertToUtcL(class TTime &) const
+	?Count@CTzRules@@QBEHXZ @ 59 NONAME ; int CTzRules::Count(void) const
+	?EndYear@CTzRules@@QBEHXZ @ 60 NONAME ; int CTzRules::EndYear(void) const
+	?ExternalizeL@CTzRules@@QBEXAAVRWriteStream@@@Z @ 61 NONAME ; void CTzRules::ExternalizeL(class RWriteStream &) const
+	?GetTimeZoneRulesL@RTz@@QBEPAVCTzRules@@ABVCTzId@@ABVTTime@@1W4TTzTimeReference@@@Z @ 62 NONAME ; class CTzRules * RTz::GetTimeZoneRulesL(class CTzId const &, class TTime const &, class TTime const &, enum TTzTimeReference) const
+	?GetTimeZoneRulesL@RTz@@QBEPAVCTzRules@@ABVTTime@@0W4TTzTimeReference@@@Z @ 63 NONAME ; class CTzRules * RTz::GetTimeZoneRulesL(class TTime const &, class TTime const &, enum TTzTimeReference) const
+	?InitialStdTimeOffset@CTzRules@@QBEHXZ @ 64 NONAME ; int CTzRules::InitialStdTimeOffset(void) const
+	?InternalizeL@CTzRules@@QAEXAAVRReadStream@@@Z @ 65 NONAME ; void CTzRules::InternalizeL(class RReadStream &)
+	?NewL@CTzRules@@SAPAV1@AAVRReadStream@@@Z @ 66 NONAME ; class CTzRules * CTzRules::NewL(class RReadStream &)
+	?NewL@CTzRules@@SAPAV1@HH@Z @ 67 NONAME ; class CTzRules * CTzRules::NewL(int, int)
+	?NewL@CTzRules@@SAPAV1@XZ @ 68 NONAME ; class CTzRules * CTzRules::NewL(void)
+	?RemoveRule@CTzRules@@QAEXH@Z @ 69 NONAME ; void CTzRules::RemoveRule(int)
+	?RulesApply@CTzRules@@QBEHABVTTime@@@Z @ 70 NONAME ; int CTzRules::RulesApply(class TTime const &) const
+	?SetEndYear@CTzRules@@QAEXH@Z @ 71 NONAME ; void CTzRules::SetEndYear(int)
+	?SetInitialStdTimeOffset@CTzRules@@QAEXH@Z @ 72 NONAME ; void CTzRules::SetInitialStdTimeOffset(int)
+	?SetStartYear@CTzRules@@QAEXH@Z @ 73 NONAME ; void CTzRules::SetStartYear(int)
+	?StartYear@CTzRules@@QBEHXZ @ 74 NONAME ; int CTzRules::StartYear(void) const
+	?CloneL@CTzRules@@QBEPAV1@XZ @ 75 NONAME ; class CTzRules * CTzRules::CloneL(void) const
+	?AutoUpdateSettingL@RTz@@QAEHXZ @ 76 NONAME ; int RTz::AutoUpdateSettingL(void)
+	?CurrentTzId@CTzConverter@@QAEGXZ @ 77 NONAME ; unsigned short CTzConverter::CurrentTzId(void)
+	?IsEqualTo@CTzRules@@QBEHABV1@@Z @ 78 NONAME ; int CTzRules::IsEqualTo(class CTzRules const &) const
+	??0CTzOlsenRuleSet@@IAE@XZ @ 79 NONAME ABSENT ; CTzOlsenRuleSet::CTzOlsenRuleSet(void)
+	??0CTzOlsenRuleUse@@IAE@ABVTTzRuleUse@@ABVTTzRuleDefinition@@@Z @ 80 NONAME ABSENT ; CTzOlsenRuleUse::CTzOlsenRuleUse(class TTzRuleUse const &, class TTzRuleDefinition const &)
+	??0CTzOlsenRuleUse@@IAE@XZ @ 81 NONAME ABSENT ; CTzOlsenRuleUse::CTzOlsenRuleUse(void)
+	??0CTzOlsenStdTimeAlignment@@IAE@PAVTTzStdTimeAlignment@@@Z @ 82 NONAME ABSENT ; CTzOlsenStdTimeAlignment::CTzOlsenStdTimeAlignment(class TTzStdTimeAlignment *)
+	??0CTzOlsenStdTimeAlignment@@IAE@XZ @ 83 NONAME ABSENT ; CTzOlsenStdTimeAlignment::CTzOlsenStdTimeAlignment(void)
+	??1CTzOlsenRuleSet@@UAE@XZ @ 84 NONAME ABSENT ; CTzOlsenRuleSet::~CTzOlsenRuleSet(void)
+	??1CTzOlsenRules@@UAE@XZ @ 85 NONAME ABSENT ; CTzOlsenRules::~CTzOlsenRules(void)
+	?Actualise@CTzOlsenRuleUse@@SA?AVTTzActualisedRule@@VTTzRuleDefinition@@HH@Z @ 86 NONAME ABSENT ; class TTzActualisedRule CTzOlsenRuleUse::Actualise(class TTzRuleDefinition, int, int)
+	?AddStdAlignmentL@CTzOlsenRules@@QAEXPAVCTzOlsenStdTimeAlignment@@@Z @ 87 NONAME ABSENT ; void CTzOlsenRules::AddStdAlignmentL(class CTzOlsenStdTimeAlignment *)
+	?CalculateEndTime@CTzOlsenStdTimeAlignment@@IAEXAAVTTime@@@Z @ 88 NONAME ABSENT ; void CTzOlsenStdTimeAlignment::CalculateEndTime(class TTime &)
+	?CalculateStartTime@CTzOlsenStdTimeAlignment@@IAEXAAVTTime@@@Z @ 89 NONAME ABSENT ; void CTzOlsenStdTimeAlignment::CalculateStartTime(class TTime &)
+	?EndYear@CTzOlsenRules@@QBEHXZ @ 90 NONAME ABSENT ; int CTzOlsenRules::EndYear(void) const
+	?ExternalizeL@CTzOlsenRuleSet@@QBEXAAVRWriteStream@@@Z @ 91 NONAME ABSENT ; void CTzOlsenRuleSet::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@CTzOlsenRuleUse@@QBEXAAVRWriteStream@@@Z @ 92 NONAME ABSENT ; void CTzOlsenRuleUse::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@CTzOlsenRules@@QBEXAAVRWriteStream@@@Z @ 93 NONAME ABSENT ; void CTzOlsenRules::ExternalizeL(class RWriteStream &) const
+	?ExternalizeL@CTzOlsenStdTimeAlignment@@QBEXAAVRWriteStream@@@Z @ 94 NONAME ABSENT ; void CTzOlsenStdTimeAlignment::ExternalizeL(class RWriteStream &) const
+	?GetRulesL@CTzOlsenRuleSet@@QBEXAAVCTzActualisedRules@@ABVTTzActualisedRule@@HABVTDateTime@@2@Z @ 95 NONAME ABSENT ; void CTzOlsenRuleSet::GetRulesL(class CTzActualisedRules &, class TTzActualisedRule const &, int, class TDateTime const &, class TDateTime const &) const
+	?GetRulesL@CTzOlsenRuleUse@@QBEXAAVCTzActualisedRules@@HABVTDateTime@@1ABVTTzActualisedRule@@@Z @ 96 NONAME ABSENT ; void CTzOlsenRuleUse::GetRulesL(class CTzActualisedRules &, int, class TDateTime const &, class TDateTime const &, class TTzActualisedRule const &) const
+	?GetRulesL@CTzOlsenRules@@QBEXAAVCTzActualisedRules@@@Z @ 97 NONAME ABSENT ; void CTzOlsenRules::GetRulesL(class CTzActualisedRules &) const
+	?GetRulesL@CTzOlsenStdTimeAlignment@@QAEXAAVCTzActualisedRules@@ABVTDateTime@@AAV3@@Z @ 98 NONAME ABSENT ; void CTzOlsenStdTimeAlignment::GetRulesL(class CTzActualisedRules &, class TDateTime const &, class TDateTime &)
+	?GetTimeZoneOlsenRulesL@RTz@@QBEPAVCTzOlsenRules@@ABVTTime@@0W4TTzTimeReference@@@Z @ 99 NONAME ABSENT ; class CTzOlsenRules * RTz::GetTimeZoneOlsenRulesL(class TTime const &, class TTime const &, enum TTzTimeReference) const
+	?InternalizeL@CTzOlsenRuleSet@@QAEXAAVRReadStream@@@Z @ 100 NONAME ABSENT ; void CTzOlsenRuleSet::InternalizeL(class RReadStream &)
+	?InternalizeL@CTzOlsenRuleUse@@QAEXAAVRReadStream@@@Z @ 101 NONAME ABSENT ; void CTzOlsenRuleUse::InternalizeL(class RReadStream &)
+	?InternalizeL@CTzOlsenRules@@QAEXAAVRReadStream@@@Z @ 102 NONAME ABSENT ; void CTzOlsenRules::InternalizeL(class RReadStream &)
+	?InternalizeL@CTzOlsenStdTimeAlignment@@QAEXAAVRReadStream@@@Z @ 103 NONAME ABSENT ; void CTzOlsenStdTimeAlignment::InternalizeL(class RReadStream &)
+	?IsTimeInStdTimeAlignment@CTzOlsenStdTimeAlignment@@QAEHHHHHHW4TTzTimeReference@@@Z @ 104 NONAME ABSENT ; int CTzOlsenStdTimeAlignment::IsTimeInStdTimeAlignment(int, int, int, int, int, enum TTzTimeReference)
+	?NewL@CTzOlsenRuleSet@@SAPAV1@AAVRReadStream@@@Z @ 105 NONAME ABSENT ; class CTzOlsenRuleSet * CTzOlsenRuleSet::NewL(class RReadStream &)
+	?NewL@CTzOlsenRuleUse@@SAPAV1@AAVRReadStream@@@Z @ 106 NONAME ABSENT ; class CTzOlsenRuleUse * CTzOlsenRuleUse::NewL(class RReadStream &)
+	?NewL@CTzOlsenRuleUse@@SAPAV1@ABVTTzRuleUse@@ABVTTzRuleDefinition@@@Z @ 107 NONAME ABSENT ; class CTzOlsenRuleUse * CTzOlsenRuleUse::NewL(class TTzRuleUse const &, class TTzRuleDefinition const &)
+	?NewL@CTzOlsenRules@@SAPAV1@AAVRReadStream@@@Z @ 108 NONAME ABSENT ; class CTzOlsenRules * CTzOlsenRules::NewL(class RReadStream &)
+	?NewL@CTzOlsenRules@@SAPAV1@HH@Z @ 109 NONAME ABSENT ; class CTzOlsenRules * CTzOlsenRules::NewL(int, int)
+	?NewL@CTzOlsenRules@@SAPAV1@XZ @ 110 NONAME ABSENT ; class CTzOlsenRules * CTzOlsenRules::NewL(void)
+	?NewL@CTzOlsenStdTimeAlignment@@SAPAV1@AAVRReadStream@@PAVTTzStdTimeAlignment@@@Z @ 111 NONAME ABSENT ; class CTzOlsenStdTimeAlignment * CTzOlsenStdTimeAlignment::NewL(class RReadStream &, class TTzStdTimeAlignment *)
+	?RuleDefinition@CTzOlsenRuleUse@@QAEAAVTTzRuleDefinition@@XZ @ 112 NONAME ABSENT ; class TTzRuleDefinition & CTzOlsenRuleUse::RuleDefinition(void)
+	?RuleUse@CTzOlsenRuleUse@@QAEABVTTzRuleUse@@XZ @ 113 NONAME ABSENT ; class TTzRuleUse const & CTzOlsenRuleUse::RuleUse(void)
+	?RulesApply@CTzOlsenRules@@QBEHABVTTime@@@Z @ 114 NONAME ABSENT ; int CTzOlsenRules::RulesApply(class TTime const &) const
+	?SetInitialStdTimeOffset@CTzOlsenRules@@QAEXH@Z @ 115 NONAME ABSENT ; void CTzOlsenRules::SetInitialStdTimeOffset(int)
+	?StartYear@CTzOlsenRules@@QBEHXZ @ 116 NONAME ABSENT ; int CTzOlsenRules::StartYear(void) const
+	??1CTzOlsenStdTimeAlignment@@UAE@XZ @ 117 NONAME ABSENT ; CTzOlsenStdTimeAlignment::~CTzOlsenStdTimeAlignment(void)
+	?Count@CTzOlsenRules@@QBEHXZ @ 118 NONAME ABSENT ; int CTzOlsenRules::Count(void) const
+	?AddSerializedSize@CTzOlsenRuleSet@@QBEXAAH@Z @ 119 NONAME ABSENT ; void CTzOlsenRuleSet::AddSerializedSize(int &) const
+	?AddSerializedSize@CTzOlsenRuleUse@@QBEXAAH@Z @ 120 NONAME ABSENT ; void CTzOlsenRuleUse::AddSerializedSize(int &) const
+	?AddSerializedSize@CTzOlsenRules@@QBEXAAH@Z @ 121 NONAME ABSENT ; void CTzOlsenRules::AddSerializedSize(int &) const
+	?AddSerializedSize@CTzOlsenStdTimeAlignment@@QBEXAAH@Z @ 122 NONAME ABSENT ; void CTzOlsenStdTimeAlignment::AddSerializedSize(int &) const
+	?InitialStdTimeOffset@CTzOlsenRules@@QBEHXZ @ 123 NONAME ABSENT ; int CTzOlsenRules::InitialStdTimeOffset(void) const
+	?NotifyHomeTimeZoneChangedL@RTz@@QBEXABUTTimeZoneChange@NTzUpdate@@@Z @ 124 NONAME ; void RTz::NotifyHomeTimeZoneChangedL(struct NTzUpdate::TTimeZoneChange const &) const
+	??0TTzRule@@QAE@VTTimeWithReference@@0FFW4TMonth@@W4TTzRuleDay@@EEW4TTzTimeReference@@G@Z @ 125 NONAME ; TTzRule::TTzRule(class TTimeWithReference, class TTimeWithReference, short, short, enum TMonth, enum TTzRuleDay, unsigned char, unsigned char, enum TTzTimeReference, unsigned short)
+	??ACTzActualisedRules@@QBEABVTTzActualisedRule@@H@Z @ 126 NONAME ABSENT ; class TTzActualisedRule const & CTzActualisedRules::operator[](int) const
+	?ConvertTime@CTzRules@@QBEHAAVCVTzActualisedRules@@AAVTTime@@W4TTzTimeReference@@@Z @ 127 NONAME ; int CTzRules::ConvertTime(class CVTzActualisedRules &, class TTime &, enum TTzTimeReference) const
+	?GetActualisedRulesL@CTzRules@@ABEXAAVCVTzActualisedRules@@H@Z @ 128 NONAME ABSENT ; void CTzRules::GetActualisedRulesL(class CVTzActualisedRules &, int) const
+	?GetActualisedRulesL@CTzRules@@QBEXAAVCVTzActualisedRules@@@Z @ 129 NONAME ; void CTzRules::GetActualisedRulesL(class CVTzActualisedRules &) const
+	?NewL@CVTzActualisedRules@@SAPAV1@HH@Z @ 130 NONAME ; class CVTzActualisedRules * CVTzActualisedRules::NewL(int, int)
+	??ACVTzActualisedRules@@QBEAAVTVTzActualisedRule@@H@Z @ 131 NONAME ; class TVTzActualisedRule & CVTzActualisedRules::operator[](int) const
+	?Count@CVTzActualisedRules@@QBEHXZ @ 132 NONAME ; int CVTzActualisedRules::Count(void) const
+	?EndYear@CVTzActualisedRules@@QBEHXZ @ 133 NONAME ; int CVTzActualisedRules::EndYear(void) const
+	?StartYear@CVTzActualisedRules@@QBEHXZ @ 134 NONAME ; int CVTzActualisedRules::StartYear(void) const
+	?SetUnknownZoneTimeL@RTz@@QAEXABVTTime@@H@Z @ 135 NONAME ; void RTz::SetUnknownZoneTimeL(class TTime const &, int)
+	??0TVTzActualisedRule@@QAE@VTTime@@HW4TTzTimeReference@@@Z @ 136 NONAME ; TVTzActualisedRule::TVTzActualisedRule(class TTime, int, enum TTzTimeReference)
+	??1CVTzActualisedRules@@UAE@XZ @ 137 NONAME ; CVTzActualisedRules::~CVTzActualisedRules(void)
+	?AddRuleL@CVTzActualisedRules@@QAEXABVTVTzActualisedRule@@@Z @ 138 NONAME ; void CVTzActualisedRules::AddRuleL(class TVTzActualisedRule const &)
+	?GetOffsetFromRuleL@CVTzActualisedRules@@QBEHABVTTime@@W4TTzTimeReference@@@Z @ 139 NONAME ; int CVTzActualisedRules::GetOffsetFromRuleL(class TTime const &, enum TTzTimeReference) const
+	?IsDaylightSavingOn@CVTzActualisedRules@@QBEHAAVTTime@@@Z @ 140 NONAME ; int CVTzActualisedRules::IsDaylightSavingOn(class TTime &) const
+	?ActualiseL@TTzRule@@QBE?AVTVTzActualisedRule@@H@Z @ 141 NONAME ; class TVTzActualisedRule TTzRule::ActualiseL(int) const
+	?__dbgClearCacheL@RTz@@QAEXH@Z @ 142 NONAME ; void RTz::__dbgClearCacheL(int)
+	?IsDaylightSavingOnL@RTz@@QBEHAAVCTzId@@ABVTTime@@@Z @ 143 NONAME ; int RTz::IsDaylightSavingOnL(class CTzId &, class TTime const &) const
+    ?SetUnknownZoneTimeL@RTz@@QAEXABVTTime@@HH@Z @ 144  NONAME ; void RTz::SetUnknownZoneTimeL(class TTime const &, int, int)
+	??1CTzUserData@@UAE@XZ @ 145  NONAME ; CTzUserData::~CTzUserData(void)
+	??1CTzUserNames@@UAE@XZ @ 146  NONAME ; CTzUserNames::~CTzUserNames(void)
+	?CityName@CTzUserNames@@QBEABVTDesC16@@XZ @ 147  NONAME ; class TDesC16 const & CTzUserNames::CityName(void) const
+	?CreateL@CTzUserData@@QAEPAVCTzId@@ABVCTzRules@@ABVCTzUserNames@@@Z @ 148  NONAME ; class CTzId * CTzUserData::CreateL(class CTzRules const &, class CTzUserNames const &)
+	?DaylightSaveName@CTzUserNames@@QBEABVTDesC16@@XZ @ 149  NONAME ; class TDesC16 const & CTzUserNames::DaylightSaveName(void) const
+	?DeleteL@CTzUserData@@QAEXABVCTzId@@@Z @ 150  NONAME ; void CTzUserData::DeleteL(class CTzId const &)
+	?ExternalizeL@CTzUserNames@@QBEXAAVRWriteStream@@@Z @ 151  NONAME ; void CTzUserNames::ExternalizeL(class RWriteStream &) const
+	?GetOffsetL@CTzRules@@QBEHABVTTime@@W4TTzTimeReference@@@Z @ 152  NONAME ; int CTzRules::GetOffsetL(class TTime const &, enum TTzTimeReference) const
+	?GetTzIdsL@CTzUserData@@QBEXAAV?$RPointerArray@VCTzId@@@@@Z @ 153  NONAME ; void CTzUserData::GetTzIdsL(class RPointerArray<class CTzId> &) const
+	?InternalizeL@CTzUserNames@@QAEXAAVRReadStream@@@Z @ 154  NONAME ; void CTzUserNames::InternalizeL(class RReadStream &)
+	?IsUserTzId@CTzId@@QBEHXZ @ 155  NONAME ; int CTzId::IsUserTzId(void) const
+	?NewL@CTzUserData@@SAPAV1@AAVRTz@@@Z @ 156  NONAME ; class CTzUserData * CTzUserData::NewL(class RTz &)
+	?NewL@CTzUserNames@@SAPAV1@ABVTDesC16@@00000@Z @ 157  NONAME ; class CTzUserNames * CTzUserNames::NewL(class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &)
+	?NewLC@CTzUserNames@@SAPAV1@ABVTDesC16@@00000@Z @ 158  NONAME ; class CTzUserNames * CTzUserNames::NewLC(class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &)
+	?ReadNamesL@CTzUserData@@QBEPAVCTzUserNames@@ABVCTzId@@@Z @ 159  NONAME ; class CTzUserNames * CTzUserData::ReadNamesL(class CTzId const &) const
+	?ReadRulesL@CTzUserData@@QBEPAVCTzRules@@ABVCTzId@@@Z @ 160  NONAME ; class CTzRules * CTzUserData::ReadRulesL(class CTzId const &) const
+	?RegionName@CTzUserNames@@QBEABVTDesC16@@XZ @ 161  NONAME ; class TDesC16 const & CTzUserNames::RegionName(void) const
+	?ShortDaylightSaveName@CTzUserNames@@QBEABVTDesC16@@XZ @ 162  NONAME ; class TDesC16 const & CTzUserNames::ShortDaylightSaveName(void) const
+	?ShortStandardName@CTzUserNames@@QBEABVTDesC16@@XZ @ 163  NONAME ; class TDesC16 const & CTzUserNames::ShortStandardName(void) const
+	?StandardName@CTzUserNames@@QBEABVTDesC16@@XZ @ 164  NONAME ; class TDesC16 const & CTzUserNames::StandardName(void) const
+	?UpdateL@CTzUserData@@QAEXABVCTzId@@ABVCTzRules@@ABVCTzUserNames@@@Z @ 165  NONAME ; void CTzUserData::UpdateL(class CTzId const &, class CTzRules const &, class CTzUserNames const &)
+	?__dbgRequestAllocatedCellsL@RTz@@QAEHH@Z @ 166  NONAME ; int RTz::__dbgRequestAllocatedCellsL(int)
+	?__dbgSetHeapFailL@RTz@@QAEXW4TAllocFail@RAllocator@@H@Z @ 167  NONAME ; void RTz::__dbgSetHeapFailL(enum RAllocator::TAllocFail, int)
+	?NewL@CTzUserNames@@SAPAV1@AAVRReadStream@@@Z @ 168  NONAME ; class CTzUserNames * CTzUserNames::NewL(class RReadStream &)
+	?__dbgResetHeapL@RTz@@QAEXXZ @ 169  NONAME ; void RTz::__dbgResetHeapL(void)
+	?SizeOfObject@CTzRules@@QBEHXZ @ 170  NONAME ; int CTzRules::SizeOfObject(void) const
+	?SizeOfObject@CTzUserNames@@QBEHXZ @ 171  NONAME ; int CTzUserNames::SizeOfObject(void) const
+	??1CTzLocalizedCityRecord@@UAE@XZ @ 172  NONAME ; CTzLocalizedCityRecord::~CTzLocalizedCityRecord(void)
+	?ExternalizeL@CTzLocalizedCityRecord@@QBEXAAVRWriteStream@@@Z @ 173  NONAME ; void CTzLocalizedCityRecord::ExternalizeL(class RWriteStream &) const
+	?ExternalizeSize@CTzLocalizedCityRecord@@QBEHXZ @ 174  NONAME ; int CTzLocalizedCityRecord::ExternalizeSize(void) const
+	?NewLC@CTzLocalizedTimeZoneRecord@@SAPAV1@HABVTDesC16@@000I@Z @ 175  NONAME ; class CTzLocalizedTimeZoneRecord * CTzLocalizedTimeZoneRecord::NewLC(int, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, unsigned int)
+	??1CTzLocalizedTimeZoneRecord@@UAE@XZ @ 176  NONAME ; CTzLocalizedTimeZoneRecord::~CTzLocalizedTimeZoneRecord(void)
+	?NewL@CTzLocalizedCityRecord@@SAPAV1@AAVRReadStream@@@Z @ 177  NONAME ; class CTzLocalizedCityRecord * CTzLocalizedCityRecord::NewL(class RReadStream &)
+	?NewLC@CTzLocalizedTimeZoneRecord@@SAPAV1@AAVRReadStream@@@Z @ 178  NONAME ; class CTzLocalizedTimeZoneRecord * CTzLocalizedTimeZoneRecord::NewLC(class RReadStream &)
+	?NewL@CTzLocalizedTimeZoneRecord@@SAPAV1@AAVRReadStream@@@Z @ 179  NONAME ; class CTzLocalizedTimeZoneRecord * CTzLocalizedTimeZoneRecord::NewL(class RReadStream &)
+	?NewL@CTzLocalizedTimeZoneRecord@@SAPAV1@HABVTDesC16@@000I@Z @ 180  NONAME ; class CTzLocalizedTimeZoneRecord * CTzLocalizedTimeZoneRecord::NewL(int, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, unsigned int)
+	?LocalizationDeleteCityL@RTz@@QAEXABVTDesC16@@H@Z @ 181  NONAME ; void RTz::LocalizationDeleteCityL(class TDesC16 const &, int)
+	?LocalizationWriteCityL@RTz@@QAEXABVTDesC16@@HEI@Z @ 182  NONAME ; void RTz::LocalizationWriteCityL(class TDesC16 const &, int, unsigned char, unsigned int)
+	?ExternalizeL@CTzLocalizedTimeZoneRecord@@QBEXAAVRWriteStream@@@Z @ 183  NONAME ; void CTzLocalizedTimeZoneRecord::ExternalizeL(class RWriteStream &) const
+	?ExternalizeSize@CTzLocalizedTimeZoneRecord@@QBEHXZ @ 184  NONAME ; int CTzLocalizedTimeZoneRecord::ExternalizeSize(void) const
+	?NewL@CTzLocalizedCityRecord@@SAPAV1@ABVTDesC16@@EHHI@Z @ 185  NONAME ; class CTzLocalizedCityRecord * CTzLocalizedCityRecord::NewL(class TDesC16 const &, unsigned char, int, int, unsigned int)
+	?NewLC@CTzLocalizedCityRecord@@SAPAV1@AAVRReadStream@@@Z @ 186  NONAME ; class CTzLocalizedCityRecord * CTzLocalizedCityRecord::NewLC(class RReadStream &)
+	?NewLC@CTzLocalizedCityRecord@@SAPAV1@ABVTDesC16@@EHHI@Z @ 187  NONAME ; class CTzLocalizedCityRecord * CTzLocalizedCityRecord::NewLC(class TDesC16 const &, unsigned char, int, int, unsigned int)
+	?LocalizationWriteFrequentlyUsedZoneL@RTz@@QAEXABVCTzLocalizedTimeZoneRecord@@ABVCTzLocalizedCityRecord@@H@Z @ 188  NONAME ; void RTz::LocalizationWriteFrequentlyUsedZoneL(class CTzLocalizedTimeZoneRecord const &, class CTzLocalizedCityRecord const &, int)
+	?InternalizeL@CTzLocalizedCityRecord@@SAXAAVRReadStream@@AAV?$RPointerArray@VCTzLocalizedCityRecord@@@@@Z @ 189  NONAME ; void CTzLocalizedCityRecord::InternalizeL(class RReadStream &, class RPointerArray<class CTzLocalizedCityRecord> &)
+	?InternalizeL@CTzLocalizedTimeZoneRecord@@SAXAAVRReadStream@@AAV?$RPointerArray@VCTzLocalizedTimeZoneRecord@@@@@Z @ 190  NONAME ; void CTzLocalizedTimeZoneRecord::InternalizeL(class RReadStream &, class RPointerArray<class CTzLocalizedTimeZoneRecord> &)
+	?LocalizationWriteAllFrequentlyUsedZonesL@RTz@@QAEXABV?$RPointerArray@VCTzLocalizedTimeZoneRecord@@@@ABV?$RPointerArray@VCTzLocalizedCityRecord@@@@@Z @ 191  NONAME ; void RTz::LocalizationWriteAllFrequentlyUsedZonesL(class RPointerArray<class CTzLocalizedTimeZoneRecord> const &, class RPointerArray<class CTzLocalizedCityRecord> const &)
+	?LocalizationReadCitiesL@RTz@@QAEXAAV?$RPointerArray@VCTzLocalizedCityRecord@@@@@Z @ 192  NONAME ; void RTz::LocalizationReadCitiesL(class RPointerArray<class CTzLocalizedCityRecord> &)
+	?ExternalizeL@CTzLocalizedCityRecord@@SAXABV?$RPointerArray@VCTzLocalizedCityRecord@@@@AAVRWriteStream@@@Z @ 193  NONAME ; void CTzLocalizedCityRecord::ExternalizeL(class RPointerArray<class CTzLocalizedCityRecord> const &, class RWriteStream &)
+	?ExternalizeL@CTzLocalizedTimeZoneRecord@@SAXABV?$RPointerArray@VCTzLocalizedTimeZoneRecord@@@@AAVRWriteStream@@@Z @ 194  NONAME ; void CTzLocalizedTimeZoneRecord::ExternalizeL(class RPointerArray<class CTzLocalizedTimeZoneRecord> const &, class RWriteStream &)
+	?ExternalizeSize@CTzLocalizedCityRecord@@SAHABV?$RPointerArray@VCTzLocalizedCityRecord@@@@@Z @ 195  NONAME ; int CTzLocalizedCityRecord::ExternalizeSize(class RPointerArray<class CTzLocalizedCityRecord> const &)
+	?ExternalizeSize@CTzLocalizedTimeZoneRecord@@SAHABV?$RPointerArray@VCTzLocalizedTimeZoneRecord@@@@@Z @ 196  NONAME ; int CTzLocalizedTimeZoneRecord::ExternalizeSize(class RPointerArray<class CTzLocalizedTimeZoneRecord> const &)
+	?LocalizationReadCitiesInGroupL@RTz@@QAEXAAV?$RPointerArray@VCTzLocalizedCityRecord@@@@E@Z @ 197  NONAME ; void RTz::LocalizationReadCitiesInGroupL(class RPointerArray<class CTzLocalizedCityRecord> &, unsigned char)
+	?LocalizationReadCitiesL@RTz@@QAEXAAV?$RPointerArray@VCTzLocalizedCityRecord@@@@H@Z @ 198  NONAME ; void RTz::LocalizationReadCitiesL(class RPointerArray<class CTzLocalizedCityRecord> &, int)
+	?LocalizationReadCachedTimeZoneCityL@RTz@@QAEPAVCTzLocalizedCityRecord@@H@Z @ 199  NONAME ; class CTzLocalizedCityRecord * RTz::LocalizationReadCachedTimeZoneCityL(int)
+	?LocalizationReadFrequentlyUsedZoneL@RTz@@QAEPAVCTzLocalizedTimeZoneRecord@@H@Z @ 200  NONAME ; class CTzLocalizedTimeZoneRecord * RTz::LocalizationReadFrequentlyUsedZoneL(int)
+	?CopyL@CTzRules@@QAEXABV1@@Z @ 201  NONAME ; void CTzRules::CopyL(class CTzRules const &)
+	?IsUserTzId@CTzId@@SAHI@Z @ 202  NONAME ; int CTzId::IsUserTzId(unsigned int)
+	?SwiObsBeginL@RTz@@QAEXXZ @ 203  NONAME ; void RTz::SwiObsBeginL(void)
+	?SwiObsEndL@RTz@@QAEXXZ @ 204  NONAME ; void RTz::SwiObsEndL(void)
+	?SwiObsFileChangedL@RTz@@QAEXW4TSWIObserverFilterIndex@1@@Z @ 205  NONAME ; void RTz::SwiObsFileChangedL(enum RTz::TSWIObserverFilterIndex)
+	?LocalizationCloseDbL@RTz@@QAEXXZ @ 206  NONAME ; void RTz::LocalizationCloseDbL(void)
+	?LocalizationOpenDbL@RTz@@QAEXXZ @ 207  NONAME ; void RTz::LocalizationOpenDbL(void)
+	?CleanupArray@CTzLocalizedCityRecord@@SAXPAX@Z @ 208  NONAME ; void CTzLocalizedCityRecord::CleanupArray(void *)
+	?CleanupArray@CTzLocalizedTimeZoneRecord@@SAXPAX@Z @ 209  NONAME ; void CTzLocalizedTimeZoneRecord::CleanupArray(void *)
+	

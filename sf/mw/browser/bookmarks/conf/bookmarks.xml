@@ -1,0 +1,38 @@
+<xbel version="1.0">
+	<bookmark href="http://testsuite.nokia-boston.com" >
+		<title>TCG</title>
+	</bookmark>
+	<bookmark href="http://iop1.nokia-boston.com/index.html" >
+		<title>Browser 8.x NFT</title>
+	</bookmark>
+	<bookmark href="http://browser.nokia.com/testing/" >
+		<title>Browser Testing Center</title>
+	</bookmark>
+	<bookmark href="http://testsuite.nokia-boston.com/HTML5/index.html" >
+		<title>HTML 5 test page</title>
+	</bookmark>	
+	<bookmark href="http://www.nokia.com" >
+		<title>Nokia</title>
+	</bookmark>
+	<bookmark href="http://www.ovi.com" >
+		<title>OVI</title>
+	</bookmark>
+	<bookmark href="http://www.google.com" >
+		<title>Google</title>
+	</bookmark>
+	<bookmark href="http://www.gmail.com" >
+		<title>GMail</title>
+	</bookmark>
+	<bookmark href="http://www.cnn.com" >
+		<title>CNN</title>
+	</bookmark>
+	<bookmark href="http://www.whatsmayuseragent.com" >
+		<title>What's my user agent?</title>
+	</bookmark>
+	<bookmark href="http://www.youtube.com" >
+		<title>Youtube</title>
+	</bookmark>
+	<bookmark href="http://www.iltasanomat.fi" >
+		<title>Iltasanomat</title>
+	</bookmark>
+</xbel>

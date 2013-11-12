@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project SAnimEngine
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/startupanimation.mmh"
+
+TARGET          sanimengine.dll
+TARGETTYPE      dll
+UID             0x2000B117
+
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../src
+SOURCE          sanimengine.cpp
+SOURCE          sanimengineimpl.cpp
+SOURCE          sanimimageplugin.cpp
+SOURCE          sanimpanic.cpp
+SOURCE          sanimplugin.cpp
+SOURCE          sanimpluginctrl.cpp
+SOURCE          sanimtoneplugin.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../../inc
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY         ecom.lib
+LIBRARY         euser.lib
+LIBRARY         fbscli.lib
+
+SMPSAFE

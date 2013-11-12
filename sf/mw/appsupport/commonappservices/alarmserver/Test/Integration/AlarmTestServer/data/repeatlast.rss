@@ -1,0 +1,45 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#include <badef.rh>
+#include "AlarmServer.hrh"
+#include "AlarmServer.rh"
+
+NAME ASRV
+
+RESOURCE BA_RSS_SIGNATURE
+	{
+	signature = 1;
+	}
+
+RESOURCE SOUND_CONTROLLER sound_controller
+	{
+	option = EAlarmSoundRepeatSettingRepeatLast;
+	intervals = 
+		{
+		// leave empty to disable alarm server control of alarm intervals
+		
+		// Offset in minutes, duration in seconds
+
+		SOUND_INTERVAL
+			{
+			offset=0; duration=30;
+			},
+		SOUND_INTERVAL
+			{
+			offset=1; duration=30;
+			}
+		};
+	}

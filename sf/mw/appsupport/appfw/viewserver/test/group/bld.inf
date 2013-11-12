@@ -1,0 +1,49 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+// test code only
+
+PRJ_MMPFILES
+// test code only
+
+PRJ_TESTMMPFILES
+appfwk_viewsrv_test_server.mmp
+../tviews/applaunchtest/group/applaunchtest.mmp	support
+../tviews/tview1/tview1.MMP support
+../tviews/tview2/tview2.MMP support
+../tviews/tview3/tview3.MMP support
+../tviews/tview4/tview4.mmp support
+
+PRJ_TESTEXPORTS
+// ViewSrv IBY containing scripts for test execution on hardware
+../rom/appfwk_viewsrv_test.iby 				/epoc32/rom/include/viewsrvtest.iby
+
+// ViewSrv batch files for hardware test execution
+../scripts/hardware/viewsrvtest_run.bat 		/epoc32/data/z/viewsrvtest/viewsrvtest_run.bat
+
+// ViewSrv batch files for automated emulator (WINSCW UDEB) test execution 
+../scripts/emulator/viewsrvtest_run.bat			/epoc32/release/winscw/udeb/viewsrvtest_run.bat
+
+// ViewSrv batch files for automated emulator (WINSCW UREL) test execution 
+../scripts/emulator/viewsrvtest_run.bat			/epoc32/release/winscw/urel/viewsrvtest_run.bat
+
+// ViewSrv TEF scripts
+../scripts/appfwk_viewsrv_test_Capability1.script 	z:/viewsrvtest/viewsrvtest_capability1.script
+../scripts/appfwk_viewsrv_test_Capability2.script 	z:/viewsrvtest/viewsrvtest_capability2.script
+../scripts/appfwk_viewsrv_test_tvwa.script 	z:/viewsrvtest/viewsrvtest_tvwa.script

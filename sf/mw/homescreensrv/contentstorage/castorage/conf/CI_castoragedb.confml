@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<confml:configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.s60.com/xml/confml/2" xmlns:confml="http://www.s60.com/xml/confml/2" xsi:schemaLocation="http://www.s60.com/xml/confml/2 http://www.s60.com/xml/confml/1#//confml2" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="Content storage database settings">
+	<confml:feature ref="CaStorageDbSetting" name="Application Library model">	
+		<setting ref="OperatorCollections"	name="Operator Collections" maxOccurs="1" minOccurs="0" type="sequence" mapKey="Name" mapValue="Name">
+			<setting ref="Name" name="Collection Name" type="string" required="true">
+				<desc>Name of the Operator Collection.</desc>
+				<xs:maxLength value="32"/>
+			</setting>
+			<confml:setting ref="ShortName" name="Collection Short Name" type="string">
+				<confml:desc>Collection short name. Optional. Name used in Homescreen when shortcut to collection is created.</confml:desc>
+			</confml:setting>
+			<confml:setting ref="TitleName" name="Collection Title Name" type="string">
+				<confml:desc>Collection title name. Optional. Name displayed when user enter to collection (heading).</confml:desc>
+			</confml:setting>	
+			<setting name="Collection Group Name" ref="GroupName" type="string">
+				<desc>Group name. Not localized name. Identify collection where application with predefined group name should be added after installation.</desc>
+			</setting>
+			<setting ref="Locked" name="Lock Operator Collection and content" type="boolean">
+				<desc>Lock operator collection and content - user can not delete operator collection, prevent renaming collection and even content. Not possible by user to add new content to defined collection</desc>
+			</setting>
+			<setting ref="Icon" name="Collection Icon" type="file" >
+				<desc>Icon.</desc>
+				<property name="type" value="image/svg" unit="mime"/>
+				<localPath></localPath>
+				<targetPath readOnly="true"/>
+			</setting>
+			<setting ref="IconSkinId" name="Icon Theme ID" type="string">
+				<desc>Icon Theme id. </desc>
+			</setting>
+		</setting>
+		<setting ref="OperatorURLs"	 name="Operator URLs"  minOccurs="0" type="sequence" mapKey="URLTitle" mapValue="URLTitle">
+			<setting ref="URLTitle" name="Operator URL Title" type="string" required="true">
+				<desc>Title of the Operator URL</desc>
+			</setting>	 
+			<setting ref="URLShortTitle" name="Operator URL Short Title" type="string">
+				<desc>Short Title of the Operator URL. Optional. Displayed when shortcut to Url is added to Homescreen</desc>
+			</setting>	 			
+			<setting ref="URL" name="Operator URL" type="string" required="true">
+				<desc>URL</desc>
+				<xs:pattern value="(http(|s)://([\w-]+\.)+[\w-]+(:[0-9]{1,5})?(/[\w- ./?%&amp;=]*)?|)"/>
+			</setting>
+			<setting ref="URLIcon" name="Operator URL Icon" type="file">
+				<desc>Icon for the Operator URL.</desc>
+				<property name="type" value="image/svg" unit="mime"/>
+				<localPath></localPath>
+				<targetPath readOnly="true"/>
+			</setting>
+			<setting ref="IconSkinId" name="Icon Theme ID" type="string">
+				<desc>Icon Theme id. </desc>
+			</setting>
+		</setting>	
+		<setting ref="OperatorCollectionItems"	name="Operator Collection content"  minOccurs="0" type="sequence" >
+			<setting ref="Type" name="Item type" type="selection">
+				<desc>Type of collection item.</desc>
+				<option name="Application" value="1"/>
+				<option name="Homescreen widget" value="2"/>
+				<option name="URL" value="3"/>
+			</setting>
+			<setting ref="Application" name="Application" type="string" relevant="Type='1'" required="true">
+				<desc>Application item for Operator collection.</desc>
+				<xs:pattern value="^0x[0-9a-fA-F]{1,8}$"/>
+				<!-- option map="DFSFeatures/Application"/>
+				<option map="CIA_PreinstalledContent/PreInstalledJavaRom"/>
+				<option map="CIA_PreinstalledContent/PreInstalledSymbianROM"/>
+				<option map="CIA_PreinstalledContent/PreInstalledSymbianUDA"/>
+				<option map="CIA_PreinstalledContent/PreInstalledJavaUDA"/-->
+			</setting>
+			<setting ref="HomescreenWidget" name="Homescreen widget" type="string" relevant="Type='2'" required="true">
+				<desc>Homescreen widget item for Operator collection</desc>
+				<!-- option map="HomescreenWidgets/Widgets"/>
+				<option map="CIA_PreinstalledWidgetUDA/PreInstalledWidgetUDA" /-->
+			</setting>
+			<setting ref="URL" name="Operator URL" type="selection" relevant="Type='3'" required="true">		
+				<option map="CaStorageDbSetting/OperatorURLs"/>
+			</setting>
+		</setting>
+		
+    <confml:setting ref="Collections" mapKey="Name" mapValue="Name" name="Collections" type="sequence">
+        <setting ref="LocalizeNames" name="Use localized collections names" type="boolean">
+            <desc>Enable localization support for collection names</desc>
+        </setting>	
+        <confml:setting ref="TranslationFile" name="Translation file" type="string" relevant="LocalizeNames and LocalizeNames='true'" >
+            <confml:desc>Name of translation file used for fetching localized names</confml:desc>				
+        </confml:setting>
+        <setting ref="Name" name="Collection Name" type="string" required="true">
+            <desc>Name of collection.</desc>				
+        </setting>
+        <confml:setting ref="ShortName" name="Collection Short Name" type="string">
+            <confml:desc>Collection short name. Optional. Name used in Homescreen when shortcut to collection is created.</confml:desc>
+        </confml:setting>
+        <confml:setting ref="TitleName" name="Collection Title Name" type="string">
+            <confml:desc>Collection title name. Optional. Name displayed when user enter to collection (heading).</confml:desc>
+        </confml:setting>			
+        <setting ref="GroupName" name="Collection Group Name" type="string">
+            <desc>Group name. Not localized name. Identify collection where application with predefined group name should be added after installation.</desc>
+        </setting>
+        <setting ref="Locked" name="Lock Collection and content" type="boolean">
+            <desc>Lock collection and content - user cannot delete collection, prevent renaming collection and even content. Not possible by user to add new content to defined collection</desc>
+        </setting>
+        <setting ref="Icon" name="Collection Icon" type="file" >
+            <desc>Icon.</desc>
+            <property name="type" value="image/svg" unit="mime"/>
+            <localPath></localPath>
+            <targetPath readOnly="true"/>
+        </setting>
+        <setting ref="IconSkinId" name="Icon Theme ID" type="string">
+            <desc>Icon Theme id. </desc>
+        </setting>				
+    </confml:setting>	
+		
+		<setting ref="URLs"	 name="URLs"  minOccurs="0" type="sequence" mapKey="URLTitle" mapValue="URLTitle">
+			<setting ref="URLTitle" name="URL Title" type="string" required="true">
+				<desc>Title of the Operator URL</desc>
+			</setting>	 
+			<setting ref="URLShortTitle" name="URL Short Title" type="string" >
+				<desc>Short Title of the Operator URL. Optional. Displayed when shortcut to Url is added to Homescreen</desc>
+			</setting>	 			
+			<setting ref="URL" name="URL" type="string" required="true">
+				<desc>URL</desc>
+				<xs:pattern value="(http(|s)://([\w-]+\.)+[\w-]+(:[0-9]{1,5})?(/[\w- ./?%&amp;=]*)?|)"/>
+			</setting>
+			<setting ref="URLIcon" name="URL Icon" type="file">
+				<desc>Icon for the Operator URL.</desc>
+				<property name="type" value="image/svg" unit="mime"/>
+				<localPath></localPath>
+				<targetPath readOnly="true"/>
+			</setting>
+			<setting ref="IconSkinId" name="Icon Theme ID" type="string">
+				<desc>Icon Theme id. </desc>
+			</setting>
+		</setting>	
+			
+		<confml:setting ref="Items"	 name="Collections content" type="sequence" >
+			<setting ref="Type" name="Item type" type="selection">
+				<desc>Type of collection item.</desc>
+				<option name="Application" value="1"/>
+				<option name="Homescreen widget" value="2"/>
+				<option name="URL" value="3"/>
+			</setting>
+			<setting ref="Application" name="Application" type="string" relevant="Type='1'" required="true">
+				<desc>Application item for Operator collection.</desc>
+				<xs:pattern value="^0x[0-9a-fA-F]{1,8}$"/>
+				<!-- option map="DFSFeatures/Application"/>
+				<option map="CIA_PreinstalledContent/PreInstalledJavaRom"/>
+				<option map="CIA_PreinstalledContent/PreInstalledSymbianROM"/>
+				<option map="CIA_PreinstalledContent/PreInstalledSymbianUDA"/>
+				<option map="CIA_PreinstalledContent/PreInstalledJavaUDA"/-->
+			</setting>
+			<setting ref="HomescreenWidget" name="Homescreen widget" type="string" relevant="Type='2'" required="true">
+				<desc>Homescreen widget item for Operator collection</desc>
+				<!-- option map="HomescreenWidgets/Widgets"/>
+				<option map="CIA_PreinstalledWidgetUDA/PreInstalledWidgetUDA" /-->
+			</setting>
+			<setting ref="URL" name="URL" type="selection" relevant="Type='3'" required="true">
+				<option map="CaStorageDbSetting/URLs"/>
+			</setting>
+			<confml:setting ref="ColName" name="Place in collection" type="selection" required="true">
+				<confml:desc>Collection where entry will be added.</confml:desc>
+				<confml:option map="CaStorageDbSetting/Collections"/>
+			</confml:setting>
+			<setting ref="Comments" name="Item comments" type="string">
+				<desc>Intended only for informative purpose for customization.</desc>
+			</setting>
+		</confml:setting>
+	</confml:feature>
+</confml:configuration>

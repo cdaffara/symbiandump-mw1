@@ -1,0 +1,44 @@
+/*
+* Copyright (c) 2007-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to
+:                DRM Utility API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+// Utility
+../inc/drmutility.h                  MW_LAYER_PLATFORM_EXPORT_PATH( drmutility.h )
+
+// Api classes
+../inc/drmautomatedusage.h           MW_LAYER_PLATFORM_EXPORT_PATH( drmautomatedusage.h )
+../inc/drmrightsinfo.h               MW_LAYER_PLATFORM_EXPORT_PATH( drmrightsinfo.h )
+../inc/drmuihandling.h               MW_LAYER_PLATFORM_EXPORT_PATH( drmuihandling.h )
+
+// Error handling
+../inc/drmerrorhandling.h            MW_LAYER_PLATFORM_EXPORT_PATH( drmerrorhandling.h )
+
+// Observers
+../inc/drmasyncobserver.h            MW_LAYER_PLATFORM_EXPORT_PATH( drmasyncobserver.h )
+../inc/drmautomatedusageobserver.h   MW_LAYER_PLATFORM_EXPORT_PATH( drmautomatedusageobserver.h )
+../inc/drmhandleerrorobserver.h      MW_LAYER_PLATFORM_EXPORT_PATH( drmhandleerrorobserver.h )
+../inc/drmuicheckrightsobserver.h    MW_LAYER_PLATFORM_EXPORT_PATH( drmuicheckrightsobserver.h )
+
+// Types
+../inc/drmutilitytypes.h             MW_LAYER_PLATFORM_EXPORT_PATH( drmutilitytypes.h )

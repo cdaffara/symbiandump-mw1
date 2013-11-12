@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Search Feature Plugin  Management API interface IDs.
+*
+*/
+
+#ifndef SEARCHMANAGEMENTIFUIDS_HRH
+#define SEARCHMANAGEMENTIFUIDS_HRH
+
+
+
+
+
+// Management IF id's
+// 20xx - ximp related
+// 21xx - presence related
+// 22xx - instant messaging related
+// 23xx - search related
+
+
+// Interface IDs for search Feature Plugin Management API interfaces
+#define SEARCH_IF_ID_SEARCH                        2301
+#define SEARCH_IF_ID_SEARCHELEMENT			   	   2302
+#define SEARCH_IF_ID_SEARCH_EVENT                  2304
+#define SEARCH_IF_ID_PROTOCOL_SEARCH_FEATURE       2305
+#define SEARCH_IF_ID_SEARCH_KEYS_EVENT             2306
+
+// Interface UID for searchfeatures interface
+#define XIMP_ECOM_IF_UID_SEARCH_INTERFACE             0x2001847B
+
+// Default implementation resulution data
+// for XIMP searchfeature interterface Base ECom interface
+#define XIMP_ECOM_DEFAULT_DATA_SEARCH_INTERFACE         "search"
+
+
+
+#endif // SEARCHMANAGEMENTIFUIDS_HRH
+

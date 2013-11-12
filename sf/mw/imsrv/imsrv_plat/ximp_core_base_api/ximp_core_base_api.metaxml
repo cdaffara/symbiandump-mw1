@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<api id="ea932da914c779d12c7834b6615d31fd" dataversion="1.0">
+<name>XIMP Core Base API</name>
+<description>Contains common base interface and definitions shared between all other XIMP Framework APIs.</description>
+<type>c++</type>
+<subsystem>ximpfw</subsystem>
+<libs><lib name="ximpdatamodel.lib"/>
+<lib name="ximpoperations.lib"/>
+<lib name="ximpecomhook.lib"/>
+<lib name="ximpmanager.lib"/>
+<lib name="ximpsrvclient.lib"/>
+<lib name="ximpprocessor.lib"/>
+<lib name="ximputils.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

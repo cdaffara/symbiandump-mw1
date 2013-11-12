@@ -1,0 +1,1 @@
+Test whether an error is thrown by the compiler in case no more numeric ids are available.

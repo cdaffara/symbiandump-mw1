@@ -1,0 +1,251 @@
+
+ // Copyright (c) 2008-2010 Nokia Corporation and/or its subsidiary(-ies).
+ // All rights reserved.
+ // This component and the accompanying materials are made available
+ // under the terms of "Eclipse Public License v1.0"
+ // which accompanies this distribution, and is available
+ // at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ // Initial Contributors:
+ // Nokia Corporation - initial contribution.
+ // Contributors:
+ // Description: ATCmdplugin resource definitions.
+ 
+//  RESOURCE IDENTIFIER
+NAME    ATCD
+
+#include <eikon.rh>
+#include <e32keys.h>
+#include "atcmdplugin.rh"
+
+
+//  CONSTANTS
+
+//  MACROS  
+
+//  RESOURCE DEFINITIONS 
+
+//-----------------------------------------------------------------------------
+//   
+//    -
+//    Resource signature
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE {}
+
+//-----------------------------------------------------------------------------
+//   
+//    -
+//    Resource filename
+//
+//-----------------------------------------------------------------------------
+//
+RESOURCE TBUF 
+    { 
+    buf = "atcmdpluginresource"; 
+    }
+
+
+
+// -----------------------------------------------------------------------------
+//
+//    r_atcmdplugin_translationtable
+//    Translation table
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_atcmdplugin_translationtable
+    {    
+    items =
+        {
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyHash;
+            text = "#";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '%';
+            text = "%";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyNkpAsterisk;
+            text = "*";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '0';
+            text = "0";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '1';
+            text = "1";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '2';
+            text = "2";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '3';
+            text = "3";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '4';
+            text = "4";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '5';
+            text = "5";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '6';
+            text = "6";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '7';
+            text = "7";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '8';
+            text = "8";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = '9';
+            text = "9";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyLeftArrow;
+            text = "<";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyRightArrow;
+            text = ">";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EKeyNull;
+            text = "\"";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EKeyNull;
+            text = ";";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            // Escape character for manufacturer specific keys
+            code = -1;
+            text = ":";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = 'P';
+            text = "w";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyDevice0; // left SK
+            text = "[";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyDevice1; // right SK
+            text = "]";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyIncVolume;
+            text = "u";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyDecVolume;
+            text = "d";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyNo;
+            text = "c";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyYes;
+            text = "s";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyNo;
+            text = "e";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyDownArrow;
+            text = "v";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyUpArrow;
+            text = "^";
+            },            
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyApplication0; // menu
+            text = "m";
+            }, 
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyDevice2; // power
+            text = "p";
+            },             
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = BSW_EStdProductKey09; // mute
+            text = "q";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyNkpPlus;
+            text = ":+";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyBackspace;
+            text = "y";
+            },
+       ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyDevice1;
+            text = "y]";
+            },
+       ATCMDPLUGIN_TRANSLATION
+            {
+            code = EStdKeyDevice3;
+            text = ":J";
+            },
+       ATCMDPLUGIN_TRANSLATION
+            {
+            code = EKeyNull;
+            text = "\n";
+            },
+        ATCMDPLUGIN_TRANSLATION
+            {
+            code = EKeyNull;
+            text = "\r";
+            }
+        };
+    }
+
+
+// End of File

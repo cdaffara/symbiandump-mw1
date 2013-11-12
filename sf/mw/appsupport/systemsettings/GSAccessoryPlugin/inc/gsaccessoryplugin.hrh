@@ -1,0 +1,128 @@
+/*
+* Copyright (c) 2005-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Contains common definitions for menu identifiers
+*
+*/
+
+
+#ifndef GSACCESSORYPLUGIN_HRH
+#define GSACCESSORYPLUGIN_HRH
+
+// Commands
+enum TMenuCommands
+    {
+    EGSCmdAppDelete = 1,
+    EGSCmdAppSetasDefault,
+    EGSCmdSetHeadsetDefaultProfile,
+    EGSCmdSetLoopsetDefaultProfile,
+    EGSCmdSetTTYDefaultProfile,
+    EGSCmdSetBTDefaultProfile,
+    EGSCmdSetMusicStandDefaultProfile,
+    EGSCmdSetCarKitDefaultProfile,
+    EGSCmdShowAutoAnswerSettingPage,
+    EGSCmdShowLightControlSettingPage
+    };
+
+// Accessory types
+enum TGSAccessory
+    {
+    EGSHeadset = 0,
+    EGSHeadphones,
+    EGSWiredCarkit,
+    EGSWirelessCarkit,
+    EGSMusicStand,
+    EGSTvout,
+    EGSLoopset,
+    EGSTextPhone,
+    EGSHac
+    };
+
+// Accessory list items
+enum TGSAccItemIds
+    {
+    EGSTextPhoneListItemId      = 0x1,
+    EGSLoopsetListItemId        = 0x2,
+    EGSHeadsetListItemId        = 0x4,
+    EGSHeadphonesListItemId     = 0x8,
+    EGSTvOutListItemId          = 0x20,
+    EGSMusicStandListItemId     = 0x40,
+    EGSWiredCarKitListItemId    = 0x80,
+    EGSWirelessCarKitListItemId = 0x100,
+    EGSHACListItemId            = 0x200
+    };
+
+// Headset display
+enum
+    {
+    KGSSettIdHSDP = 0, // Default profile
+    KGSSettIdHSAA      // Auto answer
+    };
+
+// Loopset display
+enum
+    {
+    KGSSettIdLSDP = 0, // Default profile
+    KGSSettIdLSAA      // Auto answer
+    };
+
+// Text Phone display
+enum
+    {
+    KGSSettIdTextPhoneDP = 0 // Default profile
+    };
+
+// Music Stand display
+enum
+    {
+    KGSSettIdMSDP = 0,	// Default profile
+    KGSSettIdMSAA,	    // Auto answer
+    KGSSettIdMSL	    // Lights
+    };
+
+// Wired Carkit display
+enum
+    {
+    KGSSettIdCKDP = 0,	// Default profile
+    KGSSettIdCKAA,	    // Auto answer
+    KGSSettIdCKL	    // Lights
+    };
+
+// Wireless Carkit display
+enum
+    {
+    KGSSettIdWCKDP = 0,	// Default profile
+    KGSSettIdWCKAA	    // Auto answer
+    };
+
+ // TV out display
+enum {
+    EGSSettIdTvAspectRatio = 0,
+    EGSSettIdTvSystem,
+    EGSSettIdTvoutDP, // Default profile
+    EGSSettIdTvFlickerFilter
+    };
+
+// Headphones display
+enum
+    {
+    KGSSettIdHPDP = 0 // Default profile
+    };
+
+// HAC mode display
+enum
+    {
+    KGSSettIdHACMode = 0
+    };
+
+#endif // GSACCESSORYPLUGIN_HRH

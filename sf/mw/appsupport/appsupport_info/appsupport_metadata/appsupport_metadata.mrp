@@ -1,0 +1,6 @@
+component           appsupport_metadata
+source   \sf\mw\appsupport\appsupport_info\appsupport_metadata 
+source   \sf\mw\appsupport\package_definition.xml
+source   \sf\mw\appsupport\distribution.policy.s60
+notes_source      \component_defs\release.src
+ipr T 

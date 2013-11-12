@@ -1,0 +1,42 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-APPARC-0032
+//! @SYMPREQ 			PREQ1228
+//! @SYMREQ			REQ5896
+//! @SYMCR			CR0831
+//! @SYMTestCaseDesc 		Tests that the application information file (AppsList.bin) is updated 
+//!				whenever a new application is installed.
+//! @SYMTestType		CIT
+//! @SYMTestPriority 		High 
+//! @SYMTestStatus 		3. Released   
+//! @SYMTestActions 		This tests the update of the applist file in \\private\\10003a3f\\import\\\apps\\.
+//!				The sequence is as follows:
+//!				1.- Check the file exists. It must exists.
+//!				2.- Record timestamp for applist file.
+//!				3.- Install a new test application.
+//!				4.- Record timestamp for applist file, allowing some time for the file to be updated
+//!				5.- Compare timestamps before and after test app installation.	   
+//! @SYMTestExpectedResults	Modified time of AppsList.bin after installation must be greater than before installation. 
+
+START_TESTCASE API-APPFWK-APPARC-0032
+
+PRINT Run T_AppListFileUpdate Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 800 ApparcTestServer T_AppListFileUpdate
+
+END_TESTCASE API-APPFWK-APPARC-0032

@@ -1,0 +1,9 @@
+component	app-services_documentation
+
+source	\sf\mw\appsupport\commonappservices\doc_pub\
+
+notes_source	\component_defs\release.src
+
+
+ipr E 
+

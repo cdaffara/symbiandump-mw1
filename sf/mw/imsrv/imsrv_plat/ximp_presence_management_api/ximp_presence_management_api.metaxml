@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<api id="ebff949a6dd0d48b8634a0af6e346450" dataversion="1.0">
+  <name>XIMP Presence Management API</name>
+  <description>Contains interfaces for managing and accessing presence information. API provides interfaces for:
+- managing remote presence service connections
+- publishing and subscribing presence data
+- managing contact groups
+- managing presence authorizations</description>
+  <type>c++</type>
+  <subsystem>ximpfw</subsystem>
+  <libs><lib name="presencecacheecomhook.lib"/>
+<lib name="presencedatamodel.lib"/>
+<lib name="presencedatamodelhook.lib"/>
+<lib name="presenceecomhook.lib"/>
+<lib name="presencemanager.lib"/>
+<lib name="presenceoperation.lib"/>
+<lib name="presencecacheclient.lib"/>
+</libs>
+  <release category="domain"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>yes</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

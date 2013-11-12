@@ -1,0 +1,21 @@
+<html>
+Here's a message with all sorts of <b>bold<br>
+</b><font color="#FF0000">red
+</font><font face="Garamond" size=7><i><u>annoying
+</u></i></font>formatting and a picture<br>
+here...<br>
+<br>
+
+<SCRIPT language="JavaScript1.2">
+<!-- Script courtesy of http://www.web-source.net - Your Guide to Professional Web Site Design and Development
+function makevisible(cur,which){
+strength=(which==0)? 1 : 0.2
+if (cur.style.MozOpacity)
+cur.style.MozOpacity=strength
+else if (cur.filters)
+cur.filters.alpha.opacity=strength*100
+}
+// -->
+</SCRIPT>
+<img src="cid:4.3.2.7.2.20010530153011.00e3c870@notessmtp.symbian.com.0" width=393 height=500 alt="ss.jpg"><br>
+more text</html>

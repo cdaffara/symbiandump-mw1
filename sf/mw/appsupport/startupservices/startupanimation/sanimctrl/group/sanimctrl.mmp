@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project StartupAnimation
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/startupanimation.mmh"
+
+TARGET          sanimctrl.dll
+TARGETTYPE      dll
+UID             0x2000B11A
+
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../src
+SOURCE          sanimctrl.cpp
+SOURCE          sanimstartupctrl.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../sanimengine/inc
+USERINCLUDE     ../../../../inc
+
+APP_LAYER_SYSTEMINCLUDE // dependency to app layer (Profiles)
+
+
+LIBRARY         centralrepository.lib
+LIBRARY         cone.lib
+LIBRARY         efsrv.lib
+LIBRARY         euser.lib
+LIBRARY         fbscli.lib
+LIBRARY         featmgr.lib
+LIBRARY         mediatorclient.lib
+LIBRARY         sanimengine.lib
+
+SMPSAFE

@@ -1,0 +1,76 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This is project specification file for RFS.
+*     
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET  rfs.dll
+TARGETTYPE  dll
+UID  0x1000008D 0x10005984
+VENDORID VID_DEFAULT
+CAPABILITY CAP_GENERAL_DLL
+
+USERINCLUDE ../inc
+
+
+SYSTEMINCLUDE		/epoc32/include/mw/hb/hbwidgets
+
+
+LIBRARY		HbWidgets.lib
+
+
+
+MW_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH ../src
+SOURCE rfsServer.cpp
+SOURCE rfsClient.cpp
+SOURCE rfsSession.cpp
+SOURCE rfsScript.cpp
+SOURCE rfsCommand.cpp
+SOURCE rfsHandler.cpp
+SOURCE rfsShutdown.cpp
+SOURCE rfsCompleter.cpp
+SOURCE rfsConnectionObserver.cpp
+SOURCE rfscontimer.cpp
+
+START RESOURCE  ../src/rfs.rss
+TARGETPATH      RESOURCE_FILES_DIR
+HEADER
+LANGUAGE_IDS
+END  // RESOURCE
+
+LIBRARY euser.lib
+LIBRARY efsrv.lib
+LIBRARY bafl.lib
+LIBRARY cone.lib
+LIBRARY etel.lib
+LIBRARY etelmm.lib
+LIBRARY commonengine.lib
+LIBRARY sysutil.lib
+LIBRARY hal.lib
+LIBRARY secui.lib
+LIBRARY eikcore.lib
+LIBRARY syslangutil.lib
+LIBRARY platformenv.lib  // PathInfo
+LIBRARY centralrepository.lib // Central Repository
+LIBRARY starterclient.lib
+LIBRARY ecom.lib
+LIBRARY featmgr.lib

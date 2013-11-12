@@ -1,0 +1,11 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+    	<contextUpdated>
+	        <contextRef source='action.source' type='action.source.v1'/>
+    	</contextUpdated>
+        <actions>
+            <action_v1 param='trigger'/>
+        </actions>
+    </if>
+</script>

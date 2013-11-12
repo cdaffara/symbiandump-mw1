@@ -1,0 +1,271 @@
+/*
+* Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Localisation strings for SysAp
+*
+*/
+
+
+//  LOCALISATION STRINGS
+
+// d: Command in menu showed system wide by short press off power key.
+// d: Switches off the device.
+// l: list_single_pane_t1_cp2
+//
+#define qtn_pwrc_switch_off "Switch off!"
+
+// d: Command in menu shown system wide by short press off power key.
+// d: Activates System lock.
+// l: list_single_pane_t1_cp2
+//
+#define qtn_set_sec_lock_system "Lock system"
+
+// d: Text in a note that is shown when some profile is activated.
+// l: popup_note_window
+//
+#define text_mode_selected "Selected profile:%U"
+
+// d: Text in a note that is shown during SAT refresh
+// l: popup_note_window
+//
+#define qtn_sat_wait_refresh_update "Updating SIM"
+
+// d: Text in a note that is shown when Starter is unable to launch an installed 
+// d: application/server in startup. %U is the name of the application/server of
+// d: unknown length.
+// l: popup_note_window
+//
+#define qtn_su_application_error "Error in launching %U. It may have to be uninstalled."
+
+// d: Text in a note that is shown when the user has removed memory card without using the eject command
+// l: popup_note_window
+//
+#define qtn_memc_error_eject "Ejecting memory card without using Memory Card Application may cause dataloss"
+
+// d: Text in a note that is shown if making an outgoing call or approving an incoming call
+// d: interrupts GPRS context.
+// l: popup_note_window
+//
+#define qtn_gprs_conf_gprs_suspended "GPRS suspended"
+
+// d: Text in a note that is shown when GPRS connection is resumed
+// l: popup_note_window
+//
+#define qtn_gprs_conf_gprs_resumed "GPRS active"
+
+// d: Text in a note that is shown when the phone is powered down
+// l: popup_note_window
+#define qtn_pwrc_info_goodbye "Good bye"
+
+// d: Text in a note that is shown when the user attempts to activate off-line mode 
+// d: when the phone is powered on, but the activation fails.
+// l: popup_note_window
+//
+#define qtn_err_offline_unable "Unable to activate Off-line Mode"
+
+// d: Text in a note that is shown if the SIM card is inserted and the phone is in 
+// d: off-line mode and the user attempts to activate any other profile but
+// d: the activation fails.
+// l: popup_note_window
+//
+#define qtn_err_offline_unable_profile "Unable to change profile"
+
+// d:Options menu command.
+// d:Start "memory card eject" from Powerkey Menu.
+// l:list_single_pane_t1_cp2
+//
+#define qtn_pwrc_eject_mmc "Eject memory card"
+
+// d:Powerkey menu command.
+// d:Closes SIM Access Profile session
+// l:list_single_pane_t1_cp2
+// w:
+// r:3.0
+//
+#define qtn_pwrc_exit_sim_access "Exit SIM access profile"
+
+// d: Confirmation query when disconnecting from a BT device 
+// l: popup_note_window
+// w:
+// r:3.0
+//
+#define qtn_bt_disconn_from "Disconnect from: %U"
+
+// d:Options menu command.
+// d:Start "memory card eject" from Powerkey Menu. %U is the drive letter.
+// l:list_single_pane_t1_cp2
+// w:
+// r:3.2
+//
+#define qtn_pwrc_eject_memory_card "Remove mem. card %U"
+
+//d:Named memory card eject confirmation query.
+//d:%0U is the drive letter and %1U is the name of the memory card
+//l:popup_note_window
+//w:
+//r:3.2
+//
+#define qtn_memc_conf_eject_multiple "Eject %0U %1U? Some applications will be closed."
+
+//d:Memory card eject confirmation query.
+//d:%U is the drive letter
+//l:popup_note_window
+//w:
+//r:3.2
+//
+#define qtn_memc_conf_eject_multiple_defaultname "Eject %U memory card? Some applications will be closed."
+
+//d:Swap named memory card note.
+//d:%0U is the drive letter and %1U is the name of the memory card
+//l:popup_note_window
+//w:
+//r:3.2
+//
+#define qtn_memc_info_eject_multiple "Remove %0U %1U and press OK."
+
+//d:Swap memory card note.
+//d:%U is the drive letter
+//l:popup_note_window
+//w:
+//r:3.2
+//
+#define qtn_memc_info_eject_multiple_defaultname "Remove %U memory card and press OK."
+
+// d: Info note when FM transmission is disabled.
+// l: popup_note_window
+// r: 3.2 
+//
+#define qtn_fmtx_sysap_info_note_disabled "FM transmission disabled!"
+
+// d: Info note when FM transmission is enabled
+// l: popup_note_window
+// r: 3.2
+//
+#define qtn_fmtx_sysap_info_note_change_freq "Now transmitting on %U MHz"
+
+// d: Text in offline mode activation query
+// l: popup_note_window
+// r: 3.2
+//
+#define qtn_fmtx_sysap_note_activate_in_offline "Keep FM tranmission on in Offline mode?"
+
+// d: Info note when FM transmission goes off due to accessory connection
+// l: popup_note_window
+// r: 3.2
+//
+#define qtn_fmtx_sysap_info_note_accessory_standby "FM transmitter cannot be on when enhancement is connected. FM transmitter deactivated"
+
+// d: Info note when FM transmission is tried to be enabled when accessory is connected
+// l: popup_note_window
+// r: 3.2
+//
+#define qtn_fmtx_sysap_info_note_accessory_forbids "Unable to activate FM transmitter when enhancement is connected"
+
+// d: Info note when volume is tried to be changed and FM transmission is on
+// l: popup_note_window
+// r: 3.2
+//
+#define qtn_fmtx_sysap_info_note_volume_disabled "Cannot change volume when FM transmission is enabled"
+
+// d: Command in menu showed system wide by short press off power key.
+// d: Activates the power save mode.
+// l: list_single_pane_t1_cp2
+// r: 3.2
+//
+#define qtn_pwrc_activate_power_saving "Activate power saving"
+
+// d: Command in menu showed system wide by short press off power key.
+// d: Deactivates the power save mode.
+// l: list_single_pane_t1_cp2
+// r: 3.2
+//
+#define qtn_pwrc_deactivate_power_saving "Deactivate power saving"
+
+// d: Text in a note that is shown when the user successfully activates power save mode 
+// d: when the phone is powered on.
+// l: popup_note_window
+// r: 3.2
+//
+#define qtn_power_saving_activated_conf_note "Power saving activated"
+
+// d: Text in a note that is shown when the user attempts to activate power save mode 
+// d: when the phone is powered on, but the activation fails.
+// l: popup_note_window
+// r: 3.2
+//
+#define qtn_power_saving_failed_warning_note "Could not activate power saving"
+
+// d: Text in a note that is shown when the user successfully deactivates power save mode 
+// d: when the phone is powered on.
+// l: popup_note_window
+// r: 3.2
+//
+#define qtn_power_saving_deactivated_conf_note "Power saving deactivated"
+
+// d: Text in a note that is shown when the user attempts to deactivate power save mode 
+// d: when the phone is powered on, but the deactivation fails.
+// l: popup_note_window
+// r: 3.2
+//
+#define qtn_power_saving_deactivation_failed_warning_note "Could not deactivate power saving"
+
+//d:A query shown whether to deactivate power saving when charger is connected.
+//l:popup_note_window
+//r:5.0
+//
+#define qtn_battery_charging_power_saving_query "Charging. Deactivate power saving?"
+
+//d:A query shown whether to activate power saving when battery status is low.
+//l:popup_note_window
+//r:5.0
+//
+#define qtn_battery_conf_query "Battery low. Activate power saving mode?"
+
+// d:A preview popup item informing the remaining battery capacity in percents.
+// l:popup_preview_text_window_t1
+// r:5.0
+//
+#define qtn_battery_status_popup "%N %"
+
+// d:Options menu command.
+// d:Start "memory storage eject" from Powerkey Menu. %U is the drive letter.
+// l:list_single_pane_t1_cp2
+// w:
+// r:5.2
+//
+#define qtn_pwrc_eject_memory_storage "Remove memory %U"
+
+// d: Text in a error note that is shown when the user has removed memory storage without using the eject command
+// l: popup_note_window
+// w:
+// r:5.2
+//
+#define qtn_mems_eject_error "Unsafe to remove memory storage without selecting 'Remove memory' first."
+
+// d: Text in a wait note that is shown during memory storage eject
+// d: %0U is the drive letter and %1U is the name of the memory storage.
+// l: popup_note_window
+// w:
+// r:5.2
+//
+#define qtn_ejecting_memory_name_wait "Ejecting %0U %1U"
+
+//d:Remove memory storage info note.
+//d:%U is the drive letter
+//l:popup_note_window
+//w:
+//r:5.2
+//
+#define qtn_eject_remove_memory_info "Remove %U memory storage and press OK."
+
+// End of File

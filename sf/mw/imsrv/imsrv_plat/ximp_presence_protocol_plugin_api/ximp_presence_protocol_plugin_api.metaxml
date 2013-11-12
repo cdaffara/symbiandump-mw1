@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<api id="10eedded1e474d07f3e75f751efc0a18" dataversion="1.0">
+  <name>XIMP Presence Protocol Plug-in API</name>
+  <description>API contains ECom plug-in interface that must be implemented by the presence protocol plug-ins. The plug-in interface aggregates functionality to send and request presence data from remote presence service.</description>
+  <type>c++</type>
+  <subsystem>ximpfw</subsystem>
+  <libs><lib name="presencecacheecomhook.lib"/>
+<lib name="presencedatamodel.lib"/>
+<lib name="presencedatamodelhook.lib"/>
+<lib name="presenceecomhook.lib"/>
+<lib name="presencemanager.lib"/>
+<lib name="presenceoperation.lib"/>
+<lib name="presencecacheclient.lib"/>
+</libs>
+  <release category="domain"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>yes</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

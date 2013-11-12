@@ -1,0 +1,23 @@
+HbDataGroup
+{
+    layout:default;
+}
+
+HbDataGroup[groupPage]
+{
+    layout:heading_with_combo;
+}
+
+HbDataGroup[groupPage]::dataGroup_HeadingWidget
+{
+	bottom:var(hb-param-margin-gene-top);
+}
+
+
+HbDataGroup::dataGroup_Combo
+{
+	left:-var(hb-param-margin-gene-left);
+	right:var(hb-param-margin-gene-right);
+	bottom:var(hb-param-margin-gene-bottom);
+}
+

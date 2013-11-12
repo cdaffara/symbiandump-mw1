@@ -1,0 +1,66 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_TESTEXPORTS
+zshtests.iby	/epoc32/rom/include/zshtests.iby
+
+../scripts/zshtests_auto1.sh  /epoc32/winscw/c/zsh/zshtests_auto1.sh
+../scripts/zshtests_auto2.sh  /epoc32/winscw/c/zsh/zshtests_auto2.sh
+../scripts/zshtests_manual.sh /epoc32/winscw/c/zsh/zshtests_manual.sh
+
+../scripts/aliastest.sh /epoc32/winscw/c/zsh/aliastest.sh
+../scripts/autoloadtest.sh /epoc32/winscw/c/zsh/autoloadtest.sh
+../scripts/breaktest.sh /epoc32/winscw/c/zsh/breaktest.sh
+../scripts/cdtest1.sh /epoc32/winscw/c/zsh/cdtest1.sh
+../scripts/cdtest2.sh /epoc32/winscw/c/zsh/cdtest2.sh
+../scripts/continuetest.sh /epoc32/winscw/c/zsh/continuetest.sh
+../scripts/dirstest.sh /epoc32/winscw/c/zsh/dirstest.sh
+../scripts/dottest.sh /epoc32/winscw/c/zsh/dottest.sh
+../scripts/evaltest.sh /epoc32/winscw/c/zsh/evaltest.sh
+../scripts/exittest.sh /epoc32/winscw/c/zsh/exittest.sh
+../scripts/fctest.sh /epoc32/winscw/c/zsh/fctest.sh
+../scripts/fctest_manual.sh /epoc32/winscw/c/zsh/fctest_manual.sh
+../scripts/functionstest.sh /epoc32/winscw/c/zsh/functionstest.sh
+../scripts/printtest.sh /epoc32/winscw/c/zsh/printtest.sh
+../scripts/pwdtest.sh /epoc32/winscw/c/zsh/pwdtest.sh
+../scripts/readtest_manual.sh /epoc32/winscw/c/zsh/readtest_manual.sh
+../scripts/sanity_auto.sh /epoc32/winscw/c/zsh/sanity_auto.sh
+../scripts/setopttest.sh /epoc32/winscw/c/zsh/setopttest.sh
+../scripts/settest.sh /epoc32/winscw/c/zsh/settest.sh
+../scripts/util_set17.sh /epoc32/winscw/c/zsh/util_set17.sh
+../scripts/shifttest.sh /epoc32/winscw/c/zsh/shifttest.sh
+../scripts/typesettest1.sh /epoc32/winscw/c/zsh/typesettest1.sh
+../scripts/typesettest2.sh /epoc32/winscw/c/zsh/typesettest2.sh
+../scripts/unhashtest.sh /epoc32/winscw/c/zsh/unhashtest.sh
+../scripts/unsetopttest.sh /epoc32/winscw/c/zsh/unsetopttest.sh
+../scripts/unsettest.sh /epoc32/winscw/c/zsh/unsettest.sh
+../scripts/util_source.sh /epoc32/winscw/c/zsh/util_source.sh
+../scripts/whencetest.sh /epoc32/winscw/c/zsh/whencetest.sh
+../scripts/util_dot1.sh /epoc32/winscw/c/zsh/util_dot1.sh
+../scripts/ls.sh /epoc32/winscw/c/zsh/ls.sh
+../scripts/externalcmd_test.sh /epoc32/winscw/c/zsh/externalcmd_test.sh
+
+../scripts/findtest1.sh /epoc32/winscw/c/zsh/findtest1.sh
+../scripts/findtest2.sh /epoc32/winscw/c/zsh/findtest2.sh
+../scripts/findtest3.sh /epoc32/winscw/c/zsh/findtest3.sh
+../scripts/greptest1.sh /epoc32/winscw/c/zsh/greptest1.sh
+../scripts/greptest2.sh /epoc32/winscw/c/zsh/greptest2.sh
+../scripts/miniziptest.sh /epoc32/winscw/c/zsh/miniziptest.sh
+../scripts/pstest.sh /epoc32/winscw/c/zsh/pstest.sh
+../scripts/unziptest.sh /epoc32/winscw/c/zsh/unziptest.sh
+../scripts/redirecttest.sh /epoc32/winscw/c/zsh/redirecttest.sh
+PRJ_TESTMMPFILES
+tredirect.mmp
+

@@ -1,0 +1,38 @@
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_TESTEXPORTS
+../scripts/TestHtmlToCrtConverterSuite.script			c:/cithtmltocrtconverter/scripts/testhtmltocrtconvertersuite.script
+
+../testdata/TestHtmlToCrtConverterSuite.ini			c:/cithtmltocrtconverter/testdata/testhtmltocrtconvertersuite.ini
+
+../testdata/eudora01.txt					c:/cithtmltocrtconverter/testdata/eudora01.txt
+../testdata/malformed01.txt					c:/cithtmltocrtconverter/testdata/malformed01.txt
+../testdata/malformed02.txt					c:/cithtmltocrtconverter/testdata/malformed02.txt
+../testdata/test1.txt						c:/cithtmltocrtconverter/testdata/test1.txt
+../testdata/test2_async.html					c:/cithtmltocrtconverter/testdata/test2_async.html
+../testdata/test200.txt						c:/cithtmltocrtconverter/testdata/test200.txt
+../testdata/testdata2.txt					c:/cithtmltocrtconverter/testdata/testdata2.txt
+../testdata/UK_Holidays.vcs.htm					c:/cithtmltocrtconverter/testdata/uk_holidays.vcs.htm
+../testdata/testdata3.txt					c:/cithtmltocrtconverter/testdata/testdata3.txt
+../testdata/Empty_Text.txt					c:/cithtmltocrtconverter/testdata/empty_text.txt
+../testdata/longtail.jpg					c:/cithtmltocrtconverter/testdata/longtail.jpg
+
+
+PRJ_TESTMMPFILES
+TestHtmlToCrtConverterSuite.mmp

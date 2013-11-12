@@ -1,0 +1,27 @@
+EXPORTS
+	_ZN18RXIMPSrvRootClient18GetKnownProtocolsLEv @ 1 NONAME
+	_ZN18RXIMPSrvRootClient30GetSupportedFrameworkFeaturesLEv @ 2 NONAME
+	_ZN18RXIMPSrvRootClient5CloseEv @ 3 NONAME
+	_ZN18RXIMPSrvRootClient7ConnectEv @ 4 NONAME
+	_ZN18RXIMPSrvRootClientC1Ev @ 5 NONAME
+	_ZN18RXIMPSrvRootClientC2Ev @ 6 NONAME
+	_ZN18XIMPProcessStarter13StartInstanceERK7TDesC16S2_PK6TArrayI24TXIMPProcessStartupParamE @ 7 NONAME
+	_ZN18XIMPProcessStarter15ConnectToServerERK7TDesC16S2_PK6TArrayI24TXIMPProcessStartupParamER12RSessionBaseS2_RK8TVersioni @ 8 NONAME
+	_ZN18XIMPProcessStarter27FullExePathForClienLocationERK7TDesC16R4TBufILi256EE @ 9 NONAME
+	_ZN21RXIMPSrvContextClient11ListenEventER14TRequestStatus @ 10 NONAME
+	_ZN21RXIMPSrvContextClient12DropTopEventEv @ 11 NONAME
+	_ZN21RXIMPSrvContextClient15CancelListeningEv @ 12 NONAME
+	_ZN21RXIMPSrvContextClient16DoQueueOperationEiRK6TDesC8R14TXIMPRequestId @ 13 NONAME
+	_ZN21RXIMPSrvContextClient17DoQueueOperation2EiRK6TDesC8R14TXIMPRequestId @ 14 NONAME
+	_ZN21RXIMPSrvContextClient18FetchTopEventReqIdER14TXIMPRequestId @ 15 NONAME
+	_ZN21RXIMPSrvContextClient19FetchTopEventDataLCEv @ 16 NONAME
+	_ZN21RXIMPSrvContextClient19InstallEventFilterLERK6TDesC8 @ 17 NONAME
+	_ZN21RXIMPSrvContextClient5CloseEv @ 18 NONAME
+	_ZN21RXIMPSrvContextClient8ConnectLE4TUid @ 19 NONAME
+	_ZN21RXIMPSrvContextClientC1Ev @ 20 NONAME
+	_ZN21RXIMPSrvContextClientC2Ev @ 21 NONAME
+	_ZN24TXIMPProcessStartupParam3SetEii @ 22 NONAME
+	_ZN24TXIMPProcessStartupParamC1Ev @ 23 NONAME
+	_ZN24TXIMPProcessStartupParamC2Ev @ 24 NONAME
+	_ZNK21RXIMPSrvContextClient19GetContextFeaturesLEv @ 25 NONAME
+

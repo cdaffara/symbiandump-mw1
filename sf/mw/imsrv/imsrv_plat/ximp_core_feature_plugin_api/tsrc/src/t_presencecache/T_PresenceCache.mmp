@@ -1,0 +1,72 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include <platform_paths.hrh>
+
+
+TARGET          t_presencecache.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB 
+VENDORID                0x00000000
+
+SOURCEPATH              .
+SOURCE                  t_presencecache.cpp
+SOURCE                  t_presencecache_dllmain.cpp
+
+
+USERINCLUDE             .
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presencecache
+
+SYSTEMINCLUDE           /epoc32/../../epoc32/include
+SYSTEMINCLUDE           /epoc32/../../epoc32/include/Digia/EUnit
+
+// System include folders required by the tested code
+//SYSTEMINCLUDE           ../../../inc/presence/presencecache
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presencedatamodel
+
+
+//Following internal headers we are using
+SYSTEMINCLUDE           ../../../../../ximpfw/core/srcdatamodel
+SYSTEMINCLUDE           ../../../../../ximpfw/core/srcutils
+
+
+SYSTEMINCLUDE           ../../../../../ximpfw/presence/srcpresencedatamodel/presencepublishing
+SYSTEMINCLUDE           ../../../../../ximpfw/presence/srcpresencedatamodel/presenceinfo
+SYSTEMINCLUDE           ../../../../../ximpfw/presence/srcpresencedatamodel/presentitygroups
+SYSTEMINCLUDE           ../../../../../ximpfw/presence/srcpresencedatamodel
+SYSTEMINCLUDE           ../../../../../ximpfw/presence/srcpresencedatamodel/presencewatching
+SYSTEMINCLUDE           ../../../../../ximpfw/presence/srcpresencedatamodel/presenceauthorization
+SYSTEMINCLUDE           ../../../../../ximpfw/presence/srcpresencecache/presencecacheclient
+SYSTEMINCLUDE           ../../../../../ximpfw/presence/srcpresencecache/presencecacheserver
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY                 EUnit.lib
+LIBRARY                 EUnitUtil.lib
+LIBRARY                 euser.lib
+LIBRARY                 ecom.lib
+LIBRARY                 presencedatamodel.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 presencecacheclient.lib
+LIBRARY                 ximputils.lib
+
+LIBRARY                 presencefeeder.lib
+
+// End of file

@@ -1,0 +1,61 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//----------------------------------------------------------------------------
+// Sends one invalid message to the time zone server in each test step. The 
+// server should panic the client (the test step thread) with a "!TzServer 10"
+// panic. If the server doesn't panic the client then time out after 15 seconds 
+// and consider the test to have failed (ie- the server incorrectly accepted 
+// the message).
+// 
+// Note: The tests should be using !PanicString="!TzServer 10" to ensure the
+// panic is from the TZ server, but it doesn't work.
+//----------------------------------------------------------------------------
+
+// Load the DST test server.
+LOAD_SUITE DstIntServer -SharedData
+
+START_TESTCASE   PIM-SERVERMSGSENDER-0001
+//! @SYMTestCaseID   PIM-SERVERMSGSENDER-0001
+RUN_TEST_STEP !PanicCode=10 15 DstIntServer ServerMsgSender \dstscripts\ServerMsgSender.ini Msg1
+END_TESTCASE   PIM-SERVERMSGSENDER-0001
+START_TESTCASE   PIM-SERVERMSGSENDER-0002
+//! @SYMTestCaseID   PIM-SERVERMSGSENDER-0002
+RUN_TEST_STEP !PanicCode=10 15 DstIntServer ServerMsgSender \dstscripts\ServerMsgSender.ini Msg2
+END_TESTCASE   PIM-SERVERMSGSENDER-0002
+START_TESTCASE   PIM-SERVERMSGSENDER-0003
+//! @SYMTestCaseID   PIM-SERVERMSGSENDER-0003
+RUN_TEST_STEP !PanicCode=10 15 DstIntServer ServerMsgSender \dstscripts\ServerMsgSender.ini Msg3
+END_TESTCASE   PIM-SERVERMSGSENDER-0003
+START_TESTCASE   PIM-SERVERMSGSENDER-0004
+//! @SYMTestCaseID   PIM-SERVERMSGSENDER-0004
+RUN_TEST_STEP !PanicCode=10 15 DstIntServer ServerMsgSender \dstscripts\ServerMsgSender.ini Msg4
+END_TESTCASE   PIM-SERVERMSGSENDER-0004
+START_TESTCASE   PIM-SERVERMSGSENDER-0005
+//! @SYMTestCaseID   PIM-SERVERMSGSENDER-0005
+RUN_TEST_STEP !PanicCode=10 15 DstIntServer ServerMsgSender \dstscripts\ServerMsgSender.ini Msg5
+END_TESTCASE   PIM-SERVERMSGSENDER-0005
+START_TESTCASE   PIM-SERVERMSGSENDER-0006
+//! @SYMTestCaseID   PIM-SERVERMSGSENDER-0006
+RUN_TEST_STEP !PanicCode=10 15 DstIntServer ServerMsgSender \dstscripts\ServerMsgSender.ini Msg6
+END_TESTCASE   PIM-SERVERMSGSENDER-0006
+START_TESTCASE   PIM-SERVERMSGSENDER-0007
+//! @SYMTestCaseID   PIM-SERVERMSGSENDER-0007
+RUN_TEST_STEP !PanicCode=10 15 DstIntServer ServerMsgSender \dstscripts\ServerMsgSender.ini Msg7
+END_TESTCASE   PIM-SERVERMSGSENDER-0007
+START_TESTCASE   PIM-SERVERMSGSENDER-0008
+//! @SYMTestCaseID   PIM-SERVERMSGSENDER-0008
+RUN_TEST_STEP !PanicCode=10 15 DstIntServer ServerMsgSender \dstscripts\ServerMsgSender.ini Msg8
+END_TESTCASE   PIM-SERVERMSGSENDER-0008

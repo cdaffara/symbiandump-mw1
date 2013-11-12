@@ -1,0 +1,44 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-MruStep-TestMRUL-0001
+//! @SYMTestCaseDesc 		Test MRU list by calling CApaProcess::SetMainDocFileName() multiple times.
+//! @SYMTestPriority 		High 
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		Test MRU list by calling CApaProcess::SetMainDocFileName() in the following cases:
+//!				(1) Call CApaProcess::SetMainDocFileName() with no document created.
+//!				(2) Call CApaProcess::SetMainDocFileName() after document creation.
+//!				(3) Create a document for tstapp. Call CApaProcess::SetMainDocFileName() multiple times using the same filename to be set in the Most Recently Used (MRU) list. Ensure that only once the list is updated with the filename.
+//!				(4) Create a document for tstapp. Call CApaProcess::SetMainDocFileName() multiple times using different filename to be set in the Most Recently Used (MRU) list on each attempt. Ensure that only a maximum of 50 filenames are present.
+//!				(5) Open MRU.DAT and then call CApaProcess::SetMainDocFileName(). The filename set should not appear in MRU list since MRU.DAT is open.
+//!				(6) Create a document for tstapp. Call CApaProcess::SetMainDocFileName() multiple times when there is no memory available on the device. The MRU list should not reflect the newly set file name.
+//!				(7) Test CApaRecentFile::GetRecentFileL() by passing KNullUid. Ensure that all entries for those last used documents are retrieved when KNullUid is passed.
+//!				(8) Test CApaRecentFile::GetRecentFileListL() to ensure that it returns NULL.
+//!				In the above mentioned situations tests ensure that there are no memory leaks.
+//!   				API Calls:
+//!   				CApaProcess::SetMainDocFileName(const TDesC& aMainDocFileName)
+//!   				CApaRecentFile::GetRecentFileL(RFs& aFs, TUid aAppUid, TInt aIndex)
+//!				CApaRecentFile::GetRecentFileListL(RFs& aFs, TUid aAppUid)
+//! @SYMTestExpectedResults 	Each of the tests should complete with the desired output and without any memory leaks.
+
+START_TESTCASE API-APPFWK-T-MruStep-TestMRUL-0001
+
+PRINT Run T_Mru Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_Mru 
+
+END_TESTCASE API-APPFWK-T-MruStep-TestMRUL-0001

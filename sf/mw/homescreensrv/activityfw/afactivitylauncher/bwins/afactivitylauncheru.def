@@ -1,0 +1,7 @@
+EXPORTS
+	?NewLC@CAfActivityLauncher@@SAPAV1@AAVRApaLsSession@@AAVRWsSession@@@Z @ 1 NONAME ; class CAfActivityLauncher * CAfActivityLauncher::NewLC(class RApaLsSession &, class RWsSession &)
+	?launchActivityL@CAfActivityLauncherPrivate@@QAEXABVTDesC16@@@Z @ 2 NONAME ABSENT ; void CAfActivityLauncherPrivate::launchActivityL(class TDesC16 const &)
+	?launchActivityL@CAfActivityLauncher@@QAEXABVTDesC16@@@Z @ 3 NONAME ; void CAfActivityLauncher::launchActivityL(class TDesC16 const &)
+	?NewL@CAfActivityLauncher@@SAPAV1@AAVRApaLsSession@@AAVRWsSession@@@Z @ 4 NONAME ; class CAfActivityLauncher * CAfActivityLauncher::NewL(class RApaLsSession &, class RWsSession &)
+	??1CAfActivityLauncher@@UAE@XZ @ 5 NONAME ; CAfActivityLauncher::~CAfActivityLauncher(void)
+

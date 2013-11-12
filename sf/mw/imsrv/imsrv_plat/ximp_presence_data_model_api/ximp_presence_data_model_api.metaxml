@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<api id="183ce72f8849e807a5b9bc8ce4dbc92f" dataversion="1.0">
+  <name>XIMP Presence Data Model API</name>
+  <description>Contains protocol agnostic interfaces for presence, presence contact groups and presence authorization related data items. API provides also a set of generic presence attributes.</description>
+  <type>c++</type>
+  <subsystem>ximpfw</subsystem>
+  <libs><lib name="presencecacheecomhook.lib"/>
+<lib name="presencedatamodel.lib"/>
+<lib name="presencedatamodelhook.lib"/>
+<lib name="presenceecomhook.lib"/>
+<lib name="presencemanager.lib"/>
+<lib name="presenceoperation.lib"/>
+<lib name="presencecacheclient.lib"/>
+</libs>
+  <release category="domain"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>yes</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

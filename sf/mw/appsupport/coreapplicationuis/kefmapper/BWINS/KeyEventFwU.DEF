@@ -1,0 +1,2 @@
+EXPORTS	?CreateKefMapL@KefMapFactory@@SAPAVCKefMap@@XZ @ 1 NONAME ; class CKefMap * KefMapFactory::CreateKefMapL(void)
+

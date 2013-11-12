@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2002-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project CFContextSourceManager
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../inc/common/cftraceconfiguration.hrh"
+
+TARGET                  cfcontextsourcemanager.dll
+TARGETTYPE              dll
+UID                     0x1000008d 0x10282BCB
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../src/cfcontextsourcemanager
+SOURCE                  CFContextSourceManager.cpp
+SOURCE                  CFContextSourcePlugIn.cpp
+
+USERINCLUDE             .
+USERINCLUDE             ../inc/cfcontextsourcemanager
+USERINCLUDE             ../inc/cfcontextsourcesettingsmanager
+USERINCLUDE             ../inc/common
+USERINCLUDE             ../inc/cfserver
+USERINCLUDE             ../inc/cfservices
+USERINCLUDE             ../CenRep
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY                 ecom.lib
+LIBRARY                 euser.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 centralrepository.lib
+LIBRARY                 bafl.lib
+LIBRARY                 cfcontextsourcesettingsmanager.lib
+LIBRARY                 cfservices.lib
+#ifdef TRACE_INTO_FILE
+LIBRARY                 flogger.lib
+#endif

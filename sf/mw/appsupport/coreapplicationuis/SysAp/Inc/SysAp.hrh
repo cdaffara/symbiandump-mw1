@@ -1,0 +1,169 @@
+/*
+* Copyright (c) 2005-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource header file for SysAp.
+*
+*/
+
+
+#ifndef SYSAP_HRH
+#define SYSAP_HRH
+
+// #define __SYSAP_MODULE_TEST
+
+#include <e32std.h>
+#include <avkon.hrh>
+
+const TInt KSysApNoIndicator( -1 ); // No indicator id defined
+
+// CONSTANTS
+
+// Time allowed for applications to exit in MMC HotSwap
+const TInt KMaxExitTimeInHotSwap( 7 ); // 7 seconds max
+// Time allowed for applications to exit in BT SAP
+const TInt KMaxExitTimeInBtSap( 7 ); // 7 seconds max
+const TInt KTriesToConnectServer( 2 );
+const TInt KTimeBeforeRetryingServerConnection( 50000 );
+
+const TInt KMinimumLightsTimeout( 5 );  //  5 seconds 
+const TInt KDefaultLightsTimeout( 15 ); // 15 seconds 
+const TInt KMaximumLightsTimeout( 60 ); // 60 seconds 
+
+const TInt KMaximumAnimationTime( 3000 ); // 3 seconds
+
+// Phone UID Used for bringing Phone to foreground
+const TUid KSysApPhoneUid     = {0x100058B3};
+
+// Camcorder UID Used for starting Camcorder
+const TUid KSysApCamcorderUid = {0x101F857A};
+
+// SIM dependant applications that are closed before BT SIM Access Profile is activated
+// General Settings 
+const TUid KSysApGSUid = {0x100058EC};
+// SIM Application Toolkit 
+const TUid KSysApSATUid = {0x101f4CE0};
+// Voice Mailbox 
+const TUid KSysApMailboxUid = {0x100058F5};
+// Speed Dialing 
+const TUid KSysApSpeedDialingUid = {0x1000590A};
+// SIM Directory 
+const TUid KSysApSimDirectoryUid = {0x101F4CF6};
+// Messaging
+const TUid KSysApMCEUid = {0x100058C5};
+// Cell Broadcast Messages 
+const TUid KSysApCellBroadcastMessagesUid = {0x101F4CD3};
+
+
+#ifdef _DEBUG
+#define TRACES(x)    x
+#else
+#define TRACES(x)
+#endif
+
+enum TSysApNoteIds
+    {
+    EBatteryFullNote=1,
+    EBatteryLowNote,
+    ERechargeBatteryNote,
+    EChargingNote,
+    ENotChargingNote,  //5
+    EInsertSimNote,
+    EMemoryCardRemovedWithoutEjectNote,
+    EGprsSuspendedNote,
+    EGprsResumedNote,
+    EShutdownNote,
+    ECannotActivateOfflineModeNote,
+    ECannotDeactivateOfflineModeNote,
+    EKeypadActiveNote,
+    EFmTxOnNote,
+    EFmTxOffNote,
+    EFmTxAccessoryStandbyNote,
+    EFmTxAccessoryForbidsNote,
+    EFmTxVolumeDisabledNote,
+    EBatteryFullUnplugChargerNote,
+    EUnplugChargerNote,   
+    EPowerSaveModeActivated,
+    EPowerSaveModeDeactivated,
+    ECannotActivatePowerSaveMode,
+    ECannotDeactivatePowerSaveMode
+    };
+
+enum TSysApWaitNoteIds
+    {
+    EClosingApplicationsNote = 1
+    };
+
+enum TSysApMemoryCardStatus
+    {
+    ESysApMemoryCardStatusNotKnown,
+    ESysApMemoryCardNotInserted,
+    ESysApMemoryCardInserted,
+    ESysApMemoryCardLocked
+    };
+
+enum TSysApConfirmationQueryIds
+    {
+    ESysApNoQuery=0,
+    ESysApRestartPhoneQuery,
+    ESysApLeaveOfflineModeQuery,
+    ESysApRemoveMmcNote,
+    ESysApEjectMmcQuery,
+    ESysApBtSapDisconnectQuery,
+    ESysApMemoryCardLockedNote,	
+    ESysApUseFmTxInOfflineQuery,
+    ESysApBattChargingPowerSavingQuery,
+    ESysApBattLowPowerSavingQuery
+    };
+
+
+enum TSysApPhoneState
+    {
+    ESysApNormal = 1,
+    ESysApCharging,
+    ESysApAlarm
+    };
+
+enum TSysApMtcStateType 
+    {
+    ESysApMtcChargingState,
+    ESysApMtcAlarmState,
+    ESysApMtcPowerOffState, 
+    ESysApMtcNormalState,
+    ESysApMtcRfInactiveState,
+    ESysApMtcBtSapState
+    };
+
+enum TSysApAccessoryType
+    {
+    ESysApHeadset,
+    ESysApLoopset,
+    ESysApTty,
+    ESysApWirelessCarkit,
+    ESysApCarkit,
+    ESysApMusicStand,
+    ESysApTvOut,
+    ESysApHeadphones
+    };
+
+// Network mode must match to the Shared Data key
+// KSDUidPhone / KPhoneNetworkMode
+
+enum TSysApNetworkMode
+    {
+    ESysApGSM = 0,
+    ESysApWCDMA = 1
+    };
+
+#endif      //  SYSAP
+
+// End of File

@@ -1,0 +1,14 @@
+HbSelectionControl::handle-icon
+{
+    fixed-width:var(hb-param-graphic-size-secondary);
+    fixed-height:var(hb-param-graphic-size-secondary);
+}
+
+HbSelectionControl::handle-toucharea
+{
+   fixed-height:var(hb-param-touch-area-gene-primary-large);
+   fixed-width:var(hb-param-touch-area-gene-primary-large);
+}
+
+
+

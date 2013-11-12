@@ -1,0 +1,8 @@
+EXPORTS
+	?NewAlertToneSeekerL@ProEngFactory@@SAPAVMProEngAlertToneSeeker@@XZ @ 1 NONAME ; class MProEngAlertToneSeeker * ProEngFactory::NewAlertToneSeekerL(void)
+	?NewEngineL@ProEngFactory@@SAPAVMProEngEngine@@AAVRFs@@@Z @ 2 NONAME ; class MProEngEngine * ProEngFactory::NewEngineL(class RFs &)
+	?NewEngineL@ProEngFactory@@SAPAVMProEngEngine@@XZ @ 3 NONAME ; class MProEngEngine * ProEngFactory::NewEngineL(void)
+	?NewEngineLC@ProEngFactory@@SAPAVMProEngEngine@@AAVRFs@@@Z @ 4 NONAME ; class MProEngEngine * ProEngFactory::NewEngineLC(class RFs &)
+	?NewEngineLC@ProEngFactory@@SAPAVMProEngEngine@@XZ @ 5 NONAME ; class MProEngEngine * ProEngFactory::NewEngineLC(void)
+	?NewNotifyHandlerL@ProEngFactory@@SAPAVMProEngNotifyHandler@@XZ @ 6 NONAME ; class MProEngNotifyHandler * ProEngFactory::NewNotifyHandlerL(void)
+

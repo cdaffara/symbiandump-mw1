@@ -1,0 +1,37 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-APPARC-0070
+//! @SYMPREQ			REQ758.2
+//! @SYMTestCaseDesc 		Test whether the default app icons change with respect to the locale/language.
+//!  				This testcase checks whether BaflUtils::NearestLanguageFile is called when the locale has been changed.
+//! @SYMTestPriority 		High  
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions  		Call User::Language() to check that the default locale is English; Call CT_LocaleStep::CheckIcons 
+//!				to check the size of the current default icons; Call UserSvr::ChangeLocale to change the Locale to French; 
+//!				Call CT_LocaleStep::CheckIcons to check the size of the new icons; Restore the file system and the locale 
+//!				and check if the icons are restored.
+//!				API Calls:
+//! @SYMTestExpectedResults 	Returns KErrNone
+
+START_TESTCASE API-APPFWK-APPARC-0070
+
+PRINT Run T_Locale Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_Locale
+
+END_TESTCASE API-APPFWK-APPARC-0070

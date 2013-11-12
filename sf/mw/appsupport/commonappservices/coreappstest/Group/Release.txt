@@ -1,0 +1,80 @@
+Release: 012
+Release by: Shazia Murtaza
+Date: 23/04/2009
+===========================
+  * Fix for defect PDEF138471: Raptor issues in app support 
+===========================
+
+Release: 011
+Release by: Waiman Tang
+Date: 16/03/2009
+===========================
+  * Fix for defect PDEF134629: 	ONB : Fix for some leavescan errors in defect_misc build
+===========================
+
+Release: 010
+Release by: Waiman Tang
+Date: 16/02/2009
+===========================
+  * Fix for defect DEF130642: ONB long failing test: tcal_tzdbchange (urel)
+===========================
+
+Release: 009
+Release by: James Aley
+Date: 04/02/2009
+===========================
+  * Fix for defect DEF133714: WDP: Tests failing due to missing files  
+===========================
+Release: 008
+Release by: Shazia Murtaza
+Date: 08/01/2009
+===========================
+  * Fix for defect DEF132848: Add a new iby file in coreappstest to launch eshell automatically 
+===========================
+
+Release: 007
+Release by: James Clarke
+Date: 24/11/2008
+===========================
+  * Fix for defect DEF129965: SMP: tcal_QueueAlarmOnStartup fails during SMP testing 
+===========================
+
+Release: 006
+Release by: Michael Coffey
+Date: 19/06/2008
+===========================
+  * Fix for defect DEF118171: PIM_FailingTestHarness_TESTSERVERTEST.htm script failing on ONB
+===========================
+
+Release: 005
+Release by: Luke Zhang
+Date: 10/12/2007
+===========================
+  * Fix for defect DEF109924: Tcal_Dataexchange failing on ONB.
+===========================
+
+Release: 004
+Release by: Daniel Yuen
+Date: 07/08/2006
+===========================
+  * Fix for defect DEF092046: Test server CoreAppsTest fails invisibly in nightly builds.
+===========================
+
+Release: 003
+Release by: ShaziaM
+Date: 07/02/2006
+===========================
+  * Added new function for deleting a directory.
+===========================
+
+Release: 002
+Release by: OwenW
+Date: 28/02/2005
+===========================
+  * Minor Update. Uses Leaves in the server side code, rather then returning a TInt. This cleans up the code and makes it more robust.
+===========================
+
+Release: 001
+Release by: Unknown
+Date: unknown
+===========================

@@ -1,0 +1,57 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+// include test code
+#include "../test/tamastarter/group/bld.inf"
+#include "../test/tdscstore/group/bld.inf"
+#include "../test/testapps/bld.inf"
+
+//Comment in or out the macro to select DBMS or SQLite implementations
+//#define DSCSTORE_SQL
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../group/amastart.iby			/epoc32/rom/include/amastart.iby
+
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+../inc/amastart.h				/epoc32/include/amastart.h
+#endif
+../inc/dscitem.h				SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(dscitem.h)
+../inc/dscstore.h				SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(dscstore.h)
+../inc/dscstoredefs.h			SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(dscstoredefs.h)
+
+../group/2000836D.spd			z:/private/100012a5/policy/2000836d.spd
+
+
+PRJ_MMPFILES
+
+#ifdef DSCSTORE_SQL
+../group/dscstore_sql.mmp
+#else
+../group/dscstore.mmp
+#endif // DSCSTORE_SQL
+
+../group/loadamastart.mmp
+../group/amastartdll.mmp
+../group/amastartexe.mmp
+
+PRJ_TESTEXPORTS
+../group/amastarttest.iby /epoc32/rom/include/amastarttest.iby
+
+#endif //SYMBIAN_SYSTEM_STATE_MANAGEMENT

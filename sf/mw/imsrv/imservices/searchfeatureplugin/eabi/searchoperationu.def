@@ -1,0 +1,19 @@
+EXPORTS
+	_ZN16COperationSearchC1Ev @ 1 NONAME
+	_ZN16COperationSearchC2Ev @ 2 NONAME
+	_ZN23CSearchOperationFactory4NewLEv @ 3 NONAME
+	_ZN28COperationHandleSearchResultC1Ev @ 4 NONAME
+	_ZN28COperationHandleSearchResultC2Ev @ 5 NONAME
+	_ZTI16COperationSearch @ 6 NONAME ; #<TI>#
+	_ZTI28COperationHandleSearchResult @ 7 NONAME ; #<TI>#
+	_ZTV16COperationSearch @ 8 NONAME ; #<VT>#
+	_ZTV28COperationHandleSearchResult @ 9 NONAME ; #<VT>#
+	_ZN23COperationGetSearchKeysC1Ev @ 10 NONAME
+	_ZN23COperationGetSearchKeysC2Ev @ 11 NONAME
+	_ZN26COperationHandleSearchKeysC1Ev @ 12 NONAME
+	_ZN26COperationHandleSearchKeysC2Ev @ 13 NONAME
+	_ZTI23COperationGetSearchKeys @ 14 NONAME ; #<TI>#
+	_ZTI26COperationHandleSearchKeys @ 15 NONAME ; #<TI>#
+	_ZTV23COperationGetSearchKeys @ 16 NONAME ; #<VT>#
+	_ZTV26COperationHandleSearchKeys @ 17 NONAME ; #<VT>#
+

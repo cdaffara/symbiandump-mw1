@@ -1,0 +1,31 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Camcorder controller plugin implementation UIDs
+*
+*/
+
+
+#ifndef __CAMCIMPLEMENTATIONUIDS_HRH__
+#define __CAMCIMPLEMENTATIONUIDS_HRH__
+
+// DATA TYPES
+// These are the ECOM Implementation UIDs for the controller
+
+#define KCamCUidControllerImplementation 0x101F8503
+
+#define KCamCUidRecordFormatImplementation 0x101F8504
+#define KCamCUid3GPP2FileFormatImplementation 0x101F86D6
+#define KCamCUidMP4FileFormatImplementation 0x101F873D
+
+#endif

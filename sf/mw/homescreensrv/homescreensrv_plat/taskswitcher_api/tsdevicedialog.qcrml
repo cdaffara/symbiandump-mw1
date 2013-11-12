@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository target="RProperty" uidValue="0x20022fc5">
+    <key int="0x2002677F" ref="/TaskSwitcher/Visibility"/>
+    <key int="0x20026781" ref="/TaskSwitcher/DismissRequest"/>
+</repository>

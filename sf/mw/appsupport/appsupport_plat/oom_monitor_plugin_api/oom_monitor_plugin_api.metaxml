@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="7cb8b623ce08dce80e8d13e16139f42a" dataversion="2.0">
+  <name>OOM Monitor Plugin API</name>
+  <description>An interface defining OOM Plugins</description>
+  <type>c++</type>
+  <collection>sysresmonitoring</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

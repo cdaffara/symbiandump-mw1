@@ -1,0 +1,11 @@
+component	app-services_testalarmsrv
+source	\sf\mw\appsupport\commonappservices\alarmservertest
+binary	\sf\mw\appsupport\commonappservices\alarmservertest\TestAlarmSrv	all
+exports	\sf\mw\appsupport\commonappservices\alarmservertest\TestAlarmSrv
+
+
+notes_source	\component_defs\release.src
+
+
+ipr T 
+

@@ -1,0 +1,72 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+//TARGET	TEAlarmServer.exe
+TARGET 		alarmserverunittestserver.exe
+CAPABILITY ReadUserData WriteUserData WriteDeviceData PowerMgmt
+TARGETTYPE  exe
+UID             0x1000007A 0x1020E042
+
+SOURCEPATH ../src
+
+SOURCE	TEAlarmTestServer.cpp
+SOURCE	TEAlarmTestSilentStep.cpp
+SOURCE	TEAlarmTestSilentForStep.cpp
+SOURCE	TEAlarmTestSilentUntilStep.cpp
+SOURCE	TEAlarmTestStepBase.cpp
+SOURCE	TEAlarmTestAlarmPlayConfig.cpp
+SOURCE	TEAlarmTestMANEventEntry.cpp
+SOURCE	TEAlarmTestMANEventObserver.cpp
+SOURCE	TEAlarmTestMultipleAlarmsStep.cpp
+SOURCE	tealarmtestgetalarmdatastep.cpp
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+USERINCLUDE ../inc
+USERINCLUDE ../../../ConsoleAlarmAlertServer/Include
+USERINCLUDE ../../../Server/Include
+USERINCLUDE ../..
+
+LIBRARY	euser.lib testexecuteutils.lib alarmclient.lib alarmshared.lib
+LIBRARY testexecutelogclient.lib antestclient.lib
+
+
+
+START RESOURCE ../scripts/tealarmserver_disabled.rss
+TARGETPATH testdata/config
+END
+
+START RESOURCE ../scripts/tealarmserver_loop.rss
+TARGETPATH testdata/config
+END
+
+START RESOURCE ../scripts/tealarmserver_repeatlast.rss
+TARGETPATH testdata/config
+END
+
+START RESOURCE ../scripts/tealarmserver_stop.rss
+TARGETPATH testdata/config
+END
+
+START RESOURCE ../scripts/tealarmserver_disordered.rss
+TARGETPATH testdata/config
+END
+
+START RESOURCE ../scripts/tealarmserver_longduration.rss
+TARGETPATH testdata/config
+END
+
+SMPSAFE
+

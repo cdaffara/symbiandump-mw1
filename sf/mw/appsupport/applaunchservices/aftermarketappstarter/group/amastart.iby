@@ -1,0 +1,27 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __AMASTART_IBY__
+#define __AMASTART_IBY__
+
+file=ABI_DIR\BUILD_DIR\amastart.dll			sys\bin\amastart.dll
+file=ABI_DIR\BUILD_DIR\amastarter.exe			Sys\bin\amastarter.exe
+file=ABI_DIR\BUILD_DIR\dscstore.dll        		sys\bin\dscstore.dll
+file=ABI_DIR\BUILD_DIR\loadamastart.dll		sys\bin\loadamastart.dll
+
+data=ZPRIVATE\100012a5\policy\2000836D.spd 		PRIVATE\100012a5\policy\2000836D.spd
+
+
+#endif // __AMASTART_IBY__

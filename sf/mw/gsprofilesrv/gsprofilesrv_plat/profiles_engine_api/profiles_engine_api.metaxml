@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<api id="7cd90304c0aac4ddc7309afb22964708" dataversion="2.0">
+  <name>Profiles Engine API</name>
+  <description>For creating Profiles Engine, getting the active profile,
+getting the profile names and setting the active profile.</description>
+  <type>c++</type>
+  <collection>profilesservices</collection>
+  <libs>
+    <lib name="ProfileEng.lib" />
+    <lib name="ProfileEngine.lib" />
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

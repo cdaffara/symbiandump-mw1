@@ -1,0 +1,4 @@
+HbIndicatorButton::eventindication {
+    color: var(qtc_title_pane_normal);
+}
+

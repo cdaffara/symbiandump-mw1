@@ -1,0 +1,15 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+	<upgradeSecurity>
+		<capability>AllFiles</capability>
+		<capability>UserEnvironment</capability>
+	</upgradeSecurity>
+    <if>
+        <contextUpdated>
+            <contextRef source='test' type='upgrade'/>
+        </contextUpdated>
+        <actions>
+        	<romUpgrade id='true'/>
+        </actions>
+    </if>
+</script>

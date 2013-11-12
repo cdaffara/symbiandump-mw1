@@ -1,0 +1,18 @@
+EXPORTS
+	??1CConversationSubscriptionItem@@UAE@XZ @ 1 NONAME ; CConversationSubscriptionItem::~CConversationSubscriptionItem(void)
+	?CleanExpired@CImDataCache@@QAEXXZ @ 2 NONAME ; void CImDataCache::CleanExpired(void)
+	?CleanResources@CImDataCache@@QAEXAAVMXIMPPscContext@@@Z @ 3 NONAME ; void CImDataCache::CleanResources(class MXIMPPscContext &)
+	?ConversationSubscriptionItemLC@CImDataCache@@QAEAAVCConversationSubscriptionItem@@XZ @ 4 NONAME ; class CConversationSubscriptionItem & CImDataCache::ConversationSubscriptionItemLC(void)
+	?IdentityImp@CImConversationInfoImp@@QBEABVCXIMPIdentityImp@@XZ @ 5 NONAME ; class CXIMPIdentityImp const & CImConversationInfoImp::IdentityImp(void) const
+	?InternalizeL@CImConversationInfoImp@@QAEXAAVRReadStream@@@Z @ 6 NONAME ; void CImConversationInfoImp::InternalizeL(class RReadStream &)
+	?NewFromStreamLC@CImConversationInfoImp@@SAPAVCXIMPApiDataObjBase@@AAVRReadStream@@@Z @ 7 NONAME ; class CXIMPApiDataObjBase * CImConversationInfoImp::NewFromStreamLC(class RReadStream &)
+	?NewL@CImApiDataObjFactoryAccessor@@SAPAV1@XZ @ 8 NONAME ; class CImApiDataObjFactoryAccessor * CImApiDataObjFactoryAccessor::NewL(void)
+	?NewL@CImConversationInfoImp@@SAPAV1@XZ @ 9 NONAME ; class CImConversationInfoImp * CImConversationInfoImp::NewL(void)
+	?NewL@CImDataCache@@SAPAV1@AAVMXIMPHost@@@Z @ 10 NONAME ; class CImDataCache * CImDataCache::NewL(class MXIMPHost &)
+	?NewL@CImObjectFactoryImp@@SAPAV1@XZ @ 11 NONAME ; class CImObjectFactoryImp * CImObjectFactoryImp::NewL(void)
+	?NewLC@CImConversationEventImp@@SAPAV1@PAVCImConversationInfoImp@@@Z @ 12 NONAME ; class CImConversationEventImp * CImConversationEventImp::NewLC(class CImConversationInfoImp *)
+	?NewLC@CImConversationInfoImp@@SAPAV1@XZ @ 13 NONAME ; class CImConversationInfoImp * CImConversationInfoImp::NewLC(void)
+	?RemoveMe@?$@VCConversationSubscriptionItem@@@CImDataCache@@CAXAAPAV1@PAV1@@Z @ 14 NONAME ; void CImDataCache::RemoveMe<class CConversationSubscriptionItem>(class CConversationSubscriptionItem * &, class CConversationSubscriptionItem *)
+	?SetConversationInfoL@CConversationSubscriptionItem@@QAEXPAVCImConversationInfoImp@@@Z @ 15 NONAME ; void CConversationSubscriptionItem::SetConversationInfoL(class CImConversationInfoImp *)
+	?SetIdentity@CImConversationInfoImp@@QAEXPAVCXIMPIdentityImp@@@Z @ 16 NONAME ; void CImConversationInfoImp::SetIdentity(class CXIMPIdentityImp *)
+

@@ -1,0 +1,181 @@
+EXPORTS
+	_ZN23COperationLaunchCleanerC1Ev @ 1 NONAME
+	_ZN23COperationLaunchCleanerC2Ev @ 2 NONAME
+	_ZN25CPresenceOperationFactory4NewLEv @ 3 NONAME
+	_ZN27COperationHandleOwnPresenceC1Ev @ 4 NONAME
+	_ZN27COperationHandleOwnPresenceC2Ev @ 5 NONAME
+	_ZN28COperationPublishOwnPresenceC1Ev @ 6 NONAME
+	_ZN28COperationPublishOwnPresenceC2Ev @ 7 NONAME
+	_ZN28COperationSubscribeBlockListC1Ev @ 8 NONAME
+	_ZN28COperationSubscribeBlockListC2Ev @ 9 NONAME
+	_ZN28COperationSubscribeGroupListC1Ev @ 10 NONAME
+	_ZN28COperationSubscribeGroupListC2Ev @ 11 NONAME
+	_ZN29COperationSetSubscriptionDataC1EN12NPresenceOps16TPresenceOpTypesE @ 12 NONAME
+	_ZN29COperationSetSubscriptionDataC2EN12NPresenceOps16TPresenceOpTypesE @ 13 NONAME
+	_ZN30COperationSubscribeOwnPresenceC1Ev @ 14 NONAME
+	_ZN30COperationSubscribeOwnPresenceC2Ev @ 15 NONAME
+	_ZN30COperationSubscribeWatcherListC1Ev @ 16 NONAME
+	_ZN30COperationSubscribeWatcherListC2Ev @ 17 NONAME
+	_ZN30COperationUnsubscribeBlockListC1Ev @ 18 NONAME
+	_ZN30COperationUnsubscribeBlockListC2Ev @ 19 NONAME
+	_ZN30COperationUnsubscribeGroupListC1Ev @ 20 NONAME
+	_ZN30COperationUnsubscribeGroupListC2Ev @ 21 NONAME
+	_ZN31COperationCreatePresentityGroupC1Ev @ 22 NONAME
+	_ZN31COperationCreatePresentityGroupC2Ev @ 23 NONAME
+	_ZN31COperationDeletePresentityGroupC1Ev @ 24 NONAME
+	_ZN31COperationDeletePresentityGroupC2Ev @ 25 NONAME
+	_ZN31COperationSubscribeGroupContentC1Ev @ 26 NONAME
+	_ZN31COperationSubscribeGroupContentC2Ev @ 27 NONAME
+	_ZN32COperationHandlePresenceBlockingC1Ei @ 28 NONAME
+	_ZN32COperationHandlePresenceBlockingC2Ei @ 29 NONAME
+	_ZN32COperationHandlePresentityGroupsC1EN12NPresenceOps16TPresenceOpTypesE @ 30 NONAME
+	_ZN32COperationHandlePresentityGroupsC2EN12NPresenceOps16TPresenceOpTypesE @ 31 NONAME
+	_ZN32COperationUnsubscribeOwnPresenceC1Ev @ 32 NONAME
+	_ZN32COperationUnsubscribeOwnPresenceC2Ev @ 33 NONAME
+	_ZN32COperationUnsubscribeWatcherListC1Ev @ 34 NONAME
+	_ZN32COperationUnsubscribeWatcherListC2Ev @ 35 NONAME
+	_ZN33COperationGrantPresenceToEveryoneC1Ev @ 36 NONAME
+	_ZN33COperationGrantPresenceToEveryoneC2Ev @ 37 NONAME
+	_ZN33COperationUnsubscribeGroupContentC1Ev @ 38 NONAME
+	_ZN33COperationUnsubscribeGroupContentC2Ev @ 39 NONAME
+	_ZN34COperationAddPresentityGroupMemberC1Ev @ 40 NONAME
+	_ZN34COperationAddPresentityGroupMemberC2Ev @ 41 NONAME
+	_ZN34COperationHandlePresentityPresenceC1Ei @ 42 NONAME
+	_ZN34COperationHandlePresentityPresenceC2Ei @ 43 NONAME
+	_ZN35COperationGrantPresenceToPresentityC1Ev @ 44 NONAME
+	_ZN35COperationGrantPresenceToPresentityC2Ev @ 45 NONAME
+	_ZN35COperationHandlePresenceWatcherListC1Ev @ 46 NONAME
+	_ZN35COperationHandlePresenceWatcherListC2Ev @ 47 NONAME
+	_ZN35COperationSubscribeGrantRequestListC1Ev @ 48 NONAME
+	_ZN35COperationSubscribeGrantRequestListC2Ev @ 49 NONAME
+	_ZN36COperationBlockPresenceForPresentityC1Ev @ 50 NONAME
+	_ZN36COperationBlockPresenceForPresentityC2Ev @ 51 NONAME
+	_ZN37COperationHandlePresenceGrantRequestsC1Ei @ 52 NONAME
+	_ZN37COperationHandlePresenceGrantRequestsC2Ei @ 53 NONAME
+	_ZN37COperationRemovePresentityGroupMemberC1Ev @ 54 NONAME
+	_ZN37COperationRemovePresentityGroupMemberC2Ev @ 55 NONAME
+	_ZN37COperationSubscribePresentityPresenceC1Ev @ 56 NONAME
+	_ZN37COperationSubscribePresentityPresenceC2Ev @ 57 NONAME
+	_ZN37COperationSynthesiseSubscriptionEventC1ENS_17TSubscriptionTypeEi @ 58 NONAME
+	_ZN37COperationSynthesiseSubscriptionEventC2ENS_17TSubscriptionTypeEi @ 59 NONAME
+	_ZN37COperationUnsubscribeGrantRequestListC1Ev @ 60 NONAME
+	_ZN37COperationUnsubscribeGrantRequestListC2Ev @ 61 NONAME
+	_ZN38COperationHandlePresentityGroupContentC1Ev @ 62 NONAME
+	_ZN38COperationHandlePresentityGroupContentC2Ev @ 63 NONAME
+	_ZN38COperationWithdrawPresenceFromEveryoneC1Ev @ 64 NONAME
+	_ZN38COperationWithdrawPresenceFromEveryoneC2Ev @ 65 NONAME
+	_ZN39COperationUnsubscribePresentityPresenceC1Ev @ 66 NONAME
+	_ZN39COperationUnsubscribePresentityPresenceC2Ev @ 67 NONAME
+	_ZN40COperationWithdrawPresenceFromPresentityC1Ev @ 68 NONAME
+	_ZN40COperationWithdrawPresenceFromPresentityC2Ev @ 69 NONAME
+	_ZN42COperationHandlePresentityGroupMemberAddedC1Ev @ 70 NONAME
+	_ZN42COperationHandlePresentityGroupMemberAddedC2Ev @ 71 NONAME
+	_ZN42COperationUpdatePresentityGroupDisplayNameC1Ev @ 72 NONAME
+	_ZN42COperationUpdatePresentityGroupDisplayNameC2Ev @ 73 NONAME
+	_ZN43COperationCancelPresenceBlockFromPresentityC1Ev @ 74 NONAME
+	_ZN43COperationCancelPresenceBlockFromPresentityC2Ev @ 75 NONAME
+	_ZN44COperationHandlePresentityGroupMemberRemovedC1Ev @ 76 NONAME
+	_ZN44COperationHandlePresentityGroupMemberRemovedC2Ev @ 77 NONAME
+	_ZN47COperationGrantPresenceToPresentityGroupMembersC1Ev @ 78 NONAME
+	_ZN47COperationGrantPresenceToPresentityGroupMembersC2Ev @ 79 NONAME
+	_ZN48COperationUpdatePresentityGroupMemberDisplayNameC1Ev @ 80 NONAME
+	_ZN48COperationUpdatePresentityGroupMemberDisplayNameC2Ev @ 81 NONAME
+	_ZN49COperationSubscribePresentityGroupMembersPresenceC1Ev @ 82 NONAME
+	_ZN49COperationSubscribePresentityGroupMembersPresenceC2Ev @ 83 NONAME
+	_ZN51COperationUnsubscribePresentityGroupMembersPresenceC1Ev @ 84 NONAME
+	_ZN51COperationUnsubscribePresentityGroupMembersPresenceC2Ev @ 85 NONAME
+	_ZN52COperationWithdrawPresenceFromPresentityGroupMembersC1Ev @ 86 NONAME
+	_ZN52COperationWithdrawPresenceFromPresentityGroupMembersC2Ev @ 87 NONAME
+	_ZN55COperationHandlePresentityGroupMemberDisplayNameUpdatedC1Ev @ 88 NONAME
+	_ZN55COperationHandlePresentityGroupMemberDisplayNameUpdatedC2Ev @ 89 NONAME
+	_ZTI23COperationLaunchCleaner @ 90 NONAME ; #<TI>#
+	_ZTI25CPresenceOperationFactory @ 91 NONAME ; #<TI>#
+	_ZTI27COperationHandleOwnPresence @ 92 NONAME ; #<TI>#
+	_ZTI28COperationPublishOwnPresence @ 93 NONAME ; #<TI>#
+	_ZTI28COperationSubscribeBlockList @ 94 NONAME ; #<TI>#
+	_ZTI28COperationSubscribeGroupList @ 95 NONAME ; #<TI>#
+	_ZTI29COperationSetSubscriptionData @ 96 NONAME ; #<TI>#
+	_ZTI30COperationSubscribeOwnPresence @ 97 NONAME ; #<TI>#
+	_ZTI30COperationSubscribeWatcherList @ 98 NONAME ; #<TI>#
+	_ZTI30COperationUnsubscribeBlockList @ 99 NONAME ; #<TI>#
+	_ZTI30COperationUnsubscribeGroupList @ 100 NONAME ; #<TI>#
+	_ZTI31COperationCreatePresentityGroup @ 101 NONAME ; #<TI>#
+	_ZTI31COperationDeletePresentityGroup @ 102 NONAME ; #<TI>#
+	_ZTI31COperationSubscribeGroupContent @ 103 NONAME ; #<TI>#
+	_ZTI32COperationHandlePresenceBlocking @ 104 NONAME ; #<TI>#
+	_ZTI32COperationHandlePresentityGroups @ 105 NONAME ; #<TI>#
+	_ZTI32COperationUnsubscribeOwnPresence @ 106 NONAME ; #<TI>#
+	_ZTI32COperationUnsubscribeWatcherList @ 107 NONAME ; #<TI>#
+	_ZTI33COperationGrantPresenceToEveryone @ 108 NONAME ; #<TI>#
+	_ZTI33COperationUnsubscribeGroupContent @ 109 NONAME ; #<TI>#
+	_ZTI34COperationAddPresentityGroupMember @ 110 NONAME ; #<TI>#
+	_ZTI34COperationHandlePresentityPresence @ 111 NONAME ; #<TI>#
+	_ZTI35COperationGrantPresenceToPresentity @ 112 NONAME ; #<TI>#
+	_ZTI35COperationHandlePresenceWatcherList @ 113 NONAME ; #<TI>#
+	_ZTI35COperationSubscribeGrantRequestList @ 114 NONAME ; #<TI>#
+	_ZTI36COperationBlockPresenceForPresentity @ 115 NONAME ; #<TI>#
+	_ZTI37COperationHandlePresenceGrantRequests @ 116 NONAME ; #<TI>#
+	_ZTI37COperationRemovePresentityGroupMember @ 117 NONAME ; #<TI>#
+	_ZTI37COperationSubscribePresentityPresence @ 118 NONAME ; #<TI>#
+	_ZTI37COperationSynthesiseSubscriptionEvent @ 119 NONAME ; #<TI>#
+	_ZTI37COperationUnsubscribeGrantRequestList @ 120 NONAME ; #<TI>#
+	_ZTI38COperationHandlePresentityGroupContent @ 121 NONAME ; #<TI>#
+	_ZTI38COperationWithdrawPresenceFromEveryone @ 122 NONAME ; #<TI>#
+	_ZTI39COperationUnsubscribePresentityPresence @ 123 NONAME ; #<TI>#
+	_ZTI40COperationWithdrawPresenceFromPresentity @ 124 NONAME ; #<TI>#
+	_ZTI42COperationHandlePresentityGroupMemberAdded @ 125 NONAME ; #<TI>#
+	_ZTI42COperationUpdatePresentityGroupDisplayName @ 126 NONAME ; #<TI>#
+	_ZTI43COperationCancelPresenceBlockFromPresentity @ 127 NONAME ; #<TI>#
+	_ZTI44COperationHandlePresentityGroupMemberRemoved @ 128 NONAME ; #<TI>#
+	_ZTI47COperationGrantPresenceToPresentityGroupMembers @ 129 NONAME ; #<TI>#
+	_ZTI48COperationUpdatePresentityGroupMemberDisplayName @ 130 NONAME ; #<TI>#
+	_ZTI49COperationSubscribePresentityGroupMembersPresence @ 131 NONAME ; #<TI>#
+	_ZTI51COperationUnsubscribePresentityGroupMembersPresence @ 132 NONAME ; #<TI>#
+	_ZTI52COperationWithdrawPresenceFromPresentityGroupMembers @ 133 NONAME ; #<TI>#
+	_ZTI55COperationHandlePresentityGroupMemberDisplayNameUpdated @ 134 NONAME ; #<TI>#
+	_ZTV23COperationLaunchCleaner @ 135 NONAME ; #<VT>#
+	_ZTV25CPresenceOperationFactory @ 136 NONAME ; #<VT>#
+	_ZTV27COperationHandleOwnPresence @ 137 NONAME ; #<VT>#
+	_ZTV28COperationPublishOwnPresence @ 138 NONAME ; #<VT>#
+	_ZTV28COperationSubscribeBlockList @ 139 NONAME ; #<VT>#
+	_ZTV28COperationSubscribeGroupList @ 140 NONAME ; #<VT>#
+	_ZTV29COperationSetSubscriptionData @ 141 NONAME ; #<VT>#
+	_ZTV30COperationSubscribeOwnPresence @ 142 NONAME ; #<VT>#
+	_ZTV30COperationSubscribeWatcherList @ 143 NONAME ; #<VT>#
+	_ZTV30COperationUnsubscribeBlockList @ 144 NONAME ; #<VT>#
+	_ZTV30COperationUnsubscribeGroupList @ 145 NONAME ; #<VT>#
+	_ZTV31COperationCreatePresentityGroup @ 146 NONAME ; #<VT>#
+	_ZTV31COperationDeletePresentityGroup @ 147 NONAME ; #<VT>#
+	_ZTV31COperationSubscribeGroupContent @ 148 NONAME ; #<VT>#
+	_ZTV32COperationHandlePresenceBlocking @ 149 NONAME ; #<VT>#
+	_ZTV32COperationHandlePresentityGroups @ 150 NONAME ; #<VT>#
+	_ZTV32COperationUnsubscribeOwnPresence @ 151 NONAME ; #<VT>#
+	_ZTV32COperationUnsubscribeWatcherList @ 152 NONAME ; #<VT>#
+	_ZTV33COperationGrantPresenceToEveryone @ 153 NONAME ; #<VT>#
+	_ZTV33COperationUnsubscribeGroupContent @ 154 NONAME ; #<VT>#
+	_ZTV34COperationAddPresentityGroupMember @ 155 NONAME ; #<VT>#
+	_ZTV34COperationHandlePresentityPresence @ 156 NONAME ; #<VT>#
+	_ZTV35COperationGrantPresenceToPresentity @ 157 NONAME ; #<VT>#
+	_ZTV35COperationHandlePresenceWatcherList @ 158 NONAME ; #<VT>#
+	_ZTV35COperationSubscribeGrantRequestList @ 159 NONAME ; #<VT>#
+	_ZTV36COperationBlockPresenceForPresentity @ 160 NONAME ; #<VT>#
+	_ZTV37COperationHandlePresenceGrantRequests @ 161 NONAME ; #<VT>#
+	_ZTV37COperationRemovePresentityGroupMember @ 162 NONAME ; #<VT>#
+	_ZTV37COperationSubscribePresentityPresence @ 163 NONAME ; #<VT>#
+	_ZTV37COperationSynthesiseSubscriptionEvent @ 164 NONAME ; #<VT>#
+	_ZTV37COperationUnsubscribeGrantRequestList @ 165 NONAME ; #<VT>#
+	_ZTV38COperationHandlePresentityGroupContent @ 166 NONAME ; #<VT>#
+	_ZTV38COperationWithdrawPresenceFromEveryone @ 167 NONAME ; #<VT>#
+	_ZTV39COperationUnsubscribePresentityPresence @ 168 NONAME ; #<VT>#
+	_ZTV40COperationWithdrawPresenceFromPresentity @ 169 NONAME ; #<VT>#
+	_ZTV42COperationHandlePresentityGroupMemberAdded @ 170 NONAME ; #<VT>#
+	_ZTV42COperationUpdatePresentityGroupDisplayName @ 171 NONAME ; #<VT>#
+	_ZTV43COperationCancelPresenceBlockFromPresentity @ 172 NONAME ; #<VT>#
+	_ZTV44COperationHandlePresentityGroupMemberRemoved @ 173 NONAME ; #<VT>#
+	_ZTV47COperationGrantPresenceToPresentityGroupMembers @ 174 NONAME ; #<VT>#
+	_ZTV48COperationUpdatePresentityGroupMemberDisplayName @ 175 NONAME ; #<VT>#
+	_ZTV49COperationSubscribePresentityGroupMembersPresence @ 176 NONAME ; #<VT>#
+	_ZTV51COperationUnsubscribePresentityGroupMembersPresence @ 177 NONAME ; #<VT>#
+	_ZTV52COperationWithdrawPresenceFromPresentityGroupMembers @ 178 NONAME ; #<VT>#
+	_ZTV55COperationHandlePresentityGroupMemberDisplayNameUpdated @ 179 NONAME ; #<VT>#
+

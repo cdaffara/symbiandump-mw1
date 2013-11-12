@@ -1,0 +1,58 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// alarmclient.dll Client-side part of alarm server
+// 
+//
+
+TARGET				alarmclient.dll
+TARGETTYPE			dll
+CAPABILITY   All -TCB
+UID					0x1000008D	0x101F5028
+VENDORID 0x70000001
+
+SOURCEPATH			../Client/Source
+
+SOURCE				ASCliSession.cpp
+SOURCE				ASCliClientUtils.cpp
+SOURCE				ASCliDefinitions.cpp
+
+USERINCLUDE			../Shared/Include
+USERINCLUDE			../Client/Include
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY				euser.lib
+LIBRARY				estor.lib
+LIBRARY				alarmshared.lib
+
+#ifdef SYMBIAN_ALARM_REPEAT_EXTENSIONS
+#ifdef WINS
+DEFFILE				ALARMCLIENTFUT.DEF
+#else
+DEFFILE				AlarmClientFut.DEF
+#endif
+#else
+#ifdef WINS
+DEFFILE				ALARMCLIENT.DEF
+#else
+DEFFILE				AlarmClient.DEF
+#endif
+#endif
+
+
+START WINS
+	baseaddress		0x40700000
+END
+
+SMPSAFE

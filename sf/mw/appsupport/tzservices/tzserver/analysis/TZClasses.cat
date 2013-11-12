@@ -1,0 +1,483 @@
+
+(object Petal
+    version    	43
+    _written   	"Rose 6.5.9232.10"
+    charSet    	0)
+
+(object Class_Category "TZClasses"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"40F3CEAF0324"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "TRegionalZonesTable"
+	    quid       	"40E190CD0023")
+	(object Class "TRegionalZonesIndex"
+	    quid       	"40E1906C010C")
+	(object Class "TRegion"
+	    quid       	"40E175D902B9")
+	(object Class "TRegionsTable"
+	    quid       	"40E175950095")
+	(object Class "TZStringsTable"
+	    quid       	"40E1713D0336")
+	(object Class "TZoneFormatName"
+	    quid       	"40E146770070")
+	(object Class "TRuleDefinition"
+	    quid       	"40E1450C0230")
+	(object Class "TRuleUse"
+	    quid       	"40E144A300E7"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iFromYear"
+		    quid       	"418A0A03017C")
+		(object ClassAttribute "iUntilYear"
+		    quid       	"418A0A0B0360")))
+	(object Class "TRuleSet"
+	    quid       	"40E1445E01B1")
+	(object Class "TStdTimeAlignment"
+	    quid       	"40E143EC028A")
+	(object Class "TZonesDataTable"
+	    quid       	"40E143B101DE")
+	(object Class "TRuleSetLetterString"
+	    quid       	"40E143670131")
+	(object Class "TTimeZoneName"
+	    quid       	"40E14308013F")
+	(object Class "TZoneName"
+	    quid       	"40E13FA0024D")
+	(object Class "TRegionName"
+	    quid       	"40E13F5900A7")
+	(object Class "TRulesDefinitionsData"
+	    quid       	"40E13F000028")
+	(object Class "TRuleSetsData"
+	    quid       	"40E13E1302C5")
+	(object Class "TStdTimeAlignmentsData"
+	    quid       	"40E13E0A0006")
+	(object Class "TZone"
+	    quid       	"40E13DFF01DB"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iOffsetToZoneName"
+		    quid       	"410109BA01F1")
+		(object ClassAttribute "iOffsetToRegionName"
+		    quid       	"410109E50000")
+		(object ClassAttribute "iNumberOfTimeAlignments"
+		    quid       	"410109EA00A7")
+		(object ClassAttribute "iOffsetsToTimeAlignments"
+		    quid       	"410109F903B7")))
+	(object Class "TRuleSetLetterStringsTable"
+	    quid       	"40E13DF60267")
+	(object Class "TTimeZoneNamesTable"
+	    quid       	"40E13DEC0390")
+	(object Class "TZoneFormatNamesTable"
+	    quid       	"40E13DDC0073")
+	(object Class "TZoneNamesTable"
+	    quid       	"40E13DD10219")
+	(object Class "THeader"
+	    quid       	"40E13DA700B1")
+	(object Class "TZ_DSTDb"
+	    quid       	"40E13D960024")
+	(object Class_Utility "CTzDataProviderFactory"
+	    quid       	"40F284200290"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"40F28479007C"
+		    supplier   	"Logical View::Analysis Model::LTClasses::MTzDataAccess"
+		    quidu      	"40B1D59903C5")
+		(object Uses_Relationship
+		    quid       	"40F2858E0241"
+		    label      	"creates"
+		    supplier   	"Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTimeZoneDataProvider"
+		    quidu      	"40B1DA3703B5")
+		(object Uses_Relationship
+		    quid       	"417E681D00F2"
+		    supplier   	"Logical View::Analysis Model::LTClasses::MTzDataObserver"
+		    quidu      	"417E5C9D037C"))
+	    operations 	(list Operations
+		(object Operation "CreateTZDataProviderL"
+		    quid       	"40F63FDE0216"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDstDataReadWrite"
+	    quid       	"40CDCC47020B")
+	(object Class "CTzDstDataReadOnly"
+	    quid       	"40CDCC2800BA")
+	(object Class "CECOMTimeZoneDataProvider"
+	    quid       	"40B1D827028C"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"40B1D83901B1"
+		    supplier   	"Logical View::Analysis Model::SysClasses::CActive"
+		    quidu      	"409F86F50045"))
+	    operations 	(list Operations
+		(object Operation "TimeZoneDataAccess"
+		    quid       	"40B1DAC802AB"
+		    stereotype 	"virtual"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iEcomDTorUID"
+		    quid       	"40B1D92A01C1")))
+	(object Class "CTimeZoneDataManager"
+	    quid       	"40B44ABA0388"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iZones"
+		    quid       	"40CDC6E20379")
+		(object ClassAttribute "iCities"
+		    quid       	"40CDCB32033F")
+		(object ClassAttribute "iStdTimeZones"
+		    quid       	"40CDC7490047")
+		(object ClassAttribute "iStdTimeAlignments"
+		    quid       	"40CDC753016E")
+		(object ClassAttribute "iDstZones"
+		    quid       	"40CDC75C024E")
+		(object ClassAttribute "iDstRuleUses"
+		    quid       	"40CDC761038C")
+		(object ClassAttribute "iDstRuleDefinitions"
+		    quid       	"40CDC7690302")
+		(object ClassAttribute "iTzDstDataAccess"
+		    quid       	"40CDC77202FB")))
+	(object Class "CTzDstDataAccess"
+	    quid       	"40CDCC110002"
+	    operations 	(list Operations
+		(object Operation "NewL"
+		    quid       	"40CDCCC302B0"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ContructL"
+		    quid       	"40CDCCCB01D5"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "LoadData"
+		    quid       	"40CDCCB303C4"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetDstRule"
+		    quid       	"40CDCCCF0358"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "SetDstRule"
+		    quid       	"40CDCCDB025B"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "DeleteDstRule"
+		    quid       	"40CDD08A02AE"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ExternalizeL"
+		    quid       	"40CDD09103A9"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "RTimeZoneData"
+	    quid       	"40B44AAF02EC"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"40B44B460157"
+		    supplier   	"Logical View::Analysis Model::SysClasses::RSessionBase"
+		    quidu      	"40A1D3F1009C")))
+	(object Class "CTimeZoneDataSession"
+	    quid       	"40B44AE600D9"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"40B44B1800E9"
+		    supplier   	"Logical View::Analysis Model::SysClasses::CSession2"
+		    quidu      	"409F8948005D")))
+	(object Class "CTimeZoneDataServer"
+	    quid       	"40B44AD301F2"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"40B44B2100E9"
+		    supplier   	"Logical View::Analysis Model::SysClasses::CPolicyServer"
+		    quidu      	"409F888A0154")))
+	(object Class "CTzDocument"
+	    quid       	"40F406AD0084"
+	    operations 	(list Operations
+		(object Operation "Scan"
+		    quid       	"40F409320341"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Parse"
+		    quid       	"40F4093702A8"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Link"
+		    quid       	"40F4093B0204"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ExternaliseL"
+		    quid       	"40F5015C019A"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "InternaliseL"
+		    quid       	"40F5015F0235"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "AddRootChildElement"
+		    quid       	"410F63180160"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "AddChildElement"
+		    quid       	"410F632C0112"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "AddAttribute"
+		    quid       	"410F63330306"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "CloseElement"
+		    quid       	"410F6BA60295"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "CloseDocument"
+		    quid       	"410F6BB30228"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzRegion"
+	    quid       	"40ED4A620331"
+	    operations 	(list Operations
+		(object Operation "ExternaliseL"
+		    quid       	"40F4FC0D00BA"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "InternaliseL"
+		    quid       	"40F4FC17014B"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iRegionId"
+		    quid       	"40ED4ADE00AB")
+		(object ClassAttribute "iRegionName"
+		    quid       	"40ED4AE60201")
+		(object ClassAttribute "iStoredData"
+		    quid       	"40F4FC220327"
+		    type       	"TRegion")))
+	(object Class "CTzRegionalZonesIndex"
+	    quid       	"40ED5F05034F"
+	    operations 	(list Operations
+		(object Operation "ExternaliseL"
+		    quid       	"40F4FC5402ED"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "InternaliseL"
+		    quid       	"40F4FC57028D"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iZoneIdCollection"
+		    quid       	"40ED5F1E03BA")
+		(object ClassAttribute "iStoredData"
+		    quid       	"40F4FC41028B"
+		    type       	"TRegionalZonesIndex")))
+	(object Class "CTzRuleDefinition"
+	    quid       	"40ED4AAD015C"
+	    operations 	(list Operations
+		(object Operation "ExternaliseL"
+		    quid       	"40F4FB960127"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "InternaliseL"
+		    quid       	"40F4FB9A0263"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iRuleDefId"
+		    quid       	"40ED505201B6")
+		(object ClassAttribute "iStdTimeOffset"
+		    quid       	"40ED50570254")
+		(object ClassAttribute "iMonth"
+		    quid       	"40ED50C001E2")
+		(object ClassAttribute "iDayRule"
+		    quid       	"40ED50C70264")
+		(object ClassAttribute "iDayOfMonth"
+		    quid       	"40ED51250336")
+		(object ClassAttribute "iDayOfWeek"
+		    quid       	"40ED512B02D1")
+		(object ClassAttribute "iWeekOfMonth"
+		    quid       	"40ED51320340")
+		(object ClassAttribute "iTimeOfChange"
+		    quid       	"40ED513802C7")
+		(object ClassAttribute "iTimeReference"
+		    quid       	"40ED513D0288")
+		(object ClassAttribute "iReferenceCount"
+		    quid       	"40ED514000CA")
+		(object ClassAttribute "iStoredData"
+		    quid       	"40F4FBAD01AC"
+		    type       	"TRuleDefinition")))
+	(object Class "CTzRuleLetterString"
+	    quid       	"40ED4ABB01FD"
+	    operations 	(list Operations
+		(object Operation "ExternaliseL"
+		    quid       	"40F4FC8402BA"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "InternaliseL"
+		    quid       	"40F4FC87001F"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iRuleLetterId"
+		    quid       	"40ED4BA60062")
+		(object ClassAttribute "iString"
+		    quid       	"40ED4BAD022F")
+		(object ClassAttribute "iStoredData"
+		    quid       	"40F4FC7A00A3"
+		    type       	"TRuleLetterString")))
+	(object Class "CTzZone"
+	    quid       	"40ED4A7C0131"
+	    operations 	(list Operations
+		(object Operation "ExternaliseL"
+		    quid       	"40F4FA9F0293"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "InternaliseL"
+		    quid       	"40F4FAAB0042"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iZoneId"
+		    quid       	"40ED4AFB007C")
+		(object ClassAttribute "iZoneName"
+		    quid       	"40ED4AFE01AD")
+		(object ClassAttribute "iTimeAlignmentsCollection"
+		    quid       	"40EEB0CF03D3")
+		(object ClassAttribute "iStoredData"
+		    quid       	"40F4FB3C011E"
+		    type       	"TZone")))
+	(object Class "CTzStdTimeAlignment"
+	    quid       	"40ED4A85006C"
+	    operations 	(list Operations
+		(object Operation "ExternaliseL"
+		    quid       	"40F4FB8A002F"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "InternaliseL"
+		    quid       	"40F4FB8D0373"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iStdTimeAlignmentId"
+		    quid       	"40ED4B0F0071")
+		(object ClassAttribute "iUTCOffset"
+		    quid       	"40ED4B1B0282")
+		(object ClassAttribute "iStartOfTAPeriod"
+		    quid       	"40ED4B22007A")
+		(object ClassAttribute "iEndOfTAPeriod"
+		    quid       	"40ED4B2F01C4")
+		(object ClassAttribute "iTimeZoneFormat"
+		    quid       	"40ED4B3C00E7")
+		(object ClassAttribute "iRuleSetName"
+		    quid       	"40ED666203DB")
+		(object ClassAttribute "iStoredData"
+		    quid       	"40F4FB740088"
+		    type       	"TStdTimeAlignment")))
+	(object Class "CTzRuleUse"
+	    quid       	"40ED4AA6001B"
+	    operations 	(list Operations
+		(object Operation "ExternaliseL"
+		    quid       	"40F4FC6A03B7"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "InternaliseL"
+		    quid       	"40F4FC6D0054"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iRuleUseId"
+		    quid       	"40ED4B6F0219")
+		(object ClassAttribute "iStartYear"
+		    quid       	"40ED4B750330")
+		(object ClassAttribute "iEndYear"
+		    quid       	"40ED4B870355")
+		(object ClassAttribute "iRuleLetterId"
+		    quid       	"40ED4B8A03AA")
+		(object ClassAttribute "iStoredData"
+		    quid       	"40F4FC5E0323"
+		    type       	"TRuleUse")))
+	(object Class "CTzRuleSet"
+	    quid       	"40ED4A9D03C5"
+	    operations 	(list Operations
+		(object Operation "ExternaliseL"
+		    quid       	"40F4FBF3015D"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "InternaliseL"
+		    quid       	"40F4FBF900A7"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iRuleSetId"
+		    quid       	"40ED4B4F03AC")
+		(object ClassAttribute "iRuleSetName"
+		    quid       	"40ED4B5E02B4")
+		(object ClassAttribute "iRuleUseCollection"
+		    quid       	"40EEB0EC02FA")
+		(object ClassAttribute "iStoredData"
+		    quid       	"40F4FBE703A4"
+		    type       	"TRuleSet")))
+	(object Class "TLinksData"
+	    quid       	"40FE3C2C03AF")
+	(object Class "TLink"
+	    quid       	"40FE3C5A0120")
+	(object Class "CReadOnlyTZDB"
+	    quid       	"40FBA87302D3"
+	    operations 	(list Operations
+		(object Operation "NewL"
+		    quid       	"40FE696D02D3"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetRules"
+		    quid       	"40FE691400E0"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ConstructL"
+		    quid       	"40FE69A6027B"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	0)))
+	(object Class "TZonesTable"
+	    quid       	"40FFD8100020")
+	(object Class "TLinksTable"
+	    quid       	"40FFDB8903E3")
+	(object Class "TRuleDefinitionsTable"
+	    quid       	"40FFDBEB0065")
+	(object Class "TRuleSetsTable"
+	    quid       	"40FFDC4301D9")
+	(object Class "TStdTimeAlignmentsTable"
+	    quid       	"40FFDBC40319")
+	(object Class "TRegionNamesTable"
+	    quid       	"40E13DC70092"))
+    logical_presentations 	(list unit_reference_list))

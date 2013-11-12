@@ -1,0 +1,357 @@
+
+(object Petal
+    version    	43
+    _written   	"Rose 6.5.9232.10"
+    charSet    	0)
+
+(object Class_Category "LTClasses"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"40A89DC203B0"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "TLocalTime"
+	    quid       	"409F825F0036"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"40A4875E032C"
+		    supplier   	"Logical View::Analysis Model::SysClasses::TTime"
+		    quidu      	"407FBECA00CB"))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iTime"
+		    quid       	"40A1D3640146")
+		(object ClassAttribute "IsDSTActive"
+		    quid       	"40A1D390028E")
+		(object ClassAttribute "Offset"
+		    quid       	"40E3FCC70358")))
+	(object Class "RTz"
+	    quid       	"409F82C301AF"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"40A1D40000BB"
+		    supplier   	"Logical View::Analysis Model::SysClasses::RSessionBase"
+		    quidu      	"40A1D3F1009C"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"40A48FE703A6"
+		    supplier   	"Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTzSession"
+		    quidu      	"409F890B0127")
+		(object Uses_Relationship
+		    quid       	"40F51C740307"
+		    supplier   	"Logical View::Analysis Model::SysClasses::TTime"
+		    quidu      	"407FBECA00CB")
+		(object Uses_Relationship
+		    quid       	"40F51C76023C"
+		    supplier   	"Logical View::Analysis Model::LTClasses::TLocalTime"
+		    quidu      	"409F825F0036")
+		(object Uses_Relationship
+		    quid       	"417E54A90342"
+		    supplier   	"Logical View::Analysis Model::LTClasses::CTzActualisedRules"
+		    quidu      	"417E545600A1")
+		(object Uses_Relationship
+		    quid       	"41875FF002C3"
+		    supplier   	"Logical View::Analysis Model::LTClasses::CTzId"
+		    quidu      	"411209EF00C4"))
+	    operations 	(list Operations
+		(object Operation "SetTimeZoneL"
+		    quid       	"40D83ABE00E7"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetTimeZoneL"
+		    quid       	"40D83ADF003B"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetTimeZoneRulesL"
+		    quid       	"417E559303C2"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "RegisterTzChangeNotifier"
+		    quid       	"417E55960161"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "CancelRequestforNotice"
+		    quid       	"417E55A5026B"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ConvertToUniversalTime"
+		    quid       	"41875D4901E0"
+		    parameters 	(list Parameters
+			(object Parameter "TTime&"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ConvertToUniversalTime"
+		    quid       	"41875D630192"
+		    parameters 	(list Parameters
+			(object Parameter "TTime&")
+			(object Parameter "CTimeZoneId&"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ConvertToLocalTime"
+		    quid       	"41875D7002CB"
+		    parameters 	(list Parameters
+			(object Parameter "TTime&"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ConvertToLocalTime"
+		    quid       	"41875D8302DB"
+		    parameters 	(list Parameters
+			(object Parameter "TTime&")
+			(object Parameter "CTimeZoneId&"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Connect"
+		    quid       	"418760120024"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "DSTRules"
+	    quid       	"409F82A30383")
+	(object Class "COtherZoneDSTRules"
+	    quid       	"409F850D030E")
+	(object Class "RWorldServer"
+	    quid       	"40B1D85E03C5")
+	(object Class "CCity"
+	    quid       	"40C893220236"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iName"
+		    quid       	"40C893360395")
+		(object ClassAttribute "iCityId"
+		    quid       	"40C8933B0388")
+		(object ClassAttribute "iZoneId"
+		    quid       	"40CDD0FC0073")))
+	(object Class "CDSTRulesByLocation"
+	    quid       	"409F8443028E"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "UTCOffset"
+		    quid       	"409F8BC90288")
+		(object ClassAttribute "Location"
+		    quid       	"40A1CF3800CB")
+		(object ClassAttribute "STDZone"
+		    quid       	"40D818CC0318")
+		(object ClassAttribute "DSTZone"
+		    quid       	"40D818D501B0")))
+	(object Class "MTzDataAccess"
+	    quid       	"40B1D59903C5"
+	    stereotype 	"abstract"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"40F63FCB00CD"
+		    supplier   	"Logical View::Analysis Model::SysClasses::TTime"
+		    quidu      	"407FBECA00CB")
+		(object Uses_Relationship
+		    quid       	"4186575403BE"
+		    supplier   	"Logical View::Analysis Model::LTClasses::CTzActualisedRules"
+		    quidu      	"417E545600A1")
+		(object Uses_Relationship
+		    quid       	"418658D2023C"
+		    supplier   	"Logical View::Analysis Model::LTClasses::CTzActualisedRules"
+		    quidu      	"417E545600A1"))
+	    operations 	(list Operations
+		(object Operation "Release"
+		    quid       	"40B1D8A20386"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ReleaseTzRules"
+		    quid       	"4186758301A0"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetDefaultTimeZoneIdL"
+		    quid       	"417FA63F000B"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetTZRules"
+		    quid       	"40B1D8B301A2"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetFullTZIDAndRulesL"
+		    quid       	"418657F70362"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "TimeZoneDataProviderType"
+		    quid       	"40B1DE4600F6"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzId"
+	    quid       	"411209EF00C4"
+	    operations 	(list Operations
+		(object Operation "NewL"
+		    quid       	"41121126009D"
+		    parameters 	(list Parameters
+			(object Parameter "const TDesC8&"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "MTimeZoneLocations"
+	    quid       	"4112365D004C"
+	    stereotype 	"Interface"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"41123680031B"
+		    supplier   	"Logical View::Analysis Model::LTClasses::CTzId"
+		    quidu      	"411209EF00C4"))
+	    operations 	(list Operations
+		(object Operation "Count"
+		    quid       	"411237AD00DD"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator[]"
+		    quid       	"411240DD0224"
+		    parameters 	(list Parameters
+			(object Parameter "TInt"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetLocationNameL"
+		    quid       	"41188C0D005D"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetZoneIdL"
+		    quid       	"41123E6C0316"
+		    parameters 	(list Parameters
+			(object Parameter "TInt"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetZoneIdL"
+		    quid       	"411244AD02CC"
+		    parameters 	(list Parameters
+			(object Parameter "const TDesC&"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Release"
+		    quid       	"41189042001C"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "TZLocationsProviderType"
+		    quid       	"4118905700E8"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTimeZoneLocations"
+	    quid       	"4118881902E0"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"4118884600FC"
+		    supplier   	"Logical View::Analysis Model::LTClasses::MTimeZoneLocations"
+		    quidu      	"4112365D004C"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"411888560179"
+		    supplier   	"Logical View::Analysis Model::LTClasses::CTzId"
+		    quidu      	"411209EF00C4"))
+	    operations 	(list Operations
+		(object Operation "NewL"
+		    quid       	"41188C5F0261"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "Count"
+		    quid       	"4120D09802EF"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "operator[]"
+		    quid       	"4120D09E01F5"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetLocationName"
+		    quid       	"4120D0A90020"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetZoneIdL"
+		    quid       	"4120D0B400CC"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CECOMTZLocations"
+	    quid       	"41188F400058"
+	    stereotype 	"abstract"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"41189FD302C0"
+		    supplier   	"Logical View::Analysis Model::SysClasses::CBase"
+		    quidu      	"40D7E5240359"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"41188F8200F5"
+		    supplier   	"Logical View::Analysis Model::LTClasses::MTimeZoneLocations"
+		    quidu      	"4112365D004C"))
+	    operations 	(list Operations
+		(object Operation "GetTZLocationsProvider"
+		    quid       	"41188FA301FF"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iECOMDtorUid"
+		    quid       	"4118A2D702BB"
+		    type       	"TUid")))
+	(object Class "MTzDataObserver"
+	    quid       	"417E5C9D037C"
+	    stereotype 	"abstract"
+	    operations 	(list Operations
+		(object Operation "NotifyTZFileStatusChange"
+		    quid       	"417E5D5601E8"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzActualisedRules"
+	    quid       	"417E545600A1"
+	    operations 	(list Operations
+		(object Operation "AddRuleL"
+		    quid       	"418615FE01E7"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetWallClockOffset"
+		    quid       	"4186160102F1"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ConvertTime"
+		    quid       	"4186161002C3"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "RuleApplies"
+		    quid       	"4186161F0025"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "TTzActualisedRule"
+	    quid       	"418669E703DB"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"418A099F01D8"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TStdTimeAlignment"
+		    quidu      	"40E143EC028A")
+		(object Uses_Relationship
+		    quid       	"418A09AA011D"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRuleUse"
+		    quidu      	"40E144A300E7")
+		(object Uses_Relationship
+		    quid       	"418A09B00227"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRuleDefinition"
+		    quidu      	"40E1450C0230"))))
+    logical_presentations 	(list unit_reference_list))

@@ -1,0 +1,92 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for PrFw presence operations
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/ximpdlluids.hrh"
+
+
+
+
+TARGET                  ximpoperations.dll
+TARGETTYPE              dll
+UID                     XIMP_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_COMMON
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcoperations
+// ---------------------------------------------------------------------------
+
+// Common infrastucture
+SOURCE                  ximpoperationfactoryimp.cpp
+
+
+
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcoperations/sessionmng
+// ---------------------------------------------------------------------------
+
+// Client - session management
+SOURCE                  ximpoperationunbind.cpp
+SOURCE                  ximpoperationbind.cpp
+SOURCE                  ximpoperationbind2.cpp
+
+// Adaptation - session state notifications
+SOURCE                  ximpoperationforcedteardown.cpp
+
+// Internal - autonomous session maintenance
+
+
+
+USERINCLUDE             ../srcoperations
+USERINCLUDE             ../srcoperations/sessionmng
+USERINCLUDE             ../../core/srcdatamodel
+
+
+USERINCLUDE             ../srcutils
+USERINCLUDE             ../srcprocessor
+USERINCLUDE             ../../presence/srcpresenceoperations
+
+
+// TODO remove unnecessary
+SYSTEMINCLUDE           ../../inc/core/base
+SYSTEMINCLUDE           ../../inc/core/datamodel
+SYSTEMINCLUDE           ../../inc/core/protocolplugin
+SYSTEMINCLUDE           ../../inc/core/protocolpluginhost
+SYSTEMINCLUDE           ../../inc/presence/presencedatamodel
+SYSTEMINCLUDE           ../../inc/presence/presencemanagement
+SYSTEMINCLUDE           ../../inc/presence/presenceprotocolplugin
+SYSTEMINCLUDE           ../../inc/presence/presenceprotocolpluginhost
+MW_LAYER_SYSTEMINCLUDE
+
+
+
+LIBRARY                 euser.lib
+LIBRARY                 estor.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 ximpprocessor.lib
+LIBRARY                 presenceoperation.lib
+LIBRARY                 ecom.lib
+
+// End of file
+

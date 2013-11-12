@@ -1,0 +1,80 @@
+// 10205089.rss
+
+// Copyright (c) 2006-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+
+
+#include <sensors/spi/sensrvresource.hrh>
+#include <ecom/registryinfov2.rh>
+
+//  RESOURCE DEFINITIONS 
+// -----------------------------------------------------------------------------
+// 
+// Declares info for SSYReference ECom plugin
+//
+// -----------------------------------------------------------------------------
+
+RESOURCE REGISTRY_INFO SSYReferencePlugin
+    {
+    // UID for the DLL. See ssyreferenceplugin.mmp
+    resource_format_version = RESOURCE_FORMAT_VERSION_2;
+    dll_uid = 0x10205089;
+    interfaces = 
+        {
+        INTERFACE_INFO
+            {
+            // UID of interface that is implemented
+            interface_uid = KSsyControlInterfaceUid;
+            implementations = 
+                {
+                BINARY_IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = 0x10205088;
+                    version_no         = 1;
+                    display_name       = "SSYReferencePlugin";
+                    default_data       = {
+                                         // Double tap channel
+                                         0x01, // ChannelInfoVersion
+                                         0x2E, //  ChannelInfoLength
+                                         0x1E, // Flags
+                                         0x81, 0x50, 0x20, 0x10, // ChannelType
+                                         0x02, 0x00, 0x00, 0x00, // ContextType
+                                         0x0B, 0x00, 0x00, 0x00, // Quantity
+                                         0x05, 0x4e, 0x6f, 0x4c, 0x6f, 0x63, // Location: NoLoc
+                                         0x0C, 0x53, 0x73, 0x79, 0x52, 0x65, 0x66, 0x56, 0x65, 0x6E, 0x64, 0x6F, 0x72, // VendorId: SsyRefVendor
+                                         0x7F, 0x50, 0x20, 0x10, // ChannelDataTypeId
+                                         0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, // ChannelSecurityPolicy
+                                         
+                                         // Accelerometer channel
+                                         0x01, // ChannelInfoVersion
+                                         0x30, //  ChannelInfoLength
+                                         0x1E, // Flags
+                                         0x7E, 0x50, 0x20, 0x10, // ChannelType
+                                         0x02, 0x00, 0x00, 0x00, // ContextType
+                                         0x0A, 0x00, 0x00, 0x00, // Quantity
+                                         0x07, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x25, 0x64, // Location  
+                                         0x0C, 0x53, 0x73, 0x79, 0x52, 0x65, 0x66, 0x56, 0x65, 0x6E, 0x64, 0x6F, 0x72, // VendorId: SsyRefVendor
+                                         0x7E, 0x50, 0x20, 0x10, // ChannelDataTypeId
+                                         0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF // ChannelSecurityPolicy
+
+                                         };
+                    opaque_data        = {};
+                    }
+                };
+            }
+        };
+    }
+

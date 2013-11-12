@@ -1,0 +1,35 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project RFS
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../loc/rfs.loc                              MW_LAYER_LOC_EXPORT_PATH(rfs.loc)
+../rom/rfs.iby                              CORE_MW_LAYER_IBY_EXPORT_PATH(rfs.iby)
+../rom/rfsResources.iby                     LANGUAGE_MW_LAYER_IBY_EXPORT_PATH(rfsResources.iby)
+../rom/rfs_variant.iby                      CUSTOMER_MW_LAYER_IBY_EXPORT_PATH(rfs_variant.iby)
+../inc/sipsystemstatemonitorpskeys.h 	    SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(sipsystemstatemonitorpskeys.h)
+
+PRJ_MMPFILES
+rfs.mmp
+rfsMain.mmp
+../Plugins/rfscustcmd/group/rfscustcmd.mmp
+

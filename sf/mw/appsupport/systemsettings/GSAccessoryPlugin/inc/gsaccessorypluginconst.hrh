@@ -1,0 +1,31 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Constant definitions used throughout GSAccessoryPlugin
+*
+*/
+
+
+#ifndef GSACCESSORYPLUGINCONST_HRH
+#define GSACCESSORYPLUGINCONST_HRH
+
+#include <e32def.h>
+
+static const TInt KGSAccessoryPluginUid = { 0x1020743D };
+
+// Common setting types
+const TInt KIndexOn = 0; // on/off setting's index 0 is ON
+const TInt KIndexOff = 1;  // on/off setting's index 1 is OFF
+const TInt KIndexAuto = 1;  // on/automatic setting's index 1 is automatic
+
+#endif // GSACCESSORYPLUGINCONST_HRH

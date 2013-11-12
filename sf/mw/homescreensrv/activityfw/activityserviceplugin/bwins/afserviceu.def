@@ -1,0 +1,37 @@
+EXPORTS
+	qt_plugin_query_verification_data @ 1 NONAME
+	qt_plugin_instance @ 2 NONAME
+	?tr@AfActivation@@SA?AVQString@@PBD0@Z @ 3 NONAME ; class QString AfActivation::tr(char const *, char const *)
+	?qt_metacall@AfActivation@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 4 NONAME ; int AfActivation::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?tr@AfActivityStorage@@SA?AVQString@@PBD0H@Z @ 5 NONAME ; class QString AfActivityStorage::tr(char const *, char const *, int)
+	?reason@AfActivation@@QBE?AW4ActivationReason@Af@@XZ @ 6 NONAME ; enum Af::ActivationReason AfActivation::reason(void) const
+	?qt_metacast@AfActivation@@UAEPAXPBD@Z @ 7 NONAME ; void * AfActivation::qt_metacast(char const *)
+	?tr@AfActivation@@SA?AVQString@@PBD0H@Z @ 8 NONAME ; class QString AfActivation::tr(char const *, char const *, int)
+	?qt_metacall@AfActivityStorage@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 9 NONAME ; int AfActivityStorage::qt_metacall(enum QMetaObject::Call, int, void * *)
+	??0AfActivation@@QAE@PAVQObject@@@Z @ 10 NONAME ; AfActivation::AfActivation(class QObject *)
+	?activated@AfActivation@@IAEXW4ActivationReason@Af@@VQString@@V?$QHash@VQString@@VQVariant@@@@@Z @ 11 NONAME ; void AfActivation::activated(enum Af::ActivationReason, class QString, class QHash<class QString, class QVariant>)
+	??1AfActivityStorage@@UAE@XZ @ 12 NONAME ; AfActivityStorage::~AfActivityStorage(void)
+	?staticMetaObject@AfActivityStorage@@2UQMetaObject@@B @ 13 NONAME ; struct QMetaObject const AfActivityStorage::staticMetaObject
+	?trUtf8@AfActivation@@SA?AVQString@@PBD0H@Z @ 14 NONAME ; class QString AfActivation::trUtf8(char const *, char const *, int)
+	?activityMetaData@AfActivityStorage@@QBE?AV?$QHash@VQString@@VQVariant@@@@ABVQString@@@Z @ 15 NONAME ; class QHash<class QString, class QVariant> AfActivityStorage::activityMetaData(class QString const &) const
+	?getStaticMetaObject@AfActivityStorage@@SAABUQMetaObject@@XZ @ 16 NONAME ; struct QMetaObject const & AfActivityStorage::getStaticMetaObject(void)
+	??0AfActivityStorage@@QAE@PAVQObject@@@Z @ 17 NONAME ; AfActivityStorage::AfActivityStorage(class QObject *)
+	?staticMetaObject@AfActivation@@2UQMetaObject@@B @ 18 NONAME ; struct QMetaObject const AfActivation::staticMetaObject
+	?trUtf8@AfActivation@@SA?AVQString@@PBD0@Z @ 19 NONAME ; class QString AfActivation::trUtf8(char const *, char const *)
+	??_EAfActivation@@UAE@I@Z @ 20 NONAME ; AfActivation::~AfActivation(unsigned int)
+	?allActivities@AfActivityStorage@@QBE?AVQStringList@@XZ @ 21 NONAME ; class QStringList AfActivityStorage::allActivities(void) const
+	?qt_metacast@AfActivityStorage@@UAEPAXPBD@Z @ 22 NONAME ; void * AfActivityStorage::qt_metacast(char const *)
+	?activityData@AfActivityStorage@@QBE?AVQVariant@@ABVQString@@@Z @ 23 NONAME ; class QVariant AfActivityStorage::activityData(class QString const &) const
+	?getStaticMetaObject@AfActivation@@SAABUQMetaObject@@XZ @ 24 NONAME ; struct QMetaObject const & AfActivation::getStaticMetaObject(void)
+	?tr@AfActivityStorage@@SA?AVQString@@PBD0@Z @ 25 NONAME ; class QString AfActivityStorage::tr(char const *, char const *)
+	?name@AfActivation@@QBE?AVQString@@XZ @ 26 NONAME ; class QString AfActivation::name(void) const
+	?metaObject@AfActivation@@UBEPBUQMetaObject@@XZ @ 27 NONAME ; struct QMetaObject const * AfActivation::metaObject(void) const
+	?metaObject@AfActivityStorage@@UBEPBUQMetaObject@@XZ @ 28 NONAME ; struct QMetaObject const * AfActivityStorage::metaObject(void) const
+	?trUtf8@AfActivityStorage@@SA?AVQString@@PBD0@Z @ 29 NONAME ; class QString AfActivityStorage::trUtf8(char const *, char const *)
+	?trUtf8@AfActivityStorage@@SA?AVQString@@PBD0H@Z @ 30 NONAME ; class QString AfActivityStorage::trUtf8(char const *, char const *, int)
+	??_EAfActivityStorage@@UAE@I@Z @ 31 NONAME ; AfActivityStorage::~AfActivityStorage(unsigned int)
+	?saveActivity@AfActivityStorage@@QAE_NABVQString@@ABVQVariant@@ABV?$QHash@VQString@@VQVariant@@@@@Z @ 32 NONAME ; bool AfActivityStorage::saveActivity(class QString const &, class QVariant const &, class QHash<class QString, class QVariant> const &)
+	?parameters@AfActivation@@QBE?AV?$QHash@VQString@@VQVariant@@@@XZ @ 33 NONAME ; class QHash<class QString, class QVariant> AfActivation::parameters(void) const
+	??1AfActivation@@UAE@XZ @ 34 NONAME ; AfActivation::~AfActivation(void)
+	?removeActivity@AfActivityStorage@@QAE_NABVQString@@@Z @ 35 NONAME ; bool AfActivityStorage::removeActivity(class QString const &)
+

@@ -1,0 +1,61 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for search Feature Plugin processor hook
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/searchdlluids.hrh"
+
+
+TARGET                  searchprocessorhook.dll
+CAPABILITY              CAP_ECOM_PLUGIN
+TARGETTYPE              PLUGIN
+UID                     XIMP_SEARCH_DLL_UID_ECOM_PLUGIN XIMP_DLL_UID_SEARCH_PROCESSOR_HOOK                 
+VENDORID                VID_DEFAULT
+
+VERSION      10.0
+
+SOURCEPATH              ../searchprocessorhook
+START RESOURCE          searchprocessorhook.rss
+TARGET                  searchprocessorhook.rsc
+END
+
+
+SOURCEPATH              ../searchprocessorhook
+SOURCE                  searchprocessorhook.cpp
+
+
+USERINCLUDE             ../../group
+USERINCLUDE             ../searchprocessorhook
+USERINCLUDE             ../../srcsearchdatamodel
+USERINCLUDE             ../../srcsearchprocessor
+
+
+
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 euser.lib
+LIBRARY                 searchprocessor.lib
+LIBRARY                 ecom.lib
+
+
+#if defined( ARMCC )
+DEFFILE ../../eabi/ 
+#elif defined ( WINSCW )
+deffile ../../bwins/ 
+#endif

@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Branding server client component project descripton file.
+*
+*/
+
+#include            "bsuids.h"
+#include <platform_paths.hrh>
+#include <data_caging_paths_strings.hrh>
+
+TARGET              bsclient.dll
+TARGETTYPE          dll
+UID                 KStaticInterfaceDllUid2 KBrandingClientUid3
+CAPABILITY          CAP_CLIENT_DLL
+VENDORID            VID_DEFAULT
+
+
+SOURCEPATH          ../BSClient
+SOURCE              cbsclient.cpp
+SOURCE              bsprocessstarter.cpp
+SOURCE		    cbsfactory.cpp
+SOURCE		    cbsaccess.cpp
+SOURCE		    cbsupdater.cpp
+SOURCE		    cbselement.cpp
+SOURCE		    bselementfactory.cpp
+SOURCE		    cbsbitmap.cpp
+SOURCE			cbsbrandobserver.cpp
+SOURCE			cbsiconfileprovider.cpp
+
+
+USERINCLUDE         ../Group
+USERINCLUDE         ../BSServer
+USERINCLUDE         ../BSClient
+
+APP_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY             euser.lib
+LIBRARY             efsrv.lib
+LIBRARY		    flogger.lib
+LIBRARY	  	    estor.lib
+LIBRARY aknskins.lib    
+LIBRARY aknicon.lib //avkon icons
+LIBRARY cone.lib
+LIBRARY charconv.lib 

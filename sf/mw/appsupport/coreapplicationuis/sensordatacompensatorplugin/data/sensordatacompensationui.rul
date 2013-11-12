@@ -1,0 +1,74 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <!-- UI.Layout is part of UI domain -->
+    <!-- Check if UI orientation is Portrait -->
+    <if>
+        <or>
+            <and>
+                <contextChanged>
+                    <contextRef source='Device' type='Display.UI.Layout'/>
+                </contextChanged>
+                <equals>
+                    <contextRef source='Device' type='Display.UI.Layout'/>
+                    <string>Portrait</string>
+                </equals>
+            </and>
+            <and>
+                <contextUpdated>
+                    <contextRef source='Sensor' type='Event.Compensation'/>
+                </contextUpdated>
+                <equals>
+                    <contextRef source='Device' type='Display.UI.Layout'/>
+                    <string>Portrait</string>
+                </equals>
+            </and>
+        </or>
+        <actions>
+            <SensorDataCompensation
+             Type='UI.Orientation'
+             AxisDataX='0'
+             AxisDataY='0'
+             AxisDataZ='0'
+             MagneticNorthAngle='0'
+             TappingAxisX='CW0'
+             TappingAxisY='CW0'
+             TappingAxisZ='CW0'
+             />
+        </actions>
+    </if>
+    <!-- Check if UI orientation is Landscape -->
+    <elseIf>
+        <or>
+            <and>
+                <contextChanged>
+                    <contextRef source='Device' type='Display.UI.Layout'/>
+                </contextChanged>
+                <equals>
+                    <contextRef source='Device' type='Display.UI.Layout'/>
+                    <string>Landscape</string>
+                </equals>
+            </and>
+            <and>
+                <contextUpdated>
+                    <contextRef source='Sensor' type='Event.Compensation'/>
+                </contextUpdated>
+                <equals>
+                    <contextRef source='Device' type='Display.UI.Layout'/>
+                    <string>Landscape</string>
+                </equals>
+            </and>
+        </or>
+        <actions>
+            <SensorDataCompensation
+             Type='UI.Orientation'
+             AxisDataX='0'
+             AxisDataY='0'
+             AxisDataZ='90'
+             MagneticNorthAngle='90'
+             TappingAxisX='CW0'
+             TappingAxisY='CW0'
+             TappingAxisZ='CW90'
+             />
+        </actions>
+    </elseIf>
+</script>

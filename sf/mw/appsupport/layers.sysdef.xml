@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/mw/appsupport" >
+]>
+
+<SystemDefinition name="appsupport" schema="1.5.1">
+  <systemModel>
+    <layer name="mw_layer">
+      <module name="appsupport">
+        <unit unitID="sydo.appsupport" name="appsupport" bldFile="&layer_real_source_path;" mrp="" proFile="appsupport.pro"/>
+      </module>
+      <module name="">
+        <unit unitID="sydo.appsupport.appsupport_plat.flash_mmi_service_interface_custom_api" name="sydo_appsupport_appsupport_plat_flash_mmi_service_interface_custom_api" bldFile="&layer_real_source_path;/appsupport_plat/flash_mmi_service_interface_custom_api/group" mrp="" />
+        <unit unitID="sydo.appsupport.appsupport_plat.flash_netscape_plugin_command_api" name="sydo_appsupport_appsupport_plat_flash_netscape_plugin_command_api" bldFile="&layer_real_source_path;/appsupport_plat/flash_netscape_plugin_command_api/group" mrp="" filter="!sf_build" />
+        <unit unitID="sydo.appsupport.coreapplicationuis.atcmdplugin" name="sydo_appsupport_appsupport_coreapplicationuis_atcmdplugin" bldFile="&layer_real_source_path;/coreapplicationuis/atcmdplugin/group" mrp="" />
+      </module>
+      <module name="from_package_definition">      
+        <unit unitID="appsupport.fileconverterfw" mrp=""  bldFile="&layer_real_source_path;/filehandling/fileconverterfw/group" name="appsupport.fileconverterfw"/>
+        <unit unitID="appsupport.htmltorichtextconverter" mrp="" bldFile="&layer_real_source_path;/filehandling/htmltorichtextconverter/group" name="appsupport.htmltorichtextconverter"/>
+        <unit unitID="appsupport.richtesttohtmlconverter" mrp="" bldFile="&layer_real_source_path;/filehandling/richtexttohtmlconverter/Group" name="appsupport.richtesttohtmlconverter"/>
+        <unit unitID="appsupport.hwresourcemgruiplugin" mrp="" bldFile="&layer_real_source_path;/hwresourceadaptation/hwresourcemgruiplugin/group" name="appsupport.hwresourcemgruiplugin"/>
+        <unit unitID="appsupport.alarmserver" mrp="" bldFile="&layer_real_source_path;/commonappservices/alarmserver/Group" name="appsupport.alarmserver"/>
+        <unit unitID="appsupport.testalarmsrv" mrp="" bldFile="&layer_real_source_path;/commonappservices/alarmservertest/TestAlarmSrv" name="appsupport.testalarmsrv"/>
+        <unit unitID="appsupport.coreappstest" mrp="" bldFile="&layer_real_source_path;/commonappservices/coreappstest/Group" name="appsupport.coreappstest"/>
+        <unit unitID="appsupport.tzlocrscfactory" mrp="" bldFile="&layer_real_source_path;/tzservices/tzlocrscfactory/group" name="appsupport.tzlocrscfactory"/>
+        <unit unitID="appsupport.tzdatabase" mrp="" bldFile="&layer_real_source_path;/tzservices/tzdatabase/group" name="appsupport.tzdatabase"/>
+        <unit unitID="appsupport.webrecognizers" mrp="" bldFile="&layer_real_source_path;/contenthandling/webrecognisers/group" name="appsupport.webrecognizers"/>
+        <unit unitID="appsupport.commandshell" mrp="" bldFile="&layer_real_source_path;/openenvutils/commandshell/group" name="appsupport.commandshell"/>
+        <unit unitID="appsupport.telnetserver" mrp="" bldFile="&layer_real_source_path;/openenvutils/telnetserver/group" name="appsupport.telnetserver"/>
+        <unit unitID="appsupport.uitestfw" mrp="" bldFile="&layer_real_source_path;/appfw/uiftestfw/group" name="appsupport.uitestfw"/>
+        <unit unitID="appsupport.aftermarketappstarter" mrp="" bldFile="&layer_real_source_path;/applaunchservices/aftermarketappstarter/group" name="appsupport.aftermarketappstarter"/>
+        <unit unitID="appsupport.applaunchplugins" mrp="" bldFile="&layer_real_source_path;/applaunchservices/applaunchplugins/group" name="appsupport.applaunchplugins"/>
+        <unit unitID="appsupport.tzcompiler" mrp="" bldFile="&layer_real_source_path;/tzpcside/tzcompiler/group" name="appsupport.tzcompiler"/>
+    </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

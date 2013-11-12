@@ -1,0 +1,39 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+;Languages
+&EN
+
+
+;Localised Vendor name
+%{"alarmserverunittestserver.pkg EN"}
+
+; Vendor name
+: "alarmserverunittestserver"
+
+"\epoc32\data\z\testdata\scripts\TEAlarmServer.script"-"c:\testdata\scripts\TEAlarmServer.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_apc_loop.script"-"c:\testdata\scripts\TEAlarmServer_apc.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_man.script"-"c:\testdata\scripts\TEAlarmServer_man.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_man_TC3.script"-"c:\testdata\scripts\TEAlarmServer_man_TC3.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_man_exceptTC3.script"-"c:\testdata\scripts\TEAlarmServer_man_exceptTC3.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_apc_repeat.script"-"c:\testdata\scripts\TEAlarmServer_apc.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_apc_stop.script"-"c:\testdata\scripts\TEAlarmServer_apc.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_apc_disabled.script"-"c:\testdata\scripts\TEAlarmServer_apc.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_apc_disordered.script"-"c:\testdata\scripts\TEAlarmServer_apc.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_apc_ini.script"-"c:\testdata\scripts\TEAlarmServer_apc.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_apc_invalid.script"-"c:\testdata\scripts\TEAlarmServer_apc.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_apc_norsc.script"-"c:\testdata\scripts\TEAlarmServer_apc.script"
+"\epoc32\data\z\testdata\scripts\TEAlarmServer_man_exceptTC3.script"-"c:\testdata\scripts\TEAlarmServer_man.script"

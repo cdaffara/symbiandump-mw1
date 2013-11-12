@@ -1,0 +1,42 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID		API-APPFWK-APPARC-0049
+//! @SYMDEF 			DEF082982
+//! @SYMTestCaseDesc 		This test verify that apparc can dynamically install an Ecom recognizer plugin.
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		To avoid using a precompiled recognizer for this test, following workaround is used:	
+//! 				1. The test plugin are copied into z: by the build tools when building apparc tef tests.
+//! 				2. The plugin will not be installed during startup because CreateRecognizerL will leave
+//! 				3. During the test a dummy plugin.rsc will be copied into c:\resource\plugins to trig Ecom
+//! 				4. Apparc will be notified and make sure all recognizers listed by Ecom are properly installed
+//! 				5. Ecom will not be able install the copied dummy file as it has no matching dll on the same drive, but
+//! 				6. The recognizer will detect existence of the dummy file and chose not to leave from CreateRecognizerL
+//! 	
+//! 				Due to platsec we can't build plugin.dll to an alternative location and we can't
+//! 				copy files from epoc32\release\winscw\udeb in runtime. Both plugin.rsc and plugin.dll 
+//! 				must be on the same drive to be accepted by Ecom. 
+//! @SYMTestExpectedResults 	Test should complete without any leave, panic or error.
+
+START_TESTCASE API-APPFWK-APPARC-0049
+
+PRINT Run T_ApsScan Apparc test 
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_ApsScan
+
+END_TESTCASE API-APPFWK-APPARC-0049

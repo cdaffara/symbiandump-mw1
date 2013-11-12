@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="Alarm Server">
+  <purpose>
+    Server managing a queue of system-wide time-based alarms, provides query, set, modify, and notify APIs for client applications.
+  </purpose>
+
+  <defect number="PDEF107846" title="Alarm times are changed after daylight saving time is activated" revision="006">
+    Move the location of function call UpdateFloatingDueTimes().
+  </defect>
+
+  <defect number="DEF098979" title="NQP Alarm Server - No sounds and incorrect alarm state" revision="005">
+    The documentation for the TAlarmRepeatDefinition enum has been changed because it was incorrect. Many places should have said "12 hours" and not "a single day".
+  </defect>
+
+  <defect number="PDEF103544" title="Altering time whilst calender alarm on snooze freezes phone" revision="004">
+    alarm server now copes with multiple alarms notifying and deleting without having to wait for the alert server to complete a SetAlarm request.
+  </defect>
+
+  <defect number="PDEF102519" title="CTA - Alarm workdays are wrong" revision="003">
+    Corrected the calculation for the next due time of a workday alarm. This was being calculated incorrectly in some cases when the local timezone was different from UTC.
+  </defect>
+
+  <defect number="PDEF103641" title="CAP GENIUS#50656: Clock alarm does not work every time when phone is t" revision="002">
+    alarmserver.ini is now not opened until the actual externalise happens so that we now don’t leave a blank file in the gap between scheduling and doing the externalize. We now observe powerdown events through CSaveNotifier so that if an externalize has been scheduled we write to the file immediately.
+  </defect>
+
+  <defect number="PDEF103544" title="Altering time whilst calender alarm on snooze freezes phone" revision="001">
+    There is no need to cancel the CASAltRequestSetAlarm active object once SetAlarm has been called on it. In some cases this would casue the sytem to hang because of a circular dependany so this has been removed.
+  </defect>
+</relnotes>

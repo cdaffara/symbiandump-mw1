@@ -1,0 +1,30 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+;Languages
+&EN
+
+;Header
+; SA = Symbian Application
+; RU = Rom Upgrade
+#{"TestTrustedPriorityApp2"}, (0x10207f8F), 1, 0, 0, TYPE=SA
+
+%{"Nokia India Pvt Ltd"}
+:"Nokia India Pvt Ltd"
+
+"\epoc32\release\armv5\udeb\TestTrustedPriorityApp2.exe"-"!:\sys\bin\TestTrustedPriorityApp2.exe"
+"\epoc32\data\z\apparctestregfiles\TestTrustedPriorityApp2_reg.rsc"-"!:\private\10003a3f\import\apps\TestTrustedPriorityApp2_reg.rsc"

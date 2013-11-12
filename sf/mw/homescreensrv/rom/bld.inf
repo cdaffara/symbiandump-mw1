@@ -1,0 +1,27 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_EXPORTS
+
+// iby exports to core
+homescreensrv_core.iby  CORE_MW_LAYER_IBY_EXPORT_PATH(homescreensrv_core.iby)
+
+// iby exports to language
+homescreensrv_language.iby  LANGUAGE_MW_LAYER_IBY_EXPORT_PATH(homescreensrv_language.iby)

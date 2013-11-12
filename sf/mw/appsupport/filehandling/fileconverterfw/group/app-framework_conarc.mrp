@@ -1,0 +1,11 @@
+component	app-framework_conarc
+source	\sf\mw\appsupport\filehandling\fileconverterfw
+binary	\sf\mw\appsupport\filehandling\fileconverterfw\group	all
+exports	\sf\mw\appsupport\filehandling\fileconverterfw\group
+notes_source	\component_defs\release.src
+
+
+ipr E 
+ipr T \sf\mw\appsupport\filehandling\fileconverterfw\Tef
+ipr T \sf\mw\appsupport\filehandling\fileconverterfw\TSRC
+

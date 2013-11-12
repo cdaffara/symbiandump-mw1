@@ -1,0 +1,57 @@
+/*
+* Copyright (c) 2008-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          MT_CFOperationPluginManager.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../MT_CFOperationPluginManager
+SOURCE                  MT_CFOperationPluginManager.cpp
+SOURCE                  MT_CFOperationPluginManager_DllMain.cpp
+
+USERINCLUDE           ../MT_CFOperationPluginManager
+USERINCLUDE           ../common
+USERINCLUDE           ../../../../inc/common
+USERINCLUDE           ../../../../inc/cfserver
+USERINCLUDE           ../../../../inc/cfservices
+USERINCLUDE           ../../../../src/cfoperationpluginservices
+USERINCLUDE           ../../../../group
+USERINCLUDE           ../../../../inc/cfscriptengine
+USERINCLUDE           ../../../../CenRep
+USERINCLUDE           ../../../../inc/cfoperationpluginservices
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+// System include folders required by the tested code
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY                 EUnit.lib
+LIBRARY                 EUnitUtil.lib
+LIBRARY                 euser.lib
+LIBRARY                 ecom.lib
+
+// Libraries required by the tested code
+LIBRARY                 cfoperationpluginservices.lib
+LIBRARY                 cfservices.lib
+
+// End of file

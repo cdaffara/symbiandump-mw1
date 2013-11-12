@@ -1,0 +1,35 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  IM Feature Plugin Data Model API interface IDs.
+*
+*/
+
+#ifndef IMDATAMODELIFIDS_HRH
+#define IMDATAMODELIFIDS_HRH
+
+// Data model IF id's
+// 20xx - ximp related
+// 21xx - presence related
+// 22xx - instant messaging related
+
+#define IM_IF_ID_IDENTITY                   2201
+#define IM_IF_ID_IM_OBJECT_FACTORY          2204
+#define IM_IF_ID_CONVERSATION_INFO          2202
+
+
+
+#endif // IMDATAMODELIFIDS_HRH
+
+
+

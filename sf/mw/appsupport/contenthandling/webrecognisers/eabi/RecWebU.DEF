@@ -1,0 +1,5 @@
+EXPORTS
+	_Z16CreateRecognizerv @ 1 NONAME
+	_ZTI17CApaWebRecognizer @ 2 NONAME ; #<TI>#
+	_ZTV17CApaWebRecognizer @ 3 NONAME ; #<VT>#
+

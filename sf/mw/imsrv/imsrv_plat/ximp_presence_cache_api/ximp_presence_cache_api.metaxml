@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<api id="f67ac04f24a77d0691b6fdbf16123b45" dataversion="1.0">
+<name>ximp_presence_cache_api</name>
+<description>This is a API that provides read and write to the presence cache. </description>
+<type>c++</type>
+<subsystem>ximpfw</subsystem>
+<libs><lib name="presencecacheecomhook.lib"/>
+<lib name="presencedatamodel.lib"/>
+<lib name="presencedatamodelhook.lib"/>
+<lib name="presenceecomhook.lib"/>
+<lib name="presencemanager.lib"/>
+<lib name="presenceoperation.lib"/>
+<lib name="presencecacheclient.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

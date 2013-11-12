@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<service>
+    <name>activitytsplugin</name>
+    <filepath>activitytsplugin</filepath>
+    <description>Activity model plugin for Task Switcher</description>
+    <interface>
+        <name>com.nokia.qt.taskswitcher.dataprovider</name>
+        <version>1.0</version>
+        <description></description>
+    </interface>
+</service>

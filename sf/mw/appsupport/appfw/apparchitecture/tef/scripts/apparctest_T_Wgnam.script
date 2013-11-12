@@ -1,0 +1,70 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-WgnamStep-testWgNamesL-0001
+//! @SYMTestCaseDesc 		Test setting and accessing functionality of Window group name. 
+//! @SYMTestPriority 		High 
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		The test checks the following functionality of CApaWindowGroupName
+//!				(1) Creation of window group name object.
+//!				(2) Setting the task to be a System task.
+//!				(3) Setting the task to be Busy.
+//!				(4) Setting document name as filename.
+//!				(5) Setting the task's capability to shutdown.
+//!				(6) Setting the task's capability to switch between files.
+//!				(7) Setting the tasks Uid.
+//!				(8) Setting the tasks caption.
+//!				(9) Setting the tasks Document name.
+//!				(10) Setting the task to be ready.
+//!				(11) Setting a name to a window group name.
+//!				In each of the cases the setter function is called to set a particular
+//!				attribute. The attribute is cross checked by verifying with its 
+//!				corresponding getter / accessor function. After setting each of the attributes
+//!				the test tries to analyze the impact of the attribute changed, on the windows
+//!				group name.
+//!				API Calls:
+//!				CApaWindowGroupName::NewL(const RWsSession& aWsSession);
+//!				CApaWindowGroupName::SetSystem(TBool aSystem);
+//!				CApaWindowGroupName::IsSystem() const;
+//!				CApaWindowGroupName::SetBusy(TBool aBusy);
+//!				CApaWindowGroupName::IsBusy() const;
+//!				CApaWindowGroupName::SetDocNameIsAFile(TBool aDocNameIsAFile);
+//!				CApaWindowGroupName::DocNameIsAFile() const;
+//!				CApaWindowGroupName::SetRespondsToShutdownEvent(TBool aRespondsToShutdownEvent);
+//!				CApaWindowGroupName::RespondsToShutdownEvent() const;
+//!				CApaWindowGroupName::SetRespondsToSwitchFilesEvent(TBool aRespondsToSwitchFilesEvent);
+//!				CApaWindowGroupName::RespondsToSwitchFilesEvent() const;
+//!				CApaWindowGroupName::SetAppUid(TUid aAppUid);
+//!				CApaWindowGroupName::AppUid() const;
+//!				CApaWindowGroupName::SetCaptionL(const TDesC& aCaption);
+//!				CApaWindowGroupName::Caption() const;
+//!				CApaWindowGroupName::SetDocNameL(const TDesC& aDocName);
+//!				CApaWindowGroupName::DocName() const;
+//!				CApaWindowGroupName::SetAppReady(TBool aIsReady);
+//!				CApaWindowGroupName::IsAppReady();
+//!				CApaWindowGroupName::SetWindowGroupName(HBufC* aWgName);
+//!				CApaWindowGroupName::WindowGroupName() const;
+//!				CApaWindowGroupName::FindByCaption(const TDesC& aCaption, RWsSession& aWsSession, TInt& aPrevWgId) const;
+//! @SYMTestExpectedResults 	Test checks results against expected values.
+    
+START_TESTCASE API-APPFWK-T-WgnamStep-testWgNamesL-0001
+
+PRINT Run T_Wgnam Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_Wgnam 
+
+END_TESTCASE API-APPFWK-T-WgnamStep-testWgNamesL-0001

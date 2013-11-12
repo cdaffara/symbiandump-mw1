@@ -1,0 +1,9 @@
+EXPORTS
+	??1CCTzSwiPluginTester@@UAE@XZ @ 1 NONAME ; CCTzSwiPluginTester::~CCTzSwiPluginTester(void)
+	?InstallSIS@CCTzSwiPluginTester@@QAEHABVTDesC16@@@Z @ 2 NONAME ; int CCTzSwiPluginTester::InstallSIS(class TDesC16 const &)
+	?InstallSIS@CCTzSwiPluginTester@@QAEXABVTDesC16@@IAAVTRequestStatus@@@Z @ 3 NONAME ; void CCTzSwiPluginTester::InstallSIS(class TDesC16 const &, unsigned int, class TRequestStatus &)
+	?NewL@CCTzSwiPluginTester@@SAPAV1@XZ @ 4 NONAME ; class CCTzSwiPluginTester * CCTzSwiPluginTester::NewL(void)
+	?NewLC@CCTzSwiPluginTester@@SAPAV1@XZ @ 5 NONAME ; class CCTzSwiPluginTester * CCTzSwiPluginTester::NewLC(void)
+	?UninstallSIS@CCTzSwiPluginTester@@QAEHABVTDesC16@@00@Z @ 6 NONAME ; int CCTzSwiPluginTester::UninstallSIS(class TDesC16 const &, class TDesC16 const &, class TDesC16 const &)
+	?UninstallSIS@CCTzSwiPluginTester@@QAEXABVTDesC16@@00IAAVTRequestStatus@@@Z @ 7 NONAME ; void CCTzSwiPluginTester::UninstallSIS(class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, unsigned int, class TRequestStatus &)
+

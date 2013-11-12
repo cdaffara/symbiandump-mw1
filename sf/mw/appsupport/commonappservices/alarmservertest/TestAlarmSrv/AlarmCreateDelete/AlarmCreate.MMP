@@ -1,0 +1,31 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET        alarmcreate.exe
+TARGETTYPE    exe
+
+UID		0x1000007a
+
+SOURCEPATH	  .
+SOURCE		AlarmCreate.cpp
+//USERINCLUDE   .
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY       euser.lib alarmclient.lib alarmshared.lib
+
+
+MACRO __DATA_CAGING__
+MACRO __SECURE_API__
+CAPABILITY All -TCB

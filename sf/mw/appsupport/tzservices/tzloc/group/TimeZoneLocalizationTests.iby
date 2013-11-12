@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __TIMEZONELOCALIZATIONTEST_IBY__
+#define __TIMEZONELOCALIZATIONTEST_IBY__
+
+REM Time Zone Localization Testing
+
+#include <TimeZoneLocalization.iby>
+#include <TzLocalizationRscFactory.iby>
+#include <tzlocaltestserver.iby>
+
+file=ABI_DIR\BUILD_DIR\TzLocalizationTestServer.exe					SYSTEM_BINDIR\TzLocalizationTestServer.exe
+file=ABI_DIR\BUILD_DIR\T_MultiThreadTimeZoneChange.exe				SYSTEM_BINDIR\T_MultiThreadTimeZoneChange.exe
+file=ABI_DIR\BUILD_DIR\t_localizationupdate.exe						SYSTEM_BINDIR\t_localizationupdate.exe
+file=ABI_DIR\BUILD_DIR\t_localizationuserdata.exe					SYSTEM_BINDIR\t_localizationuserdata.exe
+file=ABI_DIR\BUILD_DIR\t_tzlocalizationupdate.exe					SYSTEM_BINDIR\t_tzlocalizationupdate.exe
+
+data=DATAZ_\timezonelocalization\timezonegroups.rsc 				timezonelocalization\timezonegroups.rsc
+data=DATAZ_\timezonelocalization\timezonegroups.r01 				timezonelocalization\timezonegroups.r01
+data=DATAZ_\timezonelocalization\timezonegroups.r02 				timezonelocalization\timezonegroups.r02
+data=DATAZ_\timezonelocalization\timezones.rsc 						timezonelocalization\timezones.rsc
+data=DATAZ_\timezonelocalization\timezones.r01 						timezonelocalization\timezones.r01
+data=DATAZ_\timezonelocalization\timezones.r02 						timezonelocalization\timezones.r02
+data=DATAZ_\timezonelocalization\signed_timezone_loc_upgrade.sis 	timezonelocalization\signed_timezone_loc_upgrade.sis
+data=DATAZ_\timezonelocalization\modified\timezonegroups.rsc		timezonelocalization\modified\timezonegroups.rsc
+data=DATAZ_\timezonelocalization\modified\timezonegroups.r01		timezonelocalization\modified\timezonegroups.r01
+data=DATAZ_\timezonelocalization\modified\timezonegroups.r02		timezonelocalization\modified\timezonegroups.r02
+data=DATAZ_\timezonelocalization\modified\timezones.rsc				timezonelocalization\modified\timezones.rsc
+data=DATAZ_\timezonelocalization\modified\timezones.r01				timezonelocalization\modified\timezones.r01
+data=DATAZ_\timezonelocalization\modified\timezones.r02				timezonelocalization\modified\timezones.r02
+data=DATAZ_\timezonelocalization\locale\timezonegroups.rsc			timezonelocalization\locale\timezonegroups.rsc
+data=DATAZ_\timezonelocalization\locale\timezonegroups.r01			timezonelocalization\locale\timezonegroups.r01
+data=DATAZ_\timezonelocalization\locale\timezones.rsc				timezonelocalization\locale\timezones.rsc
+data=DATAZ_\timezonelocalization\locale\timezones.r01				timezonelocalization\locale\timezones.r01
+
+data=DATAZ_\tzlocalizationtestscripts\tzlocalizationtest.script         tzlocalizationtestscripts\tzlocalizationtest.script
+data=DATAZ_\tzlocalizationtestscripts\tzlocalizationspeedtest.script    tzlocalizationtestscripts\tzlocalizationspeedtest.script
+
+#endif

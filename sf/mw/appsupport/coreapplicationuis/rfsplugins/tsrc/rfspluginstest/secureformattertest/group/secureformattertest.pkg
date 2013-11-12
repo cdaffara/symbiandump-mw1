@@ -1,0 +1,78 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:  ?Description
+;
+
+
+;Languages
+&EN
+
+#{"secureformattertest"},(0x101FB3E7),1,0,0,TYPE=SA
+
+;Localised Vendor name
+%{"secureformattertest EN"}
+
+; Vendor name
+: "secureformattertest"
+
+"\epoc32\release\armv5\urel\secureformattertest.dll"-"c:\sys\bin\secureformattertest.dll"
+"\epoc32\release\armv5\urel\testdatacreator.exe"-"c:\sys\bin\testdatacreator.exe"
+"..\init\secureformattertest.ini"-"c:\testframework\secureformattertest.ini"
+"..\conf\secureformattertest.cfg"-"c:\testframework\secureformattertest.cfg"
+"..\data\testexclude_001.txt"-"c:\testdata\testexclude_001.txt"
+"..\data\testexclude_002.txt"-"c:\testdata\testexclude_002.txt"
+"..\data\testexclude_003.txt"-"c:\testdata\testexclude_003.txt"
+"..\data\testexclude_004.txt"-"c:\testdata\testexclude_004.txt"
+"..\data\testexclude_005.txt"-"c:\testdata\testexclude_005.txt"
+"..\data\testexclude_006.txt"-"c:\testdata\testexclude_006.txt"
+"..\data\testexclude_007.txt"-"c:\testdata\testexclude_007.txt"
+"..\data\testexclude_008.txt"-"c:\testdata\testexclude_008.txt"
+"..\data\testexclude_009.txt"-"c:\testdata\testexclude_009.txt"
+"..\data\testexclude_010.txt"-"c:\testdata\testexclude_010.txt"
+"..\data\testexclude_011.txt"-"c:\testdata\testexclude_011.txt"
+"..\data\testexclude_012.txt"-"c:\testdata\testexclude_012.txt"
+"..\data\testexclude_013.txt"-"c:\testdata\testexclude_013.txt"
+"..\data\testexclude_014.txt"-"c:\testdata\testexclude_014.txt"
+"..\data\testexclude_015.txt"-"c:\testdata\testexclude_015.txt"
+"..\data\testspec_001.txt"-"c:\testdata\testspec_001.txt"
+"..\data\testspec_002.txt"-"c:\testdata\testspec_002.txt"
+"..\data\testspec_003.txt"-"c:\testdata\testspec_003.txt"
+"..\data\testspec_004.txt"-"c:\testdata\testspec_004.txt"
+"..\data\testspec_005.txt"-"c:\testdata\testspec_005.txt"
+"..\data\testspec_006.txt"-"c:\testdata\testspec_006.txt"
+"..\data\testspec_007.txt"-"c:\testdata\testspec_007.txt"
+"..\data\testspec_008.txt"-"c:\testdata\testspec_008.txt"
+"..\data\testspec_009.txt"-"c:\testdata\testspec_009.txt"
+"..\data\testspec_010.txt"-"c:\testdata\testspec_010.txt"
+"..\data\testspec_011.txt"-"c:\testdata\testspec_011.txt"
+"..\data\testspec_012.txt"-"c:\testdata\testspec_012.txt"
+"..\data\testspec_013.txt"-"c:\testdata\testspec_013.txt"
+"..\data\testspec_014.txt"-"c:\testdata\testspec_014.txt"
+"..\data\testspec_015.txt"-"c:\testdata\testspec_015.txt"
+
+"..\data\app_spec_001.exc"-"c:\testdata\app_spec_001.exc"
+"..\data\app_spec_002.exc"-"c:\testdata\app_spec_002.exc"
+"..\data\app_spec_003.exc"-"c:\testdata\app_spec_003.exc"
+"..\data\app_spec_004.exc"-"c:\testdata\app_spec_004.exc"
+"..\data\app_spec_005.exc"-"c:\testdata\app_spec_005.exc"
+"..\data\app_spec_006.exc"-"c:\testdata\app_spec_006.exc"
+"..\data\app_spec_007.exc"-"c:\testdata\app_spec_007.exc"
+"..\data\app_spec_dummy.exc"-"c:\testdata\app_spec_dummy.exc"
+"..\data\app_spec_001.txt"-"c:\testdata\app_spec_001.txt"
+"..\data\app_spec_002.txt"-"c:\testdata\app_spec_002.txt"
+"..\data\app_spec_003.txt"-"c:\testdata\app_spec_003.txt"
+"..\data\app_spec_004.txt"-"c:\testdata\app_spec_004.txt"
+"..\data\app_spec_005.txt"-"c:\testdata\app_spec_005.txt"
+"..\data\app_spec_006.txt"-"c:\testdata\app_spec_006.txt"
+"..\data\app_spec_007.txt"-"c:\testdata\app_spec_007.txt"

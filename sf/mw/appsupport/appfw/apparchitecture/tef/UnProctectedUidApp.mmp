@@ -1,0 +1,56 @@
+// Copyright (c) 2007-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+/**
+ @file
+ @test
+ @internalComponent - Internal Symbian test code
+*/
+
+// using relative paths for sourcepath and user includes
+TARGET        unproctecteduidapp.exe
+TARGETTYPE    exe
+TARGETPATH    /sys/bin
+
+CAPABILITY 	All -Tcb
+
+UID           0x100039CE 0xA0001C5E
+VENDORID 0x70000001
+
+SOURCEPATH    .
+SOURCE		UnProctectedUidApp.cpp
+
+SOURCEPATH		.
+
+start resource	UnProctectedUidApp.rss
+HEADER
+targetpath 		/apparctestregfiles
+end
+
+// Application exe registration resource file
+resource	UnProctectedUidApp_reg.rss
+start resource	UnProctectedUidApp_reg.rss
+targetpath 	/apparctestregfiles
+lang		sc
+end
+
+USERINCLUDE   .
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+//SYSTEMINCLUDE /epoc32/include/techview
+
+LIBRARY       euser.lib apparc.lib eikcore.lib cone.lib
+
+SMPSAFE

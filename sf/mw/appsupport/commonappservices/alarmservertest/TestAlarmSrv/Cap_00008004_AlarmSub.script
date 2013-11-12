@@ -1,0 +1,46 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE Cap_Alarm_sc
+//
+PRINT Run Alarm at 00008004
+PRINT 
+//
+
+START_TESTCASE   PIM-CAP_00008004_ALARMSUB-0001
+//! @SYMTestCaseID   PIM-CAP_00008004_ALARMSUB-0001
+HEAP_MARK
+RUN_TEST_STEP 100 Cap_Alarm_sc CEASShdOpCodeGetAlarmDetails1Step
+TEST_COMPLETE
+HEAP_MARKEND
+END_TESTCASE   PIM-CAP_00008004_ALARMSUB-0001
+
+START_TESTCASE   PIM-CAP_00008004_ALARMSUB-0002
+//! @SYMTestCaseID   PIM-CAP_00008004_ALARMSUB-0002
+HEAP_MARK
+RUN_TEST_STEP 100 Cap_Alarm_sc CEASShdOpCodeGetAlarmData1Step
+TEST_COMPLETE
+HEAP_MARKEND
+END_TESTCASE   PIM-CAP_00008004_ALARMSUB-0002
+
+START_TESTCASE   PIM-CAP_00008004_ALARMSUB-0003
+//! @SYMTestCaseID   PIM-CAP_00008004_ALARMSUB-0003
+HEAP_MARK
+RUN_TEST_STEP 100 Cap_Alarm_sc CEASShdOpCodeAlarmAtIndex1Step
+TEST_COMPLETE
+HEAP_MARKEND
+END_TESTCASE   PIM-CAP_00008004_ALARMSUB-0003
+UNLOAD

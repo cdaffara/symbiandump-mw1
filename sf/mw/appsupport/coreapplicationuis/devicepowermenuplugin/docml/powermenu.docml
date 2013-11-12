@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hbdocument context="pwr_grid" version="1.1">
+    <widget name="maindialog" type="HbDialog">
+        <point name="pos" x="1.19403un" y="0.44776un"/>
+        <widget name="container_1" role="HbDialog:contentWidget" type="HbWidget">
+            <widget name="Silence" type="HbPushButton">
+                <real name="z" value="2"/>
+                <string locid="txt_pm_button_silence" name="text" value="Silence"/>
+                <bool name="visible" value="TRUE"/>
+                <string name="state" value="normal"/>
+                <sizepolicy horizontalPolicy="MinimumExpanding" />
+            </widget>
+            <widget name="label" type="HbLabel">
+                <real name="z" value="4"/>
+                <string locid="txt_pm_setlabel_ringing_volume" name="plainText" value="Ringing volume"/>
+                <sizepolicy horizontalPolicy="MinimumExpanding" />
+            </widget>
+            <widget name="Volume" type="HbSlider">
+                <integer name="majorTickInterval" value="5"/>
+                <real name="z" value="3"/>
+                <enums name="orientation" value="Horizontal"/>
+                <integer name="minorTickInterval" value="2"/>
+                <integer name="value" value="30"/>
+                <sizepolicy horizontalPolicy="MinimumExpanding" />
+            </widget>
+            <widget name="Vibrate" type="HbCheckBox">
+                <string locid="txt_pm_list_vibrate" name="text" value="Vibrate"/>
+                <sizepolicy horizontalPolicy="MinimumExpanding" />
+            </widget>
+            <widget name="Offline" type="HbCheckBox">
+                <string locid="txt_pm_list_offline_airplane_mode" name="text" value="Offline (Airplane Mode)"/>
+                <sizepolicy horizontalPolicy="MinimumExpanding" />
+            </widget>
+            <widget name="PowerOff" type="HbPushButton">
+                <string locid="txt_pm_button_power_off" name="text" value="Power Off"/>
+                <string name="state" value="normal"/>
+                <sizepolicy horizontalPolicy="MinimumExpanding" />
+            </widget>
+            <real name="z" value="0"/>
+            <layout type="anchor">
+                <anchoritem dst="" dstEdge="LEFT" spacing="-0un" src="Silence" srcEdge="LEFT"/>
+                <anchoritem dst="" dstEdge="RIGHT" spacing="0un" src="Silence" srcEdge="RIGHT"/>
+                <anchoritem dst="" dstEdge="TOP" spacing="0un" src="Silence" srcEdge="TOP"/>
+                
+                <anchoritem dst="" dstEdge="LEFT" spacing="-0un" src="label" srcEdge="LEFT"/>
+                <anchoritem dst="" dstEdge="RIGHT" spacing="0un" src="label" srcEdge="RIGHT"/>
+                <anchoritem dst="Silence" dstEdge="BOTTOM" spacing="-1un" src="label" srcEdge="TOP"/>
+
+
+                <anchoritem dst="" dstEdge="LEFT" spacing="-0un" src="Volume" srcEdge="LEFT"/>
+                <anchoritem dst="" dstEdge="RIGHT" spacing="0un" src="Volume" srcEdge="RIGHT"/>
+                <anchoritem dst="label" dstEdge="BOTTOM" spacing="-1un" src="Volume" srcEdge="TOP"/>
+
+                <anchoritem dst="" dstEdge="LEFT" spacing="-0un" src="Vibrate" srcEdge="LEFT"/>
+                <anchoritem dst="" dstEdge="RIGHT" spacing="0un" src="Vibrate" srcEdge="RIGHT"/>
+                <anchoritem dst="Volume" dstEdge="BOTTOM" spacing="-0un" src="Vibrate" srcEdge="TOP"/>
+
+                <anchoritem dst="" dstEdge="LEFT" spacing="-0un" src="Offline" srcEdge="LEFT"/>
+                <anchoritem dst="" dstEdge="RIGHT" spacing="0un" src="Offline" srcEdge="RIGHT"/>
+                <anchoritem dst="Vibrate" dstEdge="BOTTOM" spacing="-0un" src="Offline" srcEdge="TOP"/>
+
+                <anchoritem dst="" dstEdge="LEFT" spacing="-0un" src="PowerOff" srcEdge="LEFT"/>
+                <anchoritem dst="" dstEdge="RIGHT" spacing="0un" src="PowerOff" srcEdge="RIGHT"/>
+                <anchoritem dst="Offline" dstEdge="BOTTOM" spacing="-1un" src="PowerOff" srcEdge="TOP"/>
+
+                <anchoritem dst="" dstEdge="BOTTOM" spacing="0un" src="PowerOff" srcEdge="BOTTOM"/>
+                                
+            </layout>
+        </widget>
+    </widget>
+    <metadata activeUIState="Common ui state" display="NHD-3.2-inch_portrait" unit="un">
+        <uistate name="Common ui state" sections="#common"/>
+    </metadata>
+</hbdocument>

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="abfb4bedc8c720c959b53a189129b407" dataversion="2.0">
+<name>Context Framework Services API</name>
+<description>Context Framework Services API provides common definitions and data objects that are needed in Context Framework Client and Context Framework Server. Context Framework Services also provide definitions to third party.</description>
+<type>c++</type>
+<collection>contextframework</collection>
+<libs><lib name="CFServices.lib"/>
+</libs>
+<release category="platform" sinceversion="0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

@@ -1,0 +1,26 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __APLPTEST_IBY__
+#define __APLPTEST_IBY__
+
+#ifndef __APPFWK_TEST_FRAMEWORK_IBY__
+	#include <appfwk_test_framework.iby>
+#endif
+
+#include <apstarttest_apstart.iby>
+#include <apstart_testappgood.iby>
+
+#endif // __APLPTEST_IBY__

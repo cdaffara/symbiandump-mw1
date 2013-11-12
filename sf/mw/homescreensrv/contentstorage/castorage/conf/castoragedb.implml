@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://www.symbianfoundation.org/xml/implml/1">
+    <tag name="target" value="rofs2"/>
+    <tag name="target" value="rofs3"/>
+    
+    
+    <!--
+    Override the setting refs so that modifying HomeScreenDbSettings
+    causes the execution of both the TemplateML and CommandML
+    implementations. Otherwise the TemplateML implementation would be
+    executed only if the settings have been changed, and the CommandML
+    implementation would be executed every time.
+    -->
+    <settingRefsOverride>
+        <settingRef value="CaStorageDbSetting"/>
+    </settingRefsOverride>
+    
+    <!-- TemplateML implementation to create the .sql files -->
+    <templateml xmlns="http://www.s60.com/xml/templateml/1">
+        <!-- just to create empty folder, maybe it could be done better-->
+        <output dir="content/private/20022F90" file="castorage.db" encoding="UTF-8"></output>        
+        <output dir="temp/castoragedb/" file="castoragedb_create.sql" encoding="UTF-8">
+            <template file="castoragedb_templates/castoragedb_create.sql"/>
+        </output>
+        <output dir="temp/castoragedb/" file="castoragedb_variant.sql" encoding="UTF-8">
+            <template file="castoragedb_templates/castoragedb_variant.sql"/>
+            <!-- lambda a: int((int(a,16)+2**31)%2**32-2**31) -->
+            <filter name="hex2dec">lambda a: int((int(a,16)+2147483648)%4294967296-2147483648)</filter>
+        </output>
+    </templateml>
+    
+  <!-- CommandML implementation to create the database using the .sql files -->
+    <commandml xmlns="http://www.s60.com/xml/commandml/1">
+        <command executable="sqlite3" shell="true" cwd="%CONE_OUT_ABSOLUTE%/temp/castoragedb">
+            <argument value='%CONE_OUT_ABSOLUTE%/content/private/20022F90/castorage.db ".read castoragedb_create.sql"'/>
+        </command>
+        <command executable="sqlite3" shell="true" cwd="%CONE_OUT_ABSOLUTE%/temp/castoragedb">
+            <argument value='%CONE_OUT_ABSOLUTE%/content/private/20022F90/castorage.db  ".genfkey --exec"'/>
+        </command>
+        <command executable="sqlite3" shell="true" cwd="%CONE_OUT_ABSOLUTE%/temp/castoragedb">
+            <argument value='%CONE_OUT_ABSOLUTE%/content/private/20022F90/castorage.db  ".read castoragedb_variant.sql"'/>
+        </command>
+    </commandml>
+
+    <content xmlns="http://www.s60.com/xml/content/2">
+        <output dir="content/private/20022F35/customsvg" flatten="true" >
+        <input>
+            <include files="${CaStorageDbSetting.Collections.Icon.localPath}"/>
+        </input>
+        <input>
+            <include files="${CaStorageDbSetting.URLs.URLIcon.localPath}"/>
+        </input>
+        <input>
+            <include files="${CaStorageDbSetting.OperatorCollections.Icon.localPath}"/>
+        </input>
+        <input>
+            <include files="${CaStorageDbSetting.OperatorURLs.URLIcon.localPath}"/>
+        </input>
+        </output>
+    </content>
+
+</container>

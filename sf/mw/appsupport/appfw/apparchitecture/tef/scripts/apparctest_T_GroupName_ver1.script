@@ -1,0 +1,36 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-GroupNameStep-ver1-DoTestGroupNameL-0001
+//! @SYMTestCaseDesc 		T_groupname to test the Groupname in localisable resource file
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		It connects to the Application Architecture server to perform the following:
+//!				To test whether the groupname defined in registration file is read if its
+//!				not defined in the localisable resource file
+//!				It calls the following function to get the information about the groupname.
+//!				RApaLsSession::GetAppCapability(TDes8& aCapabilityBuf,TUid aAppUid) const\n
+//! @SYMTestExpectedResults 	GetAppCapability should return the groupname
+//!				defined in the application's registration file.
+
+START_TESTCASE API-APPFWK-T-GroupNameStep-ver1-DoTestGroupNameL-0001
+
+PRINT Run T_GroupName_ver1 Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_GroupName_ver1
+
+END_TESTCASE API-APPFWK-T-GroupNameStep-ver1-DoTestGroupNameL-0001

@@ -1,0 +1,7 @@
+EXPORTS
+	_Z12GateFunctionv @ 1 NONAME
+	_ZTI13CTCON2Library @ 2 NONAME ; #<TI>#
+	_ZTI6CTCON2 @ 3 NONAME ; #<TI>#
+	_ZTV13CTCON2Library @ 4 NONAME ; #<VT>#
+	_ZTV6CTCON2 @ 5 NONAME ; #<VT>#
+

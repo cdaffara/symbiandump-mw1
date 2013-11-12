@@ -1,0 +1,3 @@
+EXPORTS
+	?NewL@CCMRMediaRecorder@@SAPAV1@XZ @ 1 NONAME ; class CCMRMediaRecorder * CCMRMediaRecorder::NewL(void)
+

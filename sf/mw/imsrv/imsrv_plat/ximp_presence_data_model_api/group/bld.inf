@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                XIMP Presence Data Model API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/presencedatamodelifids.hrh     MW_LAYER_PLATFORM_EXPORT_PATH(presencedatamodelifids.hrh)
+../inc/presenceinfofieldcollection.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceinfofieldcollection.h)
+../inc/presenceinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceinfo.h)
+../inc/devicepresenceinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(devicepresenceinfo.h)
+../inc/presenceobjectfactory.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceobjectfactory.h)
+../inc/presenceinfofieldvaluebinary.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceinfofieldvaluebinary.h)
+../inc/presenceinfofilter.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceinfofilter.h)
+../inc/presenceinfofield.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceinfofield.h)
+../inc/presencegrantrequestinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(presencegrantrequestinfo.h)
+../inc/presenceblockinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceblockinfo.h)
+../inc/personpresenceinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(personpresenceinfo.h)
+../inc/presenceinfofieldvalueenum.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceinfofieldvalueenum.h)
+../inc/presencewatcherinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(presencewatcherinfo.h)
+../inc/presentitygroupinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(presentitygroupinfo.h)
+../inc/presenceinfofieldvaluetext.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceinfofieldvaluetext.h)
+../inc/servicepresenceinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(servicepresenceinfo.h)
+../inc/presentitygroupmemberinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(presentitygroupmemberinfo.h)
+../inc/presencebuddyinfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(presencebuddyinfo.h)
+../inc/presencebuddyinfolist.h     MW_LAYER_PLATFORM_EXPORT_PATH(presencebuddyinfolist.h)

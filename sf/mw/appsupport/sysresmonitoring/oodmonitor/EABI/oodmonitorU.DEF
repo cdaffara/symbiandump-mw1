@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN11LafShutdown17SaveFromAppSwitchEv @ 1 NONAME
+	_ZN11LafShutdown18SaveFromViewSwitchEv @ 2 NONAME
+	_ZN11LafShutdown21CreateShutdownManagerER22MShutdownEventObserver @ 3 NONAME
+

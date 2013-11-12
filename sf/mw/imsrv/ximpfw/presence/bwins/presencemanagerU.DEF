@@ -1,0 +1,3 @@
+EXPORTS
+	?NewL@CPresenceFeaturesImp@@SAPAV1@PAVMXIMPContext@@@Z @ 1 NONAME ; class CPresenceFeaturesImp * CPresenceFeaturesImp::NewL(class MXIMPContext *)
+

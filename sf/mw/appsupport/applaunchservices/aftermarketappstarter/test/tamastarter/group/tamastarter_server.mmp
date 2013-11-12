@@ -1,0 +1,82 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+/**
+ @file
+ @test
+ @internalComponent - Internal Symbian test code 
+*/
+ 
+TARGET		  	tamastarter_server.exe
+TARGETTYPE	  	exe
+TARGETPATH		/sys/bin
+UID				0 0x102832CC
+VENDORID		0x70000001
+
+CAPABILITY		PowerMgmt ReadDeviceData WriteDeviceData ProtServ SwEvent
+
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+//SYSTEMINCLUDE     /epoc32/include/ssm
+
+
+USERINCLUDE	  ../inc
+USERINCLUDE	  ../../../inc
+USERINCLUDE	  ../../../amastartsrc
+USERINCLUDE	  ../../../localinc
+USERINCLUDE	  ../../../../../appfw/uiftestfw/inc
+//USERINCLUDE   ../../../../../../../os/devicesrv/sysstatemgmt/systemstatemgr/ss/inc/
+
+SOURCEPATH        ../src
+
+SOURCE			tamastarter_server.cpp
+SOURCE			tamastarter_database_utils.cpp
+SOURCE			tamastarter_step_standalone.cpp
+SOURCE			tamastarter_step_ssc.cpp
+SOURCE			tamastarter_step_invalidsid.cpp
+SOURCE			tamastarter_step_startl.cpp
+SOURCE			tamastarter_step_startlasync.cpp
+SOURCE			tamastarter_step_cancel.cpp
+SOURCE			tamastarter_step_startpending.cpp
+SOURCE			tamastarterappobserver.cpp
+
+
+#ifdef WINS
+SOURCEPATH	../resource/emulator/
+#else
+SOURCEPATH	../resource/hardware/
+#endif
+START RESOURCE 	tamastarter_amaadder.rss
+TARGETPATH		/private/10205c44/test
+END
+
+START RESOURCE 	tamastarter_amaadder_ssma.rss
+TARGETPATH		/private/2000d75b/startup/test
+END
+
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY         dscstore.lib
+LIBRARY			amastart.lib 
+LIBRARY         startupproperties.lib
+LIBRARY         testexecuteutils.lib
+LIBRARY         testexecutelogclient.lib
+LIBRARY         appfwk_test_utils.lib
+LIBRARY     	appfwk_test_appui.lib
+//replace instances of "cinidata.lib" with "iniparser.lib" as per BR2473 (SITK migration)
+LIBRARY         iniparser.lib
+
+SMPSAFE

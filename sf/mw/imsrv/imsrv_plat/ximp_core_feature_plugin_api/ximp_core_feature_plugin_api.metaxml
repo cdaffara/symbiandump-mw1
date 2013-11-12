@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<api id="4f52c616453696d89dd07f3274833eae" dataversion="1.0">
+<name>ximp_core_feature_plugin_api</name>
+<description>Contains interfaces for managing and accessing the XIMP Feature Plugins .
+</description>
+<type>c++</type>
+<subsystem>ximpfw</subsystem>
+<libs><lib name="ximpdatamodel.lib"/>
+<lib name="ximpoperations.lib"/>
+<lib name="ximpecomhook.lib"/>
+<lib name="ximpmanager.lib"/>
+<lib name="ximpsrvclient.lib"/>
+<lib name="ximpprocessor.lib"/>
+<lib name="ximputils.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

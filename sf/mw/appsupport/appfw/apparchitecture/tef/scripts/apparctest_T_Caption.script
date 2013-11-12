@@ -1,0 +1,32 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID		API-APPFWK-T_Caption_TestCApaSystemControlListL-0001
+//! @SYMTestCaseDesc		Check (short)caption by means of a control on the list CApaSystemControlList
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions		The test creates a CApaSystemControlList and checks the value of (short)caption
+   				by creating a CApaSystemControl from index 0 of CApaSystemControlList
+//! @SYMTestExpectedResults	The (short)caption is set to a value not null (length is not zero)
+
+START_TESTCASE API-APPFWK-T_Caption_TestCApaSystemControlListL-0001
+
+PRINT Run T_Caption Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 800 ApparcTestServer T_Caption
+
+END_TESTCASE API-APPFWK-T_Caption_TestCApaSystemControlListL-0001

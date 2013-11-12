@@ -1,0 +1,41 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID		API-APPFWK-APPARC-0015
+//! @SYMPREQ			PREQ1123
+//! @SYMTestCaseDesc 		The Test determines that the Child dies when its Parent is terminated.
+//! @SYMTestPriority 		Critical
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		Creates and launches a process (parent). Creates another process (child) passing the first(parent) process ID. Launches the child process. Terminates parent and checks the existance of child process. The child should die.
+//!				API Calls:
+//!				RProcess::Create(const TDesC &aFileName, const TDesC &aCommand, TOwnerType aType=EOwnerProcess);
+//!				RProcess::Resume();
+//!				RProcess::ExitType() const;
+//!				RProcess::ExitReason() const;
+//!				RProcess::Id() const;
+//!				CApaCommandLine::SetProcessEnvironmentL(RProcess &aProcess) const;
+//!				CApaCommandLine::NewLC();
+//!				CApaCommandLine::SetParentProcessId(TProcessId);
+//! @SYMTestExpectedResults 	Termination of child process automatically.
+
+START_TESTCASE API-APPFWK-APPARC-0015
+
+PRINT Run T_Proc Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_Proc
+
+END_TESTCASE API-APPFWK-APPARC-0015

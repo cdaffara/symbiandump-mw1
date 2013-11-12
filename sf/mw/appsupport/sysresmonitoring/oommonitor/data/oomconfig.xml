@@ -1,0 +1,181 @@
+<!--
+ Copyright (c) 2004-2010 Nokia Corporation and/or its subsidiary(-ies).
+ All rights reserved.
+ This component and the accompanying materials are made available
+ under the terms of the License "Eclipse Public License v1.0"
+ which accompanies this distribution, and is available
+ at the URL "http://www.eclipse.org/legal/epl-v10.html".
+
+ Initial Contributors:
+ Nokia Corporation - initial contribution.
+
+ Contributors:
+
+ Description:
+
+-->
+
+
+<!-- This is the configuration file for the new OOM Monitor. This configuration file
+defines an OOM policy where RAM is released in the following order.
+
+1. Empty server caches (skin server cache, icon server cache, MDS cache, TFX server cache)
+2. Close applications that have not been used for more than 12 hours (including Browser and high priority applications)
+3. If Browser is in the background, empty Browser cache and close unused windows 
+4. Close always-on applications in the following order: Clock, Calendar, Messaging,  Contacts, Logs, Camera
+5. Close applications that have not been used for more than 15 minutes (including Browser but excluding high priority applications)
+6. Close Matrix UI if it has not been used for more than 15 seconds and continue closing WRT widgets immediately.
+7. Close WRT widgets
+8. Close other background applications that have been used within 15 minutes except Browser and high priority applications
+9. Close high priority applications
+10. If Browser is in the foreground, empty Browser cache and close unused windows 
+11. Close Browser in the background when it has been used within 15 minutes
+-->
+<oom_config>
+
+<!-- 	Low RAM and good RAM thresholds are defined here in kilobytes.
+	The max_app_close_batch indicates how many applications can be closed in parallel.
+	The value 1 means that applications are not closed in parallel.
+	default_wait_after_plugin defines how long is waited (in milliseconds) after
+	an OOM plugin is called and before the free RAM is checked to determine if more
+	actions are needed. This value is meaningful only when "check" or "estimate" sync mode is
+	used with plugins.
+-->
+	<global_settings low_ram_threshold="3637" good_ram_threshold="4900" swap_usage_monitored="true" low_swap_threshold="15000" good_swap_threshold="25000" max_app_close_batch="3" default_wait_after_plugin="10" max_app_exit_time="2000">
+	</global_settings>
+
+<!--	Application specific low RAM and good RAM thresholds are defined here. The higher values of
+the low and good thresholds are defined to avoid OOM errors with these applications when the default
+threshold values are used.
+-->
+	<app_specific_thresholds>
+		<app uid="10008d39" low_ram_threshold="8637" good_ram_threshold="9900"></app> <!-- Browser -->
+		<app uid="20001f63" low_ram_threshold="4637" good_ram_threshold="5900"></app> <!-- Maps -->
+		<app uid="101f857a" low_ram_threshold="5637" good_ram_threshold="6900"></app> <!-- camera -->
+		<app uid="10282822" low_ram_threshold="5637" good_ram_threshold="6900"></app> <!-- Widget UI -->
+		<app uid="20000A14" low_ram_threshold="8637" good_ram_threshold="9900"></app> <!-- Photos -->
+		<app uid="20007b39" low_ram_threshold="10637" good_ram_threshold="11900"></app> <!-- NGage -->
+	</app_specific_thresholds>
+
+<!--	The priority of closing each application is defined here.
+-->
+	<app_close_settings>
+
+<!--		The uid DEFAULT_APP refers to all applications, which priority is not specifically
+		defined in the conf file.
+-->
+		<close_app uid="DEFAULT_APP" priority="80" sync_mode="check">
+			<app_close_idle_priority idle_time="900" priority="50"></app_close_idle_priority>
+			<app_close_idle_priority idle_time="43200" priority="20"></app_close_idle_priority>
+		</close_app>
+<!--		The uid BUSY_APP refers to applications, which have set the OOM priority BUSY
+		by using the OOM Monitor API SetOomPriority(). The priority NEVER_CLOSE
+		means that the application is not closed at all.
+-->
+		<close_app uid="BUSY_APP" priority="NEVER_CLOSE" sync_mode="check"></close_app>
+
+<!--		The uid HIGH_PRIORITY_APP refers to applications, which have set the OOM priority HIGH
+		by using the OOM Monitor API SetOomPriority().
+-->
+		<close_app uid="HIGH_PRIORITY_APP" priority="90" sync_mode="check">
+			<app_close_idle_priority idle_time="43200" priority="20"></app_close_idle_priority>
+		</close_app>
+		<close_app uid="10005903" priority="80" sync_mode="check"> <!-- Clock -->
+			<app_close_idle_priority idle_time="900" priority="50"></app_close_idle_priority>
+			<app_close_idle_priority idle_time="43200" priority="40"></app_close_idle_priority>
+		</close_app>
+		<close_app uid="10005901" priority="80" sync_mode="check"> <!-- Calendar -->
+			<app_close_idle_priority idle_time="900" priority="50"></app_close_idle_priority>
+			<app_close_idle_priority idle_time="43200" priority="41"></app_close_idle_priority>
+		</close_app>
+		<close_app uid="100058c5" priority="80" sync_mode="check">  <!-- Messaging -->
+			<app_close_idle_priority idle_time="900" priority="50"></app_close_idle_priority>
+			<app_close_idle_priority idle_time="43200" priority="42"></app_close_idle_priority>
+		</close_app>
+		<close_app uid="101f4cce" priority="80" sync_mode="check"> <!-- Contacts -->
+			<app_close_idle_priority idle_time="900" priority="50"></app_close_idle_priority>
+			<app_close_idle_priority idle_time="43200" priority="43"></app_close_idle_priority>
+		</close_app>
+		<close_app uid="101f4cd5" priority="80" sync_mode="check"> <!-- Logs -->
+			<app_close_idle_priority idle_time="900" priority="50"></app_close_idle_priority>
+			<app_close_idle_priority idle_time="43200" priority="44"></app_close_idle_priority>
+		</close_app>
+		<close_app uid="101f857a" priority="80" sync_mode="check"> <!-- Camcorder -->
+			<app_close_idle_priority idle_time="900" priority="50"></app_close_idle_priority>
+			<app_close_idle_priority idle_time="43200" priority="45"></app_close_idle_priority>
+		</close_app>
+		<close_app uid="10008d39" priority="110" sync_mode="check"> <!-- Browser -->
+			<app_close_idle_priority idle_time="900" priority="50"></app_close_idle_priority>
+			<app_close_idle_priority idle_time="43200" priority="20"></app_close_idle_priority>
+		</close_app>
+		
+		<!--CWRTWidget.exe -->		
+		<close_app uid="200267C0" priority="100" sync_mode="check"> <!-- Ovi Widget UI -->
+            <app_close_idle_priority idle_time="900" priority="50"></app_close_idle_priority>
+            <app_close_idle_priority idle_time="43200" priority="30"></app_close_idle_priority>
+        </close_app>		
+		<!--CWRTWidget.exe  End -->
+		<!--CWRTWidget2.exe -->		
+		<close_app uid="200267D6" priority="80" sync_mode="check"> 
+            <app_close_idle_priority idle_time="900" priority="50"></app_close_idle_priority>
+            <app_close_idle_priority idle_time="43200" priority="30"></app_close_idle_priority>
+        </close_app>		
+		<!--CWRTWidget2.exe  End -->
+<!--		Widget UI plugin handles the closing of widgets. Widget UI application is not closed.
+-->
+		<close_app uid="10282822" priority="NEVER_CLOSE" sync_mode="check"> </close_app> <!-- Widget UI --> 
+		<close_app uid="101f4cd2" priority="NEVER_CLOSE" sync_mode="continue">
+			<app_close_idle_priority idle_time="15" priority="60"></app_close_idle_priority>
+			<foreground_app_priority if_foreground_app_id="10207218" priority="NEVER_CLOSE"></foreground_app_priority> <!-- Fast swap --> 
+		</close_app> <!-- Matrix UI -->
+		<close_app uid="2002FF4E" priority="NEVER_CLOSE" sync_mode="check">
+			<app_close_idle_priority idle_time="43200" priority="20"></app_close_idle_priority>
+		</close_app> <!-- Radio -->
+	</app_close_settings>
+<!--	The priority of executing each system plugin is defined here.
+	System plugin is a plugin, which priority is not related to any application.
+-->
+	<system_plugin_settings>
+<!--		The uid DEFAULT_PLUGIN refers to all plugins, which priority is not specificly
+		defined in the conf file.
+-->
+		<system_plugin uid="DEFAULT_PLUGIN" priority="10" sync_mode="continue"></system_plugin>
+		<system_plugin uid="10207140" priority="10" sync_mode="continue"></system_plugin> <!-- AKNSKINSOOMPLUGIN -->
+		<system_plugin uid="10281fe6" priority="10" sync_mode="continue"></system_plugin> <!-- AKNICONOOMPLUGIN -->
+		<system_plugin uid="10282e4f" priority="10" sync_mode="continue"></system_plugin> <!-- TFXSRVOOMPLUGIN -->
+		<system_plugin uid="2001b2c6" priority="10" sync_mode="continue"></system_plugin> <!-- MDSOOMPLUGIN -->
+	</system_plugin_settings>
+<!--	The priority of executing each application plugin is defined here.
+	Application plugin is a plugin, which priority depends on the target application.
+	The target application must be defined for each application plugin.
+	By default all plugins are system plugins unless specifically defined as application
+	plugin in this section.
+-->
+	<app_plugin_settings>
+		<app_plugin uid="10281f93" target_app_id="10008d39" priority="30" wait="100" sync_mode="check"> <!-- WEBENGINEMEMORYPLUGIN, target app Browser -->
+			<plugin_foreground_app_priority target_app_id="10008d39" priority="100"></plugin_foreground_app_priority>
+		</app_plugin>
+
+<!--	Widget memory plugin has very long plugin wait time because we don't want to unnecessarily
+	close any other applications after closing it. We call Widget memory plugin only if
+	Widget UI application is running in the background.
+-->
+		<app_plugin uid="10282855" target_app_id="10282822" priority="70" wait="3500" sync_mode="check" call_if_target_app_not_running="false"> <!-- WIDGETMEMORYPLUGIN, target app Widget UI -->
+			<plugin_foreground_app_priority target_app_id="10282822" priority="NEVER_CLOSE"></plugin_foreground_app_priority> <!-- target app Widget UI -->
+		</app_plugin>
+	<!--CWRTWidget.exe  -  Plugin -->	
+		
+		<app_plugin uid="200267D3" target_app_id="200267C0" priority="70" wait="3500" sync_mode="check" call_if_target_app_not_running="false"> 
+			<plugin_foreground_app_priority target_app_id="200267C0" priority="NEVER_CLOSE"></plugin_foreground_app_priority>
+		</app_plugin>
+	
+	<!--CWRTWidget.exe  -  Plugin   End-->		
+	<!--CWRTWidget2.exe  -  Plugin -->	
+		
+		<app_plugin uid="200267DB" target_app_id="200267D6" priority="50" wait="3500" sync_mode="check" call_if_target_app_not_running="false"> 
+			<plugin_foreground_app_priority target_app_id="200267D6" priority="NEVER_CLOSE"></plugin_foreground_app_priority>
+		</app_plugin>
+	
+	<!--CWRTWidget2.exe  -  Plugin   End-->		
+	</app_plugin_settings>
+</oom_config>

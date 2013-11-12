@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="05d73692cd3d5df58b5ed4259ad6c553" dataversion="2.0">
+  <name>Settings Uis CenRep collection API</name>
+  <description>See the logical API descriptions from the Nokia Crep And PS Keys sheet (Network Settings API, Accessory Settings API, Device Security Settings API, Communication Settings API, Personalization Settings API, Profile Accessory Settings API, Telephony Feature Settings API, CDMA Telephony Feature Settings API, Locale Settings API, Peripheral Settings API, Call Forwarding Settings API, Common Telephony Settings API, Rich Call Settings API, Accessory Light Settings API, Call Waiting Settings API)</description>
+  <type>c++</type>
+  <collection>gssettingsuis</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

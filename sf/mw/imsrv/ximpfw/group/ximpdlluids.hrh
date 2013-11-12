@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Presence Framework DLL uids
+*
+*/
+
+#ifndef XIMPDLLUIDS_HRH
+#define XIMPDLLUIDS_HRH
+
+
+// -----------------------------------------------------------------------------
+// System wide UID 2:s for different dll types.
+// -----------------------------------------------------------------------------
+//
+#define XIMP_DLL_UID_STATIC_INTERFACE                   0x1000008d
+#define XIMP_DLL_UID_ECOM_PLUGIN                        0x10009D8D
+
+
+// -----------------------------------------------------------------------------
+// Common UID 3 for the XIMP Framework dlls.
+// -----------------------------------------------------------------------------
+//
+#define XIMP_DLL_UID_COMMON                             0x10282DD8
+
+
+// -----------------------------------------------------------------------------
+// UID 3 for the XIMP Framework server exes.
+// -----------------------------------------------------------------------------
+//
+#define XIMP_EXE_UID_ROOT_SERVER                        0x10282DD9
+#define XIMP_EXE_UID_PROTOCOL_CONNECTION_SERVER         0x10282DDA
+
+
+// -----------------------------------------------------------------------------
+// ECOM implementation UID for MXIMPClient interfaces.
+// -----------------------------------------------------------------------------
+//
+#define XIMP_ECOM_IMPLEMENTATION_UID_CLIENT_INTERFACE   0x10282DDB
+#define XIMP_ECOM_IMPLEMENTATION_UID_PRESENCE_INTERFACE 0x2000B186
+#define XIMP_ECOM_IMPLEMENTATION_UID_IM_INTERFACE 		0x2000B5EA
+
+// -----------------------------------------------------------------------------
+// Other dll uids
+// -----------------------------------------------------------------------------
+//
+#define XIMP_DLL_UID_PRESENCE_HOOK                      0x2000B1AE
+#define XIMP_DLL_UID_PRESENCE_MANAGER                   0x2000B1AF
+#define XIMP_DLL_UID_IM_HOOK                      			0x2000B5EB
+#define XIMP_DLL_UID_IM_MANAGER                   			0x2000B5EC
+
+
+#endif // XIMPDLLUIDS_HRH
+
+

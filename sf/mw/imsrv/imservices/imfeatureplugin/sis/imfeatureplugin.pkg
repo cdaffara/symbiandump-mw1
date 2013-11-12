@@ -1,0 +1,46 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+;Language
+&EN
+
+;Header
+#{"imfeatureplugin"}, (0x2000B5F1), 1, 1, 0, TYPE=SA, RU
+
+;Supports Series 60 v 5.2; Needs to be updated when platform is changed
+(0x20022E6D ), 0, 0, 0, {"Series60ProductID"}
+
+;Localised VendorID
+%{"Nokia"}
+
+;VendorID
+:"Nokia"
+
+
+;imfeatureplugin libs
+"\EPOC32\RELEASE\ARMV5\UREL\imdatamodelhook.dll"              -"!:\sys\bin\imdatamodelhook.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\imdatamodel.dll"              -"!:\sys\bin\imdatamodel.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\immanager.dll"              -"!:\sys\bin\immanager.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\imecomhook.dll"              -"!:\sys\bin\imecomhook.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\imoperationshook.dll"              -"!:\sys\bin\imoperationshook.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\imoperation.dll"              -"!:\sys\bin\imoperation.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\improcessorhook.dll"              -"!:\sys\bin\improcessorhook.dll"
+"\EPOC32\RELEASE\ARMV5\UREL\improcessor.dll"              -"!:\sys\bin\improcessor.dll"
+"\EPOC32\DATA\Z\Resource\Plugins\imdatamodelhook.rsc"             -"!:\Resource\Plugins\imdatamodelhook.rsc"
+"\EPOC32\DATA\Z\Resource\Plugins\imecomhook.rsc"             -"!:\Resource\Plugins\imecomhook.rsc"
+"\EPOC32\DATA\Z\Resource\Plugins\imoperationshook.rsc"             -"!:\Resource\Plugins\imoperationshook.rsc"
+"\EPOC32\DATA\Z\Resource\Plugins\improcessorhook.rsc"             -"!:\Resource\Plugins\improcessorhook.rsc"
+
+; end of file

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+    <file alias="typefaces.xml">variant/typefaces_s60.xml</file>
+    </qresource>
+</RCC>

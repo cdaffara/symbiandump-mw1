@@ -1,0 +1,49 @@
+// Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+/**
+ @file
+ @internalComponent - Internal Symbian test code
+*/
+
+TARGET        	serverapp2.exe
+TARGETTYPE    	exe
+UID           	0x100039CE 0x10004c58
+VENDORID  	0x70000001
+
+USERINCLUDE   	.
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+//SYSTEMINCLUDE   /epoc32/include/techview
+
+START RESOURCE	serverapp2_reg.rss
+TARGETPATH	/apparctestregfiles
+lang		sc
+END
+
+SOURCEPATH		../tef
+//SOURCE T_ServicesStep.cpp
+SOURCE	app_CTRL.CPP
+
+LIBRARY		cone.lib ws32.lib appfwk_test_appui.lib euser.lib ecom.lib
+LIBRARY		testexecuteutils.lib  testexecutelogclient.lib
+LIBRARY		apparc.lib efsrv.lib estor.lib gdi.lib fbscli.lib
+LIBRARY     	apfile.lib apgrfx.lib  bafl.lib apmime.lib apserv.lib
+LIBRARY		eikcore.lib appfwk_test_utils.lib serviceregistry.lib
+LIBRARY		aplist.lib
+LIBRARY     ticonloaderandiconarrayforleaks.lib centralrepository.lib
+
+SMPSAFE

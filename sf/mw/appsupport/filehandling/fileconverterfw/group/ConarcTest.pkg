@@ -1,0 +1,31 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+;Languages
+&EN
+
+
+;Localised Vendor name
+%{"ConarcTest.pkg EN"}
+
+; Vendor name
+: "ConarcTest"
+
+
+"\epoc32\data\z\conarctest\conarctest_run.bat"-"c:\conarctest_run.bat"
+"\epoc32\data\z\conarctest\conarctest_t_b64cnv.script"-"c:\conarctest\conarctest_t_b64cnv.script"
+"\epoc32\data\z\conarctest\conarctest_t_cnf.script"-"c:\conarctest\conarctest_t_cnf.script"
+"\epoc32\data\z\conarctest\conarctest_t_loadecomcnv.script"-"c:\conarctest\conarctest_t_loadecomcnv.script"

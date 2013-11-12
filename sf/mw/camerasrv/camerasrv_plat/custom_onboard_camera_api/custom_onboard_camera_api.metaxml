@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="e85dd3cb506ee5530c7574f14f94e89d" dataversion="2.0">
+<name>Custom Onboard Camera API</name>
+<description>Interface used by Camera Application Engine and should be provided by Onboard Camera API customInterface</description>
+<type>c++</type>
+<collection>CamAppEngine</collection>
+<libs></libs>
+<release category="platform" sinceversion="0" deprecatedsince="0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>yes</adaptation>
+</attributes>
+</api>

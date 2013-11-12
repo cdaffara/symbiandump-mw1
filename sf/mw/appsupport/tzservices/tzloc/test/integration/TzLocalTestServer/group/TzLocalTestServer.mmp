@@ -1,0 +1,66 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+CAPABILITY  ProtServ ReadUserData WriteUserData ReadDeviceData WriteDeviceData
+TARGET      tzlocaltestserver.exe
+TARGETTYPE  exe
+UID             0x1000007A 0x102079A4
+VENDORID 0x70000001
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+USERINCLUDE     ../inc
+SOURCEPATH      ../src
+USERINCLUDE ../../../../../../commonappservices/coreappstest/inc 
+SOURCE		    TzLocalTestServer.cpp
+SOURCE          TestTzLocalBaseStep.cpp
+SOURCE	        TestSetTimeZoneStep.cpp	
+SOURCE          TestGetTzInfoFromIdStep.cpp
+SOURCE          TestGetTzInfoFromDefCityStep.cpp
+SOURCE          TestAddCityStep.cpp
+SOURCE          TestSetCachedZoneStep.cpp
+SOURCE          TestGetCachedZoneInfoStep.cpp
+SOURCE          TestRemoveCityStep.cpp
+SOURCE          TestGetSortedCitiesStep.cpp
+SOURCE          TestTzOOMStep.cpp
+SOURCE          TestCityOOMStep.cpp
+SOURCE          TestGroupsOOMStep.cpp
+SOURCE          TestTzManipOOMStep.cpp
+SOURCE          TestFindFunctionsOOMStep.cpp
+SOURCE          TestGetCityGroupInfoStep.cpp
+SOURCE          TestGetAllTzStep.cpp
+SOURCE          TestChangeLanguageStep.cpp
+SOURCE          TestGetCitiesUTCOffStep.cpp
+SOURCE          TestGetTzUTCOffStep.cpp
+SOURCE          TestCheckCurrentZoneStep.cpp
+
+LIBRARY         euser.lib
+LIBRARY		    testexecuteutils.lib
+LIBRARY	    	testexecutelogclient.lib
+LIBRARY         tzclient.lib
+LIBRARY	    	timezonelocalization.lib
+LIBRARY			pimtestclient.lib
+
+START RESOURCE ../../../tzltestres/timezonegroups.rss
+TARGETPATH	/resource/timezonelocalization
+LANG SC 01 02
+END
+
+START RESOURCE ../../../tzltestres/timezones.rss
+TARGETPATH	/resource/timezonelocalization
+LANG SC 01 02
+END
+
+SMPSAFE

@@ -1,0 +1,72 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// App-Services/Tz (Time Zone Server)
+// 
+//
+
+PRJ_PLATFORMS
+
+// App-Engines/AgnVersit is built for WINC. Since it links with TzClient.dll
+// this component is also built for WINC
+DEFAULT WINC
+
+PRJ_EXPORTS
+// Public Headers 
+../Include/tzdefines.h		SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tzdefines.h)
+../Include/tz.h				SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tz.h)
+../Include/tzid.h			SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tzid.h)
+../Include/tzid.inl			SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tzid.inl)
+../Include/tzconverter.h	SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tzconverter.h)
+../Include/tzupdate.h		SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tzupdate.h)
+#ifdef SYMBIAN_ENABLE_SPLIT_HEADERS
+../Include/tzusernames.h    SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(tzusernames.h)
+../Include/tzuserdefineddata.h     SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(tzuserdefineddata.h)
+#endif
+
+// Central Repository registration file for Auto Update and for Current Time Zone
+// NOTE: this is required for emulator and target hardware testing only. It is not used in production.
+1020383e.txt                    z:/private/10202be9/1020383e.txt
+
+// ConfML Files
+../conf/timezoneserver.confml                   MW_LAYER_EXPORTS_CONFML(timezoneserver.confml)
+../conf/timezoneserver_1020383e.crml	        MW_LAYER_EXPORTS_CRML(timezoneserver_1020383e.crml)
+
+../Include/vtzrules.h				SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(vtzrules.h)
+../Include/tzlocalizedcityrecord.h		SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tzlocalizedcityrecord.h)
+../Include/tzlocalizedcityrecord.inl		SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(tzlocalizedcityrecord.inl)
+../Include/tzlocalizedtimezonerecord.h		SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(tzlocalizedtimezonerecord.h)
+../Include/tzlocalizedtimezonerecord.inl	SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(tzlocalizedtimezonerecord.inl)
+
+//
+// DBMS policy file for TZ Localization database.
+//
+10206A8B.SPD	z:/private/100012a5/policy/10206a8b.spd
+// BackupRestore
+backup_registration.xml		z:/private/1020383e/backup_registration.xml
+
+// ROM
+TimeZoneServer.iby		/epoc32/rom/include/timezoneserver.iby
+
+PRJ_MMPFILES
+TimeZoneClient.mmp
+TimeZoneServer.mmp
+tzswiobserverplugin.mmp
+
+PRJ_EXTENSIONS
+start extension app-services/buildstubsis
+	option SISNAME	timezone_stub
+	option SRCDIR	./	
+end
+
+#include "../test/group/bld.inf"

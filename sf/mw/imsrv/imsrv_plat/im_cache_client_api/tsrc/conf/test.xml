@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<test>
+    <id>1001</id>
+    <name>MeCo Nightly Testing--IM Cache</name>
+    <target>
+        <device rank="none" alias="DEFAULT">
+            <property name="HARNESS" value="STIF" />
+            <property name="TYPE" value="Devlon" />
+            <property name="HOST" value="2IND00855.NOE.Nokia.com" />
+        </device>
+    </target> 
+    <plan id="1.1" name="MeCo Test Plan-IM Cache" harness="STIF" enabled="true" passrate="100">
+        <session id="1.1.1" name="session" harness="STIF" enabled="true" passrate="100">
+            <set id="1.1.1.1" name="set" harness="STIF" enabled="true" passrate="100">
+                <target>
+                    <device rank="master" alias="DEFAULT"/>
+                </target>
+                <case id="1.1.1.1.1" name="Test Case 1" harness="STIF" enabled="true" passrate="100">
+                    <flash target-alias="DEFAULT" images="Build\MeCo.fpsx" />
+                    <flash target-alias="DEFAULT" images="Build\MeCo_udaerase.fpsx" />  
+                    <step id="1.1.1.1.1.1" name="Create CTC log dir" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>makedir</command>
+                        <params>
+                            <param dir="c:\data\ctc\"/>
+                        </params>
+                    </step>
+                    
+                    <step id="1.1.1.1.1.2" name="Access point related files" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>execute</command>
+                        <params>
+                            <param file="z:\sys\bin\pretester.exe"/>
+                        </params>
+                    </step>
+                                      
+                    
+                    <step id="1.1.1.1.1.3" name="CTC start" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>execute</command>
+                        <params>
+                            <param file="z:\sys\bin\ctcman.exe"/>
+                        </params>
+                    </step>
+                    
+                    <step id="1.1.1.1.1.4" name="Create STIF log dir" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>makedir</command>
+                        <params>
+                            <param dir="c:\logs\imcv"/>
+                        </params>
+                    </step>
+                                        
+                    <step id="1.1.1.1.1.5" name="Install testmodule DLL" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>install</command>
+                        <params>
+                        	  <param type="binary"/>
+                            <param src="imcache_test.dll"/>
+                            <param dst="c:\sys\bin\imcache_test.dll"/>
+                            
+                        </params> 
+                    </step> 
+                    
+                  <step id="1.1.1.1.1.6" name="Install testmodule DLL" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>install</command>
+                        <params>
+                        	  <param type="binary"/>
+                            <param src="system.conf"/>
+                            <param dst="c:\data\dbus\system.conf "/>
+                            
+                        </params> 
+                    </step> 
+                              
+                         
+                         <step id="1.1.1.1.1.7" name="Install TESTFRAMEWORK.INI FILE" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>install</command>
+                        <params>
+                            <param src="testframework.ini"/>
+                            <param dst="c:\testframework\testframework.ini"/>
+                            <!--param component-path="ATS3Drop"/-->
+                        </params> 
+                    </step>     
+                              
+                    <step id="1.1.1.1.1.8" name="Install .cfg FILE" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>install</command>
+                        <params>
+                            <param src="imcache_test.cfg"/>
+                            <param dst="c:\testframework\imcache_test.cfg"/>
+                            <!--param component-path="ATS3Drop"/-->
+                        </params> 
+                    </step>     
+                    
+                   
+                    		                
+		                <step id="1.1.1.1.1.9" name="Module Test Result for IM Cache " harness="STIF" enabled="true" passrate="100" significant="true">
+		                    <command>run-cases</command>
+		                    <params>
+		        							<param module="Testscripter"/>
+		        							<param testcase-file="c:\testframework\imcache_test.cfg"/>
+		        							<param filter="*"/>
+		        							<param timeout="6000"/>
+		                    </params>
+		                </step>
+		                
+		                
+                    <step id="1.1.1.1.1.10" name="Save CTC data" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>execute</command>
+                        <params>
+                            <param parameters="writefile"/>
+                            <param file="z:\sys\bin\ctcman.exe"/>
+                        </params>
+                    </step>
+                    <step id="1.1.1.1.1.11" name="Fetch and clean CTC data" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>fetch-log</command>
+                        <params>
+                            <param delete="true"/>
+                            <param path="c:\data\ctc\ctcdata.txt"/>                        
+                        </params>
+                    </step>
+                    <step id="1.1.1.1.1.12" name="Fetch Test module Logs" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>fetch-log</command>
+                        <params>
+				  							    <param type="text"/>
+				  							    <param delete="true"/>
+				  							    <param path="C:\Logs\TestFramework\*"/>
+                        </params>
+                    </step>            
+                    <step id="1.1.1.1.1.13" name="Fetch Test module Logs-IM Cache" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>fetch-log</command>
+                        <params>
+				  							    <param type="text"/>
+				  							    <param delete="true"/>
+				  							    <param path="C:\Logs\imcv\*"/>
+                        </params>
+                    </step>                               
+                </case>
+            </set>
+        </session>
+    </plan>
+    <files>
+        
+        
+        <file>armv5_urel\imcache_test.dll</file>
+        <file>armv5_urel\system.conf</file>
+        <file>armv5_urel\TestFramework.ini</file>
+        <file>armv5_urel\imcache_test.cfg</file>
+        <file>build\MeCo.fpsx</file>  
+        <file>build\MeCo_udaerase.fpsx</file>              
+    </files>
+    
+     <postAction>
+					<type>FileStoreAction</type>
+							<params>
+							<param name="to-folder" value="\\filerblr\sp\Test_Drops\meco\Log\imcache_test"/>
+							<param name="zip" value="false"/>
+							</params>
+			</postAction>
+    <report media="email">
+        <type>STIF_COMPONENT_REPORT_ALL_CASES</type>
+        <to>ram.chauhan@nokia.com</to>
+    </report>
+</test>

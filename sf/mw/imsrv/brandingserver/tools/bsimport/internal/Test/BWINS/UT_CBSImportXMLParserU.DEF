@@ -1,0 +1,16 @@
+EXPORTS
+	?CreateTestSuiteL@@YAPAVMEUnitTest@@XZ @ 1 NONAME ; class MEUnitTest * CreateTestSuiteL(void)
+	??0CBSBitmap@@AAE@HHHH@Z @ 2 NONAME ; CBSBitmap::CBSBitmap(int, int, int, int)
+	??1CBSBitmap@@UAE@XZ @ 3 NONAME ; CBSBitmap::~CBSBitmap(void)
+	?BitmapFileId@CBSBitmap@@QBEABVTDesC8@@XZ @ 4 NONAME ; class TDesC8 const & CBSBitmap::BitmapFileId(void) const
+	?BitmapId@CBSBitmap@@QBEHXZ @ 5 NONAME ; int CBSBitmap::BitmapId(void) const
+	?BitmapMaskId@CBSBitmap@@QBEHXZ @ 6 NONAME ; int CBSBitmap::BitmapMaskId(void) const
+	?ConstructL@CBSBitmap@@AAEXABVTDesC8@@@Z @ 7 NONAME ; void CBSBitmap::ConstructL(class TDesC8 const &)
+	?CreateBSElementL@BSElementFactory@@SAPAVMBSElement@@ABVTDesC8@@W4TBSElementType@@0@Z @ 8 NONAME ; class MBSElement * BSElementFactory::CreateBSElementL(class TDesC8 const &, enum TBSElementType, class TDesC8 const &)
+	?CreateBSElementL@BSElementFactory@@SAPAVMBSElement@@ABVTDesC8@@W4TBSElementType@@AAV?$RBSObjOwningPtrArray@VMBSElement@@@@@Z @ 9 NONAME ; class MBSElement * BSElementFactory::CreateBSElementL(class TDesC8 const &, enum TBSElementType, class RBSObjOwningPtrArray<class MBSElement> &)
+	?CreateBSElementL@BSElementFactory@@SAPAVMBSElement@@ABVTDesC8@@W4TBSElementType@@ABVTDesC16@@@Z @ 10 NONAME ; class MBSElement * BSElementFactory::CreateBSElementL(class TDesC8 const &, enum TBSElementType, class TDesC16 const &)
+	?CreateBSElementL@BSElementFactory@@SAPAVMBSElement@@ABVTDesC8@@W4TBSElementType@@H@Z @ 11 NONAME ; class MBSElement * BSElementFactory::CreateBSElementL(class TDesC8 const &, enum TBSElementType, int)
+	?CreateBSElementL@BSElementFactory@@SAPAVMBSElement@@ABVTDesC8@@W4TBSElementType@@PAVCBSBitmap@@@Z @ 12 NONAME ; class MBSElement * BSElementFactory::CreateBSElementL(class TDesC8 const &, enum TBSElementType, class CBSBitmap *)
+	?NewL@CBSBitmap@@SAPAV1@HHHHABVTDesC8@@@Z @ 13 NONAME ; class CBSBitmap * CBSBitmap::NewL(int, int, int, int, class TDesC8 const &)
+	?NewLC@CBSBitmap@@SAPAV1@HHHHABVTDesC8@@@Z @ 14 NONAME ; class CBSBitmap * CBSBitmap::NewLC(int, int, int, int, class TDesC8 const &)
+

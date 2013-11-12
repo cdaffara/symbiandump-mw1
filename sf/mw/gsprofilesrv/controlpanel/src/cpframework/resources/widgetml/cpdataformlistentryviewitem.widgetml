@@ -1,0 +1,42 @@
+<hbwidget version="0.1" type="CpDataFormListEntryViewItem">
+
+  <layout name="default" type="mesh">
+  
+    <meshitem src="dataItem_Background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="dataItem_Background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="dataItem_Background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="dataItem_Background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="dataItem_Icon" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="dataItem_Icon" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="dataItem_Icon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+
+
+    <meshitem src="dataItem_Label" srcEdge="TOP" dst="" dstEdge="TOP" />	
+    <meshitem src="dataItem_Label" srcEdge="LEFT" dst="dataItem_Icon" dstEdge="RIGHT" />
+    <meshitem src="dataItem_Label" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    <meshitem src="dataItem_Label" srcEdge="BOTTOM" dst="dataItem_Description" dstEdge="TOP" />
+
+    <meshitem src="dataItem_Description" srcEdge="LEFT" dst="dataItem_Icon" dstEdge="RIGHT" />
+    <meshitem src="dataItem_Description" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+    
+  </layout> 
+  
+  <layout name="singletext" type="mesh">
+  
+    <meshitem src="dataItem_Background" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="dataItem_Background" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="dataItem_Background" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="dataItem_Background" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="dataItem_Icon" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="dataItem_Icon" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="dataItem_Icon" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+
+
+    <meshitem src="dataItem_Label" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />	
+    <meshitem src="dataItem_Label" srcEdge="LEFT" dst="dataItem_Icon" dstEdge="RIGHT" />
+
+  </layout> 
+    
+</hbwidget>

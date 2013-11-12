@@ -1,0 +1,34 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID		API-APPFWK-CTestAppListStep_TestAppListL-0001
+//! @SYMDEF 			DEF056494: Apparc App Info access APIs require the applist to be complete, delaying startup
+//! @SYMTestCaseDesc 		Testing whether apparctestserver return app info when the list is not completely populated.
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		To query for a particular app Info and check if the info is available.
+//! 				API Calls:
+//! 				RApaLsSession::GetAppInfo(); 
+//! @SYMTestExpectedResults 	Test should complete without any panic.
+
+START_TESTCASE API-APPFWK-CTestAppListStep_TestAppListL-0001
+
+PRINT Run AppList Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_AppList
+
+END_TESTCASE API-APPFWK-CTestAppListStep_TestAppListL-0001

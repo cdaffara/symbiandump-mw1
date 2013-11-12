@@ -1,0 +1,39 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// View Server Build Information.
+// View server
+// 
+//
+
+/**
+ @file
+*/
+
+// include test code
+#include "../test/group/BLD.INF"
+
+PRJ_EXPORTS
+../inc/VWSDEF.H SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(vwsdef.h)
+#ifdef SYMBIAN_ENABLE_SPLIT_HEADERS
+../inc/vwsdefpartner.h SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(vwsdefpartner.h)
+#endif //SYMBIAN_ENABLE_SPLIT_HEADERS
+../inc/VWSAPPST.H SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(vwsappst.h)
+../inc/VIEWCLI.H SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(viewcli.h)
+#ifdef SYMBIAN_ENABLE_SPLIT_HEADERS
+../inc/viewclipartner.h SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(viewclipartner.h)
+#endif //SYMBIAN_ENABLE_SPLIT_HEADERS
+
+PRJ_MMPFILES
+../group/VIEWSRV.MMP
+../group/VIEWCLI.MMP

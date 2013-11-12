@@ -1,0 +1,10 @@
+component oetools_zsh
+source \sf\mw\appsupport\openenvutils\commandshell
+
+binary \sf\mw\appsupport\openenvutils\commandshell\group all
+exports \sf\mw\appsupport\openenvutils\commandshell\group
+
+notes_source \component_defs\release.src
+
+ipr T
+

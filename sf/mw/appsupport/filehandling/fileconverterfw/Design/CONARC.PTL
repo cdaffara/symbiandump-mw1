@@ -1,0 +1,410 @@
+
+(object Petal
+    version    	40)
+
+(object Class_Category "Converter Framework - DLL"
+    quid       	"34D5A6FD0308"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "CConverterBase"
+	    quid       	"34D5A7A00321"
+	    abstract   	TRUE
+	    operations 	(list Operations
+		(object Operation "ConvertL"
+		    quid       	"34D5A7F002B8"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ConverterUid"
+		    quid       	"34D5A8160032"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CConverterLibrary"
+	    quid       	"34D5A859004C"
+	    fields     	(list has_relationship_list
+		(object Has_Relationship
+		    quid       	"34D5A89803DC"
+		    supplier   	"CConverterBase"
+		    quidu      	"34D5A7A00321"
+		    client_cardinality 	(value cardinality "1..n")))
+	    operations 	(list Operations
+		(object Operation "Converter"
+		    quid       	"34D5A8BD038F"
+		    result     	"CConverterBase"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CCnaConverter"
+	    quid       	"34D5AA37025C"
+	    fields     	(list has_relationship_list
+		(object Has_Relationship
+		    quid       	"34D5AA950026"
+		    supplier   	"TMimeType"
+		    quidu      	"34D5AA8600D9"
+		    client_cardinality 	(value cardinality "2..n")))
+	    operations 	(list Operations
+		(object Operation "AddMimeFromL"
+		    quid       	"34D5AA5201A7"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "AddMimeToL"
+		    quid       	"34D5AA580259"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "SetUid"
+		    quid       	"34D5AA69033A"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "TMimeType"
+	    quid       	"34D5AA8600D9")
+	(object Class "CCnaConverterFinder"
+	    quid       	"34D5AB30032C"
+	    abstract   	TRUE
+	    operations 	(list Operations
+		(object Operation "FindAllConvL"
+		    quid       	"34D5AB540392"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "NextL"
+		    quid       	"34D5AB5A02DD"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CCnaScanningConverterFinder"
+	    quid       	"34D5AB940019"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"34D5ABA00369"
+		    supplier   	"CCnaConverterFinder"
+		    quidu      	"34D5AB30032C"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"34D5AC2E0115"
+		    supplier   	"CCnaFoundConverter"
+		    quidu      	"34D5ABFB0216")))
+	(object Class "CCnaConverterList"
+	    quid       	"34D5ABD902C1"
+	    fields     	(list has_relationship_list
+		(object Has_Relationship
+		    quid       	"34D5AC390139"
+		    supplier   	"CCnaFoundConverter"
+		    quidu      	"34D5ABFB0216"
+		    client_cardinality 	(value cardinality "0..n"))))
+	(object Class "CCnaFoundConverter"
+	    quid       	"34D5ABFB0216"
+	    fields     	(list has_relationship_list
+		(object Has_Relationship
+		    quid       	"34DB206E033B"
+		    supplier   	"CCnaConverter"
+		    quidu      	"34D5AA37025C"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"34D5AC54017E"
+		    supplier   	"CConverterLibrary"
+		    quidu      	"34D5A859004C")))
+	(object Class "CCnaConvInfoFile"
+	    quid       	"34D5ACFE02CD"
+	    fields     	(list has_relationship_list
+		(object Has_Relationship
+		    quid       	"34D5AD2502DD"
+		    supplier   	"CCnaConverter"
+		    quidu      	"34D5AA37025C"
+		    client_cardinality 	(value cardinality "1..n"))
+		(object Has_Relationship
+		    quid       	"34D5AE7A0391"
+		    supplier   	"CPersistentStore"
+		    quidu      	"34D5ADB303C7"
+		    exportControl 	"Protected")))
+	(object Class "CPersistentStore"
+	    quid       	"34D5ADB303C7"
+	    exportControl 	"Implementation"
+	    abstract   	TRUE
+	    space      	"CCnaConvInfoFile")
+	(object Class "CCnaInfoFileWriter"
+	    quid       	"34D5AEB5009D"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"34D5AECD0387"
+		    supplier   	"CCnaConvInfoFile"
+		    quidu      	"34D5ACFE02CD")))
+	(object Class "CCnaInfoFileReader"
+	    quid       	"34D5AEB60379"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"34D5AED001C8"
+		    supplier   	"CCnaConvInfoFile"
+		    quidu      	"34D5ACFE02CD"))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "Main"
+	    quid       	"34D5A793021E"
+	    title      	"Main"
+	    zoom       	90
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	109
+	    origin_y   	83
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "CConverterBase" @1
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(899, 1984)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(727, 1860)
+			nlines     	2
+			max_width  	408
+			justify    	0
+			label      	"CConverterBase")
+		    quidu      	"34D5A7A00321"
+		    compartment 	(object Compartment
+			Parent_View 	@1
+			location   	(750, 1921)
+			anchor     	2
+			nlines     	2
+			max_width  	361
+			justify    	0)
+		    width      	592
+		    height     	368
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "CConverterLibrary" @2
+		    IncludeOperation 	TRUE
+		    location   	(930, 1457)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(768, 1331)
+			nlines     	2
+			max_width  	383
+			justify    	0
+			label      	"CConverterLibrary")
+		    quidu      	"34D5A859004C"
+		    compartment 	(object Compartment
+			Parent_View 	@2
+			location   	(811, 1392)
+			anchor     	2
+			nlines     	1
+			max_width  	295
+			justify    	0)
+		    width      	556
+		    height     	375
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object HasView "" @3
+		    quidu      	"34D5A89803DC"
+		    client     	@2
+		    supplier   	@1
+		    line_style 	0)
+		(object ClassView "Class" "CCnaConverter" @4
+		    IncludeOperation 	TRUE
+		    location   	(2015, 682)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1837, 566)
+			nlines     	2
+			max_width  	422
+			justify    	0
+			label      	"CCnaConverter")
+		    quidu      	"34D5AA37025C"
+		    compartment 	(object Compartment
+			Parent_View 	@4
+			location   	(1834, 627)
+			anchor     	2
+			nlines     	3
+			max_width  	427
+			justify    	0)
+		    width      	612
+		    height     	344
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "TMimeType" @5
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2356, 310)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(2252, 226)
+			nlines     	2
+			max_width  	240
+			justify    	0
+			label      	"TMimeType")
+		    quidu      	"34D5AA8600D9"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object HasView "" @6
+		    quidu      	"34D5AA950026"
+		    client     	@4
+		    supplier   	@5
+		    line_style 	0)
+		(object ClassView "Class" "CCnaConverterFinder" @7
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(403, 992)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(241, 874)
+			nlines     	2
+			max_width  	383
+			justify    	0
+			label      	"CCnaConverterFinder")
+		    quidu      	"34D5AB30032C"
+		    compartment 	(object Compartment
+			Parent_View 	@7
+			location   	(247, 935)
+			anchor     	2
+			nlines     	2
+			max_width  	368
+			justify    	0)
+		    width      	556
+		    height     	350
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "CCnaScanningConverterFinder" @8
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(992, 713)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(862, 629)
+			nlines     	2
+			max_width  	304
+			justify    	0
+			label      	"CCnaScanningConverterFinder")
+		    quidu      	"34D5AB940019"
+		    width      	442
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @9
+		    quidu      	"34D5ABA00369"
+		    client     	@8
+		    supplier   	@7
+		    line_style 	0)
+		(object ClassView "Class" "CCnaConverterList" @10
+		    IncludeOperation 	TRUE
+		    location   	(1519, 279)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1415, 195)
+			nlines     	2
+			max_width  	242
+			justify    	0
+			label      	"CCnaConverterList")
+		    quidu      	"34D5ABD902C1"
+		    width      	352
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "CCnaFoundConverter" @11
+		    IncludeOperation 	TRUE
+		    location   	(1519, 930)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1411, 846)
+			nlines     	2
+			max_width  	251
+			justify    	0
+			label      	"CCnaFoundConverter")
+		    quidu      	"34D5ABFB0216"
+		    width      	364
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @12
+		    quidu      	"34D5AC2E0115"
+		    client     	@8
+		    supplier   	@11
+		    line_style 	0)
+		(object HasView "" @13
+		    quidu      	"34D5AC390139"
+		    client     	@10
+		    supplier   	@11
+		    line_style 	0)
+		(object UsesView "" @14
+		    quidu      	"34D5AC54017E"
+		    client     	@11
+		    supplier   	@2
+		    line_style 	0)
+		(object ClassView "Class" "CCnaConvInfoFile" @15
+		    IncludeOperation 	TRUE
+		    location   	(1891, 1209)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1787, 1125)
+			nlines     	2
+			max_width  	240
+			justify    	0
+			label      	"CCnaConvInfoFile")
+		    quidu      	"34D5ACFE02CD"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "CPersistentStore" @16
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2449, 1302)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(2306, 1185)
+			nlines     	2
+			max_width  	336
+			justify    	0
+			label      	"CPersistentStore")
+		    quidu      	"34D5ADB303C7"
+		    width      	487
+		    height     	348
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object HasView "" @17
+		    quidu      	"34D5AD2502DD"
+		    client     	@15
+		    supplier   	@4
+		    line_style 	0)
+		(object HasView "" @18
+		    quidu      	"34D5AE7A0391"
+		    client     	@15
+		    supplier   	@16
+		    line_style 	0)
+		(object ClassView "Class" "CCnaInfoFileWriter" @19
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1581, 1829)
+		    label      	(object ItemLabel
+			Parent_View 	@19
+			location   	(1477, 1745)
+			nlines     	2
+			max_width  	240
+			justify    	0
+			label      	"CCnaInfoFileWriter")
+		    quidu      	"34D5AEB5009D"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "CCnaInfoFileReader" @20
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2077, 1798)
+		    label      	(object ItemLabel
+			Parent_View 	@20
+			location   	(1973, 1714)
+			nlines     	2
+			max_width  	240
+			justify    	0
+			label      	"CCnaInfoFileReader")
+		    quidu      	"34D5AEB60379"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @21
+		    quidu      	"34D5AECD0387"
+		    client     	@19
+		    supplier   	@15
+		    line_style 	0)
+		(object InheritView "" @22
+		    quidu      	"34D5AED001C8"
+		    client     	@20
+		    supplier   	@15
+		    line_style 	0)
+		(object HasView "" @23
+		    quidu      	"34DB206E033B"
+		    client     	@11
+		    supplier   	@4
+		    line_style 	0)))))

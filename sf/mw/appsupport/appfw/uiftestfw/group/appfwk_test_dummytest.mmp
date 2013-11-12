@@ -1,0 +1,71 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// The purpose of this dummy test is two fold
+// EMULATOR - It is the first (empty) test to run (successive emulator star-ups are afterwards faster) 
+// HARDWARE - Exports the needed resource file to add eshell to the startup sequence, as required in DABS
+// 
+//
+
+/**
+ @file
+ @test
+ @internalComponent - Internal Symbian test code 
+*/
+
+TARGET          appfwk_test_dummytest.exe
+TARGETTYPE      exe
+TARGETPATH      /sys/bin  
+UID				0x1000008D 0x10101010
+VENDORID        0x70000001
+
+CAPABILITY		none
+
+
+MW_LAYER_SYSTEMINCLUDE 
+OS_LAYER_SYSTEMINCLUDE 
+
+USERINCLUDE	../inc
+
+
+SOURCEPATH	../src
+SOURCE 		appfwk_test_dummytest.cpp
+
+#if defined(WINS)
+// No special resource file required for emulator since eshell is not required.
+#else
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+sourcepath ../resource/hardware
+// Resource file for overnight DABS automated hardware testing
+// Full techview bootup + eshell
+START RESOURCE	gsastartupcmdlist7_target.rss
+TARGETPATH		/private/2000d75b/startup/7
+END
+#endif // SYMBIAN_SYSTEM_STATE_MANAGEMENT
+sourcepath ../resource/hardware
+// Resource file for overnight DABS automated hardware testing
+// Full techview bootup + eshell
+START RESOURCE	SSCForStartupMode7_target.rss
+TARGETPATH	/private/10205c44
+END
+
+#endif // WINS
+
+
+LIBRARY		euser.lib
+
+
+
+
+
+SMPSAFE

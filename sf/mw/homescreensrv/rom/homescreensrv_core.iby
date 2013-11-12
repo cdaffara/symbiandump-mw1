@@ -1,0 +1,62 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __HOMESCREENSRV_CORE_IBY__
+#define __HOMESCREENSRV_CORE_IBY__
+
+////////////////////////////////////////
+// Homescreen srv
+////////////////////////////////////////
+
+// ---- contentstorage --------------------------------------------
+file=ABI_DIR\BUILD_DIR\caapphandlerplugin.dll     SHARED_LIB_DIR\caapphandlerplugin.dll
+data=\epoc32\data\z\resource\qt\plugins\commandhandler\caapphandlerplugin.qtplugin  resource\qt\plugins\commandhandler\caapphandlerplugin.qtplugin
+data=\epoc32\data\z\resource\qt\plugins\commandhandler\caapphandlerplugin.xml       resource\qt\plugins\commandhandler\caapphandlerplugin.xml
+
+file=ABI_DIR\BUILD_DIR\catapphandlerplugin.dll     SHARED_LIB_DIR\catapphandlerplugin.dll
+data=\epoc32\data\z\resource\qt\plugins\commandhandler\catapphandlerplugin.qtplugin  resource\qt\plugins\commandhandler\catapphandlerplugin.qtplugin
+data=\epoc32\data\z\resource\qt\plugins\commandhandler\catapphandlerplugin.xml       resource\qt\plugins\commandhandler\catapphandlerplugin.xml
+
+file=ABI_DIR\BUILD_DIR\caurlhandlerplugin.dll     SHARED_LIB_DIR\caurlhandlerplugin.dll
+data=\epoc32\data\z\resource\qt\plugins\commandhandler\caurlhandlerplugin.qtplugin  resource\qt\plugins\commandhandler\caurlhandlerplugin.qtplugin
+data=\epoc32\data\z\resource\qt\plugins\commandhandler\caurlhandlerplugin.xml       resource\qt\plugins\commandhandler\caurlhandlerplugin.xml
+
+file=ABI_DIR\BUILD_DIR\camificon.dll     SHARED_LIB_DIR\camificon.dll
+data=\epoc32\data\z\resource\qt\plugins\iconengines\camificon.qtplugin  resource\qt\plugins\iconengines\camificon.qtplugin
+
+file=ABI_DIR\BUILD_DIR\caclient.dll     SHARED_LIB_DIR\caclient.dll
+file=ABI_DIR\BUILD_DIR\cautils.dll     SHARED_LIB_DIR\cautils.dll
+file=ABI_DIR\BUILD_DIR\camenu.dll     SHARED_LIB_DIR\camenu.dll
+file=ABI_DIR\BUILD_DIR\camenuserver.exe     PROGRAMS_DIR\camenuserver.exe
+file=ABI_DIR\BUILD_DIR\castorage.dll     SHARED_LIB_DIR\castorage.dll
+file=ABI_DIR\BUILD_DIR\MenuInterface.dll     SHARED_LIB_DIR\MenuInterface.dll
+file=ABI_DIR\BUILD_DIR\casrvmanager.dll     SHARED_LIB_DIR\casrvmanager.dll
+file=ABI_DIR\BUILD_DIR\casoftwareregistry.dll     SHARED_LIB_DIR\casoftwareregistry.dll
+ECOM_PLUGIN( casatmonitor.dll, casatmonitor.rsc )
+ECOM_PLUGIN( caappscanner.dll, caappscanner.rsc )
+ECOM_PLUGIN( cawidgetscanner.dll, cawidgetscanner.rsc )
+ECOM_PLUGIN( calocalizerscanner.dll, calocalizerscanner.rsc )
+ECOM_PLUGIN( causifscanner.dll, causifscanner.rsc )
+
+data=ZPRIVATE\20022F90\castorage.db          private\20022F90\castorage.db
+data=ZPRIVATE\20022F90\backup_registration.xml          private\20022F90\backup_registration.xml
+
+// ----  hswidgetmodel --------------------------------------------
+file=ABI_DIR\BUILD_DIR\hswidgetmodel.dll    SHARED_LIB_DIR\hswidgetmodel.dll
+
+// ---- homescreen_information_api --------------------------------------------
+data=\epoc32\data\c\resource\qt\crml\homescreeninformation.qcrml   resource\qt\crml\homescreeninformation.qcrml
+#endif // __HOMESCREENSRV_CORE_IBY__

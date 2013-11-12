@@ -1,0 +1,56 @@
+// Copyright (c) 2005-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// t_RuleBasedApp.mmp
+// 
+//
+
+// using relative paths for sourcepath and user includes
+CAPABILITY NONE
+epocstacksize 		0x5000
+
+TARGETPATH		/sys/bin
+
+
+TARGET			trulebasedapp3.exe
+TARGETTYPE		exe
+
+
+UID           		0x100039CE 0X1020D6FE
+
+VENDORID 		0x70000001
+
+SOURCEPATH    		.
+
+SOURCE        		tRuleBasedApp3.cpp
+
+
+USERINCLUDE   		.
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+//SYSTEMINCLUDE 		/epoc32/include/techview
+
+LIBRARY       		euser.lib apparc.lib cone.lib eikcore.lib bitgdi.lib fntstr.lib fbscli.lib gdi.lib
+
+			
+START RESOURCE      	tRuleBasedApp3.rss
+HEADER
+TARGETPATH		/apparctestregfiles
+END
+
+START RESOURCE		tRuleBasedApp3_reg.rss
+TARGETPATH		/apparctestregfiles
+END
+
+SMPSAFE

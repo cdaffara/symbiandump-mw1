@@ -1,0 +1,38 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-ApparcTest-T_WindowChaining-0001
+//! @SYMDEF 			DEF053778
+//! @SYMTestCaseDesc 		Window Chaining
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions		1. Create a child ui application (t_winchainlaunch.exe)
+//!				2. From t_winchainlaunch.exe, connect a child application (t_winchainchild.exe) with a specific ordinal
+//!				3. Send message to child application from launching application
+//!				4. When message is received by child application, check they share the same ordinal
+//!				5. Child application reports back to launch application the result of the test
+//!				6. Launch application quits with the test result as an exit code
+//! @SYMTestExpectedResults	Window group ordinals should be the same. 
+//!				t_winchainlaunch.exe should exit with KTWindowChainingTestPassed.
+
+START_TESTCASE API-APPFWK-ApparcTest-T_WindowChaining-0001
+
+PRINT Run T_WindowChaining Apparc test 
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_WindowChaining
+
+END_TESTCASE API-APPFWK-ApparcTest-T_WindowChaining-0001

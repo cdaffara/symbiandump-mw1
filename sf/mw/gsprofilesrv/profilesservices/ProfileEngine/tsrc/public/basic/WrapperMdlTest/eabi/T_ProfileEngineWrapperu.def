@@ -1,0 +1,25 @@
+EXPORTS
+	_Z16CreateTestSuiteLv @ 1 NONAME
+	_ZTI15MT_MProEngTones @ 2 NONAME ; #<TI>#
+	_ZTI16CMyDebugObserver @ 3 NONAME ; #<TI>#
+	_ZTI16MT_MProEngEngine @ 4 NONAME ; #<TI>#
+	_ZTI16MT_ProEngFactory @ 5 NONAME ; #<TI>#
+	_ZTI17MT_MProEngProfile @ 6 NONAME ; #<TI>#
+	_ZTI20MT_CSchedulerUtility @ 7 NONAME ; #<TI>#
+	_ZTI21MT_MProEngProfileName @ 8 NONAME ; #<TI>#
+	_ZTI22MT_MProEngToneSettings @ 9 NONAME ; #<TI>#
+	_ZTI23MT_MProEngNotifyHandler @ 10 NONAME ; #<TI>#
+	_ZTI25MT_MProEngAlertToneSeeker @ 11 NONAME ; #<TI>#
+	_ZTI26MT_MProEngProfileNameArray @ 12 NONAME ; #<TI>#
+	_ZTV15MT_MProEngTones @ 13 NONAME ; #<VT>#
+	_ZTV16CMyDebugObserver @ 14 NONAME ; #<VT>#
+	_ZTV16MT_MProEngEngine @ 15 NONAME ; #<VT>#
+	_ZTV16MT_ProEngFactory @ 16 NONAME ; #<VT>#
+	_ZTV17MT_MProEngProfile @ 17 NONAME ; #<VT>#
+	_ZTV20MT_CSchedulerUtility @ 18 NONAME ; #<VT>#
+	_ZTV21MT_MProEngProfileName @ 19 NONAME ; #<VT>#
+	_ZTV22MT_MProEngToneSettings @ 20 NONAME ; #<VT>#
+	_ZTV23MT_MProEngNotifyHandler @ 21 NONAME ; #<VT>#
+	_ZTV25MT_MProEngAlertToneSeeker @ 22 NONAME ; #<VT>#
+	_ZTV26MT_MProEngProfileNameArray @ 23 NONAME ; #<VT>#
+

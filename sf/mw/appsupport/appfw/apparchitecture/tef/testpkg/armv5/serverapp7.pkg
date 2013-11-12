@@ -1,0 +1,32 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+;Languages
+&EN
+
+;Header
+; SA = Symbian Application
+; RU = Rom Upgrade
+#{"serverapp7"}, (0x10004c54), 1, 0, 0, TYPE=SA
+
+%{"Nokia India Pvt Ltd"}
+:"Nokia India Pvt Ltd"
+
+"\epoc32\release\armv5\udeb\serverapp7.exe"-"!:\sys\bin\serverapp7.exe"
+"\epoc32\data\z\apparctestregfiles\serverapp7_reg.rsc"-"!:\private\10003a3f\import\apps\serverapp7_reg.rsc"
+
+

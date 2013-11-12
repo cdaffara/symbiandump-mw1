@@ -1,0 +1,9 @@
+component app-services_coreappstest
+source	\sf\mw\appsupport\commonappservices\coreappstest
+binary	\sf\mw\appsupport\commonappservices\coreappstest\Group	all
+
+notes_source	\component_defs\release.src
+
+
+ipr T 
+

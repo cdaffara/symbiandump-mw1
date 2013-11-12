@@ -1,0 +1,38 @@
+EXPORTS
+	?taskListChanged@TsTaskMonitor@@IAEXXZ @ 1 NONAME ; void TsTaskMonitor::taskListChanged(void)
+	?close@TsTask@@QAEXXZ @ 2 NONAME ; void TsTask::close(void)
+	?SetVisibility@CTsScreenshotClient@@QAEHHW4Visibility@@@Z @ 3 NONAME ; int CTsScreenshotClient::SetVisibility(int, enum Visibility)
+	?tr@TsTaskMonitor@@SA?AVQString@@PBD0@Z @ 4 NONAME ; class QString TsTaskMonitor::tr(char const *, char const *)
+	?oldOffset@TsTaskChangeInfo@@QBEHXZ @ 5 NONAME ; int TsTaskChangeInfo::oldOffset(void) const
+	?name@TsTask@@QBE?AVQString@@XZ @ 6 NONAME ; class QString TsTask::name(void) const
+	?isClosable@TsTask@@QBE_NXZ @ 7 NONAME ; bool TsTask::isClosable(void) const
+	?changeType@TsTaskChangeInfo@@QBE?AW4ChangeType@1@XZ @ 8 NONAME ; enum TsTaskChangeInfo::ChangeType TsTaskChangeInfo::changeType(void) const
+	??0TsTaskMonitor@@QAE@PAVQObject@@@Z @ 9 NONAME ; TsTaskMonitor::TsTaskMonitor(class QObject *)
+	?qt_metacall@TsTaskMonitor@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 10 NONAME ; int TsTaskMonitor::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?trUtf8@TsTaskMonitor@@SA?AVQString@@PBD0@Z @ 11 NONAME ; class QString TsTaskMonitor::trUtf8(char const *, char const *)
+	?staticMetaObject@TsTaskMonitor@@2UQMetaObject@@B @ 12 NONAME ; struct QMetaObject const TsTaskMonitor::staticMetaObject
+	?RegisterScreenshot@CTsScreenshotClient@@QAEHPAVCFbsBitmap@@HW4UpdatePriority@@@Z @ 13 NONAME ; int CTsScreenshotClient::RegisterScreenshot(class CFbsBitmap *, int, enum UpdatePriority)
+	?UnregisterScreenshot@CTsScreenshotClient@@QAEHH@Z @ 14 NONAME ; int CTsScreenshotClient::UnregisterScreenshot(int)
+	?changeList@TsTaskMonitor@@QAE?AV?$QList@U?$QPair@VTsTaskChangeInfo@@V?$QSharedPointer@VTsTask@@@@@@@@_N@Z @ 15 NONAME ; class QList<struct QPair<class TsTaskChangeInfo, class QSharedPointer<class TsTask> > > TsTaskMonitor::changeList(bool)
+	??1CTsScreenshotClient@@UAE@XZ @ 16 NONAME ; CTsScreenshotClient::~CTsScreenshotClient(void)
+	?NewLC@CTsScreenshotClient@@SAPAV1@XZ @ 17 NONAME ; class CTsScreenshotClient * CTsScreenshotClient::NewLC(void)
+	??_ETsTaskMonitor@@UAE@I@Z @ 18 NONAME ; TsTaskMonitor::~TsTaskMonitor(unsigned int)
+	?getStaticMetaObject@TsTaskMonitor@@SAABUQMetaObject@@XZ @ 19 NONAME ; struct QMetaObject const & TsTaskMonitor::getStaticMetaObject(void)
+	?metaObject@TsTaskMonitor@@UBEPBUQMetaObject@@XZ @ 20 NONAME ; struct QMetaObject const * TsTaskMonitor::metaObject(void) const
+	?registerScreenshot@TsTaskSettings@@QAE_NABVQPixmap@@@Z @ 21 NONAME ; bool TsTaskSettings::registerScreenshot(class QPixmap const &)
+	?NewL@CTsScreenshotClient@@SAPAV1@XZ @ 22 NONAME ; class CTsScreenshotClient * CTsScreenshotClient::NewL(void)
+	??1TsTaskSettings@@QAE@XZ @ 23 NONAME ; TsTaskSettings::~TsTaskSettings(void)
+	?qt_metacast@TsTaskMonitor@@UAEPAXPBD@Z @ 24 NONAME ; void * TsTaskMonitor::qt_metacast(char const *)
+	?open@TsTask@@QAEXXZ @ 25 NONAME ; void TsTask::open(void)
+	?trUtf8@TsTaskMonitor@@SA?AVQString@@PBD0H@Z @ 26 NONAME ; class QString TsTaskMonitor::trUtf8(char const *, char const *, int)
+	??1TsTaskMonitor@@UAE@XZ @ 27 NONAME ; TsTaskMonitor::~TsTaskMonitor(void)
+	??0TsTaskChangeInfo@@QAE@HH@Z @ 28 NONAME ; TsTaskChangeInfo::TsTaskChangeInfo(int, int)
+	??0TsTaskSettings@@QAE@XZ @ 29 NONAME ; TsTaskSettings::TsTaskSettings(void)
+	?screenshot@TsTask@@QBE?AVQPixmap@@XZ @ 30 NONAME ; class QPixmap TsTask::screenshot(void) const
+	?newOffset@TsTaskChangeInfo@@QBEHXZ @ 31 NONAME ; int TsTaskChangeInfo::newOffset(void) const
+	?unregisterScreenshot@TsTaskSettings@@QAE_NXZ @ 32 NONAME ; bool TsTaskSettings::unregisterScreenshot(void)
+	?isActive@TsTask@@QBE_NXZ @ 33 NONAME ; bool TsTask::isActive(void) const
+	??1TsTask@@QAE@XZ @ 34 NONAME ; TsTask::~TsTask(void)
+	?setVisibility@TsTaskSettings@@QAE_N_N@Z @ 35 NONAME ; bool TsTaskSettings::setVisibility(bool)
+	?tr@TsTaskMonitor@@SA?AVQString@@PBD0H@Z @ 36 NONAME ; class QString TsTaskMonitor::tr(char const *, char const *, int)
+

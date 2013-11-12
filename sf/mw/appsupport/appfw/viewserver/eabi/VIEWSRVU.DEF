@@ -1,0 +1,50 @@
+EXPORTS
+	_ZN10CVwsServer4NewLER14MVwsAppStarter @ 1 NONAME
+	_ZN10CVwsServerD0Ev @ 2 NONAME
+	_ZN10CVwsServerD1Ev @ 3 NONAME
+	_ZN10CVwsServerD2Ev @ 4 NONAME
+	_ZTI10CVwsServer @ 5 NONAME ; #<TI>#
+	_ZTI11CVwsSession @ 6 NONAME ; #<TI>#
+	_ZTI14CVwsEventQueue @ 7 NONAME ; #<TI>#
+	_ZTI14CVwsEventTimer @ 8 NONAME ; #<TI>#
+	_ZTI15CVwsServerEvent @ 9 NONAME ; #<TI>#
+	_ZTI16CVwsSessionEvent @ 10 NONAME ; #<TI>#
+	_ZTI17CVwsClientMessage @ 11 NONAME ; #<TI>#
+	_ZTI17CVwsThreadWatcher @ 12 NONAME ; #<TI>#
+	_ZTI17CVwsWServRedrawer @ 13 NONAME ; #<TI>#
+	_ZTI21CVwsWServEventHandler @ 14 NONAME ; #<TI>#
+	_ZTI23CVwsWServSessionHandler @ 15 NONAME ; #<TI>#
+	_ZTI24CVwsServerEvent_Activate @ 16 NONAME ; #<TI>#
+	_ZTI24CVwsServerEvent_AppStart @ 17 NONAME ; #<TI>#
+	_ZTI27CVwsSessionEvent_Activation @ 18 NONAME ; #<TI>#
+	_ZTI29CVwsSessionEvent_Deactivation @ 19 NONAME ; #<TI>#
+	_ZTI35CVwsServerEvent_ScreenDeviceChanged @ 20 NONAME ; #<TI>#
+	_ZTI36CVwsServerEvent_DeactivateActiveView @ 21 NONAME ; #<TI>#
+	_ZTI39CVwsSessionEvent_ActivationNotification @ 22 NONAME ; #<TI>#
+	_ZTI41CVwsSessionEvent_DeactivationNotification @ 23 NONAME ; #<TI>#
+	_ZTI47CVwsSessionEvent_ScreenDeviceChangeNotification @ 24 NONAME ; #<TI>#
+	_ZTI9CVwsEvent @ 25 NONAME ; #<TI>#
+	_ZTV10CVwsServer @ 26 NONAME ; #<VT>#
+	_ZTV11CVwsSession @ 27 NONAME ; #<VT>#
+	_ZTV14CVwsEventQueue @ 28 NONAME ; #<VT>#
+	_ZTV14CVwsEventTimer @ 29 NONAME ; #<VT>#
+	_ZTV15CVwsServerEvent @ 30 NONAME ; #<VT>#
+	_ZTV16CVwsSessionEvent @ 31 NONAME ; #<VT>#
+	_ZTV17CVwsClientMessage @ 32 NONAME ; #<VT>#
+	_ZTV17CVwsThreadWatcher @ 33 NONAME ; #<VT>#
+	_ZTV17CVwsWServRedrawer @ 34 NONAME ; #<VT>#
+	_ZTV21CVwsWServEventHandler @ 35 NONAME ; #<VT>#
+	_ZTV23CVwsWServSessionHandler @ 36 NONAME ; #<VT>#
+	_ZTV24CVwsServerEvent_Activate @ 37 NONAME ; #<VT>#
+	_ZTV24CVwsServerEvent_AppStart @ 38 NONAME ; #<VT>#
+	_ZTV27CVwsSessionEvent_Activation @ 39 NONAME ; #<VT>#
+	_ZTV29CVwsSessionEvent_Deactivation @ 40 NONAME ; #<VT>#
+	_ZTV35CVwsServerEvent_ScreenDeviceChanged @ 41 NONAME ; #<VT>#
+	_ZTV36CVwsServerEvent_DeactivateActiveView @ 42 NONAME ; #<VT>#
+	_ZTV39CVwsSessionEvent_ActivationNotification @ 43 NONAME ; #<VT>#
+	_ZTV41CVwsSessionEvent_DeactivationNotification @ 44 NONAME ; #<VT>#
+	_ZTV47CVwsSessionEvent_ScreenDeviceChangeNotification @ 45 NONAME ; #<VT>#
+	_ZTV9CVwsEvent @ 46 NONAME ; #<VT>#
+	KVwsBoostAppPriorityBeforePanic @ 47 NONAME DATA 4
+	KTimeoutValueForPreemptedProcess @ 48 NONAME DATA 4
+

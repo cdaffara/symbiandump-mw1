@@ -1,0 +1,58 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: caappscanner.mmp
+*
+*/
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+TARGET causifscanner.dll
+TARGETTYPE PLUGIN
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID 0x10009D8D 0x2002870A
+SECUREID 0x2002870A
+CAPABILITY CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../src
+SOURCE          proxy.cpp
+SOURCE          causifscanner.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+USERINCLUDE     ../../casrvmgr/inc
+USERINCLUDE     ../../../castorage/inc
+USERINCLUDE     ../../../cautils/inc
+USERINCLUDE     ../../../srvinc
+
+MW_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../data
+START RESOURCE  causifscanner.rss
+    LANG    sc
+    TARGET  causifscanner.rsc
+END
+
+LIBRARY     euser.lib
+LIBRARY     ecom.lib
+LIBRARY     sif.lib
+LIBRARY     scrclient.lib
+LIBRARY     cautils.lib
+LIBRARY     camenu.lib
+LIBRARY     bafl.lib
+LIBRARY     efsrv.lib
+
+LIBRARY		PlatformEnv.lib
+SMPSAFE

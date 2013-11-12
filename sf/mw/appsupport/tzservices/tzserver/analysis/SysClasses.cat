@@ -1,0 +1,94 @@
+
+(object Petal
+    version    	43
+    _written   	"Rose 6.5.9232.10"
+    charSet    	0)
+
+(object Class_Category "SysClasses"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"410F4C130182"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "CPolicyServer"
+	    quid       	"409F888A0154")
+	(object Class "CSession2"
+	    quid       	"409F8948005D")
+	(object Class "Kern"
+	    quid       	"407FBD22006E"
+	    operations 	(list Operations
+		(object Operation "HomeTimeOffset"
+		    quid       	"407FBE1301F4"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "Plat"
+	    quid       	"407FBD1B02A0"
+	    operations 	(list Operations
+		(object Operation "SystemTime"
+		    quid       	"407FBDF4035C"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "RSessionBase"
+	    quid       	"40A1D3F1009C")
+	(object Class "TLocale"
+	    quid       	"409F828F0066")
+	(object Class "TTime"
+	    quid       	"407FBECA00CB"
+	    operations 	(list Operations
+		(object Operation "Time"
+		    quid       	"407FBED502DF"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "UniversalTime"
+		    quid       	"407FBEDF033C"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "User"
+	    quid       	"407FBD350252")
+	(object Class "TTimeDate"
+	    quid       	"40D811FA0207")
+	(object Class "TDesC8"
+	    quid       	"40E171210394")
+	(object Class "Exec"
+	    quid       	"407FBD140177"
+	    operations 	(list Operations
+		(object Operation "TimeNow"
+		    quid       	"407FBD9A0168"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "SetHomeTime"
+		    quid       	"407FBE4A02BF"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "ExecHandler"
+	    quid       	"407FBCFE035C"
+	    operations 	(list Operations
+		(object Operation "TimeNow"
+		    quid       	"407FBD5D03AA"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "SetHomeTime"
+		    quid       	"407FBD650204"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CBase"
+	    quid       	"40D7E5240359")
+	(object Class "CActive"
+	    quid       	"409F86F50045")
+	(object Class "HBufC8"
+	    quid       	"410F4D00005C")
+	(object Class "WorldServer"
+	    quid       	"4121D7CD016B")
+	(object Class "RECOMSession"
+	    quid       	"4121DF0D01E1")
+	(object Class "CTimer"
+	    quid       	"417E611F02A0"))
+    logical_presentations 	(list unit_reference_list))

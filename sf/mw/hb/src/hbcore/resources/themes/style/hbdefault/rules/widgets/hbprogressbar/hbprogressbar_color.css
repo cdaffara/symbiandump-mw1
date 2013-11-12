@@ -1,0 +1,9 @@
+/*color of text item depends on parent, using default color for text items*/
+HbProgressBar::min-text{
+	color: var(qtc_default_main_pane_normal);
+}
+
+HbProgressBar::max-text{
+	color: var(qtc_default_main_pane_normal);
+}
+

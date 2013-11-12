@@ -1,0 +1,137 @@
+HTML TO RICHTEXT CONVERTER RELEASE NOTES
+======================== 
+Release: 019
+
+Release by: Shazia Murtaza
+Date: 23/04/2009
+-------------------
+Fix for  PDEF138471 	Raptor issues in app support
+
+Release: 018
+
+Release by: Waiman Tang
+Date: 16/03/2009
+-------------------
+Fix for  PDEF134629 	ONB : Fix for some leavescan errors in defect_misc build
+
+
+Release: 017
+Release by: Waiman Tang
+Date: 04/02/2009
+-------------------
+Fix for  DEF133936 	[System Build]: Case inconsistencies in bld.inf in app-services_chtmltocrtconv
+
+-------------------
+Release: 016
+Release by: Shazia Murtaza
+Date: 31/12/2008
+-------------------
+Fix for  PDEF132560: testhtmltocrtconvertersuite harness failing 
+
+-------------------
+Release: 015
+Release by: Shazia Murtaza
+Date: 30/12/2008
+-------------------
+Fix for PDEF132559: Deletion of integration test files  
+ 
+-------------------
+Release: 014
+Release by: Raveendra Mullaguri
+Date: 01/12/2008
+-------------------
+Fix for DEF130876: IPR T needed in mrp file for app-services\chtmltocrtconv\test 
+
+-------------------
+Release: 013
+Release by: Prabodh Depala
+Date: 20/05/2008
+-------------------
+Fix for DEF122691 chinese.html and japan.html contains external copyright
+
+-------------------
+Release: 012
+Release by: Michael Coffey
+Date: 15/05/2008
+-------------------
+Fix for DEF122305 Deletion of test files
+
+-------------------
+Release: 011
+Release by: Shazia Murtaza
+Date: 13/03/2008
+-------------------
+Fix for PDEF119321 Messaging Invitation: Å Ä Ö replaced with question mark when reply an invitation
+
+-------------------
+Release: 010
+Release by: Shazia Murtaza
+Date: 10/03/2008
+-------------------
+Fix for PDEF119036 Email - replying with rich text - lots of &nbsp; gets inserted into the original text
+
+-------------------
+Release: 009
+Release by: Konstantin Zheludev
+Date: 28/09/2006
+-------------------
+Fix for DEF092658  Leave scan errors found in PIM component
+
+-------------------
+Release: 008
+Release by: Ravishankar Lakshminarayanan
+Date: 25/01/2005
+-------------------
+Fix for DEF053940  TEST HARNESS: Buffertest fails on H2 board
+
+-------------------
+Release: 007
+Release by: Steve Childerley
+Date: 11/11/2004
+-------------------
+Fix for DEF051449  chtmltocrtconverter.cnv should be chtmltocrtconverter.dll in @SYMPurpose
+
+-------------------
+Release: 006
+Release by: Pat Nicholls
+Date: 26/04/2004
+-------------------
+Fix for INC043810  app-services\chtmltocrtconv\tsrc\buffertest.cpp arm4 udeb fails in Lubbock
+Increased stack size for buffertest.mmp 
+
+-------------------
+Release: 005
+Release by: NicholaT
+Date: 26/11/2003
+-------------------
+  - fix for defect DEF040449 "Missing copyright statements in files"
+-------------------
+
+Release: 004 - By Graeme Riddick 29/09/03
+Issue Id:  DEF037964  
+Title:  ABLD ROMFILE ARM4 command fails for cedar  
+Generic add of ROMFILE to each project makefile
+
+-------------------
+Release: 003
+Release by: NicholaT
+Date: 27/07/2001
+-------------------
+  - fix for defect TUR-4Z2J5J "the full path to the converter target file needs to be present"
+-------------------
+Release: 002
+Release by: NicholaT
+Date: 20/07/2001
+-------------------
+  - fix for defect TUR-4YKJ6Q "chtmltocrtconverter test files need to be copied to c:\"
+  - fix for defect TUR-4YQHWS "LocateAndOpenResourceFileL using wrong path to resource file"
+-------------------
+Release: 001
+Release by: NicholaT
+Date: 04/07/2001
+-------------------
+* New component
+
+* New API's
+  - See GT109 API documentation.
+  - Takes an HTML file and converts this to an epoc rich text store in a file.

@@ -1,0 +1,1 @@
+atsinterface –testmodule testscripter –config E:\Rfs\ui_RfsTestModule.cfg

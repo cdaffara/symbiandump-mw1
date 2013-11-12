@@ -1,0 +1,36 @@
+<script>
+    <if>
+        <contextUpdated>
+            <contextRef source='TestSourceClient' type='SendSourceCommand' value='A'/>
+        </contextUpdated>
+        <actions>
+        	<!-- UID of EUnit executing MT_CFClient dll (20000fb1) -->
+            <sourceCommand uid='0x20000fb1'>
+                <cmd type='activate'>
+                    <cmdParam mode='clean'>
+                        <modifiers value='really'/>
+                    </cmdParam>
+                    <cmdParam override='yes'/>
+                </cmd>
+                <cmdInfo type='activate'>
+                    <cmdParam text='activate from really clean state'/>
+                </cmdInfo>
+            </sourceCommand>
+        </actions>
+    </if>
+    <elseIf>
+        <contextUpdated>
+            <contextRef source='TestSourceClient' type='SendSourceCommand' value='B'/>
+        </contextUpdated>
+        <actions>
+            <!-- UID of EUnit executing MT_CFClient dll (20000fb1) -->
+            <sourceCommand uid='0x20000fb1'>
+                <cmd type='deactivate'>
+                    <cmdParam mode='full'>
+                        <modifiers value='noException'/>
+                    </cmdParam>
+                </cmd>
+            </sourceCommand>
+        </actions>
+    </elseIf>
+</script>

@@ -1,0 +1,58 @@
+// Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __AFSS_TEST_IBY__
+#define __AFSS_TEST_IBY__
+
+#include <appfwk_test_framework.iby>
+
+#include <apparcTest.iby>
+
+#include <coneTest.iby>
+
+#include <ConarcTest.iby>
+
+#include <EMimeTest.iby>
+
+#include <ViewSrvTest.iby>
+
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+#include <sysstarttest.iby>
+#include <sysstarttest_tsysstart2.iby>
+
+#include <amastarttest.iby>
+#include <aplptest.iby>
+#include <shmatest.iby>
+#include <ssmatest.iby>
+#include <sspluginstest.iby>
+#include <ssrefpluginstest.iby>
+
+#else
+
+#include <sysstarttest.iby>
+#include <sysstarttest_apstart.iby>
+#include <sysstarttest_amastarter.iby>
+#include <sysstarttest_startupproperties.iby>
+#include <sysstarttest_restartsys.iby>
+#include <sysstarttest_dscstore.iby>
+#include <sysstarttest_sysmon.iby>
+#include <sysstarttest_tsysstart2.iby>
+#include <sysstarttest_startsafe.iby>
+
+#endif // SYMBIAN_SYSTEM_STATE_MANAGEMENT
+
+
+
+#endif // __AFSS_TEST_IBY__

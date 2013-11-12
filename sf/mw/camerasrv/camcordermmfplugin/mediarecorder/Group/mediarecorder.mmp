@@ -1,0 +1,129 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*    The media recorder DLL project definition file
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+NOEXPORTLIBRARY
+
+TARGET          CamcMediaRecorder.dll
+TARGETTYPE      dll
+
+UID             0x1000008d 0x101F8507   //KSharedLibraryUid
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_GENERAL_DLL
+VERSION         10.1
+
+SOURCEPATH      ../Src
+USERINCLUDE     ../Inc
+USERINCLUDE     ../traces      // OST traces
+
+// Default system include paths for application layer modules.
+MW_LAYER_SYSTEMINCLUDE
+
+
+// Testing options
+
+// read input frames from a file (epoc32/wins/c/testin.raw)
+//MACRO           VIDEO_FILE_INPUT
+//#define         VIDEO_FILE_INPUT
+
+// Write captured frames to a file (epoc32/wins/c/vidrec_out.bin)
+//MACRO           VIDEO_FILE_OUTPUT
+//#define         VIDEO_FILE_OUTPUT
+
+// Write video bitstream to a file (epoc32/wins/c/vidrec_out.bin)
+//MACRO           VIDEO_BS_FILE_OUTPUT
+//#define         VIDEO_BS_FILE_OUTPUT
+
+// NOTE: Only one of the above two options can be set on at a time..
+
+// Write audio (bitstream) to a file (epoc32/wins/c/audiorec_out.bin)
+//MACRO           AUDIO_FILE_OUTPUT
+//#define         AUDIO_FILE_OUTPUT
+
+
+// Symbian OS libraries
+LIBRARY     euser.lib 
+LIBRARY     ecam.lib 
+LIBRARY     ecom.lib
+LIBRARY     mmfserverbaseclasses.lib
+LIBRARY     mmfcontrollerframework.lib
+LIBRARY     mmfdevsound.lib 
+LIBRARY     bafl.lib
+LIBRARY     devvideo.lib
+LIBRARY     SpeechEncoderConfig.lib
+LIBRARY     imagingconfigmanager.lib
+LIBRARY     AudioInputRouting.lib
+
+
+#if defined VIDEO_FILE_INPUT || defined VIDEO_FILE_OUTPUT || defined VIDEO_BS_FILE_OUTPUT || defined AUDIO_FILE_OUTPUT
+LIBRARY     efsrv.lib 
+#endif
+
+// The media recorder components
+SOURCE CCMRMediaRecorderImp.cpp
+SOURCE CCMRMDFVideoRecorder.cpp
+SOURCE CCMRFifo.cpp
+
+#ifndef VIDEO_FILE_INPUT
+SOURCE CCMRVideoCameraSource.cpp
+#else
+SOURCE CCMRVideoFileSource.cpp
+#endif
+
+SOURCE CCMRFrameBuffer.cpp
+SOURCE CCMRAudioRecorder.cpp
+SOURCE CCMRAudioCodecs.cpp
+#ifdef __MPEG4_AAC_ENCODING
+SOURCE CCMRAacCodecData.cpp
+#else
+SOURCE CCMRAacCodecDataStub.cpp
+#endif
+// AMR audio classes
+SOURCE CCMRAMRNBCodecData.cpp
+SOURCE CCMRAudioInput.cpp
+SOURCE CCMRAudioInputSW.cpp
+SOURCE CCMRAudioInputHW.cpp
+
+SOURCE CCMRActiveOutput.cpp
+
+SOURCE CCMRSubThread.cpp
+SOURCE CCMRAudioThreadProxy.cpp
+SOURCE CCMRAudioThreadProxyServer.cpp
+SOURCE CCMRAudioThreadProxySession.cpp
+
+SOURCE CCMRVideoRecorderClient.cpp
+SOURCE CCMRVideoThreadProxy.cpp
+SOURCE CCMRVideoThreadProxyServer.cpp
+SOURCE CCMRVideoThreadProxySession.cpp
+
+#ifdef __MPEG4_VIDEO_ENCODING
+SOURCE CCMRVideoCodecsMPEG4.cpp
+#else
+SOURCE CCMRVideoCodecsBasic.cpp
+#endif
+
+SOURCE CCMRVideoCodecDataH263.cpp
+SOURCE CCMRVideoCodecDataMPEG4.cpp
+SOURCE CCMRVideoCodecDataH264AVC.cpp
+
+SOURCE CCMRPerfMonitor.cpp
+SOURCE CCMRConfigManager.cpp
+// End of File
+

@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2008-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  description
+*
+*/
+
+
+#include <ecom/RegistryInfo.rh>
+#include <CFContextSourcePlugInConst.hrh>
+
+#include "contextsource_v1.hrh"
+
+RESOURCE REGISTRY_INFO theInfo
+    {
+    dll_uid = KContextSource_V1DllUid;
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = KContextSourcePluginInterfaceUid;
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = KContextSource_V1ImplUid;
+                    version_no = 1;
+                    display_name = "";
+                    default_data = "";
+                    opaque_data = "";
+                    }
+                };
+            }
+        };
+    }

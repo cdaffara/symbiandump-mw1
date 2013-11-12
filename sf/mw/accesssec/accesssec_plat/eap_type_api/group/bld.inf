@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                EAP Type API
+*
+*/
+
+/*
+* %version: tr1cfwln#18 %
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/EapTraceSymbian.h     MW_LAYER_PLATFORM_EXPORT_PATH(EapTraceSymbian.h)
+../inc/EapExpandedType.h     MW_LAYER_PLATFORM_EXPORT_PATH(EapExpandedType.h)
+../inc/EapTypeDefinitions.h     MW_LAYER_PLATFORM_EXPORT_PATH(EapTypeDefinitions.h)
+../inc/EapType.h     MW_LAYER_PLATFORM_EXPORT_PATH(EapType.h)
+../inc/EapType.inl     MW_LAYER_PLATFORM_EXPORT_PATH(EapType.inl)
+../inc/EapSettings.h     MW_LAYER_PLATFORM_EXPORT_PATH(EapSettings.h)
+../inc/EapTypeInfo.h     MW_LAYER_PLATFORM_EXPORT_PATH(EapTypeInfo.h)
+../inc/EapGeneralSettings.inl     MW_LAYER_PLATFORM_EXPORT_PATH(EapGeneralSettings.inl)
+../inc/EapGeneralSettings.h     MW_LAYER_PLATFORM_EXPORT_PATH(EapGeneralSettings.h)
+../inc/AbsPacStoreInitializer.h     MW_LAYER_PLATFORM_EXPORT_PATH(AbsPacStoreInitializer.h)
+
+// end

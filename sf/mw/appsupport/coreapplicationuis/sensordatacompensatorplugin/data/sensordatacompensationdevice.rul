@@ -1,0 +1,66 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <!-- Flip is part of Device domain -->
+    <!-- Check if flip is Open -->
+    <if>
+       <or>
+            <and>
+                <contextChanged>
+                    <contextRef source='Device' type='Flip.Status'/>
+                </contextChanged>
+                <equals>
+                    <contextRef source='Device' type='Flip.Status'/>
+                    <string>Open</string>
+                </equals>
+            </and>
+            <and>
+                <contextUpdated>
+                    <contextRef source='Sensor' type='Event.Compensation'/>
+                </contextUpdated>
+                <equals>
+                    <contextRef source='Device' type='Flip.Status'/>
+                    <string>Open</string>
+                </equals>
+            </and>
+        </or>
+        <actions>
+            <SensorDataCompensation
+             Type='Device.Flip'
+             AxisDataX='0'
+             AxisDataY='30'
+             AxisDataZ='0'
+             />
+        </actions>
+    </if> 
+    <!-- Check if flip is Closed -->
+    <elseIf>
+       <or>
+            <and>
+                <contextChanged>
+                    <contextRef source='Device' type='Flip.Status'/>
+                </contextChanged>
+                <equals>
+                    <contextRef source='Device' type='Flip.Status'/>
+                    <string>Closed</string>
+                </equals>
+            </and>
+            <and>
+                <contextUpdated>
+                    <contextRef source='Sensor' type='Event.Compensation'/>
+                </contextUpdated>
+                <equals>
+                    <contextRef source='Device' type='Flip.Status'/>
+                    <string>Closed</string>
+                </equals>
+            </and>
+        </or>
+        <actions>
+            <SensorDataCompensation
+             Type='Device.Flip'
+             AxisDataX='0'
+             AxisDataY='0'
+             AxisDataZ='0'
+             />
+        </actions>
+    </elseIf>
+</script>

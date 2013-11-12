@@ -1,0 +1,25 @@
+EXPORTS
+	??0RANTestClient@@QAE@XZ @ 1 NONAME ; RANTestClient::RANTestClient(void)
+	?AcknowledgeAlarm@RANTestClient@@QAEXXZ @ 2 NONAME ; void RANTestClient::AcknowledgeAlarm(void)
+	?AcknowledgeAlarm@RANTestClient@@QBEHABH@Z @ 3 NONAME ; int RANTestClient::AcknowledgeAlarm(int const &) const
+	?AcknowledgeAll@RANTestClient@@QBEHXZ @ 4 NONAME ; int RANTestClient::AcknowledgeAll(void) const
+	?CancelNotifications@RANTestClient@@QAEHXZ @ 5 NONAME ; int RANTestClient::CancelNotifications(void)
+	?Connect@RANTestClient@@QAEHXZ @ 6 NONAME ; int RANTestClient::Connect(void)
+	?GetAttachment@RANTestClient@@QAEXAAVTDes8@@@Z @ 7 NONAME ; void RANTestClient::GetAttachment(class TDes8 &)
+	?IsNotifying@RANTestClient@@QAEHXZ @ 8 NONAME ; int RANTestClient::IsNotifying(void)
+	?NotifyOnAlarm@RANTestClient@@QAEHAAVTASShdAlarm@@AAV?$TBuf@$0BAA@@@AAVTDes8@@AAVTRequestStatus@@@Z @ 9 NONAME ; int RANTestClient::NotifyOnAlarm(class TASShdAlarm &, class TBuf<256> &, class TDes8 &, class TRequestStatus &)
+	?NotifyOnAlarm@RANTestClient@@QAEHAAVTASShdAlarm@@AAV?$TBuf@$0BAA@@@AAVTRequestStatus@@@Z @ 10 NONAME ; int RANTestClient::NotifyOnAlarm(class TASShdAlarm &, class TBuf<256> &, class TRequestStatus &)
+	?NotifyOnAlarm@RANTestClient@@QAEHAAVTASShdAlarm@@AAVTRequestStatus@@@Z @ 11 NONAME ; int RANTestClient::NotifyOnAlarm(class TASShdAlarm &, class TRequestStatus &)
+	?NotifyOnDelete@RANTestClient@@QAEHAAHAAVTRequestStatus@@@Z @ 12 NONAME ; int RANTestClient::NotifyOnDelete(int &, class TRequestStatus &)
+	?NotifyOnSoundStart@RANTestClient@@QAEHAAHAAVTDes16@@AAVTRequestStatus@@@Z @ 13 NONAME ; int RANTestClient::NotifyOnSoundStart(int &, class TDes16 &, class TRequestStatus &)
+	?NotifyOnSoundStop@RANTestClient@@QAEHAAHAAVTRequestStatus@@@Z @ 14 NONAME ; int RANTestClient::NotifyOnSoundStop(int &, class TRequestStatus &)
+	?NotifyOnState@RANTestClient@@QAEHAAH0AAVTRequestStatus@@@Z @ 15 NONAME ; int RANTestClient::NotifyOnState(int &, int &, class TRequestStatus &)
+	?NotifyOnVisible@RANTestClient@@QAEHAAH0AAVTRequestStatus@@@Z @ 16 NONAME ; int RANTestClient::NotifyOnVisible(int &, int &, class TRequestStatus &)
+	?PauseSoundForAlarm@RANTestClient@@QBEHABHABVTTime@@@Z @ 17 NONAME ; int RANTestClient::PauseSoundForAlarm(int const &, class TTime const &) const
+	?SetExtendedMode@RANTestClient@@QBEHXZ @ 18 NONAME ; int RANTestClient::SetExtendedMode(void) const
+	?SetMaxAlarms@RANTestClient@@QBEHH@Z @ 19 NONAME ; int RANTestClient::SetMaxAlarms(int) const
+	?SetUserTime@RANTestClient@@QBEHABVTTime@@@Z @ 20 NONAME ; int RANTestClient::SetUserTime(class TTime const &) const
+	?SilenceAlarm@RANTestClient@@QBEHABH@Z @ 21 NONAME ; int RANTestClient::SilenceAlarm(int const &) const
+	?SnoozeAlarm@RANTestClient@@QBEHABHABVTTime@@@Z @ 22 NONAME ; int RANTestClient::SnoozeAlarm(int const &, class TTime const &) const
+	?UnsetExtendedMode@RANTestClient@@QBEHXZ @ 23 NONAME ; int RANTestClient::UnsetExtendedMode(void) const
+

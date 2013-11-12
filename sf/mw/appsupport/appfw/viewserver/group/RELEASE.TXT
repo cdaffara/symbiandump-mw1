@@ -1,0 +1,130 @@
+
+Version 
+===================
+Made by Mark Donohoe 2/11/99
+
+Migration of the Roxette 005 ViewSrv release to the Uikon 1.2 project.
+
+1. Added unit test code TVWS0 which exercises the public API of the server
+   To start test shell copy WSINI.INI and DLL_LIST.TXT to z\system\data.
+2. Added UikonDoc comments for classes and public methods
+
+The View Architecture
+--------------------- 
+
+In a typical Eikon application, the user will be presented with a number of different views on the applications
+data (e.g. inbox and outbox in a messaging app). Currently views are organised on an ad-hoc basis by each
+application. The view architecture, which was introduced in the Roxette project, makes the views part of the
+application framework. It offers the following functionality
+
+· App switching capability
+· Automatic save of data
+· Resource management
+· Message passing interface
+· Support for standard view controls
+· Exception handling
+ 
+A typical use case for the view architecture is as follows - User looks up contact and switches to mail editor
+1. The user looks up a contact in the address book.
+2. The user selects a direct navigational link to go the mail editor
+3. The system switches view to the mail editor with the contact address automatically supplied
+
+Viewsrv component
+-----------------
+
+The Viewsrv component provides a view switching client-server architecture.
+
+A view is represented in the server by the TVwsViewId class which encapsulates two UIds - one for the
+application associated with the view and another for the view itself. Each application participating in
+the view switching does so in three ways
+
+1. It creates a client session, adds its views to the server maintained list when it starts up and removes
+   them when it shuts down.
+2. It can then request that any view in the system be activated through its client session. The server will
+   queue the requests it gets and process them in turn. If a view has not been registered in the server when an
+   activation request arrives, the server will try to start the application associated with that view through the
+   MVwsAppStarter interface
+3. It implements the MVwsSessionObserver interface to do the real work of view switching. Sessions which own views
+   to be activated and deactivated will be called back to handle these events. Applications must therefore maintain
+   an outstanding request for asynchronous event notification and handle the TVwsViewEvents passed to them.
+---------------------------------------------------------------------------
+
+Version 005
+================
+Made by Natasha Payne  25/10/1999
+
+Uses:
+ see \viewsrv\group\depend.inf
+
+NOT TESTED ON TARGET - failing before start of this component
+
+Notes:
+ Source, WINS UDEB, WINS UREL, THUMB UDEB, THUMB UREL, ARMI UDEB and ARMI UREL builds available.
+
+Changes:
+
+1) Fixed release build warnings in VWSEVENT.CPP.
+---------------------------------------------------------------------------
+
+Version 004
+================
+Made by JoeB  14/10/1999
+
+Uses:
+ see \viewsrv\group\depend.inf
+
+Notes:
+ Source, WINS UDEB, WINS UREL, THUMB UDEB, THUMB UREL, ARMI UDEB and ARMI UREL builds available.
+
+Changes:
+
+1) Fixed release build warnings in VWSEVENT.CPP.
+
+---------------------------------------------------------------------------
+
+Version 003
+================
+Made by Natasha Payne  08/10/1999
+
+Uses:
+ ER5uOAK/400
+
+Notes:
+ Source, WINS UDEB, THUMB UREL and ARMI UREL builds available.
+
+Changes:
+
+1) Added MVwsServerObserver and DeactivateActiveView exported interface.
+   Intended for use by EikSvRox to allow a full system shutdown.
+---------------------------------------------------------------------------
+
+Version 1.00.002
+================
+Made by James Gibbons 03 September 1999
+
+Uses:
+ ER5uOAK/400
+
+Notes:
+ Source, WINS UDEB, THUMB UREL and ARMI UREL builds available.
+
+Changes:
+ No code changes since previous release.
+---------------------------------------------------------------------------
+
+Version 1.00.001
+================
+Made by James Gibbons 24 August 1999
+
+Uses:
+ ER5uOAK/300 WSERV/x04
+
+Notes:
+ WINS UDEB and MARM UREL binaries only.
+
+Changes:
+ First formal release.
+
+ROM Usage:
+ViewSrv - 8796 Bytes
+ViewCli - 2608 Bytes

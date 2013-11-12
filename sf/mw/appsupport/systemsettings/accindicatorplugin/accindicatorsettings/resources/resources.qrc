@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/xml" >
+        <file alias="headset.docml" >headset.docml</file>
+        <file alias="tvout.docml" >tvout.docml</file>
+    </qresource>
+    <qresource prefix="/images" >
+        <file>wired_accessory.svg</file>
+        <file>wireless_accessory.svg</file>
+    </qresource>
+</RCC>

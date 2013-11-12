@@ -1,0 +1,11 @@
+component	app-services_richtexttohtmlconv
+source	\sf\mw\appsupport\filehandling\richtexttohtmlconverter
+binary	\sf\mw\appsupport\filehandling\richtexttohtmlconverter\Group	all
+exports	\sf\mw\appsupport\filehandling\richtexttohtmlconverter\Group
+notes_source	\component_defs\release.src
+
+
+ipr E 
+ipr T \sf\mw\appsupport\filehandling\richtexttohtmlconverter\Test
+ipr T \sf\mw\appsupport\filehandling\richtexttohtmlconverter\TSrc
+

@@ -1,0 +1,21 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+    		<!-- Give events of all DoubleTaps having value "Right" -->
+        <and>
+		        <contextUpdated>
+		        		<contextRef source='Sensor'
+		        				type='DoubleTap'/>
+		        </contextUpdated>
+		        <equals>
+		            <contextRef source='Sensor'
+		            		 type='DoubleTap'/>
+		            <cep:string>Right</cep:string>
+		        </equals>
+        </and>
+        <actions>
+            <!-- start calendar app -->
+            <startApp appUid='10005901' viewUid='00000001' msgUid='00000000' msg='msg'/>
+        </actions>
+    </if>
+</script>

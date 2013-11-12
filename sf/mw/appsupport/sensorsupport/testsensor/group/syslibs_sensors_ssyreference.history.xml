@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<relnotes schema="1.0.0" name="Reference SSY">
+  <purpose>
+    Referencey SSY for testing the Sensors Framework.
+  </purpose>
+
+  <deliverystep number="1120" name="PREQ2039: Base Services: Sensor Server (tr2.1.5 Prototype)" osproject="Sphinx" revision="002">
+    <preq number="2039" title="Sensor server">
+      Update to Sensors framework as part of the Core OS 2 project.
+    </preq>
+    <milestone project="GT0461" number="3.2"/>
+  </deliverystep>
+  <deliverystep number="1105" name="PREQ2039: Base Services: Sensor Server (TR2 Prototype)" osproject="Sphinx" revision="001">
+    <preq number="2039" title="Sensor server">
+      Adding Reference SSY to Symbian OS as part of the Core OS 2 project.
+    </preq>
+    <cr number="1603" title="Bring PREQ2039 (Sensor server) into the scope of Sphinx"/>
+    <milestone project="GT0461" number="3.1"/>
+  </deliverystep>
+
+</relnotes>

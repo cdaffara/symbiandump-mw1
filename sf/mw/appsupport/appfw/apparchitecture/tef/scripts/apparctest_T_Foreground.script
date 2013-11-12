@@ -1,0 +1,34 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-APPARC-0053
+//! @SYMDEF 			DEF092013 
+//! @SYMTestCaseDesc 		Tests Whether the TApaTask::SwitchCreateFile returns the right return code.
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions		Give a NonExistant file name that has to be created.This method checks that 
+//!				the file does not get created but on its default implementation returns KErrNone or System Wide errors.
+//! @SYMTestExpectedResults 	The test passes if the return value is KErrNone , It means the request has been successfuly sent to 
+//!				the windows Server session.
+
+START_TESTCASE API-APPFWK-APPARC-0053
+
+PRINT Run T_Foreground Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_Foreground
+
+END_TESTCASE API-APPFWK-APPARC-0053

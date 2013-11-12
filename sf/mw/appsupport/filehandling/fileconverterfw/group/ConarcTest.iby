@@ -1,0 +1,74 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __CONARCTEST_IBY__
+#define __CONARCTEST_IBY__
+
+#ifndef __APPFWK_TEST_FRAMEWORK_IBY__
+	#include <appfwk_test_framework.iby>
+#endif
+
+REM Test code for the Conarc component
+
+define CONARCTESTPATH Resource\test\conarc
+data=ZRESOURCE\test\conarc\w7allchr.doc				CONARCTESTPATH\w7allchr.doc
+data=ZRESOURCE\test\conarc\w7allchr.doc.b64			CONARCTESTPATH\w7allchr.doc.b64
+data=ZRESOURCE\test\conarc\w7allchr.doc.qp			CONARCTESTPATH\w7allchr.doc.qp
+data=ZRESOURCE\test\conarc\w7allchrwosplchr.doc.qp		CONARCTESTPATH\w7allchrwosplchr.doc.qp
+data=ZRESOURCE\test\conarc\release.txt				CONARCTESTPATH\release.txt
+data=ZRESOURCE\test\conarc\release.txt.etext		CONARCTESTPATH\release.txt.etext
+
+data=EPOCROOT##epoc32\data\z\resource\convert\1871e.rsc		resource\convert\1871e.rsc
+ECOM_PLUGIN(ttestecomconverter.dll,10001111.rsc)
+
+data=EPOCROOT##epoc32\data\z\resource\convert\10207F6A.rsc	resource\convert\10207F6A.rsc
+ECOM_PLUGIN(tcon1.dll,10004c60.rsc)
+
+data=EPOCROOT##epoc32\data\z\resource\convert\10207F6B.rsc	resource\convert\10207F6B.rsc
+ECOM_PLUGIN(tcon2.dll,10004c61.rsc)
+
+data=EPOCROOT##epoc32\data\z\resource\convert\10207F6C.rsc	resource\convert\10207F6C.rsc
+ECOM_PLUGIN(tcon3.dll,10004c62.rsc)
+
+data=EPOCROOT##epoc32\data\z\resource\convert\10004c41.rsc	resource\convert\10004c41.rsc
+ECOM_PLUGIN(t_conV2.dll,10004c63.rsc)
+
+data=EPOCROOT##epoc32\data\z\resource\convert\10004c43.rsc	resource\convert\10004c43.rsc
+ECOM_PLUGIN(t_convBadUid.dll,10004c64.rsc)
+
+file=ABI_DIR\BUILD_DIR\TConArcTestServer.exe	       	System\libs\TConArcTestServer.exe
+
+data=DATAZ_\conarctest\conarctest_run.bat              \conarctest_run.bat
+data=DATAZ_\conarctest\conarctest_t_b64cnv.script      \conarctest\conarctest_t_b64cnv.script
+data=DATAZ_\conarctest\conarctest_t_cnf.script         \conarctest\conarctest_t_cnf.script
+data=DATAZ_\conarctest\conarctest_t_loadecomcnv.script \conarctest\conarctest_t_loadecomcnv.script
+
+REM The language dlls are included as part by apparctest.iby.
+REM The macro __APPARCTEST_IBY__ is added to avoid duplication during rombuild.
+#ifndef __APPARCTEST_IBY__
+
+#ifdef SYMBIAN_DISTINCT_LOCALE_MODEL
+file=ABI_DIR\BUILD_DIR\elocl_lan.002			Sys\bin\elocl_lan.002
+#else
+file=ABI_DIR\BUILD_DIR\ELOCL.01					Sys\bin\ELOCL.01
+file=ABI_DIR\BUILD_DIR\ELOCL.02					Sys\bin\ELOCL.02
+#endif
+
+#endif
+
+
+#endif

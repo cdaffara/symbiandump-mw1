@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: caappscanner.rss
+* ECOM DLL UID:           2002870A
+* ECOM interface UID:    (KCaSrvPluginInterfaceUid)
+* ECOM Implementation:    2002870B
+*
+*/
+
+#include <ecom/registryinfo.rh>
+#include "casrvpluginuids.hrh"
+#include "causifscanner.hrh"
+
+RESOURCE REGISTRY_INFO theInfo
+    {
+    // UID for the DLL
+    dll_uid = KCaSrvUsifScannerDllUid;
+    // Declare array of interface info
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            // UID of interface that is implemented
+            interface_uid = KCaSrvPluginInterfaceUid;
+            implementations =
+                {
+                // Info for Usif Scanner
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = KCaSrvUsifScannerPlugin;
+                    version_no         = 1;
+                    display_name       = "Usif Scanner";
+                    default_data       = "USIFSCANNER";
+                    opaque_data        = "";
+                    }
+                };
+            }
+        };
+    }

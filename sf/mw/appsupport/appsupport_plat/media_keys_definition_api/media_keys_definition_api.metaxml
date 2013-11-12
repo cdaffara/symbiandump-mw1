@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="26c02583402c51ea603ff451a2db145a" dataversion="2.0">
+  <name>Media Keys Definition API</name>
+  <description>This API defines the P&amp;S keys that are owned by the Media Keys subsystem.</description>
+  <type>c++</type>
+  <collection>mediakeys</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

@@ -1,0 +1,10 @@
+component	app-framework_print
+source	\sf\mw\appsupport\printingsupport\printinguisupport
+binary	\sf\mw\appsupport\printingsupport\printinguisupport\group	all
+exports	\sf\mw\appsupport\printingsupport\printinguisupport\group
+notes_source	\component_defs\release.src
+
+
+ipr E 
+ipr T \sf\mw\appsupport\printingsupport\printinguisupport\tef
+

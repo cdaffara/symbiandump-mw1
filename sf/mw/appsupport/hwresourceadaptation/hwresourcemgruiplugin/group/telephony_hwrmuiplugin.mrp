@@ -1,0 +1,7 @@
+component	telephony_hwrmuiplugin
+source		\sf\mw\appsupport\hwresourceadaptation\hwresourcemgruiplugin
+binary		\sf\mw\appsupport\hwresourceadaptation\hwresourcemgruiplugin\group	all
+exports		\sf\mw\appsupport\hwresourceadaptation\hwresourcemgruiplugin\group
+notes_source	\component_defs\release.src
+
+ipr E

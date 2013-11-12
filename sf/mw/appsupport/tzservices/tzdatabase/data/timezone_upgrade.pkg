@@ -1,0 +1,33 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+; Package file for system TZ data update SIS file creation.
+
+; Languages
+&EN
+
+; Header
+#{"System TZ Data Update"}, (0x200020B0), 1, 1, 0, TYPE=SP
+
+; Vendor
+%{"Symbian Software Ltd."}
+:"Symbian Software Ltd."
+
+; Local files and the target location to be updated (eclipsed).
+"tzdb.dbz"-"$:\private\1020383E\tzdb.dbz"
+"tz.r01 "-"$:\resource\timezonelocalization\timezones.r01"
+"tzg.r01"-"$:\resource\timezonelocalization\timezonegroups.r01"
+"tz.r02 "-"$:\resource\timezonelocalization\timezones.r02"
+"tzg.r02"-"$:\resource\timezonelocalization\timezonegroups.r02"

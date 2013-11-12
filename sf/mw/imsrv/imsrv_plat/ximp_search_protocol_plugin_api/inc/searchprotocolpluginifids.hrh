@@ -1,0 +1,36 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Protocol Plugin API interface IDs.
+*
+*/
+
+#ifndef SEARCHPROTOCOLPLUGINIFIDS_HRH
+#define SEARCHPROTOCOLPLUGINIFIDS_HRH
+
+
+
+// Protocol plugin IF id's
+// 30xx - ximp related
+// 31xx - presence related
+// 32xx - instant messaging related
+// 34xx - search related
+
+// Interface IDs for XIMPFw Protocol Plugin API interfaces
+
+#define SEARCH_IF_ID_PROTOCOL_SEARCH                    3400
+#define SEARCH_IF_ID_PROTOCOL_SEARCH_FEATURES           3401
+
+#endif // SEARCHPROTOCOLPLUGINIFIDS_HRH
+
+

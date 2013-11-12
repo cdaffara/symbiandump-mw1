@@ -1,0 +1,67 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+/**
+ @file
+ @test
+ @internalComponent - Internal Symbian test code 
+*/
+ 
+PRJ_PLATFORMS
+DEFAULT
+
+
+PRJ_EXPORTS
+// test code only
+
+
+PRJ_MMPFILES
+// test code only
+
+
+PRJ_TESTMMPFILES
+tamastarter_server.mmp
+
+tamastarter_amaadder.mmp
+
+tamastarter_app1.mmp
+tamastarter_app2.mmp
+tamastarter_app3.mmp
+tamastarter_app4.mmp
+
+
+PRJ_TESTEXPORTS
+amastarttest_amastarter.iby							/epoc32/rom/include/amastarttest_amastarter.iby
+
+// apstart batch files for emulator / hardware test execution
+../scripts/hardware/amastarttest_amastarter_run.bat			/epoc32/data/z/amastarttest/amastarttest_amastarter_run.bat
+
+// apstart batch files for emulator / hardware test execution
+../scripts/emulator/amastarttest_amastarter_run.bat			/epoc32/release/winscw/udeb/amastarttest_amastarter_run.bat
+../scripts/emulator/amastarttest_amastarter_setup.bat		/epoc32/release/winscw/udeb/z/amastarttest/amastarttest_amastarter_setup.bat
+../scripts/emulator/amastarttest_amastarter_run.bat			/epoc32/release/winscw/urel/amastarttest_amastarter_run.bat
+../scripts/emulator/amastarttest_amastarter_setup.bat		/epoc32/release/winscw/urel/z/amastarttest/amastarttest_amastarter_setup.bat
+
+// amastarter scripts
+../scripts/amastarttest_amastarter_invalidsid.script		z:/amastarttest/amastarttest_amastarter_invalidsid.script
+../scripts/amastarttest_amastarter_ssc.script				z:/amastarttest/amastarttest_amastarter_ssc.script
+../scripts/amastarttest_amastarter_standalone.script		z:/amastarttest/amastarttest_amastarter_standalone.script
+../scripts/amastarttest_amastarter_startl.script			z:/amastarttest/amastarttest_amastarter_startl.script
+../scripts/amastarttest_amastarter_startlasync.script		z:/amastarttest/amastarttest_amastarter_startlasync.script
+../scripts/amastarttest_amastarter_cancel.script			z:/amastarttest/amastarttest_amastarter_cancel.script
+../scripts/amastarttest_amastarter_startlpending.script		z:/amastarttest/amastarttest_amastarter_startlpending.script
+
+ 
+

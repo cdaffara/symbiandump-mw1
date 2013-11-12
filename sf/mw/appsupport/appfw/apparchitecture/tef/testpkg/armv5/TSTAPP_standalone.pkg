@@ -1,0 +1,47 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+;Languages
+&EN
+
+;Header
+; SA = Symbian Application
+; RU = Rom Upgrade
+#{"TSTAPP_standalone"}, (10), 1, 0, 0, TYPE=SA, RU
+
+%{"Nokia India Pvt Ltd"}
+:"Nokia India Pvt Ltd"
+
+"\epoc32\release\armv5\udeb\tstapp.exe"-"!:\sys\bin\tstapp.exe"
+"\epoc32\data\z\apparctestregfiles\tstapp_reg.rsc"-"!:\private\10003a3f\import\apps\tstapp_reg.rsc"
+"\epoc32\data\z\apparctestregfiles\tstapp_loc.rsc"-"!:\resource\apps\tstapp_loc.rsc"
+"\epoc32\data\z\apparctestregfiles\tstapp_loc.r01"-"!:\resource\apps\tstapp_loc.r01"
+"\epoc32\data\z\apparctestregfiles\tstapp_loc.r02"-"!:\resource\apps\tstapp_loc.r02"
+"\epoc32\data\z\apparctestregfiles\tstapp_loc.r03"-"!:\resource\apps\tstapp_loc.r03"
+"\epoc32\data\z\apparctestregfiles\tstapp_loc.r04"-"!:\resource\apps\tstapp_loc.r04"
+"\epoc32\data\z\apparctestregfiles\tstapp_loc.r05"-"!:\resource\apps\tstapp_loc.r05"
+"\epoc32\data\z\apparctestregfiles\TSTAPP.rsc"-"!:\resource\apps\TSTAPP.rsc"
+"\epoc32\data\z\apparctestregfiles\tstapp.mbm"-"!:\resource\apps\tstapp.mbm"
+"\epoc32\data\z\apparctestregfiles\tstappview01.m01"-"!:\resource\apps\tstappview01.m01"
+"\epoc32\data\z\apparctestregfiles\tstappview02.k"-"!:\resource\apps\tstappview02.k"
+"\epoc32\data\z\apparctestregfiles\tstappviewneg.xyz"-"!:\resource\apps\tstappviewneg.xyz"
+"\epoc32\data\z\apparctestregfiles\tstappviewneg.mbm"-"!:\resource\apps\tstappviewneg.mbm"
+"\epoc32\data\z\apparctestregfiles\tstappview"-"!:\resource\apps\tstappview"
+"\epoc32\data\z\apparctestregfiles\tstapp02.m02"-"!:\resource\apps\tstapp02.m02"
+"\epoc32\data\z\apparctestregfiles\tstappview01.m02"-"!:\resource\apps\tstappview01.m02"
+
+

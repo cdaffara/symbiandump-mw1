@@ -1,0 +1,5 @@
+/* HbWidget can have a default text color (and other color attributes)*/
+HbWidget::text
+{
+color:var(qtc_default_main_pane_normal);
+}

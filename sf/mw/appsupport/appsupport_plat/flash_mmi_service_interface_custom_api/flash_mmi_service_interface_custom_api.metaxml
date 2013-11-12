@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="df87bcb27eaabc76d160038a1478bcd8" dataversion="2.0">
+<name>Flash MMI Service Interface Custom API</name>
+<description>Customization API for the MMI Service Interface API.
+
+This API implements customization support for selected 
+methods of the MMI Service Interface API. The original 
+function signature is preserved.</description>
+<type>c++</type>
+<subsystem>flashliteapi_3_0</subsystem>
+<libs></libs>
+<release category="platform" sinceversion="5.0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

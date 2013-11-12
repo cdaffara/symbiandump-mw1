@@ -1,0 +1,72 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+//
+// M_CTRL.MMP for test component M_CTRL (released in APPARC)
+// New style APP/EXE built for a secure environment
+//
+
+target 		m_ctrl.exe
+TARGETTYPE 	exe
+
+targetpath	/sys/bin
+UID		0x100039CE 0x13008AEE
+CAPABILITY 	All -Tcb
+VENDORID 	0x70000001
+
+epocstacksize 	0x5000
+
+SOURCEPATH	.
+
+
+userinclude   ../inc
+ 		
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+//systeminclude   /epoc32/include/techview
+
+userinclude     .
+
+// Application exe specific resource which is localised to the application
+resource  	M_CTRL.rss
+start resource  M_CTRL.rss
+targetpath	/apparctestregfiles
+lang 		sc
+end
+
+// Application exe registration resource file
+start resource 	M_CTRL_reg.rss
+targetpath 	/apparctestregfiles
+lang		sc
+end
+
+// Application localisable resource file
+start resource 	M_CTRL_loc.RSS
+targetpath 	/apparctestregfiles
+lang		sc
+end
+
+SOURCE		M_CTRL_V2.CPP
+
+LIBRARY 	apparc.lib 
+LIBRARY 	cone.lib
+LIBRARY 	efsrv.lib
+LIBRARY 	eikcore.lib
+LIBRARY 	euser.lib 
+LIBRARY 	gdi.lib
+LIBRARY 	appfwk_test_appui.lib 
+
+SMPSAFE

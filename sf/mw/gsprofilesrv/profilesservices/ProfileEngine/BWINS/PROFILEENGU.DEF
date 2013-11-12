@@ -1,0 +1,11 @@
+EXPORTS
+	?CreateProfileEngineExtendedL@@YAPAVMProfileEngineExtended@@XZ @ 1 NONAME ; class MProfileEngineExtended * __cdecl CreateProfileEngineExtendedL(void)
+	?CreateProfileEngineL@@YAPAVMProfileEngine@@XZ @ 2 NONAME ; class MProfileEngine * __cdecl CreateProfileEngineL(void)
+	?NewL@CProfileChangeNotifyHandler@@SAPAV1@PAVMProfileChangeObserver@@@Z @ 3 NONAME ; public: static class CProfileChangeNotifyHandler * __cdecl CProfileChangeNotifyHandler::NewL(class MProfileChangeObserver *)
+	?CreateProfileEngineExtendedL@@YAPAVMProfileEngineExtended@@PAVRFs@@@Z @ 4 NONAME ; class MProfileEngineExtended * CreateProfileEngineExtendedL(class RFs *)
+	?CreateProfileEngineL@@YAPAVMProfileEngine@@PAVRFs@@@Z @ 5 NONAME ; class MProfileEngine * CreateProfileEngineL(class RFs *)
+	?ProfileUtilityInstanceL@@YAAAVMProfileUtilitySingleton@@XZ @ 6 NONAME ; class MProfileUtilitySingleton & ProfileUtilityInstanceL(void)
+	?ReleaseProfileUtility@@YAXXZ @ 7 NONAME ; void ReleaseProfileUtility(void)
+	?CreateProfileEngineExtended2L@@YAPAVMProfileEngineExtended2@@XZ @ 8 NONAME ; class MProfileEngineExtended2 * CreateProfileEngineExtended2L(void)
+	?CreateProfileEngineExtended2L@@YAPAVMProfileEngineExtended2@@PAVRFs@@@Z @ 9 NONAME ; class MProfileEngineExtended2 * CreateProfileEngineExtended2L(class RFs *)
+

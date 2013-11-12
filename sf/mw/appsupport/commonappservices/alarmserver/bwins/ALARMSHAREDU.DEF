@@ -1,0 +1,9 @@
+EXPORTS
+	??0TASShdAlarm@@QAE@XZ @ 1 NONAME ; public: __thiscall TASShdAlarm::TASShdAlarm(void)
+	?ExternalizeL@TASShdAlarm@@QBEXAAVRWriteStream@@@Z @ 2 NONAME ; public: void __thiscall TASShdAlarm::ExternalizeL(class RWriteStream &)const 
+	?InternalizeL@TASShdAlarm@@QAEXAAVRReadStream@@@Z @ 3 NONAME ; public: void __thiscall TASShdAlarm::InternalizeL(class RReadStream &)
+	?Reset@TASShdAlarm@@QAEXXZ @ 4 NONAME ; public: void __thiscall TASShdAlarm::Reset(void)
+	?SetUtcNextDueTime@TASShdAlarm@@QAEXVTTime@@@Z @ 5 NONAME ; void TASShdAlarm::SetUtcNextDueTime(class TTime)
+	?SetDeQueueIfDueTimeInPast@TASShdAlarm@@QAEXXZ @ 6 NONAME ; void TASShdAlarm::SetDeQueueIfDueTimeInPast(void)
+	?IsWakeup@TASShdAlarm@@QBEHXZ @ 7  NONAME ; int TASShdAlarm::IsWakeup(void) const
+	?SetWakeup@TASShdAlarm@@QAEXH@Z @ 8  NONAME ; void TASShdAlarm::SetWakeup(int)

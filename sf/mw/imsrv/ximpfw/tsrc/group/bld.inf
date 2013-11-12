@@ -1,0 +1,59 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for test dlls and related helpers
+*
+*/
+
+
+// tsrc utils, including test mover
+//#include "../tsrcutils/bld.inf"
+
+// Test protocols
+//#include "../tsrcprotocols/bld.inf"
+
+// Module release tests
+//#include "../src/t_rootservices/bld.inf"
+//#include "../src/t_sessionmng/bld.inf"
+//#include "../src/t_presencepublishing/bld.inf"
+//#include "../src/t_presencewatching/bld.inf"
+//#include "../src/t_presencegrouplistmngt/bld.inf"
+//#include "../src/t_presencegroupmembermngt/bld.inf"
+//#include "../src/t_presencewatcherlistmngt/bld.inf"
+//#include "../src/t_presencegrantrequestmngt/bld.inf"
+//#include "../src/t_presenceauthorization/bld.inf"
+//#"../src/t_presenceblocking/bld.inf"
+//#include "../src/t_utils/bld.inf"
+//#include "../src/t_presenceall/bld.inf"
+
+PRJ_TESTMMPFILES
+../tsrcutils/testcaseutils/prfwtestcaseutils.mmp
+../tsrcutils/processmaster/prfwtestprocessmaster.mmp
+../tsrcprotocols/pr_prfwtestprotocol/pr_prfwtestprotocol.mmp
+../src/t_rootservices/t_rootservices.mmp
+../src/t_sessionmng/t_sessionmng.mmp
+../src/t_presencepublishing/t_presencepublishing.mmp
+../src/t_presencewatching/t_presencewatching.mmp
+../src/t_presencegrouplistmngt/t_presencegrouplistmngt.mmp
+../src/t_presencegroupmembermngt/t_presencegroupmembermngt.mmp
+../src/t_presencewatcherlistmngt/t_presencewatcherlistmngt.mmp
+../src/t_presencegrantrequestmngt/t_presencegrantrequestmngt.mmp
+../src/t_presenceauthorization/t_presenceauthorization.mmp
+../src/t_presenceblocking/t_presenceblocking.mmp
+../src/t_utils/t_utils.mmp
+../src/t_presenceall/t_presenceall.mmp
+
+// Export the .iby for module release tests
+PRJ_EXPORTS
+ximpfwmrt.iby  /epoc32/rom/include/ximpfwmrt.iby
+

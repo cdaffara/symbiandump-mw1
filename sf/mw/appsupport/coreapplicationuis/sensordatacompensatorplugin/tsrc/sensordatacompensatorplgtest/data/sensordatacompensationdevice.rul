@@ -1,0 +1,314 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <!-- compensator test plugin data set 0 -->
+    <if>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetD0</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='Device1.FirstType'
+             AxisDataX='0'
+             AxisDataY='0'
+             AxisDataZ='0'
+             MagneticNorthAngle='0'             
+             TappingAxisX='CW0'
+             TappingAxisY='CW0'
+             TappingAxisZ='CW0'
+             />
+        </actions>
+    </if>
+    <!-- compensator test plugin data set 1 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetD1</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='Device1.FirstType'
+             AxisDataX='45'
+             AxisDataY='50'
+             AxisDataZ='55'
+             MagneticNorthAngle='65'
+             TappingAxisX='CW90'
+             TappingAxisY='CW0'
+             TappingAxisZ='CW0'
+             />
+        </actions>
+    </elseIf>
+    <!-- compensator test plugin data set 2 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetD2</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='Device1.FirstType'
+             AxisDataX='-145'
+             AxisDataY='-140'
+             AxisDataZ='-135'
+             MagneticNorthAngle='-135'
+             TappingAxisX='CW270'
+             TappingAxisY='CW90'
+             TappingAxisZ='CW0'             
+             />
+        </actions>     
+    </elseIf>
+    <!-- compensator test plugin data set 3 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetD3</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='Device2.SecondType'
+             AxisDataX='25'
+             AxisDataY='5'
+             AxisDataZ='-175'
+             MagneticNorthAngle='85'
+             TappingAxisX='CW180'
+             TappingAxisY='CW0'
+             TappingAxisZ='CW90'             
+             />
+        </actions>     
+    </elseIf>
+    <!-- compensator test plugin data set 4 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetD4</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='Device3.ThirdType'
+             AxisDataX='15'
+             AxisDataY='-15'
+             AxisDataZ='-75'
+             MagneticNorthAngle='-85'
+             TappingAxisX='CW180'
+             TappingAxisY='CW0'
+             TappingAxisZ='CW180'             
+             />
+        </actions>     
+    </elseIf>
+    <!-- compensator test plugin data set 5 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetD5</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='Device4.FourthType'
+             AxisDataX='205'
+             AxisDataY='150'
+             AxisDataZ='-215'
+             MagneticNorthAngle='185'
+             TappingAxisX='CW90'
+             TappingAxisY='CW270'
+             TappingAxisZ='CW90'             
+             />
+        </actions>
+    </elseIf>
+    <!-- compensator test plugin data set 6 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetD6</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='Device1.FirstType'
+             NotExisting='999'
+             AxisDataX='205'
+             NotExisting2='999'
+             AxisDataY='150'
+             NotExisting3='999'
+             AxisDataZ='-215'
+             NotExisting4='999'
+             MagneticNorthAngle='185'
+             NotExisting5='999'
+             TappingAxisX='CW90'
+             NotExisting6='999'
+             TappingAxisY='CW270'
+             NotExisting7='999'
+             TappingAxisZ='CW90'
+             NotExisting8='999'
+             />
+        </actions>
+    </elseIf>
+    <!-- compensator test plugin data set 7 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetD7</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='Device1.FirstType'
+             AxisDataZ='-1500'
+             AxisDataX='500'
+             TappingAxisZ='CW99'
+             TappingAxisY='CW90'
+             NotExisting='999'
+             />
+        </actions>
+    </elseIf>
+    <!-- compensator test plugin data set 0 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetU0</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='UI.FirstType'
+             AxisDataX='0'
+             AxisDataY='0'
+             AxisDataZ='0'
+             MagneticNorthAngle='0'             
+             TappingAxisX='CW0'
+             TappingAxisY='CW0'
+             TappingAxisZ='CW0'
+             />
+        </actions>
+    </elseIf>
+    <!-- compensator test plugin data set 1 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetU1</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='UI.FirstType'
+             AxisDataX='145'
+             AxisDataY='150'
+             AxisDataZ='155'
+             MagneticNorthAngle='165'
+             TappingAxisX='CW180'
+             TappingAxisY='CW180'
+             TappingAxisZ='CW180'
+             />
+        </actions>
+    </elseIf>
+    <!-- compensator test plugin data set 2 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetU2</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='UI.FirstType'
+             AxisDataX='-15'
+             AxisDataY='-10'
+             AxisDataZ='-15'
+             MagneticNorthAngle='-15'
+             TappingAxisX='CW0'
+             TappingAxisY='CW180'
+             TappingAxisZ='CW270'             
+             />
+        </actions>     
+    </elseIf>
+    <!-- compensator test plugin data set 3 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetU3</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='UI.SecondType'
+             AxisDataX='25'
+             AxisDataY='5'
+             AxisDataZ='-175'
+             MagneticNorthAngle='85'
+             TappingAxisX='CW0'
+             TappingAxisY='CW0'
+             TappingAxisZ='CW0'             
+             />
+        </actions>     
+    </elseIf>
+    <!-- compensator test plugin data set 4 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetU4</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='UI.ThirdType'
+             AxisDataX='15'
+             AxisDataY='-15'
+             AxisDataZ='-75'
+             MagneticNorthAngle='-85'
+             TappingAxisX='CW0'
+             TappingAxisY='CW0'
+             TappingAxisZ='CW0'             
+             />
+        </actions>     
+    </elseIf>
+    <!-- compensator test plugin data set 5 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetU5</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='UI.FourthType'
+             AxisDataX='205'
+             AxisDataY='150'
+             AxisDataZ='-215'
+             MagneticNorthAngle='185'
+             TappingAxisX='CW0'
+             TappingAxisY='CW180'
+             TappingAxisZ='CW270'             
+             />
+        </actions>
+    </elseIf>
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetU6</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='UI.FirstType'
+             AxisDataX='25'
+             NotExisting='999'
+             AxisDataY='10'
+             NotExisting2='999'
+             AxisDataZ='-25'
+             MagneticNorthAngle='15'
+             TappingAxisX='CW270'
+             TappingAxisY='CW90'
+             NotExisting3='999'
+             TappingAxisZ='CW270'             
+             />
+        </actions>
+    </elseIf>
+    <!-- compensator test plugin data set 7 -->
+    <elseIf>
+        <equals>
+            <contextRef source='SensorCompPluginTest' type='State'/>
+            <string>SetU7</string>
+        </equals>
+        <actions>
+            <SensorDataCompensation
+             Type='UI.FirstType'
+             AxisDataZ='-1150'
+             AxisDataX='15252'
+             TappingAxisZ='CW88'
+             TappingAxisY='CW180'
+             NotExisting='999'
+             MagneticNorthAngle='18500'
+             />
+        </actions>
+    </elseIf>
+</script>

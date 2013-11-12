@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This is project specification file for the DbRecovery.
+*     
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+
+TARGET          dbrecovery.exe
+TARGETTYPE      exexp
+
+UID             0x100039CE 0x10005A17
+VENDORID        VID_DEFAULT
+SECUREID        0x10207401
+
+CAPABILITY      CAP_SERVER
+
+TARGETPATH      /system/programs
+
+SOURCEPATH      ../Src
+SOURCE          CDbRecovery.cpp
+
+USERINCLUDE     . ../Inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         edbms.lib
+LIBRARY         diskspacereserver.lib
+LIBRARY         efsrv.lib
+LIBRARY	        charconv.lib
+LIBRARY         estor.lib
+LIBRARY         cntmodel.lib
+// End of File

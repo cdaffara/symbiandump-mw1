@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+TARGET          tsscreenshotplugin.dll
+TARGETTYPE      PLUGIN 
+UID             0x10009D8D 0x200267AE
+CAPABILITY      CAP_ECOM_PLUGIN
+VENDORID        VID_DEFAULT
+
+OPTION_REPLACE  ARMCC --arm -O3 --cpu 6
+
+MW_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../utils/inc
+USERINCLUDE     ../../inc
+SYSTEMINCLUDE   /epoc32/include/stdapis
+SYSTEMINCLUDE   /epoc32/include/mw/qtcore
+
+SOURCEPATH      ../src
+SOURCE          tsscreenshotmain.cpp
+SOURCE          tsscreenshotplugin.cpp
+SOURCE          tsscreenshotnotifier.cpp
+SOURCE          ../../utils/src/tsscreenshotmsg.cpp
+SOURCE          ../../utils/src/tsidlist.cpp
+
+RESOURCE        tsscreenshotplugin.rss
+
+LIBRARY         ecom.lib
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         wsgraphicdrawer.lib
+LIBRARY         fbscli.lib
+LIBRARY         estor.lib
+LIBRARY         gdi.lib 
+LIBRARY         tstaskmonitorclient.lib
+LIBRARY         SensrvClient.lib
+LIBRARY         sensrvutil.lib 
+LIBRARY         centralrepository.lib
+DEBUGLIBRARY    flogger.lib
+
+
+SMPSAFE

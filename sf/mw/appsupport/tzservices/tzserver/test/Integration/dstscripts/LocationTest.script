@@ -1,0 +1,42 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+// Load the DST test server
+LOAD_SUITE DstIntServer -SharedData
+
+START_TESTCASE   PIM-LOCATIONTEST-0001
+//! @SYMTestCaseID   PIM-LOCATIONTEST-0001
+RUN_TEST_STEP 100 DstIntServer SetAndCheckLocation	\dstscripts\locations.ini LocationTest0001
+END_TESTCASE   PIM-LOCATIONTEST-0001
+START_TESTCASE   PIM-LOCATIONTEST-0002
+//! @SYMTestCaseID   PIM-LOCATIONTEST-0002
+RUN_TEST_STEP 100 DstIntServer SetAndCheckLocation	\dstscripts\locations.ini LocationTest0002
+END_TESTCASE   PIM-LOCATIONTEST-0002
+START_TESTCASE   PIM-LOCATIONTEST-0003
+//! @SYMTestCaseID   PIM-LOCATIONTEST-0003
+RUN_TEST_STEP 100 DstIntServer SetAndCheckLocation	\dstscripts\locations.ini LocationTest0003
+END_TESTCASE   PIM-LOCATIONTEST-0003
+START_TESTCASE   PIM-LOCATIONTEST-0004
+//! @SYMTestCaseID   PIM-LOCATIONTEST-0004
+RUN_TEST_STEP 100 DstIntServer SetAndCheckLocation	\dstscripts\locations.ini LocationTest0004
+END_TESTCASE   PIM-LOCATIONTEST-0004
+START_TESTCASE   PIM-LOCATIONTEST-0005
+//! @SYMTestCaseID   PIM-LOCATIONTEST-0005
+RUN_TEST_STEP 100 DstIntServer SetAndCheckLocation	\dstscripts\locations.ini LocationTest0005
+END_TESTCASE   PIM-LOCATIONTEST-0005
+START_TESTCASE   PIM-LOCATIONTEST-0006
+//! @SYMTestCaseID   PIM-LOCATIONTEST-0006
+RUN_TEST_STEP 100 DstIntServer SetAndCheckLocation	\dstscripts\locations.ini LocationTest0006
+END_TESTCASE   PIM-LOCATIONTEST-0006

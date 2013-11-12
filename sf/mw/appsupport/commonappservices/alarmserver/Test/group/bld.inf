@@ -1,0 +1,80 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#include "../Integration/TestCITAlarmServer/group/bld.inf"
+
+PRJ_TESTEXPORTS
+consolealarmalertserver.iby		/epoc32/rom/include/consolealarmalertserver.iby
+alarmservertests.iby	/epoc32/rom/include/alarmservertests.iby
+alarmserverunittestserver.iby		/epoc32/rom/include/alarmserverunittestserver.iby
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+../ConsoleANTestClient.h /epoc32/include/test/consoleantestclient.h
+#endif
+
+// TestExecute scripts
+../unit/scripts/tealarmserver.script	z:/testdata/scripts/tealarmserver.script
+../unit/scripts/silentfor.ini		z:/testdata/configs/silentfor.ini
+../unit/scripts/silentuntil.ini		z:/testdata/configs/silentuntil.ini
+../unit/scripts/tealarmserver_apc.ini	z:/testdata/config/tealarmserver_apc.ini
+../unit/scripts/tealarmserver_apc.script	z:/testdata/scripts/tealarmserver_apc.script
+../unit/scripts/tealarmserver_apc_disabled.script	z:/testdata/scripts/tealarmserver_apc_disabled.script
+../unit/scripts/tealarmserver_apc_disordered.script	z:/testdata/scripts/tealarmserver_apc_disordered.script
+../unit/scripts/tealarmserver_apc_ini.script	z:/testdata/scripts/tealarmserver_apc_ini.script
+../unit/scripts/tealarmserver_apc_invalid.script	z:/testdata/scripts/tealarmserver_apc_invalid.script
+../unit/scripts/tealarmserver_apc_loop.script	z:/testdata/scripts/tealarmserver_apc_loop.script
+../unit/scripts/tealarmserver_apc_norsc.script	z:/testdata/scripts/tealarmserver_apc_norsc.script
+../unit/scripts/tealarmserver_apc_repeat.script	z:/testdata/scripts/tealarmserver_apc_repeat.script
+../unit/scripts/tealarmserver_apc_stop.script	z:/testdata/scripts/tealarmserver_apc_stop.script
+../unit/scripts/tealarmserver_man.script z:/testdata/scripts/tealarmserver_man.script
+../unit/scripts/tealarmserver_man_TC3.script z:/testdata/scripts/tealarmserver_man_tc3.script
+../unit/scripts/tealarmserver_man_exceptTC3.script z:/testdata/scripts/tealarmserver_man_excepttc3.script
+../unit/scripts/tealarmserver_man.ini	z:/testdata/config/tealarmserver_man.ini
+
+../Integration/AlarmTestServer/scripts/citmultiplealarmtests.script    z:/test/pim/alarmserver/scripts/citmultiplealarmtests.script
+../Integration/AlarmTestServer/scripts/stopinterval.script             z:/test/pim/alarmserver/scripts/stopinterval.script
+../Integration/AlarmTestServer/scripts/defaultinterval.script          z:/test/pim/alarmserver/scripts/defaultinterval.script
+../Integration/AlarmTestServer/scripts/disableinterval.script          z:/test/pim/alarmserver/scripts/disableinterval.script
+../Integration/AlarmTestServer/scripts/repeatlast.script               z:/test/pim/alarmserver/scripts/repeatlast.script
+../Integration/AlarmTestServer/data/citmultiplealarmtestdata.ini       z:/test/pim/alarmserver/data/citmultiplealarmtestdata.ini
+../Integration/AlarmTestServer/scripts/citalarmplaytests.script        z:/test/pim/alarmserver/scripts/citalarmplaytests.script
+../Integration/AlarmTestServer/data/citalarmplaytestdata.ini           z:/test/pim/alarmserver/data/citalarmplaytestdata.ini
+../Integration/AlarmTestServer/scripts/multialarms.bat                 z:/test/pim/alarmserver/scripts/multialarms.bat
+
+PRJ_TESTMMPFILES
+consolealarmalertserver.mmp		support
+../AlarmTest.mmp			support
+../ConsoleANTestClient.mmp support
+../TAlarmData.mmp
+../TAlarmIdArrays.mmp
+../TAlarmInfo.mmp
+../TAlarmLocaleChanges.mmp
+../TAlarmNotifications.mmp
+../TBackupAlarms.mmp
+../TBasicAlarms.mmp
+../TBitwiseOps.mmp
+../TClientSession.mmp
+../TOomTest.mmp
+../TPseudoClockAlarms.mmp
+../TQueueRestoration.mmp
+../TRepeatDefinitions.mmp
+../TServerSessionEngine.mmp
+../TSessionAlarms.mmp
+../TSoundControl.mmp
+../TStartupExpire.mmp
+../talarmrobustness.mmp
+../unit/group/alarmserverunittestserver.mmp
+../ssm/TWakeupAlarms.mmp
+../Integration/AlarmTestServer/group/CITAlarmTestServer.mmp
+../tuserdefinedtzalarms.mmp

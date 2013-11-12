@@ -1,0 +1,62 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+#ifndef PRFWTESTPROTOCOLS_RESOURCE_HRH
+#define PRFWTESTPROTOCOLS_RESOURCE_HRH
+
+
+
+/**
+ * System wide UID 2:s for ECom plugin dlls.
+ */
+#define XIMP_DLL_UID_ECOM_PLUGIN                    0x10009D8D
+
+
+/**
+ * Officially reserved UID 3 for the Presence Framework
+ * test protocol dll.
+ */
+#define PRFW_DLL_UID_PR_PRFWTESTPROTOCOL            0x10282DDD
+
+
+
+/**
+ * Resource file compatible defintions for PrFw test protocols.
+ *
+ * This must be kept in-sync with definitions in
+ * "prfwtestprotocols.h"
+ */
+
+//PrFw primary test protocol
+#define PRFW_TST_PROTOCOL_1_IMPLEMENTATION_UID      0x10282DDF
+#define PRFW_TST_PROTOCOL_1_VERSION_NO              1
+#define PRFW_TST_PROTOCOL_1_DISPLAY_NAME            "PrFw primary test protocol"
+#define PRFW_TST_PROTOCOL_1_DEFAULT_DATA            ""
+#define PRFW_TST_PROTOCOL_1_OPAQUE_DATA             "<p>Nokia<f>feat/pres/pub<f>feat/pres/fetch<f>feat/pres/subs<s>sip"
+
+
+
+//PrFw secondary test protocols
+#define PRFW_TST_PROTOCOL_2_IMPLEMENTATION_UID      0x10282DE0
+#define PRFW_TST_PROTOCOL_3_IMPLEMENTATION_UID      0x10282DE1
+#define PRFW_TST_PROTOCOL_4_IMPLEMENTATION_UID      0x10282DE2
+#define PRFW_TST_PROTOCOL_5_IMPLEMENTATION_UID      0x10282DE3
+
+
+
+#endif // PRFWTESTPROTOCOLS_RESOURCE_HRH
+

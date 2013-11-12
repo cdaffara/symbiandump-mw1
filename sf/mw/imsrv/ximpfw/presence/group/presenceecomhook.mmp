@@ -1,0 +1,60 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for ECom Hook
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/ximpdlluids.hrh"
+
+
+
+TARGET                  presenceecomhook.dll
+CAPABILITY              CAP_ECOM_PLUGIN
+TARGETTYPE              PLUGIN
+UID                     XIMP_DLL_UID_ECOM_PLUGIN XIMP_DLL_UID_PRESENCE_HOOK
+VENDORID                VID_DEFAULT
+
+
+SOURCEPATH              ../srcpresencefrontend/srcecomhook
+START RESOURCE          presenceecomhook.rss
+TARGET                  presenceecomhook.rsc
+END
+
+
+SOURCEPATH              ../srcpresencefrontend/srcecomhook
+SOURCE                  presenceecomhook.cpp
+
+
+USERINCLUDE             ../srcpresencefrontend/srcecomhook
+USERINCLUDE             ../srcpresencefrontend/srcpresencemanager
+USERINCLUDE             ../srcpresencedatamodel
+USERINCLUDE             ../../core/srcdatamodel
+USERINCLUDE             ../../group
+
+
+SYSTEMINCLUDE           ../../inc/presence/presencemanagement
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 euser.lib
+LIBRARY                 presencemanager.lib
+LIBRARY                 ecom.lib
+
+#if defined( ARMCC )
+DEFFILE ../eabi/ 
+#elif defined ( WINSCW )
+deffile ../bwins/ 
+#endif

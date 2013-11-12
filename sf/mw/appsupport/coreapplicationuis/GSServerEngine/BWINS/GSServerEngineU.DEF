@@ -1,0 +1,17 @@
+EXPORTS
+	??0RGSServerClient@@QAE@XZ @ 1 NONAME ; RGSServerClient::RGSServerClient(void)
+	??1CGSServerEngine@@UAE@XZ @ 2 NONAME ; CGSServerEngine::~CGSServerEngine(void)
+	?AspectRatioL@CGSServerEngine@@QAEHXZ @ 3 NONAME ; int CGSServerEngine::AspectRatioL(void)
+	?BootConfigL@CGSServerEngine@@QAEXH@Z @ 4 NONAME ; void CGSServerEngine::BootConfigL(int)
+	?Close@RGSServerClient@@QAEXXZ @ 5 NONAME ; void RGSServerClient::Close(void)
+	?Connect@RGSServerClient@@QAEHXZ @ 6 NONAME ; int RGSServerClient::Connect(void)
+	?DisableDriver@CGSServerEngine@@QAEXXZ @ 7 NONAME ; void CGSServerEngine::DisableDriver(void)
+	?FlickerFilterL@CGSServerEngine@@QAEHXZ @ 8 NONAME ; int CGSServerEngine::FlickerFilterL(void)
+	?NewL@CGSServerEngine@@SAPAV1@XZ @ 9 NONAME ; class CGSServerEngine * CGSServerEngine::NewL(void)
+	?NewLC@CGSServerEngine@@SAPAV1@XZ @ 10 NONAME ; class CGSServerEngine * CGSServerEngine::NewLC(void)
+	?SetAspectRatioL@CGSServerEngine@@QAEXH@Z @ 11 NONAME ; void CGSServerEngine::SetAspectRatioL(int)
+	?SetFlickerFilterL@CGSServerEngine@@QAEXH@Z @ 12 NONAME ; void CGSServerEngine::SetFlickerFilterL(int)
+	?SetTvSystemL@CGSServerEngine@@QAEXH@Z @ 13 NONAME ; void CGSServerEngine::SetTvSystemL(int)
+	?TvSystemL@CGSServerEngine@@QAEHXZ @ 14 NONAME ; int CGSServerEngine::TvSystemL(void)
+	?ListenForTvCableEventsL@CGSServerEngine@@QAEXH@Z @ 15 NONAME ; void CGSServerEngine::ListenForTvCableEventsL(int)
+

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<relnotes schema="1.0.0" name="View Server" purpose="" type="component">
+ <revision major="1" functional="0" minor="5" date="20080324">
+    <ref name="120043" type="defect"/>
+    <description>If screen blanking is enabled, the screen will be covered by a solid window. The color of this blanking window would be as set in CVwsSessionWrapper::SetWindowBackgroundColor method if its used, otherwise by default the color would be solid-white. </description>
+  </revision>
+  <revision major="1" functional="0" minor="4" date="20080313">
+    <ref name="119354" type="defect"/>
+    <description>During deactivation, the sessionWithNewView returned NULL and hence there would be a deactivation immediately. This has been taken care to ensure that sessionWithNewView has a valid session</description>
+  </revision>
+  <revision major="1" functional="0" minor="3" date="20080312">
+    <ref name="118979" type="defect"/>
+    <description>If the session with currently active view is NULL, then the deactivation request is completed with KErrNotFound and the previously active view is activated.</description>
+  </revision>
+  <revision major="1" functional="0" minor="2" date="20071204">
+    <ref name="114859" type="defect"/>
+    <description>A new member variable (iScreenDeviceChangeEvent)has been added to the CVwsEventTimer which says whether the event which has started is ScreenDeviceChange event or not.In case of ScreenDeviceChange events ,HandleTimeOut()method is called only once from the DoTimerCallBack()method.</description>
+  </revision>
+  <revision major="1" functional="0" minor="1" date="20071024">
+    <ref name="113055" type="defect"/>
+    <description>RequestDeactivateOldView(), checking whether the view to activate and deactivate are not equal is done only when both the views are in the same session. TBool iDifferentInstanceOfSameApp is added to CVwsSessionEvent_Deactivation</description>
+  </revision>
+  <revision major="1" functional="0" minor="0" date="20070813">
+    <ref name="110368" type="defect"/>
+    <description>EVwsPriority is moved into the supported policy range.</description>
+  </revision>
+  <purpose>
+    Direct Navigational Links (DNL) framework, used to enable applications to switch into/use views of other applications.
+  </purpose>
+  <defect number="PDEF101778" title="Viewsrv:9 panic when repeatedly opening and closing menu app" revision="004">
+    If CVwsSession::Remove() the panic code has been removed. In case the view is still active, when it is tried to be removed, a KErrInUse value is returned.
+  </defect>
+  <defect number="PDEF101155" title="MTBC: Crash in ViewServer when playing around with the Flip" revision="003">
+    A link is created between the couple of observer-observed objects that are involved in provoking Activation/Deactivation/ScreenDeviceChange events in Viewserver. This allows a CVwsServerEvent-derived object to know which CVwsSessionEvent-derived object is observing.
+  </defect>
+  <defect number="PDEF100725" title="MTBC: SWSV_633_R3A01: Crash when receiving video call (Unable to reproduce)" revision="002">
+    Unwanted Platsec errors have been suppressed.
+  </defect>
+  <defect number="PDEF097507" title="Viewsrv and server app deadlock" revision="001">
+    Implement an api to deactivate the current view, but only if the current view is owned by the session making the request. Uikon has been modified to use this new api.
+  </defect>
+</relnotes>

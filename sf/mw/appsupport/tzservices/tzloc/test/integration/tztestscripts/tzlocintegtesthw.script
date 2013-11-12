@@ -1,0 +1,445 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE TzLocalTestserver
+
+//
+// The following tests do not work on H4 - when attempting to kill the CenRep
+// server the board locks up.  Tried debugging it on hardware but spent ages
+// trying to get TRK to work and couldn't so these will be WINSCW only tests.
+//
+//		APPSERV-TZLOCAL-CR1606-CIT-01
+//		APPSERV-TZLOCAL-CR1606-CIT-02
+//		APPSERV-TZLOCAL-CR1606-CIT-03
+//		APPSERV-TZLOCAL-CR1606-CIT-04
+//
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0001
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Set the time zone to a known starting point using TZ
+//! @SYMTestActions Set time zone and verify time zone
+//! @SYMTestExpectedResults Time zone is correctly set
+
+RUN_TEST_STEP 100 TzLocalTestserver TestSetTimeZoneStep         c:\tzlocaltestdata.ini UKTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0001
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0002
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0002
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 001
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Get time zone info from time zone id
+//! @SYMTestActions Read TzId and get Tz infor from the ID and compare to ini file
+//! @SYMTestExpectedResults Time zone id, Standard Tz Name, DST name, Short Tz Name, Short DST Name
+
+RUN_TEST_STEP 100 TzLocalTestserver TestGetTzInfoFromIdStep c:\tzlocaltestdata.ini UKTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0002
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0003
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0003
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 002 005 006 007 008
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Get Tz info from a city object
+//! @SYMTestActions Read the TzId, get the default city from TzId then get Tz info and compare to ini file
+//! @SYMTestExpectedResults Time zone id, Standard Tz Name, DST name, Short Tz Name, Short DST Name
+
+RUN_TEST_STEP 100 TzLocalTestserver TestGetTzInfoFromDefCityStep c:\tzlocaltestdata.ini UKTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0003
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0004
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0004
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 003
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Get a list of all time zones sorted alphabetically
+//! @SYMTestActions Read the sort key, get the list of time zones and compare against ini file then repeat
+//! @SYMTestExpectedResults List of time zones
+
+RUN_TEST_STEP 100 TzLocalTestserver TestGetAllTzStep c:\tzlocaltestdata.ini AllTzAlphaAsc
+RUN_TEST_STEP 100 TzLocalTestserver TestGetAllTzStep c:\tzlocaltestdata.ini AllTzAlphaDesc
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0004
+
+START_TESTCASE PIM-TZL-TZN-HW-0007
+//! @SYMTestCaseID PIM-TZL-TZN-HW-0007
+//! @SYMTestType CT
+//! @SYMTestPriority 1
+//! @SYMPREQ 1776
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc  Sorted time zone array with user defined time zone
+//! @SYMTestActions Create a user defined time zone. Read the sort key, get the list of time zones sort by standard names and compare against ini file then repeat
+//! @SYMTestExpectedResults List of time zones
+
+RUN_TEST_STEP 100 TzLocalTestserver TestGetAllTzStep c:\tzlocaltestdata.ini AllTzAlphaAscUser
+RUN_TEST_STEP 100 TzLocalTestserver TestGetAllTzStep c:\tzlocaltestdata.ini AllTzAlphaDescUser
+RUN_TEST_STEP 100 TzLocalTestserver TestGetAllTzStep c:\tzlocaltestdata.ini AllTzUTCAscUser
+RUN_TEST_STEP 100 TzLocalTestserver TestGetAllTzStep c:\tzlocaltestdata.ini AllTzUTCDescUser
+END_TESTCASE PIM-TZL-TZN-HW-0007
+
+START_TESTCASE PIM-TZL-TZN-HW-0011
+//! @SYMTestCaseID PIM-TZL-TZN-HW-0011
+//! @SYMTestType CT
+//! @SYMTestPriority 1
+//! @SYMPREQ 1776
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Data source
+//! @SYMTestActions Create a user defined time zone. Get time zone, city and city group names only in user defined database
+//! @SYMTestExpectedResults Obtained time zone, city and city group names are only belong to user defined database.
+RUN_TEST_STEP 100 TzLocalTestserver TestGetAllTzStep c:\tzlocaltestdata.ini TzUser
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini UserCity
+RUN_TEST_STEP 100 TzLocalTestserver TestGetCityGroupInfoStep c:\tzlocaltestdata.ini CitiesGroupUser
+END_TESTCASE PIM-TZL-TZN-HW-0011
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0005
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0005
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 004
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Get a list of all time zones sorted by UTC offset
+//! @SYMTestActions Read the sort key, get the list of time zones and compare against ini file then repeat
+//! @SYMTestExpectedResults List of time zones
+
+RUN_TEST_STEP 100 TzLocalTestserver TestGetAllTzStep c:\tzlocaltestdata.ini AllTzUTCAsc
+RUN_TEST_STEP 100 TzLocalTestserver TestGetAllTzStep c:\tzlocaltestdata.ini AllTzUTCDesc
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0005
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0007
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0007
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 009 010 014 015
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Get a list of cities
+//! @SYMTestActions Read the sort key the get cities from the TzId and default city
+//! @SYMTestExpectedResults Alphabetically sorted list of cities
+
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep         c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini AlphaAscWithTzid
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini AlphaDescWithTzid
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini AlphaAscWithCity
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini AlphaDescWithCity
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep      c:\tzlocaltestdata.ini UKTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0007
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0009
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0009
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 012 013 20 21
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Get a list of all cities
+//! @SYMTestActions Read sort key, get a list of sorted cities then repeat for another sort key
+//! @SYMTestExpectedResults Alphabetically and UTC sorted cities
+
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep         c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep         c:\tzlocaltestdata.ini GermanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini AlphaAsc
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini AlphaDesc
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini UTCSortedAsc
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini UTCSortedDesc
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep      c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep      c:\tzlocaltestdata.ini GermanTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0009
+
+START_TESTCASE PIM-TZL-TZN-HW-0008
+//! @SYMTestCaseID PIM-TZL-TZN-HW-0008
+//! @SYMTestType CT
+//! @SYMTestPriority 1
+//! @SYMPREQ 1776
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Sorted city array with user defined time zone
+//! @SYMTestActions Create a user defined time zone. Read sort key, get a list of sorted cities then repeat for another sort key
+//! @SYMTestExpectedResults Alphabetically and UTC sorted cities
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini AlphaAscUser
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini AlphaDescUser
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini UTCSortedAscUser
+RUN_TEST_STEP 100 TzLocalTestserver TestGetSortedCitiesStep c:\tzlocaltestdata.ini UTCSortedDescUser
+END_TESTCASE PIM-TZL-TZN-HW-0008
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0011
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0011
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 014
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Correct and Incorrect addition of user defined cities to time zones
+//! @SYMTestActions Add city, Add city again to time zone, add city to different zone then clean up
+//! @SYMTestExpectedResults Cant define city again in the same zone but can in different zone
+
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep            c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP_RESULT 106 100 TzLocalTestserver TestAddCityStep c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep            c:\tzlocaltestdata.ini AustralianTz
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep         c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep         c:\tzlocaltestdata.ini AustralianTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0011
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0013
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0013
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 016 017
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Get city group information
+//! @SYMTestActions Get all city group names then get a list of cities in a group
+//! @SYMTestExpectedResults Sorted list of groups and cities within a group
+
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep          c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetCityGroupInfoStep c:\tzlocaltestdata.ini CitiesInUkGroup
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep       c:\tzlocaltestdata.ini UKTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0013
+
+START_TESTCASE PIM-TZL-TZN-HW-0009
+//! @SYMTestCaseID PIM-TZL-TZN-HW-0009
+//! @SYMTestType CT
+//! @SYMTestPriority 1
+//! @SYMPREQ 1776
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Sorted city group array with user defined time zone
+//! @SYMTestActions Create a user defined time zone. Get all city group names in ascending or descending order 
+//! @SYMTestExpectedResults Sorted list of groups and cities within a group
+RUN_TEST_STEP 100 TzLocalTestserver TestGetCityGroupInfoStep c:\tzlocaltestdata.ini CitiesInUkGroupUser
+END_TESTCASE PIM-TZL-TZN-HW-0009
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0015
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0015
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 022 023 024 025 026 027 028
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Get access to current, home and interest zones
+//! @SYMTestActions Set time zone, get cached zones, change zone, get cahed info and recent zone info
+//! @SYMTestExpectedResults Returns cached zone and recent zone information
+
+RUN_TEST_STEP 100 TzLocalTestserver TestSetTimeZoneStep                      c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep        c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep                          c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestSetFrequentlyUsedZoneStep            c:\tzlocaltestdata.ini UKTz1
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep                          c:\tzlocaltestdata.ini AmericanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestSetFrequentlyUsedZoneStep            c:\tzlocaltestdata.ini AmericanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep        c:\tzlocaltestdata.ini UKTz1
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep        c:\tzlocaltestdata.ini AmericanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestSetTimeZoneStep                      c:\tzlocaltestdata.ini GermanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep                          c:\tzlocaltestdata.ini GermanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestSetFrequentlyUsedZoneStep            c:\tzlocaltestdata.ini GermanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep        c:\tzlocaltestdata.ini GermanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep        c:\tzlocaltestdata.ini UKTz1
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep        c:\tzlocaltestdata.ini AmericanTz
+// The following step should be used when the tz is changed by the tz component
+// RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep       c:\tzlocaltestdata.ini UKTz2
+// The following step should be used when tz is changed by the TzLocalization
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep        c:\tzlocaltestdata.ini GermanTz2
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0015
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0016
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0016
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 022 023 024 026 027 028
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Ensure that cached zones can be changed and recent zones updated correctly
+//! @SYMTestActions Set home cached zone, get current zone info, get home and interest zone info and recent zones
+//! @SYMTestExpectedResults New cached zones are set, recent zones are updated
+
+RUN_TEST_STEP 100 TzLocalTestserver TestSetFrequentlyUsedZoneStep     c:\tzlocaltestdata.ini AmericanTz1
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini GermanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini AmericanTz1
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini AmericanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini UKTz2
+// The following step should be used when the tz is changed by the tz component
+// RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini UKTz3
+// The following step should be used when tz is changed by the TzLocalization
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep  c:\tzlocaltestdata.ini GermanTz3
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0016
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0017
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0017
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 022 024 025 026 027 028
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Change interest zones
+//! @SYMTestActions Change cached interest zone, get current cached zone, get recent zones
+//! @SYMTestExpectedResults Home cached zones is changed, recent zones are updated 
+
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep                   c:\tzlocaltestdata.ini FrenchTz
+RUN_TEST_STEP 100 TzLocalTestserver TestSetFrequentlyUsedZoneStep     c:\tzlocaltestdata.ini FrenchTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini GermanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini AmericanTz1
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini FrenchTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini AmericanTz2
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini UKTz3
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0017
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0018
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0018
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 022 024 025 026 027 028
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Revert to default current time zone
+//! @SYMTestActions Change current time zone, get cached zones and recent zones
+//! @SYMTestExpectedResults Current zone is reverted, recent zones are updated
+
+RUN_TEST_STEP 100 TzLocalTestserver TestSetTimeZoneStep               c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini FrenchTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini GermanTz2
+RUN_TEST_STEP 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini AmericanTz3
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep                c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep                c:\tzlocaltestdata.ini GermanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep                c:\tzlocaltestdata.ini AmericanTz
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep                c:\tzlocaltestdata.ini FrenchTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0018
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0021
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0021
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Test that methods leave when provided with incorrect data
+//! @SYMTestActions Test with invlaid tzid, cached zones and city groups ids
+//! @SYMTestExpectedResults Method leaves correctly
+
+RUN_TEST_STEP_RESULT 106 100 TzLocalTestserver TestGetTzInfoFromIdStep           c:\tzlocaltestdata.ini InvalidData
+RUN_TEST_STEP_RESULT 106 100 TzLocalTestserver TestSetFrequentlyUsedZoneStep     c:\tzlocaltestdata.ini InvalidData
+RUN_TEST_STEP_RESULT 106 100 TzLocalTestserver TestGetFrequentlyUsedZoneInfoStep c:\tzlocaltestdata.ini InvalidData
+RUN_TEST_STEP_RESULT 106 100 TzLocalTestserver TestRemoveCityStep                c:\tzlocaltestdata.ini InvalidData
+RUN_TEST_STEP_RESULT 106 100 TzLocalTestserver TestAddCityStep                   c:\tzlocaltestdata.ini ValidAndInvalidData
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0021
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0022
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0022
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Test all API's for OOM
+//! @SYMTestActions OOM test for Tz, City, Groups, Tz manipulation and Find API's
+//! @SYMTestExpectedResults All API's handle the OOM situation
+
+RUN_TEST_STEP 100 TzLocalTestserver TestTzOOMStep
+RUN_TEST_STEP 100 TzLocalTestserver TestCityOOMStep          c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGroupsOOMStep
+RUN_TEST_STEP 100 TzLocalTestserver TestTzManipOOMStep
+RUN_TEST_STEP 100 TzLocalTestserver TestFindFunctionsOOMStep c:\tzlocaltestdata.ini UKTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0022
+
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0023
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0023
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Test GetCitiesWithUtcOffset()
+//! @SYMTestActions Add a number of cities to a tz, get cities with utc offset and compare to ini file
+//! @SYMTestExpectedResults A list of cities as defined in the ini file
+
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep          c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep          c:\tzlocaltestdata.ini PortugalTz
+RUN_TEST_STEP 100 TzLocalTestserver TestAddCityStep          c:\tzlocaltestdata.ini AustralianTz
+RUN_TEST_STEP 100 TzLocalTestserver TestGetCitiesUTCOffStep  c:\tzlocaltestdata.ini CitiesWithUTCOffset1
+RUN_TEST_STEP 100 TzLocalTestserver TestGetCitiesUTCOffStep  c:\tzlocaltestdata.ini CitiesWithUTCOffset2
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep       c:\tzlocaltestdata.ini UKTz
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep       c:\tzlocaltestdata.ini PortugalTz
+RUN_TEST_STEP 100 TzLocalTestserver TestRemoveCityStep       c:\tzlocaltestdata.ini AustralianTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0023
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0024
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0024
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Test GetTzWithUtcOffset()
+//! @SYMTestActions Get the utc offset and fetch all tz for offset and compare to ini
+//! @SYMTestExpectedResults A list of time zones as defined in the ini file
+
+RUN_TEST_STEP 100 TzLocalTestserver TestGetTzUTCOffStep  c:\tzlocaltestdata.ini TzWithUTCOffset1
+RUN_TEST_STEP 100 TzLocalTestserver TestGetTzUTCOffStep  c:\tzlocaltestdata.ini TzWithUTCOffset2
+RUN_TEST_STEP 100 TzLocalTestserver TestGetTzUTCOffStep  c:\tzlocaltestdata.ini TzWithUTCOffset3
+RUN_TEST_STEP 100 TzLocalTestserver TestGetTzUTCOffStep  c:\tzlocaltestdata.ini TzWithUTCOffset4
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0024
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0025
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0025
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 875
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Test GetFrequentlyUsedZoneCityL()
+//! @SYMTestActions Set a city for ECurrenttimeZone, get the city using GetFrequentlyUsedZoneCityL, compare the result
+//! @SYMTestExpectedResults Save and extracted city names should match
+
+RUN_TEST_STEP 100 TzLocalTestserver TestCheckCurrentZoneStep c:\tzlocaltestdata.ini UKTz4
+RUN_TEST_STEP 100 TzLocalTestserver TestCheckCurrentZoneStep c:\tzlocaltestdata.ini UKTz5
+END_TESTCASE PIM-APPSERV-TZLOCAL-PREQ875-CIT-HW-0025

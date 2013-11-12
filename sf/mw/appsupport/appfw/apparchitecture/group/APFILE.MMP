@@ -1,0 +1,71 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+//
+// APFILE.MMP for component APFILE
+//
+
+/**
+@file
+
+@SYMPurpose apfile.dll Internal server helpers
+*/
+
+
+target          apfile.dll
+CAPABILITY All -Tcb
+targettype      DLL
+UID		0x1000008D 0x10003A3B
+VENDORID 0x70000001
+
+SOURCEPATH	../apfile
+
+userinclude   ../inc
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+macro UI_FRAMEWORKS_V1_REMNANT_FOR_JAVA_MIDLET_INSTALLER
+
+source			APFREC.CPP APFSTD.CPP APRuleBased.CPP ApLaunchChecker.cpp
+source			apfmimecontentpolicy.cpp
+
+#ifndef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+source apinstallationmonitor.cpp
+#endif
+
+library         euser.lib efsrv.lib apparc.lib apgrfx.lib bafl.lib apserv.lib ecom.lib 
+library			apmime.lib caf.lib
+library			centralrepository.lib
+
+
+START WINS
+	baseaddress	0x43000000
+END
+
+START MARM
+END
+
+#ifdef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+	deffile APFILE.DEF
+#else
+	deffile apfile_legacy.def
+#endif
+
+// For the benefit of Eshell which cannot build a resource registration file
+START RESOURCE	eshell_reg.rss
+TARGETPATH	/private/10003a3f/apps
+END
+
+SMPSAFE

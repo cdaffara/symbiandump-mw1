@@ -1,0 +1,338 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+// Resource Identifier
+NAME TZTZ
+
+// INCLUDES
+#include <uikon.rh>
+#include "TimeZoneLocalization.rh"
+
+#include "TimeZoneLocalization.rls"
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE DEFAULT_CACHED_TIMEZONES r_df_cached_zones
+	{
+	default_home_zone_id = 2592;
+	default_zone_of_interest_id = 920;
+	default_recent_zone1 = 2488;
+	default_recent_zone2 = 2656;
+	}
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_europe_london
+	{
+	time_zone_id = 2592;
+	standard_name = london_standard_name;
+	daylight_name = london_daylight_name;
+	short_standard_name = london_short_standard_name;
+	short_daylight_name = london_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 1;
+			city_name = london_london_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 1;
+			city_name = london_manchester_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = london_birmingham_name;
+			}
+		};
+	}
+	
+// europe/tirane ============================================================
+RESOURCE LOCALIZED_TIMEZONE r_tz_europe_tirane
+	{
+	time_zone_id = 2728;
+	standard_name = tirane_standard_name;
+	daylight_name = tirane_daylight_name;
+	short_standard_name = tirane_short_standard_name;
+	short_daylight_name = tirane_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 5;
+			city_name = tirane_tirane_name;
+			}
+		};
+	}
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_europe_lisbon
+	{
+	time_zone_id = 2584;
+	standard_name = lisbon_standard_name;
+	daylight_name = lisbon_daylight_name;
+	short_standard_name = lisbon_short_standard_name;
+	short_daylight_name = lisbon_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 5;
+			city_name = lisbon_lisbon_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 5;
+			city_name = lisbon_porto_name;
+			}
+		};
+	}
+	
+RESOURCE LOCALIZED_TIMEZONE r_tz_america_los_angeles
+	{
+	time_zone_id = 920;
+	standard_name = los_angeles_standard_name;
+	daylight_name = los_angeles_daylight_name;
+	short_standard_name = los_angeles_short_standard_name;
+	short_daylight_name = los_angeles_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 2;
+			city_name = los_angeles_los_angeles_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 2;
+			city_name = los_angeles_san_francisco_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 3;
+			city_name = los_angeles_portland_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 4;
+			city_name = los_angeles_seattle_name;
+			}
+		};
+	}
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_america_chicago
+	{
+	time_zone_id = 600;
+	standard_name = chicago_standard_name;
+	daylight_name = chicago_daylight_name;
+	short_standard_name = chicago_short_standard_name;
+	short_daylight_name = chicago_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 7;
+			city_name = chicago_chicago_name;
+			}
+		};
+	}
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_europe_berlin
+	{
+	time_zone_id = 2488;
+	standard_name = berlin_standard_name;
+	daylight_name = berlin_daylight_name;
+	short_standard_name = berlin_short_standard_name;
+	short_daylight_name = berlin_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 5;			
+			city_name = berlin_berlin_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 5;
+			city_name = berlin_bonn_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = berlin_frankfurter_name;
+			}
+		};
+	}
+	
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_europe_paris
+	{
+	time_zone_id = 2656;
+	standard_name = paris_standard_name;
+	daylight_name = paris_daylight_name;
+	short_standard_name = paris_short_standard_name;
+	short_daylight_name = paris_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 5;
+			city_name = paris_paris_city_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 5;
+			city_name = paris_nice_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 5;
+			city_name = paris_stockholm_name;
+			}
+		};
+	}
+
+
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_australia_sydney
+	{
+	time_zone_id = 2208;
+	standard_name = sydney_standard_name;
+	daylight_name = sydney_daylight_name;
+	short_standard_name = sydney_short_standard_name;
+	short_daylight_name = sydney_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 6;
+			city_name = sydney_sydney_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = sydney_ballarat_name;
+			},
+		TIMEZONE_CITY
+			{
+			city_group_id = 6;
+			city_name = sydney_canberra_name;
+			}
+		};
+	}
+
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_asia_seoul
+	{
+	time_zone_id = 1928;
+	standard_name = seoul_standard_name;
+	daylight_name = seoul_daylight_name;
+	short_standard_name = seoul_short_standard_name;
+	short_daylight_name = seoul_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 8;
+			city_name = seoul_seoul_name;
+			}
+		};
+	}
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_asia_tehran
+	{
+	time_zone_id = 1976;
+	standard_name = tehran_standard_name;
+	daylight_name = tehran_daylight_name;
+	short_standard_name = tehran_short_standard_name;
+	short_daylight_name = tehran_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 8;
+			city_name = tehran_tehran_name;
+			}
+		};
+	}
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_pacific_auckland
+	{
+	time_zone_id = 2904;
+	standard_name = auckland_standard_name;
+	daylight_name = auckland_daylight_name;
+	short_standard_name = auckland_short_standard_name;
+	short_daylight_name = auckland_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 9;
+			city_name = auckland_auckland_name;
+			}
+		};
+	}
+	
+RESOURCE LOCALIZED_TIMEZONE r_tz_atlantic_stanley
+	{
+	time_zone_id = 2128;
+	standard_name = stanley_standard_name;
+	daylight_name = stanley_daylight_name;
+	short_standard_name = stanley_short_standard_name;
+	short_daylight_name = stanley_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 10;
+			city_name = stanley_stanley_name;
+			}
+		};
+	}
+	
+RESOURCE LOCALIZED_TIMEZONE r_tz_europe_sofia
+	{
+	time_zone_id = 2704;
+	standard_name = sofia_standard_name;
+	daylight_name = sofia_daylight_name;
+	short_standard_name = sofia_short_standard_name;
+	short_daylight_name = sofia_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 5;
+			city_name = sofia_sofia_name;
+			}
+		};
+	}
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_america_rio_branco
+	{
+	time_zone_id = 1184;
+	standard_name = rio_standard_name;
+	daylight_name = rio_daylight_name;
+	short_standard_name = rio_short_standard_name;
+	short_daylight_name = rio_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_group_id = 11;
+			city_name = rio_rio_branco_name;
+			}
+		};
+	}
+	

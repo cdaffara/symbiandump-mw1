@@ -1,0 +1,74 @@
+// Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Data-type recognisers
+// 
+//
+
+/**
+ @file
+*/
+
+
+PRJ_EXPORTS
+// If there's no destination then the source file will be copied
+// to the same name in /epoc32/include
+
+../group/recognisers.iby /epoc32/rom/include/recognisers.iby
+
+../waprecogniser/wapmime.h SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(wapmime.h)
+
+PRJ_TESTEXPORTS
+// Test Exports
+// Test data exports for t_ebookmark
+../Test/t_ebookmark/TestData/1.ebm 		z:/recogtestdata/1.ebm
+../Test/t_ebookmark/TestData/2.ebm 		z:/recogtestdata/2.ebm
+../Test/t_ebookmark/TestData/3.ebm 		z:/recogtestdata/3.ebm
+../Test/t_ebookmark/TestData/4.notebm 		z:/recogtestdata/4.notebm
+// Test data exports for t_recweb
+../Test/t_recweb/TestData/sample1 		z:/recogtestdata/sample1
+../Test/t_recweb/TestData/sample1.html 		z:/recogtestdata/sample1.html
+../Test/t_recweb/TestData/sample2 		z:/recogtestdata/sample2
+../Test/t_recweb/TestData/sample2.htm 		z:/recogtestdata/sample2.htm
+../Test/t_recweb/TestData/sample3 		z:/recogtestdata/sample3
+../Test/t_recweb/TestData/sample3.xhtml 	z:/recogtestdata/sample3.xhtml
+../Test/t_recweb/TestData/sample4 		z:/recogtestdata/sample4
+../Test/t_recweb/TestData/sample4.xml 		z:/recogtestdata/sample4.xml
+// Test data exports for t_recwap
+../Test/t_recwap/TestData/a.wml 		z:/recogtestdata/a.wml
+../Test/t_recwap/TestData/a.wmlc 		z:/recogtestdata/a.wmlc
+../Test/t_recwap/TestData/a.wmlsc 		z:/recogtestdata/a.wmlsc
+../Test/t_recwap/TestData/a.wmls 		z:/recogtestdata/a.wmls
+../Test/t_recwap/TestData/a.dtd 		z:/recogtestdata/a.dtd
+../Test/t_recwap/TestData/a.wbxml 		z:/recogtestdata/a.wbxml
+
+// Test iby file
+../Test/Group/recogniserstest.iby /epoc32/rom/include/recogniserstest.iby
+
+PRJ_MMPFILES
+
+../weburlrec/weburlrec.mmp
+../eBookmark/ebookmark.mmp
+../recweb/RECWEB.MMP
+../waprecogniser/waprecogniser.mmp
+
+PRJ_TESTMMPFILES
+
+// Application-Protocols Recogniser Test Framework
+../Test/Group/t_recogtest.mmp
+
+// Test Modules
+../Test/Group/t_ebookmark.mmp
+../Test/Group/t_weburlrec.mmp
+../Test/Group/t_recweb.mmp
+../Test/Group/t_recwap.mmp

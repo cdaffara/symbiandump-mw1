@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="4ca09f5a7dd7d067447c8114a14f1816" dataversion="1.0">
+<name>ximp_search_base_api</name>
+<description>This is a API that provides the common error codes, plugin UIDs and operation types of search base.</description>
+<type>c++</type>
+<subsystem>ximp_search_base_api</subsystem>
+<libs></libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

@@ -1,0 +1,48 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// tzclient.dll Client-side to the Time Zone Server
+// 
+//
+
+TARGET				tzclient.dll
+TARGETTYPE			dll
+CAPABILITY			All -TCB
+
+UID					0x1000008D			0x1020383D
+VENDORID			0x70000001
+
+SOURCEPATH			.
+DOCUMENT			release.txt
+
+SOURCEPATH			../Client/Source
+SOURCE				timezone.cpp timezoneconverter.cpp tzid.cpp timezonerules.cpp vtzrules.cpp timezoneuserdata.cpp
+SOURCE				tzlocalizedcityrecord.cpp
+SOURCE				tzlocalizedtimezonerecord.cpp
+
+USERINCLUDE			../Client/Include
+USERINCLUDE			../Server/Include
+USERINCLUDE			../Include
+USERINCLUDE                     ../../../commonappservices/backuprestorenotification/inc
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY				euser.lib estor.lib
+
+DEFFILE				TZCLIENT.DEF
+
+START WINS
+	baseaddress		0x40700000
+END
+
+SMPSAFE

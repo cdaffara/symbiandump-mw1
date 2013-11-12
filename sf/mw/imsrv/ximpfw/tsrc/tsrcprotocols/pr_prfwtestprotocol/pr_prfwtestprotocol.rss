@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ECOM registery info for Presence Framework Test Protocol
+*
+*/
+
+#include <ecom/registryinfov2.rh>
+#include <ximpprotocolpluginifids.hrh>
+
+#include "prfwtestprotocols_resource.hrh"
+
+
+
+// ---------------------------------------------------------------------------
+// ECOM registery info for Presence Framework ECOM hook
+// ---------------------------------------------------------------------------
+//
+RESOURCE REGISTRY_INFO theInfo
+    {
+    resource_format_version = RESOURCE_FORMAT_VERSION_2;
+    dll_uid = PRFW_DLL_UID_PR_PRFWTESTPROTOCOL;
+
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = XIMP_ECOM_IF_UID_PROTOCOL_PLUGIN_BASE_INTERFACE;
+
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = PRFW_TST_PROTOCOL_1_IMPLEMENTATION_UID;
+                    version_no         = PRFW_TST_PROTOCOL_1_VERSION_NO;
+                    display_name       = PRFW_TST_PROTOCOL_1_DISPLAY_NAME;
+                    default_data       = PRFW_TST_PROTOCOL_1_DEFAULT_DATA;
+                    opaque_data        = PRFW_TST_PROTOCOL_1_OPAQUE_DATA;
+                    }
+                };
+            }
+        };
+    }

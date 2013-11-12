@@ -1,0 +1,94 @@
+/*
+* Copyright (c) 2006-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+//uncomment both of these macros to use the CLIENT_REQUEST_QUEUE
+macro CLIENT_REQUEST_QUEUE
+#define CLIENT_REQUEST_QUEUE
+
+TARGET          oommonitor.dll
+
+TARGETTYPE      dll
+UID             0x1000008D 0x10282DBF
+
+NOEXPORTLIBRARY
+#ifdef WINS
+DEFFILE         ../bwins/oommonitor.DEF
+#else
+DEFFILE         ../eabi/oommonitor.DEF
+#endif
+
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+
+USERINCLUDE     ../inc
+
+// This is a SYSTEMINCLUDE macro containing the middleware
+// layer specific include directories
+MW_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../src
+SOURCE          oomIdletimerule.cpp
+SOURCE          oomaction.cpp
+SOURCE          oomactionconfig.cpp
+SOURCE          oomactionlist.cpp
+SOURCE          oomactionref.cpp
+SOURCE          oomappclosetimer.cpp
+SOURCE          oomappclosewatcher.cpp
+SOURCE          oomapplicationconfig.cpp
+SOURCE          oomcloseapp.cpp
+SOURCE          oomcloseappconfig.cpp
+SOURCE          oomconfig.cpp
+SOURCE          oomconfigparser.cpp
+SOURCE          oomforegroundrule.cpp
+SOURCE          oomglobalconfig.cpp
+SOURCE          oomlog.cpp
+SOURCE          oommemorymonitor.cpp
+SOURCE          oommemorymonitorserver.cpp
+SOURCE          oommemorymonitorsession.cpp
+SOURCE          oommonitor.cpp
+SOURCE          oommonitorplugin.cpp
+SOURCE          oommonitorsession.cpp
+SOURCE          oomoutofmemorywatcher.cpp
+SOURCE          oompanic.cpp
+SOURCE          oompluginwaiter.cpp
+SOURCE          oomrunplugin.cpp
+SOURCE          oomrunpluginconfig.cpp
+SOURCE          oomsubscribehelper.cpp
+SOURCE          oomwindowgrouplist.cpp
+SOURCE          oomwserveventreceiver.cpp
+#ifdef CLIENT_REQUEST_QUEUE
+SOURCE          oomclientrequestqueue.cpp
+#endif
+
+LIBRARY         euser.lib
+LIBRARY         apparc.lib
+LIBRARY         eikcore.lib
+LIBRARY         aknnotify.lib
+LIBRARY         apgrfx.lib
+LIBRARY         ws32.lib
+LIBRARY         bafl.lib
+LIBRARY         ecom.lib
+LIBRARY         hal.lib
+LIBRARY         efsrv.lib
+LIBRARY         xmlframework.lib
+LIBRARY         cone.lib
+#ifdef _DEBUG
+LIBRARY         flogger.lib
+#endif 

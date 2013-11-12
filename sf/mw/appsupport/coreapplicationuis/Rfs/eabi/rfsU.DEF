@@ -1,0 +1,38 @@
+EXPORTS
+	_ZN10CRfsServer11ThreadStartERNS_7TSignalE @ 1 NONAME
+	_ZN10RRfsClient10PerformRfsE8TRfsTypei @ 2 NONAME
+	_ZN10RRfsClient15RunScriptInFileERK7TDesC16 @ 3 NONAME
+	_ZN10RRfsClient19PerformPostEikonRfsE8TRfsType @ 4 NONAME
+	_ZN10RRfsClient21RunScriptInDescriptorERK7TDesC16 @ 5 NONAME
+	_ZN10RRfsClient5CloseEv @ 6 NONAME
+	_ZN10RRfsClient7ConnectEv @ 7 NONAME
+	_ZN10RRfsClientC1Ev @ 8 NONAME
+	_ZN10RRfsClientC2Ev @ 9 NONAME
+	_ZN11CRfsHandler12ActivateRfsLE8TRfsTypei @ 10 NONAME
+	_ZN11CRfsHandler6CancelEv @ 11 NONAME
+	_ZN11CRfsHandlerC1Ev @ 12 NONAME
+	_ZN11CRfsHandlerC2Ev @ 13 NONAME
+	_ZN11CRfsHandlerD0Ev @ 14 NONAME
+	_ZN11CRfsHandlerD1Ev @ 15 NONAME
+	_ZN11CRfsHandlerD2Ev @ 16 NONAME
+	_ZTI11CRfsHandler @ 17 NONAME ; #<TI>#
+	_ZTV11CRfsHandler @ 18 NONAME ; #<VT>#
+	_ZTI10CRfsScript @ 19 NONAME ; #<TI>#
+	_ZTI10CRfsServer @ 20 NONAME ; #<TI>#
+	_ZTI11CRfsCommand @ 21 NONAME ; #<TI>#
+	_ZTI11CRfsSession @ 22 NONAME ; #<TI>#
+	_ZTI12CRfsEikonEnv @ 23 NONAME ; #<TI>#
+	_ZTI12CRfsShutdown @ 24 NONAME ; #<TI>#
+	_ZTI13CRfsCompleter @ 25 NONAME ; #<TI>#
+	_ZTI9CRfsAppUi @ 26 NONAME ; #<TI>#
+	_ZTV10CRfsScript @ 27 NONAME ; #<VT>#
+	_ZTV10CRfsServer @ 28 NONAME ; #<VT>#
+	_ZTV11CRfsCommand @ 29 NONAME ; #<VT>#
+	_ZTV11CRfsSession @ 30 NONAME ; #<VT>#
+	_ZTV12CRfsEikonEnv @ 31 NONAME ; #<VT>#
+	_ZTV12CRfsShutdown @ 32 NONAME ; #<VT>#
+	_ZTV13CRfsCompleter @ 33 NONAME ; #<VT>#
+	_ZTV9CRfsAppUi @ 34 NONAME ; #<VT>#
+	_ZTI12CRfsConTimer @ 35 NONAME
+	_ZTV12CRfsConTimer @ 36 NONAME
+

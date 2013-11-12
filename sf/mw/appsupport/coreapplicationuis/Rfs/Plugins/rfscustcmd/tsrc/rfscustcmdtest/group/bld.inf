@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+* Build information file for rfscustcmdtest tests.
+*
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_TESTEXPORTS
+../rom/rfscustcmdtest.iby        CORE_OS_LAYER_IBY_EXPORT_PATH( rfscustcmdtest.iby )
+../data/excludelist.txt          /epoc32/release/winscw/udeb/z/private/100059C9/excludelist.txt
+../data/excludelist.txt          /epoc32/release/winscw/urel/z/private/100059C9/excludelist.txt
+../data/excludelist.txt          /epoc32/data/z/private/100059C9/excludelist.txt
+// Export file for emulator. For HW file come from pkg
+../init/rfscustcmdtest.ini       /epoc32/winscw/c/testframework/rfscustcmdtest.ini
+
+PRJ_TESTMMPFILES
+rfscustcmdtest.mmp

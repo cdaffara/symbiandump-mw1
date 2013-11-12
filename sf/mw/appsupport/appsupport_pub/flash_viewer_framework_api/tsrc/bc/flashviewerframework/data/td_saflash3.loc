@@ -1,0 +1,37 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:      
+*
+*/
+
+
+
+
+
+
+//d: Flash Lite app title for aif caption file
+//d: in list view
+//l: list_single_large_graphic_pane_1
+//w:
+//r:2.8
+//
+#define qtn_apps_flite_list3                 "TestFlash3"
+
+//d: Flash Lite app title for aif caption file
+//d: in grid view
+//l: cell_app_pane_1
+//w:
+//r:2.8
+//
+#define qtn_apps_flite_grid3                 "TestFlash3"

@@ -1,0 +1,10 @@
+component	syslibs_sensors_ssyreference
+
+source	\sf\mw\appsupport\sensorsupport\testsensor
+
+exports	\sf\mw\appsupport\sensorsupport\testsensor\group
+binary	\sf\mw\appsupport\sensorsupport\testsensor\group	all
+
+notes_source	\component_defs\release.src
+
+ipr T

@@ -1,0 +1,10 @@
+component	app-framework_viewsrv
+source	\sf\mw\appsupport\appfw\viewserver
+binary	\sf\mw\appsupport\appfw\viewserver\group	all
+exports	\sf\mw\appsupport\appfw\viewserver\group
+notes_source	\component_defs\release.src
+
+
+ipr D 
+ipr T \sf\mw\appsupport\appfw\viewserver\test
+

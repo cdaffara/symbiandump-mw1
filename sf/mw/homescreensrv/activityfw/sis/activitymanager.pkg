@@ -1,0 +1,38 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"activitymanager"},(0x200267B4),1,0,0,TYPE=SA, RU
+
+;Localized Vendor Name
+%{"Nokia"}
+
+;Unique Vendor name
+:"Nokia"
+
+"/epoc32/release/armv5/urel/afservice.dll"-"!:\sys\bin\afservice.dll"
+"/epoc32/data/z/resource/qt/plugins/afservice.qtplugin"-"!:\resource\qt\plugins\afservice.qtplugin"
+
+"/epoc32/release/armv5/urel/hsactivitydbserver.exe"    - "!:\sys\bin\hsactivitydbserver.exe"
+
+"/epoc32/release/armv5/urel/afstorageclient.dll"    - "!:\sys\bin\afstorageclient.dll"
+"/epoc32/release/armv5/urel/afactivitylauncher.dll"    - "!:\sys\bin\afactivitylauncher.dll"
+
+"/epoc32/release/armv5/urel/hbactivityplugin.dll"    - "!:\sys\bin\hbactivityplugin.dll"
+"/epoc32/data/z/resource/qt/plugins/hbactivityplugin.qtplugin"-"!:\resource\qt\plugins\hbactivityplugin.qtplugin"

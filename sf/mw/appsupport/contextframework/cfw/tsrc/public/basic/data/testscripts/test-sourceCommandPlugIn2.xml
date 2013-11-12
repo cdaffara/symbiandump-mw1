@@ -1,0 +1,22 @@
+<script>
+    <if>
+        <contextUpdated>
+            <contextRef source='TestSourcePlugIn' type='SendSourceCommand' value='A2'/>
+        </contextUpdated>
+        <actions>
+            <sourceCommand uid='0x10002001'>
+            	<cmd type='activate'/>
+            </sourceCommand>
+        </actions>
+    </if>
+    <elseIf>
+        <contextUpdated>
+            <contextRef source='TestSourcePlugIn' type='SendSourceCommand' value='B2'/>
+        </contextUpdated>
+        <actions>
+            <sourceCommand uid='0x10002001'>
+            	<cmd type='deactivate'/>
+            </sourceCommand>
+        </actions>
+    </elseIf>
+</script>

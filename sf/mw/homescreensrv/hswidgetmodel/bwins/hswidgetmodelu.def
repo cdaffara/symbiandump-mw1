@@ -1,0 +1,71 @@
+EXPORTS
+	?mouseDoubleClickEvent@HsWidget@@MAEXPAVQGraphicsSceneMouseEvent@@@Z @ 1 NONAME ; void HsWidget::mouseDoubleClickEvent(class QGraphicsSceneMouseEvent *)
+	?qt_metacall@HsWidgetProviderManifest@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 2 NONAME ; int HsWidgetProviderManifest::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?mouseReleaseEvent@HsWidget@@MAEXPAVQGraphicsSceneMouseEvent@@@Z @ 3 NONAME ; void HsWidget::mouseReleaseEvent(class QGraphicsSceneMouseEvent *)
+	??1HsPluginUnloader@@UAE@XZ @ 4 NONAME ; HsPluginUnloader::~HsPluginUnloader(void)
+	?setFaulted@HsWidget@@IAEXXZ @ 5 NONAME ; void HsWidget::setFaulted(void)
+	?faulted@HsWidget@@IAEXXZ @ 6 NONAME ; void HsWidget::faulted(void)
+	?tr@HsPluginUnloader@@SA?AVQString@@PBD0@Z @ 7 NONAME ; class QString HsPluginUnloader::tr(char const *, char const *)
+	?getStaticMetaObject@HsPluginUnloader@@SAABUQMetaObject@@XZ @ 8 NONAME ; struct QMetaObject const & HsPluginUnloader::getStaticMetaObject(void)
+	?onResume@HsWidget@@MAE?AW4ResumeResult@1@XZ @ 9 NONAME ; enum HsWidget::ResumeResult HsWidget::onResume(void)
+	?trUtf8@HsWidgetProviderManifest@@SA?AVQString@@PBD0H@Z @ 10 NONAME ; class QString HsWidgetProviderManifest::trUtf8(char const *, char const *, int)
+	?qt_metacast@HsWidget@@UAEPAXPBD@Z @ 11 NONAME ; void * HsWidget::qt_metacast(char const *)
+	?trUtf8@HsPluginUnloader@@SA?AVQString@@PBD0H@Z @ 12 NONAME ; class QString HsPluginUnloader::trUtf8(char const *, char const *, int)
+	?mousePressEvent@HsWidget@@MAEXPAVQGraphicsSceneMouseEvent@@@Z @ 13 NONAME ; void HsWidget::mousePressEvent(class QGraphicsSceneMouseEvent *)
+	?getStaticMetaObject@HsWidgetFactory@@SAABUQMetaObject@@XZ @ 14 NONAME ; struct QMetaObject const & HsWidgetFactory::getStaticMetaObject(void)
+	?qt_metacast@HsPluginUnloader@@UAEPAXPBD@Z @ 15 NONAME ; void * HsPluginUnloader::qt_metacast(char const *)
+	?staticMetaObject@HsPluginUnloader@@2UQMetaObject@@B @ 16 NONAME ; struct QMetaObject const HsPluginUnloader::staticMetaObject
+	?stopped@HsWidget@@IAEXXZ @ 17 NONAME ; void HsWidget::stopped(void)
+	?metaObject@HsWidgetFactory@@UBEPBUQMetaObject@@XZ @ 18 NONAME ; struct QMetaObject const * HsWidgetFactory::metaObject(void) const
+	?metaObject@HsWidget@@UBEPBUQMetaObject@@XZ @ 19 NONAME ; struct QMetaObject const * HsWidget::metaObject(void) const
+	??0HsWidgetProviderManifest@@QAE@PAVQObject@@@Z @ 20 NONAME ; HsWidgetProviderManifest::HsWidgetProviderManifest(class QObject *)
+	?resume@HsWidget@@QAEXXZ @ 21 NONAME ; void HsWidget::resume(void)
+	?qt_metacast@HsWidgetFactory@@UAEPAXPBD@Z @ 22 NONAME ; void * HsWidgetFactory::qt_metacast(char const *)
+	?start@HsWidget@@QAEXXZ @ 23 NONAME ; void HsWidget::start(void)
+	?setFaulting@HsWidget@@IAEXXZ @ 24 NONAME ; void HsWidget::setFaulting(void)
+	?widgets@HsWidgetProviderManifest@@QBE?AV?$QList@VHsWidgetToken@@@@XZ @ 25 NONAME ; class QList<class HsWidgetToken> HsWidgetProviderManifest::widgets(void) const
+	?tr@HsWidgetProviderManifest@@SA?AVQString@@PBD0H@Z @ 26 NONAME ; class QString HsWidgetProviderManifest::tr(char const *, char const *, int)
+	??_EHsWidget@@UAE@I@Z @ 27 NONAME ; HsWidget::~HsWidget(unsigned int)
+	?widgetPreferenceService@HsWidget@@QBEPAVIHsWidgetPreferenceService@@XZ @ 28 NONAME ; class IHsWidgetPreferenceService * HsWidget::widgetPreferenceService(void) const
+	?createWidget@HsWidgetFactory@@QAEPAVHsWidget@@ABVHsWidgetToken@@@Z @ 29 NONAME ; class HsWidget * HsWidgetFactory::createWidget(class HsWidgetToken const &)
+	?trUtf8@HsPluginUnloader@@SA?AVQString@@PBD0@Z @ 30 NONAME ; class QString HsPluginUnloader::trUtf8(char const *, char const *)
+	?staticMetaObject@HsWidgetFactory@@2UQMetaObject@@B @ 31 NONAME ; struct QMetaObject const HsWidgetFactory::staticMetaObject
+	?setFinished@HsWidget@@IAEXXZ @ 32 NONAME ; void HsWidget::setFinished(void)
+	??_EHsWidgetFactory@@UAE@I@Z @ 33 NONAME ; HsWidgetFactory::~HsWidgetFactory(unsigned int)
+	??_EHsWidgetProviderManifest@@UAE@I@Z @ 34 NONAME ; HsWidgetProviderManifest::~HsWidgetProviderManifest(unsigned int)
+	??1HsWidgetProviderManifest@@UAE@XZ @ 35 NONAME ; HsWidgetProviderManifest::~HsWidgetProviderManifest(void)
+	??1HsWidget@@UAE@XZ @ 36 NONAME ; HsWidget::~HsWidget(void)
+	?tr@HsWidgetFactory@@SA?AVQString@@PBD0H@Z @ 37 NONAME ; class QString HsWidgetFactory::tr(char const *, char const *, int)
+	?trUtf8@HsWidget@@SA?AVQString@@PBD0H@Z @ 38 NONAME ; class QString HsWidget::trUtf8(char const *, char const *, int)
+	??0HsWidget@@QAE@PAVQGraphicsItem@@V?$QFlags@W4WindowType@Qt@@@@@Z @ 39 NONAME ; HsWidget::HsWidget(class QGraphicsItem *, class QFlags<enum Qt::WindowType>)
+	?suspend@HsWidget@@QAEXXZ @ 40 NONAME ; void HsWidget::suspend(void)
+	?staticMetaObject@HsWidgetProviderManifest@@2UQMetaObject@@B @ 41 NONAME ; struct QMetaObject const HsWidgetProviderManifest::staticMetaObject
+	??_EHsPluginUnloader@@UAE@I@Z @ 42 NONAME ; HsPluginUnloader::~HsPluginUnloader(unsigned int)
+	?tr@HsWidget@@SA?AVQString@@PBD0H@Z @ 43 NONAME ; class QString HsWidget::tr(char const *, char const *, int)
+	?trUtf8@HsWidgetProviderManifest@@SA?AVQString@@PBD0@Z @ 44 NONAME ; class QString HsWidgetProviderManifest::trUtf8(char const *, char const *)
+	?loadOnQuery@HsWidgetProviderManifest@@QBE_NXZ @ 45 NONAME ; bool HsWidgetProviderManifest::loadOnQuery(void) const
+	?staticMetaObject@HsWidget@@2UQMetaObject@@B @ 46 NONAME ; struct QMetaObject const HsWidget::staticMetaObject
+	?qt_metacast@HsWidgetProviderManifest@@UAEPAXPBD@Z @ 47 NONAME ; void * HsWidgetProviderManifest::qt_metacast(char const *)
+	?mouseMoveEvent@HsWidget@@MAEXPAVQGraphicsSceneMouseEvent@@@Z @ 48 NONAME ; void HsWidget::mouseMoveEvent(class QGraphicsSceneMouseEvent *)
+	?succeeded@HsWidget@@IAEXXZ @ 49 NONAME ; void HsWidget::succeeded(void)
+	?qt_metacall@HsWidget@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 50 NONAME ; int HsWidget::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?onSuspend@HsWidget@@MAE?AW4SuspendResult@1@XZ @ 51 NONAME ; enum HsWidget::SuspendResult HsWidget::onSuspend(void)
+	??0HsPluginUnloader@@QAE@PAVQPluginLoader@@PAVQObject@@@Z @ 52 NONAME ; HsPluginUnloader::HsPluginUnloader(class QPluginLoader *, class QObject *)
+	?qt_metacall@HsWidgetFactory@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 53 NONAME ; int HsWidgetFactory::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?loadFromXml@HsWidgetProviderManifest@@QAE_NABVQString@@@Z @ 54 NONAME ; bool HsWidgetProviderManifest::loadFromXml(class QString const &)
+	?trUtf8@HsWidget@@SA?AVQString@@PBD0@Z @ 55 NONAME ; class QString HsWidget::trUtf8(char const *, char const *)
+	??0HsWidgetFactory@@QAE@PAVQObject@@@Z @ 56 NONAME ; HsWidgetFactory::HsWidgetFactory(class QObject *)
+	?trUtf8@HsWidgetFactory@@SA?AVQString@@PBD0H@Z @ 57 NONAME ; class QString HsWidgetFactory::trUtf8(char const *, char const *, int)
+	?tr@HsPluginUnloader@@SA?AVQString@@PBD0H@Z @ 58 NONAME ; class QString HsPluginUnloader::tr(char const *, char const *, int)
+	?stop@HsWidget@@QAEXXZ @ 59 NONAME ; void HsWidget::stop(void)
+	?trUtf8@HsWidgetFactory@@SA?AVQString@@PBD0@Z @ 60 NONAME ; class QString HsWidgetFactory::trUtf8(char const *, char const *)
+	?tr@HsWidgetProviderManifest@@SA?AVQString@@PBD0@Z @ 61 NONAME ; class QString HsWidgetProviderManifest::tr(char const *, char const *)
+	?getStaticMetaObject@HsWidgetProviderManifest@@SAABUQMetaObject@@XZ @ 62 NONAME ; struct QMetaObject const & HsWidgetProviderManifest::getStaticMetaObject(void)
+	??1HsWidgetFactory@@UAE@XZ @ 63 NONAME ; HsWidgetFactory::~HsWidgetFactory(void)
+	?tr@HsWidgetFactory@@SA?AVQString@@PBD0@Z @ 64 NONAME ; class QString HsWidgetFactory::tr(char const *, char const *)
+	?qt_metacall@HsPluginUnloader@@UAEHW4Call@QMetaObject@@HPAPAX@Z @ 65 NONAME ; int HsPluginUnloader::qt_metacall(enum QMetaObject::Call, int, void * *)
+	?metaObject@HsPluginUnloader@@UBEPBUQMetaObject@@XZ @ 66 NONAME ; struct QMetaObject const * HsPluginUnloader::metaObject(void) const
+	?tr@HsWidget@@SA?AVQString@@PBD0@Z @ 67 NONAME ; class QString HsWidget::tr(char const *, char const *)
+	?getStaticMetaObject@HsWidget@@SAABUQMetaObject@@XZ @ 68 NONAME ; struct QMetaObject const & HsWidget::getStaticMetaObject(void)
+	?metaObject@HsWidgetProviderManifest@@UBEPBUQMetaObject@@XZ @ 69 NONAME ; struct QMetaObject const * HsWidgetProviderManifest::metaObject(void) const
+

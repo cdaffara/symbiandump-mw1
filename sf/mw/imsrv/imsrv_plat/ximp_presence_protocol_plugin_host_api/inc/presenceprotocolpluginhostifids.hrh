@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Protocol Plugin Host API interface IDs.
+*
+*/
+
+#ifndef PRESENCEPROTOCOLPLUGINHOSTIFIDS_HRH
+#define PRESENCEPROTOCOLPLUGINHOSTIFIDS_HRH
+
+
+/**
+ * @defgroup ximppresprotocolpluginhostapi XIMP Presence Protocol Plugin Host API
+ * @ingroup ximppresenceapi
+ *
+ * Protocol Plugin Host API contains abstract interfaces what
+ * XIMP Framework implements, and what protocol adaptation
+ * plug-ins must use to communicate back to XIMP Framework
+ * direction. XIMP Framework registeres these callback interfaces
+ * to protocol adaptation plug-ins, after instantiating plug-in
+ * objects, but before using them any other way.
+ *
+ * MXIMPProtocolPluginHost interface is the callback interface for
+ * the MXIMPProtocolPlugin.
+ *
+ * MXIMPProtocolConnectionHost interface is the callback interface for
+ * the MXIMPProtocolConnection.
+ *
+ * @since S60 v3.2
+ */
+
+// Protocol plugin host IF id's
+// 40xx - ximp related
+// 41xx - presence related
+// 42xx - instant messaging related
+
+// Interface IDs for XIMPFw Protocol Plugin Host interfaces
+#define PRES_IF_ID_PROTOCOL_PRESENTITY_GROUPS_DATAHOST         4101
+#define PRES_IF_ID_PROTOCOL_PRESENCE_PUBLISHING_DATAHOST       4102
+#define PRES_IF_ID_PROTOCOL_PRESENCE_WATCHING_DATAHOST         4103
+#define PRES_IF_ID_PROTOCOL_PRESENCE_AUTHORIZATION_DATAHOST    4104
+#define PRES_IF_ID_PROTOCOL_PRESENCE_DATAHOST                  4105
+
+#endif // PRESENCEPROTOCOLPLUGINHOSTIFIDS_HRH
+
+

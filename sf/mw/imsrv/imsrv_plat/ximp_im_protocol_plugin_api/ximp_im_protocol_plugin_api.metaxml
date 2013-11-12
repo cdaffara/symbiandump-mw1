@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="d09900a8d963ac479922b3164c34054f" dataversion="1.0">
+<name>ximp_im_protocol_plugin_api</name>
+<description>This is a API that provides instant messaging interfaces to the adaptation plugin which needs to be implemented by the adaptation.</description>
+<type>c++</type>
+<subsystem>ximp_im_protocol_plugin_api</subsystem>
+<libs></libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

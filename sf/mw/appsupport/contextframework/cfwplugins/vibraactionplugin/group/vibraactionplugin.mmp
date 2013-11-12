@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project VibraActionPlugIn
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../inc/vibratraceconfiguration.hrh"
+#include "../inc/vibraactionpluginconst.hrh"
+
+TARGET          vibraactionplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D KVibraActionPlugInDllUid
+CAPABILITY      CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../src
+SOURCE          main.cpp
+SOURCE          vibraactionplugin.cpp
+SOURCE          vibraaction.cpp
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+
+MW_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../data
+START RESOURCE	vibraactionplugin.rss
+TARGET 		    vibraactionplugin.rsc
+TARGETPATH 	    /resource/plugins
+END
+
+LIBRARY         euser.lib
+LIBRARY         bafl.lib
+LIBRARY         hwrmvibraclient.lib
+LIBRARY		    cfservices.lib
+LIBRARY         cfactivatorengine.lib
+#ifdef TRACE_INTO_FILE
+LIBRARY         flogger.lib
+LIBRARY		    efsrv.lib
+#endif

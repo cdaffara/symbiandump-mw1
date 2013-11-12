@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="9763172fb08a16f5748eaffa41ae3e22" dataversion="2.0">
+  <name>Context Subscription API</name>
+  <description>Context Subscription API provides possibility to receive context indications when a context is changed. Context Subscription API is only usable from Context Source Plug-Ins. Context Source Plug-In must first register a subscription to Context Framework before context indications can be received.</description>
+  <type>c++</type>
+  <collection>contextframework</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

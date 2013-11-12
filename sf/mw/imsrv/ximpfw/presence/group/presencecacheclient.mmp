@@ -1,0 +1,62 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for Presence Cache Client
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "presencedlluids.hrh"
+
+
+
+TARGET                  presencecacheclient.dll
+TARGETTYPE              dll
+UID                     XIMP_PRESENCE_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_PRESENCE_CACHE_CLIENT
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+// ---------------------------------------------------------------------------
+SOURCEPATH              ../srcpresencecache/presencecacheclient
+
+SOURCE                  presencecacheclient.cpp
+SOURCE                  presencecacheclientnotification.cpp
+
+USERINCLUDE             ../srcpresencecache/presencecacheclient
+USERINCLUDE             ../srcpresencecache/presencecacheserver
+USERINCLUDE             ../../core/srcdatamodel
+USERINCLUDE             ../../core/srcutils
+USERINCLUDE             ../srcpresencedatamodel
+USERINCLUDE             ../srcpresencedatamodel/presenceinfo
+USERINCLUDE             ../srcpresencedatamodel/presencepublishing
+USERINCLUDE             ../srcpresencedatamodel/presencecache
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY                 euser.lib
+LIBRARY                 ecom.lib
+LIBRARY                 estor.lib   // streams
+LIBRARY                 ximputils.lib
+LIBRARY                 presencedatamodel.lib
+LIBRARY                 ximpdatamodel.lib
+
+#if defined( ARMCC )
+DEFFILE ../eabi/ 
+#elif defined ( WINSCW )
+deffile ../bwins/ 
+#endif
+
+// End of file
+

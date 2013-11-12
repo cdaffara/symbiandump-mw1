@@ -1,0 +1,37 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET			pimtestclient.dll
+TARGETTYPE		dll
+CAPABILITY		All -TCB
+
+UID			0x1000008D  0x101F8226
+VENDORID 		0x70000001
+
+USERINCLUDE		../TestServer/Inc ../Inc
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+SOURCEPATH .
+SOURCE			../TestServer/Client/client.cpp
+SOURCE			../TestServer/Client/utilities.cpp
+SOURCE			../TestServer/Client/TestRegister.cpp
+
+
+DOCUMENT		BLD.INF
+
+LIBRARY			euser.lib efsrv.lib
+LIBRARY 		alarmclient.lib
+
+SMPSAFE

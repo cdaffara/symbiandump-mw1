@@ -1,0 +1,19 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <or>
+            <contextUpdated>
+                <contextRef source='t' type='t.se.delay.ca' evaluationDelay='100'/>
+            </contextUpdated>
+            <contextUpdated>
+                <contextRef source='t' type='t.se.delay.cb' evaluationDelay='200'/>
+            </contextUpdated>
+            <contextUpdated>
+                <contextRef source='t' type='t.se.delay.cc'/>
+            </contextUpdated>
+        </or>
+        <actions>
+            <showMsg typeInt='2' msg='rule 38 - End user action 1'/>
+        </actions>
+    </if>
+</script>

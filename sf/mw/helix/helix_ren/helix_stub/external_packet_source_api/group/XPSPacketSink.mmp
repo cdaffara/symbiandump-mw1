@@ -1,0 +1,43 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET XPSPacketSink.lib
+TARGETTYPE lib
+
+ALWAYS_BUILD_AS_ARM
+
+
+SOURCEPATH ../src
+SOURCE CXPSPacketSink.cpp
+SOURCE CXPSPacket.cpp
+
+
+USERINCLUDE ../inc
+
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE /EPOC32/include/libc
+
+
+
+#if defined(MARM_ARMV5)
+MACRO _EPOC ARM_ADS _ARM_ _RVCT_ VA_LIST_IS_STRUCT
+#elif defined(WINSCW)
+MACRO _EPOC
+#endif
+

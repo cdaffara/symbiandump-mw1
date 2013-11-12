@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="e692cd8a45abe504f8ecb15b29f3ef28" dataversion="2.0">
+  <name>OOD Threshold API</name>
+  <description>A CenRep interface for OOD thresholds</description>
+  <type>c++</type>
+  <collection>sysresmonitoring</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

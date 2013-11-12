@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+TARGET         tsbackstepping.dll
+TARGETTYPE     dll
+UID            0x1000008d  0x200267AD
+SECUREID       0x200267AD
+CAPABILITY     ALL -TCB
+
+EPOCHEAPSIZE   0x100000 0x600000 // 1MB - 6MB
+
+MW_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE    ../inc
+USERINCLUDE     ../../../inc
+USERINCLUDE     ../../utils/inc
+
+SOURCEPATH     ../src
+SOURCE         tsbackstepping.cpp
+SOURCE         tsbacksteppingfilter.cpp
+SOURCE         tsbacksteppingactivation.cpp
+
+SOURCEPATH     ../../utils/src
+SOURCE        tswindowgroupsobserverbase.cpp
+SOURCE        tsidlist.cpp
+
+LIBRARY        euser.lib 
+LIBRARY        ws32.lib // for RWsSession
+LIBRARY        afactivitylauncher.lib
+LIBRARY        estor.lib
+
+DEBUGLIBRARY    flogger.lib
+
+
+SMPSAFE

@@ -1,0 +1,5033 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+// Resource Identifier
+NAME TZTZ
+
+// INCLUDES
+#include <uikon.rh>
+#include "TimeZoneLocalization.rh"
+#include "TimeZoneLocalization.rls"
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE DEFAULT_CACHED_TIMEZONES r_df_cached_zones
+	{
+	default_home_zone_id = 8;
+	default_zone_of_interest_id = 16;
+	default_recent_zone1 = 24;
+	default_recent_zone2 = 32;
+	}
+
+RESOURCE LOCALIZED_TIMEZONE r_tz_1
+	{
+	time_zone_id = 8;
+	standard_name = "FGreenwich Mean Time1";
+	daylight_name = "OBritish Summer Time1";
+	short_standard_name = "BGMT1";
+	short_daylight_name = "SBST1";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon1";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester1";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CBirmingham1";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_2
+	{
+	time_zone_id = 16;
+	standard_name = "HGreenwich Mean Time2";
+	daylight_name = "CBritish Summer Time2";
+	short_standard_name = "RGMT2";
+	short_daylight_name = "OBST2";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "MLondon2";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester2";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham2";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_3
+	{
+	time_zone_id = 24;
+	standard_name = "UGreenwich Mean Time3";
+	daylight_name = "MBritish Summer Time3";
+	short_standard_name = "IGMT3";
+	short_daylight_name = "UBST3";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon3";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SManchester3";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IBirmingham3";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_4
+	{
+	time_zone_id = 32;
+	standard_name = "LGreenwich Mean Time4";
+	daylight_name = "WBritish Summer Time4";
+	short_standard_name = "YGMT4";
+	short_daylight_name = "OBST4";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon4";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CManchester4";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HBirmingham4";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_5
+	{
+	time_zone_id = 40;
+	standard_name = "PGreenwich Mean Time5";
+	daylight_name = "QBritish Summer Time5";
+	short_standard_name = "RGMT5";
+	short_daylight_name = "JBST5";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "SLondon5";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester5";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham5";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_6
+	{
+	time_zone_id = 48;
+	standard_name = "PGreenwich Mean Time6";
+	daylight_name = "KBritish Summer Time6";
+	short_standard_name = "MGMT6";
+	short_daylight_name = "SBST6";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon6";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YManchester6";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham6";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_7
+	{
+	time_zone_id = 56;
+	standard_name = "PGreenwich Mean Time7";
+	daylight_name = "CBritish Summer Time7";
+	short_standard_name = "QGMT7";
+	short_daylight_name = "CBST7";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "YLondon7";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XManchester7";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DBirmingham7";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_8
+	{
+	time_zone_id = 64;
+	standard_name = "IGreenwich Mean Time8";
+	daylight_name = "PBritish Summer Time8";
+	short_standard_name = "CGMT8";
+	short_daylight_name = "XBST8";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "DLondon8";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NManchester8";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TBirmingham8";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_9
+	{
+	time_zone_id = 72;
+	standard_name = "CGreenwich Mean Time9";
+	daylight_name = "EBritish Summer Time9";
+	short_standard_name = "TGMT9";
+	short_daylight_name = "MBST9";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "BLondon9";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MManchester9";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham9";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_10
+	{
+	time_zone_id = 80;
+	standard_name = "SGreenwich Mean Time10";
+	daylight_name = "MBritish Summer Time10";
+	short_standard_name = "FGMT10";
+	short_daylight_name = "CBST10";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon10";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BManchester10";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RBirmingham10";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_11
+	{
+	time_zone_id = 88;
+	standard_name = "UGreenwich Mean Time11";
+	daylight_name = "TBritish Summer Time11";
+	short_standard_name = "GGMT11";
+	short_daylight_name = "KBST11";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ALondon11";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester11";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DBirmingham11";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_12
+	{
+	time_zone_id = 96;
+	standard_name = "SGreenwich Mean Time12";
+	daylight_name = "JBritish Summer Time12";
+	short_standard_name = "EGMT12";
+	short_daylight_name = "NBST12";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "MLondon12";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UManchester12";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham12";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_13
+	{
+	time_zone_id = 104;
+	standard_name = "UGreenwich Mean Time13";
+	daylight_name = "WBritish Summer Time13";
+	short_standard_name = "EGMT13";
+	short_daylight_name = "GBST13";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "NLondon13";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RManchester13";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XBirmingham13";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_14
+	{
+	time_zone_id = 112;
+	standard_name = "DGreenwich Mean Time14";
+	daylight_name = "EBritish Summer Time14";
+	short_standard_name = "SGMT14";
+	short_daylight_name = "KBST14";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon14";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "QManchester14";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EBirmingham14";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_15
+	{
+	time_zone_id = 120;
+	standard_name = "RGreenwich Mean Time15";
+	daylight_name = "OBritish Summer Time15";
+	short_standard_name = "GGMT15";
+	short_daylight_name = "IBST15";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "HLondon15";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EManchester15";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RBirmingham15";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_16
+	{
+	time_zone_id = 128;
+	standard_name = "UGreenwich Mean Time16";
+	daylight_name = "ABritish Summer Time16";
+	short_standard_name = "DGMT16";
+	short_daylight_name = "MBST16";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "HLondon16";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "AManchester16";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NBirmingham16";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_17
+	{
+	time_zone_id = 136;
+	standard_name = "DGreenwich Mean Time17";
+	daylight_name = "UBritish Summer Time17";
+	short_standard_name = "IGMT17";
+	short_daylight_name = "BBST17";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "NLondon17";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester17";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham17";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_18
+	{
+	time_zone_id = 144;
+	standard_name = "YGreenwich Mean Time18";
+	daylight_name = "MBritish Summer Time18";
+	short_standard_name = "WGMT18";
+	short_daylight_name = "GBST18";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon18";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RManchester18";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OBirmingham18";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_19
+	{
+	time_zone_id = 152;
+	standard_name = "HGreenwich Mean Time19";
+	daylight_name = "WBritish Summer Time19";
+	short_standard_name = "DGMT19";
+	short_daylight_name = "ABST19";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "CLondon19";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EManchester19";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CBirmingham19";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_20
+	{
+	time_zone_id = 160;
+	standard_name = "IGreenwich Mean Time20";
+	daylight_name = "PBritish Summer Time20";
+	short_standard_name = "AGMT20";
+	short_daylight_name = "RBST20";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon20";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TManchester20";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XBirmingham20";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_21
+	{
+	time_zone_id = 168;
+	standard_name = "NGreenwich Mean Time21";
+	daylight_name = "TBritish Summer Time21";
+	short_standard_name = "IGMT21";
+	short_daylight_name = "ABST21";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "BLondon21";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BManchester21";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IBirmingham21";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_22
+	{
+	time_zone_id = 176;
+	standard_name = "LGreenwich Mean Time22";
+	daylight_name = "TBritish Summer Time22";
+	short_standard_name = "RGMT22";
+	short_daylight_name = "TBST22";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "HLondon22";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FManchester22";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "JBirmingham22";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_23
+	{
+	time_zone_id = 184;
+	standard_name = "IGreenwich Mean Time23";
+	daylight_name = "WBritish Summer Time23";
+	short_standard_name = "KGMT23";
+	short_daylight_name = "RBST23";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "FLondon23";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TManchester23";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KBirmingham23";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_24
+	{
+	time_zone_id = 192;
+	standard_name = "MGreenwich Mean Time24";
+	daylight_name = "MBritish Summer Time24";
+	short_standard_name = "GGMT24";
+	short_daylight_name = "VBST24";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon24";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RManchester24";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham24";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_25
+	{
+	time_zone_id = 200;
+	standard_name = "GGreenwich Mean Time25";
+	daylight_name = "UBritish Summer Time25";
+	short_standard_name = "HGMT25";
+	short_daylight_name = "XBST25";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "FLondon25";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester25";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DBirmingham25";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_26
+	{
+	time_zone_id = 208;
+	standard_name = "KGreenwich Mean Time26";
+	daylight_name = "EBritish Summer Time26";
+	short_standard_name = "WGMT26";
+	short_daylight_name = "BBST26";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "KLondon26";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester26";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RBirmingham26";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_27
+	{
+	time_zone_id = 216;
+	standard_name = "JGreenwich Mean Time27";
+	daylight_name = "HBritish Summer Time27";
+	short_standard_name = "NGMT27";
+	short_daylight_name = "QBST27";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "RLondon27";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GManchester27";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham27";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_28
+	{
+	time_zone_id = 224;
+	standard_name = "JGreenwich Mean Time28";
+	daylight_name = "QBritish Summer Time28";
+	short_standard_name = "MGMT28";
+	short_daylight_name = "RBST28";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "HLondon28";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YManchester28";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UBirmingham28";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_29
+	{
+	time_zone_id = 232;
+	standard_name = "YGreenwich Mean Time29";
+	daylight_name = "WBritish Summer Time29";
+	short_standard_name = "RGMT29";
+	short_daylight_name = "SBST29";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "FLondon29";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PManchester29";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NBirmingham29";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_30
+	{
+	time_zone_id = 240;
+	standard_name = "OGreenwich Mean Time30";
+	daylight_name = "NBritish Summer Time30";
+	short_standard_name = "SGMT30";
+	short_daylight_name = "QBST30";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "HLondon30";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YManchester30";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham30";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_31
+	{
+	time_zone_id = 248;
+	standard_name = "NGreenwich Mean Time31";
+	daylight_name = "CBritish Summer Time31";
+	short_standard_name = "HGMT31";
+	short_daylight_name = "QBST31";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon31";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XManchester31";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CBirmingham31";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_32
+	{
+	time_zone_id = 256;
+	standard_name = "KGreenwich Mean Time32";
+	daylight_name = "SBritish Summer Time32";
+	short_standard_name = "NGMT32";
+	short_daylight_name = "VBST32";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon32";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NManchester32";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OBirmingham32";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_33
+	{
+	time_zone_id = 264;
+	standard_name = "UGreenwich Mean Time33";
+	daylight_name = "EBritish Summer Time33";
+	short_standard_name = "OGMT33";
+	short_daylight_name = "CBST33";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "YLondon33";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XManchester33";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HBirmingham33";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_34
+	{
+	time_zone_id = 272;
+	standard_name = "JGreenwich Mean Time34";
+	daylight_name = "UBritish Summer Time34";
+	short_standard_name = "KGMT34";
+	short_daylight_name = "JBST34";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "MLondon34";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TManchester34";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UBirmingham34";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_35
+	{
+	time_zone_id = 280;
+	standard_name = "LGreenwich Mean Time35";
+	daylight_name = "BBritish Summer Time35";
+	short_standard_name = "RGMT35";
+	short_daylight_name = "GBST35";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "RLondon35";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SManchester35";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham35";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_36
+	{
+	time_zone_id = 288;
+	standard_name = "HGreenwich Mean Time36";
+	daylight_name = "OBritish Summer Time36";
+	short_standard_name = "VGMT36";
+	short_daylight_name = "YBST36";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "GLondon36";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TManchester36";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham36";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_37
+	{
+	time_zone_id = 296;
+	standard_name = "YGreenwich Mean Time37";
+	daylight_name = "ABritish Summer Time37";
+	short_standard_name = "GGMT37";
+	short_daylight_name = "FBST37";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "FLondon37";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WManchester37";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FBirmingham37";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_38
+	{
+	time_zone_id = 304;
+	standard_name = "NGreenwich Mean Time38";
+	daylight_name = "OBritish Summer Time38";
+	short_standard_name = "LGMT38";
+	short_daylight_name = "OBST38";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "CLondon38";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EManchester38";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KBirmingham38";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_39
+	{
+	time_zone_id = 312;
+	standard_name = "PGreenwich Mean Time39";
+	daylight_name = "QBritish Summer Time39";
+	short_standard_name = "IGMT39";
+	short_daylight_name = "WBST39";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "QLondon39";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UManchester39";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BBirmingham39";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_40
+	{
+	time_zone_id = 320;
+	standard_name = "JGreenwich Mean Time40";
+	daylight_name = "KBritish Summer Time40";
+	short_standard_name = "CGMT40";
+	short_daylight_name = "YBST40";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ALondon40";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FManchester40";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NBirmingham40";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_41
+	{
+	time_zone_id = 328;
+	standard_name = "DGreenwich Mean Time41";
+	daylight_name = "VBritish Summer Time41";
+	short_standard_name = "AGMT41";
+	short_daylight_name = "IBST41";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "GLondon41";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CManchester41";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MBirmingham41";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_42
+	{
+	time_zone_id = 336;
+	standard_name = "MGreenwich Mean Time42";
+	daylight_name = "CBritish Summer Time42";
+	short_standard_name = "HGMT42";
+	short_daylight_name = "QBST42";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "YLondon42";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SManchester42";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham42";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_43
+	{
+	time_zone_id = 344;
+	standard_name = "YGreenwich Mean Time43";
+	daylight_name = "SBritish Summer Time43";
+	short_standard_name = "XGMT43";
+	short_daylight_name = "SBST43";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon43";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HManchester43";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham43";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_44
+	{
+	time_zone_id = 352;
+	standard_name = "NGreenwich Mean Time44";
+	daylight_name = "QBritish Summer Time44";
+	short_standard_name = "LGMT44";
+	short_daylight_name = "OBST44";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon44";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester44";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BBirmingham44";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_45
+	{
+	time_zone_id = 360;
+	standard_name = "LGreenwich Mean Time45";
+	daylight_name = "PBritish Summer Time45";
+	short_standard_name = "AGMT45";
+	short_daylight_name = "FBST45";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "BLondon45";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XManchester45";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OBirmingham45";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_46
+	{
+	time_zone_id = 368;
+	standard_name = "JGreenwich Mean Time46";
+	daylight_name = "KBritish Summer Time46";
+	short_standard_name = "AGMT46";
+	short_daylight_name = "KBST46";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon46";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GManchester46";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EBirmingham46";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_47
+	{
+	time_zone_id = 376;
+	standard_name = "RGreenwich Mean Time47";
+	daylight_name = "LBritish Summer Time47";
+	short_standard_name = "LGMT47";
+	short_daylight_name = "RBST47";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon47";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WManchester47";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MBirmingham47";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_48
+	{
+	time_zone_id = 384;
+	standard_name = "RGreenwich Mean Time48";
+	daylight_name = "RBritish Summer Time48";
+	short_standard_name = "WGMT48";
+	short_daylight_name = "RBST48";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon48";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester48";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TBirmingham48";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_49
+	{
+	time_zone_id = 392;
+	standard_name = "KGreenwich Mean Time49";
+	daylight_name = "OBritish Summer Time49";
+	short_standard_name = "OGMT49";
+	short_daylight_name = "VBST49";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon49";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NManchester49";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BBirmingham49";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_50
+	{
+	time_zone_id = 400;
+	standard_name = "WGreenwich Mean Time50";
+	daylight_name = "WBritish Summer Time50";
+	short_standard_name = "GGMT50";
+	short_daylight_name = "NBST50";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "GLondon50";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DManchester50";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "QBirmingham50";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_51
+	{
+	time_zone_id = 408;
+	standard_name = "OGreenwich Mean Time51";
+	daylight_name = "WBritish Summer Time51";
+	short_standard_name = "DGMT51";
+	short_daylight_name = "LBST51";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon51";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester51";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WBirmingham51";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_52
+	{
+	time_zone_id = 416;
+	standard_name = "GGreenwich Mean Time52";
+	daylight_name = "BBritish Summer Time52";
+	short_standard_name = "AGMT52";
+	short_daylight_name = "TBST52";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon52";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PManchester52";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IBirmingham52";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_53
+	{
+	time_zone_id = 424;
+	standard_name = "CGreenwich Mean Time53";
+	daylight_name = "PBritish Summer Time53";
+	short_standard_name = "WGMT53";
+	short_daylight_name = "FBST53";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ILondon53";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "JManchester53";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GBirmingham53";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_54
+	{
+	time_zone_id = 432;
+	standard_name = "XGreenwich Mean Time54";
+	daylight_name = "XBritish Summer Time54";
+	short_standard_name = "QGMT54";
+	short_daylight_name = "SBST54";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "KLondon54";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MManchester54";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NBirmingham54";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_55
+	{
+	time_zone_id = 440;
+	standard_name = "TGreenwich Mean Time55";
+	daylight_name = "KBritish Summer Time55";
+	short_standard_name = "JGMT55";
+	short_daylight_name = "LBST55";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon55";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "AManchester55";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "VBirmingham55";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_56
+	{
+	time_zone_id = 448;
+	standard_name = "AGreenwich Mean Time56";
+	daylight_name = "WBritish Summer Time56";
+	short_standard_name = "GGMT56";
+	short_daylight_name = "MBST56";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "TLondon56";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RManchester56";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HBirmingham56";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_57
+	{
+	time_zone_id = 456;
+	standard_name = "LGreenwich Mean Time57";
+	daylight_name = "KBritish Summer Time57";
+	short_standard_name = "BGMT57";
+	short_daylight_name = "PBST57";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon57";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WManchester57";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BBirmingham57";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_58
+	{
+	time_zone_id = 464;
+	standard_name = "AGreenwich Mean Time58";
+	daylight_name = "SBritish Summer Time58";
+	short_standard_name = "OGMT58";
+	short_daylight_name = "BBST58";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "DLondon58";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester58";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham58";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_59
+	{
+	time_zone_id = 472;
+	standard_name = "AGreenwich Mean Time59";
+	daylight_name = "JBritish Summer Time59";
+	short_standard_name = "HGMT59";
+	short_daylight_name = "PBST59";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "DLondon59";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester59";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GBirmingham59";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_60
+	{
+	time_zone_id = 480;
+	standard_name = "JGreenwich Mean Time60";
+	daylight_name = "UBritish Summer Time60";
+	short_standard_name = "SGMT60";
+	short_daylight_name = "EBST60";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "TLondon60";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BManchester60";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DBirmingham60";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_61
+	{
+	time_zone_id = 488;
+	standard_name = "RGreenwich Mean Time61";
+	daylight_name = "ABritish Summer Time61";
+	short_standard_name = "KGMT61";
+	short_daylight_name = "RBST61";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon61";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TManchester61";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HBirmingham61";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_62
+	{
+	time_zone_id = 496;
+	standard_name = "CGreenwich Mean Time62";
+	daylight_name = "KBritish Summer Time62";
+	short_standard_name = "MGMT62";
+	short_daylight_name = "VBST62";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "HLondon62";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TManchester62";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CBirmingham62";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_63
+	{
+	time_zone_id = 504;
+	standard_name = "IGreenwich Mean Time63";
+	daylight_name = "LBritish Summer Time63";
+	short_standard_name = "WGMT63";
+	short_daylight_name = "XBST63";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "FLondon63";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DManchester63";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MBirmingham63";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_64
+	{
+	time_zone_id = 512;
+	standard_name = "HGreenwich Mean Time64";
+	daylight_name = "LBritish Summer Time64";
+	short_standard_name = "SGMT64";
+	short_daylight_name = "BBST64";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon64";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BManchester64";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XBirmingham64";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_65
+	{
+	time_zone_id = 520;
+	standard_name = "OGreenwich Mean Time65";
+	daylight_name = "RBritish Summer Time65";
+	short_standard_name = "SGMT65";
+	short_daylight_name = "EBST65";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "DLondon65";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HManchester65";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "QBirmingham65";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_66
+	{
+	time_zone_id = 528;
+	standard_name = "AGreenwich Mean Time66";
+	daylight_name = "YBritish Summer Time66";
+	short_standard_name = "YGMT66";
+	short_daylight_name = "MBST66";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon66";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TManchester66";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RBirmingham66";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_67
+	{
+	time_zone_id = 536;
+	standard_name = "SGreenwich Mean Time67";
+	daylight_name = "UBritish Summer Time67";
+	short_standard_name = "FGMT67";
+	short_daylight_name = "WBST67";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon67";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FManchester67";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EBirmingham67";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_68
+	{
+	time_zone_id = 544;
+	standard_name = "OGreenwich Mean Time68";
+	daylight_name = "XBritish Summer Time68";
+	short_standard_name = "UGMT68";
+	short_daylight_name = "VBST68";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "MLondon68";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GManchester68";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FBirmingham68";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_69
+	{
+	time_zone_id = 552;
+	standard_name = "DGreenwich Mean Time69";
+	daylight_name = "CBritish Summer Time69";
+	short_standard_name = "TGMT69";
+	short_daylight_name = "JBST69";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "CLondon69";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UManchester69";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GBirmingham69";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_70
+	{
+	time_zone_id = 560;
+	standard_name = "UGreenwich Mean Time70";
+	daylight_name = "SBritish Summer Time70";
+	short_standard_name = "HGMT70";
+	short_daylight_name = "IBST70";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "SLondon70";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KManchester70";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IBirmingham70";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_71
+	{
+	time_zone_id = 568;
+	standard_name = "TGreenwich Mean Time71";
+	daylight_name = "PBritish Summer Time71";
+	short_standard_name = "PGMT71";
+	short_daylight_name = "FBST71";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "PLondon71";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FManchester71";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KBirmingham71";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_72
+	{
+	time_zone_id = 576;
+	standard_name = "BGreenwich Mean Time72";
+	daylight_name = "OBritish Summer Time72";
+	short_standard_name = "CGMT72";
+	short_daylight_name = "TBST72";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon72";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester72";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "JBirmingham72";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_73
+	{
+	time_zone_id = 584;
+	standard_name = "VGreenwich Mean Time73";
+	daylight_name = "CBritish Summer Time73";
+	short_standard_name = "FGMT73";
+	short_daylight_name = "NBST73";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "BLondon73";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MManchester73";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OBirmingham73";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_74
+	{
+	time_zone_id = 592;
+	standard_name = "NGreenwich Mean Time74";
+	daylight_name = "LBritish Summer Time74";
+	short_standard_name = "EGMT74";
+	short_daylight_name = "RBST74";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon74";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KManchester74";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "JBirmingham74";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_75
+	{
+	time_zone_id = 600;
+	standard_name = "UGreenwich Mean Time75";
+	daylight_name = "GBritish Summer Time75";
+	short_standard_name = "KGMT75";
+	short_daylight_name = "HBST75";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon75";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SManchester75";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NBirmingham75";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_76
+	{
+	time_zone_id = 608;
+	standard_name = "KGreenwich Mean Time76";
+	daylight_name = "TBritish Summer Time76";
+	short_standard_name = "WGMT76";
+	short_daylight_name = "MBST76";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "NLondon76";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UManchester76";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham76";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_77
+	{
+	time_zone_id = 616;
+	standard_name = "GGreenwich Mean Time77";
+	daylight_name = "DBritish Summer Time77";
+	short_standard_name = "YGMT77";
+	short_daylight_name = "NBST77";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "OLondon77";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YManchester77";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TBirmingham77";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_78
+	{
+	time_zone_id = 624;
+	standard_name = "NGreenwich Mean Time78";
+	daylight_name = "OBritish Summer Time78";
+	short_standard_name = "DGMT78";
+	short_daylight_name = "LBST78";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "SLondon78";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CManchester78";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham78";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_79
+	{
+	time_zone_id = 632;
+	standard_name = "EGreenwich Mean Time79";
+	daylight_name = "HBritish Summer Time79";
+	short_standard_name = "IGMT79";
+	short_daylight_name = "JBST79";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "SLondon79";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PManchester79";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham79";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_80
+	{
+	time_zone_id = 640;
+	standard_name = "GGreenwich Mean Time80";
+	daylight_name = "QBritish Summer Time80";
+	short_standard_name = "IGMT80";
+	short_daylight_name = "HBST80";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "DLondon80";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WManchester80";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BBirmingham80";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_81
+	{
+	time_zone_id = 648;
+	standard_name = "DGreenwich Mean Time81";
+	daylight_name = "LBritish Summer Time81";
+	short_standard_name = "FGMT81";
+	short_daylight_name = "ABST81";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ILondon81";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SManchester81";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RBirmingham81";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_82
+	{
+	time_zone_id = 656;
+	standard_name = "TGreenwich Mean Time82";
+	daylight_name = "TBritish Summer Time82";
+	short_standard_name = "DGMT82";
+	short_daylight_name = "GBST82";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon82";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NManchester82";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham82";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_83
+	{
+	time_zone_id = 664;
+	standard_name = "TGreenwich Mean Time83";
+	daylight_name = "ABritish Summer Time83";
+	short_standard_name = "AGMT83";
+	short_daylight_name = "RBST83";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "QLondon83";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester83";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham83";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_84
+	{
+	time_zone_id = 672;
+	standard_name = "QGreenwich Mean Time84";
+	daylight_name = "GBritish Summer Time84";
+	short_standard_name = "SGMT84";
+	short_daylight_name = "PBST84";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "TLondon84";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XManchester84";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EBirmingham84";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_85
+	{
+	time_zone_id = 680;
+	standard_name = "XGreenwich Mean Time85";
+	daylight_name = "TBritish Summer Time85";
+	short_standard_name = "CGMT85";
+	short_daylight_name = "OBST85";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "SLondon85";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WManchester85";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RBirmingham85";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_86
+	{
+	time_zone_id = 688;
+	standard_name = "QGreenwich Mean Time86";
+	daylight_name = "VBritish Summer Time86";
+	short_standard_name = "WGMT86";
+	short_daylight_name = "VBST86";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon86";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WManchester86";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NBirmingham86";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_87
+	{
+	time_zone_id = 696;
+	standard_name = "AGreenwich Mean Time87";
+	daylight_name = "KBritish Summer Time87";
+	short_standard_name = "AGMT87";
+	short_daylight_name = "IBST87";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "KLondon87";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FManchester87";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham87";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_88
+	{
+	time_zone_id = 704;
+	standard_name = "DGreenwich Mean Time88";
+	daylight_name = "BBritish Summer Time88";
+	short_standard_name = "YGMT88";
+	short_daylight_name = "CBST88";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon88";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WManchester88";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HBirmingham88";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_89
+	{
+	time_zone_id = 712;
+	standard_name = "QGreenwich Mean Time89";
+	daylight_name = "HBritish Summer Time89";
+	short_standard_name = "VGMT89";
+	short_daylight_name = "HBST89";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon89";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GManchester89";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "VBirmingham89";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_90
+	{
+	time_zone_id = 720;
+	standard_name = "HGreenwich Mean Time90";
+	daylight_name = "JBritish Summer Time90";
+	short_standard_name = "AGMT90";
+	short_daylight_name = "DBST90";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "QLondon90";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WManchester90";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TBirmingham90";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_91
+	{
+	time_zone_id = 728;
+	standard_name = "DGreenwich Mean Time91";
+	daylight_name = "KBritish Summer Time91";
+	short_standard_name = "YGMT91";
+	short_daylight_name = "FBST91";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon91";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "JManchester91";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EBirmingham91";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_92
+	{
+	time_zone_id = 736;
+	standard_name = "RGreenwich Mean Time92";
+	daylight_name = "MBritish Summer Time92";
+	short_standard_name = "YGMT92";
+	short_daylight_name = "JBST92";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "FLondon92";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DManchester92";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RBirmingham92";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_93
+	{
+	time_zone_id = 744;
+	standard_name = "BGreenwich Mean Time93";
+	daylight_name = "HBritish Summer Time93";
+	short_standard_name = "PGMT93";
+	short_daylight_name = "RBST93";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon93";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "JManchester93";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham93";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_94
+	{
+	time_zone_id = 752;
+	standard_name = "AGreenwich Mean Time94";
+	daylight_name = "FBritish Summer Time94";
+	short_standard_name = "YGMT94";
+	short_daylight_name = "CBST94";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "QLondon94";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RManchester94";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham94";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_95
+	{
+	time_zone_id = 760;
+	standard_name = "FGreenwich Mean Time95";
+	daylight_name = "CBritish Summer Time95";
+	short_standard_name = "PGMT95";
+	short_daylight_name = "CBST95";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "TLondon95";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RManchester95";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UBirmingham95";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_96
+	{
+	time_zone_id = 768;
+	standard_name = "GGreenwich Mean Time96";
+	daylight_name = "VBritish Summer Time96";
+	short_standard_name = "FGMT96";
+	short_daylight_name = "IBST96";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ALondon96";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "QManchester96";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RBirmingham96";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_97
+	{
+	time_zone_id = 776;
+	standard_name = "EGreenwich Mean Time97";
+	daylight_name = "CBritish Summer Time97";
+	short_standard_name = "OGMT97";
+	short_daylight_name = "UBST97";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "HLondon97";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BManchester97";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham97";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_98
+	{
+	time_zone_id = 784;
+	standard_name = "FGreenwich Mean Time98";
+	daylight_name = "CBritish Summer Time98";
+	short_standard_name = "NGMT98";
+	short_daylight_name = "XBST98";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "YLondon98";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PManchester98";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham98";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_99
+	{
+	time_zone_id = 792;
+	standard_name = "DGreenwich Mean Time99";
+	daylight_name = "YBritish Summer Time99";
+	short_standard_name = "BGMT99";
+	short_daylight_name = "ABST99";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "OLondon99";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EManchester99";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IBirmingham99";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_100
+	{
+	time_zone_id = 800;
+	standard_name = "CGreenwich Mean Time100";
+	daylight_name = "GBritish Summer Time100";
+	short_standard_name = "WGMT100";
+	short_daylight_name = "SBST100";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "RLondon100";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BManchester100";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EBirmingham100";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_101
+	{
+	time_zone_id = 808;
+	standard_name = "AGreenwich Mean Time101";
+	daylight_name = "YBritish Summer Time101";
+	short_standard_name = "XGMT101";
+	short_daylight_name = "OBST101";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ALondon101";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "AManchester101";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham101";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_102
+	{
+	time_zone_id = 816;
+	standard_name = "SGreenwich Mean Time102";
+	daylight_name = "UBritish Summer Time102";
+	short_standard_name = "XGMT102";
+	short_daylight_name = "YBST102";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ULondon102";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GManchester102";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham102";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_103
+	{
+	time_zone_id = 824;
+	standard_name = "CGreenwich Mean Time103";
+	daylight_name = "ABritish Summer Time103";
+	short_standard_name = "GGMT103";
+	short_daylight_name = "SBST103";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "RLondon103";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester103";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham103";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_104
+	{
+	time_zone_id = 832;
+	standard_name = "IGreenwich Mean Time104";
+	daylight_name = "VBritish Summer Time104";
+	short_standard_name = "OGMT104";
+	short_daylight_name = "OBST104";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "NLondon104";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MManchester104";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IBirmingham104";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_105
+	{
+	time_zone_id = 840;
+	standard_name = "UGreenwich Mean Time105";
+	daylight_name = "QBritish Summer Time105";
+	short_standard_name = "RGMT105";
+	short_daylight_name = "TBST105";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon105";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XManchester105";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham105";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_106
+	{
+	time_zone_id = 848;
+	standard_name = "OGreenwich Mean Time106";
+	daylight_name = "IBritish Summer Time106";
+	short_standard_name = "FGMT106";
+	short_daylight_name = "WBST106";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "FLondon106";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PManchester106";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XBirmingham106";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_107
+	{
+	time_zone_id = 856;
+	standard_name = "MGreenwich Mean Time107";
+	daylight_name = "IBritish Summer Time107";
+	short_standard_name = "JGMT107";
+	short_daylight_name = "RBST107";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon107";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester107";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TBirmingham107";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_108
+	{
+	time_zone_id = 864;
+	standard_name = "GGreenwich Mean Time108";
+	daylight_name = "WBritish Summer Time108";
+	short_standard_name = "PGMT108";
+	short_daylight_name = "OBST108";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon108";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester108";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CBirmingham108";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_109
+	{
+	time_zone_id = 872;
+	standard_name = "YGreenwich Mean Time109";
+	daylight_name = "SBritish Summer Time109";
+	short_standard_name = "WGMT109";
+	short_daylight_name = "GBST109";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "TLondon109";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HManchester109";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PBirmingham109";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_110
+	{
+	time_zone_id = 880;
+	standard_name = "VGreenwich Mean Time110";
+	daylight_name = "UBritish Summer Time110";
+	short_standard_name = "QGMT110";
+	short_daylight_name = "WBST110";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon110";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BManchester110";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham110";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_111
+	{
+	time_zone_id = 888;
+	standard_name = "RGreenwich Mean Time111";
+	daylight_name = "GBritish Summer Time111";
+	short_standard_name = "YGMT111";
+	short_daylight_name = "QBST111";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon111";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester111";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XBirmingham111";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_112
+	{
+	time_zone_id = 896;
+	standard_name = "YGreenwich Mean Time112";
+	daylight_name = "LBritish Summer Time112";
+	short_standard_name = "KGMT112";
+	short_daylight_name = "EBST112";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon112";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HManchester112";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham112";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_113
+	{
+	time_zone_id = 904;
+	standard_name = "SGreenwich Mean Time113";
+	daylight_name = "VBritish Summer Time113";
+	short_standard_name = "SGMT113";
+	short_daylight_name = "XBST113";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ILondon113";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester113";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FBirmingham113";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_114
+	{
+	time_zone_id = 912;
+	standard_name = "OGreenwich Mean Time114";
+	daylight_name = "XBritish Summer Time114";
+	short_standard_name = "UGMT114";
+	short_daylight_name = "LBST114";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "MLondon114";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "QManchester114";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MBirmingham114";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_115
+	{
+	time_zone_id = 920;
+	standard_name = "RGreenwich Mean Time115";
+	daylight_name = "TBritish Summer Time115";
+	short_standard_name = "UGMT115";
+	short_daylight_name = "OBST115";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "RLondon115";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EManchester115";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HBirmingham115";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_116
+	{
+	time_zone_id = 928;
+	standard_name = "FGreenwich Mean Time116";
+	daylight_name = "DBritish Summer Time116";
+	short_standard_name = "EGMT116";
+	short_daylight_name = "DBST116";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon116";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DManchester116";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XBirmingham116";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_117
+	{
+	time_zone_id = 936;
+	standard_name = "MGreenwich Mean Time117";
+	daylight_name = "OBritish Summer Time117";
+	short_standard_name = "UGMT117";
+	short_daylight_name = "GBST117";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon117";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SManchester117";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham117";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_118
+	{
+	time_zone_id = 944;
+	standard_name = "MGreenwich Mean Time118";
+	daylight_name = "QBritish Summer Time118";
+	short_standard_name = "DGMT118";
+	short_daylight_name = "PBST118";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "CLondon118";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester118";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IBirmingham118";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_119
+	{
+	time_zone_id = 952;
+	standard_name = "WGreenwich Mean Time119";
+	daylight_name = "CBritish Summer Time119";
+	short_standard_name = "PGMT119";
+	short_daylight_name = "HBST119";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "RLondon119";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UManchester119";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XBirmingham119";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_120
+	{
+	time_zone_id = 960;
+	standard_name = "KGreenwich Mean Time120";
+	daylight_name = "EBritish Summer Time120";
+	short_standard_name = "MGMT120";
+	short_daylight_name = "ABST120";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon120";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NManchester120";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham120";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_121
+	{
+	time_zone_id = 968;
+	standard_name = "UGreenwich Mean Time121";
+	daylight_name = "IBritish Summer Time121";
+	short_standard_name = "XGMT121";
+	short_daylight_name = "XBST121";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon121";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CManchester121";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UBirmingham121";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_122
+	{
+	time_zone_id = 976;
+	standard_name = "GGreenwich Mean Time122";
+	daylight_name = "RBritish Summer Time122";
+	short_standard_name = "CGMT122";
+	short_daylight_name = "JBST122";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon122";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YManchester122";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PBirmingham122";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_123
+	{
+	time_zone_id = 984;
+	standard_name = "RGreenwich Mean Time123";
+	daylight_name = "IBritish Summer Time123";
+	short_standard_name = "PGMT123";
+	short_daylight_name = "FBST123";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon123";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GManchester123";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham123";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_124
+	{
+	time_zone_id = 992;
+	standard_name = "MGreenwich Mean Time124";
+	daylight_name = "BBritish Summer Time124";
+	short_standard_name = "RGMT124";
+	short_daylight_name = "KBST124";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon124";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GManchester124";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BBirmingham124";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_125
+	{
+	time_zone_id = 1000;
+	standard_name = "YGreenwich Mean Time125";
+	daylight_name = "SBritish Summer Time125";
+	short_standard_name = "XGMT125";
+	short_daylight_name = "PBST125";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "MLondon125";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WManchester125";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TBirmingham125";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_126
+	{
+	time_zone_id = 1008;
+	standard_name = "RGreenwich Mean Time126";
+	daylight_name = "SBritish Summer Time126";
+	short_standard_name = "VGMT126";
+	short_daylight_name = "ABST126";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "KLondon126";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KManchester126";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IBirmingham126";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_127
+	{
+	time_zone_id = 1016;
+	standard_name = "BGreenwich Mean Time127";
+	daylight_name = "VBritish Summer Time127";
+	short_standard_name = "PGMT127";
+	short_daylight_name = "IBST127";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon127";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester127";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DBirmingham127";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_128
+	{
+	time_zone_id = 1024;
+	standard_name = "PGreenwich Mean Time128";
+	daylight_name = "NBritish Summer Time128";
+	short_standard_name = "YGMT128";
+	short_daylight_name = "DBST128";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "YLondon128";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DManchester128";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HBirmingham128";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_129
+	{
+	time_zone_id = 1032;
+	standard_name = "UGreenwich Mean Time129";
+	daylight_name = "GBritish Summer Time129";
+	short_standard_name = "WGMT129";
+	short_daylight_name = "BBST129";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon129";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester129";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham129";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_130
+	{
+	time_zone_id = 1040;
+	standard_name = "WGreenwich Mean Time130";
+	daylight_name = "HBritish Summer Time130";
+	short_standard_name = "LGMT130";
+	short_daylight_name = "QBST130";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ULondon130";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NManchester130";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PBirmingham130";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_131
+	{
+	time_zone_id = 1048;
+	standard_name = "PGreenwich Mean Time131";
+	daylight_name = "MBritish Summer Time131";
+	short_standard_name = "YGMT131";
+	short_daylight_name = "XBST131";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon131";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YManchester131";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BBirmingham131";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_132
+	{
+	time_zone_id = 1056;
+	standard_name = "GGreenwich Mean Time132";
+	daylight_name = "CBritish Summer Time132";
+	short_standard_name = "WGMT132";
+	short_daylight_name = "VBST132";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon132";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester132";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KBirmingham132";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_133
+	{
+	time_zone_id = 1064;
+	standard_name = "SGreenwich Mean Time133";
+	daylight_name = "FBritish Summer Time133";
+	short_standard_name = "UGMT133";
+	short_daylight_name = "FBST133";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon133";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CManchester133";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DBirmingham133";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_134
+	{
+	time_zone_id = 1072;
+	standard_name = "VGreenwich Mean Time134";
+	daylight_name = "VBritish Summer Time134";
+	short_standard_name = "WGMT134";
+	short_daylight_name = "SBST134";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon134";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "AManchester134";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TBirmingham134";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_135
+	{
+	time_zone_id = 1080;
+	standard_name = "IGreenwich Mean Time135";
+	daylight_name = "DBritish Summer Time135";
+	short_standard_name = "AGMT135";
+	short_daylight_name = "OBST135";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon135";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CManchester135";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BBirmingham135";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_136
+	{
+	time_zone_id = 1088;
+	standard_name = "IGreenwich Mean Time136";
+	daylight_name = "XBritish Summer Time136";
+	short_standard_name = "IGMT136";
+	short_daylight_name = "UBST136";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon136";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PManchester136";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FBirmingham136";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_137
+	{
+	time_zone_id = 1096;
+	standard_name = "KGreenwich Mean Time137";
+	daylight_name = "LBritish Summer Time137";
+	short_standard_name = "SGMT137";
+	short_daylight_name = "DBST137";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "MLondon137";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GManchester137";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KBirmingham137";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_138
+	{
+	time_zone_id = 1104;
+	standard_name = "YGreenwich Mean Time138";
+	daylight_name = "EBritish Summer Time138";
+	short_standard_name = "UGMT138";
+	short_daylight_name = "UBST138";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "DLondon138";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BManchester138";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham138";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_139
+	{
+	time_zone_id = 1112;
+	standard_name = "TGreenwich Mean Time139";
+	daylight_name = "UBritish Summer Time139";
+	short_standard_name = "EGMT139";
+	short_daylight_name = "SBST139";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon139";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "VManchester139";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham139";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_140
+	{
+	time_zone_id = 1120;
+	standard_name = "LGreenwich Mean Time140";
+	daylight_name = "QBritish Summer Time140";
+	short_standard_name = "NGMT140";
+	short_daylight_name = "UBST140";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon140";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "VManchester140";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham140";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_141
+	{
+	time_zone_id = 1128;
+	standard_name = "QGreenwich Mean Time141";
+	daylight_name = "EBritish Summer Time141";
+	short_standard_name = "EGMT141";
+	short_daylight_name = "CBST141";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "CLondon141";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MManchester141";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FBirmingham141";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_142
+	{
+	time_zone_id = 1136;
+	standard_name = "VGreenwich Mean Time142";
+	daylight_name = "IBritish Summer Time142";
+	short_standard_name = "NGMT142";
+	short_daylight_name = "OBST142";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "TLondon142";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "QManchester142";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WBirmingham142";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_143
+	{
+	time_zone_id = 1144;
+	standard_name = "QGreenwich Mean Time143";
+	daylight_name = "XBritish Summer Time143";
+	short_standard_name = "SGMT143";
+	short_daylight_name = "OBST143";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "XLondon143";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UManchester143";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "VBirmingham143";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_144
+	{
+	time_zone_id = 1152;
+	standard_name = "FGreenwich Mean Time144";
+	daylight_name = "RBritish Summer Time144";
+	short_standard_name = "HGMT144";
+	short_daylight_name = "KBST144";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "PLondon144";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester144";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "VBirmingham144";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_145
+	{
+	time_zone_id = 1160;
+	standard_name = "GGreenwich Mean Time145";
+	daylight_name = "IBritish Summer Time145";
+	short_standard_name = "KGMT145";
+	short_daylight_name = "JBST145";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "MLondon145";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SManchester145";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IBirmingham145";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_146
+	{
+	time_zone_id = 1168;
+	standard_name = "CGreenwich Mean Time146";
+	daylight_name = "WBritish Summer Time146";
+	short_standard_name = "NGMT146";
+	short_daylight_name = "ABST146";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "QLondon146";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HManchester146";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EBirmingham146";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_147
+	{
+	time_zone_id = 1176;
+	standard_name = "JGreenwich Mean Time147";
+	daylight_name = "PBritish Summer Time147";
+	short_standard_name = "DGMT147";
+	short_daylight_name = "XBST147";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "HLondon147";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester147";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KBirmingham147";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_148
+	{
+	time_zone_id = 1184;
+	standard_name = "AGreenwich Mean Time148";
+	daylight_name = "BBritish Summer Time148";
+	short_standard_name = "AGMT148";
+	short_daylight_name = "VBST148";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "CLondon148";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester148";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FBirmingham148";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_149
+	{
+	time_zone_id = 1192;
+	standard_name = "LGreenwich Mean Time149";
+	daylight_name = "UBritish Summer Time149";
+	short_standard_name = "IGMT149";
+	short_daylight_name = "BBST149";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon149";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BManchester149";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GBirmingham149";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_150
+	{
+	time_zone_id = 1200;
+	standard_name = "PGreenwich Mean Time150";
+	daylight_name = "JBritish Summer Time150";
+	short_standard_name = "PGMT150";
+	short_daylight_name = "DBST150";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ILondon150";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KManchester150";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham150";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_151
+	{
+	time_zone_id = 1208;
+	standard_name = "FGreenwich Mean Time151";
+	daylight_name = "WBritish Summer Time151";
+	short_standard_name = "QGMT151";
+	short_daylight_name = "TBST151";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ILondon151";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GManchester151";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KBirmingham151";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_152
+	{
+	time_zone_id = 1216;
+	standard_name = "KGreenwich Mean Time152";
+	daylight_name = "JBritish Summer Time152";
+	short_standard_name = "GGMT152";
+	short_daylight_name = "SBST152";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon152";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester152";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham152";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_153
+	{
+	time_zone_id = 1224;
+	standard_name = "PGreenwich Mean Time153";
+	daylight_name = "JBritish Summer Time153";
+	short_standard_name = "LGMT153";
+	short_daylight_name = "PBST153";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon153";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MManchester153";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MBirmingham153";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_154
+	{
+	time_zone_id = 1232;
+	standard_name = "SGreenwich Mean Time154";
+	daylight_name = "XBritish Summer Time154";
+	short_standard_name = "QGMT154";
+	short_daylight_name = "WBST154";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "DLondon154";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NManchester154";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KBirmingham154";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_155
+	{
+	time_zone_id = 1240;
+	standard_name = "AGreenwich Mean Time155";
+	daylight_name = "UBritish Summer Time155";
+	short_standard_name = "VGMT155";
+	short_daylight_name = "GBST155";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "PLondon155";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EManchester155";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham155";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_156
+	{
+	time_zone_id = 1248;
+	standard_name = "JGreenwich Mean Time156";
+	daylight_name = "HBritish Summer Time156";
+	short_standard_name = "GGMT156";
+	short_daylight_name = "DBST156";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "YLondon156";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "JManchester156";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EBirmingham156";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_157
+	{
+	time_zone_id = 1256;
+	standard_name = "MGreenwich Mean Time157";
+	daylight_name = "WBritish Summer Time157";
+	short_standard_name = "KGMT157";
+	short_daylight_name = "DBST157";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "FLondon157";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YManchester157";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham157";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_158
+	{
+	time_zone_id = 1264;
+	standard_name = "SGreenwich Mean Time158";
+	daylight_name = "RBritish Summer Time158";
+	short_standard_name = "KGMT158";
+	short_daylight_name = "NBST158";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon158";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HManchester158";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TBirmingham158";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_159
+	{
+	time_zone_id = 1272;
+	standard_name = "SGreenwich Mean Time159";
+	daylight_name = "WBritish Summer Time159";
+	short_standard_name = "HGMT159";
+	short_daylight_name = "IBST159";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "SLondon159";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "JManchester159";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FBirmingham159";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_160
+	{
+	time_zone_id = 1280;
+	standard_name = "WGreenwich Mean Time160";
+	daylight_name = "YBritish Summer Time160";
+	short_standard_name = "LGMT160";
+	short_daylight_name = "DBST160";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "RLondon160";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PManchester160";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham160";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_161
+	{
+	time_zone_id = 1288;
+	standard_name = "MGreenwich Mean Time161";
+	daylight_name = "FBritish Summer Time161";
+	short_standard_name = "OGMT161";
+	short_daylight_name = "HBST161";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "PLondon161";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester161";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HBirmingham161";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_162
+	{
+	time_zone_id = 1296;
+	standard_name = "QGreenwich Mean Time162";
+	daylight_name = "JBritish Summer Time162";
+	short_standard_name = "XGMT162";
+	short_daylight_name = "PBST162";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "DLondon162";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YManchester162";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CBirmingham162";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_163
+	{
+	time_zone_id = 1304;
+	standard_name = "MGreenwich Mean Time163";
+	daylight_name = "FBritish Summer Time163";
+	short_standard_name = "NGMT163";
+	short_daylight_name = "YBST163";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "DLondon163";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DManchester163";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FBirmingham163";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_164
+	{
+	time_zone_id = 1312;
+	standard_name = "YGreenwich Mean Time164";
+	daylight_name = "OBritish Summer Time164";
+	short_standard_name = "MGMT164";
+	short_daylight_name = "ABST164";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon164";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "BManchester164";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "VBirmingham164";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_165
+	{
+	time_zone_id = 1320;
+	standard_name = "LGreenwich Mean Time165";
+	daylight_name = "WBritish Summer Time165";
+	short_standard_name = "YGMT165";
+	short_daylight_name = "PBST165";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "HLondon165";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UManchester165";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "JBirmingham165";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_166
+	{
+	time_zone_id = 1328;
+	standard_name = "YGreenwich Mean Time166";
+	daylight_name = "EBritish Summer Time166";
+	short_standard_name = "EGMT166";
+	short_daylight_name = "KBST166";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon166";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester166";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HBirmingham166";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_167
+	{
+	time_zone_id = 1336;
+	standard_name = "FGreenwich Mean Time167";
+	daylight_name = "PBritish Summer Time167";
+	short_standard_name = "AGMT167";
+	short_daylight_name = "KBST167";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "SLondon167";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GManchester167";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TBirmingham167";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_168
+	{
+	time_zone_id = 1344;
+	standard_name = "AGreenwich Mean Time168";
+	daylight_name = "IBritish Summer Time168";
+	short_standard_name = "JGMT168";
+	short_daylight_name = "YBST168";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "OLondon168";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DManchester168";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OBirmingham168";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_169
+	{
+	time_zone_id = 1352;
+	standard_name = "NGreenwich Mean Time169";
+	daylight_name = "HBritish Summer Time169";
+	short_standard_name = "KGMT169";
+	short_daylight_name = "VBST169";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "OLondon169";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RManchester169";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham169";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_170
+	{
+	time_zone_id = 1360;
+	standard_name = "AGreenwich Mean Time170";
+	daylight_name = "DBritish Summer Time170";
+	short_standard_name = "KGMT170";
+	short_daylight_name = "XBST170";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon170";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MManchester170";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DBirmingham170";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_171
+	{
+	time_zone_id = 1368;
+	standard_name = "PGreenwich Mean Time171";
+	daylight_name = "GBritish Summer Time171";
+	short_standard_name = "UGMT171";
+	short_daylight_name = "CBST171";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "PLondon171";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HManchester171";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RBirmingham171";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_172
+	{
+	time_zone_id = 1376;
+	standard_name = "WGreenwich Mean Time172";
+	daylight_name = "BBritish Summer Time172";
+	short_standard_name = "IGMT172";
+	short_daylight_name = "XBST172";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "OLondon172";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester172";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham172";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_173
+	{
+	time_zone_id = 1384;
+	standard_name = "KGreenwich Mean Time173";
+	daylight_name = "VBritish Summer Time173";
+	short_standard_name = "MGMT173";
+	short_daylight_name = "RBST173";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "PLondon173";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EManchester173";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NBirmingham173";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_174
+	{
+	time_zone_id = 1392;
+	standard_name = "GGreenwich Mean Time174";
+	daylight_name = "NBritish Summer Time174";
+	short_standard_name = "HGMT174";
+	short_daylight_name = "QBST174";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon174";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EManchester174";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SBirmingham174";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_175
+	{
+	time_zone_id = 1400;
+	standard_name = "IGreenwich Mean Time175";
+	daylight_name = "ABritish Summer Time175";
+	short_standard_name = "YGMT175";
+	short_daylight_name = "MBST175";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon175";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PManchester175";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UBirmingham175";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_176
+	{
+	time_zone_id = 1408;
+	standard_name = "KGreenwich Mean Time176";
+	daylight_name = "SBritish Summer Time176";
+	short_standard_name = "OGMT176";
+	short_daylight_name = "DBST176";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "NLondon176";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "SManchester176";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YBirmingham176";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_177
+	{
+	time_zone_id = 1416;
+	standard_name = "MGreenwich Mean Time177";
+	daylight_name = "IBritish Summer Time177";
+	short_standard_name = "OGMT177";
+	short_daylight_name = "JBST177";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "MLondon177";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DManchester177";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CBirmingham177";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_178
+	{
+	time_zone_id = 1424;
+	standard_name = "UGreenwich Mean Time178";
+	daylight_name = "UBritish Summer Time178";
+	short_standard_name = "RGMT178";
+	short_daylight_name = "VBST178";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ALondon178";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MManchester178";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NBirmingham178";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_179
+	{
+	time_zone_id = 1432;
+	standard_name = "KGreenwich Mean Time179";
+	daylight_name = "PBritish Summer Time179";
+	short_standard_name = "GGMT179";
+	short_daylight_name = "OBST179";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "PLondon179";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester179";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "EBirmingham179";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_180
+	{
+	time_zone_id = 1440;
+	standard_name = "TGreenwich Mean Time180";
+	daylight_name = "SBritish Summer Time180";
+	short_standard_name = "UGMT180";
+	short_daylight_name = "YBST180";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "LLondon180";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MManchester180";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "CBirmingham180";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_181
+	{
+	time_zone_id = 1448;
+	standard_name = "OGreenwich Mean Time181";
+	daylight_name = "WBritish Summer Time181";
+	short_standard_name = "JGMT181";
+	short_daylight_name = "PBST181";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "PLondon181";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "DManchester181";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "QBirmingham181";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_182
+	{
+	time_zone_id = 1456;
+	standard_name = "OGreenwich Mean Time182";
+	daylight_name = "KBritish Summer Time182";
+	short_standard_name = "DGMT182";
+	short_daylight_name = "TBST182";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "NLondon182";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "JManchester182";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LBirmingham182";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_183
+	{
+	time_zone_id = 1464;
+	standard_name = "QGreenwich Mean Time183";
+	daylight_name = "NBritish Summer Time183";
+	short_standard_name = "RGMT183";
+	short_daylight_name = "QBST183";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "DLondon183";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "OManchester183";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "UBirmingham183";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_184
+	{
+	time_zone_id = 1472;
+	standard_name = "RGreenwich Mean Time184";
+	daylight_name = "RBritish Summer Time184";
+	short_standard_name = "AGMT184";
+	short_daylight_name = "VBST184";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "BLondon184";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester184";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WBirmingham184";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_185
+	{
+	time_zone_id = 1480;
+	standard_name = "HGreenwich Mean Time185";
+	daylight_name = "HBritish Summer Time185";
+	short_standard_name = "PGMT185";
+	short_daylight_name = "VBST185";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "KLondon185";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "YManchester185";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham185";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_186
+	{
+	time_zone_id = 1488;
+	standard_name = "IGreenwich Mean Time186";
+	daylight_name = "CBritish Summer Time186";
+	short_standard_name = "RGMT186";
+	short_daylight_name = "OBST186";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "RLondon186";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester186";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FBirmingham186";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_187
+	{
+	time_zone_id = 1496;
+	standard_name = "VGreenwich Mean Time187";
+	daylight_name = "JBritish Summer Time187";
+	short_standard_name = "CGMT187";
+	short_daylight_name = "DBST187";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ELondon187";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HManchester187";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RBirmingham187";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_188
+	{
+	time_zone_id = 1504;
+	standard_name = "NGreenwich Mean Time188";
+	daylight_name = "MBritish Summer Time188";
+	short_standard_name = "SGMT188";
+	short_daylight_name = "ABST188";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "VLondon188";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "IManchester188";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FBirmingham188";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_189
+	{
+	time_zone_id = 1512;
+	standard_name = "UGreenwich Mean Time189";
+	daylight_name = "VBritish Summer Time189";
+	short_standard_name = "KGMT189";
+	short_daylight_name = "SBST189";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "MLondon189";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "FManchester189";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TBirmingham189";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_190
+	{
+	time_zone_id = 1520;
+	standard_name = "CGreenwich Mean Time190";
+	daylight_name = "DBritish Summer Time190";
+	short_standard_name = "LGMT190";
+	short_daylight_name = "CBST190";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "CLondon190";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester190";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WBirmingham190";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_191
+	{
+	time_zone_id = 1528;
+	standard_name = "CGreenwich Mean Time191";
+	daylight_name = "PBritish Summer Time191";
+	short_standard_name = "CGMT191";
+	short_daylight_name = "GBST191";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon191";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NManchester191";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NBirmingham191";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_192
+	{
+	time_zone_id = 1536;
+	standard_name = "MGreenwich Mean Time192";
+	daylight_name = "NBritish Summer Time192";
+	short_standard_name = "GGMT192";
+	short_daylight_name = "BBST192";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "OLondon192";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "RManchester192";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XBirmingham192";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_193
+	{
+	time_zone_id = 1544;
+	standard_name = "SGreenwich Mean Time193";
+	daylight_name = "YBritish Summer Time193";
+	short_standard_name = "HGMT193";
+	short_daylight_name = "DBST193";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "FLondon193";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KManchester193";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XBirmingham193";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_194
+	{
+	time_zone_id = 1552;
+	standard_name = "XGreenwich Mean Time194";
+	daylight_name = "WBritish Summer Time194";
+	short_standard_name = "JGMT194";
+	short_daylight_name = "NBST194";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "GLondon194";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "MManchester194";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "KBirmingham194";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_195
+	{
+	time_zone_id = 1560;
+	standard_name = "MGreenwich Mean Time195";
+	daylight_name = "OBritish Summer Time195";
+	short_standard_name = "TGMT195";
+	short_daylight_name = "NBST195";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "WLondon195";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "PManchester195";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "XBirmingham195";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_196
+	{
+	time_zone_id = 1568;
+	standard_name = "QGreenwich Mean Time196";
+	daylight_name = "BBritish Summer Time196";
+	short_standard_name = "CGMT196";
+	short_daylight_name = "UBST196";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "FLondon196";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "TManchester196";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "NBirmingham196";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_197
+	{
+	time_zone_id = 1576;
+	standard_name = "OGreenwich Mean Time197";
+	daylight_name = "PBritish Summer Time197";
+	short_standard_name = "GGMT197";
+	short_daylight_name = "TBST197";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "ILondon197";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "VManchester197";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "GBirmingham197";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_198
+	{
+	time_zone_id = 1584;
+	standard_name = "FGreenwich Mean Time198";
+	daylight_name = "DBritish Summer Time198";
+	short_standard_name = "HGMT198";
+	short_daylight_name = "BBST198";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "YLondon198";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "LManchester198";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "ABirmingham198";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_199
+	{
+	time_zone_id = 1592;
+	standard_name = "KGreenwich Mean Time199";
+	daylight_name = "FBritish Summer Time199";
+	short_standard_name = "JGMT199";
+	short_daylight_name = "NBST199";
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = "JLondon199";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "HManchester199";
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = "WBirmingham199";
+			}
+		};
+	}
+RESOURCE LOCALIZED_TIMEZONE r_tz_europe_london
+	{
+	time_zone_id = 2592;
+	standard_name = london_standard_name;
+	daylight_name = london_daylight_name;
+	short_standard_name = london_short_standard_name;
+	short_daylight_name = london_short_daylight_name;
+	cities = 
+		{
+		TIMEZONE_CITY
+			{
+			city_name = london_london_name;
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = london_manchester_name;
+			city_group_id = 1;
+			},
+		TIMEZONE_CITY
+			{
+			city_name = london_birmingham_name;
+			}
+		};
+	}

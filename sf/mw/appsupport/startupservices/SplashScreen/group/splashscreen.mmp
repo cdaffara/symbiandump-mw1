@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This is project specification file for the SplashScreen which
+*                displays splash screen upon booting the device.
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          splashscreen.exe
+TARGETTYPE      EXE
+TARGETPATH      PROGRAMS_DIR
+UID             0x100039CE 0x100059DE
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_SERVER
+
+
+SOURCEPATH      ../src
+USERINCLUDE     . ../inc
+
+// Default system include paths for middleware layer modules.
+MW_LAYER_SYSTEMINCLUDE
+
+
+SOURCE          SplashScreen.cpp
+
+START RESOURCE  ../Data/SplashScreen_reg.rss
+// Do not change the UID below.
+TARGETPATH      /private/10003a3f/apps
+END
+
+LIBRARY         euser.lib 
+LIBRARY         ws32.lib
+LIBRARY         efsrv.lib
+LIBRARY         fbscli.lib 
+LIBRARY	    SVGEngine.lib
+LIBRARY	    gdi.lib
+LIBRARY	    cone.lib
+SMPSAFE

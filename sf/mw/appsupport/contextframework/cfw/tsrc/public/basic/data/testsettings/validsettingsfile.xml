@@ -1,0 +1,9 @@
+<ContextSourceSettings>
+    <PluginName attribute1="attributevalue1">
+        <Param param1="value1"></Param>
+    </PluginName>
+    <PluginName attribute1="attributevalue1" attribute2="attributevalue2">
+        <Param param1="value1" param2="value2"></Param>
+        <Param param1="value1" param2="value2" param3="value3"></Param>
+    </PluginName>
+</ContextSourceSettings>

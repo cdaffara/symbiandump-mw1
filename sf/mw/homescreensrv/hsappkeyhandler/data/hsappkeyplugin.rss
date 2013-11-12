@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include <ecom/registryinfov2.rh>
+#include "../inc/hsappkeyhandleruids.hrh"
+
+RESOURCE REGISTRY_INFO theInfo
+    {
+    resource_format_version = RESOURCE_FORMAT_VERSION_2;
+    dll_uid = KUIDAPPKEYPLUGINDLL;
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = 0x10207131; // from sysapkeyhandlerplugininterface.h
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = KUIDAPPKEYPLUGINIMPL1;
+                    version_no = 2;
+                    display_name = "AppkeyPlugin";
+                    default_data = "";
+                    opaque_data = "ResidentPlugin";
+                    rom_only = 1;
+                    }
+                };
+            }
+        };
+    }
+
+// End of file

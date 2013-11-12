@@ -1,0 +1,195 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This is a localisation file for Profiles Engine
+*
+*/
+
+
+
+// LOCALISATION STRINGS
+
+//d: List of Profiles for user selection item #1 (in Profile Main dialog)
+//l: navi_text_pane_t1
+#define qtn_mode_general            "General"
+
+//d: List of Profiles for user selection item #2
+//l: navi_text_pane_t1
+#define qtn_mode_silent             "Silent"
+
+//d: List of Profiles for user selection item #3
+//l: navi_text_pane_t1
+#define qtn_mode_meeting            "Meeting"
+
+//d: List of Profiles for user selection item #4
+//l: navi_text_pane_t1
+#define qtn_mode_outdoor            "Outdoor"
+
+//d: List of Profiles for user selection item #5
+//l: navi_text_pane_t1
+#define qtn_mode_pager              "Pager"
+
+//d: List of Profiles for user selection item #6
+//l: navi_text_pane_t1
+#define qtn_mode_offline            "Off-line"
+
+//d: List of Profiles for user selection item #7
+//l: navi_text_pane_t1
+//r: 2.8
+#define qtn_mode_drive              "Drive"
+
+//d: List of Profiles for user selection item #n
+//l: list_single_pane_t1_cp2
+#define qtn_profiles_new_profile    "New profile"
+
+//d: Navi pane item #1 in Profile Personalization view
+//l: tabs_3_long_active_pane_t1
+//r: 3.1
+#define qtn_navi_mode_general            "General"
+
+//d: Navi pane item #2 in Profile Personalization view
+//l: tabs_3_long_active_pane_t1
+//r: 3.1
+#define qtn_navi_mode_silent             "Silent"
+
+//d: Navi pane item #3 in Profile Personalization view
+//l: tabs_3_long_active_pane_t1
+//r: 3.1
+#define qtn_navi_mode_meeting            "Meeting"
+
+//d: Navi pane item #4 in Profile Personalization view
+//l: tabs_3_long_active_pane_t1
+//r: 3.1
+#define qtn_navi_mode_outdoor            "Outdoor"
+
+//d: Navi pane item #5 in Profile Personalization view
+//l: tabs_3_long_active_pane_t1
+//r: 3.1
+#define qtn_navi_mode_pager              "Pager"
+
+//d: Navi pane item #6 in Profile Personalization view
+//l: tabs_3_long_active_pane_t1
+//r: 3.1
+#define qtn_navi_mode_offline            "Off-line"
+
+//d: Navi pane item #7 in Profile Personalization view
+//l: tabs_3_long_active_pane_t1
+//r: 3.1
+#define qtn_navi_mode_drive              "Drive"
+
+//d: Navi pane item in Profile Personalization view for user-created profile
+//d: This string may be appended with 4-character string "(nn)", where nn is a
+//d: number between 01 and 19, if there are more than 1 user-created profiles
+//d: and user hasn't renamed them.
+//l: tabs_3_long_active_pane_t1
+//r: 3.1
+#define qtn_navi_profiles_new_profile    "New profile"
+
+//d: Navi pane item for Profile with ID 0 in Profiles Main View/Idle View
+//l: navi_text_pane_t1
+//r: 3.2
+#define qtn_navi_mode_active_general            "General"
+
+//d: Navi pane item for Profile with ID 1 in Profiles Main View/Idle View
+//l: navi_text_pane_t1
+//r: 3.2
+#define qtn_navi_mode_active_silent             "Silent"
+
+//d: Navi pane item for Profile with ID 2 in Profiles Main View/Idle View
+//l: navi_text_pane_t1
+//r: 3.2
+#define qtn_navi_mode_active_meeting            "Meeting"
+
+//d: Navi pane item for Profile with ID 3 in Profiles Main View/Idle View
+//l: navi_text_pane_t1
+//r: 3.2
+#define qtn_navi_mode_active_outdoor            "Outdoor"
+
+//d: Navi pane item for Profile with ID 4 in Profiles Main View/Idle View
+//l: navi_text_pane_t1
+//r: 3.2
+#define qtn_navi_mode_active_pager              "Pager"
+
+//d: Navi pane item for Profile with ID 5 in Profiles Main View/Idle View
+//l: navi_text_pane_t1
+//r: 3.2
+#define qtn_navi_mode_active_offline            "Off-line"
+
+//d: Navi pane item for Profile with ID 6 in Profiles Main View/Idle View
+//l: navi_text_pane_t1
+//r: 3.2
+#define qtn_navi_mode_active_drive              "Drive"
+
+//d: Navi pane item for user-created profiles in Profiles Main View/Idle View
+//d: This string may be appended with 4-character string "(nn)", where nn is a
+//d: number between 01 and 19, if there are more than 1 user-created profiles
+//d: and user hasn't renamed them.
+//l: navi_text_pane_t1
+//r: 3.2
+#define qtn_navi_mode_active_new_profile    "New profile"
+
+//d: Title pane text for Profile with ID 0 in the setting pages opened from
+//d: Personalisation view.
+//l: title_pane_t2/opt9
+//r: 3.2
+#define qtn_mode_title_general            "General"
+
+//d: Title pane text for Profile with ID 1 in the setting pages opened from
+//d: Personalisation view.
+//l: title_pane_t2/opt9
+//r: 3.2
+#define qtn_mode_title_silent             "Silent"
+
+//d: Title pane text for Profile with ID 2 in the setting pages opened from
+//d: Personalisation view.
+//l: title_pane_t2/opt9
+//r: 3.2
+#define qtn_mode_title_meeting            "Meeting"
+
+//d: Title pane text for Profile with ID 3 in the setting pages opened from
+//d: Personalisation view.
+//l: title_pane_t2/opt9
+//r: 3.2
+#define qtn_mode_title_outdoor            "Outdoor"
+
+//d: Title pane text for Profile with ID 4 in the setting pages opened from
+//d: Personalisation view.
+//l: title_pane_t2/opt9
+//r: 3.2
+#define qtn_mode_title_pager              "Pager"
+
+//d: Title pane text for Profile with ID 5 in the setting pages opened from
+//d: Personalisation view.
+//l: title_pane_t2/opt9
+//r: 3.2
+#define qtn_mode_title_offline            "Off-line"
+
+//d: Title pane text for Profile with ID 6 in the setting pages opened from
+//d: Personalisation view.
+//l: title_pane_t2/opt9
+//r: 3.2
+#define qtn_mode_title_drive              "Drive"
+
+//d: Title pane text in the setting pages opened from Personalisation view.
+//d: This string may be appended with 4-character string "(nn)", where nn is a
+//d: number between 01 and 19, if there are more than 1 user-created profiles
+//d: and user hasn't renamed them.
+//l: title_pane_t2/opt9
+//r: 3.2
+#define qtn_mode_title_new_profile    "New profile"
+
+//d: Confirmation note that is shown when a timed profile expires
+//l: popup_note_window
+#define qtn_profiles_confirm_timed_expired "Timed profile expired"
+
+// End of File

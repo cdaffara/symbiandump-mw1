@@ -1,0 +1,62 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  XIMP Framework Presence DLL uids
+*
+*/
+
+#ifndef PRESENCEDLLUIDS_HRH
+#define PRESENCEDLLUIDS_HRH
+
+
+// -----------------------------------------------------------------------------
+// Common dll uids
+// -----------------------------------------------------------------------------
+//
+#define XIMP_PRESENCE_DLL_UID_STATIC_INTERFACE                   0x1000008d
+#define XIMP_PRESENCE_DLL_UID_ECOM_PLUGIN                        0x10009D8D
+
+// -----------------------------------------------------------------------------
+// ECOM implementation UID
+// -----------------------------------------------------------------------------
+//
+#define XIMP_ECOM_IMPLEMENTATION_UID_PRESENCE_INTERFACE   0x2000B186
+
+#define XIMP_ECOM_IMPL_UID_PRESENCE_CACHE_READER       0x2000B4EE
+#define XIMP_ECOM_IMPL_UID_PRESENCE_CACHE_WRITER       0x2000B4F0  
+
+// Factory interface for internal data structures
+#define XIMP_ECOM_IMPL_UID_PRESENCE_DATAMODEL_INTERFACE   0x2000B197
+
+// -----------------------------------------------------------------------------
+// Other dll uids
+// -----------------------------------------------------------------------------
+//
+#define XIMP_DLL_UID_PRESENCE_HOOK                      0x2000B1AE
+#define XIMP_DLL_UID_PRESENCE_MANAGER                   0x2000B1AF
+#define XIMP_DLL_UID_PRESENCE_DATAMODEL_HOOK            0x2000B198
+#define XIMP_DLL_UID_PRESENCE_CACHE_HOOK                0x2000B4E9
+#define XIMP_DLL_UID_PRESENCE_CACHE_CLIENT              0x2000B4EA
+#define XIMP_DLL_UID_PRESENCE_CACHE_SERVER              0x2000B4EB
+
+// Still have spare UIDs 0x2000B4EF, 
+
+// -----------------------------------------------------------------------------
+// ECOM Interface UIDs
+// -----------------------------------------------------------------------------
+// TODO: move it to the core side
+#define XIMP_ECOM_IF_UID_PRESENCE_EVENT_CODEC_INTERFACE   0x2000B199
+
+#endif // PRESENCEDLLUIDS_HRH
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api id="7ac899fd1b23c60664b800b8d4652285" dataversion="2.0">
+  <name>homescreen_information_api</name>
+  <description>Home screen information api to listen home screen state</description>
+  <type>c++</type>
+  <collection/>
+  <libs/>
+  <release category="platform" sinceversion=""/>
+  <attributes>
+    <htmldocprovided>no</htmldocprovided>
+    <adaptation>no</adaptation>
+  </attributes>
+</api>

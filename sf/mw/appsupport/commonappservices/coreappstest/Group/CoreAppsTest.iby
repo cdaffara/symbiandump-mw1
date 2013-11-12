@@ -1,0 +1,43 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __COREAPSSTEST_IBY__
+#define __COREAPSSTEST_IBY__
+
+REM On device executable for Automated ROMs
+file=ABI_DIR\BUILD_DIR\runtests.exe	System\Programs\runtests.exe HEAPMAX(0x10000)
+
+REM TestServer code
+file=ABI_DIR\BUILD_DIR\PIMTestClient.DLL	System\Libs\PIMTestClient.dll
+file=ABI_DIR\BUILD_DIR\TestServer.EXE		System\Programs\TestServer.EXE
+#ifdef SYMBIAN_DISTINCT_LOCALE_MODEL
+REM Copy new locale language dlls to ROM SFTB10.1 onwards
+file=ABI_DIR\BUILD_DIR\elocl_lan.002					Sys\bin\elocl_lan.002
+file=ABI_DIR\BUILD_DIR\elocl_lan.032					Sys\bin\elocl_lan.032
+#else
+// These are pre SYMBIAN_DISTINCT_LOCALE_MODEL language locale dlls.Not to be use SFTB10.1 onwards.
+file=ABI_DIR\BUILD_DIR\ELOCL.02                         System\Libs\ELOCL.02
+file=ABI_DIR\BUILD_DIR\ELOCL.03                         System\Libs\ELOCL.03
+file=ABI_DIR\BUILD_DIR\ELOCL.10                         System\Libs\ELOCL.10
+file=ABI_DIR\BUILD_DIR\ELOCL.31                         System\Libs\ELOCL.31
+file=ABI_DIR\BUILD_DIR\ELOCL.32                         System\Libs\ELOCL.32
+#endif
+
+REM Utility to copy test data to C drive
+file=ABI_DIR\BUILD_DIR\preparedrivec.exe	System\Libs\preparedrivec.exe
+
+#endif

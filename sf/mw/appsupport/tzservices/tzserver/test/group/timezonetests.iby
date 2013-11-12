@@ -1,0 +1,65 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __TIMEZONETEST_IBY__
+#define __TIMEZONETEST_IBY__
+
+REM Time Zone Testing
+
+
+file=ABI_DIR\BUILD_DIR\dstunittestserver.exe		System\Libs\dstunittestserver.exe
+file=ABI_DIR\BUILD_DIR\DstIntServer.exe			System\Libs\DstIntServer.exe
+
+//Integration test scripts
+data=EPOCROOT##Epoc32\data\c\dstscripts\Locations.ini				    Dstscripts\Locations.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\LocationTest.script			    Dstscripts\LocationTest.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\Conversions.ini				    Dstscripts\Conversions.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\ConversionTest.script			Dstscripts\ConversionTest.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\VCal.ini				        Dstscripts\VCal.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\VCalTest.script				    Dstscripts\VCalTest.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\Performance.ini				    Dstscripts\Performance.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\PerformanceTest.script			Dstscripts\PerformanceTest.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\autoupdate.ini				    Dstscripts\autoupdate.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\autoupdatetest.script			Dstscripts\autoupdatetest.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\utcoffset.ini				    Dstscripts\utcoffset.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\utcoffsettest.script			Dstscripts\utcoffsettest.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\autoupdatenotification.ini		Dstscripts\autoupdatenotification.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\autoupdatenotificationtest.script	Dstscripts\autoupdatenotificationtest.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\utcalarm.ini				    Dstscripts\utcalarm.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\utcalarmtest.script			    Dstscripts\utcalarmtest.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\isdaylightsavingon.ini			Dstscripts\isdaylightsavingon.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\isdaylightsavingontest.script	Dstscripts\isdaylightsavingontest.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\ServerMsgSender.ini			    Dstscripts\ServerMsgSender.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\ServerMsgSender.script			Dstscripts\ServerMsgSender.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\BackupRestore.ini			    Dstscripts\BackupRestore.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\BackupRestore.script		    Dstscripts\BackupRestore.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\TimeZoneOffsetCheck.ini     	    Dstscripts\TimeZoneOffsetCheck.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\TimeZoneOffsetCheck.script     	    Dstscripts\TimeZoneOffsetCheck.script
+
+//Unit test scripts
+data=EPOCROOT##Epoc32\data\c\Dstscripts\unittest.script				    Dstscripts\unittest.script
+data=EPOCROOT##Epoc32\data\c\Dstscripts\unittest.ini				    Dstscripts\unittest.ini
+data=EPOCROOT##Epoc32\data\c\Dstscripts\dstdatabasemanagerstep.ini		Dstscripts\dstdatabasemanagerstep.ini
+data=EPOCROOT##Epoc32\data\c\Dstscripts\encodedrulesstep.ini			Dstscripts\encodedrulesstep.ini
+data=EPOCROOT##Epoc32\data\c\Dstscripts\tzupdatenotification.ini		Dstscripts\tzupdatenotification.ini
+data=EPOCROOT##Epoc32\data\c\Dstscripts\cenrep_access_all.cre			Dstscripts\cenrep_access_all.cre
+data=EPOCROOT##Epoc32\data\c\dstscripts\actualisedrules.ini			    dstscripts\actualisedrules.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\tzrules.ini			            dstscripts\tzrules.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\NextDSTChange.ini			Dstscripts\NextDSTChange.ini
+data=EPOCROOT##Epoc32\data\c\dstscripts\NextDSTChange.script			Dstscripts\NextDSTChange.script
+data=EPOCROOT##Epoc32\data\c\dstscripts\UnknownZoneTime.script			Dstscripts\UnknownZoneTime.script
+
+#endif

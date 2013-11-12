@@ -1,0 +1,6 @@
+EXPORTS
+	??1CBackupRestoreNotification@@UAE@XZ @ 1 NONAME ; CBackupRestoreNotification::~CBackupRestoreNotification(void)
+	?BackupInProgress@CBackupRestoreNotification@@QBEHXZ @ 2 NONAME ; int CBackupRestoreNotification::BackupInProgress(void) const
+	?NewL@CBackupRestoreNotification@@SAPAV1@ABVTDesC16@@AAVMBackupRestoreNotificationObserver@@@Z @ 3 NONAME ; class CBackupRestoreNotification * CBackupRestoreNotification::NewL(class TDesC16 const &, class MBackupRestoreNotificationObserver &)
+	?RestoreInProgress@CBackupRestoreNotification@@QBEHXZ @ 4 NONAME ; int CBackupRestoreNotification::RestoreInProgress(void) const
+

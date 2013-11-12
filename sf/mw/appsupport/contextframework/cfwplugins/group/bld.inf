@@ -1,0 +1,30 @@
+/*
+* Copyright (c) 2006-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project Context Framework Plugins
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+// Plugins
+#include "../CallStateSourcePlugIn/group/bld.inf"
+#include "../ApplicationStateSourcePlugIn/group/bld.inf"
+#include "../sensorsourceplugin/group/bld.inf"
+#include "../vibraactionplugin/group/bld.inf"
+//#include "../orientationactionplugin/group/bld.inf"
+#include "../cenrepsourceplugin/group/bld.inf"
+// moved from pcfw
+#include "../PSStateSourcePlugIn/group/bld.inf"
+#include "../displaysourceplugin/group/bld.inf"

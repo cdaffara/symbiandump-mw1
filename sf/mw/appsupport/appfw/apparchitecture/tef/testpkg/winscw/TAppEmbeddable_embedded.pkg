@@ -1,0 +1,31 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+;Languages
+&EN
+
+;Header
+; SA = Symbian Application
+; RU = Rom Upgrade
+#{"TAppEmbeddable_embedded"}, (0x10004c5B), 1, 0, 0, TYPE=SA
+
+%{"Nokia India Pvt Ltd"}
+:"Nokia India Pvt Ltd"
+
+"\epoc32\release\winscw\udeb\tappembeddable_embedded.dll"-"!:\sys\bin\tappembeddable_embedded.dll"
+"\epoc32\release\winscw\udeb\z\apparctestregfiles\tappembeddable_embedded.rsc"-"!:\resource\plugins\tappembeddable_embedded.rsc"
+

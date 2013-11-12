@@ -1,0 +1,5 @@
+<ContextSourceSettings>
+    <ApplicationStateSource AppUid="0x101F8599" AppName="Gallery"/>
+    <ApplicationStateSource AppUid="0x10008D39" AppName="BrowserNG"/>
+    <ApplicationStateSource AppUid="0x101f4d90" AppName="ImageViewer"/>
+</ContextSourceSettings>

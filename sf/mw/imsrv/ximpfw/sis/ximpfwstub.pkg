@@ -1,0 +1,67 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+;
+; Package file for presencefw SIS stub in ROM
+; and a ximp framework upgrade SIS.
+; Including the stub in ROM enables components
+; defined in stub to be updated by SIS installer.
+; When adding or removing components from presencefw
+; please update this pkg file and create an updated
+; stub to group directory.
+;
+; To create SIS stub: makesis -s ximpfw_upgrade.pkg ximpfwstub.sis
+; Copy ximpfwstub.sis to z:\system\install\ximpfwstub.sis
+; or use abld export to export it automatically.
+;
+
+;Language
+&EN
+
+;Header
+#{"XIMPFramework"}, (0x10282DDC), 1, 0, 0, TYPE=SA
+
+
+;Localised VendorID
+%{"Nokia"}
+
+;VendorID
+:"Nokia"
+
+;binaries
+""-"z:\sys\bin\ximpdatamodel.dll"
+""-"z:\sys\bin\ximpoperations.dll"
+""-"z:\sys\bin\ximpprocessor.dll"
+""-"z:\sys\bin\ximpserver.exe"
+""-"z:\sys\bin\ximprootserver.exe"
+""-"z:\sys\bin\ximpsrvclient.dll"
+""-"z:\sys\bin\ximpmanager.dll"
+""-"z:\sys\bin\ximpecomhook.dll"
+""-"z:\sys\bin\ximputils.dll"
+""-"z:\sys\bin\presencemanager.dll"
+""-"z:\sys\bin\presencedatamodel.dll"
+""-"z:\sys\bin\presenceoperation.dll"
+""-"z:\sys\bin\presencedatamodelhook.dll"
+""-"z:\sys\bin\presenceecomhook.dll"
+""-"z:\sys\bin\presencecacheclient.dll"
+""-"z:\sys\bin\presencecacheecomhook.dll"
+""-"z:\sys\bin\presencecacheserver.exe"
+
+;resources
+""-"z:\resource\plugins\ximpecomhook.rsc"
+""-"z:\resource\plugins\presenceecomhook.rsc"
+""-"z:\resource\plugins\presencedatamodelhook.rsc"
+""-"z:\resource\plugins\presencecacheecomhook.rsc"
+

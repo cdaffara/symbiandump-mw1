@@ -1,0 +1,305 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This is a resource file for ProfileEng
+*
+*/
+
+
+
+//  RESOURCE IDENTIFIER
+NAME    PFE2
+
+
+//  INCLUDES
+#include <eikon.rh>
+#include <bldvariant.hrh>
+#include "Profile.hrh"
+#include "ProfileEng.rh"
+#include "ProfileEng.hrh"
+#include <Profile.loc>
+
+//  CONSTANTS
+//  MACROS
+
+//  RESOURCE DEFINITIONS
+// -----------------------------------------------------------------------------
+//
+// signature
+// resource signature
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { signature = PROFILES_ENGINE_RESOURCE_SIGNATURE; }
+
+
+// -----------------------------------------------------------------------------
+//
+// r_default_profiles
+// Profiles default profiles.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DEFAULT_PROFILES r_default_profiles
+    {
+    items=
+        {
+        PROFILE
+            {
+            id = EProfileGeneralId;
+            name = qtn_mode_general;
+            shortname = qtn_navi_mode_general;
+            naviname = qtn_navi_mode_active_general;
+            titlename = qtn_mode_title_general;
+            },
+/*      PROFILE
+            {
+            id = EProfileSilentId;
+            name = qtn_mode_silent;
+            shortname = qtn_navi_mode_silent;
+            naviname = qtn_navi_mode_active_silent;
+            titlename = qtn_mode_title_silent;
+            },
+*/
+        PROFILE
+            {
+            id = EProfileMeetingId;
+            name = qtn_mode_meeting;
+            shortname = qtn_navi_mode_meeting;
+            naviname = qtn_navi_mode_active_meeting;
+            titlename = qtn_mode_title_meeting;
+            }
+/*            
+            ,
+        PROFILE
+            {
+            id = EProfileOutdoorId;
+            name = qtn_mode_outdoor;
+            shortname = qtn_navi_mode_outdoor;
+            naviname = qtn_navi_mode_active_outdoor;
+            titlename = qtn_mode_title_outdoor;
+            },
+        PROFILE
+            {
+            id = EProfilePagerId;
+            name = qtn_mode_pager;
+            shortname = qtn_navi_mode_pager;
+            naviname = qtn_navi_mode_active_pager;
+            titlename = qtn_mode_title_pager;
+            }
+#ifdef __OFFLINE_MODE
+        ,
+        PROFILE
+            {
+            id = EProfileOffLineId;
+            name = qtn_mode_offline;
+            shortname = qtn_navi_mode_offline;
+            naviname = qtn_navi_mode_active_offline;
+            titlename = qtn_mode_title_offline;
+            }
+#endif
+#ifdef __DRIVE_MODE
+        ,
+        PROFILE
+            {
+            id = EProfileDriveId;
+            name = qtn_mode_drive;
+            shortname = qtn_navi_mode_drive;
+            naviname = qtn_navi_mode_active_drive;
+            titlename = qtn_mode_title_drive;
+            }
+#endif 
+*/
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+// r_profile_settings
+// Profiles profile settings.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE PROFILE_SETTINGS r_profile_settings
+    {
+    items=
+        {
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdModifiableFlags;
+            key_type = EProfileSettingKeyTypeBin;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdVisibleFlags;
+            key_type = EProfileSettingKeyTypeBin;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdProfileName;
+            key_type = EProfileSettingKeyTypeString;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdAlertForGroups;
+            key_type = EProfileSettingKeyTypeBin;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdRingingTone;
+            key_type = EProfileSettingKeyTypeString;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdRingingTone2;
+            key_type = EProfileSettingKeyTypeString;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdMsgTone;
+            key_type = EProfileSettingKeyTypeString;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdRingingType;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdKeypadVolume;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdRingingVolume;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdVibra;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdTactileFeedback;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdAudioFeedback;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdWarnAndGameTones;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdImTone;
+            key_type = EProfileSettingKeyTypeString;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdEmailTone;
+            key_type = EProfileSettingKeyTypeString;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdVideoCallTone;
+            key_type = EProfileSettingKeyTypeString;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdStatusMsg;
+            key_type = EProfileSettingKeyTypeString;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdAvailAttribute;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdMediaVolume;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdTextToSpeechTone;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdNameChanged;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdCallObjectContent;
+            key_type = EProfileSettingKeyTypeString;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdPttTone;
+            key_type = EProfileSettingKeyTypeString;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingIdPttStatus;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingId3DEffect;
+            key_type = EProfileSettingKeyTypeInt;
+            },
+        PROFILE_SETTING
+            {
+            id = EProfileSettingId3DEcho;
+            key_type = EProfileSettingKeyTypeInt;
+            }
+        };
+    }
+
+
+// -----------------------------------------------------------------------------
+//
+// r_new_profile
+// Profiles new profile.
+//
+// -----------------------------------------------------------------------------
+//
+#ifdef __DYNAMIC_PROFILES 
+RESOURCE LBUF r_new_profile
+	{
+	txt = qtn_profiles_new_profile;
+	}
+
+RESOURCE LBUF r_new_profile_short
+	{
+    txt = qtn_navi_profiles_new_profile;
+	}
+
+RESOURCE LBUF r_new_profile_navi
+	{
+    txt = qtn_navi_mode_active_new_profile;
+	}
+
+RESOURCE LBUF r_new_profile_title
+	{
+    txt = qtn_mode_title_new_profile;
+	}
+#endif
+
+// End of File

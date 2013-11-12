@@ -1,0 +1,72 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project file for AccFwUiNotifier.dll
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          accfwuinotifier.dll
+
+TARGETTYPE      PLUGIN
+//deffile       accfwuinotifier.def
+UID             0x10009D8D 0x1020505F
+VENDORID        VID_DEFAULT
+
+CAPABILITY      CAP_ECOM_PLUGIN
+
+
+
+
+
+SYSTEMINCLUDE		/epoc32/include/mw/hb/hbwidgets
+
+SOURCEPATH      ../src
+
+SOURCE          AccFwUiNotifierProxy.cpp
+SOURCE          AccFwUiNoteNotifier.cpp
+
+						
+USERINCLUDE     ../inc
+
+MW_LAYER_SYSTEMINCLUDE
+
+START RESOURCE ../data/1020505F.rss
+TARGET accfwuinotifier.rsc
+END
+
+START RESOURCE ../data/accfwnoteuinotifier.rss
+TARGETPATH RESOURCE_FILES_DIR
+HEADER
+LANGUAGE_IDS
+END  // RESOURCE
+
+LIBRARY         ecom.lib
+LIBRARY         euser.lib
+LIBRARY         eiksrv.lib
+LIBRARY	        efsrv.lib
+LIBRARY         featmgr.lib
+LIBRARY         eikdlg.lib
+LIBRARY		bafl.lib
+LIBRARY 	cone.lib
+//hb
+LIBRARY         HbWidgets.lib
+
+MACRO           API_TRACE_FLAG
+MACRO           COMPONENT_TRACE_FLAG
+
+// End of file
+

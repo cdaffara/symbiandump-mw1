@@ -1,0 +1,3 @@
+EXPORTS
+	?LibEntryL@@YAPAVCSensorDataCompensatorPlgTest@@AAVCTestModuleIf@@@Z @ 1 NONAME ; class CSensorDataCompensatorPlgTest * LibEntryL(class CTestModuleIf &)
+

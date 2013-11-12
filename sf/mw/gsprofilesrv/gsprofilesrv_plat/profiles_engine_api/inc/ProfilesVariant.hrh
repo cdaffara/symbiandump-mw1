@@ -1,0 +1,77 @@
+/*
+* Copyright (c) 2003 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Profiles subsystem local variation
+*
+*  The file contains values for Central Repository keys specifying
+*  Profiles specific software settings. 
+*
+*
+*/
+
+
+
+#ifndef PROFILESVARIANT_HRH
+#define PROFILESVARIANT_HRH
+
+
+/**
+* User's guide to Profiles variation:
+* Central Repository file: KCRUidProfilesLV (101F8799.txt)
+* How to use: 
+*     CRepository* cenrep = CRepository::NewLC( KCRUidProfilesLV );
+*     // if value fetch fails, assume all variated features are off:
+*     TInt featureBitmask( 0 );
+*     cenrep->Get( KProfilesLVFlags, featureBitmask );
+* 
+*     //
+*     // Get the value once and save it for later use.
+*     // No need to access Central Repository every time when a value is needed
+* 
+*     if  ( featureBitmask & KProEngFeatureXxx )
+*         {
+*         // This feature is ON, so act accordingly
+*         }
+*/
+
+
+
+/**
+* If KProEngFeatureIdVTRingingTone is on, Profiles supports setting of a
+* dedicated ringing tone for a video call.
+*/
+#define KProEngFeatureIdVTRingingTone 0x01
+
+/**
+ * If KProEngFeatureIdForceSilentMode is enabled, no other sounds than the
+ * camera shutter and video recorder start tones can be heard in silent
+ * profile. Also the tone settings of the silent profile will be hidden.
+ */
+#define KProEngFeatureIdForceSilentMode 0x02
+
+/**
+ * If KProEngFeatureIdTimedProfiles is enabled, Profiles supports timed
+ * profiles.
+ */
+#define KProEngFeatureIdTimedProfiles 0x04
+
+/**
+ * If KProEngFeatureIdTTSRingingTone is enabled, Profiles supports
+ * text-to-speech feature (aka "Say caller's name").
+ * Feature dependency to __SIND (Speaker Independent Name Dialing).
+ * Must be disabled when SIND is disabled.
+ */
+#define KProEngFeatureIdTTSRingingTone 0x08
+
+#endif // PROFILESVARIANT_HRH
+

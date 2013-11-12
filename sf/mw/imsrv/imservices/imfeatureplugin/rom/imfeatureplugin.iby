@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: IBY file for imfeatureplugin
+*
+*/
+
+#ifndef __IMFEATUREPLUGIN_IBY__
+#define __IMFEATUREPLUGIN_IBY__
+
+// imfeature plugin : (ximpfw.iby contains commented dlls, remove from there)
+//dlls
+file=ABI_DIR/BUILD_DIR/immanager.dll        SHARED_LIB_DIR/immanager.dll
+file=ABI_DIR/BUILD_DIR/imdatamodel.dll        SHARED_LIB_DIR/imdatamodel.dll
+file=ABI_DIR/BUILD_DIR/imoperation.dll        SHARED_LIB_DIR/imoperation.dll
+file=ABI_DIR/BUILD_DIR/improcessor.dll        SHARED_LIB_DIR/improcessor.dll
+
+//ECom hook
+ECOM_PLUGIN( imecomhook.dll, imecomhook.rsc) 
+ECOM_PLUGIN( imdatamodelhook.dll, imdatamodelhook.rsc) 
+ECOM_PLUGIN( imoperationshook.dll, imoperationshook.rsc) 
+ECOM_PLUGIN( improcessorhook.dll, improcessorhook.rsc) 
+
+// stub SIS, provides support for SIS upgrading
+data=DATAZ_/system/install/imfeaturepluginstub.sis    system/install/imfeaturepluginstub.sis
+
+#endif
+
+

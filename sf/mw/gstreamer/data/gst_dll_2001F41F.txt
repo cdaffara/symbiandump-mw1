@@ -1,0 +1,6 @@
+libgstcoreelements.dll
+libgstdevsoundsrc.dll
+libgstwavenc.dll
+gstqtmux.dll
+libgstnokiaaacenc.dll
+libgstamrmux.dll

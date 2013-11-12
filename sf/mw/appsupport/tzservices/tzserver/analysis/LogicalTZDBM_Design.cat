@@ -1,0 +1,4253 @@
+
+(object Petal
+    version    	43
+    _written   	"Rose 6.5.9232.10"
+    charSet    	0)
+
+(object Class_Category "2. TZ Data Provider - Design"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"40FFCECD00D3"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "CTzDbZonesTable"
+	    quid       	"40FFD6C5022D"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"41061AB5018B"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone"
+		    quidu      	"40FFE0E20357"))
+	    operations 	(list Operations
+		(object Operation "GetZoneByNameId"
+		    quid       	"40FFD7A402F0"
+		    parameters 	(list Parameters
+			(object Parameter "CityName"))
+		    result     	"CTzDBZone*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetZoneByRef"
+		    quid       	"410610DC012C"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "GetZoneByNumId"
+		    quid       	"413ED72B0360"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDbRegionalZonesTable"
+	    quid       	"40FFD6DE0126"
+	    operations 	(list Operations
+		(object Operation "GetRegionalZoneIndex"
+		    quid       	"40FFDA94033C"
+		    parameters 	(list Parameters
+			(object Parameter "TInt aOffset"))
+		    result     	"CTzDbRegionalZoneIndex*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDbRegionsTable"
+	    quid       	"40FFD6F003D6"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"410619D703DA"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZonesTable"
+		    quidu      	"40FFD6C5022D")
+		(object Uses_Relationship
+		    quid       	"41061A470283"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZonesTable"
+		    quidu      	"40FFD6DE0126")
+		(object Uses_Relationship
+		    quid       	"41061AE50024"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRegion"
+		    quidu      	"40E175D902B9"))
+	    operations 	(list Operations
+		(object Operation "GetZone"
+		    quid       	"40FFD92A0041"
+		    parameters 	(list Parameters
+			(object Parameter "ZoneName"))
+		    result     	"CTzDbZone"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDbLinksTable"
+	    quid       	"40FFD70E0196"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"40FFE14000AF"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TLink"
+		    quidu      	"40FE3C5A0120")
+		(object Uses_Relationship
+		    quid       	"41400AB40331"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone"
+		    quidu      	"40FFE0E20357")
+		(object Uses_Relationship
+		    quid       	"41400B6C01CC"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZonesTable"
+		    quidu      	"40FFD6C5022D"))
+	    operations 	(list Operations
+		(object Operation "GetZone"
+		    quid       	"40FFDAD30174"
+		    parameters 	(list Parameters
+			(object Parameter "ZoneName"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDbRuleSetsTable"
+	    quid       	"40FFD71A018A"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"40FFE15D0121"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleSet"
+		    quidu      	"40FFE15302FD"))
+	    operations 	(list Operations
+		(object Operation "GetRuleSet"
+		    quid       	"40FFDB620222"
+		    parameters 	(list Parameters
+			(object Parameter "TInt aOffset"))
+		    result     	"CTzDbRuleSet*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDbStdTimeAlignmentsTable"
+	    quid       	"40FFD728000F"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"410615780070"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignment"
+		    quidu      	"40FFE058036F"))
+	    operations 	(list Operations
+		(object Operation "GetStdAlignment"
+		    quid       	"40FFDB20038C"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDbRuleDefinitionsTable"
+	    quid       	"40FFD737036F"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"410614AB00CB"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRuleDefinition"
+		    quidu      	"40E1450C0230"))
+	    operations 	(list Operations
+		(object Operation "GetRuleDefinition"
+		    quid       	"40FFDAF10151"
+		    parameters 	(list Parameters
+			(object Parameter "TInt aOffset"))
+		    result     	"TTzDbRuleDefinition*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDbStdTimeAlignment"
+	    quid       	"40FFE058036F"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"410615AF0340"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleSetsTable"
+		    quidu      	"40FFD71A018A"))
+	    operations 	(list Operations
+		(object Operation "GetRule"
+		    quid       	"410614410260"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDbRegionalZoneIndex"
+	    quid       	"40FFE0A40084")
+	(object Class "CTzDbZone"
+	    quid       	"40FFE0E20357"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"4106158E00ED"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignmentsTable"
+		    quidu      	"40FFD728000F"))
+	    operations 	(list Operations
+		(object Operation "GetRule"
+		    quid       	"4106144E030C"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDbRuleSet"
+	    quid       	"40FFE15302FD"
+	    operations 	(list Operations
+		(object Operation "GetRule"
+		    quid       	"41061736024B"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "CTzDbRuleUse"
+	    quid       	"4106167A00E1"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"4106197D0158"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleDefinitionsTable"
+		    quidu      	"40FFD737036F"))
+	    operations 	(list Operations
+		(object Operation "GetRule"
+		    quid       	"4106174C0364"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object Class "TTzRuleDefinition"
+	    quid       	"418B8D2F0392")
+	(object Association "$UNNAMED$0"
+	    quid       	"40FFD81B033E"
+	    roles      	(list role_list
+		(object Role "iPersistedEntity"
+		    quid       	"40FFD81C01EB"
+		    label      	"iPersistedEntity"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TZonesTable"
+		    quidu      	"40FFD8100020"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$1"
+		    quid       	"40FFD81C01F5"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZonesTable"
+		    quidu      	"40FFD6C5022D")))
+	(object Association "$UNNAMED$2"
+	    quid       	"40FFD95C01EA"
+	    roles      	(list role_list
+		(object Role "iPersistedEntity"
+		    quid       	"40FFD95C0367"
+		    label      	"iPersistedEntity"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRegionsTable"
+		    quidu      	"40E175950095"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$3"
+		    quid       	"40FFD95C0369"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionsTable"
+		    quidu      	"40FFD6F003D6")))
+	(object Association "$UNNAMED$4"
+	    quid       	"40FFDBB30101"
+	    roles      	(list role_list
+		(object Role "iPersistedEntity"
+		    quid       	"40FFDBB30350"
+		    label      	"iPersistedEntity"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TLinksTable"
+		    quidu      	"40FFDB8903E3"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$5"
+		    quid       	"40FFDBB30352"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbLinksTable"
+		    quidu      	"40FFD70E0196")))
+	(object Association "$UNNAMED$6"
+	    quid       	"40FFDBD30069"
+	    roles      	(list role_list
+		(object Role "iPersistedEntity"
+		    quid       	"40FFDBD400C4"
+		    label      	"iPersistedEntity"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TStdTimeAlignmentsTable"
+		    quidu      	"40FFDBC40319"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$7"
+		    quid       	"40FFDBD400CE"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignmentsTable"
+		    quidu      	"40FFD728000F")))
+	(object Association "$UNNAMED$8"
+	    quid       	"40FFDC210373"
+	    roles      	(list role_list
+		(object Role "iPersistedEntity"
+		    quid       	"40FFDC22007B"
+		    label      	"iPersistedEntity"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRegionalZonesTable"
+		    quidu      	"40E190CD0023"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$9"
+		    quid       	"40FFDC220085"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZonesTable"
+		    quidu      	"40FFD6DE0126")))
+	(object Association "$UNNAMED$10"
+	    quid       	"40FFDC370181"
+	    roles      	(list role_list
+		(object Role "iPersistedEntity"
+		    quid       	"40FFDC370285"
+		    label      	"iPersistedEntity"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRuleDefinitionsTable"
+		    quidu      	"40FFDBEB0065"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$11"
+		    quid       	"40FFDC370287"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleDefinitionsTable"
+		    quidu      	"40FFD737036F")))
+	(object Association "$UNNAMED$12"
+	    quid       	"40FFDC4F0173"
+	    roles      	(list role_list
+		(object Role "iPersistedEntity"
+		    quid       	"40FFDC4F02EF"
+		    label      	"iPersistedEntity"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRuleSetsTable"
+		    quidu      	"40FFDC4301D9"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$13"
+		    quid       	"40FFDC4F02F1"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleSetsTable"
+		    quidu      	"40FFD71A018A")))
+	(object Association "$UNNAMED$14"
+	    quid       	"40FFDC7C0134"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$15"
+		    quid       	"40FFDC7C026B"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionsTable"
+		    quidu      	"40FFD6F003D6"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$16"
+		    quid       	"40FFDC7C0275"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$17"
+	    quid       	"40FFDC7E0340"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$18"
+		    quid       	"40FFDC7F014D"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZonesTable"
+		    quidu      	"40FFD6DE0126"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$19"
+		    quid       	"40FFDC7F0157"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_aggregate 	TRUE)))
+	(object Association "delegates Read/Only Database Management to"
+	    quid       	"40FFDC81018C"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$20"
+		    quid       	"40FFDC820011"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$21"
+		    quid       	"40FFDC82002F"
+		    supplier   	"Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTimeZoneDataProvider"
+		    quidu      	"40B1DA3703B5"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$22"
+	    quid       	"40FFDC8500C0"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$23"
+		    quid       	"40FFDC8502C8"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZonesTable"
+		    quidu      	"40FFD6C5022D"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$24"
+		    quid       	"40FFDC8502D2"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3")))
+	(object Association "$UNNAMED$25"
+	    quid       	"40FFDC870362"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$26"
+		    quid       	"40FFDC8800EC"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbLinksTable"
+		    quidu      	"40FFD70E0196"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$27"
+		    quid       	"40FFDC8800F6"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$28"
+	    quid       	"40FFDC8A0045"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$29"
+		    quid       	"40FFDC8A01F3"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignmentsTable"
+		    quidu      	"40FFD728000F"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$30"
+		    quid       	"40FFDC8A01FD"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$31"
+	    quid       	"40FFDC8D0393"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$32"
+		    quid       	"40FFDC8E0127"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleDefinitionsTable"
+		    quidu      	"40FFD737036F"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$33"
+		    quid       	"40FFDC8E0131"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$34"
+	    quid       	"40FFDC900076"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$35"
+		    quid       	"40FFDC9001B6"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleSetsTable"
+		    quidu      	"40FFD71A018A"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$36"
+		    quid       	"40FFDC9001C0"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$37"
+	    quid       	"41010C250292"
+	    roles      	(list role_list
+		(object Role "iPersistedEntity"
+		    quid       	"41010C2600E5"
+		    label      	"iPersistedEntity"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TZone"
+		    quidu      	"40E13DFF01DB"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$38"
+		    quid       	"41010C2600F9"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone"
+		    quidu      	"40FFE0E20357")))
+	(object Association "$UNNAMED$39"
+	    quid       	"41010C94025B"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$40"
+		    quid       	"41010C9502DE"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRegionalZonesIndex"
+		    quidu      	"40E1906C010C"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$41"
+		    quid       	"41010C9502F3"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZoneIndex"
+		    quidu      	"40FFE0A40084")))
+	(object Association "$UNNAMED$42"
+	    quid       	"41010CE1031E"
+	    roles      	(list role_list
+		(object Role "iPersistedEntity"
+		    quid       	"41010CE20030"
+		    label      	"iPersistedEntity"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TStdTimeAlignment"
+		    quidu      	"40E143EC028A"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$43"
+		    quid       	"41010CE20044"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignment"
+		    quidu      	"40FFE058036F")))
+	(object Association "$UNNAMED$44"
+	    quid       	"41010D0D030F"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$45"
+		    quid       	"41010D0E00A4"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRuleSet"
+		    quidu      	"40E1445E01B1"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$46"
+		    quid       	"41010D0E00B8"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleSet"
+		    quidu      	"40FFE15302FD")))
+	(object Association "$UNNAMED$47"
+	    quid       	"41010EF1016B"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$48"
+		    quid       	"41010EF102DD"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRuleUse"
+		    quidu      	"40E144A300E7"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$49"
+		    quid       	"41010EF102FB"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleUse"
+		    quidu      	"4106167A00E1")))
+	(object Association "$UNNAMED$50"
+	    quid       	"41060E120096"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$51"
+		    quid       	"41060E120097"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_aggregate 	TRUE)
+		(object Role "$UNNAMED$52"
+		    quid       	"41060E120098"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZonesTable"
+		    quidu      	"40FFD6DE0126"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$53"
+	    quid       	"41060E7002E9"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$54"
+		    quid       	"41060E7002EA"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_aggregate 	TRUE)
+		(object Role "$UNNAMED$55"
+		    quid       	"41060E7002EB"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZonesTable"
+		    quidu      	"40FFD6C5022D"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$56"
+	    quid       	"41060E7801FF"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$57"
+		    quid       	"41060E790098"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZonesTable"
+		    quidu      	"40FFD6C5022D"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$58"
+		    quid       	"41060E790099"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbLinksTable"
+		    quidu      	"40FFD70E0196")))
+	(object Association "$UNNAMED$59"
+	    quid       	"41060EE50116"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$60"
+		    quid       	"41060EE5031A"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZonesTable"
+		    quidu      	"40FFD6C5022D"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$61"
+		    quid       	"41060EE50329"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbLinksTable"
+		    quidu      	"40FFD70E0196")))
+	(object Association "$UNNAMED$62"
+	    quid       	"410610100020"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$63"
+		    quid       	"410610100168"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZoneIndex"
+		    quidu      	"40FFE0A40084"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$64"
+		    quid       	"410610100169"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZonesTable"
+		    quidu      	"40FFD6DE0126"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$65"
+	    quid       	"410610460188"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$66"
+		    quid       	"41061046039B"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone"
+		    quidu      	"40FFE0E20357"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$67"
+		    quid       	"41061046039C"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$68"
+	    quid       	"410612310363"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$69"
+		    quid       	"41061232019E"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone"
+		    quidu      	"40FFE0E20357"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$70"
+		    quid       	"4106123201AD"
+		    supplier   	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$71"
+	    quid       	"410612840103"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$72"
+		    quid       	"41061284024B"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignmentsTable"
+		    quidu      	"40FFD728000F"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$73"
+		    quid       	"41061284024C"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone"
+		    quidu      	"40FFE0E20357")))
+	(object Association "$UNNAMED$74"
+	    quid       	"41061374020F"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$75"
+		    quid       	"41061375000C"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignment"
+		    quidu      	"40FFE058036F"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$76"
+		    quid       	"41061375000D"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone"
+		    quidu      	"40FFE0E20357"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$77"
+	    quid       	"4106145A0147"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$78"
+		    quid       	"4106145A036A"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleSet"
+		    quidu      	"40FFE15302FD"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$79"
+		    quid       	"4106145A037A"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignment"
+		    quidu      	"40FFE058036F"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$80"
+	    quid       	"410616930035"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$81"
+		    quid       	"4106169301DB"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleUse"
+		    quidu      	"4106167A00E1"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$82"
+		    quid       	"4106169301DC"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleSet"
+		    quidu      	"40FFE15302FD"
+		    is_aggregate 	TRUE)))
+	(object Association "$UNNAMED$83"
+	    quid       	"410616E3022A"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$84"
+		    quid       	"410616E40140"
+		    supplier   	"Logical View::Analysis Model::TZClasses::TRuleDefinition"
+		    quidu      	"40E1450C0230"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$85"
+		    quid       	"410616E4015F"
+		    supplier   	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleUse"
+		    quidu      	"4106167A00E1")))
+	(object Mechanism @1
+	    logical_models 	(list unit_reference_list
+		(object Object "GetTZDBRules()"
+		    quid       	"4104E1C1034E"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4104E1C1034F"
+			    supplier   	"$UNNAMED$86"
+			    quidu      	"4104E1C10356"
+			    messages   	(list Messages
+				(object Message "GetTZRules( )"
+				    quid       	"4104E1C10351"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1"
+				    ordinal    	0
+				    quidu      	"40B1D8B301A2"))))
+		    class      	"Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTzConfigAgent"
+		    quidu      	"409F83A9029C"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$86"
+		    quid       	"4104E1C10356"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4104E1C10355"
+			    supplier   	"$UNNAMED$86"
+			    quidu      	"4104E1C10356"
+			    messages   	(list Messages
+				(object Message "InterpretLocationString()"
+				    quid       	"4104E1C10362"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.1"
+				    ordinal    	1
+				    quidu      	"000000000000")))
+			(object Link
+			    quid       	"4104E1C10357"
+			    supplier   	"$UNNAMED$87"
+			    quidu      	"4104E1C1036A"
+			    messages   	(list Messages
+				(object Message "GetRules( )"
+				    quid       	"4104E1C1035A"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.2"
+				    ordinal    	2
+				    quidu      	"40FE691400E0")))
+			(object Link
+			    quid       	"4104E1C1035F"
+			    supplier   	"GetTZDBRules()"
+			    quidu      	"4104E1C1034E"))
+		    class      	"Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTimeZoneDataProvider"
+		    quidu      	"40B1DA3703B5"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$87"
+		    quid       	"4104E1C1036A"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4104E1C10369"
+			    supplier   	"$UNNAMED$87"
+			    quidu      	"4104E1C1036A")
+			(object Link
+			    quid       	"4104E65D00B5"
+			    supplier   	"$UNNAMED$88"
+			    quidu      	"4104E63F0152"
+			    messages   	(list Messages
+				(object Message "GetRegionalZoneIndex(regionName)"
+				    quid       	"4104E65D00B6"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.2.4"
+				    ordinal    	6
+				    Operation  	"GetRegionalZoneIndex()"
+				    quidu      	"40FFDA94033C")
+				(object Message ""
+				    quid       	"4106056103C6"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.2.2"
+				    ordinal    	4)))
+			(object Link
+			    quid       	"4104E82D00C7"
+			    supplier   	"$UNNAMED$89"
+			    quidu      	"4104E80D0002"
+			    messages   	(list Messages
+				(object Message "FindZone(cityName)"
+				    quid       	"4104E82D00C8"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.2.3"
+				    ordinal    	5
+				    Operation  	"FindZone"
+				    quidu      	"000000000000")))
+			(object Link
+			    quid       	"4104E8BB0304"
+			    supplier   	"$UNNAMED$90"
+			    quidu      	"4104E89A0373"
+			    messages   	(list Messages
+				(object Message "FindStdTimeAlignment(time)"
+				    quid       	"4104E8BB0305"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.2.5"
+				    ordinal    	7
+				    Operation  	"FindStdTimeAlignment(year)"
+				    quidu      	"000000000000")))
+			(object Link
+			    quid       	"4104E9080060"
+			    supplier   	"$UNNAMED$91"
+			    quidu      	"4104E8FA01D1"
+			    messages   	(list Messages
+				(object Message "FindRuleUses(year)"
+				    quid       	"4104E9080061"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.2.6"
+				    ordinal    	8
+				    quidu      	"000000000000")))
+			(object Link
+			    quid       	"410605C3031B"
+			    supplier   	"$UNNAMED$92"
+			    quidu      	"410605AF005C"
+			    messages   	(list Messages
+				(object Message "FindRegion(RegionName)"
+				    quid       	"410605C3031C"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.2.1"
+				    ordinal    	3))))
+		    class      	"Logical View::Analysis Model::TZClasses::CReadOnlyTZDB"
+		    quidu      	"40FBA87302D3"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$88"
+		    quid       	"4104E63F0152"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"4104E640015E"
+			    supplier   	"$UNNAMED$88"
+			    quidu      	"4104E63F0152"))
+		    class      	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZonesTable"
+		    quidu      	"40FFD6DE0126"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$89"
+		    quid       	"4104E80D0002"
+		    class      	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZoneIndex"
+		    quidu      	"40FFE0A40084"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$90"
+		    quid       	"4104E89A0373"
+		    class      	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone"
+		    quidu      	"40FFE0E20357"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$91"
+		    quid       	"4104E8FA01D1"
+		    class      	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignment"
+		    quidu      	"40FFE058036F"
+		    persistence 	"Transient"
+		    multi      	FALSE)
+		(object Object "$UNNAMED$92"
+		    quid       	"410605AF005C"
+		    class      	"Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionsTable"
+		    quidu      	"40FFD6F003D6"
+		    persistence 	"Transient"
+		    multi      	FALSE))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "3. TZ Data Wrapper Classes - Design - Part 2"
+	    quid       	"40FFD6200064"
+	    title      	"3. TZ Data Wrapper Classes - Design - Part 2"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	432
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TStdTimeAlignmentsTable" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(856, 2036)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(605, 1965)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	502
+			justify    	0
+			label      	"TStdTimeAlignmentsTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFDBC40319"
+		    width      	520
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRuleDefinitionsTable" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2376, 316)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(2161, 245)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	430
+			justify    	0
+			label      	"TRuleDefinitionsTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFDBEB0065"
+		    width      	448
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRuleSetsTable" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1977, 1525)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1822, 1454)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	310
+			justify    	0
+			label      	"TRuleSetsTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFDC4301D9"
+		    width      	328
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTimeZoneDataProvider" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(406, 628)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(174, 556)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	464
+			justify    	0
+			label      	"CTimeZoneDataProvider")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B1DA3703B5"
+		    compartment 	(object Compartment
+			Parent_View 	@5
+			location   	(174, 711)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	2
+			max_width  	0)
+		    width      	482
+		    height     	166
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignmentsTable" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(972, 1633)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(675, 1557)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	594
+			justify    	0
+			label      	"CTzDbStdTimeAlignmentsTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD728000F"
+		    width      	612
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$6" @7
+		    location   	(819, 1836)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDBD30069"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iPersistedEntity" @8
+			    Parent_View 	@7
+			    location   	(-1327, 455)
+			    label      	(object SegLabel @9
+				Parent_View 	@8
+				location   	(961, 1881)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	299
+				justify    	0
+				label      	"+iPersistedEntity"
+				pctDist    	0.383929
+				height     	142
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDBD400C4"
+			    client     	@7
+			    supplier   	@2
+			    line_style 	3
+			    origin_attachment 	(819, 1836)
+			    terminal_attachment 	(819, 1953))
+			(object RoleView "$UNNAMED$7" @10
+			    Parent_View 	@7
+			    location   	(-1327, 455)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDBD400CE"
+			    client     	@7
+			    supplier   	@6
+			    line_style 	3
+			    origin_attachment 	(819, 1836)
+			    terminal_attachment 	(819, 1720))))
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleDefinitionsTable" @11
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1673, 874)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1418, 798)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	510
+			justify    	0
+			label      	"CTzDbRuleDefinitionsTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD737036F"
+		    width      	528
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$10" @12
+		    location   	(1648, 332)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC370181"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iPersistedEntity" @13
+			    Parent_View 	@12
+			    location   	(-601, -283)
+			    label      	(object SegLabel @14
+				Parent_View 	@13
+				location   	(1853, 271)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	299
+				justify    	0
+				label      	"+iPersistedEntity"
+				pctDist    	0.407767
+				height     	62
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC370285"
+			    client     	@12
+			    supplier   	@3
+			    line_style 	3
+			    origin_attachment 	(1648, 332)
+			    terminal_attachment 	(2152, 332))
+			(object RoleView "$UNNAMED$11" @15
+			    Parent_View 	@12
+			    location   	(-601, -283)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC370287"
+			    client     	@12
+			    supplier   	@11
+			    vertices   	(list Points
+				(1648, 332)
+				(1588, 332)
+				(1588, 787))
+			    line_style 	3
+			    origin_attachment 	(1648, 332)
+			    terminal_attachment 	(1588, 787))))
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleSetsTable" @16
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    ShowOperationSignature 	TRUE
+		    location   	(1817, 1124)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(1434, 1048)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	766
+			justify    	0
+			label      	"CTzDbRuleSetsTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD71A018A"
+		    width      	784
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$12" @17
+		    location   	(2041, 1326)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC4F0173"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iPersistedEntity" @18
+			    Parent_View 	@17
+			    location   	(-183, 377)
+			    label      	(object SegLabel @19
+				Parent_View 	@18
+				location   	(1901, 1392)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	299
+				justify    	0
+				label      	"+iPersistedEntity"
+				pctDist    	0.567797
+				height     	141
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC4F02EF"
+			    client     	@17
+			    supplier   	@4
+			    line_style 	3
+			    origin_attachment 	(2041, 1326)
+			    terminal_attachment 	(2041, 1443))
+			(object RoleView "$UNNAMED$13" @20
+			    Parent_View 	@17
+			    location   	(-183, 377)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC4F02F1"
+			    client     	@17
+			    supplier   	@16
+			    line_style 	3
+			    origin_attachment 	(2041, 1326)
+			    terminal_attachment 	(2041, 1210))))
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TZone" @21
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(265, 1763)
+		    label      	(object ItemLabel
+			Parent_View 	@21
+			location   	(127, 1692)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	276
+			justify    	0
+			label      	"TZone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E13DFF01DB"
+		    width      	294
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::CReadOnlyTZDB" @22
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1006, 1021)
+		    label      	(object ItemLabel
+			Parent_View 	@22
+			location   	(845, 874)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	322
+			justify    	0
+			label      	"CReadOnlyTZDB")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FBA87302D3"
+		    width      	340
+		    height     	316
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "delegates Read/Only Database Management to" @23
+		    location   	(909, 656)
+		    label      	(object SegLabel @24
+			Parent_View 	@23
+			location   	(1089, 603)
+			font       	(object Font
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	824
+			justify    	0
+			label      	"delegates Read/Only Database Management to"
+			pctDist    	3.500000
+			height     	54
+			orientation 	0)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC81018C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$20" @25
+			    Parent_View 	@23
+			    location   	(-1035, 547)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC820011"
+			    client     	@23
+			    supplier   	@22
+			    vertices   	(list Points
+				(909, 656)
+				(969, 656)
+				(969, 863))
+			    line_style 	3
+			    origin_attachment 	(909, 656)
+			    terminal_attachment 	(969, 863))
+			(object RoleView "$UNNAMED$21" @26
+			    Parent_View 	@23
+			    location   	(-1035, 547)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC82002F"
+			    client     	@23
+			    supplier   	@5
+			    line_style 	3
+			    origin_attachment 	(909, 656)
+			    terminal_attachment 	(647, 656))))
+		(object AssociationViewNew "$UNNAMED$28" @27
+		    location   	(991, 1362)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC8A0045"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$29" @28
+			    Parent_View 	@27
+			    location   	(-1051, 490)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC8A01F3"
+			    client     	@27
+			    supplier   	@6
+			    line_style 	3
+			    origin_attachment 	(991, 1362)
+			    terminal_attachment 	(991, 1546))
+			(object RoleView "$UNNAMED$30" @29
+			    Parent_View 	@27
+			    location   	(-1051, 490)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC8A01FD"
+			    client     	@27
+			    supplier   	@22
+			    line_style 	3
+			    origin_attachment 	(991, 1362)
+			    terminal_attachment 	(991, 1178))))
+		(object AssociationViewNew "$UNNAMED$31" @30
+		    location   	(1292, 925)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC8D0393"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$32" @31
+			    Parent_View 	@30
+			    location   	(-750, 53)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC8E0127"
+			    client     	@30
+			    supplier   	@11
+			    line_style 	3
+			    origin_attachment 	(1292, 925)
+			    terminal_attachment 	(1409, 925))
+			(object RoleView "$UNNAMED$33" @32
+			    Parent_View 	@30
+			    location   	(-750, 53)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC8E0131"
+			    client     	@30
+			    supplier   	@22
+			    line_style 	3
+			    origin_attachment 	(1292, 925)
+			    terminal_attachment 	(1176, 925))))
+		(object AssociationViewNew "$UNNAMED$34" @33
+		    location   	(1300, 1119)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC900076"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$35" @34
+			    Parent_View 	@33
+			    location   	(-742, 247)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC9001B6"
+			    client     	@33
+			    supplier   	@16
+			    line_style 	3
+			    origin_attachment 	(1300, 1119)
+			    terminal_attachment 	(1425, 1119))
+			(object RoleView "$UNNAMED$36" @35
+			    Parent_View 	@33
+			    location   	(-742, 247)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC9001C0"
+			    client     	@33
+			    supplier   	@22
+			    line_style 	3
+			    origin_attachment 	(1300, 1119)
+			    terminal_attachment 	(1176, 1119))))
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TStdTimeAlignment" @36
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1409, 2697)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(1189, 2627)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	440
+			justify    	0
+			label      	"TStdTimeAlignment")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E143EC028A"
+		    width      	458
+		    height     	162
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone" @37
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(541, 1299)
+		    label      	(object ItemLabel
+			Parent_View 	@37
+			location   	(426, 1223)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	230
+			justify    	0
+			label      	"CTzDbZone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFE0E20357"
+		    width      	248
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$37" @38
+		    location   	(278, 1421)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41010C250292"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iPersistedEntity" @39
+			    Parent_View 	@38
+			    location   	(-1080, -376)
+			    label      	(object SegLabel @40
+				Parent_View 	@39
+				location   	(130, 1569)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	299
+				justify    	0
+				label      	"+iPersistedEntity"
+				pctDist    	0.570470
+				height     	149
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010C2600E5"
+			    client     	@38
+			    supplier   	@21
+			    line_style 	3
+			    origin_attachment 	(278, 1421)
+			    terminal_attachment 	(278, 1681))
+			(object RoleView "$UNNAMED$38" @41
+			    Parent_View 	@38
+			    location   	(-1080, -376)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010C2600F9"
+			    client     	@38
+			    supplier   	@37
+			    vertices   	(list Points
+				(278, 1421)
+				(278, 1300)
+				(417, 1300))
+			    line_style 	3
+			    origin_attachment 	(278, 1421)
+			    terminal_attachment 	(417, 1300))))
+		(object AssociationViewNew "$UNNAMED$68" @42
+		    location   	(566, 955)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410612310363"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$69" @43
+			    Parent_View 	@42
+			    location   	(-1087, 41)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41061232019E"
+			    client     	@42
+			    supplier   	@37
+			    vertices   	(list Points
+				(566, 955)
+				(506, 955)
+				(506, 1212))
+			    line_style 	3
+			    origin_attachment 	(566, 955)
+			    terminal_attachment 	(506, 1212))
+			(object RoleView "$UNNAMED$70" @44
+			    Parent_View 	@42
+			    location   	(-1087, 41)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4106123201AD"
+			    client     	@42
+			    supplier   	@22
+			    line_style 	3
+			    origin_attachment 	(566, 955)
+			    terminal_attachment 	(836, 955))))
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRuleSet" @45
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2225, 2575)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(2087, 2506)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	276
+			justify    	0
+			label      	"TRuleSet")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E1445E01B1"
+		    width      	294
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbStdTimeAlignment" @46
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1384, 2262)
+		    label      	(object ItemLabel
+			Parent_View 	@46
+			location   	(1149, 2186)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	470
+			justify    	0
+			label      	"CTzDbStdTimeAlignment")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFE058036F"
+		    width      	488
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$42" @47
+		    location   	(1372, 2482)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41010CE1031E"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iPersistedEntity" @48
+			    Parent_View 	@47
+			    location   	(-2002, 594)
+			    label      	(object SegLabel @49
+				Parent_View 	@48
+				location   	(1503, 2513)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	299
+				justify    	0
+				label      	"+iPersistedEntity"
+				pctDist    	0.230000
+				height     	131
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010CE20030"
+			    client     	@47
+			    supplier   	@36
+			    line_style 	3
+			    origin_attachment 	(1372, 2482)
+			    terminal_attachment 	(1372, 2616))
+			(object RoleView "$UNNAMED$43" @50
+			    Parent_View 	@47
+			    location   	(-2002, 594)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010CE20044"
+			    client     	@47
+			    supplier   	@46
+			    line_style 	3
+			    origin_attachment 	(1372, 2482)
+			    terminal_attachment 	(1372, 2349))))
+		(object AssociationViewNew "$UNNAMED$74" @51
+		    location   	(550, 2120)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41061374020F"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$75" @52
+			    Parent_View 	@51
+			    location   	(77, 1008)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41061375000C"
+			    client     	@51
+			    supplier   	@46
+			    vertices   	(list Points
+				(550, 2120)
+				(550, 2262)
+				(1140, 2262))
+			    line_style 	3
+			    origin_attachment 	(550, 2120)
+			    terminal_attachment 	(1140, 2262))
+			(object RoleView "$UNNAMED$76" @53
+			    Parent_View 	@51
+			    location   	(77, 1008)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41061375000D"
+			    client     	@51
+			    supplier   	@37
+			    line_style 	3
+			    origin_attachment 	(550, 2120)
+			    terminal_attachment 	(550, 1386))))
+		(object UsesView "" @54
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410615780070"
+		    client     	@6
+		    supplier   	@46
+		    line_style 	3
+		    origin_attachment 	(1197, 1720)
+		    terminal_attachment 	(1197, 2175))
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleSet" @55
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1725, 1764)
+		    label      	(object ItemLabel
+			Parent_View 	@55
+			location   	(1581, 1688)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	288
+			justify    	0
+			label      	"CTzDbRuleSet")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFE15302FD"
+		    width      	306
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @56
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFE15D0121"
+		    client     	@16
+		    supplier   	@55
+		    line_style 	3
+		    origin_attachment 	(1678, 1211)
+		    terminal_attachment 	(1678, 1677))
+		(object AssociationViewNew "$UNNAMED$44" @57
+		    location   	(1756, 2355)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41010D0D030F"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$45" @58
+			    Parent_View 	@57
+			    location   	(-2080, 1265)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010D0E00A4"
+			    client     	@57
+			    supplier   	@45
+			    vertices   	(list Points
+				(1756, 2355)
+				(1756, 2538)
+				(2078, 2538))
+			    line_style 	3
+			    origin_attachment 	(1756, 2355)
+			    terminal_attachment 	(2078, 2538))
+			(object RoleView "$UNNAMED$46" @59
+			    Parent_View 	@57
+			    location   	(-2080, 1265)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010D0E00B8"
+			    client     	@57
+			    supplier   	@55
+			    line_style 	3
+			    origin_attachment 	(1756, 2355)
+			    terminal_attachment 	(1756, 1851))))
+		(object AssociationViewNew "$UNNAMED$77" @60
+		    location   	(1597, 2012)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4106145A0147"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$78" @61
+			    Parent_View 	@60
+			    location   	(216, -8)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4106145A036A"
+			    client     	@60
+			    supplier   	@55
+			    line_style 	3
+			    origin_attachment 	(1597, 2012)
+			    terminal_attachment 	(1597, 1851))
+			(object RoleView "$UNNAMED$79" @62
+			    Parent_View 	@60
+			    location   	(216, -8)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4106145A037A"
+			    client     	@60
+			    supplier   	@46
+			    line_style 	3
+			    origin_attachment 	(1597, 2012)
+			    terminal_attachment 	(1597, 2174))))
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRuleUse" @63
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2222, 2372)
+		    label      	(object ItemLabel
+			Parent_View 	@63
+			location   	(2084, 2303)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	276
+			justify    	0
+			label      	"TRuleUse")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E144A300E7"
+		    width      	294
+		    height     	160
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRuleDefinition" @64
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2386, 580)
+		    label      	(object ItemLabel
+			Parent_View 	@64
+			location   	(2209, 510)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	354
+			justify    	0
+			label      	"TRuleDefinition")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E1450C0230"
+		    width      	372
+		    height     	162
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @65
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410614AB00CB"
+		    client     	@11
+		    supplier   	@64
+		    vertices   	(list Points
+			(1797, 787)
+			(1797, 580)
+			(2200, 580))
+		    line_style 	3
+		    origin_attachment 	(1797, 787)
+		    terminal_attachment 	(2200, 580))
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRuleUse" @66
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2212, 2138)
+		    label      	(object ItemLabel
+			Parent_View 	@66
+			location   	(2058, 2089)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	308
+			justify    	0
+			label      	"CTzDbRuleUse")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4106167A00E1"
+		    width      	326
+		    height     	120
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$80" @67
+		    location   	(1831, 2059)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410616930035"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$81" @68
+			    Parent_View 	@67
+			    location   	(247, 309)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4106169301DB"
+			    client     	@67
+			    supplier   	@66
+			    vertices   	(list Points
+				(1831, 2059)
+				(1831, 2119)
+				(2049, 2119))
+			    line_style 	3
+			    origin_attachment 	(1831, 2059)
+			    terminal_attachment 	(2049, 2119))
+			(object RoleView "$UNNAMED$82" @69
+			    Parent_View 	@67
+			    location   	(247, 309)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4106169301DC"
+			    client     	@67
+			    supplier   	@55
+			    line_style 	3
+			    origin_attachment 	(1831, 2059)
+			    terminal_attachment 	(1831, 1850))))
+		(object AssociationViewNew "$UNNAMED$47" @70
+		    location   	(2169, 2244)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41010EF1016B"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$48" @71
+			    Parent_View 	@70
+			    location   	(-1666, 926)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010EF102DD"
+			    client     	@70
+			    supplier   	@63
+			    vertices   	(list Points
+				(2169, 2244)
+				(2166, 2244)
+				(2166, 2292))
+			    line_style 	3
+			    origin_attachment 	(2169, 2244)
+			    terminal_attachment 	(2166, 2292))
+			(object RoleView "$UNNAMED$49" @72
+			    Parent_View 	@70
+			    location   	(-1666, 926)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010EF102FB"
+			    client     	@70
+			    supplier   	@66
+			    line_style 	3
+			    origin_attachment 	(2169, 2244)
+			    terminal_attachment 	(2169, 2197))))
+		(object AssociationViewNew "$UNNAMED$83" @73
+		    location   	(2344, 1369)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410616E3022A"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$84" @74
+			    Parent_View 	@73
+			    location   	(198, -687)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"410616E40140"
+			    client     	@73
+			    supplier   	@64
+			    line_style 	3
+			    origin_attachment 	(2344, 1369)
+			    terminal_attachment 	(2344, 660))
+			(object RoleView "$UNNAMED$85" @75
+			    Parent_View 	@73
+			    location   	(198, -687)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"410616E4015F"
+			    client     	@73
+			    supplier   	@66
+			    line_style 	3
+			    origin_attachment 	(2344, 1369)
+			    terminal_attachment 	(2344, 2078))))
+		(object UsesView "" @76
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4106197D0158"
+		    client     	@66
+		    supplier   	@11
+		    vertices   	(list Points
+			(2278, 2078)
+			(2278, 854)
+			(1937, 854))
+		    line_style 	3
+		    origin_attachment 	(2278, 2078)
+		    terminal_attachment 	(1937, 854))
+		(object UsesView "" @77
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4106158E00ED"
+		    client     	@37
+		    supplier   	@6
+		    vertices   	(list Points
+			(665, 1330)
+			(815, 1330)
+			(815, 1546))
+		    line_style 	3
+		    origin_attachment 	(665, 1330)
+		    terminal_attachment 	(815, 1546))
+		(object Label @78
+		    location   	(34, 34)
+		    font       	(object Font
+			size       	12)
+		    nlines     	1
+		    max_width  	1844
+		    label      	"Set of Classes designed to Wrap the Persisted TZ Database Entities - Contd.")
+		(object UsesView "" @79
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410615AF0340"
+		    client     	@46
+		    supplier   	@16
+		    line_style 	3
+		    origin_attachment 	(1475, 2174)
+		    terminal_attachment 	(1475, 1211))))
+	(object ClassDiagram "2. TZ Data Wrapper Classes- Design - Part 1"
+	    quid       	"41060D7100B3"
+	    title      	"2. TZ Data Wrapper Classes- Design - Part 1"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	63
+	    origin_y   	388
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TLink" @80
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1700, 2391)
+		    label      	(object ItemLabel
+			Parent_View 	@80
+			location   	(1578, 2320)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	244
+			justify    	0
+			label      	"TLink")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FE3C5A0120"
+		    width      	262
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object NoteView @81
+		    location   	(1314, 3249)
+		    label      	(object ItemLabel
+			Parent_View 	@81
+			location   	(95, 2590)
+			fill_color 	13434879
+			nlines     	32
+			max_width  	2402
+			label      	
+|READING THE ENTITIES.
+|
+|The database provider uses the persisted database entities through a set of wrapper classes. 
+|
+|Taking the Zone entity as an example, the persisted Zone data, encapsulated by TZone, will be be wrapped like this:
+|
+|class CTZDBZone 
+|	{
+|	TZone* iPersistedEntity;  // reference to the persisted data in memory mapped ROM
+|	RPointerArray<CTZDBStdAlignments> iStdAlignments;
+|	// ... Other references to CityName and Region Name, etc 
+|	}
+|
+|A TZonesTable  will be wrapped like this:
+|
+|class CTZDBZonesTable 
+|	{
+|	CTZDBZone* GetZone (TInt aZoneOffset );
+|	TZonesTable* iPersistedEntity;
+|	}
+|
+|CTzDbZonesTable::GetZone(TInt aZoneOffset) calls CTzDbZone::NewL( TZone& aZone). The CTzDbZone::NewL( TZone& aZone) factory will construct the CTzDbZone object and initialise references to the names, etc.
+|
+|The wrapper classes that represent the tables can be created once on constructing the database. All other wrapper classes are created on the fly to represent the persisted entity. We don't need to provide a wrapper class for the simple entities like TRuleDefinition which do not hold references to other entities.
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	2462
+		    height     	1331)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRegion" @82
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1335, 773)
+		    label      	(object ItemLabel
+			Parent_View 	@82
+			location   	(1213, 702)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	244
+			justify    	0
+			label      	"TRegion")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E175D902B9"
+		    width      	262
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRegionalZonesIndex" @83
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(328, 817)
+		    label      	(object ItemLabel
+			Parent_View 	@83
+			location   	(119, 746)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"TRegionalZonesIndex")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E1906C010C"
+		    width      	436
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRegionsTable" @84
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(834, 378)
+		    label      	(object ItemLabel
+			Parent_View 	@84
+			location   	(684, 307)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	300
+			justify    	0
+			label      	"TRegionsTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E175950095"
+		    width      	318
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TLinksTable" @85
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2295, 2211)
+		    label      	(object ItemLabel
+			Parent_View 	@85
+			location   	(2167, 2140)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	256
+			justify    	0
+			label      	"TLinksTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFDB8903E3"
+		    width      	274
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TZonesTable" @86
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1176, 2329)
+		    label      	(object ItemLabel
+			Parent_View 	@86
+			location   	(1041, 2258)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	270
+			justify    	0
+			label      	"TZonesTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD8100020"
+		    width      	288
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRegionalZonesTable" @87
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(474, 1998)
+		    label      	(object ItemLabel
+			Parent_View 	@87
+			location   	(263, 1927)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	422
+			justify    	0
+			label      	"TRegionalZonesTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E190CD0023"
+		    width      	440
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZoneIndex" @88
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(314, 1206)
+		    label      	(object ItemLabel
+			Parent_View 	@88
+			location   	(69, 1157)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	490
+			justify    	0
+			label      	"CTzDbRegionalZoneIndex")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFE0A40084"
+		    width      	508
+		    height     	120
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$39" @89
+		    location   	(336, 1022)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41010C94025B"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$40" @90
+			    Parent_View 	@89
+			    location   	(99, 230)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010C9502DE"
+			    client     	@89
+			    supplier   	@83
+			    line_style 	3
+			    origin_attachment 	(336, 1022)
+			    terminal_attachment 	(336, 899))
+			(object RoleView "$UNNAMED$41" @91
+			    Parent_View 	@89
+			    location   	(99, 230)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010C9502F3"
+			    client     	@89
+			    supplier   	@88
+			    line_style 	3
+			    origin_attachment 	(336, 1022)
+			    terminal_attachment 	(336, 1145))))
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TZone" @92
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2375, 1836)
+		    label      	(object ItemLabel
+			Parent_View 	@92
+			location   	(2253, 1765)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	244
+			justify    	0
+			label      	"TZone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E13DFF01DB"
+		    width      	262
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionsTable" @93
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(890, 973)
+		    label      	(object ItemLabel
+			Parent_View 	@93
+			location   	(689, 897)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	402
+			justify    	0
+			label      	"CTzDbRegionsTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD6F003D6"
+		    width      	420
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$2" @94
+		    location   	(772, 672)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFD95C01EA"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iPersistedEntity" @95
+			    Parent_View 	@94
+			    location   	(235, -200)
+			    label      	(object SegLabel @96
+				Parent_View 	@95
+				location   	(631, 539)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	299
+				justify    	0
+				label      	"+iPersistedEntity"
+				pctDist    	0.624413
+				height     	141
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFD95C0367"
+			    client     	@94
+			    supplier   	@84
+			    line_style 	3
+			    origin_attachment 	(772, 672)
+			    terminal_attachment 	(772, 459))
+			(object RoleView "$UNNAMED$3" @97
+			    Parent_View 	@94
+			    location   	(235, -200)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFD95C0369"
+			    client     	@94
+			    supplier   	@93
+			    line_style 	3
+			    origin_attachment 	(772, 672)
+			    terminal_attachment 	(772, 885))))
+		(object ClassView "Class" "Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTimeZoneDataProvider" @98
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1675, 422)
+		    label      	(object ItemLabel
+			Parent_View 	@98
+			location   	(1443, 350)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	464
+			justify    	0
+			label      	"CTimeZoneDataProvider")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B1DA3703B5"
+		    compartment 	(object Compartment
+			Parent_View 	@98
+			location   	(1443, 505)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	2
+			max_width  	0)
+		    width      	482
+		    height     	166
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbLinksTable" @99
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1764, 1987)
+		    label      	(object ItemLabel
+			Parent_View 	@99
+			location   	(1597, 1911)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	334
+			justify    	0
+			label      	"CTzDbLinksTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD70E0196"
+		    width      	352
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$4" @100
+		    location   	(1915, 2215)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDBB30101"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iPersistedEntity" @101
+			    Parent_View 	@100
+			    location   	(191, 471)
+			    label      	(object SegLabel @102
+				Parent_View 	@101
+				location   	(1990, 2253)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	299
+				justify    	0
+				label      	"+iPersistedEntity"
+				pctDist    	0.314607
+				height     	38
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDBB30350"
+			    client     	@100
+			    supplier   	@85
+			    line_style 	3
+			    origin_attachment 	(1915, 2215)
+			    terminal_attachment 	(2158, 2215))
+			(object RoleView "$UNNAMED$5" @103
+			    Parent_View 	@100
+			    location   	(191, 471)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDBB30352"
+			    client     	@100
+			    supplier   	@99
+			    vertices   	(list Points
+				(1915, 2215)
+				(1813, 2215)
+				(1813, 2074))
+			    line_style 	3
+			    origin_attachment 	(1915, 2215)
+			    terminal_attachment 	(1813, 2074))))
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZonesTable" @104
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1190, 1734)
+		    label      	(object ItemLabel
+			Parent_View 	@104
+			location   	(989, 1611)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	402
+			justify    	0
+			label      	"CTzDbZonesTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD6C5022D"
+		    width      	420
+		    height     	268
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$0" @105
+		    location   	(1063, 2057)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFD81B033E"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iPersistedEntity" @106
+			    Parent_View 	@105
+			    location   	(210, 476)
+			    label      	(object SegLabel @107
+				Parent_View 	@106
+				location   	(1242, 2179)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	299
+				justify    	0
+				label      	"+iPersistedEntity"
+				pctDist    	0.644144
+				height     	179
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFD81C01EB"
+			    client     	@105
+			    supplier   	@86
+			    line_style 	3
+			    origin_attachment 	(1063, 2057)
+			    terminal_attachment 	(1063, 2247))
+			(object RoleView "$UNNAMED$1" @108
+			    Parent_View 	@105
+			    location   	(210, 476)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFD81C01F5"
+			    client     	@105
+			    supplier   	@104
+			    line_style 	3
+			    origin_attachment 	(1063, 2057)
+			    terminal_attachment 	(1063, 1868))))
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZonesTable" @109
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(604, 1601)
+		    label      	(object ItemLabel
+			Parent_View 	@109
+			location   	(351, 1525)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	506
+			justify    	0
+			label      	"CTzDbRegionalZonesTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD6DE0126"
+		    width      	524
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$8" @110
+		    location   	(458, 1802)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC210373"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iPersistedEntity" @111
+			    Parent_View 	@110
+			    location   	(-489, 568)
+			    label      	(object SegLabel @112
+				Parent_View 	@111
+				location   	(481, 1816)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	299
+				justify    	0
+				label      	"+iPersistedEntity"
+				pctDist    	0.123077
+				height     	23
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC22007B"
+			    client     	@110
+			    supplier   	@87
+			    line_style 	3
+			    origin_attachment 	(458, 1802)
+			    terminal_attachment 	(458, 1916))
+			(object RoleView "$UNNAMED$9" @113
+			    Parent_View 	@110
+			    location   	(-489, 568)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC220085"
+			    client     	@110
+			    supplier   	@109
+			    line_style 	3
+			    origin_attachment 	(458, 1802)
+			    terminal_attachment 	(458, 1688))))
+		(object AssociationViewNew "$UNNAMED$62" @114
+		    location   	(486, 1389)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410610100020"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$63" @115
+			    Parent_View 	@114
+			    location   	(-476, 289)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"410610100168"
+			    client     	@114
+			    supplier   	@88
+			    line_style 	3
+			    origin_attachment 	(486, 1389)
+			    terminal_attachment 	(486, 1265))
+			(object RoleView "$UNNAMED$64" @116
+			    Parent_View 	@114
+			    location   	(-476, 289)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"410610100169"
+			    client     	@114
+			    supplier   	@109
+			    line_style 	3
+			    origin_attachment 	(486, 1389)
+			    terminal_attachment 	(486, 1514))))
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone" @117
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1922, 1544)
+		    label      	(object ItemLabel
+			Parent_View 	@117
+			location   	(1807, 1468)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	230
+			justify    	0
+			label      	"CTzDbZone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFE0E20357"
+		    width      	248
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$37" @118
+		    location   	(2003, 1802)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41010C250292"
+		    roleview_list 	(list RoleViews
+			(object RoleView "iPersistedEntity" @119
+			    Parent_View 	@118
+			    location   	(645, 5)
+			    label      	(object SegLabel @120
+				Parent_View 	@119
+				location   	(2089, 1758)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	299
+				justify    	0
+				label      	"+iPersistedEntity"
+				pctDist    	0.356890
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010C2600E5"
+			    client     	@118
+			    supplier   	@92
+			    line_style 	3
+			    origin_attachment 	(2003, 1802)
+			    terminal_attachment 	(2244, 1802))
+			(object RoleView "$UNNAMED$38" @121
+			    Parent_View 	@118
+			    location   	(645, 5)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41010C2600F9"
+			    client     	@118
+			    supplier   	@117
+			    vertices   	(list Points
+				(2003, 1802)
+				(1934, 1802)
+				(1934, 1631))
+			    line_style 	3
+			    origin_attachment 	(2003, 1802)
+			    terminal_attachment 	(1934, 1631))))
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::CReadOnlyTZDB" @122
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1561, 1144)
+		    label      	(object ItemLabel
+			Parent_View 	@122
+			location   	(1400, 997)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	322
+			justify    	0
+			label      	"CReadOnlyTZDB")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FBA87302D3"
+		    width      	340
+		    height     	316
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$14" @123
+		    location   	(1245, 1019)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC7C0134"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$15" @124
+			    Parent_View 	@123
+			    location   	(-797, 147)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC7C026B"
+			    client     	@123
+			    supplier   	@93
+			    line_style 	3
+			    origin_attachment 	(1245, 1019)
+			    terminal_attachment 	(1100, 1019))
+			(object RoleView "$UNNAMED$16" @125
+			    Parent_View 	@123
+			    location   	(-797, 147)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC7C0275"
+			    client     	@123
+			    supplier   	@122
+			    line_style 	3
+			    origin_attachment 	(1245, 1019)
+			    terminal_attachment 	(1391, 1019))))
+		(object AssociationViewNew "delegates Read/Only Database Management to" @126
+		    location   	(1513, 745)
+		    label      	(object SegLabel @127
+			Parent_View 	@126
+			location   	(1727, 682)
+			font       	(object Font
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	5
+			max_width  	406
+			justify    	0
+			label      	"delegates Read/Only Database Management to"
+			pctDist    	4.066667
+			height     	64
+			orientation 	0)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC81018C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$20" @128
+			    Parent_View 	@126
+			    location   	(-431, 636)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC820011"
+			    client     	@126
+			    supplier   	@122
+			    line_style 	3
+			    origin_attachment 	(1513, 745)
+			    terminal_attachment 	(1513, 986))
+			(object RoleView "$UNNAMED$21" @129
+			    Parent_View 	@126
+			    location   	(-431, 636)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC82002F"
+			    client     	@126
+			    supplier   	@98
+			    line_style 	3
+			    origin_attachment 	(1513, 745)
+			    terminal_attachment 	(1513, 505))))
+		(object AssociationViewNew "$UNNAMED$25" @130
+		    location   	(1516, 1649)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC870362"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$26" @131
+			    Parent_View 	@130
+			    location   	(-526, 777)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC8800EC"
+			    client     	@130
+			    supplier   	@99
+			    vertices   	(list Points
+				(1516, 1649)
+				(1516, 1925)
+				(1588, 1925))
+			    line_style 	3
+			    origin_attachment 	(1516, 1649)
+			    terminal_attachment 	(1588, 1925))
+			(object RoleView "$UNNAMED$27" @132
+			    Parent_View 	@130
+			    location   	(-526, 777)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC8800F6"
+			    client     	@130
+			    supplier   	@122
+			    line_style 	3
+			    origin_attachment 	(1516, 1649)
+			    terminal_attachment 	(1516, 1301))))
+		(object AssociationViewNew "$UNNAMED$53" @133
+		    location   	(1216, 1347)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41060E7002E9"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$55" @134
+			    Parent_View 	@133
+			    location   	(-826, 475)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41060E7002EB"
+			    client     	@133
+			    supplier   	@104
+			    line_style 	3
+			    origin_attachment 	(1216, 1347)
+			    terminal_attachment 	(1216, 1600))
+			(object RoleView "$UNNAMED$54" @135
+			    Parent_View 	@133
+			    location   	(-826, 475)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41060E7002EA"
+			    client     	@133
+			    supplier   	@122
+			    vertices   	(list Points
+				(1216, 1347)
+				(1216, 1269)
+				(1391, 1269))
+			    line_style 	3
+			    origin_attachment 	(1216, 1347)
+			    terminal_attachment 	(1391, 1269))))
+		(object AssociationViewNew "$UNNAMED$50" @136
+		    location   	(948, 1207)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41060E120096"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$52" @137
+			    Parent_View 	@136
+			    location   	(-1094, 335)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41060E120098"
+			    client     	@136
+			    supplier   	@109
+			    vertices   	(list Points
+				(948, 1207)
+				(812, 1207)
+				(812, 1514))
+			    line_style 	3
+			    origin_attachment 	(948, 1207)
+			    terminal_attachment 	(812, 1514))
+			(object RoleView "$UNNAMED$51" @138
+			    Parent_View 	@136
+			    location   	(-1094, 335)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41060E120097"
+			    client     	@136
+			    supplier   	@122
+			    line_style 	3
+			    origin_attachment 	(948, 1207)
+			    terminal_attachment 	(1391, 1207))))
+		(object AssociationViewNew "$UNNAMED$65" @139
+		    location   	(1672, 1455)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410610460188"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$66" @140
+			    Parent_View 	@139
+			    location   	(308, -57)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41061046039B"
+			    client     	@139
+			    supplier   	@117
+			    vertices   	(list Points
+				(1672, 1455)
+				(1672, 1515)
+				(1798, 1515))
+			    line_style 	3
+			    origin_attachment 	(1672, 1455)
+			    terminal_attachment 	(1798, 1515))
+			(object RoleView "$UNNAMED$67" @141
+			    Parent_View 	@139
+			    location   	(308, -57)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41061046039C"
+			    client     	@139
+			    supplier   	@122
+			    line_style 	3
+			    origin_attachment 	(1672, 1455)
+			    terminal_attachment 	(1672, 1301))))
+		(object Label @142
+		    location   	(75, 56)
+		    font       	(object Font
+			size       	12)
+		    nlines     	1
+		    max_width  	1844
+		    label      	"Set of Classes designed to Wrap the Persisted TZ Database Entities.")
+		(object UsesView "" @143
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410619D703DA"
+		    client     	@93
+		    supplier   	@104
+		    line_style 	3
+		    origin_attachment 	(1059, 1059)
+		    terminal_attachment 	(1059, 1600))
+		(object UsesView "" @144
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41061A470283"
+		    client     	@93
+		    supplier   	@109
+		    line_style 	3
+		    origin_attachment 	(729, 1059)
+		    terminal_attachment 	(729, 1514))
+		(object UsesView "" @145
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41061AE50024"
+		    client     	@93
+		    supplier   	@82
+		    vertices   	(list Points
+			(1007, 886)
+			(1007, 750)
+			(1204, 750))
+		    line_style 	3
+		    origin_attachment 	(1007, 886)
+		    terminal_attachment 	(1204, 750))
+		(object UsesView "" @146
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFE14000AF"
+		    client     	@99
+		    supplier   	@80
+		    line_style 	3
+		    origin_attachment 	(1631, 2074)
+		    terminal_attachment 	(1631, 2308))
+		(object UsesView "" @147
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41400B6C01CC"
+		    client     	@99
+		    supplier   	@104
+		    vertices   	(list Points
+			(1588, 2007)
+			(1338, 2007)
+			(1338, 1868))
+		    line_style 	3
+		    origin_attachment 	(1588, 2007)
+		    terminal_attachment 	(1338, 1868))
+		(object UsesView "" @148
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41061AB5018B"
+		    client     	@104
+		    supplier   	@117
+		    vertices   	(list Points
+			(1400, 1785)
+			(1850, 1785)
+			(1850, 1631))
+		    line_style 	3
+		    origin_attachment 	(1400, 1785)
+		    terminal_attachment 	(1850, 1631))))
+	(object ClassDiagram "1. TZ Data Provider Design"
+	    quid       	"41091C5C0068"
+	    title      	"1. TZ Data Provider Design"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionsTable" @149
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(617, 1039)
+		    label      	(object ItemLabel
+			Parent_View 	@149
+			location   	(416, 963)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	402
+			justify    	0
+			label      	"CTzDbRegionsTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD6F003D6"
+		    width      	420
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::2. Local Time Conversion - Analysis::CTimeZoneDataProvider" @150
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1456, 493)
+		    label      	(object ItemLabel
+			Parent_View 	@150
+			location   	(1224, 421)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	464
+			justify    	0
+			label      	"CTimeZoneDataProvider")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B1DA3703B5"
+		    compartment 	(object Compartment
+			Parent_View 	@150
+			location   	(1224, 576)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	2
+			max_width  	0)
+		    width      	482
+		    height     	166
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbLinksTable" @151
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1529, 1978)
+		    label      	(object ItemLabel
+			Parent_View 	@151
+			location   	(1362, 1902)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	334
+			justify    	0
+			label      	"CTzDbLinksTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD70E0196"
+		    width      	352
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZonesTable" @152
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(933, 1728)
+		    label      	(object ItemLabel
+			Parent_View 	@152
+			location   	(732, 1605)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	402
+			justify    	0
+			label      	"CTzDbZonesTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD6C5022D"
+		    width      	420
+		    height     	268
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$59" @153
+		    location   	(1131, 2003)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41060EE50116"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$60" @154
+			    Parent_View 	@153
+			    location   	(-1023, 453)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41060EE5031A"
+			    client     	@153
+			    supplier   	@152
+			    vertices   	(list Points
+				(1131, 2003)
+				(1050, 2003)
+				(1050, 1862))
+			    line_style 	3
+			    origin_attachment 	(1131, 2003)
+			    terminal_attachment 	(1050, 1862))
+			(object RoleView "$UNNAMED$61" @155
+			    Parent_View 	@153
+			    location   	(-1023, 453)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41060EE50329"
+			    client     	@153
+			    supplier   	@151
+			    line_style 	3
+			    origin_attachment 	(1131, 2003)
+			    terminal_attachment 	(1353, 2003))))
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbRegionalZonesTable" @156
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(344, 1589)
+		    label      	(object ItemLabel
+			Parent_View 	@156
+			location   	(91, 1513)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	506
+			justify    	0
+			label      	"CTzDbRegionalZonesTable")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFD6DE0126"
+		    width      	524
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Design Model::2. TZ Data Provider - Design::CTzDbZone" @157
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1847, 1531)
+		    label      	(object ItemLabel
+			Parent_View 	@157
+			location   	(1732, 1455)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	230
+			justify    	0
+			label      	"CTzDbZone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FFE0E20357"
+		    width      	248
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @158
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41061AB5018B"
+		    client     	@152
+		    supplier   	@157
+		    vertices   	(list Points
+			(1143, 1771)
+			(1812, 1771)
+			(1812, 1618))
+		    line_style 	3
+		    origin_attachment 	(1143, 1771)
+		    terminal_attachment 	(1812, 1618))
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::CReadOnlyTZDB" @159
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1406, 1184)
+		    label      	(object ItemLabel
+			Parent_View 	@159
+			location   	(1245, 1037)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	322
+			justify    	0
+			label      	"CReadOnlyTZDB")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40FBA87302D3"
+		    width      	340
+		    height     	316
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$14" @160
+		    location   	(1031, 1069)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC7C0134"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$15" @161
+			    Parent_View 	@160
+			    location   	(-1011, 197)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC7C026B"
+			    client     	@160
+			    supplier   	@149
+			    line_style 	3
+			    origin_attachment 	(1031, 1069)
+			    terminal_attachment 	(827, 1069))
+			(object RoleView "$UNNAMED$16" @162
+			    Parent_View 	@160
+			    location   	(-1011, 197)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC7C0275"
+			    client     	@160
+			    supplier   	@159
+			    line_style 	3
+			    origin_attachment 	(1031, 1069)
+			    terminal_attachment 	(1236, 1069))))
+		(object AssociationViewNew "delegates Read/Only Database Management to" @163
+		    location   	(1400, 800)
+		    label      	(object SegLabel @164
+			Parent_View 	@163
+			location   	(1611, 803)
+			font       	(object Font
+			    italics    	TRUE)
+			anchor     	1
+			anchor_loc 	1
+			nlines     	3
+			max_width  	458
+			justify    	0
+			label      	"delegates Read/Only Database Management to"
+			pctDist    	4.016667
+			height     	3
+			orientation 	1)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC81018C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$20" @165
+			    Parent_View 	@163
+			    location   	(-544, 691)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC820011"
+			    client     	@163
+			    supplier   	@159
+			    line_style 	3
+			    origin_attachment 	(1400, 800)
+			    terminal_attachment 	(1400, 1025))
+			(object RoleView "$UNNAMED$21" @166
+			    Parent_View 	@163
+			    location   	(-544, 691)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC82002F"
+			    client     	@163
+			    supplier   	@150
+			    line_style 	3
+			    origin_attachment 	(1400, 800)
+			    terminal_attachment 	(1400, 576))))
+		(object AssociationViewNew "$UNNAMED$25" @167
+		    location   	(1359, 1603)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40FFDC870362"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$26" @168
+			    Parent_View 	@167
+			    location   	(-683, 731)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC8800EC"
+			    client     	@167
+			    supplier   	@151
+			    vertices   	(list Points
+				(1359, 1603)
+				(1359, 1663)
+				(1469, 1663)
+				(1469, 1891))
+			    line_style 	3
+			    origin_attachment 	(1359, 1603)
+			    terminal_attachment 	(1469, 1891))
+			(object RoleView "$UNNAMED$27" @169
+			    Parent_View 	@167
+			    location   	(-683, 731)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40FFDC8800F6"
+			    client     	@167
+			    supplier   	@159
+			    line_style 	3
+			    origin_attachment 	(1359, 1603)
+			    terminal_attachment 	(1359, 1341))))
+		(object AssociationViewNew "$UNNAMED$53" @170
+		    location   	(1302, 1583)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41060E7002E9"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$55" @171
+			    Parent_View 	@170
+			    location   	(-740, 711)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41060E7002EB"
+			    client     	@170
+			    supplier   	@152
+			    vertices   	(list Points
+				(1302, 1583)
+				(1302, 1665)
+				(1143, 1665))
+			    line_style 	3
+			    origin_attachment 	(1302, 1583)
+			    terminal_attachment 	(1143, 1665))
+			(object RoleView "$UNNAMED$54" @172
+			    Parent_View 	@170
+			    location   	(-740, 711)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41060E7002EA"
+			    client     	@170
+			    supplier   	@159
+			    line_style 	3
+			    origin_attachment 	(1302, 1583)
+			    terminal_attachment 	(1302, 1341))))
+		(object AssociationViewNew "$UNNAMED$50" @173
+		    location   	(765, 1247)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41060E120096"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$52" @174
+			    Parent_View 	@173
+			    location   	(-1277, 375)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41060E120098"
+			    client     	@173
+			    supplier   	@156
+			    vertices   	(list Points
+				(765, 1247)
+				(550, 1247)
+				(550, 1502))
+			    line_style 	3
+			    origin_attachment 	(765, 1247)
+			    terminal_attachment 	(550, 1502))
+			(object RoleView "$UNNAMED$51" @175
+			    Parent_View 	@173
+			    location   	(-1277, 375)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41060E120097"
+			    client     	@173
+			    supplier   	@159
+			    line_style 	3
+			    origin_attachment 	(765, 1247)
+			    terminal_attachment 	(1236, 1247))))
+		(object AssociationViewNew "$UNNAMED$65" @176
+		    location   	(1579, 1506)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410610460188"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$66" @177
+			    Parent_View 	@176
+			    location   	(215, -6)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41061046039B"
+			    client     	@176
+			    supplier   	@157
+			    line_style 	3
+			    origin_attachment 	(1579, 1506)
+			    terminal_attachment 	(1723, 1506))
+			(object RoleView "$UNNAMED$67" @178
+			    Parent_View 	@176
+			    location   	(215, -6)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41061046039C"
+			    client     	@176
+			    supplier   	@159
+			    vertices   	(list Points
+				(1579, 1506)
+				(1519, 1506)
+				(1519, 1342))
+			    line_style 	3
+			    origin_attachment 	(1579, 1506)
+			    terminal_attachment 	(1519, 1342))))
+		(object ClassView "ClassUtility" "Logical View::Analysis Model::TZClasses::CTzDataProviderFactory" @179
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1968, 112)
+		    label      	(object ItemLabel
+			Parent_View 	@179
+			location   	(1748, 63)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	440
+			justify    	0
+			label      	"CTzDataProviderFactory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40F284200290"
+		    width      	458
+		    height     	120
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::LTClasses::MTzDataAccess" @180
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(940, 109)
+		    label      	(object ItemLabel
+			Parent_View 	@180
+			location   	(787, 58)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	306
+			justify    	0
+			label      	"MTzDataAccess")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@180
+			location   	(787, 11)
+			fill_color 	13434879
+			anchor     	10
+			nlines     	1
+			max_width  	306
+			justify    	0
+			label      	"<<abstract>>")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40B1D59903C5"
+		    width      	324
+		    height     	218
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object NoteView @181
+		    location   	(481, 550)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@181
+			location   	(65, 272)
+			fill_color 	13434879
+			nlines     	11
+			max_width  	797
+			label      	
+|The TZ Database is designed to be stored in Read Only Memory mapped for  direct access by code.
+|
+|In the future, there may be a requirement to provide Read/Write a extension to this. When that happens a new class, equivalent to this, may used to encapsulate the Reading from a such a file.
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	857
+		    height     	569)
+		(object InheritView "" @182
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40B1D83B00F6"
+		    client     	@150
+		    supplier   	@180
+		    vertices   	(list Points
+			(1306, 410)
+			(1306, 203)
+			(1102, 203))
+		    line_style 	3
+		    origin_attachment 	(1306, 410)
+		    terminal_attachment 	(1102, 203))
+		(object AttachView "" @183
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@181
+		    supplier   	@159
+		    vertices   	(list Points
+			(909, 800)
+			(1297, 800)
+			(1297, 1026))
+		    line_style 	3
+		    origin_attachment 	(909, 268)
+		    terminal_attachment 	(1236, 1026))
+		(object UsesView "creates" @184
+		    label      	(object ItemLabel
+			Parent_View 	@184
+			location   	(1863, 416)
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"creates")
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40F2858E0241"
+		    client     	@179
+		    supplier   	@150
+		    vertices   	(list Points
+			(1863, 172)
+			(1863, 496)
+			(1697, 496))
+		    line_style 	3
+		    origin_attachment 	(1863, 172)
+		    terminal_attachment 	(1697, 496))
+		(object UsesView "" @185
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40F28479007C"
+		    client     	@179
+		    supplier   	@180
+		    line_style 	0)
+		(object UsesView "" @186
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41400AB40331"
+		    client     	@151
+		    supplier   	@157
+		    vertices   	(list Points
+			(1705, 1961)
+			(1897, 1961)
+			(1897, 1618))
+		    line_style 	3
+		    origin_attachment 	(1705, 1961)
+		    terminal_attachment 	(1897, 1618))
+		(object UsesView "" @187
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"410619D703DA"
+		    client     	@149
+		    supplier   	@152
+		    vertices   	(list Points
+			(827, 1104)
+			(956, 1104)
+			(956, 1594))
+		    line_style 	3
+		    origin_attachment 	(827, 1104)
+		    terminal_attachment 	(956, 1594))
+		(object UsesView "" @188
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41061A470283"
+		    client     	@149
+		    supplier   	@156
+		    line_style 	3
+		    origin_attachment 	(456, 1126)
+		    terminal_attachment 	(456, 1502))))
+	(object ClassDiagram "Rule Actualisation"
+	    quid       	"418A08AF03D9"
+	    title      	"Rule Actualisation"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TStdTimeAlignment" @189
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(394, 478)
+		    label      	(object ItemLabel
+			Parent_View 	@189
+			location   	(207, 407)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	374
+			justify    	0
+			label      	"TStdTimeAlignment")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E143EC028A"
+		    width      	392
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRuleSet" @190
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1122, 153)
+		    label      	(object ItemLabel
+			Parent_View 	@190
+			location   	(1000, 81)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	244
+			justify    	0
+			label      	"TRuleSet")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E1445E01B1"
+		    width      	262
+		    height     	166
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @191
+		    location   	(783, 302)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40E170250219"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @192
+			    Parent_View 	@191
+			    location   	(-133, 74)
+			    label      	(object SegLabel @193
+				Parent_View 	@192
+				location   	(575, 352)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40E170260045"
+			    client     	@191
+			    supplier   	@189
+			    line_style 	0)
+			(object RoleView "OffsetToRuleSet" @194
+			    Parent_View 	@191
+			    location   	(-133, 74)
+			    label      	(object SegLabel @195
+				Parent_View 	@194
+				location   	(776, 199)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	304
+				justify    	0
+				label      	"+OffsetToRuleSet"
+				pctDist    	0.164485
+				height     	98
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40E170260035"
+			    client     	@191
+			    supplier   	@190
+			    line_style 	0
+			    label      	(object SegLabel @196
+				Parent_View 	@194
+				location   	(989, 268)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"0..1"
+				pctDist    	0.877261
+				height     	53
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRuleUse" @197
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1694, 572)
+		    label      	(object ItemLabel
+			Parent_View 	@197
+			location   	(1572, 449)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	244
+			justify    	0
+			label      	"TRuleUse")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E144A300E7"
+		    width      	262
+		    height     	268
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @198
+		    location   	(1399, 355)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40E144AC00C8"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @199
+			    Parent_View 	@198
+			    location   	(386, -326)
+			    label      	(object SegLabel @200
+				Parent_View 	@199
+				location   	(1235, 287)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40E144AC027D"
+			    client     	@198
+			    supplier   	@190
+			    line_style 	0)
+			(object RoleView "" @201
+			    Parent_View 	@198
+			    location   	(386, -326)
+			    label      	(object SegLabel @202
+				Parent_View 	@201
+				location   	(1514, 492)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40E144AC026E"
+			    client     	@198
+			    supplier   	@197
+			    line_style 	0
+			    label      	(object SegLabel @203
+				Parent_View 	@201
+				location   	(1578, 421)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object ClassView "Class" "Logical View::Analysis Model::TZClasses::TRuleDefinition" @204
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1672, 1256)
+		    label      	(object ItemLabel
+			Parent_View 	@204
+			location   	(1522, 1185)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	300
+			justify    	0
+			label      	"TRuleDefinition")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40E1450C0230"
+		    width      	318
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @205
+		    location   	(1680, 939)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40E14596007D"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @206
+			    Parent_View 	@205
+			    location   	(358, -67)
+			    label      	(object SegLabel @207
+				Parent_View 	@206
+				location   	(1646, 735)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40E145960272"
+			    client     	@205
+			    supplier   	@197
+			    line_style 	0)
+			(object RoleView "OffsetToRuleDefinition" @208
+			    Parent_View 	@205
+			    location   	(358, -67)
+			    label      	(object SegLabel @209
+				Parent_View 	@208
+				location   	(1810, 1059)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	408
+				justify    	0
+				label      	"+OffsetToRuleDefinition"
+				pctDist    	0.496424
+				height     	133
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40E145960271"
+			    client     	@205
+			    supplier   	@204
+			    line_style 	0
+			    label      	(object SegLabel @210
+				Parent_View 	@208
+				location   	(1625, 1153)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.923775
+				height     	50
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::Analysis Model::LTClasses::CTzActualisedRules" @211
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(365, 1440)
+		    label      	(object ItemLabel
+			Parent_View 	@211
+			location   	(161, 1270)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	408
+			justify    	0
+			label      	"CTzActualisedRules")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"417E545600A1"
+		    width      	426
+		    height     	362
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::LTClasses::TTzActualisedRule" @212
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(947, 931)
+		    label      	(object ItemLabel
+			Parent_View 	@212
+			location   	(765, 860)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	364
+			justify    	0
+			label      	"TTzActualisedRule")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"418669E703DB"
+		    width      	382
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "" @213
+		    location   	(710, 1135)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41866A2200DE"
+		    roleview_list 	(list RoleViews
+			(object RoleView "" @214
+			    Parent_View 	@213
+			    location   	(229, 257)
+			    label      	(object SegLabel @215
+				Parent_View 	@214
+				location   	(563, 1210)
+				hidden     	TRUE
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	450
+				justify    	0
+				label      	""
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41866A2202F3"
+			    client     	@213
+			    supplier   	@211
+			    line_style 	0)
+			(object RoleView "iRules" @216
+			    Parent_View 	@213
+			    location   	(229, 257)
+			    label      	(object SegLabel @217
+				Parent_View 	@216
+				location   	(678, 1062)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	140
+				justify    	0
+				label      	"-iRules"
+				pctDist    	0.126391
+				height     	77
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41866A2202F2"
+			    client     	@213
+			    supplier   	@212
+			    line_style 	0
+			    label      	(object SegLabel @218
+				Parent_View 	@216
+				location   	(879, 1082)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..*"
+				pctDist    	0.850297
+				height     	71
+				orientation 	1))))
+		(object UsesView "" @219
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418A099F01D8"
+		    client     	@212
+		    supplier   	@189
+		    line_style 	0)
+		(object UsesView "" @220
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418A09AA011D"
+		    client     	@212
+		    supplier   	@197
+		    line_style 	0)
+		(object UsesView "" @221
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418A09B00227"
+		    client     	@212
+		    supplier   	@204
+		    line_style 	0)))
+	(object InteractionDiagram "4. Fetching Rules - Sequence Diagram"
+	    mechanism_ref 	@1
+	    quid       	"4104E19C0386"
+	    title      	"4. Fetching Rules - Sequence Diagram"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object InterObjView "GetTZDBRules()" @222
+		    location   	(290, 225)
+		    font       	(object Font
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@222
+			location   	(290, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	469
+			justify    	0
+			label      	"GetTZDBRules()")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4104E1C1034E"
+		    width      	487
+		    height     	2705
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @223
+			location   	(290, 905)
+			line_color 	3342489
+			InterObjView 	@222
+			height     	1935
+			y_coord    	1875
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$86" @224
+		    location   	(882, 225)
+		    font       	(object Font
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@224
+			location   	(882, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	535
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4104E1C10356"
+		    width      	553
+		    height     	2705
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @225
+			location   	(882, 905)
+			line_color 	3342489
+			InterObjView 	@224
+			height     	1875
+			y_coord    	1815
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @226
+			location   	(882, 1017)
+			line_color 	3342489
+			InterObjView 	@224
+			height     	60
+			y_coord    	0
+			Nested     	TRUE))
+		(object InterObjView "$UNNAMED$87" @227
+		    location   	(1428, 225)
+		    font       	(object Font
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@227
+			location   	(1428, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	407
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4104E1C1036A"
+		    width      	425
+		    height     	2705
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @228
+			location   	(1428, 1105)
+			line_color 	3342489
+			InterObjView 	@227
+			height     	1615
+			y_coord    	1555
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$88" @229
+		    location   	(2492, 225)
+		    font       	(object Font
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@229
+			location   	(2492, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	486
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4104E63F0152"
+		    width      	504
+		    height     	2705
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @230
+			location   	(2492, 1353)
+			line_color 	3342489
+			InterObjView 	@229
+			height     	60
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @231
+			location   	(2492, 1716)
+			line_color 	3342489
+			InterObjView 	@229
+			height     	60
+			y_coord    	0
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$89" @232
+		    location   	(3027, 225)
+		    font       	(object Font
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@232
+			location   	(3027, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	462
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4104E80D0002"
+		    width      	480
+		    height     	2705
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @233
+			location   	(3027, 1488)
+			line_color 	3342489
+			InterObjView 	@232
+			height     	60
+			y_coord    	0
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$90" @234
+		    location   	(3452, 225)
+		    font       	(object Font
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@234
+			location   	(3452, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	282
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4104E89A0373"
+		    width      	300
+		    height     	2705
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @235
+			location   	(3452, 2194)
+			line_color 	3342489
+			InterObjView 	@234
+			height     	60
+			y_coord    	0
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$91" @236
+		    location   	(3858, 225)
+		    font       	(object Font
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@236
+			location   	(3858, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	454
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4104E8FA01D1"
+		    width      	472
+		    height     	2705
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @237
+			location   	(3858, 2600)
+			line_color 	3342489
+			InterObjView 	@236
+			height     	60
+			y_coord    	0
+			Nested     	FALSE))
+		(object InterObjView "$UNNAMED$92" @238
+		    location   	(1964, 225)
+		    font       	(object Font
+			underline  	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@238
+			location   	(1964, 225)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	378
+			justify    	0
+			label      	"")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"410605AF005C"
+		    width      	396
+		    height     	2705
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @239
+			location   	(1964, 1218)
+			line_color 	3342489
+			InterObjView 	@238
+			height     	60
+			y_coord    	0
+			Nested     	FALSE))
+		(object NoteView @240
+		    location   	(628, 1214)
+		    label      	(object ItemLabel
+			Parent_View 	@240
+			location   	(369, 1152)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	483
+			label      	"Returns a CColTZSimpleRules object")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	543
+		    height     	137)
+		(object NoteView @241
+		    location   	(1663, 638)
+		    label      	(object ItemLabel
+			Parent_View 	@241
+			location   	(1400, 569)
+			fill_color 	13434879
+			nlines     	3
+			max_width  	490
+			label      	"Returns collection of rules for our year and location")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	550
+		    height     	150)
+		(object InterMessView "" @242
+		    location   	(628, 905)
+		    label      	(object SegLabel @243
+			Parent_View 	@242
+			location   	(585, 861)
+			quidu      	"4104E1C10351"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	369
+			justify    	0
+			label      	"GetTZRules( )"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@222
+		    supplier   	@224
+		    Focus_Src  	@223
+		    Focus_Entry 	@225
+		    origin     	(305, 905)
+		    terminus   	(866, 905)
+		    ordinal    	0)
+		(object SelfMessView "" @244
+		    location   	(0, 1017)
+		    label      	(object SegLabel @245
+			Parent_View 	@244
+			location   	(1122, 974)
+			quidu      	"4104E1C10362"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	423
+			justify    	0
+			label      	"InterpretLocationString()"
+			pctDist    	1.400000
+			height     	44
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@224
+		    supplier   	@224
+		    Focus_Src  	@225
+		    Focus_Entry 	@226
+		    origin     	(913, 1017)
+		    terminus   	(1063, 1017)
+		    ordinal    	1)
+		(object InterMessView "" @246
+		    location   	(1376, 1105)
+		    label      	(object SegLabel @247
+			Parent_View 	@246
+			location   	(1154, 1061)
+			quidu      	"4104E1C1035A"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	207
+			justify    	0
+			label      	"GetRules( )"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@224
+		    supplier   	@227
+		    Focus_Src  	@225
+		    Focus_Entry 	@228
+		    origin     	(897, 1105)
+		    terminus   	(1412, 1105)
+		    ordinal    	2)
+		(object InterMessView "" @248
+		    location   	(2069, 1716)
+		    label      	(object SegLabel @249
+			Parent_View 	@248
+			location   	(2138, 1672)
+			quidu      	"4104E65D00B6"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	638
+			justify    	0
+			label      	"GetRegionalZoneIndex(regionName)"
+			pctDist    	0.673040
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@227
+		    supplier   	@229
+		    Focus_Src  	@228
+		    Focus_Entry 	@231
+		    origin     	(1443, 1716)
+		    terminus   	(2476, 1716)
+		    ordinal    	6)
+		(object InterMessView "" @250
+		    location   	(2415, 1488)
+		    label      	(object SegLabel @251
+			Parent_View 	@250
+			location   	(2227, 1444)
+			quidu      	"4104E82D00C8"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	350
+			justify    	0
+			label      	"FindZone(cityName)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@227
+		    supplier   	@232
+		    Focus_Src  	@228
+		    Focus_Entry 	@233
+		    origin     	(1443, 1488)
+		    terminus   	(3011, 1488)
+		    ordinal    	5)
+		(object InterMessView "" @252
+		    location   	(2628, 2194)
+		    label      	(object SegLabel @253
+			Parent_View 	@252
+			location   	(2439, 2150)
+			quidu      	"4104E8BB0305"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	491
+			justify    	0
+			label      	"FindStdTimeAlignment(time)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@227
+		    supplier   	@234
+		    Focus_Src  	@228
+		    Focus_Entry 	@235
+		    origin     	(1443, 2194)
+		    terminus   	(3436, 2194)
+		    ordinal    	7)
+		(object InterMessView "" @254
+		    location   	(2909, 2600)
+		    label      	(object SegLabel @255
+			Parent_View 	@254
+			location   	(2642, 2556)
+			quidu      	"4104E9080061"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	357
+			justify    	0
+			label      	"FindRuleUses(year)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@227
+		    supplier   	@236
+		    Focus_Src  	@228
+		    Focus_Entry 	@237
+		    origin     	(1443, 2600)
+		    terminus   	(3842, 2600)
+		    ordinal    	8)
+		(object NoteView @256
+		    location   	(2322, 844)
+		    label      	(object ItemLabel
+			Parent_View 	@256
+			location   	(2056, 766)
+			fill_color 	13434879
+			nlines     	3
+			max_width  	496
+			label      	"returns a CTzDbRegionalZoneIndex*")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	556
+		    height     	169)
+		(object NoteView @257
+		    location   	(2705, 1028)
+		    label      	(object ItemLabel
+			Parent_View 	@257
+			location   	(2477, 968)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	421
+			label      	"returns a CTzDbZone*")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	481
+		    height     	132)
+		(object NoteView @258
+		    location   	(2693, 1870)
+		    label      	(object ItemLabel
+			Parent_View 	@258
+			location   	(2414, 1808)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	522
+			label      	"returns a CTzDbStdTimeAlignment*")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	582
+		    height     	137)
+		(object NoteView @259
+		    location   	(2967, 2159)
+		    label      	(object ItemLabel
+			Parent_View 	@259
+			location   	(2708, 2097)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	483
+			label      	"returns a collection of CTzDbRuleUse*")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	543
+		    height     	137)
+		(object NoteView @260
+		    location   	(825, 534)
+		    label      	(object ItemLabel
+			Parent_View 	@260
+			location   	(468, 384)
+			fill_color 	13434879
+			nlines     	6
+			max_width  	678
+			label      	"This diagram shows the sequence of calls and classes involved in fetching the DST rules for a specified location on a specified time.")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	738
+		    height     	312)
+		(object AttachView "" @261
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@256
+		    supplier   	@248
+		    line_style 	0)
+		(object AttachView "" @262
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@257
+		    supplier   	@250
+		    line_style 	0)
+		(object AttachView "" @263
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@258
+		    supplier   	@252
+		    line_style 	0)
+		(object AttachView "" @264
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@259
+		    supplier   	@254
+		    line_style 	0)
+		(object AttachView "" @265
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@241
+		    supplier   	@246
+		    line_style 	0)
+		(object AttachView "" @266
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@240
+		    supplier   	@242
+		    line_style 	0)
+		(object InterMessView "" @267
+		    location   	(0, 1353)
+		    label      	(object SegLabel @268
+			Parent_View 	@267
+			location   	(1959, 1309)
+			quidu      	"4106056103C6"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	60
+			justify    	0
+			label      	""
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@227
+		    supplier   	@229
+		    Focus_Src  	@228
+		    Focus_Entry 	@230
+		    origin     	(1443, 1353)
+		    terminus   	(2476, 1353)
+		    ordinal    	4)
+		(object InterMessView "" @269
+		    location   	(0, 1218)
+		    label      	(object SegLabel @270
+			Parent_View 	@269
+			location   	(1695, 1174)
+			quidu      	"410605C3031C"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	462
+			justify    	0
+			label      	"FindRegion(RegionName)"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@227
+		    supplier   	@238
+		    Focus_Src  	@228
+		    Focus_Entry 	@239
+		    origin     	(1443, 1218)
+		    terminus   	(1948, 1218)
+		    ordinal    	3)))))

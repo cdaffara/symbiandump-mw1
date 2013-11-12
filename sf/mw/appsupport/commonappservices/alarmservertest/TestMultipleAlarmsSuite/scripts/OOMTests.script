@@ -1,0 +1,60 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//Script file for running OOM tests
+
+PRINT Running_OOM_Tests
+
+// Load the test
+LOAD_SUITE TestMultipleAlarmsServer -SharedData
+
+// Start alert server in multiple alarm notification mode
+RUN_TEST_STEP 	100 	TestMultipleAlarmsServer	TestStartAlertServerStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	start_multiple_8
+
+// Initial Cleanup
+RUN_TEST_STEP 	100	TestMultipleAlarmsServer	TestCleanupStep
+
+
+START_TESTCASE	PIM-APPSRV-ALMSRV-PREQ1118-I-012-LP-0001
+//! @file			OOMTests.script
+//! @SYMTestCaseID		PIM-APPSRV-ALMSRV-PREQ1118-I-012-LP-0001
+//! @SYMTestCaseDesc 		OOM tests
+//! @SYMFssID			
+//! @SYMTestStatus 		Implemented
+//! @SYMTestPriority 		Low
+//! @SYMTestActions 		1.	Start the Alarm Alert Server passing a large aMaxAlarms value 
+//!				2.	Set the heap to fail at varying rates
+//!				3.	Within an OOM loop:
+//!					a.	Create many calendar entries with alarms that have the same expiry time. 
+//!						Attach rich data to the alarms.
+//!					b.	Wait for the alarms to expire.
+//!					c.	Retrieve the associated data of the alarms
+//! @SYMTestExpectedResults 	If allocation fails, the functions leave with KErrNoMemory, and the system does not crash.
+//! @SYMTestType 		CIT
+//! @SYMTestCaseDependencies	The test can only run on a TEXTSHELL environment, as the Alert Server is loaded by the test code
+
+// Test OOM situation while creating armed entries
+RUN_TEST_STEP 	-1 	TestMultipleAlarmsServer	TestCreateEntriesOOMStep	Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	oom_test
+
+// Wait till alarms created in previous test step expire.
+RUN_TEST_STEP 	100 	TestMultipleAlarmsServer	TestWaitStep			Z:\TestData\Ini\TestMultipleAlarmsSuite.ini	wait_1min
+
+// Test OOM situation while accessing the calendar entries and the alarm content
+RUN_TEST_STEP 	-1 	TestMultipleAlarmsServer	TestAlarmContentOOMStep 	
+END_TESTCASE	PIM-APPSRV-ALMSRV-PREQ1118-I-012-LP-0001
+
+
+// Kill alert server thread
+RUN_TEST_STEP 	100	TestMultipleAlarmsServer	TestKillAlertServerStep	

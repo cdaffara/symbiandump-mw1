@@ -1,0 +1,43 @@
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// recupgrade.dll Symbian OS new MIME type recognizer
+//
+
+
+
+/**
+ @file
+ @test
+ @internalComponent - Internal Symbian test code
+*/
+
+target 		recupgrade.dll
+targettype 	plugin 
+uid			0x10009d8d 0xA000B461
+VENDORID 	0x70000001
+CAPABILITY	All -Tcb
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+//systeminclude   /epoc32/include/ecom
+
+SOURCEPATH	.
+source		recupgrade.cpp
+
+library         euser.lib apmime.lib efsrv.lib
+
+start resource A000B461.rss
+target recupgrade.rsc
+end
+
+SMPSAFE

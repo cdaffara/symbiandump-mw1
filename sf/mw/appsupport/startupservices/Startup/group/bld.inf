@@ -1,0 +1,62 @@
+/*
+* Copyright (c) 2001-2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This file provides the information required for building the
+*                whole of a Startup.
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+
+PRJ_PLATFORMS
+ DEFAULT
+
+PRJ_EXPORTS
+ ../conf/startup.confml                     MW_LAYER_CONFML(startup.confml)
+ ../conf/startup_101F8763.crml 	            MW_LAYER_CRML(startup_101F8763.crml)
+
+ ../pubsub/StartupAppInternalPSKeys.h       |../../../inc/startupappinternalpskeys.h
+ ../pubsub/startupappprivatepskeys.h        |../../../startupservices/inc/startupappprivatepskeys.h
+
+ ../rom/startup.iby                         CORE_MW_LAYER_IBY_EXPORT_PATH(startup.iby)
+ ../rom/startupresources.iby                LANGUAGE_MW_LAYER_IBY_EXPORT_PATH(startupresources.iby)
+ ../rom/startup_variant.iby                 CUSTOMER_MW_LAYER_IBY_EXPORT_PATH(startup_variant.iby)
+
+ ../loc/startup.loc                         MW_LAYER_LOC_EXPORT_PATH(startup.loc)
+
+ ../data/backup_registration.xml            /epoc32/data/z/private/100058f4/backup_registration.xml
+ ../data/backup_registration.xml            /epoc32/release/winscw/udeb/z/private/100058f4/backup_registration.xml
+ ../data/backup_registration.xml            /epoc32/release/winscw/urel/z/private/100058f4/backup_registration.xml
+
+PRJ_EXTENSIONS
+START EXTENSION s60/mifconv
+  OPTION TARGETFILE startup.mif
+  OPTION HEADERFILE startup.mbg
+  OPTION SVGENCODINGVERSION 3
+  OPTION SOURCES \
+    -c16,8 qgn_graf_startup_01 -c16,8 qgn_graf_startup_02 -c16,8 qgn_graf_startup_03 \
+		-c16,8 qgn_graf_startup_04 -c16,8 qgn_graf_startup_05 -c16,8 qgn_graf_startup_06 \
+		-c16,8 qgn_graf_startup_07 -c16,8 qgn_graf_startup_08 -c16,8 qgn_graf_startup_09 \
+		-c16,8 qgn_graf_startup_10 -c16,8 qgn_graf_startup_11 -c16,8 qgn_graf_startup_12 \
+		-c16,8 qgn_graf_startup_13 -c16,8 qgn_graf_startup_14 -c16,8 qgn_graf_startup_15 \
+		-c16,8 qgn_graf_startup_16 -c16,8 qgn_graf_startup_17 -c16,8 qgn_graf_startup_18 \
+		-c16,8 qgn_graf_startup_19 -c16,8 qgn_graf_startup_20 -c16,8 qgn_graf_startup_bg
+END
+
+
+PRJ_MMPFILES
+startup.mmp
+../MediatorPlugin/group/StartupMediatorPlugin.mmp
+../syserrcmd/group/syserrcmd.mmp

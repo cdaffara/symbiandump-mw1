@@ -1,0 +1,156 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for test project
+*
+*/
+
+
+// To get macro definitions for export paths
+#include <platform_paths.hrh>
+#include "../testdatacreator/group/bld.inf"
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_TESTMMPFILES
+secureformattertest.mmp
+
+PRJ_TESTEXPORTS
+//../rom/secureformattertest.iby  CORE_MW_LAYER_IBY_EXPORT_PATH(secureformattertest.iby)
+
+//../init/TestFramework.ini /epoc32/winscw/c/TestFramework/TestFramework.ini
+//../conf/secureformattertest.cfg /epoc32/winscw/c/TestFramework/secureformattertest.cfg
+
+../data/testexclude_001.txt     /epoc32/winscw/c/testdata/testexclude_001.txt
+../data/testexclude_002.txt     /epoc32/winscw/c/testdata/testexclude_002.txt
+../data/testexclude_003.txt     /epoc32/winscw/c/testdata/testexclude_003.txt
+../data/testexclude_004.txt     /epoc32/winscw/c/testdata/testexclude_004.txt
+../data/testexclude_005.txt     /epoc32/winscw/c/testdata/testexclude_005.txt
+../data/testexclude_006.txt     /epoc32/winscw/c/testdata/testexclude_006.txt
+../data/testexclude_007.txt     /epoc32/winscw/c/testdata/testexclude_007.txt
+../data/testexclude_008.txt     /epoc32/winscw/c/testdata/testexclude_008.txt
+../data/testexclude_009.txt     /epoc32/winscw/c/testdata/testexclude_009.txt
+../data/testexclude_010.txt     /epoc32/winscw/c/testdata/testexclude_010.txt
+../data/testexclude_011.txt     /epoc32/winscw/c/testdata/testexclude_011.txt
+../data/testexclude_012.txt     /epoc32/winscw/c/testdata/testexclude_012.txt
+../data/testexclude_013.txt     /epoc32/winscw/c/testdata/testexclude_013.txt
+../data/testexclude_014.txt     /epoc32/winscw/c/testdata/testexclude_014.txt
+../data/testexclude_015.txt     /epoc32/winscw/c/testdata/testexclude_015.txt
+../data/testspec_001.txt        /epoc32/winscw/c/testdata/testspec_001.txt
+../data/testspec_002.txt        /epoc32/winscw/c/testdata/testspec_002.txt
+../data/testspec_003.txt        /epoc32/winscw/c/testdata/testspec_003.txt
+../data/testspec_004.txt        /epoc32/winscw/c/testdata/testspec_004.txt
+../data/testspec_005.txt        /epoc32/winscw/c/testdata/testspec_005.txt
+../data/testspec_006.txt        /epoc32/winscw/c/testdata/testspec_006.txt
+../data/testspec_007.txt        /epoc32/winscw/c/testdata/testspec_007.txt
+../data/testspec_008.txt        /epoc32/winscw/c/testdata/testspec_008.txt
+../data/testspec_009.txt        /epoc32/winscw/c/testdata/testspec_009.txt
+../data/testspec_010.txt        /epoc32/winscw/c/testdata/testspec_010.txt
+../data/testspec_011.txt        /epoc32/winscw/c/testdata/testspec_011.txt
+../data/testspec_012.txt        /epoc32/winscw/c/testdata/testspec_012.txt
+../data/testspec_013.txt        /epoc32/winscw/c/testdata/testspec_013.txt
+../data/testspec_014.txt        /epoc32/winscw/c/testdata/testspec_014.txt
+../data/testspec_015.txt        /epoc32/winscw/c/testdata/testspec_015.txt
+
+// Application specific exclude list(s) exported to rom drive
+../data/app_spec_rom_001.exc    /epoc32/data/z/private/102073ea/excludes/app_spec_001.exc
+../data/app_spec_rom_001.exc    /epoc32/release/winscw/udeb/z/private/102073ea/excludes/app_spec_001.exc
+../data/app_spec_rom_001.exc    /epoc32/release/winscw/urel/z/private/102073ea/excludes/app_spec_001.exc
+../data/app_spec_rom_002.exc    /epoc32/data/z/private/102073ea/excludes/app_spec_002.exc
+../data/app_spec_rom_002.exc    /epoc32/release/winscw/udeb/z/private/102073ea/excludes/app_spec_002.exc
+../data/app_spec_rom_002.exc    /epoc32/release/winscw/urel/z/private/102073ea/excludes/app_spec_002.exc
+../data/app_spec_rom_dummy.exc  /epoc32/data/z/private/102073ea/excludes/app_spec_dummy.exc
+../data/app_spec_rom_dummy.exc  /epoc32/release/winscw/udeb/z/private/102073ea/excludes/app_spec_dummy.exc
+../data/app_spec_rom_dummy.exc  /epoc32/release/winscw/urel/z/private/102073ea/excludes/app_spec_dummy.exc
+../data/app_spec_003.exc        /epoc32/data/z/private/102073ea/excludes/app_spec_003.exc
+../data/app_spec_004.exc        /epoc32/data/z/private/102073ea/excludes/app_spec_004.exc
+../data/app_spec_005.exc        /epoc32/data/z/private/102073ea/excludes/app_spec_005.exc
+../data/app_spec_006.exc        /epoc32/data/z/private/102073ea/excludes/app_spec_006.exc
+../data/app_spec_007.exc        /epoc32/data/z/private/102073ea/excludes/app_spec_007.exc
+
+
+// Application specific test specs and exclude lists
+../data/app_spec_001.exc        /epoc32/winscw/c/testdata/app_spec_001.exc
+../data/app_spec_002.exc        /epoc32/winscw/c/testdata/app_spec_002.exc
+../data/app_spec_003.exc        /epoc32/winscw/c/testdata/app_spec_003.exc
+../data/app_spec_004.exc        /epoc32/winscw/c/testdata/app_spec_004.exc
+../data/app_spec_005.exc        /epoc32/winscw/c/testdata/app_spec_005.exc
+../data/app_spec_006.exc        /epoc32/winscw/c/testdata/app_spec_006.exc
+../data/app_spec_007.exc        /epoc32/winscw/c/testdata/app_spec_007.exc
+../data/app_spec_dummy.exc        /epoc32/winscw/c/testdata/app_spec_dummy.exc
+../data/app_spec_001.txt        /epoc32/winscw/c/testdata/app_spec_001.txt
+../data/app_spec_002.txt        /epoc32/winscw/c/testdata/app_spec_002.txt
+../data/app_spec_003.txt        /epoc32/winscw/c/testdata/app_spec_003.txt
+../data/app_spec_004.txt        /epoc32/winscw/c/testdata/app_spec_004.txt
+../data/app_spec_005.txt        /epoc32/winscw/c/testdata/app_spec_005.txt
+../data/app_spec_006.txt        /epoc32/winscw/c/testdata/app_spec_006.txt
+../data/app_spec_007.txt        /epoc32/winscw/c/testdata/app_spec_007.txt
+
+// Test exclude specific data exported to ROM drive
+../data/testexclude_001.txt     /epoc32/data/z/testdata/testexclude_001.txt
+../data/testexclude_002.txt     /epoc32/data/z/testdata/testexclude_002.txt
+../data/testexclude_003.txt     /epoc32/data/z/testdata/testexclude_003.txt
+../data/testexclude_004.txt     /epoc32/data/z/testdata/testexclude_004.txt
+../data/testexclude_005.txt     /epoc32/data/z/testdata/testexclude_005.txt
+../data/testexclude_006.txt     /epoc32/data/z/testdata/testexclude_006.txt
+../data/testexclude_007.txt     /epoc32/data/z/testdata/testexclude_007.txt
+../data/testexclude_008.txt     /epoc32/data/z/testdata/testexclude_008.txt
+../data/testexclude_009.txt     /epoc32/data/z/testdata/testexclude_009.txt
+../data/testexclude_010.txt     /epoc32/data/z/testdata/testexclude_010.txt
+../data/testexclude_011.txt     /epoc32/data/z/testdata/testexclude_011.txt
+../data/testexclude_012.txt     /epoc32/data/z/testdata/testexclude_012.txt
+../data/testexclude_013.txt     /epoc32/data/z/testdata/testexclude_013.txt
+../data/testexclude_014.txt     /epoc32/data/z/testdata/testexclude_014.txt
+../data/testexclude_015.txt     /epoc32/data/z/testdata/testexclude_015.txt
+../data/testspec_001.txt        /epoc32/data/z/testdata/testspec_001.txt
+../data/testspec_002.txt        /epoc32/data/z/testdata/testspec_002.txt
+../data/testspec_003.txt        /epoc32/data/z/testdata/testspec_003.txt
+../data/testspec_004.txt        /epoc32/data/z/testdata/testspec_004.txt
+../data/testspec_005.txt        /epoc32/data/z/testdata/testspec_005.txt
+../data/testspec_006.txt        /epoc32/data/z/testdata/testspec_006.txt
+../data/testspec_007.txt        /epoc32/data/z/testdata/testspec_007.txt
+../data/testspec_008.txt        /epoc32/data/z/testdata/testspec_008.txt
+../data/testspec_009.txt        /epoc32/data/z/testdata/testspec_009.txt
+../data/testspec_010.txt        /epoc32/data/z/testdata/testspec_010.txt
+../data/testspec_011.txt        /epoc32/data/z/testdata/testspec_011.txt
+../data/testspec_012.txt        /epoc32/data/z/testdata/testspec_012.txt
+../data/testspec_013.txt        /epoc32/data/z/testdata/testspec_013.txt
+../data/testspec_014.txt        /epoc32/data/z/testdata/testspec_014.txt
+../data/testspec_015.txt        /epoc32/data/z/testdata/testspec_015.txt
+
+../data/app_spec_001.txt        /epoc32/data/z/testdata/app_spec_001.txt
+../data/app_spec_002.txt        /epoc32/data/z/testdata/app_spec_002.txt
+../data/app_spec_003.txt        /epoc32/data/z/testdata/app_spec_003.txt
+../data/app_spec_004.txt        /epoc32/data/z/testdata/app_spec_004.txt
+../data/app_spec_005.txt        /epoc32/data/z/testdata/app_spec_005.txt
+../data/app_spec_006.txt        /epoc32/data/z/testdata/app_spec_006.txt
+../data/app_spec_007.txt        /epoc32/data/z/testdata/app_spec_007.txt
+
+PRJ_EXPORTS
+// Specify the source file followed by its destination here
+// copy will be used to copy the source file to its destination
+// If there's no destination then the source file will be copied
+// to the same name in \epoc32\include
+// Example: 
+/*
+\agnmodel\inc\AGMCOMON.H
+*/
+
+../init/TestFramework.ini /epoc32/winscw/c/TestFramework/TestFramework.ini
+../init/TestFramework.ini /epoc32/data/z/system/data/TestFramework.ini
+
+../conf/secureformattertest.cfg /epoc32/winscw/c/TestFramework/secureformattertest.cfg
+../conf/secureformattertest.cfg /epoc32/data/z/system/data/secureformattertest.cfg
+
+../rom/secureformattertest.iby                              CORE_MW_LAYER_IBY_EXPORT_PATH(secureformattertest.iby)

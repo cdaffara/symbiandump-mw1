@@ -1,0 +1,14 @@
+EXPORTS
+	?Close@RGSServerClient@@QAEXXZ @ 1 NONAME ; void RGSServerClient::Close(void)
+	?SetAspectRatioL@CGSServerEngine@@QAEXH@Z @ 2 NONAME ; void CGSServerEngine::SetAspectRatioL(int)
+	?NewLC@CGSServerEngine@@SAPAV1@XZ @ 3 NONAME ; class CGSServerEngine * CGSServerEngine::NewLC(void)
+	?Connect@RGSServerClient@@QAEHXZ @ 4 NONAME ; int RGSServerClient::Connect(void)
+	?TvSystemL@CGSServerEngine@@QAEHXZ @ 5 NONAME ; int CGSServerEngine::TvSystemL(void)
+	??1CGSServerEngine@@UAE@XZ @ 6 NONAME ; CGSServerEngine::~CGSServerEngine(void)
+	?NewL@CGSServerEngine@@SAPAV1@XZ @ 7 NONAME ; class CGSServerEngine * CGSServerEngine::NewL(void)
+	?FlickerFilterL@CGSServerEngine@@QAEHXZ @ 8 NONAME ; int CGSServerEngine::FlickerFilterL(void)
+	?SetTvSystemL@CGSServerEngine@@QAEXH@Z @ 9 NONAME ; void CGSServerEngine::SetTvSystemL(int)
+	??0RGSServerClient@@QAE@XZ @ 10 NONAME ; RGSServerClient::RGSServerClient(void)
+	?AspectRatioL@CGSServerEngine@@QAEHXZ @ 11 NONAME ; int CGSServerEngine::AspectRatioL(void)
+	?SetFlickerFilterL@CGSServerEngine@@QAEXH@Z @ 12 NONAME ; void CGSServerEngine::SetFlickerFilterL(int)
+

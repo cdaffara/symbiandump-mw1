@@ -1,0 +1,50 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-APPARC-0033
+//! @SYMPREQ 			PREQ1228
+//! @SYMREQ			REQ5896
+//! @SYMCR			CR0831
+//! @SYMTestPriority 		High 
+//! @SYMTestType		CIT
+//! @SYMTestCaseDesc 		Tests that the application information file (AppsList.bin) is created if it does 
+//!				not exists, and we reboot the phone.
+//!				Tests that the Short Caption associated with an app is restored to its original 
+//!				value when the phone is restarted.
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		This tests the update of the applist file in \\private\\10003a3f\\import\\\apps\\.
+//!				The sequence is as follows:
+//!				(BOOT - 1)
+//!				1.- Check the applist file exists. It must exists.
+//!				2.- Delete the applist file.
+//!				(BOOT - 2)
+//!				3.- Check the applist file does not exist.
+//!				4.- Check the applist is created after a short period of time.
+//!				5.- Set short caption of a test app to a custom value.
+//!				(BOOT - 3)
+//!				6.- Check short caption of the test app is restored to its original value.
+//! @SYMTestExpectedResults	For Boot1 AppList File must exist when the test starts, but not when it finishes.
+//!				For Boot2 AppList File must not exist when the test starts, but is created later on.
+//!				For Boot3 ShortCaption for tstapp.exe must return to original short caption
+
+START_TESTCASE API-APPFWK-APPARC-0033
+
+PRINT Run T_AppListFile_Boot1 Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 300 ApparcTestServer T_AppListFile_Boot1
+
+END_TESTCASE API-APPFWK-APPARC-0033

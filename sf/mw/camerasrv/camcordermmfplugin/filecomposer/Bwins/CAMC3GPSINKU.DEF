@@ -1,0 +1,3 @@
+EXPORTS
+	?NewL@CCamC3GPDataSink@@SAPAV1@PAVM3GPDataSinkObserver@@@Z @ 1 NONAME ; class CCamC3GPDataSink * CCamC3GPDataSink::NewL(class M3GPDataSinkObserver *)
+

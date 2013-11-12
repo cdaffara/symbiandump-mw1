@@ -1,0 +1,55 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+*
+* Description:
+*
+*/
+
+
+/*
+*NTT DOCOMO, INC - BUG 2365
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+#ifdef RD_CONTEXT_FRAMEWORK
+
+// Iby export
+../rom/applicationstatesourcepluginhw.iby CORE_MW_LAYER_IBY_EXPORT_PATH(ApplicationStateSourcePlugInHW.iby)
+
+// Rule files
+/*
+Copy autorotateui_activate.xml, autorotateui_alwaysinportrait.xml, autorotateui_init.xml, autorotateui_rotate.xml to 
+1. /epoc32/data/z/private/10282BC4/rules/
+2. /epoc32/release/winscw/udeb/z/private/10282BC4/rules/
+3. /epoc32/release/winscw/urel/z/private/10282BC4/rules/
+*/
+../data/autorotateui_activate.xml Z:/private/10282bc4/rules/autorotateui_activate.rul
+    
+../data/autorotateui_alwaysinportrait.xml Z:/private/10282bc4/rules/autorotateui_alwaysinportrait.rul
+
+../data/autorotateui_init.xml Z:/private/10282bc4/rules/autorotateui_init.rul
+
+../data/autorotateui_rotate.xml Z:/private/10282bc4/rules/autorotateui_rotate.rul
+
+#endif // RD_CONTEXT_FRAMEWORK
+
+PRJ_MMPFILES
+#ifdef RD_CONTEXT_FRAMEWORK
+ApplicationStateSourcePlugIn.mmp
+#endif // RD_CONTEXT_FRAMEWORK

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="4eb3ecc9d10e2bcdb09d9532c936630a" dataversion="2.0">
+  <name>Restore Factory Settings Plug-in API</name>
+  <description>An interface for plug-in components used to restore application domain specific factory settings.</description>
+  <type>c++</type>
+  <collection>coreapplicationuis</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

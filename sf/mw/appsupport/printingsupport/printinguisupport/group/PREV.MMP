@@ -1,0 +1,54 @@
+// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// prev.dll Print preview
+// 
+//
+
+/**
+ @file
+*/
+
+
+target          prev.dll
+CAPABILITY All -Tcb
+targettype      DLL
+UID		0x1000008D 0x10003A53
+VENDORID 0x70000001
+
+SOURCEPATH	../src_prev 	// mmp and source files
+
+userinclude		../src_prev // private headers
+userinclude   ../inc 		// public headers in local directory
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+source PREVUTIL.CPP 
+source PRNDEV.CPP 
+source PRNPREV.CPP
+
+#ifndef SYMBIAN_REMOVE_FONT_METRICS_V1
+MACRO SYMBIAN_SUPPORT_FONT_METRICS_V1
+#endif
+
+deffile PREV.DEF
+
+library euser.lib estor.lib gdi.lib ws32.lib print.lib
+
+START WINS
+	baseaddress	0x42200000
+END				  
+
+START MARM
+END
+
+SMPSAFE

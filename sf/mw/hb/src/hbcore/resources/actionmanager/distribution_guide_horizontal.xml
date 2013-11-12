@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distributionguide>
+  <toolbar maxcount="3"/>
+  <default container="OptionsMenu"/>
+</distributionguide>

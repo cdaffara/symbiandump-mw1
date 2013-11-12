@@ -1,0 +1,38 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __TSTASKMONITOR_CORE_IBY__
+#define __TSTASKMONITOR_CORE_IBY__
+
+file=ABI_DIR\BUILD_DIR\tstaskmonitorclient.dll              SHARED_LIB_DIR\tstaskmonitorclient.dll
+file=ABI_DIR\BUILD_DIR\hsrunningappmonitor.exe      PROGRAMS_DIR\hsrunningappmonitor.exe
+data=\epoc32\data\z\resource\apps\hsrunningappmonitor.rsc      resource\apps\hsrunningappmonitor.rsc
+data=ZPRIVATE\10003a3f\import\apps\hsrunningappmonitor_reg.rsc      private\10003a3f\import\apps\hsrunningappmonitor_reg.rsc
+
+// activities plugin
+file=ABI_DIR\BUILD_DIR\activitytsplugin.dll					       SHARED_LIB_DIR\activitytsplugin.dll
+data=\epoc32\data\z\resource\qt\plugins\activitytsplugin.qtplugin    resource\qt\plugins\activitytsplugin.qtplugin
+data=\epoc32\data\z\resource\taskswitcher\activitytsplugin.xml    resource\taskswitcher\activitytsplugin.xml
+
+file=ABI_DIR\BUILD_DIR\tsbackstepping.dll                   SHARED_LIB_DIR\tsbackstepping.dll
+
+
+ECOM_PLUGIN( tsscreenshotplugin.dll, tsscreenshotplugin.rsc )
+
+// stub sis
+data=ZSYSTEM/install/taskmonitor_stub.sis                  system/install/taskmonitor_stub.sis
+
+#endif //__TSTASKMONITOR_CORE_IBY__

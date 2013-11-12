@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                XIMP Core Management API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/ximpcontextstateevent.h     MW_LAYER_PLATFORM_EXPORT_PATH(ximpcontextstateevent.h)
+../inc/ximpclient.inl     MW_LAYER_PLATFORM_EXPORT_PATH(ximpclient.inl)
+../inc/ximpclient.h     MW_LAYER_PLATFORM_EXPORT_PATH(ximpclient.h)
+../inc/ximpcontextobserver.h     MW_LAYER_PLATFORM_EXPORT_PATH(ximpcontextobserver.h)
+../inc/ximpcontext.h     MW_LAYER_PLATFORM_EXPORT_PATH(ximpcontext.h)
+../inc/ximprequestcompleteevent.h     MW_LAYER_PLATFORM_EXPORT_PATH(ximprequestcompleteevent.h)
+../inc/ximpmanagementifids.hrh     MW_LAYER_PLATFORM_EXPORT_PATH(ximpmanagementifids.hrh)

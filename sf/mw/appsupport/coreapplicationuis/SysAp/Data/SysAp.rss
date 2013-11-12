@@ -1,0 +1,126 @@
+/*
+* Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resources for SysAp
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    SYSA
+
+//  INCLUDES
+#include <eikon.rh>
+#include <SysAp.loc>
+#include <avkon.loc>
+#include <avkon.rsg>
+#include <AiwCommon.rh>
+#include <AiwPoCParameters.hrh>
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="sysap"; }
+
+RESOURCE EIK_APP_INFO
+    {
+        status_pane = r_status_pane;
+    }
+
+RESOURCE STATUS_PANE_APP_MODEL r_status_pane
+    {
+        layout= R_AVKON_STATUS_PANE_LAYOUT_EMPTY;
+    }
+
+
+//   LOCALIZED STRINGS 
+
+RESOURCE TBUF r_qtn_pwrc_switch_off { buf = qtn_pwrc_switch_off; }
+RESOURCE TBUF r_qtn_set_sec_lock_system { buf = qtn_set_sec_lock_system; }
+RESOURCE TBUF r_qtn_pwrc_lock_keys{ buf = qtn_pwrc_lock_keys; }
+RESOURCE TBUF r_text_mode_selected { buf = text_mode_selected; }
+RESOURCE TBUF r_qtn_memlo_memory_low_messages { buf = qtn_memlo_memory_low_messages; }
+RESOURCE TBUF r_qtn_memlo_memory_low_sim_mes { buf = qtn_memlo_memory_low_sim_mes; }
+RESOURCE TBUF r_qtn_restart_query { buf = qtn_restart_query; }
+RESOURCE TBUF r_qtn_su_application_error { buf = qtn_su_application_error; }
+RESOURCE TBUF r_qtn_gprs_conf_gprs_suspended { buf = qtn_gprs_conf_gprs_suspended; }
+RESOURCE TBUF r_qtn_gprs_conf_gprs_resumed { buf = qtn_gprs_conf_gprs_resumed; }
+RESOURCE TBUF r_qtn_pwrc_info_goodbye { buf = qtn_pwrc_info_goodbye; }
+
+RESOURCE TBUF r_qtn_su_note_insert_sim { buf = qtn_su_note_insert_sim; }
+RESOURCE TBUF r_qtn_leave_offline_mode_query { buf = qtn_leave_offline_mode_query; }
+RESOURCE TBUF r_qtn_err_offline_unable { buf = qtn_err_offline_unable; }
+RESOURCE TBUF r_qtn_err_offline_unable_profile { buf = qtn_err_offline_unable_profile; }
+RESOURCE TBUF r_qtn_keyg_conf_keypad_active { buf = qtn_keyg_conf_keypad_active; }
+
+RESOURCE TBUF r_qtn_memc_wait_eject { buf = qtn_memc_wait_eject; }
+RESOURCE TBUF r_qtn_memc_info_eject { buf = qtn_memc_info_eject; }
+RESOURCE TBUF r_qtn_memc_error_eject { buf = qtn_memc_error_eject; }
+RESOURCE TBUF r_qtn_memc_conf_eject { buf = qtn_memc_conf_eject; }
+RESOURCE TBUF r_qtn_pwrc_eject_mmc { buf = qtn_pwrc_eject_mmc; }
+
+RESOURCE TBUF r_qtn_pwrc_exit_sim_access { buf = qtn_pwrc_exit_sim_access; }
+RESOURCE TBUF r_qtn_bt_disconn_from { buf = qtn_bt_disconn_from; }
+RESOURCE TBUF r_qtn_memc_locked_not_supported { buf = qtn_memc_locked_not_supported; }
+
+RESOURCE TBUF r_qtn_fmtx_sysap_info_note_disabled { buf = qtn_fmtx_sysap_info_note_disabled; }
+RESOURCE TBUF r_qtn_fmtx_sysap_info_note_change_freq { buf = qtn_fmtx_sysap_info_note_change_freq; }
+RESOURCE TBUF r_qtn_fmtx_sysap_info_note_accessory_standby { buf = qtn_fmtx_sysap_info_note_accessory_standby; }
+RESOURCE TBUF r_qtn_fmtx_sysap_info_note_accessory_forbids { buf = qtn_fmtx_sysap_info_note_accessory_forbids; }
+RESOURCE TBUF r_qtn_fmtx_sysap_info_note_volume_disabled { buf = qtn_fmtx_sysap_info_note_volume_disabled; }
+RESOURCE TBUF r_qtn_fmtx_sysap_note_activate_in_offline { buf = qtn_fmtx_sysap_note_activate_in_offline; }
+
+// POC launching
+RESOURCE AIW_INTEREST r_poc_aiw_interest
+    { 
+    items=
+        {
+	    AIW_CRITERIA_ITEM 
+            { 
+            id = KAiwCmdPoC;  // serviceCmd used here also as ID
+            serviceCmd = KAiwCmdPoC;
+            contentType = "*";
+            serviceClass = KAiwClassBase; 
+            defaultProvider = KS60PoCAiwProviderImplUid;
+            maxProviders    = 1;
+            }
+        };
+    }
+
+#ifdef RD_MULTIPLE_DRIVE
+RESOURCE TBUF r_qtn_pwrc_eject_memory_card { buf = qtn_pwrc_eject_memory_card; }
+RESOURCE TBUF r_qtn_memc_conf_eject_multiple { buf = qtn_memc_conf_eject_multiple; }
+RESOURCE TBUF r_qtn_memc_conf_eject_multiple_defaultname { buf = qtn_memc_conf_eject_multiple_defaultname; }
+RESOURCE TBUF r_qtn_memc_info_eject_multiple { buf = qtn_memc_info_eject_multiple; }
+RESOURCE TBUF r_qtn_memc_info_eject_multiple_defaultname { buf = qtn_memc_info_eject_multiple_defaultname; }
+#endif // RD_MULTIPLE_DRIVE
+
+RESOURCE TBUF r_qtn_pwrc_lock_display{ buf = qtn_pwrc_lock_display; }
+RESOURCE TBUF r_qtn_keyg_conf_display_keys_active{ buf = qtn_keyg_conf_display_keys_active; }
+RESOURCE TBUF r_qtn_pwrc_activate_power_saving { buf = qtn_pwrc_activate_power_saving; }
+RESOURCE TBUF r_qtn_pwrc_deactivate_power_saving{ buf = qtn_pwrc_deactivate_power_saving; }
+RESOURCE TBUF r_qtn_power_saving_activated_conf_note { buf = qtn_power_saving_activated_conf_note; }
+RESOURCE TBUF r_qtn_power_saving_deactivated_conf_note { buf = qtn_power_saving_deactivated_conf_note; }
+RESOURCE TBUF r_qtn_power_saving_failed_warning_note { buf = qtn_power_saving_failed_warning_note; }
+RESOURCE TBUF r_qtn_power_saving_deactivation_failed_warning_note { buf = qtn_power_saving_deactivation_failed_warning_note; }
+RESOURCE TBUF r_qtn_battery_charging_power_saving_query { buf = qtn_battery_charging_power_saving_query; }
+RESOURCE TBUF r_qtn_battery_conf_query { buf = qtn_battery_conf_query; }
+RESOURCE TBUF r_qtn_battery_status_popup { buf = qtn_battery_status_popup; }
+
+RESOURCE TBUF r_qtn_pwrc_eject_memory_storage { buf = qtn_pwrc_eject_memory_storage; }
+RESOURCE TBUF r_qtn_mems_eject_error { buf = qtn_mems_eject_error; }
+RESOURCE TBUF r_qtn_ejecting_memory_name_wait { buf = qtn_ejecting_memory_name_wait; }
+RESOURCE TBUF r_qtn_eject_remove_memory_info { buf = qtn_eject_remove_memory_info; }
+
+// End of File

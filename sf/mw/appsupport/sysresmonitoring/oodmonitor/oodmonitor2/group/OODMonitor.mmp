@@ -1,0 +1,74 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project oodmonitor
+*
+*/
+
+
+#include <data_caging_paths.hrh>
+#include <platform_paths.hrh>
+
+TARGET          oodmonitor.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x102828DC
+
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+
+SYSTEMINCLUDE		/epoc32/include/mw/hb/hbwidgets
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+
+
+MW_LAYER_SYSTEMINCLUDE
+
+
+SOURCEPATH      ../src
+SOURCE          lafshut.cpp
+SOURCE          outofdiskmonitor.cpp
+SOURCE          outofdisknotifyobserver.cpp
+SOURCE          outofdiskpsobserver.cpp
+SOURCE          outofdisksubscriber.cpp
+SOURCE          outofdiskglobalnote.cpp
+
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         bafl.lib
+LIBRARY         ws32.lib
+LIBRARY         platformenv.lib
+LIBRARY         disknotifyhandler.lib
+LIBRARY         commonengine.lib
+LIBRARY         cone.lib
+LIBRARY 	centralrepository.lib
+LIBRARY		HbWidgets.lib
+
+SOURCEPATH      ../../resource
+START RESOURCE  LafMemoryWatcher.rss
+HEADER
+TARGETPATH      RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+SOURCEPATH      ../resource
+START RESOURCE  outofdiskmonitor.rss
+HEADER
+TARGETPATH      RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+
+SMPSAFE
+// End of file.
+

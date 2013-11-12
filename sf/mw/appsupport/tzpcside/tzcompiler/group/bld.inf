@@ -1,0 +1,63 @@
+// Copyright (c) 1999-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// App-Services/TzCompiler (Time-zone Database Compiler)
+// 
+//
+
+PRJ_PLATFORMS
+
+// This component is built using Visual Studio 6 into a Windows Console Application (MSDOS)
+// it is a tool for building the Symbian Native Tz Database
+// The tool is required by licensees to build their replacement Database
+// The tool does not need to be regenerated with each OS build
+
+PRJ_EXPORTS
+
+// TZ Compiler, Configuration Files and Database
+../Release/TzCompiler.exe		/epoc32/tools/tz/tzcompiler.exe
+../Release/TzCompiler.ini		/epoc32/tools/tz/tzcompiler.ini
+../Release/TzIdentities.ini		/epoc32/tools/tz/tzidentities.ini
+
+// TzCompiler User Documentation
+"../doc_pub/SGL.GT0197.232 App-Services Tz  9.1 How-To Create the Tz Database.doc"	"/epoc32/tools/tz/sgl.gt0197.232 app-services tz  9.1 how-to create the tz database.doc"
+
+// Sample Olson's Tz Database Source Files
+../Release/Data/africa			/epoc32/tools/tz/data/africa
+../Release/Data/antarctica		/epoc32/tools/tz/data/antarctica
+../Release/Data/asia			/epoc32/tools/tz/data/asia
+../Release/Data/australasia		/epoc32/tools/tz/data/australasia
+../Release/Data/backward		/epoc32/tools/tz/data/backward
+../Release/Data/etcetera		/epoc32/tools/tz/data/etcetera
+../Release/Data/europe			/epoc32/tools/tz/data/europe
+../Release/Data/factory			/epoc32/tools/tz/data/factory
+../Release/Data/iso3166.tab		/epoc32/tools/tz/data/iso3166.tab
+../Release/Data/leapseconds		/epoc32/tools/tz/data/leapseconds
+../Release/Data/northamerica	/epoc32/tools/tz/data/northamerica
+../Release/Data/pacificnew		/epoc32/tools/tz/data/pacificnew
+../Release/Data/solar87			/epoc32/tools/tz/data/solar87
+../Release/Data/solar88			/epoc32/tools/tz/data/solar88
+../Release/Data/solar89			/epoc32/tools/tz/data/solar89
+../Release/Data/southamerica	/epoc32/tools/tz/data/southamerica
+../Release/Data/systemv			/epoc32/tools/tz/data/systemv
+../Release/Data/yearistype.sh	/epoc32/tools/tz/data/yearistype.sh
+../Release/Data/zone.tab		/epoc32/tools/tz/data/zone.tab
+
+PRJ_TESTMMPFILES
+// These are basically manual tests. Uncomment the makefile commands and build the tests
+// Extension makefile for creating the tool for testing TzCompiler.exe
+// makefile ../test/integration/TzCompilerTests/group/Testcallmak.mk   support
+
+// Extension makefile for invoking the tool with different ini files.
+// makefile ../test/integration/TzCompilerTests/group/testdata.mk	support
+

@@ -1,0 +1,82 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __CHTMLTOCRTCONVERTERTEST_IBY__
+#define __CHTMLTOCRTCONVERTERTEST_IBY__
+
+REM HTML to CRichtext converter test
+
+file=ABI_DIR\BUILD_DIR\CONVERTERTEST.exe	System\Programs\ChtmltocrtconvTest\CONVERTERTEST.exe
+file=ABI_DIR\BUILD_DIR\PROFILINGTEST.exe	System\Programs\ChtmltocrtconvTest\PROFILINGTEST.exe
+file=ABI_DIR\BUILD_DIR\LOADCONVERTERTEST.exe	System\Programs\ChtmltocrtconvTest\LOADCONVERTERTEST.exe
+file=ABI_DIR\BUILD_DIR\BUFFERTEST.exe		System\Programs\ChtmltocrtconvTest\BUFFERTEST.exe
+						
+data=\epoc32\wins\c\profiling\test001.txt				profiling\test001.txt
+data=\epoc32\wins\c\profiling\test002.txt				profiling\test002.txt
+data=\epoc32\wins\c\profiling\test003.txt				profiling\test003.txt
+data=\epoc32\wins\c\profiling\test004.txt				profiling\test004.txt
+data=\epoc32\wins\c\profiling\test005.txt				profiling\test005.txt
+data=\epoc32\wins\c\profiling\test006.txt				profiling\test006.txt
+data=\epoc32\wins\c\profiling\test007.txt				profiling\test007.txt
+data=\epoc32\wins\c\profiling\test008.txt				profiling\test008.txt
+data=\epoc32\wins\c\profiling\test009.txt				profiling\test009.txt
+data=\epoc32\wins\c\profiling\test010.txt				profiling\test010.txt
+data=\epoc32\wins\c\profiling\test011.txt				profiling\test011.txt
+data=\epoc32\wins\c\profiling\test012.txt				profiling\test012.txt
+data=\epoc32\wins\c\profiling\test013.txt				profiling\test013.txt
+data=\epoc32\wins\c\profiling\test014.txt				profiling\test014.txt
+data=\epoc32\wins\c\profiling\test015.txt				profiling\test015.txt
+data=\epoc32\wins\c\profiling\test016.txt				profiling\test016.txt
+data=\epoc32\wins\c\profiling\test017.txt				profiling\test017.txt
+data=\epoc32\wins\c\profiling\test018.txt				profiling\test018.txt
+data=\epoc32\wins\c\profiling\test019.txt				profiling\test019.txt
+data=\epoc32\wins\c\profiling\test020.txt				profiling\test020.txt
+data=\epoc32\wins\c\profiling\test030.txt				profiling\test030.txt
+data=\epoc32\wins\c\profiling\test040.txt				profiling\test040.txt
+data=\epoc32\wins\c\profiling\test050.txt				profiling\test050.txt
+data=\epoc32\wins\c\profiling\test060.txt				profiling\test060.txt
+data=\epoc32\wins\c\profiling\test070.txt				profiling\test070.txt
+data=\epoc32\wins\c\profiling\test080.txt				profiling\test080.txt
+data=\epoc32\wins\c\profiling\test090.txt				profiling\test090.txt
+data=\epoc32\wins\c\profiling\test100.txt				profiling\test100.txt
+data=\epoc32\wins\c\profiling\test110.txt				profiling\test110.txt
+data=\epoc32\wins\c\profiling\test120.txt				profiling\test120.txt
+data=\epoc32\wins\c\profiling\test130.txt				profiling\test130.txt
+data=\epoc32\wins\c\profiling\test140.txt				profiling\test140.txt
+data=\epoc32\wins\c\profiling\test150.txt				profiling\test150.txt
+data=\epoc32\wins\c\profiling\test160.txt				profiling\test160.txt
+data=\epoc32\wins\c\profiling\test170.txt				profiling\test170.txt
+data=\epoc32\wins\c\profiling\test180.txt				profiling\test180.txt
+data=\epoc32\wins\c\profiling\test190.txt				profiling\test190.txt
+data=\epoc32\wins\c\profiling\test200.txt				profiling\test200.txt
+
+data=\epoc32\wins\c\testHtml\eudora01.txt				testHtml\eudora01.txt
+data=\epoc32\wins\c\testHtml\LoadConverterTest.txt			testHtml\LoadConverterTest.txt
+data=\epoc32\wins\c\testHtml\malformed01.txt				testHtml\malformed01.txt
+data=\epoc32\wins\c\testHtml\malformed02.txt				testHtml\malformed02.txt
+data=\epoc32\wins\c\testHtml\malformed03.txt				testHtml\malformed03.txt
+data=\epoc32\wins\c\testHtml\other01.txt				testHtml\other01.txt
+data=\epoc32\wins\c\testHtml\outlook01.txt				testHtml\outlook01.txt
+data=\epoc32\wins\c\testHtml\outlook02.txt				testHtml\outlook02.txt
+data=\epoc32\wins\c\testHtml\outlook03.txt				testHtml\outlook03.txt
+data=\epoc32\wins\c\testHtml\outlook04.txt				testHtml\outlook04.txt
+data=\epoc32\wins\c\testHtml\outlook05.txt				testHtml\outlook05.txt
+data=\epoc32\wins\c\testHtml\outlook06.txt				testHtml\outlook06.txt
+data=\epoc32\wins\c\testHtml\outlook07.txt				testHtml\outlook07.txt
+data=\epoc32\wins\c\testHtml\test1.txt					testHtml\test1.txt
+
+#endif

@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Internal header for constants in key event map.
+*
+*/
+
+
+#ifndef KEFMAPINTERNAL_HRH
+#define KEFMAPINTERNAL_HRH
+
+#include    <aknkeyeventmap.hrh>
+
+// Device mode key 
+#define KKefPSDeviceMode    0xFFFFFFFF
+
+// Number of named device modes.
+#define KKefMaxDeviceMode   8
+
+// Largest scan code, excluding modifiers, that can be expected from
+// the device. If you look at symbian headers, scan codes are stored 
+// as 16bit, however, currently there are less than 256 scan codes 
+// defined in e32keys.h.
+#define KKefMaxScanCode     256
+
+// Number of down events to watch for; combo-mapping.
+#define KKefMaxComboKeys    4
+
+// Number of columns in key mapping.
+#define KKefKeyMapColumns   KKefMaxScanCode
+
+// Number of rows in key mapping.
+#define KKefKeyMapRows      KKefMaxDeviceMode
+
+// The threshold, in seconds, for long keypresses.
+#define KKefKeyLongThreshold 0.6
+
+// Repeat rate for long key presses, in chars/second.
+#define KKefRepeatRate      6
+
+#endif // KEFMAPINTERNAL_HRH
+
+// End of File

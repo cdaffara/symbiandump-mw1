@@ -1,0 +1,29 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Camcorder MMF Plugin rom definition file.
+*
+*/
+
+
+#ifndef __CAMCORDERMMFPLUGIN_IBY__
+#define __CAMCORDERMMFPLUGIN_IBY__
+
+// Utilizing constants from data_caging_paths_for_iby.hrh, included in higher level
+
+// Camcorder MMFPlugin
+ECOM_PLUGIN(CAMCCONTROLLER.DLL,101F8502.rsc)
+file=ABI_DIR\BUILD_DIR\CAMC3GPSINK.DLL			SHARED_LIB_DIR\CAMC3GPSINK.DLL
+file=ABI_DIR\BUILD_DIR\CAMCMEDIARECORDER.DLL 		SHARED_LIB_DIR\CAMCMEDIARECORDER.DLL
+
+#endif	//__CAMCORDERMMFPLUGIN_IBY__

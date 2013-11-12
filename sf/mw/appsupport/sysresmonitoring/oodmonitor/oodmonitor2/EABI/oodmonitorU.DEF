@@ -1,0 +1,9 @@
+EXPORTS
+	_ZN11LafShutdown17SaveFromAppSwitchEv @ 1 NONAME
+	_ZN11LafShutdown18SaveFromViewSwitchEv @ 2 NONAME
+	_ZN11LafShutdown21CreateShutdownManagerER22MShutdownEventObserver @ 3 NONAME
+	_ZTI20COutOfDiskPSObserver @ 4 NONAME ; #<TI>#
+	_ZTI20COutOfDiskSubscriber @ 5 NONAME ; #<TI>#
+	_ZTV20COutOfDiskPSObserver @ 6 NONAME ; #<VT>#
+	_ZTV20COutOfDiskSubscriber @ 7 NONAME ; #<VT>#
+

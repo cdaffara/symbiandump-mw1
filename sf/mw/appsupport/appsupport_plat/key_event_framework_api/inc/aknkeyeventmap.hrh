@@ -1,0 +1,70 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Common header for resources & code in key event map.
+*
+*/
+
+
+#ifndef AKNKEYEVENTMAP_HRH
+#define AKNKEYEVENTMAP_HRH
+
+// Number identifying key event map to be disabled.
+#define KKefKeyEventVersionNoMap 0xFF00
+
+// Number identifying first version of resource file structure.
+#define KKefKeyEventVersion1 0xFF01
+
+// Default mode always equals to zero.
+// The intended usage is not to rely on default mode mappings, but to define 
+// explicitly the behavior of the keys in different modes.
+#define KKefModeDefault     0x00
+
+// Event types
+//
+// Mapping for a short keypress (default)
+#define KKefTypeShort       0x01
+// Mapping for a long keypress
+#define KKefTypeLong        0x02
+// Mapping generates TKeyEvents
+#define KKefTypeKey         0x04
+// Mapping generates TRawEvents (default)
+#define KKefTypeRaw         0x08
+// Mapping only sends an event after keypress is known to be long.
+#define KKefTypeLongOnly    0x10
+// No down or up events sent for the keys which are part of this combo. USE WITH CAUTION.
+#define KKefTypeDelayedCombo 0x20
+// Default type.
+#define KKefTypeDefault KKefTypeShort | KKefTypeRaw
+
+// Reserved key code for disabled.
+#define KKefKeyDisabled     0x0001
+// Reserved key code for any/what ever key
+#define KKefAnyKey          0x0002
+
+// For legacy reasons
+#define KAknKeyEventVersionNoMap KKefKeyEventVersionNoMap
+#define KAknKeyEventVersion1 KKefKeyEventVersion1
+#define KAknModeDefault     KKefModeDefault
+#define KAknTypeShort       KKefTypeShort
+#define KAknTypeLong        KKefTypeLong
+#define KAknTypeKey         KKefTypeKey
+#define KAknTypeRaw         KKefTypeRaw
+#define KAknTypeLongOnly    KKefTypeLongOnly
+#define KAknTypeDefault     KKefTypeDefault
+#define KAknKeyDisabled     KKefKeyDisabled
+#define KAknAnyKey          KKefAnyKey
+
+#endif // AKNKEYEVENTMAP_HRH
+
+// End of File

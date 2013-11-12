@@ -1,0 +1,173 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __TEST_MULTIPLE_ALARMS_SUITE_OBY__
+#define __TEST_MULTIPLE_ALARMS_SUITE_OBY__
+
+define OBEYFILE PREQ1118_MultipleAlarmsTest_TextShell_Rom
+define ROMDATE	##TODAY##
+
+// these defines stop things being included that dont need to be for a textshell.
+#define __GDBSTUB_IBY__
+
+#define __INCLUDE_SW_KEYSTORE__ // Put sw implementation of keystore into v8.0a ROM
+
+// unique identifier for system libraries oby file
+#define __TEST_MULTIPLE_ALARMS_SUITE_TEXTSHELL__
+
+// Defined to leave metrotrk.rsc & metrotrk.app out of ROM
+// This line avoids Missing file' errors when building SysLib ROM.
+#define NO_METROTRK_APP // Effects metrotrk.iby that is included by base.iby
+
+#define EXCLUDE_JAVA
+#include <header.iby>
+#include <base.iby>
+
+// needed for screen driver dependency
+#include <gdi.iby>
+
+//file=\epoc32\release\ARMV5\urel\estor.dll 	"sys\bin\EStor.dll"
+//file=\epoc32\release\ARMV5\urel\bafl.dll 	"sys\bin\Bafl.dll"
+
+file=ABI_DIR\BUILD_DIR\ECONS.DLL			\System\Bin\ECONS.DLL	
+file=ABI_DIR\BUILD_DIR\EWSRV.EXE			\System\Bin\EWSRV.EXE	fixed 
+file=ABI_DIR\BUILD_DIR\EDISP.DLL			\System\Bin\EDISP.DLL
+
+
+file=ABI_DIR\DEBUG_DIR\RUNTESTS.EXE		Sys\bin\RUNTESTS.EXE
+
+
+	////////////////////////////////////////// Full Text Support
+	#if !defined(ESHELL_ONLY)
+
+		#include "form.iby"
+
+		file=ABI_DIR\BUILD_DIR\ws32.dll					System\Libs\Ws32.dll
+
+		// These files will anyway be include by uikon.iby
+//		file=ABI_DIR\BUILD_DIR\VIEWCLI.DLL				System\Libs\VIEWCLI.DLL
+//		file=ABI_DIR\BUILD_DIR\VIEWSRV.DLL				System\Libs\VIEWSRV.DLL
+//		file=ABI_DIR\BUILD_DIR\UIKLAF.DLL				System\Libs\UIKLAF.DLL
+//		file=ABI_DIR\BUILD_DIR\Eikcore.DLL				System\Libs\Eikcore.dll
+//		file=ABI_DIR\BUILD_DIR\EIKSRVC.DLL				System\Libs\EIKSRVC.DLL
+
+
+		file=ABI_DIR\BUILD_DIR\EXPARSER.DLL				System\Libs\EXPARSER.DLL
+		#ifndef __MESSAGING_API_V2__
+		file=ABI_DIR\BUILD_DIR\Sysamob.exe				System\Libs\Sysamob.exe
+		#endif  // __MESSAGING_API_V2__
+
+		/* extras */
+		#include "mmfsounddev.iby"
+		#include "ezlib.iby"
+
+		#ifdef __SECURE_BACKUP__
+		file=ABI_DIR\BUILD_DIR\abclient.dll			System\libs\abclient.dll
+		#endif //__SECURE_BACKUP__
+		file=ABI_DIR\BUILD_DIR\eikcoctl.dll			System\libs\eikcoctl.dll
+
+		#include <centralrepository.iby>
+		#include <http.iby>
+
+		#ifdef SYMBIAN_CRYPTO
+			#include <crypto.iby>
+		#else
+			#include <cryptalg.iby>
+		#endif
+
+		#include <c32.iby>		/* standard Sockets components */
+		#include <irda.iby>		/* standard Sockets components */
+		#include <bluetooth.iby>	/* standard Sockets components */
+		#include <gdi.iby>		/* standard Graphics components */
+		#include <fntstore.iby>		/* standard Graphics components */
+		#include <fbserv.iby>		/* standard Graphics components */
+		#include <bitgdi.iby>		/* standard Graphics components */
+
+		#include <apparc.iby>		/* Application architecture DLLs */
+		#include <emime.iby>		/* Mime recognition */
+
+		#include <fepbase.iby>		/* Front end processor base classes */
+
+		#include <mmf.iby> 		/* Multimedia Framework */
+
+		#include <sysagent.iby>		/* System Agent client and server */
+
+		#include <network.iby>		/* Networking Components */
+		
+		#include <wapmessage.iby>       /* Wap Stack Components  */
+
+		// ============== Telephony Core Components =============
+		#include <etel.iby>
+		#include <smsstack.iby>
+		#include <etelmm.iby>
+		#include <etelpckt.iby>
+		#include <mmtsy.iby>
+		#include <phbksync.iby>
+		#include <etelsat.iby>
+		#include <sysawatcher.iby>
+
+		#include <ecom.iby>
+
+		/* Store */
+		#include "Store.iby"
+
+		/* Etext */
+		#include "EText.iby"
+
+		/* Clock */
+		file=ABI_DIR\BUILD_DIR\clock.dll				System\Libs\Clock.dll
+
+		/* Print */
+		file=ABI_DIR\BUILD_DIR\print.dll				System\Libs\Print.dll
+
+		/* Pwrcli */
+		#include "PwrCli.iby"
+
+		/* Bafl */
+		#include "Bafl.iby"
+
+		/* Cone */
+		#include "cone.iby"
+
+		/* NumberConversion */
+		#include "NumberConversion.iby"
+
+		/* EGUL */
+		file=ABI_DIR\DEBUG_DIR\egul.dll					System\Libs\Egul.dll
+
+		/* Dial */
+		file=ABI_DIR\BUILD_DIR\dial.dll					System\Libs\Dial.dll
+
+
+	#endif // !ESHELL_ONLY
+
+// The components the test code directly depends on
+#include <testexecute.iby>
+#include <agnmodel.iby>
+#include <timezoneserver.iby>
+#include <calinterimapi.iby>
+#include <AlarmServer.iby>
+#include <uikon.iby>
+
+file=ABI_DIR\BUILD_DIR\alarmshared.dll 		System\Libs\alarmshared.dll
+file=ABI_DIR\BUILD_DIR\alarmclient.dll 		System\Libs\alarmclient.dll
+file=ABI_DIR\BUILD_DIR\alarmserver.exe 		System\Programs\alarmserver.exe
+
+
+// The iby file for the tests
+#include <TestMultipleAlarmsSuite.iby>
+
+#endif // __TEST_MULTIPLE_ALARMS_SUITE_OBY__

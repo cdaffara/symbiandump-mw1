@@ -1,0 +1,60 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:      
+*
+*/
+
+#include <platform_paths.hrh>
+
+TARGET	    testdrive_saflash.exe
+TARGETTYPE  exe
+
+UID               0x100039CE 0x10282355
+
+CAPABILITY  NetworkServices LocalServices Location ReadUserData
+                        WriteUserData ReadDeviceData WriteDeviceData SwEvent UserEnvironment NetworkControl 
+
+VENDORID    0  
+SOURCEPATH        ../src
+SOURCE            saflash.cpp
+
+START RESOURCE    ../data/testdrive_saflash.rss
+		DEPENDS avkon.rsg
+    HEADER
+    TARGETPATH    APP_RESOURCE_DIR
+    LANG          SC
+END
+
+START RESOURCE ../data/testdrive_saflash_reg.rss
+		DEPENDS testdrive_saflash.rsg
+    TARGETPATH /private/10003a3f/apps
+END
+
+USERINCLUDE       ../inc
+
+ 
+ 
+ MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY           euser.lib
+LIBRARY           apparc.lib
+LIBRARY           eikcore.lib
+LIBRARY           avkon.lib
+LIBRARY           centralrepository.lib
+
+epocstacksize 0x5000
+epocheapsize 1048576 16777216
+
+
+

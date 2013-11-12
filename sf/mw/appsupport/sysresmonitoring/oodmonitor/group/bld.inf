@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2002-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project oodmonitor
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_EXPORTS
+//Configuration tool migration
+../conf/uiklaf.confml            MW_LAYER_CONFML(uiklaf.confml)
+../conf/uiklaf_101F8774.crml 	   MW_LAYER_CRML(uiklaf_101F8774.crml)
+
+// UiklafGT exports this file to us:
+//../inc/lafshut.h              /epoc32/include/uiklaf/private/lafshut.h
+../rom/oodmonitor.iby             CORE_MW_LAYER_IBY_EXPORT_PATH(oodmonitor.iby)
+../rom/oodmonitorresources.iby    LANGUAGE_MW_LAYER_IBY_EXPORT_PATH(oodmonitorresources.iby)
+
+PRJ_MMPFILES
+
+#ifndef TOOLS
+#ifdef RD_MULTIPLE_DRIVE_ENABLERS
+../oodmonitor2/group/OODMonitor.mmp
+#else //!RD_MULTIPLE_DRIVE_ENABLERS
+../group/oodmonitor.mmp
+#endif //RD_MULTIPLE_DRIVE_ENABLERS
+#endif
+
+//  End of File

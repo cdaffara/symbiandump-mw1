@@ -1,0 +1,86 @@
+/*
+* Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project CFActivatorEngine
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+#include "../inc/basicoperationsplugin/basicoperationspluginconst.hrh"
+#include "../inc/common/cftraceconfiguration.hrh"
+
+TARGET          basicoperationsplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D KBasicOperationsPluginDllUid
+CAPABILITY      CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../src/basicoperationsplugin
+SOURCE          main.cpp
+SOURCE          basicoperationsplugin.cpp
+
+SOURCE          cfbasicscriptroot.cpp
+SOURCE          cfclausenode.cpp
+SOURCE          cfifclause.cpp
+SOURCE          cfelseifclause.cpp
+SOURCE          cfelseclause.cpp
+SOURCE          cfdelay.cpp
+
+SOURCE          cfscriptaction.cpp
+SOURCE          cfnotifyaction.cpp
+SOURCE          cfpublishcontextaction.cpp
+SOURCE          cfsourcecommandaction.cpp
+
+SOURCE          cfandoperation.cpp
+SOURCE          cfnotoperation.cpp
+SOURCE          cforoperation.cpp
+
+SOURCE          cfcontextoperation.cpp
+SOURCE          cfcontextoperationutils.cpp
+SOURCE          cfequal.cpp
+SOURCE          cfnotequal.cpp
+SOURCE          cfless.cpp
+SOURCE          cflessorequal.cpp
+SOURCE          cfgreater.cpp
+SOURCE          cfgreaterorequal.cpp
+SOURCE          cfcontains.cpp
+SOURCE          cfinrange.cpp
+SOURCE          cfcontextchanged.cpp
+SOURCE          cfcontextupdated.cpp
+SOURCE          cfcount.cpp
+SOURCE          cfcountoneshot.cpp
+SOURCE          cfcountrepeating.cpp
+
+USERINCLUDE     .
+USERINCLUDE     ../inc/basicoperationsplugin
+USERINCLUDE     ../inc/common
+USERINCLUDE     ../inc/cfserver		// for MCFExtendedContextInterface
+
+APP_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../data
+START RESOURCE  basicoperationsplugin.rss
+TARGET          basicoperationsplugin.rsc
+TARGETPATH      /resource/plugins
+END
+
+LIBRARY         euser.lib
+LIBRARY         cfoperationpluginservices.lib
+LIBRARY         cfservices.lib
+LIBRARY         xmldom.lib
+LIBRARY         estor.lib
+
+#ifdef TRACE_INTO_FILE
+LIBRARY         flogger.lib
+#endif

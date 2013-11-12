@@ -1,0 +1,41 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                Profiles Engine Wrapper API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/Profile.hrh     MW_LAYER_PUBLIC_EXPORT_PATH(Profile.hrh)
+../inc/MProEngActiveProfileObserver.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngActiveProfileObserver.h)
+../inc/MProEngProfileNameArray.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngProfileNameArray.h)
+../inc/MProEngProfileObserver.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngProfileObserver.h)
+../inc/MProEngNotifyHandler.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngNotifyHandler.h)
+../inc/MProEngProfileName.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngProfileName.h)
+../inc/MProEngProfileActivationObserver.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngProfileActivationObserver.h)
+../inc/ProEngFactory.h     MW_LAYER_PUBLIC_EXPORT_PATH(ProEngFactory.h)
+../inc/MProEngProfile.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngProfile.h)
+../inc/MProEngAlertToneSeeker.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngAlertToneSeeker.h)
+../inc/MProEngTones.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngTones.h)
+../inc/MProEngAlertToneSeekerObserver.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngAlertToneSeekerObserver.h)
+../inc/MProEngToneSettings.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngToneSettings.h)
+../inc/MProEngProfileNameArrayObserver.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngProfileNameArrayObserver.h)
+../inc/MProEngEngine.h     MW_LAYER_PUBLIC_EXPORT_PATH(MProEngEngine.h)

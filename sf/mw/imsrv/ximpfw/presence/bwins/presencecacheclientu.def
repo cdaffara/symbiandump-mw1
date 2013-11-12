@@ -1,0 +1,5 @@
+EXPORTS
+	?CreateReaderL@CPresenceCacheClient@@SAPAVMPresenceCacheReader@@XZ @ 1 NONAME ; class MPresenceCacheReader * CPresenceCacheClient::CreateReaderL(void)
+	?CreateWriterL@CPresenceCacheClient@@SAPAVMPresenceCacheWriter@@XZ @ 2 NONAME ; class MPresenceCacheWriter * CPresenceCacheClient::CreateWriterL(void)
+	?NewL@CPresenceCacheClient@@SAPAV1@XZ @ 3 NONAME ; class CPresenceCacheClient * CPresenceCacheClient::NewL(void)
+

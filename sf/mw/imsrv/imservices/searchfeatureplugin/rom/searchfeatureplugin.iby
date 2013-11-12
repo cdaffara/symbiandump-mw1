@@ -1,0 +1,36 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:IBY file for search feature plugin
+*
+*/
+
+#ifndef __SEARCHFEATUREPLUGIN_IBY__
+#define __SEARCHFEATUREPLUGIN_IBY__
+
+// searchfeature plugin :
+//dlls
+file=ABI_DIR\BUILD_DIR\searchmanager.dll          SHARED_LIB_DIR\searchmanager.dll
+file=ABI_DIR\BUILD_DIR\searchdatamodel.dll        SHARED_LIB_DIR\searchdatamodel.dll
+file=ABI_DIR\BUILD_DIR\searchoperation.dll        SHARED_LIB_DIR\searchoperation.dll
+file=ABI_DIR\BUILD_DIR\searchprocessor.dll        SHARED_LIB_DIR\searchprocessor.dll
+
+//ECom hook
+ECOM_PLUGIN( searchecomhook.dll, searchecomhook.rsc) 
+ECOM_PLUGIN( searchdatamodelhook.dll, searchdatamodelhook.rsc) 
+ECOM_PLUGIN( searchoperationshook.dll, searchoperationshook.rsc) 
+ECOM_PLUGIN( searchprocessorhook.dll, searchprocessorhook.rsc) 
+
+#endif
+
+

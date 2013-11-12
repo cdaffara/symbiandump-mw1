@@ -1,0 +1,88 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  XIMP Framework Presence Management API interface IDs.
+*
+*/
+
+#ifndef PRESENCEMANAGEMENTIFUIDS_HRH
+#define PRESENCEMANAGEMENTIFUIDS_HRH
+
+
+
+/**
+ * @defgroup ximppresmanagementapi XIMP Presence Management API
+ * @ingroup ximppresenceapi
+ *
+ * XIMP Framework Presence Management API contains
+ * abstract management interfaces, which are implemented by
+ * XIMP Framework. XIMP Framework clients call these
+ * interfaces to request XIMP Framework execute
+ * certain presence services.
+ * @since S60 v3.2
+ */
+
+
+/**
+ * @defgroup ximppresmanagementapievents XIMP Presence Management API events
+ *
+ * XIMP Framework Presence Management API contains also
+ * abstract event interfaces, which are used to deliver data
+ * and state information to XIMP Framework clients through
+ * MXIMPContextObserver::HandlePresenceContextEvent()
+ * event callback.
+ *
+ * @ingroup ximppresmanagementapi
+ * @since S60 v3.2
+ */
+
+
+// Management IF id's
+// 20xx - ximp related
+// 21xx - presence related
+// 22xx - instant messaging related
+
+
+
+// Interface IDs for XIMPFw Presence Management API interfaces
+#define PRES_IF_ID_PRESENCE_PUBLISHING                 2101
+#define PRES_IF_ID_PRESENTITY_GROUPS                   2102
+#define PRES_IF_ID_PRESENCE_WATCHING                   2103
+#define PRES_IF_ID_PRESENCE_AUTHORIZATION              2104
+#define PRES_IF_ID_PRESENTITY_GROUP_LIST_EVENT         2105
+#define PRES_IF_ID_PRESENTITY_GROUP_CONTENT_EVENT      2106
+#define PRES_IF_ID_PRESENCE_BLOCK_LIST_EVENT           2107
+#define PRES_IF_ID_PRESENCE_GRANT_REQUEST_LIST_EVENT   2108
+#define PRES_IF_ID_PRESENCE_WATCHER_LIST_EVENT         2109
+#define PRES_IF_ID_PRESENTITY_PRESENCE_EVENT           2110
+#define PRES_IF_ID_OWN_PRESENCE_EVENT                  2111
+#define PRES_IF_ID_PRESENCE_FEATURES                   2112
+
+
+// Interface UID for Presencefeatures interface
+#define XIMP_ECOM_IF_UID_PRESENCE_INTERFACE             0x2000B185
+
+// Interface UID for PresenceCacheReader interface
+#define XIMP_ECOM_IF_UID_PRESENCE_CACHE_READER         0x2000B4EC
+
+// Interface UID for PresenceCacheWriter interface
+#define XIMP_ECOM_IF_UID_PRESENCE_CACHE_WRITER         0x2000B4ED
+
+// Default implementation resulution data
+// for XIMP presencefeature interterface Base ECom interface
+#define XIMP_ECOM_DEFAULT_DATA_PRESENCE_INTERFACE         "default"
+
+
+
+#endif // PRESENCEMANAGEMENTIFUIDS_HRH
+

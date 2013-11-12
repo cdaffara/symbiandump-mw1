@@ -1,0 +1,237 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Protocol agnostic error codes for IM Feature Plugin.
+*
+*/
+
+#ifndef IMERRORS_H
+#define IMERRORS_H
+
+
+
+/**
+ * IM Feature Plugin error codes.
+ *
+ * Error codes returned from IM are either:
+ * -# System wide Symbian OS error codes (KErrNone, KErrNoMemory, etc.)
+ * -# Protocol agnostic IM Feature related error codes defined here.
+ *    These error codes have range: KImErrBase ... KImErrLow.
+ *
+ * @ingroup Imbaseapi
+ * @since S60 
+ */
+enum 
+    {
+    KImErrBase = -30131,
+
+    /**
+     * Generic error code to indicate that request processing
+     * has failed on IM protocol level to some error,
+     * which isn't mapped to any other more detailed
+     * error code.
+     */
+    KImErrServiceGeneralError = KImErrBase,
+
+    /**
+    * Error not registered
+    */
+    KImApiErrNotRegistered = KImErrBase - 2,
+    
+    /**
+    * Error already registered
+    */
+    KImApiErrAlreadyRegistered = KImErrBase - 3,
+    
+    /**
+    * Error not logged
+    */
+    KImApiErrNotLogged = KImErrBase - 4,
+    
+    /**
+    * The contact ID provided in send message API is invalid
+    */
+    KImApiErrInvalidContactId = KImErrBase - 6,
+
+    /**
+    * The user ID provided in send message API is invalid
+    */
+    KImApiErrInvalidUserId = KImErrBase - 7,
+
+    /**
+    * Not all the users have a valid User ID when sending message
+    */
+    KImApiErrPartialSuccess = KImErrBase - 8,
+
+    /**
+    * Missing mandatory elements
+    */
+    KImApiErrMissingMandatoryElement = KImErrBase - 9,
+    
+    /**
+    * Special IM error code: the sender is blocked by the recipient 
+    */
+    KImApiErrSenderBlocked = KImErrBase - 10,
+
+    /** 
+    * Special IM error code: the recipient is not logged in 
+    */
+    KImApiErrRecipientNotLogged = KImErrBase - 11,
+
+    /**
+     * Error code to indicate that IM service
+     * doesn't support the request issued by the client.
+     */
+    KImErrServiceRequestTypeNotSupported = KImErrBase - 12,
+
+    /**
+     * Error code to indicate that request handling has
+     * failed because the IM service is
+     * shutting down.
+     */
+    KImErrServiceShutdown = KImErrBase - 13,
+
+    /**
+     * Error code to indicate that IM service
+     * has terminated the IM session.
+     */
+    KImErrServiceForceClosedSession = KImErrBase - 14,
+
+    /**
+     * Error code to indicate that request handling has
+     * failed on IM protocol level to insufficient
+     * user authentication.
+     */
+    KImErrServiceAuthenticationFailed = KImErrBase - 15,
+
+    /**
+     * Error code to indicate that request handling has
+     * timeouted on IM protocol level.
+     */
+    KImErrServicRequestTimeouted = KImErrBase - 16,
+
+    /**
+     * Error code to indicate that IM protocol or
+     * protocol adaptation does not support given IM
+     * information field type.
+     */
+    KImErrFieldTypeNotSupported = KImErrBase - 17,
+
+    /**
+     * Error code to indicate that IM protocol or
+     * protocol adaptation does not support given IM
+     * information field value.
+     */
+    KImErrFieldValueNotSupported = KImErrBase - 18,
+
+    /**
+     * Error code to indicate that IM protocol or
+     * protocol adaptation does not support given 
+     * IM group property.
+     */
+    KImErrGroupPropertyNotSupported = KImErrBase - 19,
+
+    /**
+     * Error code to indicate that request processing has failed
+     * on IM service, because the IM group amount
+     * exceeds the service specific limit.
+     */
+    KImErrTooManyIMGroups = KImErrBase - 20,
+
+    /**
+     * Error code to indicate that request processing has failed
+     * on IM service, because the IM amount
+     * exceeds the service specific limit.
+     */
+    KImErrTooManyIM = KImErrBase - 21,
+
+    /**
+     * Error code to indicate that IM service doesn't know
+     * the IM group, which was identified in the request.
+     */
+    KImErrUnknownIMGroup = KImErrBase - 22,
+
+    /**
+     * Error code to indicate that the IM service
+     * has refused from request handling, because user
+     * doesn't have enough credits for the operation.
+     */
+    KImErrNotEnoughCredits = KImErrBase - 23,
+    
+    /**
+     * Out of range value
+     */
+    KImErrOutOfRangeValue = KImErrBase - 24,
+
+    /**
+     * Unsupported Context
+     */
+    KImErrUnsupportedContext = KImErrBase - 25,
+    
+     /**
+     * Error code to indicate that request processing has failed
+     * on IM service, because the number of users
+     * exceeds the service specific limit.
+     */
+    KImErrTooManyUsers = KImErrBase - 26,
+    
+    
+    /**
+     * Error code to indicate that specified
+     * group does't not exits
+     * 
+     */
+    KImErrGroupDoesNotExists = KImErrBase - 27,
+    
+    /**
+     * Error code to indicate that group 
+     * already exists
+     * 
+     */
+    KImErrGroupAlreadyExists = KImErrBase - 28,
+
+	/**
+     * Error code to indicate that group 
+     * already joined
+     * 
+     */
+    KImErrGroupAlreadyJoined = KImErrBase - 29,
+    
+   /**
+     * Error code to indicate that  
+     * no joined in the specified group.
+     * 
+     */
+    KImErrGroupNotJoined = KImErrBase - 30,
+     /**
+     * Error code to indicate that not having 
+     * permission/access rights.
+     * 
+     */
+    KImErrNotHavingPermission = KImErrBase - 31,
+
+	/**
+     * Error code to indicate that not having 
+     * permission/access rights.
+     * 
+     */
+    KImErrJoiningNotAllowed = KImErrBase - 32,
+	
+
+    KImErrLow = -30150
+    };
+
+
+#endif // IMERRORS_H
+
+

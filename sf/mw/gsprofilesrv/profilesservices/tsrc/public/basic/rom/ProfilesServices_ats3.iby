@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*  Top level ROM image definition for ProfilesApplication automated tests
+*       
+*
+*/
+
+
+#ifndef __PROFILESSERVICES_ATS3_IBY__
+#define __PROFILESSERVICES_ATS3_IBY__
+
+// File list rom files
+file=ABI_DIR\BUILD_DIR\T_CFLDFileList.dll   SHARED_LIB_DIR\T_CFLDFileList.dll
+data=ZRESOURCE\FLDTEST.RSC                  RESOURCE_FILES_DIR\FLDTEST.RSC
+
+// Profiles rom files
+file=ABI_DIR\BUILD_DIR\T_ProfileEngine.dll		    SHARED_LIB_DIR\T_ProfileEngine.dll
+file=ABI_DIR\BUILD_DIR\T_ProfileEngineWrapper.dll	SHARED_LIB_DIR\T_ProfileEngineWrapper.dll
+
+#endif

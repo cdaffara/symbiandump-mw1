@@ -1,0 +1,82 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PREFIX RUN_UTILS
+// Remove the RSC file
+MakeReadWrite c:\Private\101F5027\AlarmServer.rsc
+DeleteFile c:\Private\101F5027\AlarmServer.rsc
+REMOVE_PREFIX
+RUN_SCRIPT \testdata\scripts\TEAlarmServer_apc_norsc.script
+
+PREFIX RUN_UTILS
+// Overwrite the RSC file
+MakeReadWrite c:\Private\101F5027\AlarmServer.rsc
+CopyFile \testdata\config\tealarmserver_disabled.rsc c:\Private\101F5027\AlarmServer.rsc
+REMOVE_PREFIX
+DELAY 1000
+RUN_SCRIPT \testdata\scripts\TEAlarmServer_apc_disabled.script
+
+PREFIX RUN_UTILS
+// Overwrite the RSC file
+MakeReadWrite c:\Private\101F5027\AlarmServer.rsc
+CopyFile \testdata\config\tealarmserver_loop.rsc c:\Private\101F5027\AlarmServer.rsc
+REMOVE_PREFIX
+RUN_SCRIPT \testdata\scripts\TEAlarmServer_apc_loop.script
+
+PREFIX RUN_UTILS
+// Overwrite the RSC file
+MakeReadWrite c:\Private\101F5027\AlarmServer.rsc
+CopyFile \testdata\config\tealarmserver_repeatlast.rsc c:\Private\101F5027\AlarmServer.rsc
+REMOVE_PREFIX
+RUN_SCRIPT \testdata\scripts\TEAlarmServer_apc_repeat.script
+
+PREFIX RUN_UTILS
+// Overwrite the RSC file
+MakeReadWrite c:\Private\101F5027\AlarmServer.rsc
+CopyFile \testdata\config\tealarmserver_stop.rsc c:\Private\101F5027\AlarmServer.rsc
+REMOVE_PREFIX
+RUN_SCRIPT \testdata\scripts\TEAlarmServer_apc_stop.script
+
+PREFIX RUN_UTILS
+// Overwrite the RSC file
+MakeReadWrite c:\Private\101F5027\AlarmServer.rsc
+CopyFile \testdata\config\tealarmserver_disordered.rsc c:\Private\101F5027\AlarmServer.rsc
+REMOVE_PREFIX
+RUN_SCRIPT \testdata\scripts\TEAlarmServer_apc_disordered.script
+
+PREFIX RUN_UTILS
+// Overwrite the RSC file
+MakeReadWrite c:\Private\101F5027\AlarmServer.rsc
+CopyFile \testdata\config\tealarmserver_loop.rsc c:\Private\101F5027\AlarmServer.rsc
+REMOVE_PREFIX
+RUN_SCRIPT \testdata\scripts\TEAlarmServer_apc_ini.script
+
+PREFIX RUN_UTILS
+
+// Overwrite the RSC file
+MakeReadWrite c:\Private\101F5027\AlarmServer.rsc
+CopyFile \testdata\config\tealarmserver_longduration.rsc c:\Private\101F5027\AlarmServer.rsc
+REMOVE_PREFIX
+RUN_SCRIPT \testdata\scripts\TEAlarmServer_apc_invalid.script
+
+// Cleanup after yourself before you leave:
+PREFIX RUN_UTILS
+// Remove the RSC file
+MakeReadWrite c:\Private\101F5027\AlarmServer.rsc
+DeleteFile c:\Private\101F5027\AlarmServer.rsc
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX

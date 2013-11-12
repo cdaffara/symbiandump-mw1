@@ -1,0 +1,134 @@
+/*
+* Copyright (c) 2002-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*         Contains common definitions for commands and ID's used in application.
+*
+*/
+
+
+#ifndef STARTUP_HRH
+#define STARTUP_HRH
+
+enum
+    {
+    EStartupStopShowingUserWelcomeNote = 1,
+    EStartupContinueExecution
+    };
+
+enum TStartupUserWelcomeNoteType
+    {
+    EStartupUWNDefault = 0,
+    EStartupUWNText = 1,
+    EStartupUWNGraphic = 2
+    };
+
+enum TStartupUserWelcomeNoteDefaultVariationType
+    {
+    EStartupUWNDefaultNoNote = 0,
+    EStartupUWNDefaultOperatorGraphic = 1,
+    EStartupUWNDefaultOperatorText = 2
+    };
+
+enum TStartupSTResult
+    {
+    EStartupSTNotStarted = 0,
+    EStartupSTNotReady = 1,
+    EStartupSTFail = 2,
+    EStartupSTOk = 3
+    };
+
+enum TStartupInternalState
+    {
+    EStartupStartingUp = 0,
+    EStartupWaitingCriticalBlock,
+#ifndef RD_STARTUP_ANIMATION_CUSTOMIZATION
+    EStartupWaitingTouchScreenCalib = 5,
+#endif // RD_STARTUP_ANIMATION_CUSTOMIZATION
+    EStartupOfflineModeQuery = 8,
+#ifndef RD_STARTUP_ANIMATION_CUSTOMIZATION
+    EStartupWaitingCUIWelcomeAnim = 9,
+    EStartupWaitingStartupTone,
+#else // RD_STARTUP_ANIMATION_CUSTOMIZATION
+    EStartupWaitingShowStartupAnimation = 9,
+#endif // RD_STARTUP_ANIMATION_CUSTOMIZATION
+    EStartupShowingWelcomeAnimation = 11,
+#ifndef RD_STARTUP_ANIMATION_CUSTOMIZATION
+    EStartupWaitingCUIOperatorAnim,
+#endif // RD_STARTUP_ANIMATION_CUSTOMIZATION
+    EStartupShowingOperatorAnimation = 13,
+    EStartupShowingUserWelcomeNote,
+    EStartupFirstBootAndRTCCheck,
+    EStartupWaitingCUIStartupReady,
+    EStartupStartupOK,
+    EStartupSystemFatalError
+    };
+
+enum TStartupDrawInfo
+    {
+    EStartupDIStart = 0,
+    EStartupDISelftestFailed,
+    EStartupDICharging,
+    EStartupDIAlarm,
+    EStartupDIHiddenReset,
+    EStartupDIQueriesOn,
+    EStartupDIQueriesOff,
+    EStartupDIWelcomeAnimStart,
+    EStartupDIWelcomeAnimCancelled,
+    EStartupDIWelcomeAnimEnd,
+    EStartupDIOperatorAnimStart,
+    EStartupDIOperatorAnimCancelled,
+    EStartupDIOperatorAnimEnd,
+    EStartupDIWelcomeNoteStart,
+    EStartupDIWelcomeNoteCancelled,
+    EStartupDIWelcomeNoteEnd,
+    EStartupDICityTimeDateQueries,
+    EStartupDITouchScreenCalib,
+    EStartupDIEnd,
+    EStartupDISystemFatalError
+    };
+
+enum TStartupNoteTypeInformation
+    {
+    EStartupNoNote = 0,
+    EStartupText,
+    EStartupImage
+    };
+
+enum TStartupPanics
+    {
+    EStartupPanicClassMemberVariableIsNull = 10000,
+    EStartupInvalidInternalState,
+    EStartupInvalidInternalStateChange,
+    EStartupActiveObjectNotInActiveState,
+    EStartupNeverShouldBeHere,
+    EStartupPanicClassMemberVariableIsNotNull
+    };
+
+enum TStartupSimPresent
+    {
+    EStartupSimInitWait,
+    EStartupSimInserted,
+    EStartupSimRemoved
+    };
+
+enum TToneType
+    {
+    EStartupNoTone,
+    EStartupTone,
+    EStartupOpTone
+    };
+
+#endif  // STARTUP_HRH
+
+// End of file

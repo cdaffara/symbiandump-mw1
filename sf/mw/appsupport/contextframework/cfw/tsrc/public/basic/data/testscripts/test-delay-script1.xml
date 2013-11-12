@@ -1,0 +1,19 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/"
+evaluationDelay="200">
+    <if>
+        <and>
+            <equal>
+                <contextRef source='t' type='t.se.delay.a'/>
+                <cep:string>blue</cep:string>
+            </equal>
+            <equal>
+                <contextRef source='t' type='t.se.delay.b'/>
+                <cep:string>white</cep:string>
+            </equal>
+        </and>
+        <actions>
+            <endUserAction1/>
+        </actions>
+    </if>
+</script>

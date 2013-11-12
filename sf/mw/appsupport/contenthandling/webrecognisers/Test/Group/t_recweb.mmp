@@ -1,0 +1,50 @@
+// Copyright (c) 2003-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#include <platform_paths.hrh>
+
+TARGET t_recweb.dll
+TARGETTYPE plugin
+CAPABILITY protserv
+
+// UIDs - 2nd UID => ECOM implementation, 3rd UID => t_recweb.dll - KUidRecWebRecogTestDll
+UID			0x10009D8D 	0x101FD8D5
+VENDORID 0x70000001
+
+SOURCEPATH		../t_recweb
+SOURCE			t_recweb.cpp
+SOURCE			crecwebrecogtest.cpp
+
+USERINCLUDE		. ../t_recogtest
+#ifdef SYMBIAN_OLD_EXPORT_LOCATION
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE	/epoc32/include/ecom
+#else
+OS_LAYER_SYSTEMINCLUDE_SYMBIAN
+SYSTEMINCLUDE	/epoc32/include/ecom
+SYSTEMINCLUDE	/epoc32/include/platform/ecom
+MW_LAYER_SYSTEMINCLUDE
+#endif
+
+
+start resource 101FD8D5.rss
+#ifdef SYMBIAN_SECURE_ECOM
+TARGET t_recweb.rsc
+#endif
+end
+
+LIBRARY			euser.lib ecom.lib apgrfx.lib apmime.lib flogger.lib efsrv.lib
+
+SMPSAFE

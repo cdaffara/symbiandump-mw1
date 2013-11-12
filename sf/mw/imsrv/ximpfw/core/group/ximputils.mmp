@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for Presence Framework Utils
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/ximpdlluids.hrh"
+
+
+
+TARGET                  ximputils.dll
+TARGETTYPE              dll
+UID                     XIMP_DLL_UID_STATIC_INTERFACE XIMP_DLL_UID_COMMON
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+
+SOURCEPATH              ../srcutils
+SOURCE                  ximpsrvsessionadapter.cpp
+SOURCE                  ximpsrvmessageimp.cpp
+SOURCE                  ximprequestidbuilder.cpp
+
+//Trace services
+SOURCE                  ximptrace.cpp
+
+//Common helpers
+SOURCE                  ximprbufhelpers.cpp
+SOURCE                  ximpobjecthelpers.cpp
+SOURCE                  ximppanics.cpp
+
+// TODO remove unnecessary
+USERINCLUDE             ../srcutils
+USERINCLUDE             ../../core/srcdatamodel
+SYSTEMINCLUDE           ../../inc/presence/presencedatamodel
+SYSTEMINCLUDE           ../../inc/core/datamodel
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 euser.lib   // base
+LIBRARY                 estor.lib   // streams
+LIBRARY                 flogger.lib
+

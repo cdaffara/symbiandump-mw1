@@ -1,0 +1,50 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project Presence Framework
+*
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../rom/ximpfw.iby CORE_MW_LAYER_IBY_EXPORT_PATH(ximpfw.iby)
+
+PRJ_MMPFILES
+../core/group/ximputils.mmp
+../core/group/ximpdatamodel.mmp
+../presence/group/presencedatamodel.mmp
+../presence/group/presencedatamodelhook.mmp
+../core/group/ximpprocessor.mmp
+../presence/group/presenceoperation.mmp  // ximpoperation depends on this
+../core/group/ximpoperations.mmp
+../core/group/ximprootserver.mmp
+../core/group/ximpserver.mmp
+../core/group/ximpsrvclient.mmp
+../core/group/ximpmanager.mmp
+../core/group/ximpecomhook.mmp
+../presence/group/presencemanager.mmp
+../presence/group/presenceecomhook.mmp
+../presence/group/presencecacheserver.mmp
+../presence/group/presencecacheclient.mmp
+../presence/group/presencecacheecomhook.mmp
+
+
+PRJ_TESTMMPFILES
+
+
+PRJ_TESTEXPORTS
+

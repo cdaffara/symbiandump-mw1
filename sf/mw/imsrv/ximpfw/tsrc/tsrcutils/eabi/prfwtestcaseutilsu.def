@@ -1,0 +1,132 @@
+EXPORTS
+	_ZN17CXIMPTestFileTool10NumSrvMsgLEv @ 1 NONAME
+	_ZN17CXIMPTestFileTool11NumObjectsLEv @ 2 NONAME
+	_ZN17CXIMPTestFileTool12PluginStoreLERK6TDesC8 @ 3 NONAME
+	_ZN17CXIMPTestFileTool12SrvMsgStoreLEP19CXIMPTestFileSrvMsg @ 4 NONAME
+	_ZN17CXIMPTestFileTool15PluginRestoreLCEi @ 5 NONAME
+	_ZN17CXIMPTestFileTool15SrvMsgRestoreLCEi @ 6 NONAME
+	_ZN17CXIMPTestFileTool4NewLEmRK7TDesC16 @ 7 NONAME
+	_ZN17CXIMPTestFileTool4NewLEmi @ 8 NONAME
+	_ZN17CXIMPTestFileTool8PrepareLEv @ 9 NONAME
+	_ZN17CXIMPTestFileTool9CleanAllLEv @ 10 NONAME
+	_ZN17CXIMPTestListener14WaitAndAssertLEv @ 11 NONAME
+	_ZN17CXIMPTestListener15SetEventSourceLEP12MXIMPContext @ 12 NONAME
+	_ZN17CXIMPTestListener16SetEventObserverEP20MXIMPContextObserver @ 13 NONAME
+	_ZN17CXIMPTestListener4NewLEP12MXIMPContext @ 14 NONAME
+	_ZN17CXIMPTestListener5ResetEv @ 15 NONAME
+	_ZN17CXIMPTestListener7ExpectLEP15CXIMPApiObjBase @ 16 NONAME
+	_ZN18CXIMPTestMessenger10SetBooleanE21TXIMPTestPropertyKeys @ 17 NONAME
+	_ZN18CXIMPTestMessenger10SetNoErrorEv @ 18 NONAME
+	_ZN18CXIMPTestMessenger11ResetPubSubEv @ 19 NONAME
+	_ZN18CXIMPTestMessenger11SetValueForE21TXIMPTestPropertyKeysi @ 20 NONAME
+	_ZN18CXIMPTestMessenger12HandleLeaveLEv @ 21 NONAME
+	_ZN18CXIMPTestMessenger14GetPluginIndexEv @ 22 NONAME
+	_ZN18CXIMPTestMessenger14SetPluginIndexEi @ 23 NONAME
+	_ZN18CXIMPTestMessenger16AssertPluginDiedEi @ 24 NONAME
+	_ZN18CXIMPTestMessenger16DeletePubSubKeysEv @ 25 NONAME
+	_ZN18CXIMPTestMessenger17NewForClientSideLEi @ 26 NONAME
+	_ZN18CXIMPTestMessenger20GetReqCompleteParamsEv @ 27 NONAME
+	_ZN18CXIMPTestMessenger20SetReqCompleteParamsEP31MXIMPRestrictedObjectCollection @ 28 NONAME
+	_ZN18CXIMPTestMessenger21NewForAdaptationSideLEi @ 29 NONAME
+	_ZN18CXIMPTestMessenger23AssertOpenSessionCalledEi @ 30 NONAME
+	_ZN18CXIMPTestMessenger24AssertCloseSessionCalledEi @ 31 NONAME
+	_ZN18CXIMPTestMessenger24AssertShareSessionCalledEi @ 32 NONAME
+	_ZN18CXIMPTestMessenger26AssertUnshareSessionCalledEi @ 33 NONAME
+	_ZN18CXIMPTestMessenger33AssertCreatePresentityGroupCalledEi @ 34 NONAME
+	_ZN18CXIMPTestMessenger36AssertAddPresentityGroupMemberCalledEi @ 35 NONAME
+	_ZN18CXIMPTestMessenger39AssertRemovePresentityGroupMemberCalledEi @ 36 NONAME
+	_ZN18CXIMPTestMessenger40AssertSubscribePresentityGroupListCalledEi @ 37 NONAME
+	_ZN18CXIMPTestMessenger42AssertUnsubscribePresentityGroupListCalledEi @ 38 NONAME
+	_ZN18CXIMPTestMessenger43AssertSubscribePresentityGroupContentCalledEi @ 39 NONAME
+	_ZN18CXIMPTestMessenger44AssertUpdatePresentityGroupDisplayNameCalledEi @ 40 NONAME
+	_ZN18CXIMPTestMessenger45AssertUnsubscribePresentityGroupContentCalledEi @ 41 NONAME
+	_ZN18CXIMPTestMessenger50AssertUpdatePresentityGroupMemberDisplayNameCalledEi @ 42 NONAME
+	_ZN18CXIMPTestMessenger8GetErrorEv @ 43 NONAME
+	_ZN18CXIMPTestMessenger8GetLeaveEv @ 44 NONAME
+	_ZN18CXIMPTestMessenger8SetErrorEi @ 45 NONAME
+	_ZN18CXIMPTestMessenger8SetLeaveEi @ 46 NONAME
+	_ZN19CXIMPTestFileSrvMsg12InternalizeLER11RReadStream @ 47 NONAME
+	_ZN19CXIMPTestFileSrvMsg4NewLEiRK6TDesC8 @ 48 NONAME
+	_ZN19CXIMPTestFileSrvMsg5NewLCEv @ 49 NONAME
+	_ZN19CXIMPTestFileSrvMsg8PayloadLEv @ 50 NONAME
+	_ZN19CXIMPTestFileSrvMsg8SrvMsgIdEv @ 51 NONAME
+	_ZN19CXIMPTestWaitHelper4NewLEv @ 52 NONAME
+	_ZN19CXIMPTestWaitHelper8WaitForLEi @ 53 NONAME
+	_ZN20XIMPTestEventFactory23CreateGroupListEventLCXERK7TDesC16S2_NS_22TTestPGLArraySpecifierES2_S2_N26MXIMPDataSubscriptionState18TSubscriptionStateENS4_10TDataStateE @ 54 NONAME
+	_ZN20XIMPTestEventFactory26CreateGroupContentEventLCXERK7TDesC16S2_S2_NS_29TTestPGLContentArraySpecifierES2_S2_N26MXIMPDataSubscriptionState18TSubscriptionStateENS4_10TDataStateE @ 55 NONAME
+	_ZN22CXIMPTestGeneralWaiter4NewLEP15T_MWaitObserver @ 56 NONAME
+	_ZN22CXIMPTestGeneralWaiter8WaitForLEi @ 57 NONAME
+	_ZN23CXIMPTestContextWrapper10GetContextEv @ 58 NONAME
+	_ZN23CXIMPTestContextWrapper12GetMessengerEv @ 59 NONAME
+	_ZN23CXIMPTestContextWrapper12WaitAnyEventEv @ 60 NONAME
+	_ZN23CXIMPTestContextWrapper13ClearListenerEv @ 61 NONAME
+	_ZN23CXIMPTestContextWrapper13ResetListenerEv @ 62 NONAME
+	_ZN23CXIMPTestContextWrapper14SetupListenerLE28TXIMPTestStatusEventTemplate @ 63 NONAME
+	_ZN23CXIMPTestContextWrapper15AppendToTraitsLE28TXIMPTestStatusEventTemplate @ 64 NONAME
+	_ZN23CXIMPTestContextWrapper15GetStatusTraitsEv @ 65 NONAME
+	_ZN23CXIMPTestContextWrapper16GetEventListenerEv @ 66 NONAME
+	_ZN23CXIMPTestContextWrapper17BindWithSettingsLEi @ 67 NONAME
+	_ZN23CXIMPTestContextWrapper17VerifyEventStackLERK6TPtrC8 @ 68 NONAME
+	_ZN23CXIMPTestContextWrapper18SetupEmptyListenerEv @ 69 NONAME
+	_ZN23CXIMPTestContextWrapper19GetPresenceFeaturesEv @ 70 NONAME
+	_ZN23CXIMPTestContextWrapper21DeletePresenceContextEv @ 71 NONAME
+	_ZN23CXIMPTestContextWrapper25SetupListenerReqCompleteLE28TXIMPTestStatusEventTemplateP6RArrayIlE @ 72 NONAME
+	_ZN23CXIMPTestContextWrapper25WaitRequestAndStackEventsE14TXIMPRequestId @ 73 NONAME
+	_ZN23CXIMPTestContextWrapper4NewLEiP11MXIMPClient @ 74 NONAME
+	_ZN23CXIMPTestContextWrapper5BindLE4TUidRK7TDesC16S3_S3_ @ 75 NONAME
+	_ZN23CXIMPTestContextWrapper5BindLEi @ 76 NONAME
+	_ZN23CXIMPTestContextWrapper7UnbindLEv @ 77 NONAME
+	_ZN23CXIMPTestContextWrapper9GetClientEv @ 78 NONAME
+	_ZN25XIMPTestPresenceDataUtils13InsertPrefixLEPK6TDesC8R5RBuf8 @ 79 NONAME
+	_ZN25XIMPTestPresenceDataUtils14AssertEqualityER13MPresenceInfoS1_ @ 80 NONAME
+	_ZN25XIMPTestPresenceDataUtils14GenerateInfoLCEPK6TDesC8NS_18TPresenceDataGroupE @ 81 NONAME
+	_ZN25XIMPTestPresenceDataUtils18GenerateIdentityLCEPK6TDesC8NS_18TPresenceDataGroupE @ 82 NONAME
+	_ZN25XIMPTestPresenceDataUtils20GenerateInfoFilterLCEPK6TDesC8NS_18TPresenceDataGroupE @ 83 NONAME
+	_ZN26CXIMPTestContextWrapperMgr11GetWrapperLEi @ 84 NONAME
+	_ZN26CXIMPTestContextWrapperMgr14CreateWrapperLEi @ 85 NONAME
+	_ZN26CXIMPTestContextWrapperMgr4NewLEv @ 86 NONAME
+	_ZN28CXIMPTestStatusEventListener12WaitAnyEventEv @ 87 NONAME
+	_ZN28CXIMPTestStatusEventListener15ResetEventStackEv @ 88 NONAME
+	_ZN28CXIMPTestStatusEventListener15SetEventSourceLEP12MXIMPContext @ 89 NONAME
+	_ZN28CXIMPTestStatusEventListener16SetEventObserverEP20MXIMPContextObserver @ 90 NONAME
+	_ZN28CXIMPTestStatusEventListener17GetEventTemplateLER6RArrayI28TXIMPTestStatusEventSnapshotE28TXIMPTestStatusEventTemplate @ 91 NONAME
+	_ZN28CXIMPTestStatusEventListener18AcceptedEventTypesEv @ 92 NONAME
+	_ZN28CXIMPTestStatusEventListener19ResetEventTypeStackEv @ 93 NONAME
+	_ZN28CXIMPTestStatusEventListener22ReRegisterEventFilterLEv @ 94 NONAME
+	_ZN28CXIMPTestStatusEventListener25WaitRequestAndStackEventsERK14TXIMPRequestIdi @ 95 NONAME
+	_ZN28CXIMPTestStatusEventListener4NewLEiP12MXIMPContext @ 96 NONAME
+	_ZN28TXIMPTestStatusEventSnapshotC1Eiii @ 97 NONAME
+	_ZN28TXIMPTestStatusEventSnapshotC1Ev @ 98 NONAME
+	_ZN28TXIMPTestStatusEventSnapshotC2Eiii @ 99 NONAME
+	_ZN28TXIMPTestStatusEventSnapshotC2Ev @ 100 NONAME
+	_ZNK17CXIMPTestFileTool10InstanceIdEv @ 101 NONAME
+	_ZNK18CXIMPTestMessenger10GetBooleanE21TXIMPTestPropertyKeys @ 102 NONAME
+	_ZNK18CXIMPTestMessenger11GetValueForE21TXIMPTestPropertyKeys @ 103 NONAME
+	_ZNK19CXIMPTestFileSrvMsg12ExternalizeLER12RWriteStream @ 104 NONAME
+	_ZNK23CXIMPTestContextWrapper10InstanceIdEv @ 105 NONAME
+	_ZNK23CXIMPTestContextWrapper8FileToolEv @ 106 NONAME
+	_ZNK25XIMPTestPresenceDataUtils6EqualsER16CPresenceInfoImpS1_ @ 107 NONAME
+	_ZNK25XIMPTestPresenceDataUtils8ContainsER13MPresenceInfoS1_ @ 108 NONAME
+	_ZNK26CXIMPTestContextWrapperMgr12WrapperCountEv @ 109 NONAME
+	_ZNK28CXIMPTestStatusEventListener17VerifyEventStackLERK6TArrayI28TXIMPTestStatusEventSnapshotERK6TDesC8 @ 110 NONAME
+	_ZNK28CXIMPTestStatusEventListener20GetReqCompletionErrLERK14TXIMPRequestId @ 111 NONAME
+	_ZNK28TXIMPTestStatusEventSnapshot6EqualsERKS_ @ 112 NONAME
+	_ZTI17CXIMPTestFileTool @ 113 NONAME ; #<TI>#
+	_ZTI17CXIMPTestListener @ 114 NONAME ; #<TI>#
+	_ZTI18CXIMPTestMessenger @ 115 NONAME ; #<TI>#
+	_ZTI19CXIMPTestFileSrvMsg @ 116 NONAME ; #<TI>#
+	_ZTI19CXIMPTestWaitHelper @ 117 NONAME ; #<TI>#
+	_ZTI22CXIMPTestGeneralWaiter @ 118 NONAME ; #<TI>#
+	_ZTI23CXIMPTestContextWrapper @ 119 NONAME ; #<TI>#
+	_ZTI26CXIMPTestContextWrapperMgr @ 120 NONAME ; #<TI>#
+	_ZTI28CXIMPTestStatusEventListener @ 121 NONAME ; #<TI>#
+	_ZTV17CXIMPTestFileTool @ 122 NONAME ; #<VT>#
+	_ZTV17CXIMPTestListener @ 123 NONAME ; #<VT>#
+	_ZTV18CXIMPTestMessenger @ 124 NONAME ; #<VT>#
+	_ZTV19CXIMPTestFileSrvMsg @ 125 NONAME ; #<VT>#
+	_ZTV19CXIMPTestWaitHelper @ 126 NONAME ; #<VT>#
+	_ZTV22CXIMPTestGeneralWaiter @ 127 NONAME ; #<VT>#
+	_ZTV23CXIMPTestContextWrapper @ 128 NONAME ; #<VT>#
+	_ZTV26CXIMPTestContextWrapperMgr @ 129 NONAME ; #<VT>#
+	_ZTV28CXIMPTestStatusEventListener @ 130 NONAME ; #<VT>#
+

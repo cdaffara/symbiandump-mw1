@@ -1,0 +1,40 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                XIMP Presence Management API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/presenceblocklistevent.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceblocklistevent.h)
+../inc/presencemanagementifids.hrh     MW_LAYER_PLATFORM_EXPORT_PATH(presencemanagementifids.hrh)
+../inc/presencefeatures.inl     MW_LAYER_PLATFORM_EXPORT_PATH(presencefeatures.inl)
+../inc/presencewatching.h     MW_LAYER_PLATFORM_EXPORT_PATH(presencewatching.h)
+../inc/presencepublishing.h     MW_LAYER_PLATFORM_EXPORT_PATH(presencepublishing.h)
+../inc/presenceauthorization.h     MW_LAYER_PLATFORM_EXPORT_PATH(presenceauthorization.h)
+../inc/presencewatcherlistevent.h     MW_LAYER_PLATFORM_EXPORT_PATH(presencewatcherlistevent.h)
+../inc/presentitygrouplistevent.h     MW_LAYER_PLATFORM_EXPORT_PATH(presentitygrouplistevent.h)
+../inc/presentitygroups.h     MW_LAYER_PLATFORM_EXPORT_PATH(presentitygroups.h)
+../inc/presencefeatures.h     MW_LAYER_PLATFORM_EXPORT_PATH(presencefeatures.h)
+../inc/presentitypresenceevent.h     MW_LAYER_PLATFORM_EXPORT_PATH(presentitypresenceevent.h)
+../inc/ownpresenceevent.h     MW_LAYER_PLATFORM_EXPORT_PATH(ownpresenceevent.h)
+../inc/presencegrantrequestlistevent.h     MW_LAYER_PLATFORM_EXPORT_PATH(presencegrantrequestlistevent.h)
+../inc/presentitygroupcontentevent.h     MW_LAYER_PLATFORM_EXPORT_PATH(presentitygroupcontentevent.h)

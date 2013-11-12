@@ -1,0 +1,36 @@
+HbGridViewItem {
+    layout:layout-1;
+}
+
+HbGridViewItem[layoutName="default"][icon][!text] {
+    layout:layout-2;
+}
+
+HbGridViewItem[layoutName="default"][!icon][text] {
+    layout:layout-3;
+}
+
+HbGridViewItem::icon {
+}
+
+HbGridViewItem::text {
+    size-policy-horizontal:ignored;
+    text-height: var(hb-param-text-height-tiny);
+    font-variant: secondary;
+    text-align: center center;
+    text-line-count-min: 1;
+    text-line-count-max: 1;
+    text-wrap-mode: wrap-anywhere;
+}
+
+HbGridViewItem::selection-icon {
+    fixed-width: 3.0un;
+    fixed-height: 3.0un;
+}
+
+HbGridViewItem::multiselection-toucharea {
+}
+
+HbGridViewItem::frame {
+    border-width: var(hb-param-background-grid-main);
+}

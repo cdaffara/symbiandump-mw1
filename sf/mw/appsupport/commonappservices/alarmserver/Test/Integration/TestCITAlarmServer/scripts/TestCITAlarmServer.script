@@ -1,0 +1,148 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRINT Run all TestCITAlarmServer Suite Tests
+
+//
+LOAD_SUITE TestCITAlarmServerSuite
+//
+
+// !@SYMTestCaseID PIM-CIT-AlarmServer-234AP13-18For-0001
+// !@SYMTestCaseDesc Sets the Alarm Server silent period using SetAlarmSoundsSilentFor and updates the UTC offset.
+// !@SYMTestStatus Implemented
+// !@SYMTestPriority Low
+// !@SYMFssID <App-Services>/<AlarmServer>/FS34
+// !@SYMTestActions Set UTC offset to initial value. Set alarm sounds silent period using SetAlarmSoundsSilentFor. 
+// !@SYMTestActions Move UTC offset while alarm is notifying or waiting to notify.
+// !@SYMTestActions Verify that the silent period is cancelled, and wait for sound start and stop.
+// !@SYMTestExpectedResults Silent Period Should be cancelled, sound start and stop at the expected times.
+// !@SYMTestType CIT
+// !@SYMPREQ 234
+START_TESTCASE PIM-CIT-AlarmServer-234AP13-18For-0001
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM0
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM1
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM2
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM3
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM4
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM5
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM6
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM7
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM8
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM9
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM10
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM11
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM12
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM13
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM14
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeFor \CITAlarmServer\testdata\TestAlarmServerData.ini ALARM15
+END_TESTCASE PIM-CIT-AlarmServer-234AP13-18For-0001
+
+// !@SYMTestCaseID PIM-CIT-AlarmServer-234AP13-18Until-0001
+// !@SYMTestCaseDesc Sets the Alarm Server silent period using SetAlarmSoundsSilentUntil and updates the UTC offset.
+// !@SYMTestStatus Implemented
+// !@SYMTestPriority Low
+// !@SYMFssID <App-Services>/<AlarmServer>/FS34
+// !@SYMTestActions Set UTC offset to initial value. Set alarm sounds silent period using SetAlarmSoundsSilentUntil . 
+// !@SYMTestActions Move UTC offset while alarm is notifying or waiting to notify.
+// !@SYMTestActions Verify that the silent period is not cancelled, and wait for sound start and stop.
+// !@SYMTestExpectedResults GetAlarmSoundsSilentUntil should remain constant and alarm should expire, sound start and stop at the expected times.
+// !@SYMTestType CIT
+// !@SYMPREQ 234
+START_TESTCASE PIM-CIT-AlarmServer-234AP13-18Until-0001
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM0
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM1
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM2
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM3
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM4
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM5
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM6
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM7
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM8
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM9
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM10
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM11
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM12
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM13
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM14
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM16
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM17
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM18
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM19
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM20
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM21
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM22
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM23
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM24
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM25
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM26
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM27
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM28
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM29
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestUTCChangeUntil \CITAlarmServer\testdata\TestAlarmServerData1.ini ALARM30
+END_TESTCASE PIM-CIT-AlarmServer-234AP13-18Until-0001
+
+// !@SYMTestCaseID PIM-CIT-AlarmServer-234AP19-24For-0001
+// !@SYMTestCaseDesc Sets the Alarm Server silent period using SetAlarmSoundsSilentFor and change system time.
+// !@SYMTestStatus Implemented
+// !@SYMTestPriority Low
+// !@SYMFssID <App-Services>/<AlarmServer>/FS34
+// !@SYMTestActions Set UTC offset to initial value. Set alarm sounds silent period using SetAlarmSoundsSilentFor.
+// !@SYMTestActions Change system time (Future/Past) while alarm is notifying or waiting to notify.
+// !@SYMTestActions Verify that the silent period is cancelled, and wait for sound start and stop.
+// !@SYMTestExpectedResults Silent Period should be cancelled, alarm should expire, sound start and stop at the expected times.
+// !@SYMTestType CIT
+// !@SYMPREQ 234
+START_TESTCASE PIM-CIT-AlarmServer-234AP19-24For-0001
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeFor \CITAlarmServer\testdata\TestAlarmServerData2.ini ALARM0
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeFor \CITAlarmServer\testdata\TestAlarmServerData2.ini ALARM1
+RUN_TEST_STEP 360 TestCITAlarmServerSuite TestSystemChangeFor \CITAlarmServer\testdata\TestAlarmServerData2.ini ALARM2
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeFor \CITAlarmServer\testdata\TestAlarmServerData2.ini ALARM3
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeFor \CITAlarmServer\testdata\TestAlarmServerData2.ini ALARM4
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeFor \CITAlarmServer\testdata\TestAlarmServerData2.ini ALARM5
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeFor \CITAlarmServer\testdata\TestAlarmServerData2.ini ALARM6
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeFor \CITAlarmServer\testdata\TestAlarmServerData2.ini ALARM7
+END_TESTCASE PIM-CIT-AlarmServer-234AP19-24For-0001
+
+// !@SYMTestCaseID PIM-CIT-AlarmServer-234AP19-24Until-0001
+// !@SYMTestCaseDesc Sets the Alarm Server silent period using SetAlarmSoundsSilentUntil and change system time.
+// !@SYMTestStatus Implemented
+// !@SYMTestPriority Low
+// !@SYMFssID <App-Services>/<AlarmServer>/FS34
+// !@SYMTestActions Set UTC offset to a value. Set alarm sounds silent period using SetAlarmSoundsSilentUntil. 
+// !@SYMTestActions Change system time (Future/Past) while alarm is notifying or waiting to notify.
+// !@SYMTestExpectedResults GetAlarmSoundsSilentUntil should remain constant, alarm should expire, sound start and stop at the expected times.
+// !@SYMTestType CIT
+// !@SYMPREQ 234
+START_TESTCASE PIM-CIT-AlarmServer-234AP19-24Until-0001
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM0
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM1
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM2
+RUN_TEST_STEP 360 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM3
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM4
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM5
+RUN_TEST_STEP 360 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM6
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM7
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM8
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM9
+RUN_TEST_STEP 360 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM10
+RUN_TEST_STEP 360 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM11
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM12
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM13
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM14
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM15
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestSystemChangeUntil \CITAlarmServer\testdata\TestAlarmServerData3.ini ALARM16
+END_TESTCASE PIM-CIT-AlarmServer-234AP19-24Until-0001
+
+PRINT Complate_TestCITAlarmServerSuite_Tests

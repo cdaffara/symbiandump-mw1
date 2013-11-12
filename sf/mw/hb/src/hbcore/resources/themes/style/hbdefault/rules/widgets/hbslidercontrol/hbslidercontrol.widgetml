@@ -1,0 +1,38 @@
+<hbwidget version="0.1" type="HbSliderControl">
+
+  <layout name="slidercontrol_vertical" type="mesh">
+
+    <meshitem src="groove" srcEdge="CENTERH" dst="" dstEdge="CENTERH" />
+    <meshitem src="groove" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="groove" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="groove" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="groove" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="groovetoucharea" srcEdge="CENTERH" dst="groove" dstEdge="CENTERH" />
+    <meshitem src="groovetoucharea" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="groovetoucharea" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+
+    <meshitem src="progressgroove" srcEdge="CENTERH" dst="groove" dstEdge="CENTERH" />
+    <meshitem src="progressgroove" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="progressgroove" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+
+  </layout>
+ 
+  <layout name="slidercontrol_horizontal" type="mesh">
+    <meshitem src="groove" srcEdge="TOP" dst="" dstEdge="TOP" />
+    <meshitem src="groove" srcEdge="BOTTOM" dst="" dstEdge="BOTTOM" />
+    <meshitem src="groove" srcEdge="CENTERV" dst="" dstEdge="CENTERV" />
+    <meshitem src="groove" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="groove" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+    <meshitem src="progressgroove" srcEdge="CENTERV" dst="groove" dstEdge="CENTERV" />
+    <meshitem src="progressgroove" srcEdge="LEFT" dst="groove" dstEdge="LEFT" />
+    <meshitem src="progressgroove" srcEdge="RIGHT" dst="groove" dstEdge="RIGHT" />
+
+    <meshitem src="groovetoucharea" srcEdge="CENTERV" dst="groove" dstEdge="CENTERV" />
+    <meshitem src="groovetoucharea" srcEdge="LEFT" dst="" dstEdge="LEFT" />
+    <meshitem src="groovetoucharea" srcEdge="RIGHT" dst="" dstEdge="RIGHT" />
+
+  </layout>
+
+</hbwidget>

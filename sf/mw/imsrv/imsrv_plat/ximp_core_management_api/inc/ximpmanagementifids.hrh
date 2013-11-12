@@ -1,0 +1,73 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  XIMP Framework Presence Management API interface IDs.
+*
+*/
+
+#ifndef XIMPPRESENCEMANAGEMENTIFUIDS_HRH
+#define XIMPPRESENCEMANAGEMENTIFUIDS_HRH
+
+
+
+/**
+ * @defgroup ximpfwmanagementapi XIMP Core Management API
+ * @ingroup ximpcoreapi
+ *
+ * XIMP Core Management API contains
+ * abstract core management interfaces, which are implemented by
+ * XIMP Framework. XIMP Framework clients call these
+ * interfaces to request XIMP Framework execute
+ * certain XIMP services.
+ * @since S60 v3.2
+ */
+
+
+/**
+ * @defgroup ximpfwmanagementapievents XIMP Core Management API events
+ *
+ * XIMP Core Management API contains also
+ * abstract event interfaces, which are used to deliver data
+ * and state information to XIMP Framework clients through
+ * MXIMPContextObserver::HandlePresenceContextEvent()
+ * event callback.
+ *
+ * @ingroup ximpfwmanagementapi
+ * @since S60 v3.2
+ */
+
+
+// Management IF id's
+// 20xx - ximp related
+// 21xx - presence related
+// 22xx - instant messaging related
+
+// Interface UID for XIMP Protocol Plugin Base ECom interface
+#define XIMP_ECOM_IF_UID_CLIENT_INTERFACE              0x10282DD6
+
+
+// Default implementation resulution data
+// for XIMPFw Protocol Plugin Base ECom interface
+#define XIMP_ECOM_DEFAULT_DATA_CLIENT_INTERFACE         "default"
+
+
+// Interface IDs for XIMP Management API interfaces
+#define XIMP_IF_ID_CONTEXT                    2001
+#define XIMP_IF_ID_REQUEST_COMPLETE_EVENT     2002
+#define XIMP_IF_ID_CONTEXT_STATE_EVENT        2203
+#define XIMP_IF_ID_CONTEXT_INTERNAL           2204 
+
+
+
+#endif // XIMPPRESENCEMANAGEMENTIFUIDS_HRH
+

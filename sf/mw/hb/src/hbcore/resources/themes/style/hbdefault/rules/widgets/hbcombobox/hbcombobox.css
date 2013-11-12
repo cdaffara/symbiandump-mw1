@@ -1,0 +1,45 @@
+
+HbComboBox
+{
+    layout:combobox_layout_noneditable;
+    size-policy-horizontal:expanding;
+}
+
+HbComboBox[editable]
+{
+    layout:combobox_layout_editable;
+}
+
+HbComboBox:portrait
+{
+    max-rows-in-dropdown:8;
+}
+
+HbComboBox:landscape
+{
+    max-rows-in-dropdown:5;
+}
+
+HbComboBox::combobox_button
+{
+    fixed-width:var(hb-param-widget-combobox-height);    
+    fixed-height:var(hb-param-widget-combobox-height);
+}
+
+HbComboBox::combobox_labelfield
+{   
+    left:-var(hb-param-margin-gene-left);
+    right: var(hb-param-margin-gene-middle-horizontal);
+    text-align:left center;
+    font-variant:primary;      
+    text-height:var(hb-param-text-height-secondary);
+}
+
+HbComboBox[!editable]::combobox_labelfield
+{
+    text-line-count-max:1;
+
+}
+
+
+

@@ -1,0 +1,33 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                Search Feature Plugin Management API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/searchmanagementifids.hrh     	MW_LAYER_PLATFORM_EXPORT_PATH(searchmanagementifids.hrh)
+../inc/searchfeature.inl     			MW_LAYER_PLATFORM_EXPORT_PATH(searchfeature.inl)
+../inc/searchfeature.h     				MW_LAYER_PLATFORM_EXPORT_PATH(searchfeature.h)
+../inc/search.h  						MW_LAYER_PLATFORM_EXPORT_PATH(search.h)
+../inc/searchevent.h  					MW_LAYER_PLATFORM_EXPORT_PATH(searchevent.h )
+../inc/searchelement.h					MW_LAYER_PLATFORM_EXPORT_PATH(searchelement.h)
+../inc/searchkeysevent.h 				MW_LAYER_PLATFORM_EXPORT_PATH(searchkeysevent.h)

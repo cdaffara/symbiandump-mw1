@@ -1,0 +1,420 @@
+/*
+* Copyright (c) 2005-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Localization strings for GSAccessoryPlugin
+*
+*/
+
+
+//  LOCALISATION STRINGS
+
+//d:Text of a list item in Device folder list
+//d:Item opens Enhancements folder
+//l:list_double_large_graphic_pane_t1
+//w:
+//r: 5.0
+#define qtn_cp_folder_enhancements "Enhancements"
+
+//d:Text in title pane
+//d:Enhancements settings view
+//l:title_pane_t2/opt9
+//w:
+//r: 5.0
+#define qtn_set_title_settings_enhancements "Enhancements"
+
+
+// **ACCESSORY VIEW
+// List items under Accessory folder
+
+//d:Text of a list item in Accessory view's list
+//d:Item opens Headset view
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_accessory_headset "Headset"
+
+//d:Text of a list item in Accessory view's list
+//d:Item opens Wired carkit view
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_accessory_wired_carkit "Wired carkit"
+
+//d:Text of a list item in Accessory view's list
+//d:Item opens Wireless carkit view
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_accessory_wireless_carkit "Wireless carkit"
+
+//d:Text of a list item in Accessory view's list
+//d:Item opens Loopset view
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_accessory_loopset "Loopset"
+
+//d:Text of a list item in Accessory view's list
+//d:Item opens TTY view
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_accessory_tty "TTY"
+
+//d:Text of a list item in Accessory view's list
+//d:Item opens Music stand view
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_accessory_music_stand "Music Stand"
+
+
+
+// **HEADSET VIEW
+
+//d:Text in title pane
+//d:Headset setting list view
+//l:title_pane_t2/opt9
+//w:
+//r: 3.1
+#define qtn_set_title_settings_headset "Headset settings"
+
+
+// **WIRED CAR KIT VIEW
+
+//d:Text in title pane
+//d:Wired carkit list view
+//l:title_pane_t2/opt9
+//w:
+//r: 3.1
+#define qtn_set_title_settings_wired_carkit "Wired carkit"
+
+
+// **WIRELESS CAR KIT VIEW
+
+//d:Text in title pane
+//d:Wireless carkit list view
+//l:title_pane_t2/opt9
+//w:
+//r: 3.1
+#define qtn_set_title_settings_wireless_carkit "Wireless carkit"
+
+
+// **LIGHTS
+// Common to both Wired carkit & Music stand
+
+//d:Text of a list item in Music stand and Wired carkit view's list
+//d:Item opens Lights setting page
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_settings_lights "Lights"
+
+//d:Text of a list item in Music stand and Wired carkit setting page's list
+//d:Setting value On
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_settings_lights_on "On"
+
+//d:Text of a list item in Music stand and Wired carkit setting page's list
+//d:Setting value Automatic
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_settings_lights_automatic "Automatic"
+
+
+// **LOOPSET VIEW
+
+//d:Text in title pane
+//d:Loopset setting list view
+//l:title_pane_t2/opt9
+//w:
+//r: 3.1
+#define qtn_set_title_settings_loopset "Loopset settings"
+
+//d:Text of a list item in Loopset setting list view's list
+//d:Item opens "Use loopset" settings view
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_settings_use_loopset "Use loopset"
+
+//d:Item in "Use loopset" settings page list
+//d:Setting value Yes
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_settings_use_loopset_yes "Yes"
+
+//d:Item in "Use loopset" settings page list
+//d:Setting value Yes
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_settings_use_loopset_no "No"
+
+
+// **TTY
+
+//d:Text in title pane
+//d:TTY setting list view
+//l:title_pane_t2/opt9
+//w:
+//r: 3.1
+#define qtn_set_title_settings_tty "TTY settings"
+
+//d:Text for TTY enabled warning note.
+//d:Shown when TTY is enabled in general settings and TTY device, headset or loopset is
+//  connected.
+//l:popup_note_window
+//w:
+//r: 3.1
+#define qtn_set_warn_note_tty_conn "Check that the TTY device is connected."
+
+//d:Text of a list item in TTY setting list view's list
+//d:Item opens "Use text phone" settings view
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_settings_use_tty "Use text phone"
+
+//d:Item in "Use text phone" settings page list
+//d:Setting value Yes
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_settings_use_tty_yes "Yes"
+
+//d:Item in "Use text phone" settings page list
+//d:Setting value No
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_settings_use_tty_no "No"
+
+
+// **MUSIC STAND VIEW
+
+//d:Text in title pane
+//d:Music stand setting list view
+//l:title_pane_t2/opt9
+//w:
+//r: 3.1
+#define qtn_set_title_settings_music_stand "Music Stand"
+
+
+// **DEFAULT PROFILE
+// Common strings for all the above views
+
+//d:Text of a list item in Headset and Loopset view's list
+//d:Item opens Default profile setting page
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_acc_sett_def_prof "Default profile"
+
+//d:Text of a list item in Headset and Loopset Default profile setting page's list
+//d:Setting value "Active profile"
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_acc_list_act_prof "Active profile"
+
+
+// **AUTOMATIC ANSWER
+// Common strings for all the above views
+
+//d:Text of a list item in Headset and Loopset view's list
+//d:Item opens Automatic answer setting page
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_auto_answer "Automatic answer"
+
+//d:Text of a list item in Headset and Loopset Automatic answer setting page's list
+//d:Setting value On
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_auto_answer_on "On"
+
+//d:Text of a list item in Headset and Loopset Automatic answer setting page's list
+//d:Setting value Off
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_auto_answer_off "Off"
+
+
+
+// **TV-OUT
+
+
+//d: Confirmation for TV settings change operation.
+//l: popup_note_window
+//w:
+//r: 3.1
+#define qtn_set_tv_settings_change_query "Changes might effect on picture quality when device is connected to TV"
+
+//d:Text of a list item in TV Out list view's list
+//d:Item opens TV system setting page
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_tv_system "Tv system"
+
+//d:Item in TV System setting page's list
+//d:Setting value NTSC
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_select_ntsc "NTSC"
+
+//d:Item in TV System setting page's list
+//d:Setting value PALM
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_select_palm "PALM"
+
+//d:Item in TV System setting page's list
+//d:Setting value PAL
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_select_pal "PAL"
+
+//d:Text of a list item in TV Out list view's list
+//d:Item opens TV Aspect Ratio setting page
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_tv_aspect_ratio "Tv aspect ratio"
+
+//d:Item in TV Aspect Ratio setting page's list
+//d:Setting value 16:9
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_select_wide_screen "16:9"
+
+//d:Item in TV Aspect Ratio setting page's list
+//d:Setting value 4:3
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_select_normal_screen "4:3"
+
+//d:Text in title pane
+//d:TV Out settings, setting list view
+//l:title_pane_t2/opt9
+//w:
+//r: 3.1
+#define qtn_set_title_settings_tv_out "Tv out"
+
+//d:Text of a list item in General view's folder list
+//d:Item opens TV Out folder
+//l:list_single_large_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_accessory_tv_out "Tv out"
+
+//d:Text of a list item in TV Out list view's list
+//d:Item opens Flicker filter setting page
+//l:list_setting_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_tv_flicker_filter "Flicker filter"
+
+//d:Text of a list item in Flicker filter setting page's list
+//d:Setting value on
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_tv_flicker_filter_on "On"
+
+
+//d:Text of a list item in Flicker filter setting page's list
+//d:Setting value Off
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_tv_flicker_filter_off "Off"
+
+
+// STRINGS RELATED TO HEADPHONES
+
+//d:Text in title pane
+//d:Headphone settings, setting list view
+//l:title_pane_t2/opt9
+//w:
+//r: 3.1
+#define qtn_set_title_settings_headphones "Headphones"
+
+//d:Text of a list item in Accessary view's folder list
+//d:Item opens Headphones folder
+//l:list_single_large_graphic_pane_t1
+//w:
+//r: 3.1
+#define qtn_set_accessory_headphones "Headphones"
+
+
+// **SECOND LEVEL STRING IN ACCESSORY MAIN VIEW
+
+//d:Text of a list item in Accessory view
+//d:Item indicates a "Default" accessory
+//l:list_set_graphic_pane_t1
+//w:
+//r: 3.1
+//
+#define qtn_set_accessory_default "Default"
+
+// **OPTIONS MENU STRING
+
+//d:Command in Options list
+//d:Highlighted item is set as default accessory
+//l:list_single_pane_t1_cp2
+//w:
+//r: 3.1
+//
+#define qtn_set_options_set_as_default "Set as default"
+
+
+
+// **T-COIL HEARING AID MODE VIEW
+
+//d:Text of a list item in Accessory view's list and prompted text in settings.
+//d:Item opens T-coil hearing aid  view
+//l:list_setting_pane_t1
+//w:
+//r: 5.0
+#define qtn_set_audio_hac_mode "T-coil hearing aid mode"
+
+//d:Text of a list item in T-coil hearing aid mode.
+//d:Setting value On
+//l:list_set_graphic_pane_t1
+//w:
+//r: 5.0
+#define qtn_set_audio_hac_mode_on "On"
+
+//d:Text of a list item in T-coil hearing aid mode.
+//d:Setting value Off
+//l:list_set_graphic_pane_t1
+//w:
+//r: 5.0
+#define qtn_set_audio_hac_mode_off "Off"
+
+
+// End of File

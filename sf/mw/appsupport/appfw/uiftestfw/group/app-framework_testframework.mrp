@@ -1,0 +1,9 @@
+component	app-framework_testframework
+source	\sf\mw\appsupport\appfw\uiftestfw
+
+
+notes_source	\component_defs\release.src
+
+
+ipr T 
+

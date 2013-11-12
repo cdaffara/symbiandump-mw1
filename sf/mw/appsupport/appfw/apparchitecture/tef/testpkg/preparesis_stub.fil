@@ -1,0 +1,40 @@
+# Build WLDCOMP, a strange WINC/Win32 hybrid
+#
+
+FINAL :
+!IF "$(PLATFORM)" == "GCCXML" || "$(PLATFORM)" == "TOOLS"
+	cd
+	echo ----------------
+	echo  Do nothing ...
+	echo ----------------
+!ELSE
+	cd
+	echo ---------------------------
+	echo Building test exes sis files...
+	echo ---------------------------
+
+	perl preparesis_stub.pl
+!ENDIF
+
+DO_NOTHING:
+	rem do nothing
+
+#
+# The targets invoked by abld...
+#
+
+MAKMAKE : DO_NOTHING
+FREEZE : DO_NOTHING
+LIB : DO_NOTHING
+RESOURCE : DO_NOTHING
+CLEANLIB : DO_NOTHING
+MAKEDATA : DO_NOTHING
+
+RELEASABLES :
+	echo $(TOOL)
+
+SAVESPACE : BLD
+
+BLD : MAKEDATA
+
+CLEAN : 

@@ -1,0 +1,29 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  GSServerEngine ROM files.
+*
+*/
+
+#ifndef GSSERVERENGINE_IBY
+#define GSSERVERENGINE_IBY
+
+      // GS ServerEngine library:
+    #ifdef __TV_OUT
+         file=ABI_DIR\BUILD_DIR\GSServerEngine.dll                 SHARED_LIB_DIR\GSServerEngine.dll
+    #else
+         file=ABI_DIR\BUILD_DIR\GSServerEngineStub.dll                 SHARED_LIB_DIR\GSServerEngine.dll
+    #endif //__TV_OUT
+
+#endif // GSSERVERENGINE_IBY
+// End of File

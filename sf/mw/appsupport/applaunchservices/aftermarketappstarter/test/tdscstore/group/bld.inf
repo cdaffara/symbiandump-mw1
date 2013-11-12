@@ -1,0 +1,64 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+/**
+ @file
+ @test
+ @internalComponent - Internal Symbian test code 
+*/
+ 
+PRJ_PLATFORMS
+DEFAULT
+
+
+PRJ_EXPORTS
+// test code only
+
+
+PRJ_MMPFILES
+// test code only
+
+
+PRJ_TESTMMPFILES
+tdscstore_server.mmp
+
+
+PRJ_TESTEXPORTS
+// iby
+amastarttest_dscstore.iby									/epoc32/rom/include/amastarttest_dscstore.iby
+
+// batch files for manual execution on emulator / hardware
+../scripts/amastarttest_dscstore_run.bat					z:/amastarttest/amastarttest_dscstore_run.bat
+../scripts/amastarttest_dscstore_run.bat					/epoc32/release/winscw/udeb/amastarttest_dscstore_run.bat
+../scripts/amastarttest_dscstore_run.bat					/epoc32/release/winscw/urel/amastarttest_dscstore_run.bat
+
+// ini files
+../testdata/tdscstore_api.ini 								z:/amastarttest/ini/tdscstore_api.ini
+../testdata/tdscstore_enumfile.ini 							z:/amastarttest/ini/tdscstore_enumfile.ini
+../testdata/tdscstore_dscdb_backup.script					z:/amastarttest/ini/tdscstore_dscdb_backup.script
+../testdata/tdscstore_dscdb_restore.script					z:/amastarttest/ini/tdscstore_dscdb_restore.script
+../testdata/tdscstore_dscdb_createnew.script				z:/amastarttest/ini/tdscstore_dscdb_createnew.script
+../testdata/tdscstore_dscdb_deletenew.script				z:/amastarttest/ini/tdscstore_dscdb_deletenew.script
+
+
+// script files
+../scripts/amastarttest_dscstore_basic.script 				z:/amastarttest/amastarttest_dscstore_basic.script
+../scripts/amastarttest_dscstore_caprdd.script 				z:/amastarttest/amastarttest_dscstore_caprdd.script
+../scripts/amastarttest_dscstore_capwdd.script 				z:/amastarttest/amastarttest_dscstore_capwdd.script
+../scripts/amastarttest_dscstore_customdsc.script 			z:/amastarttest/amastarttest_dscstore_customdsc.script
+../scripts/amastarttest_dscstore_defaultdsc.script 			z:/amastarttest/amastarttest_dscstore_defaultdsc.script
+../scripts/amastarttest_dscstore_errors.script 				z:/amastarttest/amastarttest_dscstore_errors.script
+../scripts/amastarttest_dscstore_oom.script 				z:/amastarttest/amastarttest_dscstore_oom.script
+

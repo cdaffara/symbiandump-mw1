@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*	 This file provides the information required for building AIRFSPlugin
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+
+PRJ_MMPFILES
+
+../group/AIRFSPlugin.mmp
+
+PRJ_EXPORTS
+../conf/airfsplugin.confml          APP_LAYER_CONFML(airfsplugin.confml)
+../conf/airfsplugin_2000F86E.crml   APP_LAYER_CRML(airfsplugin_2000F86E.crml)
+
+PRJ_TESTMMPFILES

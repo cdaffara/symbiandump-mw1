@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2008-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          MT_CFContextSourceSettingsManager.dll
+TARGETTYPE      dll
+TARGETPATH      /DigiaEUnit/Tests
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../MT_CFContextSourceSettingsManager
+SOURCE                  MT_CFContextSourceSettingsManagerDllMain.cpp
+SOURCE                  MT_CFContextSourceSettingsManager.cpp
+
+USERINCLUDE           ../common
+USERINCLUDE           ../MT_CFContextSourceSettingsManager
+USERINCLUDE           ../../../../inc/CFContextSourceSettingsManager
+USERINCLUDE           ../../../../inc/cfservices
+
+MW_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+LIBRARY                 CFContextSourceSettingsManager.lib
+LIBRARY                 cfservices.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 estor.lib
+LIBRARY                 EUnit.lib
+LIBRARY                 euser.lib
+LIBRARY                 xmldom.lib
+LIBRARY                 xmlparser.lib
+
+// End of file

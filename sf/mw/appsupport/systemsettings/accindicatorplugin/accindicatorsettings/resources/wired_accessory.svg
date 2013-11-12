@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+<defs>
+</defs>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="29.9995" y1="37.8149" x2="29.9995" y2="57.768">
+	<stop  offset="0" style="stop-color:#707070"/>
+	<stop  offset="0.7939" style="stop-color:#080808"/>
+	<stop  offset="1" style="stop-color:#585858"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" d="M12.208,58c-0.875,0-1.592-0.717-1.592-1.594L9.022,43.764c0-0.875,0.682-1.814,1.516-2.084
+	l10.381-3.373c0.833-0.27,2.232-0.492,3.108-0.492h11.944c0.877,0,2.275,0.223,3.109,0.492l10.381,3.373
+	c0.834,0.27,1.516,1.209,1.516,2.084l-1.594,12.643c0,0.877-0.715,1.594-1.592,1.594H12.208z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="30.0005" y1="38.6118" x2="30.0005" y2="56.9895">
+	<stop  offset="0" style="stop-color:#4D4D4D"/>
+	<stop  offset="1" style="stop-color:#1A1A1A"/>
+</linearGradient>
+<path fill="url(#SVGID_2_)" d="M12.208,57.204c-0.438,0-0.796-0.357-0.796-0.797L9.819,43.764c0-0.531,0.46-1.164,0.965-1.328
+	l10.366-3.367c0.773-0.248,2.084-0.457,2.878-0.457h11.944c0.795,0,2.105,0.209,2.863,0.455l10.396,3.375
+	c0.49,0.158,0.951,0.791,0.951,1.322l-1.594,12.643c0,0.439-0.357,0.797-0.797,0.797H12.208z"/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="30" y1="40.2036" x2="30" y2="55.4324">
+	<stop  offset="0" style="stop-color:#707070"/>
+	<stop  offset="1" style="stop-color:#323232"/>
+</linearGradient>
+<path fill="url(#SVGID_3_)" d="M13.005,55.61l-1.593-11.699l10.198-3.314c0.638-0.207,1.782-0.393,2.418-0.393h11.944
+	c0.637,0,1.766,0.18,2.371,0.377l10.246,3.332L46.997,55.61H13.005z"/>
+<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="25.5205" y1="8.5112" x2="34.4795" y2="8.5112">
+	<stop  offset="0" style="stop-color:#A8B1B3"/>
+	<stop  offset="0.3818" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.7091" style="stop-color:#686E70"/>
+	<stop  offset="1" style="stop-color:#A6B0B3"/>
+</linearGradient>
+<polygon fill="url(#SVGID_4_)" points="30.474,2 29.452,2 25.521,5.596 25.521,15.022 34.479,15.022 34.479,5.596 "/>
+<polygon opacity="0.6" fill="#FFFFFF" points="30.474,2 29.452,2 25.521,5.596 25.521,6.391 29.452,2.796 30.474,2.796 
+	34.479,6.391 34.479,5.596 "/>
+<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="24.8237" y1="26.0845" x2="35.1768" y2="26.0845">
+	<stop  offset="0" style="stop-color:#A8B1B3"/>
+	<stop  offset="0.3818" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.7091" style="stop-color:#686E70"/>
+	<stop  offset="1" style="stop-color:#A6B0B3"/>
+</linearGradient>
+<rect x="24.824" y="14.354" fill="url(#SVGID_5_)" width="10.353" height="23.46"/>
+<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="24.8237" y1="22.1709" x2="35.1768" y2="22.1709">
+	<stop  offset="0" style="stop-color:#4D4D4D"/>
+	<stop  offset="0.3818" style="stop-color:#7A7A7A"/>
+	<stop  offset="0.7091" style="stop-color:#1A1A1A"/>
+	<stop  offset="1" style="stop-color:#4D4D4D"/>
+</linearGradient>
+<rect x="24.824" y="19.782" fill="url(#SVGID_6_)" width="10.353" height="4.777"/>
+<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="24.8237" y1="29.0718" x2="35.1768" y2="29.0718">
+	<stop  offset="0" style="stop-color:#4D4D4D"/>
+	<stop  offset="0.3818" style="stop-color:#7A7A7A"/>
+	<stop  offset="0.7091" style="stop-color:#1A1A1A"/>
+	<stop  offset="1" style="stop-color:#4D4D4D"/>
+</linearGradient>
+<rect x="24.824" y="27.877" fill="url(#SVGID_7_)" width="10.353" height="2.389"/>
+<rect x="24.824" y="30.266" opacity="0.3" fill="#FFFFFF" width="10.353" height="0.797"/>
+<rect x="24.824" y="36.985" opacity="0.3" width="10.353" height="0.797"/>
+<rect x="24.824" y="36.19" opacity="0.15" width="10.353" height="0.795"/>
+<rect x="24.824" y="24.56" opacity="0.3" fill="#FFFFFF" width="10.353" height="0.796"/>
+<rect x="24.824" y="14.354" opacity="0.6" fill="#FFFFFF" width="10.353" height="0.797"/>
+<rect x="24.824" y="15.948" opacity="0.15" fill="#FFFFFF" width="10.353" height="0.797"/>
+<rect x="24.824" y="15.152" opacity="0.3" fill="#FFFFFF" width="10.353" height="0.796"/>
+<rect fill="none" width="60.001" height="60"/>
+</svg>

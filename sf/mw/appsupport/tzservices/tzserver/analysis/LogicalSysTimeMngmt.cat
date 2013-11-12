@@ -1,0 +1,153 @@
+
+(object Petal
+    version    	43
+    _written   	"Rose 6.5.9232.10"
+    charSet    	0)
+
+(object Class_Category "5. System Time Management"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"40B1D49203C5"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list)
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "Current Time Management Class Diagram"
+	    quid       	"407FBCE102DF"
+	    title      	"Current Time Management Class Diagram"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::Analysis Model::SysClasses::ExecHandler" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(512, 400)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(348, 277)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	328
+			justify    	0
+			label      	"ExecHandler")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407FBCFE035C"
+		    compartment 	(object Compartment
+			Parent_View 	@1
+			location   	(348, 483)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	3
+			max_width  	325)
+		    width      	346
+		    height     	268
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::SysClasses::Exec" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(960, 960)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(796, 837)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	328
+			justify    	0
+			label      	"Exec")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407FBD140177"
+		    compartment 	(object Compartment
+			Parent_View 	@2
+			location   	(796, 1043)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	3
+			max_width  	325)
+		    width      	346
+		    height     	268
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::SysClasses::Plat" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1552, 1296)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1405, 1197)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	294
+			justify    	0
+			label      	"Plat")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407FBD1B02A0"
+		    compartment 	(object Compartment
+			Parent_View 	@3
+			location   	(1405, 1379)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	2
+			max_width  	291)
+		    width      	312
+		    height     	220
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::SysClasses::Kern" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1424, 352)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1238, 253)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	372
+			justify    	0
+			label      	"Kern")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407FBD22006E"
+		    compartment 	(object Compartment
+			Parent_View 	@4
+			location   	(1238, 435)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	2
+			max_width  	369)
+		    width      	390
+		    height     	220
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::Analysis Model::SysClasses::TTime" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(448, 1376)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(325, 1305)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	246
+			justify    	0
+			label      	"TTime")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407FBECA00CB"
+		    width      	264
+		    height     	164
+		    annotation 	8
+		    autoResize 	TRUE)))))

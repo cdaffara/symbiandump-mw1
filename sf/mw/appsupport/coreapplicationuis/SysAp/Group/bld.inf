@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2004-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  SysAp build info
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXTENSIONS
+
+
+PRJ_EXPORTS
+//Configuration tool migration
+../conf/coreapplicationuis.confml              MW_LAYER_CONFML(coreapplicationuis.confml)
+../conf/coreapplicationuis_101F876C.crml 	     MW_LAYER_CRML(coreapplicationuis_101F876C.crml)
+../conf/coreapplicationuis_101F8764.crml 	     MW_LAYER_CRML(coreapplicationuis_101F8764.crml)
+../conf/coreapplicationuis_101F8765.crml 	     MW_LAYER_CRML(coreapplicationuis_101F8765.crml)
+
+../rom/SysAp.iby CORE_MW_LAYER_IBY_EXPORT_PATH(SysAp.iby)
+../rom/SysApResources.iby LANGUAGE_MW_LAYER_IBY_EXPORT_PATH(SysApResources.iby)
+../rom/SysAp_variant.iby CUSTOMER_MW_LAYER_IBY_EXPORT_PATH(SysAp_variant.iby)
+../loc/SysAp.loc MW_LAYER_LOC_EXPORT_PATH(SysAp.loc)
+
+../PubSub/CoreApplicationUIsInternalPSKeys.h |../../../inc/coreapplicationuisinternalpskeys.h
+../PubSub/CoreApplicationUIsPrivatePSKeys.h |../../inc/coreapplicationuisprivatepskeys.h
+../CenRep/CoreApplicationUIsPrivateCRKeys.h |../../inc/coreapplicationuisprivatecrkeys.h
+
+../PubSub/CoreApplicationUIsPrivatePSKeys.h |../../../inc/coreapplicationuisprivatepskeys.h // Illegal export for avoiding breaks
+
+/epoc32/s60/icons/qgn_startup_screen.svg          /epoc32/data/z/resource/apps/qgn_sysap_screen.svg
+/epoc32/s60/icons/qgn_startup_screen.svg          /epoc32/release/winscw/udeb/z/resource/apps/qgn_sysap_screen.svg
+/epoc32/s60/icons/qgn_startup_screen.svg          /epoc32/release/winscw/urel/z/resource/apps/qgn_sysap_screen.svg
+PRJ_MMPFILES
+//gnumakefile sysap_icons.mk 
+
+SysAp.mmp
+
+//  End of File

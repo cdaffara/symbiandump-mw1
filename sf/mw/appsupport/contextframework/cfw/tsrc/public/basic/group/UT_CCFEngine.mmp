@@ -1,0 +1,91 @@
+/*
+* Copyright (c) 2008-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          UT_CCFEngine.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../UT_CCFEngine
+SOURCE                  UT_CCFEngineDllMain.cpp
+SOURCE                  UT_CCFEngine.cpp
+SOURCE					cftestcontextlistener.cpp
+ 
+SOURCEPATH		../common
+SOURCE			cftestdelay.cpp
+
+// Sources needed by the test
+SOURCEPATH              ../../../../src/cfserver
+SOURCE                  CFPropertyListener.cpp
+SOURCE                  CFEngine.cpp
+SOURCE					CFEComObserver.cpp
+SOURCE                  CFServSession.cpp
+SOURCE                  CFPhaseBase.cpp
+SOURCE                  CFMessageHandlerAction.cpp
+SOURCE                  CFPhaseDeviceStarted.cpp
+SOURCE                  CFServer.cpp
+SOURCE                  CFMessageHandlerBase.cpp
+SOURCE                  CFMessageHandlerContext.cpp
+SOURCE                  CFPhaseDeviceStarting.cpp
+SOURCE                  CFPhaseLoadingPlugins.cpp
+SOURCE                  CFPhaseLoadingRules.cpp
+SOURCE                  CFStarter.cpp
+SOURCE                  CFContextManager.cpp
+SOURCE                  CFCacheElement.cpp
+SOURCE                  CFUtils.cpp
+SOURCE                  CFPhaseCfwReady.cpp
+SOURCE                  CFMessageHandlerScript.cpp
+SOURCE 			cfasynccmdqueue.cpp
+SOURCE 			cfcmd.cpp
+SOURCE 			cfactioncmd.cpp
+SOURCE 			cfpublishcontextcmd.cpp
+SOURCE 			cfremovesubscriptioncleanupcmd.cpp
+SOURCE 			cfcontextsourcecmd.cpp
+
+USERINCLUDE             ../../../../inc/cfactivatorengine
+USERINCLUDE             ../../../../inc/cfcontextsourcemanager
+USERINCLUDE             ../../../../inc/cfscriptengine
+USERINCLUDE             ../../../../inc/cfserver
+USERINCLUDE             ../../../../inc/cfservices
+USERINCLUDE             ../../../../inc/common
+USERINCLUDE             ../../../../cenrep
+USERINCLUDE             ../UT_CCFEngine
+USERINCLUDE             ../common
+
+MW_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+LIBRARY                 cfactivatorengine.lib
+LIBRARY                 cfcontextsourcemanager.lib
+LIBRARY                 cfscriptengine.lib
+LIBRARY                 cfservices.lib
+LIBRARY                 cfoperationpluginservices.lib
+LIBRARY                 ecom.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 estor.lib
+LIBRARY                 EUnit.lib
+LIBRARY                 euser.lib
+LIBRARY                 flogger.lib
+LIBRARY                 centralrepository.lib
+
+// End of file

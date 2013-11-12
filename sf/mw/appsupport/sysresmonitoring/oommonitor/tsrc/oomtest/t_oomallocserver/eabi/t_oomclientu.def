@@ -1,0 +1,9 @@
+EXPORTS
+	_ZN16ROOMAllocSession10MemoryGoodE4TUid @ 1 NONAME
+	_ZN16ROOMAllocSession14StopAllocatingEv @ 2 NONAME
+	_ZN16ROOMAllocSession15StartAllocatingEv @ 3 NONAME
+	_ZN16ROOMAllocSession5ResetEv @ 4 NONAME
+	_ZN16ROOMAllocSession7ConnectEv @ 5 NONAME
+	_ZN16ROOMAllocSession9ConfigureE4TUidjjj @ 6 NONAME
+	_ZN16ROOMAllocSession9MemoryLowE4TUid @ 7 NONAME
+

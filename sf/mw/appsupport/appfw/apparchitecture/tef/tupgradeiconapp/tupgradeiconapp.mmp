@@ -1,0 +1,54 @@
+// Copyright (c) 2007-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// using relative paths for sourcepath and user includes
+// 
+//
+
+/**
+ @file
+ @test
+ @internalComponent - Internal Symbian test code
+*/
+
+TARGET        		tupgradeiconapp.exe
+TARGETTYPE    		exe
+TARGETPATH      	/sys/bin
+UID           		0x100039CE 0xA0003195
+CAPABILITY  		tcb
+VENDORID 	  		0x70000001
+
+SOURCEPATH    	.
+SOURCE		tupgradeiconapp.cpp
+
+USERINCLUDE   	.
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+//SYSTEMINCLUDE 	/epoc32/include/techview
+
+SOURCEPATH	.
+RESOURCE 	tupgradeiconapp.rss
+START RESOURCE	tupgradeiconapp.rss
+TARGETPATH	/apparctestregfiles
+LANG		SC
+END
+
+SOURCEPATH	.
+START RESOURCE	tupgradeiconapp_reg.rss
+TARGETPATH /apparctestregfiles
+END
+
+
+LIBRARY       euser.lib apparc.lib cone.lib eikcore.lib gdi.lib
+
+SMPSAFE

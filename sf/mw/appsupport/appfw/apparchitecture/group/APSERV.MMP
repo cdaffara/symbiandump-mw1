@@ -1,0 +1,74 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+//
+// APSERV.MMP for component APSERV
+//
+
+/**
+@file
+
+@SYMPurpose apserv.dll Apparc server
+*/
+
+
+target          apserv.dll
+CAPABILITY All -Tcb
+targettype      DLL
+UID		0x1000008D 0x10003A3E
+VENDORID 0x70000001
+
+SOURCEPATH	../apserv
+
+userinclude		../inc ../apparc
+userinclude		../apgrfx
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+
+source          APSSERV.CPP APSSES.CPP APSSTD.CPP APSSCAN.CPP
+source          APSSTART.CPP APSRECCACHE.cpp APSRECUTIL.CPP
+source	        APSCONSTDATA.CPP
+#ifndef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+source          apsnnapps.cpp apsnnappupdates.cpp
+#endif
+
+
+library         euser.lib efsrv.lib apparc.lib apgrfx.lib apmime.lib fbscli.lib apfile.lib
+library         estor.lib bafl.lib ws32.lib ecom.lib
+library		aplist.lib
+
+#ifdef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+library		scrclient.lib
+library		sisregistryclient.lib
+#endif
+
+macro UI_FRAMEWORKS_V1_REMNANT_FOR_JAVA_MIDLET_INSTALLER
+
+#ifdef SYMBIAN_UNIVERSAL_INSTALL_FRAMEWORK
+	deffile APSERV.DEF
+#else
+	deffile apserv_legacy.def
+#endif
+
+START WINS
+	baseaddress	0x43700000
+END
+
+START MARM
+END
+
+SMPSAFE
+

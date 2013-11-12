@@ -1,0 +1,12 @@
+EXPORTS
+	??0CCFActionPlugIn@@IAE@XZ @ 1 NONAME ; CCFActionPlugIn::CCFActionPlugIn(void)
+	??1CCFActionPlugIn@@UAE@XZ @ 2 NONAME ; CCFActionPlugIn::~CCFActionPlugIn(void)
+	??1CCFActivator@@UAE@XZ @ 3 NONAME ; CCFActivator::~CCFActivator(void)
+	?AsyncExecutionCompleted@CCFActionPlugIn@@QAEXXZ @ 4 NONAME ; void CCFActionPlugIn::AsyncExecutionCompleted(void)
+	?FinishedExecution@CCFActionPlugIn@@UAEXXZ @ 5 NONAME ; void CCFActionPlugIn::FinishedExecution(void)
+	?NewL@CCFActionPlugIn@@SAPAV1@ABVTUid@@@Z @ 6 NONAME ; class CCFActionPlugIn * CCFActionPlugIn::NewL(class TUid const &)
+	?NewL@CCFActivator@@SAPAV1@XZ @ 7 NONAME ; class CCFActivator * CCFActivator::NewL(void)
+	?NewLC@CCFActionPlugIn@@SAPAV1@ABVTUid@@@Z @ 8 NONAME ; class CCFActionPlugIn * CCFActionPlugIn::NewLC(class TUid const &)
+	?PrepareExecutionL@CCFActionPlugIn@@UAEXXZ @ 9 NONAME ; void CCFActionPlugIn::PrepareExecutionL(void)
+	?Extension@CCFActionPlugIn@@UBEPAXABVTUid@@@Z @ 10 NONAME ; void * CCFActionPlugIn::Extension(class TUid const &) const
+

@@ -1,0 +1,4 @@
+EXPORTS
+	?NewL@CCFClient@@SAPAV1@AAVMCFListener@@@Z @ 1 NONAME ; class CCFClient * CCFClient::NewL(class MCFListener &)
+	?NewLC@CCFClient@@SAPAV1@AAVMCFListener@@@Z @ 2 NONAME ; class CCFClient * CCFClient::NewLC(class MCFListener &)
+

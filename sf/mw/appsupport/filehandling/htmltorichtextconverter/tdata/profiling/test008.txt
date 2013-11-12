@@ -1,0 +1,24 @@
+<h3 align = center>h3</h3>
+<p><b>bold</b> normal
+<img SRC="http://www.foo.com/foo.gif" ALT="alt ">
+<h3 align = center>h3</h3>
+<p><b>bold</b> normal
+<img SRC="http://www.foo.com/foo.gif" ALT="alt ">
+<h3 align = center>h3</h3>
+<p><b>bold</b> normal
+<img SRC="http://www.foo.com/foo.gif" ALT="alt ">
+<h3 align = center>h3</h3>
+<p><b>bold</b> normal
+<img SRC="http://www.foo.com/foo.gif" ALT="alt ">
+<h3 align = center>h3</h3>
+<p><b>bold</b> normal
+<img SRC="http://www.foo.com/foo.gif" ALT="alt ">
+<h3 align = center>h3</h3>
+<p><b>bold</b> normal
+<img SRC="http://www.foo.com/foo.gif" ALT="alt ">
+<h3 align = center>h3</h3>
+<p><b>bold</b> normal
+<img SRC="http://www.foo.com/foo.gif" ALT="alt ">
+<h3 align = center>h3</h3>
+<p><b>bold</b> normal
+<img SRC="http://www.foo.com/foo.gif" ALT="alt ">

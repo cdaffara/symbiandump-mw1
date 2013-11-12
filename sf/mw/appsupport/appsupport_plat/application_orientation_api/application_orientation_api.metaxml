@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="4c8b5e554bf9df4704fd9aa55febcc92" dataversion="2.0">
+<name>Application Orientation API</name>
+<description>This API describes the default application orientations for different applications.</description>
+<type>c++</type>
+<collection>contextframework</collection>
+<libs></libs>
+<release category="platform" sinceversion="0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

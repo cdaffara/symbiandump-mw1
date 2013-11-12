@@ -1,0 +1,125 @@
+
+(object Petal
+    version    	43
+    _written   	"Rose 6.5.9232.10"
+    charSet    	0)
+
+(object Class_Category "BClasses"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"40F3CFB10172"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "TimeZone"
+	    quid       	"40D02EE4014B"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iName"
+		    quid       	"40D6C8430191")
+		(object ClassAttribute "iAltName"
+		    quid       	"40D6CD55000A")))
+	(object Class "Country"
+	    quid       	"4087D8DF026D"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "name"
+		    quid       	"4087D8F300A8")
+		(object ClassAttribute "CapitalCity"
+		    quid       	"4087DBF602C5")
+		(object ClassAttribute "DialOutCode"
+		    quid       	"4087DC010342")
+		(object ClassAttribute "InternationalCode"
+		    quid       	"4087DC09012F")
+		(object ClassAttribute "InterCityCode"
+		    quid       	"4087DC1F0120")))
+	(object Class "DSTZone"
+	    quid       	"407E6AC801E5"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "name"
+		    quid       	"407E80F00168")))
+	(object Class "DST Rule"
+	    quid       	"407E6A07035C"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iStdOffset"
+		    quid       	"407E831901F4")))
+	(object Class "STDTimeZone"
+	    quid       	"407E69FD00AC"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "name"
+		    quid       	"407E80B3032D")
+		(object ClassAttribute "UTCOffset"
+		    quid       	"4087DDB80377")))
+	(object Class "Location"
+	    quid       	"407E69D9001F"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "name"
+		    quid       	"407E81B10010")
+		(object ClassAttribute "STDCode"
+		    quid       	"4087DD47020E")
+		(object ClassAttribute "TimeZone"
+		    quid       	"4087DCD00057")
+		(object ClassAttribute "DSTZones"
+		    quid       	"4087DCF10122")
+		(object ClassAttribute "Longitude"
+		    quid       	"4087DCFA02E7")
+		(object ClassAttribute "Lattitude"
+		    quid       	"4087DD16028A")))
+	(object Class "Zone"
+	    quid       	"40B364A5035D"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iId"
+		    quid       	"40CDD1180197")))
+	(object Class "RuleUse"
+	    quid       	"40B3652A00A0"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iFromYear"
+		    quid       	"40B367520058")
+		(object ClassAttribute "iToYear"
+		    quid       	"40B367570337")))
+	(object Class "RuleLetter"
+	    quid       	"40D6C8DF01AF"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iLetter"
+		    quid       	"40D6CDAA0318")))
+	(object Class "Rule"
+	    quid       	"40D16795026D"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iName"
+		    quid       	"40D1970301C1")))
+	(object Class "ZoneFormat"
+	    quid       	"40B36506033F"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iFormat"
+		    quid       	"40B366EF0028")))
+	(object Class "RuleDefinition"
+	    quid       	"40B3654800BF"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iOffset"
+		    quid       	"40B366410372")
+		(object ClassAttribute "iMonth"
+		    quid       	"40B366570017")
+		(object ClassAttribute "iDayRule"
+		    quid       	"40B3665D0269")
+		(object ClassAttribute "iStatus"
+		    quid       	"40B366640111")
+		(object ClassAttribute "iDayOfMonth"
+		    quid       	"40B3666B00A4")
+		(object ClassAttribute "iDayOfWeek"
+		    quid       	"40B3667403A1")
+		(object ClassAttribute "iTimeOfChange"
+		    quid       	"40B3667D0344")
+		(object ClassAttribute "iTimeChangeRef"
+		    quid       	"40B3668700D3")))
+	(object Class "TimeZoneShortName"
+	    quid       	"40F3ED1C0353")
+	(object Class "STDTimeAlignment"
+	    quid       	"40B3658702F2"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "iFromYear"
+		    quid       	"40B366D002E7"
+		    type       	"TInt")
+		(object ClassAttribute "iToYear"
+		    quid       	"40B366DD0289"
+		    type       	"TInt")
+		(object ClassAttribute "iUTCOffset"
+		    quid       	"40D198250186"
+		    type       	"TInt"))))
+    logical_presentations 	(list unit_reference_list))

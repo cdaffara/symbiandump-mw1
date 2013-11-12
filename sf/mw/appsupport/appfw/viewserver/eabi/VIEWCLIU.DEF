@@ -1,0 +1,47 @@
+EXPORTS
+	_ZN18CVwsSessionWrapper12ActivateViewERK10TVwsViewId4TUidRK6TDesC8 @ 1 NONAME
+	_ZN18CVwsSessionWrapper15StartViewServerER14MVwsAppStarter @ 2 NONAME
+	_ZN18CVwsSessionWrapper17QueueAsyncRequestEv @ 3 NONAME
+	_ZN18CVwsSessionWrapper18ShutdownViewServerEv @ 4 NONAME
+	_ZN18CVwsSessionWrapper20DeactivateActiveViewEv @ 5 NONAME
+	_ZN18CVwsSessionWrapper20NotifyNextActivationERK10TVwsViewId @ 6 NONAME
+	_ZN18CVwsSessionWrapper20NotifyNextActivationEv @ 7 NONAME
+	_ZN18CVwsSessionWrapper20SetSystemDefaultViewERK10TVwsViewId @ 8 NONAME
+	_ZN18CVwsSessionWrapper20SetSystemDefaultViewERK10TVwsViewIdi @ 9 NONAME
+	_ZN18CVwsSessionWrapper21SetServerEventTimeOutE27TTimeIntervalMicroSeconds32 @ 10 NONAME
+	_ZN18CVwsSessionWrapper22NotifyNextDeactivationERK10TVwsViewId @ 11 NONAME
+	_ZN18CVwsSessionWrapper22NotifyNextDeactivationEv @ 12 NONAME
+	_ZN18CVwsSessionWrapper23CreateActivateViewEventERK10TVwsViewId4TUidRK6TDesC8 @ 13 NONAME
+	_ZN18CVwsSessionWrapper23SetClientRequestTimeOutE27TTimeIntervalMicroSeconds32 @ 14 NONAME
+	_ZN18CVwsSessionWrapper24ActivateViewViaViewEventERK20TVwsViewIdAndMessage @ 15 NONAME
+	_ZN18CVwsSessionWrapper24EnableServerEventTimeOutEi @ 16 NONAME
+	_ZN18CVwsSessionWrapper4NewLER26MVwsSessionWrapperObserver @ 17 NONAME
+	_ZN18CVwsSessionWrapper4NewLEv @ 18 NONAME
+	_ZN18CVwsSessionWrapper5NewLCER26MVwsSessionWrapperObserver @ 19 NONAME
+	_ZN18CVwsSessionWrapper5NewLCEv @ 20 NONAME
+	_ZN18CVwsSessionWrapper7AddViewERK10TVwsViewId @ 21 NONAME
+	_ZN18CVwsSessionWrapper8StartAppE4TUid @ 22 NONAME
+	_ZN18CVwsSessionWrapperD0Ev @ 23 NONAME
+	_ZN18CVwsSessionWrapperD1Ev @ 24 NONAME
+	_ZN18CVwsSessionWrapperD2Ev @ 25 NONAME
+	_ZNK18CVwsSessionWrapper10RemoveViewERK10TVwsViewId @ 26 NONAME
+	_ZNK18CVwsSessionWrapper14SetDefaultViewERK10TVwsViewId @ 27 NONAME
+	_ZNK18CVwsSessionWrapper14SetDefaultViewERK10TVwsViewIdi @ 28 NONAME
+	_ZNK18CVwsSessionWrapper20RequestCustomMessageER5TDes8 @ 29 NONAME
+	_ZN18CVwsSessionWrapper20GetSystemDefaultViewER10TVwsViewId @ 30 NONAME
+	_ZTI18CVwsSessionWrapper @ 31 NONAME ; #<TI>#
+	_ZTI23CVwsSessionEventHandler @ 32 NONAME ; #<TI>#
+	_ZTV18CVwsSessionWrapper @ 33 NONAME ; #<VT>#
+	_ZTV23CVwsSessionEventHandler @ 34 NONAME ; #<VT>#
+	_ZN18CVwsSessionWrapper23CheckSourceOfViewSwitchERiRK15TSecurityPolicyPKc @ 35 NONAME
+	_ZN18CVwsSessionWrapper23EnableServerBlankScreenEi @ 36 NONAME
+	_ZN18CVwsSessionWrapper26EnableExternalViewSwitchesEi @ 37 NONAME
+	_ZN18CVwsSessionWrapper12ActivateViewERK10TVwsViewId4TUidRK6TDesC8R14TRequestStatus @ 38 NONAME
+	_ZN18CVwsSessionWrapper16SetCrossCheckUidERK4TUid @ 39 NONAME
+	_ZN18CVwsSessionWrapper32DeactivateActiveViewIfOwnerMatchEv @ 40 NONAME
+	_ZN18CVwsSessionWrapper24SetWindowBackgroundColorERK4TRgb @ 41 NONAME
+	_ZN18CVwsSessionWrapper12ActivateViewERK10TVwsViewId4TUidRK6TDesC8R14TRequestStatusi @ 42 NONAME
+	_ZN18CVwsSessionWrapper12ActivateViewERK10TVwsViewId4TUidRK6TDesC8i @ 43 NONAME
+	_ZN18CVwsSessionWrapper23CreateActivateViewEventERK10TVwsViewId4TUidRK6TDesC8i @ 44 NONAME
+	_ZN18CVwsSessionWrapper28GetCurrentActiveViewInSystemER10TVwsViewId @ 45 NONAME
+

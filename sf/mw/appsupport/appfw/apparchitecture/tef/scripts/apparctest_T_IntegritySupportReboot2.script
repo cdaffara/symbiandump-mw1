@@ -1,0 +1,31 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-IntegritySupportReboot2TestStep-TestRollbackL-0001
+//! @SYMTestCaseDesc 		This test case assumes IntegritySupportReboot1TestStep has been run before IntegritySupportReboot1TestStep have been rolled back and that the device is in a consistent state.      
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		Check the presence/absence of KApplication2 and KApplication1 respectively
+//! @SYMTestExpectedResults 	KApplication1 is absent, KApplication2 is present.
+
+START_TESTCASE API-APPFWK-T-IntegritySupportReboot2TestStep-TestRollbackL-0001
+
+PRINT Run T_IntegritySupportReboot2 Apparc test
+//
+LOAD_SUITE ApparctestServer
+RUN_TEST_STEP 1000 ApparctestServer T_IntegritySupportReboot2
+
+END_TESTCASE API-APPFWK-T-IntegritySupportReboot2TestStep-TestRollbackL-0001

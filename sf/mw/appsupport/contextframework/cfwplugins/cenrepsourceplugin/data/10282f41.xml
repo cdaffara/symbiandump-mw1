@@ -1,0 +1,19 @@
+<ContextSourceSettings>
+    <CenRepSource UID='0x10282df0' Key='0x00000001' Mode='NonMasked'>
+        <Key Value='0' ContextSource='Sensor' ContextType='Setting.Active' ContextValue='Off'/>
+        <Key Value='1' ContextSource='Sensor' ContextType='Setting.Active' ContextValue='On'/>
+    </CenRepSource>
+    <CenRepSource UID='0x10282df0' Key='0x00000002' Mode='Masked'>
+        <Key Value='0x0' ContextSource='Sensor' ContextType='Setting.TappingInteraction' ContextValueSet='On' ContextValueUnset='Off'/>
+        <Key Value='0x1' ContextSource='Sensor' ContextType='Setting.TappingInteraction.SilenceCalls' ContextValueSet='On' ContextValueUnset='Off'/>
+        <Key Value='0x2' ContextSource='Sensor' ContextType='Setting.TappingInteraction.SilenceAlarm' ContextValueSet='On' ContextValueUnset='Off'/>
+        <Key Value='0x4' ContextSource='Sensor' ContextType='Setting.TappingInteraction.Message' ContextValueSet='On' ContextValueUnset='Off'/>
+        <Key Value='0x8' ContextSource='Sensor' ContextType='Setting.TappingInteraction.MusicPlayer' ContextValueSet='On' ContextValueUnset='Off'/>
+    </CenRepSource>
+		<CenRepSource UID='0x10282df0' Key='0x00000003' Mode='Masked'>
+        <Key Value='0x0' ContextSource='Sensor' ContextType='Setting.TurningInteraction' ContextValueSet='On' ContextValueUnset='Off'/>
+        <Key Value='0x1' ContextSource='Sensor' ContextType='Setting.TurningInteraction.SilenceCalls' ContextValueSet='On' ContextValueUnset='Off'/>
+        <Key Value='0x2' ContextSource='Sensor' ContextType='Setting.TurningInteraction.SilenceAlarm' ContextValueSet='On' ContextValueUnset='Off'/>
+        <Key Value='0x4' ContextSource='Sensor' ContextType='Setting.TurningInteraction.AutoRotation' ContextValueSet='On' ContextValueUnset='Off'/>        
+    </CenRepSource>
+</ContextSourceSettings>

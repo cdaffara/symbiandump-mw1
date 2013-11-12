@@ -1,0 +1,94 @@
+<ContextSourceSettings>
+
+    <!-- AvkonDomainPSKeys.h -->
+	<!-- KPSUidAvkonDomain = { 0x10207218 } ( Same as KPSUidAvkonInternal ) -->
+	<!-- KAknKeyguardStatus = 0x00000001 -->
+    <PSContextSourcePlugIn mapper="int" category="0x10207218" key="0x00000001"
+    	capability="SwEvent UserEnvironment"
+    	source="System" type="Keyguard.Status" passthrough="false">
+        <IntMapping psvalue="0" contextvalue="EKeyguardNotActive"/>
+	    <IntMapping psvalue="1" contextvalue="EKeyguardLocked"/>
+		<IntMapping psvalue="2" contextvalue="EKeyguardAutolockEmulation"/>
+    </PSContextSourcePlugIn>
+
+    <!-- can't map accurate values because value of ps key is flagged via RD_REMOTELOCK and thus varies -->
+    <PSContextSourcePlugIn mapper="int" category="0x101F8767" key="0x00000501"
+    	capability="ReadDeviceData"
+    	source="Device" type="DeviceLock.Status" passthrough="false">
+        <IntMapping psvalue="0" contextvalue="EAutolockStatusUninitialized"/>
+	    <IntMapping psvalue="1" contextvalue="EDeviceLockOff"/>
+		<IntMapping psvalue="2" contextvalue="EDeviceLockOn"/>
+		<IntMapping psvalue="3" contextvalue="EDeviceLockOn"/>
+		<IntMapping psvalue="4" contextvalue="EDeviceLockOn"/>
+		<IntMapping psvalue="5" contextvalue="EDeviceLockOn"/>
+    </PSContextSourcePlugIn>
+
+    <!-- HWRMFmTxDomainPSKeys.h -->
+	<!-- KPSUidHWRMFmTx = { 0x101F7A02 } -->
+	<!-- KHWRMFmTxStatus = 0x00000001 -->
+    <PSContextSourcePlugIn mapper="int" category="0x101F7A02" key="0x00000001"
+    	capability=""
+    	source="FmTx" type="State" passthrough="false">
+        <IntMapping psvalue="0" contextvalue="Off"/>
+		<IntMapping psvalue="1" contextvalue="Off"/>
+		<IntMapping psvalue="2" contextvalue="Active"/>
+		<IntMapping psvalue="4" contextvalue="Inactive"/>
+		<IntMapping psvalue="8" contextvalue="PowerSaveInactivity"/>
+		<IntMapping psvalue="16" contextvalue="PowerSaveAccessory"/>
+		<IntMapping psvalue="32" contextvalue="Scanning"/>
+    </PSContextSourcePlugIn>
+
+    <!-- MediaStreamPropertiesPSKeys.h -->
+	<!-- KPSUidMediaStreamProperties = {0x10207B8E}; -->
+	<!-- KMediaStreamCurrentVolume = 0x00000001 -->
+    <PSContextSourcePlugIn mapper="int" category="0x10207B8E" key="0x00000001"
+    	capability=""
+    	source="CurrentVolume" type="Mute" passthrough="false">
+        <IntMapping psvalue="0" contextvalue="On"/>
+	    <IntMapping psvalue="1" contextvalue="Off"/>
+		<IntMapping psvalue="2" contextvalue="Off"/>
+		<IntMapping psvalue="3" contextvalue="Off"/>
+		<IntMapping psvalue="4" contextvalue="Off"/>
+		<IntMapping psvalue="5" contextvalue="Off"/>
+		<IntMapping psvalue="6" contextvalue="Off"/>
+		<IntMapping psvalue="7" contextvalue="Off"/>
+		<IntMapping psvalue="8" contextvalue="Off"/>
+		<IntMapping psvalue="9" contextvalue="Off"/>
+	    <IntMapping psvalue="10" contextvalue="Off"/>
+    </PSContextSourcePlugIn>
+
+    <!-- HWRMDomainPSKeys.h -->
+	<!-- Device Switch Status API -->
+	<!-- KPSUidHWRM = {0x10205047} -->
+	<!-- KHWRMTwistStatus  = 0x00000100 -->
+    <PSContextSourcePlugIn mapper="int" category="0x10205047" key="0x00000100"
+    	capability="ReadDeviceData"
+    	source="Device" type="Twist.Status" passthrough="false">
+        <IntMapping psvalue="1" contextvalue="Closed"/>
+        <IntMapping psvalue="2" contextvalue="Open"/>
+    </PSContextSourcePlugIn>
+
+    <!-- HWRMDomainPSKeys.h -->
+	<!-- Device Switch Status API -->
+	<!-- KPSUidHWRM = {0x10205047} -->
+	<!-- KHWRMGripStatus  = 0x00000101 -->
+    <PSContextSourcePlugIn mapper="int" category="0x10205047" key="0x00000101"
+    	capability="ReadDeviceData"
+    	source="Device" type="Grip.Status" passthrough="false">
+        <IntMapping psvalue="1" contextvalue="Open"/>
+        <IntMapping psvalue="2" contextvalue="Closed"/>
+    </PSContextSourcePlugIn>
+
+    <!-- HWRMDomainPSKeys.h -->
+	<!-- Device Switch Status API -->
+	<!-- KPSUidHWRM = {0x10205047} -->
+	<!-- EPSHWRMFlipStatus  = 0x00000102 -->
+    <PSContextSourcePlugIn mapper="int" category="0x10205047" key="0x00000102"
+    	capability="ReadDeviceData"
+    	source="Device" type="Flip.Status" passthrough="false">
+        <IntMapping psvalue="1" contextvalue="Open"/>
+        <IntMapping psvalue="2" contextvalue="Closed"/>
+    </PSContextSourcePlugIn>
+
+</ContextSourceSettings>
+

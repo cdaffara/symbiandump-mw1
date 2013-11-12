@@ -1,0 +1,58 @@
+EXPORTS
+	_ZN11CPrintSetup11StartPrintLERK16TPrintParametersR18MPageRegionPrinterP12CPrinterPortP21MPrintProcessObserver @ 1 NONAME
+	_ZN11CPrintSetup12InternalizeLER11RReadStream @ 2 NONAME
+	_ZN11CPrintSetup13FreeModelListEv @ 3 NONAME
+	_ZN11CPrintSetup14ModelNameListLER3RFs @ 4 NONAME
+	_ZN11CPrintSetup18RestoreComponentsLERK12CStreamStorePK18MFieldFileNameInfoPK18MFieldNumPagesInfoP15MPictureFactory @ 5 NONAME
+	_ZN11CPrintSetup18StartPreviewPrintLERK16TPrintParametersR18MPageRegionPrinterP21MPrintProcessObserverR15CGraphicsDeviceRK5TRectSB_i @ 6 NONAME
+	_ZN11CPrintSetup20AddPrinterDriverDirLERK7TDesC16 @ 7 NONAME
+	_ZN11CPrintSetup20CreatePrinterDeviceLE4TUidR3RFs @ 8 NONAME
+	_ZN11CPrintSetup20CreatePrinterDeviceLEi @ 9 NONAME
+	_ZN11CPrintSetup22CreatePrinterDriverUILEv @ 10 NONAME
+	_ZN11CPrintSetup4NewLEv @ 11 NONAME
+	_ZN11CPrintSetup8EndPrintEv @ 12 NONAME
+	_ZN11CPrintSetup8RestoreLERK12CStreamStore9TStreamIdPK18MFieldFileNameInfoPK18MFieldNumPagesInfoP15MPictureFactory @ 13 NONAME
+	_ZN11CPrintSetupD0Ev @ 14 NONAME
+	_ZN11CPrintSetupD1Ev @ 15 NONAME
+	_ZN11CPrintSetupD2Ev @ 16 NONAME
+	_ZN12TPageMargins12InternalizeLER11RReadStream @ 17 NONAME
+	_ZN13CHeaderFooter11CreateTextLEv @ 18 NONAME
+	_ZN13CHeaderFooter12InternalizeLER11RReadStream @ 19 NONAME
+	_ZN13CHeaderFooter13SetCharFormatEP16CCharFormatLayer @ 20 NONAME
+	_ZN13CHeaderFooter13SetParaFormatEP16CParaFormatLayer @ 21 NONAME
+	_ZN13CHeaderFooter15SetFileNameInfoERK18MFieldFileNameInfo @ 22 NONAME
+	_ZN13CHeaderFooter15SetNumPagesInfoERK18MFieldNumPagesInfo @ 23 NONAME
+	_ZN13CHeaderFooter18RestoreComponentsLERK12CStreamStoreP15MPictureFactory @ 24 NONAME
+	_ZN13CHeaderFooter21SetFirstPageToPrintToEi @ 25 NONAME
+	_ZN13CHeaderFooter4NewLEv @ 26 NONAME
+	_ZN13CHeaderFooter7SetTextEP9CRichText @ 27 NONAME
+	_ZN13CHeaderFooter8RestoreLERK12CStreamStore9TStreamIdP15MPictureFactory @ 28 NONAME
+	_ZN13CHeaderFooterD0Ev @ 29 NONAME
+	_ZN13CHeaderFooterD1Ev @ 30 NONAME
+	_ZN13CHeaderFooterD2Ev @ 31 NONAME
+	_ZN16TPrintParametersC1Ev @ 32 NONAME
+	_ZN16TPrintParametersC2Ev @ 33 NONAME
+	_ZNK11CPrintSetup12ExternalizeLER12RWriteStream @ 34 NONAME
+	_ZNK11CPrintSetup13PrinterDeviceEv @ 35 NONAME
+	_ZNK11CPrintSetup16StoreComponentsLER12CStreamStoreR9CStoreMap @ 36 NONAME
+	_ZNK11CPrintSetup6StoreLER12CStreamStore @ 37 NONAME
+	_ZNK12TPageMargins12ExternalizeLER12RWriteStream @ 38 NONAME
+	_ZNK13CHeaderFooter10CharFormatEv @ 39 NONAME
+	_ZNK13CHeaderFooter10ParaFormatEv @ 40 NONAME
+	_ZNK13CHeaderFooter12ExternalizeLER12RWriteStream @ 41 NONAME
+	_ZNK13CHeaderFooter16StoreComponentsLER12CStreamStoreR9CStoreMap @ 42 NONAME
+	_ZNK13CHeaderFooter4TextEv @ 43 NONAME
+	_ZNK13CHeaderFooter6StoreLER12CStreamStore @ 44 NONAME
+	_ZTI11CPrintSetup @ 45 NONAME ; #<TI>#
+	_ZTI13CHeaderFooter @ 46 NONAME ; #<TI>#
+	_ZTV11CPrintSetup @ 47 NONAME ; #<VT>#
+	_ZTV13CHeaderFooter @ 48 NONAME ; #<VT>#
+	_ZTI13CPrintProcess @ 49 NONAME ; #<TI>#
+	_ZTI14TStoreResolver @ 50 NONAME ; #<TI>#
+	_ZTI15CPreviewProcess @ 51 NONAME ; #<TI>#
+	_ZTI20CHeaderFooterPrinter @ 52 NONAME ; #<TI>#
+	_ZTV13CPrintProcess @ 53 NONAME ; #<VT>#
+	_ZTV14TStoreResolver @ 54 NONAME ; #<VT>#
+	_ZTV15CPreviewProcess @ 55 NONAME ; #<VT>#
+	_ZTV20CHeaderFooterPrinter @ 56 NONAME ; #<VT>#
+

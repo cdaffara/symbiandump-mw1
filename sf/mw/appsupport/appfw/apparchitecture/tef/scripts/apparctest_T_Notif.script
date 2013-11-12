@@ -1,0 +1,36 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-NotifStep-TestAppNotificationL-0001
+//! @SYMPREQ 			PREQ1087
+//! @SYMTestCaseDesc 		Test whether notification is received from CApaAppListNotifier whenever application list changes. Requirement PCHY-5L3RDW. 
+//! @SYMTestPriority 		High 
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		The method creates an object of user-defined observer CTestObserver and creates a CApaAppListNotifier active object which is associated to the
+//!				observer. It then starts the active scheduler and adds a new application or deletes an application from the application list. To ensure that notifications are received on
+//!				change in application list HandleAppListEvent() method which is derived from interface class MApaAppListServObserver is observed.\n
+//!				API Calls:
+//!				CApaAppListNotifier::NewL(MApaAppListServObserver* aObserver, TPriority aPriority)\n
+//! @SYMTestExpectedResults 	On deletion of the app the notification for change in the application list is received.
+
+START_TESTCASE API-APPFWK-T-NotifStep-TestAppNotificationL-0001
+
+PRINT Run T_Notif Apparc test
+//
+LOAD_SUITE ApparcTestServer 
+RUN_TEST_STEP 250 ApparcTestServer T_Notif 
+
+END_TESTCASE API-APPFWK-T-NotifStep-TestAppNotificationL-0001

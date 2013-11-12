@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="Alarm Server">
+  <purpose>
+    Server managing a queue of system-wide time-based alarms, provides query, set, modify, and notify APIs for client applications.
+  </purpose>
+</relnotes>

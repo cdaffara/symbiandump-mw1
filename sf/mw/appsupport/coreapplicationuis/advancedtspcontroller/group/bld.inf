@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+* 
+*
+* Description:  Bld.inf file for Symbian's Remote Control framework related 
+*				 plug-ins that are used to deliver messages (e.g. accessory key 
+*				 presses) between Series 60 components and remote targets.
+*
+*/
+
+/*
+*NTT DOCOMO, INC - BUG 2365
+*/
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+#ifdef RD_TSP_CLIENT_MAPPER
+/*
+Copy keyevent.rul, keyincall.rul, keyinfmtx.rul to 
+1. /epoc32/data/z/private/10282BC4/rules/
+2. /epoc32/release/winscw/udeb/z/private/10282BC4/rules/
+3. /epoc32/release/winscw/urel/z/private/10282BC4/rules/
+*/
+// Rules for media key handling
+../data/keyevent.rul                                        	    Z:/private/10282bc4/rules/keyevent.rul
+// Call handling rules
+../data/keyincall.rul                               	            Z:/private/10282bc4/rules/keyincall.rul
+// FM transmitter handling rules
+../data/keyinfmtx.rul                               	            Z:/private/10282bc4/rules/keyinfmtx.rul
+
+../rom/advancedtspcontroller.iby CORE_MW_LAYER_IBY_EXPORT_PATH(advancedtspcontroller.iby)
+
+PRJ_MMPFILES
+RemConTspController.mmp
+
+#endif // RD_TSP_CLIENT_MAPPER
+
+//  End of File  

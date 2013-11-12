@@ -1,0 +1,705 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE alarmserverunittestserver
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0321
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0321
+//! @SYMTestCaseDesc MaxAlarms setting limits number of Notifying alarms (MAN)
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. configure CAAS to support max of 3 simultaneous alarm notifications;
+//!		. register 5 alarms with the AlarmServer that expire within a short period of time;
+//!		. wait until alarms expire;
+//!		. check states of the alarms.
+//! @SYMTestExpectedResults first 3 alarms are in Notifying state, and the other two are WaitingToNotify
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.006
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE1
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0321
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0322
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0322
+//! @SYMTestCaseDesc Snooze to WaitingToNotify state (MAN)
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. configure CAAS to support max of 3 simultaneous alarm notifications;
+//!		. register 5 alarms (A0,A1,A2,A3,A4) with the AlarmServer that expire one after another;
+//!		. wait until alarms expire;
+//!		. snooze alarm A2 (A0 is the alarm that expired earliest, A4 is the one most recently expired);
+//!		. wait for the snooze period to end, check states of the alarms.
+//! @SYMTestExpectedResults first 3 alarms are in Notifying state, and the other two are WaitingToNotify.
+//!	When alarm A2 is snoozed: alarms A0,A1,A3 - Notifying, alarms A2,A4 - WaitingToNotify 
+//!	After snooze period ends A2 becoming notifying again because it has an original expiry time older than A3: 
+//!			alarms A0,A1,A2 - Notifying, alarms A3,A4 - WaitingToNotify
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.006
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.008
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE2
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0322
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0324
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0324
+//! @SYMTestCaseDesc Backwards compatibility for SAN
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set CAAS to SAN mode;
+//!		. register 2 alarms (A0,A1) with 1sec interval between expiry times; 
+//!		. wait for the two alarms to expire;
+//!		. trace EASAltOpCodeSetAlarm; 
+//!		. send back EASAltTestOpCodeResponseAcknowledgeAlarm to inform AlarmServer that A0 was acknowledged.
+//! @SYMTestExpectedResults notifying only 1 alarm at a time:
+//!		. AlarmServer should notify Alert Server of A1 only after A0 was notified.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.007
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE4
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0324
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0325
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0325
+//! @SYMTestCaseDesc Snooze Specified Alarm
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set CAAS to MAN mode;
+//!		. register 2 alarms (A0,A1), wait for all the alarms to expire;
+//!		. snooze alarm A0;
+//!		. check state of the alarms.
+//! @SYMTestExpectedResults alarm A1 should be in Notifying state; alarm A0 should be in Snoozed state.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.008
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE5
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0325
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0326
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0326
+//! @SYMTestCaseDesc Clear Specified Alarm
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set CAAS to MAN mode;
+//!		. register 2 alarms (A0,A1),  wait for all the alarms to expire;
+//!		. clear alarm A0;
+//!		. check state of the alarms.
+//! @SYMTestExpectedResults alarm A1 should be in Notifying state; alarm A0 should be in Notified state.
+//!		. ensure that EASAltOpCodeDeleteAlarm was called for alarm A0.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.009
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE6
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0326
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0327
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0327
+//! @SYMTestCaseDesc AcknowledgeAll
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set CAAS to MAN mode with maxAlarms = 3;
+//!		. register 6 alarms, wait for all the alarms to expire;
+//!		. clear all (EASAltAlertServerResponseClearAll);
+//!		. check state of the alarms.
+//! @SYMTestExpectedResults all 6 turn to Notified state.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.006
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE7
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0327
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0328
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0328
+//! @SYMTestCaseDesc Snooze when MaxAlarm is reached
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set CAAS to MAN mode with maxAlarms = 2;
+//!		. register 3 alarms (A0,A1,A2), wait for all the alarms to expire;
+//!		. snooze alarm A1;
+//!		. check state of the alarms.
+//! @SYMTestExpectedResults . alarm A2 takes free slot and becomes Notifying.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.008
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE8
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0328
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0329
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0329
+//! @SYMTestCaseDesc Late arrival SAN
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set CAAS to SAN mode;
+//!		. register 2 alarms (A0,A1): first alarm (A0) expires earlier, but gets added later;
+//!		. check state of the alarms.
+//! @SYMTestExpectedResults alarm that expired earlier (A0) becomes Notifying, forcing the second alarm (A1) into WaitingToNotify state
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.007
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE9
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0329
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0330
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0330
+//! @SYMTestCaseDesc Late arrival MAN
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set CAAS to MAN mode;
+//!		. register 2 alarms (A0,A1): first alarm (A0) expires earlier, but gets added later;
+//!		. check state of the alarms.
+//! @SYMTestExpectedResults both A0 and A1 are Notifying, though sound plays for A0 as it expired before A1
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.006
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE10
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0330
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0331
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0331
+//! @SYMTestCaseDesc Clear when MaxAlarm is reached
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set CAAS to MAN mode with maxAlarms = 2;
+//!		. register 3 alarms (A0,A1,A2), wait for all the alarms to expire;
+//!		. clear alarm A1;
+//!		. check state of the alarms.
+//! @SYMTestExpectedResults alarm A2 takes free slot and becomes Notifying; cleared alarm (A1) goes Notified.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.009
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE11
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0331
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0332
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0332
+//! @SYMTestCaseDesc Stuck in-between
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set CAAS to MAN mode with maxAlarms = 2;
+//!		. register 3 alarms, A1 expired between A0 and A2 but arrived to AS after A0 and A2 got into AltS; 
+//!		. wait for all the alarms to expire;
+//!		. check state of the alarms.
+//! @SYMTestExpectedResults alarm A1 takes place of A2 and becomes Notifying; A2 alarm becomes WaitingToNotify.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.006
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE12
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0332
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0333
+//! @SYMTestCaseID  PIM-UCT-PREQ1118-MAN-AS-0333
+//! @SYMTestCaseDesc PauseSound for specified alarm
+//! @SYMTestStatus  Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions . set CAAS to MAN mode, max of 2 simultaneous alarms;
+//!	. register 3 alarms (A0, A1, A2), wait for all the alarms to expire (A0 and A1 Notifying, A2 is WaitingToNotify);
+//!	. PauseSound A1 for 1 minute, check state of the alarms;
+//!	. wait for PauseSound period to end, check state of the alarms.
+//! @SYMTestExpectedResults . after PauseSound(A1) A1 becomes Snoozed, A2 becomes Notifying and starts playing sound;
+//!   	. After pause period expire, A1 becomes Notifying and playing again because it has older original expiry time than A2. And the A2 is downgraded to WaitingToNotify.
+//! @SYMTestType	 CT
+//! @SYMFssID	 <App-Services>/<AlarmServer>/EAS.005
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE13
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0333
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0334
+//! @SYMTestCaseID	PIM-UCT-PREQ1118-MAN-AS-0334
+//! @SYMTestCaseDesc 	PauseSound interrupted by next expiring alarm (MAN)
+//! @SYMTestStatus	Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions . MAN mode (nofAlarms < MaxAlarms=3); 
+//!	. add 2 alarms (A0, A1); 
+//!	. PauseSound for the playing alarm (A0), check state of the alarms (check A); 
+//!	. wait for the second alarm to expire (A1); 
+//!	. check state of the alarms, and for which alarm the sound is playing (check B) 
+//!	. wait for PauseSound period to end, check state of the alarms again (check C).	
+//! @SYMTestExpectedResults A. A0 stops playing sound; 
+//!	B. A0 goes Snoozed; A1 starts Notifying, sound playing; 
+//!	C. A0 becomes Notifying, restarts playing sound, A1 is Notifying, but not playing sound.	
+//! @SYMTestType	 CT
+//! @SYMFssID	 <App-Services>/<AlarmServer>/EAS.005
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE14
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0334
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0335
+//! @SYMTestCaseID	PIM-UCT-PREQ1118-MAN-AS-0335
+//! @SYMTestCaseDesc 	Several alarms expire simultaneously (MAN)
+//! @SYMTestStatus	Implemented
+//! @SYMTestPriority 	High
+//! @SYMTestActions	. MAN mode (nofAlarms > MaxAlarms);
+//!		. add 5 alarms that expire at the same second.
+//! @SYMTestExpectedResults alarms that were registered first, become Notifying first, others are WaitingToNotify.
+//! @SYMTestType	 	CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.006
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE15
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0335
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0336
+//! @SYMTestCaseID	PIM-UCT-PREQ1118-MAN-AS-0336
+//! @SYMTestCaseDesc	PauseSound for a non-playing alarm (MAN) 
+//! @SYMTestStatus	Implemented
+//! @SYMTestPriority 	High
+//! @SYMTestActions	. MAN mode;
+//!		. add 1 alarm(A0), wait until expires;
+//!		. wait while A0 stops playing sound (first ASPS interval);
+//!		. PauseSound for A0;
+//!		. wait for the start of the 2nd ASPS interval;
+//!		. check sound playing.
+//! @SYMTestExpectedResults PauseSound should still be in force, and A0 is NotPlaying sound.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.005
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE16
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0336
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0337
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0337
+//! @SYMTestCaseDesc 	PauseSound for a playing alarm (SAN) 
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. SAN mode, add two alarms (A0, A1);
+//!		. PauseSound (A0);
+//!		. check state of alarms (check A);
+//!		. wait when PauseSound period ends;
+//!		. check state of alarms (check B).
+//! @SYMTestExpectedResults A. A0 goes Snoozed, A1 is Notifying; 
+//!					 B. A0 is Notifying, A1 is WaitingToNotify because A0 has older original expiry time than A1
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.007
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE17
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0337
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0338
+//! @SYMTestCaseID	PIM-UCT-PREQ1118-MAN-AS-0338
+//! @SYMTestCaseDesc 	Client deletes playing alarm, when no WaitingToNotify alarms
+//! @SYMTestStatus	Implemented
+//! @SYMTestPriority 	High
+//! @SYMTestActions	. MAN mode (nofAlarms = MaxAlarms), add an alarm;
+//!		. use RASCliSession::DeleteAlarm() to delete first alarm (A0).
+//! @SYMTestExpectedResults EASAltOpCodeDelete is sent for A0.
+//! @SYMTestType	 	CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.006
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE18
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0338
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0339
+//! @SYMTestCaseID	PIM-UCT-PREQ1118-MAN-AS-0339
+//! @SYMTestCaseDesc 	Client deletes a Notifying alarm that is playing sound
+//! @SYMTestStatus	Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. MAN mode (nofAlarms > MaxAlarms), add 3 alarms;
+//!		. use RASCliSession::DeleteAlarm() to delete playing alarm (A1).
+//! @SYMTestExpectedResults EASAltOpCodeDelete is sent for A1; next WaitingToNotify alarm becomes Notifying.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.005
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE19
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0339
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0340
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0340
+//! @SYMTestCaseDesc 	Client deletes non-playing alarm, when no WaitingToNotify alarms
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. MAN mode (nofAlarms = MaxAlarms), add 2 alarms;
+//!		. use RASCliSession::DeleteAlarm() to delete first alarm (A0).
+//! @SYMTestExpectedResults . EASAltOpCodeDelete is sent for A0; A1 keeps Notifying, Playing sound.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.006
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE20
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0340
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0341
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0341
+//! @SYMTestCaseDesc 	Silence sound for non-playing alarm (MAN)
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. MAN mode (nofAlarms < MaxAlarms);
+//!		. add 2 alarms (A0, A1);
+//!		. silence non-playing alarm (A0);
+//!		. wait for the 2nd period of ASPS to begin;
+//!		. check state and sound for alarms.
+//! @SYMTestExpectedResults silencing a non-playing alarm does not affect other Notifying alarms.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.006
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE21
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0341
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0342
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0342
+//! @SYMTestCaseDesc 	Silence playing alarm (MAN)
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. MAN mode (nofAlarms < MaxAlarms);
+//!		. add 2 alarms (A0, A1);
+//!		. silence playing alarm (A1);
+//!		. check for which alarm sound is playing (check A);
+//!		. wait for the 2nd period of ASPS to begin;
+//!		. verify that A1 playing sound again (check B).
+//! @SYMTestExpectedResults A. no sound is played (A1 is Notifying, NotPlaying); B. silence is in effect only for one sound play interval, 
+//!		and A1 restarts playing again when new interval begins.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.005
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE22
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0342
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0343
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0343
+//! @SYMTestCaseDesc 	Silence playing alarm (SAN)
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions. 	. SAN mode, add two alarms (A0, A1);
+//!		. silence first alarm (A0);
+//!		. check for which alarm sound is playing (check A);
+//!		. wait for the 2nd period of ASPS to begin;
+//!		. verify that A0 playing sound again (check B).
+//! @SYMTestExpectedResults A. no sound is played (A1 is WaitingToNotify);
+//!		B. silence is in effect only for one sound play interval, and A0 restarts playing again when new interval begins.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.007
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE23
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0343
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0344
+//! @SYMTestCaseID	PIM-UCT-PREQ1118-MAN-AS-0344
+//! @SYMTestCaseDesc Clear late arrival alarm
+//! @SYMTestStatus	Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set MAN mode (nofAlarms < MaxAlarms);
+//!		. add 3 alarms: expire in order A0, A1, A2, but added in reverse order: A2 added first, then A1, then A0;
+//!		. clear A0 (the most recently added, but expired earliest);
+//!		. check for which alarm sound is playing.
+//! @SYMTestExpectedResults after all alarms arrives A0 is Playing because it is the last notifying alarm; after Clearing A0, 
+//               then A2 becomes Playing because it has latest expiry time
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.009
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE24
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0344
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0345
+//! @SYMTestCaseID	PIM-UCT-PREQ1118-MAN-AS-0345
+//! @SYMTestCaseDesc 	Add 3, Clear 3, Add 3 again
+//! @SYMTestStatus	Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set MAN mode (nofAlarms < MaxAlarms);
+//!		. add 3 alarms;
+//!		. clear the 3 alarms
+//!		. disconnect and reconnect to both Alarm Server and ConsoleAlarmAlertServer;
+//!		. add another 3 alarms
+//! @SYMTestExpectedResults the 3 alarms expire as expected
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.009
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE25
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0345
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0346
+//! @SYMTestCaseID	PIM-UCT-PREQ1118-MAN-AS-0346
+//! @SYMTestCaseDesc SAN Recover from Snooze
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	 Alarm A0 expires and becomes notifying, then it's snoozed for 1 min.
+//!		Then A1 becomes notifying. 
+//! @SYMTestExpectedResults 	When A0 expires again after snooze period ends, Because A0 has an original expiry time older than A1, Alarm server will downgrade A1 to WaitingToNotify
+//!	and A0 will become the Notifying alarm.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.007
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE26
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0346
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0347
+//! @SYMTestCaseID	PIM-UCT-PREQ1118-MAN-AS-0347
+//! @SYMTestCaseDesc 	Add 3, ClearAll, Add 3 again
+//! @SYMTestStatus	Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions	. set MAN mode nofAlarms < MaxAlarms);
+//!		. add 3 alarms;
+//!		. clear the 3 alarms using AcknowledgeAll command
+//!		. disconnect and reconnect to both Alarm Server and ConsoleAlarmAlertServer;
+//!		. add another 3 alarms
+//! @SYMTestExpectedResults the 3 alarms expire as expected
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.009
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE27
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0347
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0348
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0348
+//! @SYMTestCaseDesc Silenced Alarms Expire from Snoozed state in SingleAlarm Mode
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority Medium
+//! @SYMTestActions.
+//! 		 	. SAN mode, add three alarms (A0, A1, A2)
+//! 			. Alarm (A0) expires
+//! 			. Snooze notifying alarm (A0)
+//! 			. Alarm (A1) expires
+//! 			. Snooze notifying alarm (A1)
+//! 			. Alarm (A2) expires
+//! 			. Snoozed Alarm (A0) expires
+//! 			. Snoozed Alarm (A1) expires
+//! @SYMTestExpectedResults A0 is notifying and playing, A1 & A2 are waiting to notify
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.007
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE28
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0348
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0349
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0349
+//! @SYMTestCaseDesc Clear Alarms while no alarms notifying
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority Low
+//! @SYMTestActions.
+//! 		 	. SAN mode, add one alarm (A0)
+//! 			. Clear All Alarms (no event generated)
+//! 			. Alarm (A0) expires
+//! @SYMTestExpectedResults A0 is notifying and playing.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.009
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE29
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0349
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0350
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0350
+//! @SYMTestCaseDesc Delete Notifying Alarm, WaitingToNotify Alarm starts Playing.
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority Medium
+//! @SYMTestActions.
+//! 		 	. MAN mode (max = 2), add three alarms (A0, A1, A2)
+//! 			. Alarm (A0) expires
+//! 			. Alarm (A1) expires
+//! 			. Alarm (A2) expires, and is WaitingToNotify
+//! 			. Delete notifying and playing alarm (A1)
+//! 			. WaitingToNotify Alarm (A2) is now Notifying
+//! @SYMTestExpectedResults The "youngest" notifying alarm is playing.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.005
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE30
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0350
+
+
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0351
+//! @SYMTestCaseID	 PIM-UCT-PREQ1118-MAN-AS-0351
+//! @SYMTestCaseDesc Delete Notifying Alarm, Youngest Notifying Alarm starts playing.
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority Medium
+//! @SYMTestActions.
+//! 		 	. MAN mode (max = 3), add three alarms (A0, A1, A2)
+//! 			. Alarm (A0) expires
+//! 			. Alarm (A1) expires
+//! 			. Alarm (A2) expires
+//! 			. Delete notifying and playing alarm (A2)
+//! 			. Alarm (A1) is now Notifying
+//! @SYMTestExpectedResults The "youngest" notifying alarm is playing.
+//! @SYMTestType	 CT
+//! @SYMFssID		 <App-Services>/<AlarmServer>/EAS.005
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini TESTCASE31
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0351
+
+
+START_TESTCASE PIM-DEF063436-0001
+//! @SYMTestCaseID	 PIM-DEF063436-0001
+//! @SYMTestCaseDesc Test for DEF063436 with new CAAS API.
+//! @SYMTestStatus	 Implemented
+//! @SYMTestPriority Medium
+//! @SYMTestActions.
+//!				. SAN Mode
+//!				. Add 3 alarms (A0, A1, A2)
+//!				. Alarm (A0) expires
+//!				. Clear A0
+//!				. Alarm (A1) expires
+//!				. Clear A1
+//!				. Alarm (A2) expires
+//!				. Clear A2
+//!				. Delete All alarms (A0, A1, A2)
+//!				. Add 3 alarms (A3, A4, A5)
+//!				. Alarm (A3) expires - Notifying
+//!				. Alarm (A4) expires - Waiting To Notify
+//!				. Alarm (A5) expires - Waiting To Notify
+//!				. Clean A3
+//! @SYMTestExpectedResults A3 should be Notified, A4 should be Notifying, A5 should be WaitingToNotify
+//! @SYMTestType	 CT
+//! @SYMPREQ		 1118
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 300 alarmserverunittestserver TestMultipleAlarmsStep z:\testdata\config\tealarmserver_man.ini DEF063436
+END_TESTCASE PIM-DEF063436-0001
+
+

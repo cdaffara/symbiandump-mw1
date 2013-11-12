@@ -1,0 +1,58 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  mmp file
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../inc/imcacheuids.h"
+
+
+TARGET          imcacheserver.exe
+TARGETTYPE      exe
+
+UID             KStaticInterfaceDllUid2 KIMCacheServerUid3
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_SERVER
+TARGETPATH      /system/libs
+
+VERSION      10.0
+
+SOURCEPATH      ../src
+
+SOURCE      	cimcacheserver.cpp
+SOURCE      	cimcachesession.cpp
+SOURCE			ccacheserveractivehelper.cpp
+SOURCE			timcachemessagefactory.cpp
+SOURCE			cimcachemessageheader.cpp
+SOURCE			cimcachemessagebase.cpp
+SOURCE			cimcachebufferarray.cpp
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         flogger.lib
+LIBRARY         charconv.lib
+LIBRARY     	commonengine.lib
+////LIBRARY         rsfwmountman.lib
+LIBRARY 		estor.lib 
+LIBRARY     	ecom.lib 
+
+// end of file
+

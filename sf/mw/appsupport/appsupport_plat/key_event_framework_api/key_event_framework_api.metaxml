@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="1ace5629626c165a2295c9b43b25d9bd" dataversion="2.0">
+  <name>Key Event Framework API</name>
+  <description>A resource file interface for configuring and mapping key events.</description>
+  <type>c++</type>
+  <collection>coreapplicationuis</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

@@ -1,0 +1,45 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_TESTMMPFILES
+
+
+Alarm.MMP
+AlarmCreateDelete/AlarmCreate.MMP
+AlarmCreateDelete/AlarmDelete.MMP
+startconsolealarmalertserver/startcaas.mmp
+
+
+
+PRJ_TESTEXPORTS
+
+
+Cap_00000004_AlarmSub_Custom.script c:/testdata/scripts/cap_00000004_alarmsub_custom.script
+Cap_00010004_AlarmSub.script c:/testdata/scripts/cap_00010004_alarmsub.script
+Cap_00008004_AlarmSub.script c:/testdata/scripts/cap_00008004_alarmsub.script
+Cap_00000024_AlarmSub.script c:/testdata/scripts/cap_00000024_alarmsub.script
+Cap_00000004_AlarmSub.script c:/testdata/scripts/cap_00000004_alarmsub.script
+TestAlarm.IBY /epoc32/rom/include/testalarm.iby
+
+AlarmCreateDelete/AlarmCreate.iby /epoc32/rom/include/alarmcreate.iby
+AlarmCreateDelete/AlarmDelete.iby /epoc32/rom/include/alarmdelete.iby
+startconsolealarmalertserver/startcaas.iby /epoc32/rom/include/startcaas.iby
+
+// Main test script file
+Alarm.script c:/testdata/scripts/alarm.script
+
+// Batch file for testing
+TestAlarm.bat /epoc32/tools/testalarm.bat
+

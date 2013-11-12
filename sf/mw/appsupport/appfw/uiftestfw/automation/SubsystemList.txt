@@ -1,0 +1,33 @@
+# SubsystemList.txt
+# Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).
+# All rights reserved.
+# This component and the accompanying materials are made available
+# under the terms of "Eclipse Public License v1.0"
+# which accompanies this distribution, and is available
+# at the URL "http://www.eclipse.org/legal/epl-v10.html".
+#
+# Initial Contributors:
+# Nokia Corporation - initial contribution.
+#
+# Contributors:
+#
+# Description:
+# SubsystemList_95.txt
+# This file lists the subsystem components that are to be built.
+# Each line points to a bld.inf
+
+\app-framework\TestFramework\group
+\app-framework\animation\group
+\app-framework\bmpanim\group
+\app-framework\clock\group
+\app-framework\cone\group
+\app-framework\egul\group
+\app-framework\errorresgt\group
+\app-framework\fepbase\group
+\app-framework\gfxtranseffect\group
+\app-framework\grid\group
+\app-framework\print\group
+\app-framework\uiklafGT\group
+\app-framework\uikon\group
+
+\thindump\group

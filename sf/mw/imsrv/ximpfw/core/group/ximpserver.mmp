@@ -1,0 +1,60 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for Presence Framework PSC Server
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../group/ximpdlluids.hrh"
+
+TARGET                  ximpserver.exe
+TARGETTYPE              exe
+UID                     0x0     XIMP_EXE_UID_PROTOCOL_CONNECTION_SERVER
+
+CAPABILITY              CAP_SERVER
+VENDORID                VID_DEFAULT
+EPOCSTACKSIZE           0x5000 // 20KB
+SOURCEPATH              ../srcpscserver
+SOURCE                  ximpserver.cpp
+SOURCE                  ximpserversessionadapter.cpp
+SOURCE                  ximpcontextsession.cpp
+
+
+USERINCLUDE             ../srcpscserver
+USERINCLUDE             ../srcprocessor
+USERINCLUDE             ../srcoperations
+USERINCLUDE             ../../core/srcdatamodel
+USERINCLUDE             ../../presence/srcpresencedatamodel
+USERINCLUDE             ../../presence/srcpresencedatamodel/presentitygroups
+USERINCLUDE             ../../presence/srcpresencedatamodel/presencewatching
+USERINCLUDE             ../../presence/srcpresencedatamodel/presenceauthorization
+USERINCLUDE             ../../presence/srcpresencedatamodel/presencepublishing
+USERINCLUDE             ../srcutils
+SYSTEMINCLUDE           ../../inc/core/base
+SYSTEMINCLUDE           ../../inc/core/datamodel
+SYSTEMINCLUDE           ../../inc/core/protocolplugin
+
+
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 euser.lib
+LIBRARY                 estor.lib
+LIBRARY                 ecom.lib
+LIBRARY                 ximputils.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY                 ximpprocessor.lib
+LIBRARY                 ximpoperations.lib
+

@@ -1,0 +1,47 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+;Languages
+&EN
+
+;Header
+; SA = Symbian Application
+; RU = Rom Upgrade
+#{"TSTAPP_standalone"}, (10), 1, 0, 0, TYPE=SA
+
+%{"Nokia India Pvt Ltd"}
+:"Nokia India Pvt Ltd"
+
+""-"!:\sys\bin\tstapp.exe"
+""-"!:\private\10003a3f\import\apps\tstapp_reg.rsc"
+""-"!:\resource\apps\tstapp_loc.rsc"
+""-"!:\resource\apps\tstapp_loc.r01"
+""-"!:\resource\apps\tstapp_loc.r02"
+""-"!:\resource\apps\tstapp_loc.r03"
+""-"!:\resource\apps\tstapp_loc.r04"
+""-"!:\resource\apps\tstapp_loc.r05"
+""-"!:\resource\apps\TSTAPP.rsc"
+""-"!:\resource\apps\tstapp.mbm"
+""-"!:\resource\apps\tstappview01.m01"
+""-"!:\resource\apps\tstappview02.k"
+""-"!:\resource\apps\tstappviewneg.xyz"
+""-"!:\resource\apps\tstappviewneg.mbm"
+""-"!:\resource\apps\tstappview"
+""-"!:\resource\apps\tstapp02.m02"
+""-"!:\resource\apps\tstappview01.m02"
+
+

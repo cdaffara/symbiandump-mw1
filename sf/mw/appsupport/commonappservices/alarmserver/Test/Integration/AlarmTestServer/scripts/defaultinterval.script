@@ -1,0 +1,88 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE T_PREQ1118_TestSuite
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0011
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0011
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 033
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Alarm Play Interval Default Configuration
+//! @SYMTestActions  Add an alarm, check default play offset and durations, wait for
+//!                  alarm to expire and checksound timings
+//! @SYMTestExpectedResults Sound timing should correspond to default in resource file
+
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+
+RUN_TEST_STEP 1300 T_PREQ1118_TestSuite TestDefaultAlarmPlayStep \test\pim\alarmserver\data\citalarmplaytestdata.ini default
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0011
+
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0013
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0013
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 033 036
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Invalid Attempt to Disable Alarm Server Control of Alarm Play Interval
+//! @SYMTestActions  Attempt to set an empty play interval sequence, add alarm and check
+//!                  the timings.
+//! @SYMTestExpectedResults Empty sequence should be ignored and should not affect
+//!                         alarm server contol of play intervals. Alarm should play settings previously defined.
+
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+
+RUN_TEST_STEP 400 T_PREQ1118_TestSuite TestInvalidIntervalStep \test\pim\alarmserver\data\citalarmplaytestdata.ini InvalidPlayInterval
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0013
+
+
+
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0012
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0012
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 033
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Change Alarm Play Interval
+//! @SYMTestActions  Change the offset settings with the run-time
+//! @SYMTestExpectedResults The run-time option should overwrite the resource settings
+
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+
+RUN_TEST_STEP 400 T_PREQ1118_TestSuite TestChangePlayIntervalsStep \test\pim\alarmserver\data\citalarmplaytestdata.ini PlayIntervalChange
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0012

@@ -1,0 +1,9 @@
+EXPORTS
+	?Configure@ROOMAllocSession@@QAEHVTUid@@III@Z @ 1 NONAME ; int ROOMAllocSession::Configure(class TUid, unsigned int, unsigned int, unsigned int)
+	?Connect@ROOMAllocSession@@QAEHXZ @ 2 NONAME ; int ROOMAllocSession::Connect(void)
+	?MemoryGood@ROOMAllocSession@@QAEHVTUid@@@Z @ 3 NONAME ; int ROOMAllocSession::MemoryGood(class TUid)
+	?MemoryLow@ROOMAllocSession@@QAEHVTUid@@@Z @ 4 NONAME ; int ROOMAllocSession::MemoryLow(class TUid)
+	?Reset@ROOMAllocSession@@QAEHXZ @ 5 NONAME ; int ROOMAllocSession::Reset(void)
+	?StartAllocating@ROOMAllocSession@@QAEHXZ @ 6 NONAME ; int ROOMAllocSession::StartAllocating(void)
+	?StopAllocating@ROOMAllocSession@@QAEHXZ @ 7 NONAME ; int ROOMAllocSession::StopAllocating(void)
+

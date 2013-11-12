@@ -1,0 +1,62 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+// Load the DST test server
+LOAD_SUITE DstIntServer -SharedData
+
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0001
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0001
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn01
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0001
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0002
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0002
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn02
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0002
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0003
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0003
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn03
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0003
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0004
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0004
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn04
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0004
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0005
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0005
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn05 
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0005
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0006
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0006
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn06 
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0006
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0007
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0007
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn07 
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0007
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0008
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0008
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn08
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0008
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0009
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0009
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn09
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0009
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0010
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0010
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn10
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0010
+START_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0011
+//! @SYMTestCaseID   PIM-ISDAYLIGHTSAVINGONTEST-0011
+RUN_TEST_STEP 100 DstIntServer IsDaylightSavingOn \dstscripts\IsDaylightSavingOn.ini IsDaylightSavingOn11 
+END_TESTCASE   PIM-ISDAYLIGHTSAVINGONTEST-0011

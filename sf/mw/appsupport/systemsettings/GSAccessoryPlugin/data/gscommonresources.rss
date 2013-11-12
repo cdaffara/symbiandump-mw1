@@ -1,0 +1,156 @@
+/*
+* Copyright (c) 2005-2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Common resources for internal GS plugins. This .rss is
+*                included by other .rss files. This should not be compiled
+*                alone.
+*
+*/
+
+
+#include    <avkon.loc>
+#include    <avkon.rh>
+#include    <eikon.rh>
+#include    <eikon.rsg>
+#include    <gs.loc> // Common localized GS strings
+#include    <gscommon.rh> // Common GS resource structures
+
+// ---------------------------------------------------------------------------
+// R_GS_MENUBAR_CHANGE_EXIT
+// ---------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_gs_menubar_change_exit
+    {
+    titles =
+        {
+        MENU_TITLE
+            {
+            menu_pane = r_gs_menu_item_exit;
+            },
+        MENU_TITLE
+            {
+            menu_pane = r_gs_menu_item_help;
+            },
+        MENU_TITLE
+            {
+            menu_pane = r_gs_menu_item_change;
+            }
+        };
+    }
+
+// ---------------------------------------------------------------------------
+// R_GS_MENUBAR_OPEN_EXIT
+// ---------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_gs_menubar_open_exit
+    {
+    titles =
+        {
+        MENU_TITLE
+            {
+            menu_pane = r_gs_menu_item_exit;
+            },
+        MENU_TITLE
+            {
+            menu_pane = r_gs_menu_item_help;
+            },
+        MENU_TITLE
+            {
+            menu_pane = r_gs_menu_item_open;
+            }
+        };
+    }
+
+// ---------------------------------------------------------------------------
+// R_GS_MENU_ITEM_OPEN
+// ---------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_gs_menu_item_open
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = EAknSoftkeyOpen;
+            txt = qtn_set_options_open;
+	    flags = EEikMenuItemAction;
+            }
+        };
+    }
+
+// ---------------------------------------------------------------------------
+// R_GS_MENU_ITEM_EXIT
+// ---------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_gs_menu_item_exit
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = EAknCmdExit;
+            txt = qtn_options_exit;
+            }
+        };
+    }
+
+// ---------------------------------------------------------------------------
+// R_GS_MENU_ITEM_CHANGE
+// ---------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_gs_menu_item_change
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = EGSCmdAppChange;
+            txt = qtn_set_options_change;
+	    flags = EEikMenuItemAction; // action command
+            }
+        };
+    }
+
+// ---------------------------------------------------------------------------
+// R_GS_MENU_ITEM_HELP
+// ---------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_gs_menu_item_help
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = EAknCmdHelp;
+            txt = qtn_options_help;
+            }
+        };
+    }
+
+// ---------------------------------------------------------------------------
+// R_SETTING_LISTBOX
+// ---------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_setting_listbox
+    {
+    flags = EEikListBoxMultipleSelection;
+    }
+
+// ---------------------------------------------------------------------------
+// R_GS_CBA_EXIT
+// ---------------------------------------------------------------------------
+//
+RESOURCE TBUF r_gs_cba_exit
+    {
+    buf = text_softkey_exit;
+    }

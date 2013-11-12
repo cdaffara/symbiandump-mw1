@@ -1,0 +1,53 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+/**
+  @file
+  @test
+  @internalComponent - Internal Symbian test code 
+ */
+
+#ifndef __AMASTARTTEST_DSC_STORE_IBY__
+#define __AMASTARTTEST_DSC_STORE_IBY__
+
+#ifndef __APPFWK_TEST_FRAMEWORK_IBY__
+	#include <appfwk_test_framework.iby>
+#endif
+
+
+data=ABI_DIR\BUILD_DIR\tdscstore_server.exe								sys\bin\tdscstore_server.exe
+
+
+data=DATAZ_\amastarttest\ini\tdscstore_api.ini							amastarttest\ini\tdscstore_api.ini
+data=DATAZ_\amastarttest\ini\tdscstore_enumfile.ini						amastarttest\ini\tdscstore_enumfile.ini
+data=DATAZ_\amastarttest\ini\tdscstore_dscdb_backup.script				amastarttest\ini\tdscstore_dscdb_backup.script
+data=DATAZ_\amastarttest\ini\tdscstore_dscdb_restore.script				amastarttest\ini\tdscstore_dscdb_restore.script
+data=DATAZ_\amastarttest\ini\tdscstore_dscdb_createnew.script			amastarttest\ini\tdscstore_dscdb_createnew.script
+data=DATAZ_\amastarttest\ini\tdscstore_dscdb_deletenew.script			amastarttest\ini\tdscstore_dscdb_deletenew.script
+
+data=DATAZ_\amastarttest\amastarttest_dscstore_basic.script				amastarttest\amastarttest_dscstore_basic.script
+data=DATAZ_\amastarttest\amastarttest_dscstore_caprdd.script			amastarttest\amastarttest_dscstore_caprdd.script
+data=DATAZ_\amastarttest\amastarttest_dscstore_capwdd.script			amastarttest\amastarttest_dscstore_capwdd.script
+data=DATAZ_\amastarttest\amastarttest_dscstore_customdsc.script			amastarttest\amastarttest_dscstore_customdsc.script
+data=DATAZ_\amastarttest\amastarttest_dscstore_defaultdsc.script		amastarttest\amastarttest_dscstore_defaultdsc.script
+data=DATAZ_\amastarttest\amastarttest_dscstore_errors.script			amastarttest\amastarttest_dscstore_errors.script
+data=DATAZ_\amastarttest\amastarttest_dscstore_oom.script				amastarttest\amastarttest_dscstore_oom.script
+
+
+data=DATAZ_\amastarttest\amastarttest_dscstore_run.bat					\amastarttest_dscstore_run.bat
+
+
+#endif

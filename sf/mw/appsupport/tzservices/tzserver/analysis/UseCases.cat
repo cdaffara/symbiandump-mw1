@@ -1,0 +1,1704 @@
+
+(object Petal
+    version    	43
+    _written   	"Rose 6.5.9232.10"
+    charSet    	0)
+
+(object Class_Category "Use-Case Model"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"35B677F4010E"
+    documentation 	
+|The Use-Case Model in Rational Unified Process contains a model of the behavior of a system which supports the business processes.
+|
+|<The description entered here should capture the Survey Description of the Use Case Model>.  
+|
+|
+|
+    
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object UseCase "Auto Update Zone Offsets"
+	    quid       	"41878FB200A9")
+	(object UseCase "Get Home Time"
+	    quid       	"4187911602B1")
+	(object Association "$UNNAMED$0"
+	    quid       	"4111FB1F0101"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"4111FB1F0333"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::Configure Automatic Timer Update"
+		    quidu      	"4111FAD40257"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$2"
+		    quid       	"4111FB1F0334"
+		    supplier   	"Use Case View::Use-Case Model::Actors::User Application Client"
+		    quidu      	"407D5E57034C")))
+	(object Association "$UNNAMED$3"
+	    quid       	"4111FB6902C7"
+	    stereotype 	"include"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$4"
+		    quid       	"4111FB6A01DC"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::Fetch Time Zone Information"
+		    quidu      	"407D5D2000CB"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$5"
+		    quid       	"4111FB6A01DD"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::Set Phone User Time Zone"
+		    quidu      	"407D5DCB010A")))
+	(object Association "$UNNAMED$6"
+	    quid       	"41878ED30355"
+	    stereotype 	"requires"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$7"
+		    quid       	"41878ED402A9"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::Set Phone User Time Zone"
+		    quidu      	"407D5DCB010A"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$8"
+		    quid       	"41878ED402AA"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert Between UTC and Local Time"
+		    quidu      	"408E4879036D")))
+	(object Association "$UNNAMED$9"
+	    quid       	"41878FDE0378"
+	    stereotype 	"include"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$10"
+		    quid       	"41878FDF01D2"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::Set Locale Time Offsets"
+		    quidu      	"408E4D6302E1"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$11"
+		    quid       	"41878FDF01D3"
+		    supplier   	"Use Case View::Use-Case Model::Auto Update Zone Offsets"
+		    quidu      	"41878FB200A9")))
+	(object Association "$UNNAMED$12"
+	    quid       	"41879043035A"
+	    stereotype 	"requires"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$13"
+		    quid       	"418790440195"
+		    supplier   	"Use Case View::Use-Case Model::Auto Update Zone Offsets"
+		    quidu      	"41878FB200A9"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$14"
+		    quid       	"418790440196"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert Between UTC and Local Time"
+		    quidu      	"408E4879036D")))
+	(object Association "$UNNAMED$15"
+	    quid       	"418790720167"
+	    stereotype 	"requires"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$16"
+		    quid       	"4187907203D8"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::Configure Automatic Timer Update"
+		    quidu      	"4111FAD40257"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$17"
+		    quid       	"4187907203D9"
+		    supplier   	"Use Case View::Use-Case Model::Auto Update Zone Offsets"
+		    quidu      	"41878FB200A9")))
+	(object Association "$UNNAMED$18"
+	    quid       	"4187912C02F0"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$19"
+		    quid       	"4187912D0159"
+		    supplier   	"Use Case View::Use-Case Model::Get Home Time"
+		    quidu      	"4187911602B1"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$20"
+		    quid       	"4187912D0169"
+		    supplier   	"Use Case View::Use-Case Model::Actors::User Application Client"
+		    quidu      	"407D5E57034C")))
+	(object Association "$UNNAMED$21"
+	    quid       	"4187913A038C"
+	    stereotype 	"requires"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$22"
+		    quid       	"4187913B0253"
+		    supplier   	"Use Case View::Use-Case Model::Use Cases::Set Locale Time Offsets"
+		    quidu      	"408E4D6302E1"
+		    is_navigable 	TRUE)
+		(object Role "$UNNAMED$23"
+		    quid       	"4187913B0254"
+		    supplier   	"Use Case View::Use-Case Model::Get Home Time"
+		    quidu      	"4187911602B1")))
+	(object Class_Category "Actors"
+	    quid       	"3518CBC9026C"
+	    documentation 	
+|All Actors in the system are contained in this package.   This is both as a way to organize the model, making it easier to understand, and to provide a way to manage the actors in a single configuration item. 
+|
+|If different individuals are responsible for different actors and their related artifacts, the actors should be organized into their own packages and placed under separate configuration control.
+	    
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object Class "Sync Conversion Client"
+		    quid       	"353D5816026C"
+		    documentation 	
+|<<The brief description of the actor is entered here.  For guidance on what should go in this description, see the following Rational Unified Process references:
+|
+|- Activity: Find Actors and Use Cases
+|- Guidelines: Actor>>
+		    
+		    stereotype 	"Actor")
+		(object Class "User Application Client"
+		    quid       	"407D5E57034C"
+		    stereotype 	"Actor")
+		(object Class "Phone Builder"
+		    quid       	"408E4B8F0173"
+		    stereotype 	"Actor")
+		(object Class "Localised TZ Location Names Service Client"
+		    quid       	"41189027024F"
+		    stereotype 	"Actor"
+		    used_nodes 	(list uses_relationship_list
+			(object Uses_Relationship
+			    quid       	"4118907F0230"
+			    supplier   	"Logical View::Analysis Model::LTClasses::MTimeZoneLocations"
+			    quidu      	"4112365D004C")
+			(object Uses_Relationship
+			    quid       	"4118908F01D3"
+			    supplier   	"Logical View::Analysis Model::LTClasses::CECOMTZLocations"
+			    quidu      	"41188F400058")
+			(object Uses_Relationship
+			    quid       	"411890E3037A"
+			    supplier   	"Logical View::Analysis Model::LTClasses::CTimeZoneId"
+			    quidu      	"411209EF00C4")))
+		(object Class "Time Zone Setting Client"
+		    quid       	"417E52C803D8"
+		    stereotype 	"Actor"))
+	    logical_presentations 	(list unit_reference_list))
+	(object Class_Category "Use Cases"
+	    quid       	"34E37E430280"
+	    documentation 	
+|All Use Cases in the system are contained in this package.   This is done strictly as a way to organize the model and make it easier to understand.
+|
+|See Rational UnifiedProcess:
+|Activity " Describe the Use Case Model".
+|
+|In order to version control use cases it is recommended to specify use case packages within this package.
+|
+|Use Cases are often documented in a separate text file, use the  Rational Unified Process template or use the use case template  in Rational Requsite Pro.
+|
+|The "Use Case Realizations" that correspond to these use cases  are created in the Design Model..
+	    
+	    exportControl 	"Public"
+	    logical_models 	(list unit_reference_list
+		(object UseCase "Convert This Instant UTC time to Current Local Zone Time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"407D5CB3010A")
+		(object UseCase "Convert This Instant Local Zone Time to System UTC time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"407D5CC5001F")
+		(object UseCase "Convert UTC time to Current Local Zone Time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"407D5CE4008D")
+		(object UseCase "Update The DST Rules Applicable to a location"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"407D5D0703AA")
+		(object UseCase "Fetch Time Zone Information"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"407D5D2000CB")
+		(object UseCase "Set Time Zone Information"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"407D5D3E00FA")
+		(object UseCase "Set Phone User Time Zone"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"407D5DCB010A")
+		(object UseCase "Convert Between UTC and Local Time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"408E4879036D")
+		(object UseCase "Configure DST Rules for Locations"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"408E493901BA")
+		(object UseCase "Convert UTC time to Any Local Zone time"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"408E4A3C03E0")
+		(object UseCase "Replace Time Zone Database"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"408E4B86022F")
+		(object UseCase "Set Locale Time Offsets"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectPath"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProProjectGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentName"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocumentGuid"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProDocType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProReqType"
+			    value      	"")
+			(object Attribute
+			    tool       	"RequisitePro"
+			    name       	"ReqProRequirementId"
+			    value      	""))
+		    quid       	"408E4D6302E1")
+		(object UseCase "Configure Automatic Timer Update"
+		    quid       	"4111FAD40257")
+		(object Association "$UNNAMED$24"
+		    quid       	"407D5D4C0233"
+		    stereotype 	"subsets"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$25"
+			    quid       	"407D5D4D009C"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert Between UTC and Local Time"
+			    quidu      	"408E4879036D"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$26"
+			    quid       	"407D5D4D009D"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert This Instant UTC time to Current Local Zone Time"
+			    quidu      	"407D5CB3010A")))
+		(object Association "$UNNAMED$27"
+		    quid       	"407D5D4F0148"
+		    stereotype 	"subsets"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$28"
+			    quid       	"407D5D4F03B9"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert Between UTC and Local Time"
+			    quidu      	"408E4879036D"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$29"
+			    quid       	"407D5D4F03BA"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert This Instant Local Zone Time to System UTC time"
+			    quidu      	"407D5CC5001F")))
+		(object Association "$UNNAMED$30"
+		    quid       	"407D5D5200AC"
+		    stereotype 	"include"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$31"
+			    quid       	"407D5D5202EE"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Fetch Time Zone Information"
+			    quidu      	"407D5D2000CB"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$32"
+			    quid       	"407D5D5202EF"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert Between UTC and Local Time"
+			    quidu      	"408E4879036D")))
+		(object Association "$UNNAMED$33"
+		    quid       	"407D5E2500DB"
+		    stereotype 	"subsets"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$34"
+			    quid       	"407D5E25035C"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Configure DST Rules for Locations"
+			    quidu      	"408E493901BA"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$35"
+			    quid       	"407D5E25035D"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Update The DST Rules Applicable to a location"
+			    quidu      	"407D5D0703AA")))
+		(object Association "$UNNAMED$36"
+		    quid       	"407D5E4601E5"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$37"
+			    quid       	"407D5E46039A"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert Between UTC and Local Time"
+			    quidu      	"408E4879036D"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$38"
+			    quid       	"407D5E46039B"
+			    supplier   	"Use Case View::Use-Case Model::Actors::Sync Conversion Client"
+			    quidu      	"353D5816026C")))
+		(object Association "$UNNAMED$39"
+		    quid       	"407D5E4803C9"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$40"
+			    quid       	"407D5E490168"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert This Instant Local Zone Time to System UTC time"
+			    quidu      	"407D5CC5001F"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$41"
+			    quid       	"407D5E490169"
+			    supplier   	"Use Case View::Use-Case Model::Actors::Sync Conversion Client"
+			    quidu      	"353D5816026C")))
+		(object Association "$UNNAMED$42"
+		    quid       	"407D5E4B032D"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$43"
+			    quid       	"407D5E4C0139"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert UTC time to Current Local Zone Time"
+			    quidu      	"407D5CE4008D"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$44"
+			    quid       	"407D5E4C013A"
+			    supplier   	"Use Case View::Use-Case Model::Actors::Sync Conversion Client"
+			    quidu      	"353D5816026C")))
+		(object Association "$UNNAMED$45"
+		    quid       	"407D5E6600DB"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$46"
+			    quid       	"407D5E6602BF"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Set Phone User Time Zone"
+			    quidu      	"407D5DCB010A"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$47"
+			    quid       	"407D5E6602C0"
+			    supplier   	"Use Case View::Use-Case Model::Actors::User Application Client"
+			    quidu      	"407D5E57034C")))
+		(object Association "$UNNAMED$48"
+		    quid       	"407D5E680213"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$49"
+			    quid       	"407D5E69010A"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Update The DST Rules Applicable to a location"
+			    quidu      	"407D5D0703AA"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$50"
+			    quid       	"407D5E69010B"
+			    supplier   	"Use Case View::Use-Case Model::Actors::User Application Client"
+			    quidu      	"407D5E57034C")))
+		(object Association "$UNNAMED$51"
+		    quid       	"408E48D403CC"
+		    stereotype 	"subsets"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$52"
+			    quid       	"408E48D501D8"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert Between UTC and Local Time"
+			    quidu      	"408E4879036D"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$53"
+			    quid       	"408E48D501D9"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert UTC time to Current Local Zone Time"
+			    quidu      	"407D5CE4008D")))
+		(object Association "$UNNAMED$54"
+		    quid       	"408E4AAC00A5"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$55"
+			    quid       	"408E4AAC0364"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert UTC time to Any Local Zone time"
+			    quidu      	"408E4A3C03E0"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$56"
+			    quid       	"408E4AAC0365"
+			    supplier   	"Use Case View::Use-Case Model::Actors::Sync Conversion Client"
+			    quidu      	"353D5816026C")))
+		(object Association "$UNNAMED$57"
+		    quid       	"408E4AB000E4"
+		    stereotype 	"subsets"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$58"
+			    quid       	"408E4AB00345"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert Between UTC and Local Time"
+			    quidu      	"408E4879036D"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$59"
+			    quid       	"408E4AB00346"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Convert UTC time to Any Local Zone time"
+			    quidu      	"408E4A3C03E0")))
+		(object Association "$UNNAMED$60"
+		    quid       	"408E4BAB02EB"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$61"
+			    quid       	"408E4BAC01B2"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Replace Time Zone Database"
+			    quidu      	"408E4B86022F"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$62"
+			    quid       	"408E4BAC01B3"
+			    supplier   	"Use Case View::Use-Case Model::Actors::Phone Builder"
+			    quidu      	"408E4B8F0173")))
+		(object Association "$UNNAMED$63"
+		    quid       	"408E4D7D01B8"
+		    stereotype 	"include"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$64"
+			    quid       	"408E4D7D034E"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Set Locale Time Offsets"
+			    quidu      	"408E4D6302E1"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$65"
+			    quid       	"408E4D7D034F"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Set Phone User Time Zone"
+			    quidu      	"407D5DCB010A")))
+		(object Association "$UNNAMED$66"
+		    quid       	"408E4EE10305"
+		    stereotype 	"subsets"
+		    roles      	(list role_list
+			(object Role "$UNNAMED$67"
+			    quid       	"408E4EE20101"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Configure DST Rules for Locations"
+			    quidu      	"408E493901BA"
+			    is_navigable 	TRUE)
+			(object Role "$UNNAMED$68"
+			    quid       	"408E4EE20111"
+			    supplier   	"Use Case View::Use-Case Model::Use Cases::Replace Time Zone Database"
+			    quidu      	"408E4B86022F")))
+		(object Class_Category "<Use Case Name>"
+		    quid       	"35C0EC150366"
+		    documentation 	" A separate package is recommended for each Use Case to facilitate access and version control of related use case artifacts."
+		    exportControl 	"Public"
+		    logical_models 	(list unit_reference_list
+			(object UseCase "<Use Case Name>"
+			    attributes 	(list Attribute_Set
+				(object Attribute
+				    tool       	"RequisitePro"
+				    name       	"ReqProProjectPath"
+				    value      	"")
+				(object Attribute
+				    tool       	"RequisitePro"
+				    name       	"ReqProProjectGuid"
+				    value      	"")
+				(object Attribute
+				    tool       	"RequisitePro"
+				    name       	"ReqProDocumentName"
+				    value      	"")
+				(object Attribute
+				    tool       	"RequisitePro"
+				    name       	"ReqProDocumentGuid"
+				    value      	"")
+				(object Attribute
+				    tool       	"RequisitePro"
+				    name       	"ReqProDocType"
+				    value      	"")
+				(object Attribute
+				    tool       	"RequisitePro"
+				    name       	"ReqProReqType"
+				    value      	"")
+				(object Attribute
+				    tool       	"RequisitePro"
+				    name       	"ReqProRequirementId"
+				    value      	""))
+			    quid       	"34E37FB203D4"
+			    documentation 	
+|<<The brief description of the use case is entered here.  For guidance on what should go in this description, see the following Rational Unified Process references:
+|
+|- Activity: Find Actors and Use Cases
+|- Guidelines: Use Case>>
+			    
+			    logical_presentations 	(list unit_reference_list
+				(object UseCaseDiagram "Local View - <Use Case Name>"
+				    quid       	"34E3E970019A"
+				    title      	"Local View - <Use Case Name>"
+				    documentation 	"This diagram presents the Local View of Use Case <Use Case Name>.  The diagram depicts all actors which interact with <Use Case Name>, and any Use Cases which are associated with <Use Case Name>."
+				    zoom       	100
+				    max_height 	28350
+				    max_width  	21600
+				    origin_x   	0
+				    origin_y   	0
+				    items      	(list diagram_item_list
+					(object NoteView @1
+					    location   	(480, 400)
+					    label      	(object ItemLabel
+						Parent_View 	@1
+						location   	(33, 35)
+						fill_color 	13434879
+						nlines     	15
+						max_width  	859
+						label      	
+|Local View - Use Case <Use Case Name>
+|
+|This diagram presents the Local View of Use Case <Use Case Name>.  The diagram depicts all actors which interact with <Use Case Name>, and any Use Cases which are associated with <Use Case Name>.
+|
+|Related Rational Unified Process Activities:
+|Activity:  Detail a Use-Case
+|Step: Illustrate Relationships with Actors and Other Use-Cases
+|
+|*Note: this note may be deleted once the diagram is created.
+						)
+					    line_color 	3342489
+					    fill_color 	13434879
+					    width      	919
+					    height     	743)
+					(object NoteView @2
+					    location   	(1344, 160)
+					    label      	(object ItemLabel
+						Parent_View 	@2
+						location   	(1006, 29)
+						fill_color 	13434879
+						nlines     	5
+						max_width  	640
+						label      	
+|Created/modified by: <name>
+|Date: <creation/modification date>
+|
+|Approved by: <name>
+|Date: <approval date>
+						)
+					    line_color 	3342489
+					    fill_color 	13434879
+					    width      	700
+					    height     	275)
+					(object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @3
+					    location   	(1088, 1024)
+					    label      	(object ItemLabel
+						Parent_View 	@3
+						location   	(1088, 1162)
+						anchor_loc 	1
+						nlines     	2
+						max_width  	631
+						justify    	0
+						label      	"<Use Case Name>")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"34E37FB203D4"
+					    autoResize 	TRUE)
+					(object ClassView "Class" "Use Case View::Use-Case Model::Actors::Sync Conversion Client" @4
+					    ShowCompartmentStereotypes 	TRUE
+					    IncludeAttribute 	TRUE
+					    IncludeOperation 	TRUE
+					    location   	(448, 1024)
+					    label      	(object ItemLabel
+						Parent_View 	@4
+						location   	(448, 1184)
+						anchor_loc 	1
+						nlines     	2
+						max_width  	327
+						justify    	0
+						label      	"Sync Conversion Client")
+					    icon       	"Actor"
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    quidu      	"353D5816026C"
+					    annotation 	8
+					    autoResize 	TRUE)
+					(object AssociationViewNew "" @5
+					    location   	(741, 1024)
+					    stereotype 	(object SegLabel @6
+						Parent_View 	@5
+						location   	(741, 1060)
+						anchor     	10
+						anchor_loc 	1
+						nlines     	1
+						max_width  	450
+						justify    	0
+						label      	"<<communicate>>"
+						pctDist    	0.500000
+						height     	36
+						orientation 	1)
+					    line_color 	3342489
+					    quidu      	"35C0ED3A00F0"
+					    roleview_list 	(list RoleViews
+						(object RoleView "" @7
+						    Parent_View 	@5
+						    location   	(501, -160)
+						    stereotype 	TRUE
+						    line_color 	3342489
+						    quidu      	"35C0ED3B0118"
+						    client     	@5
+						    supplier   	@3
+						    line_style 	0)
+						(object RoleView "" @8
+						    Parent_View 	@5
+						    location   	(501, -160)
+						    stereotype 	TRUE
+						    line_color 	3342489
+						    quidu      	"35C0ED3B0119"
+						    client     	@5
+						    supplier   	@4
+						    line_style 	0)))))))
+			(object Association "$UNNAMED$69"
+			    quid       	"35C0ED3A00F0"
+			    stereotype 	"communicate"
+			    roles      	(list role_list
+				(object Role "$UNNAMED$70"
+				    quid       	"35C0ED3B0118"
+				    supplier   	"Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>"
+				    quidu      	"34E37FB203D4"
+				    is_navigable 	TRUE)
+				(object Role "$UNNAMED$71"
+				    quid       	"35C0ED3B0119"
+				    supplier   	"Use Case View::Use-Case Model::Actors::Sync Conversion Client"
+				    quidu      	"353D5816026C"))))
+		    logical_presentations 	(list unit_reference_list))
+		(object Class_Category "Included Use Cases"
+		    quid       	"35C0E0BB0366"
+		    documentation 	
+|This package contains "common" use cases which are textually included in one or more other use cases.  They are organized in this package to promote greater reuse.
+|
+		    
+		    exportControl 	"Public"
+		    logical_models 	(list unit_reference_list
+			(object Class_Category "<Use Case Name>"
+			    quid       	"37BB995102BF"
+			    exportControl 	"Public"
+			    logical_models 	(list unit_reference_list
+				(object UseCase "<anIncludedUseCase>"
+				    attributes 	(list Attribute_Set
+					(object Attribute
+					    tool       	"RequisitePro"
+					    name       	"ReqProProjectPath"
+					    value      	"")
+					(object Attribute
+					    tool       	"RequisitePro"
+					    name       	"ReqProProjectGuid"
+					    value      	"")
+					(object Attribute
+					    tool       	"RequisitePro"
+					    name       	"ReqProDocumentName"
+					    value      	"")
+					(object Attribute
+					    tool       	"RequisitePro"
+					    name       	"ReqProDocumentGuid"
+					    value      	"")
+					(object Attribute
+					    tool       	"RequisitePro"
+					    name       	"ReqProDocType"
+					    value      	"")
+					(object Attribute
+					    tool       	"RequisitePro"
+					    name       	"ReqProReqType"
+					    value      	"")
+					(object Attribute
+					    tool       	"RequisitePro"
+					    name       	"ReqProRequirementId"
+					    value      	""))
+				    quid       	"37BB997903CB"))
+			    logical_presentations 	(list unit_reference_list)))
+		    logical_presentations 	(list unit_reference_list)))
+	    logical_presentations 	(list unit_reference_list)))
+    logical_presentations 	(list unit_reference_list
+	(object UseCaseDiagram "Architecturally Significant Time Zone Use-Cases"
+	    quid       	"34E36CFC03D4"
+	    title      	"Architecturally Significant Time Zone Use-Cases"
+	    documentation 	"This diagram contains all architecturally significant use cases.  <Annotations may be added to the diagram to explain why particular use cases are architecturally significant.>"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object NoteView @9
+		    location   	(1197, 247)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(234, 12)
+			fill_color 	13434879
+			nlines     	10
+			max_width  	1890
+			label      	
+|Includes the following special cases:
+|+ Convert From UTC to Current Local Zone Time
+|+ Convert From UTC to Any Local Zone Time
+|+ Convert Current Local Zone Time to UTC
+|+ Convert Any Local Zone Time to UTC
+|
+|For the service to be of use to clients, Convert Between UTC and Local Time must match the results from Get Home Time. This requires that the User Time Zone is correctly set, that the zone offsets in Locale are updated when the zone is set as well as automatically when DST rule changes.
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	1950
+		    height     	482)
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::Replace Time Zone Database" @10
+		    location   	(812, 2109)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(812, 2247)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Replace Time Zone Database")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"408E4B86022F"
+		    height     	118)
+		(object ClassView "Class" "Use Case View::Use-Case Model::Actors::Phone Builder" @11
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(361, 2112)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(361, 2272)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	327
+			justify    	0
+			label      	"Phone Builder")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    quidu      	"408E4B8F0173"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$60" @12
+		    location   	(560, 2108)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"408E4BAB02EB"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$61" @13
+			    Parent_View 	@12
+			    location   	(48, -292)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"408E4BAC01B2"
+			    client     	@12
+			    supplier   	@10
+			    line_style 	0)
+			(object RoleView "$UNNAMED$62" @14
+			    Parent_View 	@12
+			    location   	(48, -292)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"408E4BAC01B3"
+			    client     	@12
+			    supplier   	@11
+			    line_style 	0)))
+		(object NoteView @15
+		    location   	(1222, 2459)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(703, 2378)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	1003
+			label      	"An extension of this is downloading a new database unto a shipped phone")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	1063
+		    height     	175)
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::Fetch Time Zone Information" @16
+		    location   	(1956, 984)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(1956, 1122)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Fetch Time Zone Information")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407D5D2000CB"
+		    height     	118)
+		(object ClassView "Class" "Use Case View::Use-Case Model::Actors::Sync Conversion Client" @17
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(361, 648)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(361, 808)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	327
+			justify    	0
+			label      	"Sync Conversion Client")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    quidu      	"353D5816026C"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::Convert Between UTC and Local Time" @18
+		    location   	(1149, 634)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(1149, 772)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Convert Between UTC and Local Time")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"408E4879036D"
+		    height     	118)
+		(object AssociationViewNew "$UNNAMED$30" @19
+		    location   	(1637, 645)
+		    stereotype 	(object SegLabel @20
+			Parent_View 	@19
+			location   	(1764, 711)
+			font       	(object Font
+			    size       	10)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<include>>"
+			pctDist    	2.616667
+			height     	66
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"407D5D5200AC"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$31" @21
+			    Parent_View 	@19
+			    location   	(773, -251)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407D5D5202EE"
+			    client     	@19
+			    supplier   	@16
+			    vertices   	(list Points
+				(1637, 645)
+				(1697, 647)
+				(1909, 924))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$32" @22
+			    Parent_View 	@19
+			    location   	(773, -251)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407D5D5202EF"
+			    client     	@19
+			    supplier   	@18
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$36" @23
+		    location   	(728, 638)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"407D5E4601E5"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$37" @24
+			    Parent_View 	@23
+			    location   	(344, 110)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407D5E46039A"
+			    client     	@23
+			    supplier   	@18
+			    line_style 	0)
+			(object RoleView "$UNNAMED$38" @25
+			    Parent_View 	@23
+			    location   	(344, 110)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407D5E46039B"
+			    client     	@23
+			    supplier   	@17
+			    line_style 	0)))
+		(object AttachView "" @26
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@9
+		    supplier   	@18
+		    line_style 	0)
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::Configure Automatic Timer Update" @27
+		    location   	(412, 1359)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(412, 1497)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Configure Automatic Timer Update")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4111FAD40257"
+		    height     	118)
+		(object ClassView "Class" "Use Case View::Use-Case Model::Actors::User Application Client" @28
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(64, 1756)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@28
+			location   	(64, 1916)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	327
+			justify    	0
+			label      	"User Application Client")
+		    icon       	"Actor"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    quidu      	"407D5E57034C"
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$0" @29
+		    location   	(97, 1432)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4111FB1F0101"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @30
+			    Parent_View 	@29
+			    location   	(-159, -312)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4111FB1F0333"
+			    client     	@29
+			    supplier   	@27
+			    vertices   	(list Points
+				(97, 1432)
+				(103, 1372)
+				(301, 1361))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$2" @31
+			    Parent_View 	@29
+			    location   	(-159, -312)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4111FB1F0334"
+			    client     	@29
+			    supplier   	@28
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::Set Phone User Time Zone" @32
+		    location   	(1628, 1656)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(1628, 1794)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Set Phone User Time Zone")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"407D5DCB010A"
+		    height     	118)
+		(object AssociationViewNew "$UNNAMED$3" @33
+		    location   	(1727, 1299)
+		    stereotype 	(object SegLabel @34
+			Parent_View 	@33
+			location   	(1749, 1371)
+			font       	(object Font
+			    size       	10)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<include>>"
+			pctDist    	0.883333
+			height     	72
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"4111FB6902C7"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$4" @35
+			    Parent_View 	@33
+			    location   	(302, -107)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4111FB6A01DC"
+			    client     	@33
+			    supplier   	@16
+			    vertices   	(list Points
+				(1727, 1299)
+				(1781, 1109)
+				(1870, 1040))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$5" @36
+			    Parent_View 	@33
+			    location   	(302, -107)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4111FB6A01DD"
+			    client     	@33
+			    supplier   	@32
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$6" @37
+		    location   	(1542, 1029)
+		    stereotype 	(object SegLabel @38
+			Parent_View 	@37
+			location   	(1528, 1084)
+			font       	(object Font
+			    size       	10)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<requires>>"
+			pctDist    	0.266667
+			height     	55
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"41878ED30355"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$7" @39
+			    Parent_View 	@37
+			    location   	(668, 416)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41878ED402A9"
+			    client     	@37
+			    supplier   	@32
+			    line_style 	0)
+			(object RoleView "$UNNAMED$8" @40
+			    Parent_View 	@37
+			    location   	(668, 416)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41878ED402AA"
+			    client     	@37
+			    supplier   	@18
+			    vertices   	(list Points
+				(1542, 1029)
+				(1500, 706)
+				(1257, 655))
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$45" @41
+		    location   	(780, 1935)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"407D5E6600DB"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$46" @42
+			    Parent_View 	@41
+			    location   	(508, 639)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407D5E6602BF"
+			    client     	@41
+			    supplier   	@32
+			    vertices   	(list Points
+				(780, 1935)
+				(838, 1950)
+				(1518, 1693))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$47" @43
+			    Parent_View 	@41
+			    location   	(508, 639)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"407D5E6602C0"
+			    client     	@41
+			    supplier   	@28
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::Auto Update Zone Offsets" @44
+		    location   	(737, 981)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(737, 1119)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Auto Update Zone Offsets")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"41878FB200A9"
+		    height     	118)
+		(object AssociationViewNew "$UNNAMED$12" @45
+		    location   	(692, 692)
+		    font       	(object Font
+			size       	10)
+		    label      	(object SegLabel @46
+			Parent_View 	@45
+			location   	(692, 633)
+			font       	(object Font
+			    size       	10
+			    italics    	TRUE)
+			hidden     	TRUE
+			anchor     	1
+			anchor_loc 	1
+			nlines     	1
+			max_width  	60
+			justify    	0
+			label      	""
+			pctDist    	0.500000
+			height     	60
+			orientation 	0)
+		    stereotype 	(object SegLabel @47
+			Parent_View 	@45
+			location   	(761, 814)
+			font       	(object Font
+			    size       	10)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<requires>>"
+			pctDist    	1.666667
+			height     	122
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"41879043035A"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$13" @48
+			    Parent_View 	@45
+			    location   	(-275, 71)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"418790440195"
+			    client     	@45
+			    supplier   	@44
+			    vertices   	(list Points
+				(692, 692)
+				(588, 706)
+				(703, 922))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$14" @49
+			    Parent_View 	@45
+			    location   	(-275, 71)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"418790440196"
+			    client     	@45
+			    supplier   	@18
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$15" @50
+		    location   	(440, 1101)
+		    stereotype 	(object SegLabel @51
+			Parent_View 	@50
+			location   	(428, 1203)
+			font       	(object Font
+			    size       	10)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<requires>>"
+			pctDist    	0.300000
+			height     	102
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"418790720167"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$16" @52
+			    Parent_View 	@50
+			    location   	(-438, 26)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4187907203D8"
+			    client     	@50
+			    supplier   	@27
+			    line_style 	0)
+			(object RoleView "$UNNAMED$17" @53
+			    Parent_View 	@50
+			    location   	(-438, 26)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4187907203D9"
+			    client     	@50
+			    supplier   	@44
+			    vertices   	(list Points
+				(440, 1101)
+				(447, 1041)
+				(625, 1002))
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::Use Cases::Set Locale Time Offsets" @54
+		    location   	(1100, 1343)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@54
+			location   	(1100, 1481)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Set Locale Time Offsets")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"408E4D6302E1"
+		    height     	118)
+		(object AssociationViewNew "$UNNAMED$63" @55
+		    location   	(1429, 1397)
+		    stereotype 	(object SegLabel @56
+			Parent_View 	@55
+			location   	(1455, 1485)
+			font       	(object Font
+			    size       	10)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<include>>"
+			pctDist    	0.933333
+			height     	88
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"408E4D7D01B8"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$64" @57
+			    Parent_View 	@55
+			    location   	(-75, -331)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"408E4D7D034E"
+			    client     	@55
+			    supplier   	@54
+			    vertices   	(list Points
+				(1429, 1397)
+				(1384, 1338)
+				(1208, 1339))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$65" @58
+			    Parent_View 	@55
+			    location   	(-75, -331)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"408E4D7D034F"
+			    client     	@55
+			    supplier   	@32
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$9" @59
+		    location   	(1038, 1087)
+		    stereotype 	(object SegLabel @60
+			Parent_View 	@59
+			location   	(1112, 1226)
+			font       	(object Font
+			    size       	10)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<include>>"
+			pctDist    	1.733333
+			height     	139
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"41878FDE0378"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$10" @61
+			    Parent_View 	@59
+			    location   	(245, 97)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41878FDF01D2"
+			    client     	@59
+			    supplier   	@54
+			    line_style 	0)
+			(object RoleView "$UNNAMED$11" @62
+			    Parent_View 	@59
+			    location   	(245, 97)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"41878FDF01D3"
+			    client     	@59
+			    supplier   	@44
+			    vertices   	(list Points
+				(1038, 1087)
+				(1025, 1028)
+				(845, 996))
+			    line_style 	0)))
+		(object UseCaseView "Use Case View::Use-Case Model::Get Home Time" @63
+		    location   	(709, 1693)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@63
+			location   	(709, 1831)
+			anchor_loc 	1
+			nlines     	2
+			max_width  	630
+			justify    	0
+			label      	"Get Home Time")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4187911602B1"
+		    height     	118)
+		(object AssociationViewNew "$UNNAMED$18" @64
+		    location   	(359, 1724)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4187912C02F0"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$19" @65
+			    Parent_View 	@64
+			    location   	(251, 18)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4187912D0159"
+			    client     	@64
+			    supplier   	@63
+			    line_style 	0)
+			(object RoleView "$UNNAMED$20" @66
+			    Parent_View 	@64
+			    location   	(251, 18)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4187912D0169"
+			    client     	@64
+			    supplier   	@28
+			    line_style 	0)))
+		(object AssociationViewNew "$UNNAMED$21" @67
+		    location   	(826, 1432)
+		    stereotype 	(object SegLabel @68
+			Parent_View 	@67
+			location   	(832, 1600)
+			font       	(object Font
+			    size       	10)
+			anchor     	10
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"<<requires>>"
+			pctDist    	0.600000
+			height     	168
+			orientation 	1)
+		    line_color 	3342489
+		    quidu      	"4187913A038C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$22" @69
+			    Parent_View 	@67
+			    location   	(-92, -371)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4187913B0253"
+			    client     	@67
+			    supplier   	@54
+			    vertices   	(list Points
+				(826, 1432)
+				(869, 1341)
+				(989, 1340))
+			    line_style 	0)
+			(object RoleView "$UNNAMED$23" @70
+			    Parent_View 	@67
+			    location   	(-92, -371)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4187913B0254"
+			    client     	@67
+			    supplier   	@63
+			    line_style 	0)))
+		(object AttachView "" @71
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@10
+		    supplier   	@15
+		    vertices   	(list Points
+			(920, 2117)
+			(1091, 2134)
+			(1186, 2371))
+		    line_style 	0)))))

@@ -1,0 +1,15 @@
+/* Generated automatically */
+#ifndef have_Src_prompt_globals
+#define have_Src_prompt_globals
+
+extern unsigned txtattrmask;
+extern mod_import_variable unsigned txtchange;
+extern unsigned char*cmdstack;
+extern int cmdsp;
+extern mod_import_function char*promptexpand _((char*s,int ns,char*rs,char*Rs));
+extern void stradd _((char*d));
+extern mod_import_function void tsetcap _((int cap,int flag));
+extern int putstr _((int d));
+extern mod_import_function void countprompt _((char*str,int*wp,int*hp,int overf));
+
+#endif /* !have_Src_prompt_globals */

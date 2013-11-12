@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="e507ff109e225de10d3dc2a0b4c68ea8" dataversion="1.0">
+<name>im_cache_client_api</name>
+<description>This is a API that provides read and write to the instant messaging cache. Client can write the information using adapter APIs and read from cache using accessor APIs.</description>
+<type>c++</type>
+<subsystem>instantmessagingcache</subsystem>
+<libs><lib name="imcacheclient.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

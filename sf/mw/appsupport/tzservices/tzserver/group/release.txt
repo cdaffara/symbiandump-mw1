@@ -1,0 +1,305 @@
+============================
+Release: 065 by Kalyan Reddy
+Date: 	11/03/09
+Title:   DEF135108: Incorrect DST event for Jordan
+============================
+Release: 064 by Raveendra Mullaguri
+Date: 	13/02/09
+Title:   DEF133553  CTzUserData::CreateL leaves with KErrCorrupt even when user tz db is not full
+============================
+Release: 063 by Daine Mamacos	
+Date: 	11/02/09
+Title:   DEF133773: getting TZ TEF tests to work on autorom
+============================
+Release: 062 by Kalyan Reddy
+Date: 	10/02/09
+Title:   DEF132757  WDP: t_tzdatachangenotification fails on ARMV5 build 
+============================
+Release: 061 by Raveendra Mullaguri
+Date: 	26/01/09
+Title:   DEF133539: In source documentation of leave codes in CTzUserData::CreateL missing 
+============================
+Release: 060 by Shazia Murtaza
+Date: 	 14/01/09
+Title:   DEF132756: WDP: tz_backup fails on ARMV5 build   
+============================
+Release: 059 by Xavier Leclercq
+Date: 	 08/01/09
+Title:   DEF131266: Tidying up a few remarks in the PIM code
+============================
+Release: 058 by Raveendra Mullaguri
+Date: 	 06/01/09
+Title:   DEF131326: test TestCalInterimApiEntryData1.script fails on WINSCW 
+============================
+Release: 057 by Xavier Leclercq
+Date: 	 31/12/08
+Title:   DEF129166: Small tidy up of tz and timezonelocalization code
+===========================
+Release: 056 by Shazia Murtaza
+Date:    22/12/08
+Title:   DEF132213 [System Build]: Incorrect case causing build failure in Linux in TZ Server/DB
+===========================
+Release: 055 by Daine Mamacos
+Date:    03/12/08
+Title:   DEF130637: ONB long failing test TESTEXECUTE C:\unittest.script 
+===========================
+Release: 054 by Daine Mamacos
+Date:    21/11/08
+Title:   DEF130637: ONB long failing test TESTEXECUTE C:\unittest.script 
+===========================
+Release: 053 by Michael Coffey
+Date:    19/11/08
+Title:   DEF118113 PIM_FailingTestHarness_CalInterimApiEntryData.htm script failing on ONB
+===========================
+Release: 052 by Shazia Murtaza
+Date:    01/10/08
+Title:   DEF128445 : timezoneserver dependency on swi.iby
+===========================
+Release: 051 by Shazia Murtaza
+Date:    25/09/08
+Title:   DEF127536 : ONB tz_backup failing
+===========================
+Release: 050 by Shazia Murtaza
+Date:    25/09/08
+Title:   DEF126623: PREQ1776 - t_tzswiobserver test failure
+===========================
+Release: 049 by James Aley
+Date:    06/08/08
+Title:   DEF125997: Test Timezoneoffsetcheck entry needs to be added to TimezoneTests.iby file.
+===========================
+Release: 048 by Andrew Smith
+Date:    07/07/08
+Title:   DEF124569: [coverity] - tz/server - REVERSE_INULL 
+===========================
+Release: 047 by Kalyan Reddy
+Date:	 02/07/2008
+Title:	 DEF123900:NULL pointer could be de-referenced when GetOffsetsForTimeZoneIdsL is called 
+===========================
+Release: 046 by Kalyan Reddy
+Date:	 22/05/2008
+Title:	 PDEF122683:Clock: DST problem in Iqaluit
+===========================
+Release: 045 by Kalyan Reddy
+Date:	 03/03/2008
+Title:	 PDEF118921:HIQTC: ESW: EAS: Cant sync reoccurring events - AGENDA TZ rules regression?
+===========================
+Release: 044 by Shazia Murtaza
+Date:	 05/02/2008
+Title:	 DEF117472: bld.inf passes arguments to the template extension makefile with wrong slashes
+===========================
+Release: 043 by Prabodh Depala
+Date:	 17/01/2008
+Title:	 PDEF116502: Documentation missing in RTz api and enums
+===========================
+Release: 042 by Shazia Murtaza
+Date:	 14/01/2008
+Title:	 PDEF116322: A nitz event creates floods the system with RChangeNotifier events 
+===========================
+Release: 041 by Jade Ho
+Date:	 22/06/2007
+Title:	 DEF101740: Reclassification of internal App-Services/Tz classes 
+===========================
+Release: 040 by Michael Borghardt
+Date:	 06/06/2007
+Title:	 PDEF108204 backuprestore.script test script failed in ONB
+===========================
+Release: 039 by Jonathan Richardson
+Date:	 05/02/2007
+Title:	 PDEF101726: Control Panel Device Settings are not being backup up properly
+===========================
+Release: 038 by Tomas Sommergyll
+Date:    31/01/2007
+Title:   PDEF100582: Self-signed application causes TzServer (time zone server)to crash by sending in
+===========================
+Release: 037 by Luke Zhang
+Date:	 3/01/2007
+Title:	 DEF099592: Clock shows 1 hr off when GMT +4:00 Tbilisi, Georgia is set
+===========================
+Release: 036 by Konstantin Zheludev
+Date:	 29/09/2006
+Title:	 DEF093327: Tag Scan Error Report for Pim component
+===========================
+Release: 035 by Tejsweeta Singh
+Date:	 16/08/2006
+Title:	 DEF081622: API classification should be added to methods defined in tz.h header
+============================
+Release: 034 by Jonathan Richardson
+Date:	 31/07/2006
+Title:   DEF085347: TZ server - CTzActualisedRules should not be used
+===========================
+Release: 033 by Aaron Kranabetter
+Date:	 08/06/2006
+Title:	 INC085691: TRUE - Local time displayed improperly after current city changed to Hawaii
+===========================
+Release: 032 by Kelly Hon
+Date:	 11/05/2006
+Title:	 DEF078882: Calendar Instance occuring on DST threshold is lost
+===========================
+Release: 031 by Francesco Lodolo
+Date:	 05/05/2006
+Title:	 DEF085714: DST is applied irrespective of "Set Daylight Saving Time" is Automatic or not
+============================
+Release: 030 by Lakshman M P
+Date:    03/04/2006
+Title:   DEF081622: API classification should be added to methods defined in tz.h header
+========================================================
+Release: 029 by Jonathan Richardson
+Date:    29/03/2006
+Title:   DEF082996: Tz Change Notification does not support all necessary scenarios
+============================
+Release: 029 by Michael Coffey
+Date:    07/03/2006
+Title:   DEF081447: Performance of Calendar is poor when populated with normal amount of events
+============================
+Release: 029 by Michael Marchenko
+Date:    06/03/2006
+Title:   DEF081406 - Exporting of tz rule spanning 2 years is corrupted
+============================
+Release: 028 by Prashanth Grandhi
+Date:    08/02/2006
+Title:   DEF078968: TZ server panics (Kern-exec3) when database contains a hole
+============================
+Release: 027 by Konstantin Zheludev
+Date:    31/01/2006
+Title:   DEF079165 - DST is not disabled when USA dates roll-over
+============================
+Release: 026 by Konstantin Zheludev
+Date:    31/01/2006
+Title:   DEF079012 - CReadOnlyTzDb::CopyDatabaseToRamL(..) will panic in low memory situations
+============================
+Release: 025 by Konstantin Zheludev
+Date:    31/01/2006
+Title:   DEF079115 - DST Applied even when ETzAutoDSTOffsetOff is set in the server
+============================
+Release: 024 by Michael Marchenko
+Date:    15/12/2005
+Title:   DEF075815 - AgnVersit: all time zone rules are exported
+============================
+Release: 023 by Kelly Hon
+Date:    09/12/2005
+Title:   DEF075570 - Calendar unable to display December or January
+===========================
+Release: 022 by Konstantin Zheludev
+Date: 	 07/12/2005
+Title: 	 DEF075371: Memory fragmentation in time zone server
+============================
+Release: 023 by Shazia Murtaza
+Date:	 29/11/2005
+Title:	 DEF074166: Provide Stub SIS File to Enable Secure Over the Air download of Tz Rules File
+============================
+Release: 022 by Andrew Smith
+Title:   DEF073940: RTz::SetHomeTime() needs WriteDeviceData capability but comments dont say so
+============================
+Release: 021 by Peter Frellick
+Date: 	 15/11/2005
+Title: 	 DEF073388: Metadata definition to allow CenRep to backup Tz Auto DST value wrongly set
+============================
+Release: 020 by Xing Jin
+Date: 	 2/11/2005
+Title: 	 DEF071720: TESTEXECUTE C:\dstscripts\unittest.script fails on H2 
+============================
+Release: 018 by Daniel Yuen
+Date:	 01/11/2005
+Title : DEF072160: Error notes displayed when backing up data
+============================
+Release: 017 by J. Clarke
+Date:	 27/10/2005
+Title : DEF071456: PIM Time Zone Conversion Test Fails on MCL
+============================
+Release: 016 by J. Clarke
+Date:	 27/10/2005
+Title : DEF070489: Instances on repeating events can be shown on the wrong date.
+============================
+Release: 015 by J. Clarke
+Date:	 05/10/2005
+Title : DEF062421: Instances on repeating events can be shown on the wrong date.
+============================
+Release: 014 by Shazia Murtaza
+Date:	 04/10/2005
+Title:	 DEF070007: TimeZoneServer backup registration file is not published to z:\private\1020383E 
+============================
+Release: 013 by M.Armstrong
+Date:	 28/09/2005
+Title : DEF066005: Notification Required from TZ Component when current time zone changes
+============================
+Release: 014 by Shazia Murtaza
+Date:    29/09/2005
+Title:
+Fix for: INC069066: TimeZoneServer backup registration file is not published to z:\private\1020383E 
+============================
+
+Release: 013 by M.Armstrong
+Date:	 28/09/2005
+Title : DEF066005: Notification Required from TZ Component when current time zone changes
+============================
+Release: 012 by S.Chatzikyriakos
+Date:	 23/05/2005
+Title :  
+Fix for: DEF060165: Test execute TZ test failing on wincw 9.1
+============================
+Release: 011 by J. Nareskog
+Date 16/05/05
+Title:
+Fix for: DEF060896  TimeZoneServer (Tz) Does not persist the Time Zone 
+============================
+Release: 010 by J. Moore
+Date 16/05/05
+Title:
+Fix for: DEF060822: TESTEXECUTE C:\dstscripts\performancetest.script PANICS
+============================
+Release: 009 by Prabodh Depala
+Date 09/05/05
+Title:
+Fix for: DEF060912: Publish and Subscribe overloads of RProperty::Define security change
+
+============================
+Release: 008 by Shazia Murtaza
+Date 08/05/05
+Title:
+Fix for: DEF060421: Get method for TZ automatic DST behaviour is not provided 
+============================
+Release: 007 by J. Moore
+Date 03/05/05
+Title:
+Fix for: DEF059694: Notification should only occur when UTC offset is automatically adjusted for DS 
+============================
+
+Release: 006 by Ryan Gilmour
+Date 22/04/05
+Title:
+Fix for: DEF058952: Contacts & SyncML fail for 03556 9.1 NAND ROMs
+
+============================
+Release: 005 by P. Depala
+Date 11/04/05
+Title:
+Fix for: DEF059032: timezone code still refers to deprecated api
+
+============================
+Release: 004 by J.Nareskog
+Date 01/03/05
+Title:
+Fix for: DEF056341 - The Time Zone Server should use CTimer::AtUtc for the dst event
+
+============================
+Release: 003 by J.Owen
+Date 01/03/05
+Title:
+Mike,GT0228,PREQ1152 Time Zone Server UTC Offset Auto-Update and Notification and Alarm Storage in UTC time
+BR1318.1 PIM Application Services: RWorldServer::SetHome() will change behaviour. 
+
+============================
+Release: 002 by Nicholas Addo 
+Date:	 08/12/2004
+Title: 
+Fix for: DEF052515 - MCL Build failed because .iby file	is not included in dependents; and missing policy files
+
+============================
+Release: 001 by Dan Beaumont
+Date:	 03/12/2004
+Title : First Release of Timezone Server
+
+* First release of the new Time Zone Server.
+* see ..\tzserver\doc_pub folder for how-to use the new component
+============================
+

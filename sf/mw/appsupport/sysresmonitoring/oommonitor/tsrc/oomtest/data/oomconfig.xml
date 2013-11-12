@@ -1,0 +1,89 @@
+<!--
+ Copyright (c) 2004-20010 Nokia Corporation and/or its subsidiary(-ies).
+ All rights reserved.
+ This component and the accompanying materials are made available
+ under the terms of the License "Eclipse Public License v1.0"
+ which accompanies this distribution, and is available
+ at the URL "http://www.eclipse.org/legal/epl-v10.html".
+
+ Initial Contributors:
+ Nokia Corporation - initial contribution.
+
+ Contributors:
+
+ Description:
+
+-->
+
+
+
+
+<oom_config>
+
+	<global_settings low_ram_threshold="4096" good_ram_threshold="5000" max_app_close_batch="4" default_wait_after_plugin="10" max_app_exit_time="5000">
+		<force_check priority="8"></force_check>
+	</global_settings>
+
+	<app_specific_thresholds>
+		<app uid="E6CFBA08" low_ram_threshold="8192" good_ram_threshold="10000"></app>
+	</app_specific_thresholds>
+
+	<app_close_settings>
+		<close_app uid="DEFAULT_APP" priority="9" sync_mode="check">
+			<app_close_idle_priority idle_time="30" priority="9"></app_close_idle_priority>
+		</close_app>
+
+		<close_app uid="BUSY_APP" priority="NEVER_CLOSE" sync_mode="check"></close_app>
+		<close_app uid="HIGH_PRIORITY_APP" priority="10" sync_mode="check"></close_app>
+
+		<close_app uid="E6CFBA03" priority="7" sync_mode="check">
+			<foreground_app_priority if_foreground_app_id="E6CFBA02" priority="9"></foreground_app_priority>
+		</close_app>
+
+		<close_app uid="E6CFBA02" priority="8" sync_mode="check"></close_app>
+
+		<close_app uid="E6CFBA01" priority="9" sync_mode="check">
+			<app_close_idle_priority idle_time="30" priority="2"></app_close_idle_priority>
+		</close_app>
+
+		<close_app uid="E6CFBA09" priority="7" sync_mode="continue"></close_app>
+		<close_app uid="E6CFBA04" priority="7" sync_mode="check"></close_app>
+		<close_app uid="E6CFBA05" priority="7" sync_mode="check"></close_app>
+		
+		<close_app uid="E6CFBA07" priority="NEVER_CLOSE" sync_mode="check"></close_app>
+		<close_app uid="E6CFBA06" priority="NEVER_CLOSE" sync_mode="check"></close_app>
+		<close_app uid="E6CFBA0A" priority="NEVER_CLOSE" sync_mode="check"></close_app>
+		<close_app uid="101f4cd5" priority="NEVER_CLOSE" sync_mode="check"></close_app><!-- log -->
+		<close_app uid="1028311d" priority="NEVER_CLOSE" sync_mode="check"></close_app><!-- test app 39 for  uishellservices_menucontentservice. related to content harvester panic -->
+		<close_app uid="101f4cd2" priority="NEVER_CLOSE" sync_mode="check"></close_app><!-- application shell menu	-->		
+	</app_close_settings>
+
+
+	<system_plugin_settings>
+		<system_plugin uid="DEFAULT_PLUGIN" priority="10"></system_plugin>
+		<system_plugin uid="10286A34" priority="5"></system_plugin>
+	
+		<system_plugin uid="10286A35" priority="6">
+			<plugin_foreground_app_priority target_app_id="E6CFBA07" priority="9"></plugin_foreground_app_priority>
+		</system_plugin>
+	
+		<system_plugin uid="10286A36" priority="7"></system_plugin>
+		<system_plugin uid="10286A37" priority="8" wait="1000" sync_mode="check"></system_plugin>
+		<system_plugin uid="10286A3C" priority="4"></system_plugin>
+		<system_plugin uid="10286A3D" priority="9"></system_plugin>
+	</system_plugin_settings>
+
+	<app_plugin_settings>
+		<app_plugin uid="10286A3A" target_app_id="E6CFBA02" priority="4" sync_mode="check" call_if_target_app_not_running="false"></app_plugin>
+		<app_plugin uid="10286A3B" target_app_id="E6CFBA03" priority="3" call_if_target_app_not_running="true"></app_plugin>
+		<app_plugin uid="10286A38" target_app_id="E6CFBA03" priority="9" call_if_target_app_not_running="false">
+			<plugin_idle_priority idle_time="30" priority="1"></plugin_idle_priority>
+		</app_plugin>
+
+		<app_plugin uid="10286A39" target_app_id="E6CFBA01" priority="10">
+			<plugin_foreground_app_priority target_app_id="TARGET_APP" priority="1"></plugin_foreground_app_priority>
+		</app_plugin>
+	
+	</app_plugin_settings>
+
+</oom_config>

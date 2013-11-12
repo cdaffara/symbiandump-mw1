@@ -1,0 +1,72 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          mt_basicoperationsplugin.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY              ALL -TCB
+VENDORID                VID_DEFAULT
+
+SOURCEPATH              ../MT_BasicOperationsPlugIn
+SOURCE                  mt_basicoperationsplugin_DllMain.cpp
+SOURCE                  mt_basicoperationsplugin.cpp
+
+SOURCEPATH              ../common
+SOURCE			cffakeenv.cpp
+SOURCE			CFTestDelay.cpp
+SOURCE			ScriptEventNotifierSession.cpp
+
+// Sources needed by the test
+SOURCEPATH              ../../../../../cfw/src/cfserver
+SOURCE                  CFContextManager.cpp
+SOURCE                  CFUtils.cpp
+SOURCE                  CFCacheElement.cpp
+
+USERINCLUDE           ../MT_BasicOperationsPlugIn
+USERINCLUDE           ../common
+USERINCLUDE           ../../../../../cfw/inc/common
+USERINCLUDE           ../../../../../cfw/inc/cfserver
+USERINCLUDE           ../../../../../cfw/group
+USERINCLUDE           ../../../../../cfw/inc/cfscriptengine
+USERINCLUDE           ../../../../../cfw/src/cfscriptengine
+USERINCLUDE           ../../../../../cfw/inc/cfservices
+USERINCLUDE           ../../../../../cfw/CenRep
+USERINCLUDE           ../../../../../cfw/inc/cfoperationpluginservices
+
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+
+// System include folders required by the tested code
+
+LIBRARY                 EUnit.lib
+LIBRARY                 EUnitUtil.lib
+LIBRARY                 euser.lib
+
+// Libraries required by the tested code
+LIBRARY                 CFScriptEngine.lib
+LIBRARY                 cfoperationpluginservices.lib
+LIBRARY                 cfservices.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 bafl.lib
+LIBRARY                 flogger.lib
+LIBRARY                 ecom.lib
+
+// End of file

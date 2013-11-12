@@ -1,0 +1,14 @@
+<ContextSourceSettings>
+    <!-- Double tap event channel -->
+    <SensorSource Channel="0x00">
+        <ChannelParams ChannelTypeId="0x1020507F" Location="" Vendor=""/>
+    </SensorSource>
+    <!-- Orientation event channel -->
+    <SensorSource Channel="0x01">
+        <ChannelParams ChannelTypeId="0x10205088" Location="" Vendor=""/>
+    </SensorSource>
+    <!-- Proximity event channel -->
+    <SensorSource Channel="0x02">
+        <ChannelParams ChannelTypeId="0x2001013D" Location="" Vendor=""/>
+    </SensorSource>
+</ContextSourceSettings>

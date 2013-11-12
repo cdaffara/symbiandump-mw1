@@ -1,0 +1,10 @@
+component	application-protocols_recognisers
+source	\sf\mw\appsupport\contenthandling\webrecognisers
+binary	\sf\mw\appsupport\contenthandling\webrecognisers\group	all
+exports	\sf\mw\appsupport\contenthandling\webrecognisers\group
+notes_source	\component_defs\release.src
+
+
+ipr E 
+ipr T \sf\mw\appsupport\contenthandling\webrecognisers\Test
+

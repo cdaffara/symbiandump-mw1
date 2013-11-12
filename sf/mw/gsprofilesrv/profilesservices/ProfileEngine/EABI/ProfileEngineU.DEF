@@ -1,0 +1,8 @@
+EXPORTS
+	_ZN13ProEngFactory10NewEngineLER3RFs @ 1 NONAME
+	_ZN13ProEngFactory10NewEngineLEv @ 2 NONAME
+	_ZN13ProEngFactory11NewEngineLCER3RFs @ 3 NONAME
+	_ZN13ProEngFactory11NewEngineLCEv @ 4 NONAME
+	_ZN13ProEngFactory17NewNotifyHandlerLEv @ 5 NONAME
+	_ZN13ProEngFactory19NewAlertToneSeekerLEv @ 6 NONAME
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="75c160758bc95162585777014237d64c" dataversion="1.0">
+<name>ximp_search_management_api</name>
+<description>This is an API that provides getting the search keys, search interfaces to the client.</description>
+<type>c++</type>
+<subsystem>searchmanager</subsystem>
+<libs><lib name="searchmanager.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

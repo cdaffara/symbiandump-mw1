@@ -1,0 +1,7 @@
+EXPORTS
+	_ZN20CProtocolDataHostImp4NewLER9MXIMPHost @ 1 NONAME
+	_ZN20CProtocolDataHostImp5NewLCER9MXIMPHost @ 2 NONAME
+	_ZN34CProtocolImConversationDataHostImp4NewLER9MXIMPHost @ 3 NONAME
+	_ZTI34CProtocolImConversationDataHostImp @ 4 NONAME ; #<TI>#
+	_ZTV34CProtocolImConversationDataHostImp @ 5 NONAME ; #<VT>#
+

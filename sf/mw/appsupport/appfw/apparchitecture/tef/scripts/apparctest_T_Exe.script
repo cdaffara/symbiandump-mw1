@@ -1,0 +1,37 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-ExeStep-doTestStepL-0001
+//! @SYMTestCaseDesc 		Test retrieving data from main thread of a process.    
+//! @SYMTestPriority 		High   
+//! @SYMTestStatus 		3. Released   
+//! @SYMTestActions 		The test creates a new process by calling the constructor of
+//!				RProcess. Call RProcess::CommandLine() to get a copy of data which is
+//!				passed to the thread function of the newly created process's main thread.
+//!				Pass the data thus copied to method DoThings() to print the information.
+//!				API Calls:
+//!				RProcess::CommandLine(TDes& aCommand) const   
+//! @SYMTestExpectedResults 	Test should create a new process and copy data from
+//!				main thread of newly created process.
+
+START_TESTCASE API-APPFWK-T-ExeStep-doTestStepL-0001
+
+PRINT Run T_Exe Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_Exe 
+
+END_TESTCASE API-APPFWK-T-ExeStep-doTestStepL-0001

@@ -1,0 +1,74 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-CmdlnStep-testSecureCmdLinesL-0001
+//! @SYMPREQ 			PREQ0280 - File Handle Support
+//! @SYMDEF			DEF059510
+//! @SYMTestCaseDesc 		Tests CApaCommandLine Apis. 
+//! @SYMTestPriority 		High 
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		Observe the operation that is executed on each command.
+//!				Test the following accessor functions:
+//!					CApaCommandLine::ExecutableName()
+//!					CApaCommandLine::Command()
+//!					CApaCommandLine::DocumentName()
+//!					CApaCommandLine::TailEnd()
+//!					CApaCommandLine::ServerId()
+//!					CApaCommandLine::SessionHandle()
+//!					CApaCommandLine::SubSessionHandle()
+//!				Check whether each of these getter functions return the individual components.
+//!				Test the following setter functions:
+//!					CApaCommandLine::SetExecutableNameL()
+//!					CApaCommandLine::SetCommandL()
+//!					CApaCommandLine::SetDocumentNameL()
+//!					CApaCommandLine::SetTailEndL()
+//!					CApaCommandLine::SetServerId()
+//!					CApaCommandLine::SetSessionHandle()
+//!					CApaCommandLine::SetSubSessionHandle()
+//!				Use the setter functions to set the individual components. Use the
+//!				getter methods to verify values set to the individual components.
+//!				API Calls:	
+//!					CApaCommandLine::NewL(const RMessagePtr2& aMessage) 
+//!					CApaCommandLine::ExecutableName() const
+//!					CApaCommandLine::Command() const
+//!					CApaCommandLine::DocumentName() const
+//!					CApaCommandLine::TailEnd() const
+//!					CApaCommandLine::TailEnd() const
+//!					CApaCommandLine::ServerId() const
+//!					CApaCommandLine::SessionHandle() const
+//!					CApaCommandLine::SubSessionHandle() const
+//!					CApaCommandLine::EnviromentSlotsReaderL()
+//!					CApaCommandLine::SetExecutableNameL(const TDesC& aAppName)
+//!					CApaCommandLine::SetCommandL(TApaCommand aCommand)
+//!					CApaCommandLine::SetDocumentNameL(const TDesC& aDocName)
+//!					CApaCommandLine::SetTailEndL(const TDesC8& aTailEnd)
+//!					CApaCommandLine::SetServerId(TInt aServerId)
+//!					CApaCommandLine::SetSessionHandle(TInt aSessionHandle)
+//!					CApaCommandLine::SetSubSessionHandle(TInt aSubSessionHandle)
+//!					CApaCommandLine::SetProcessEnvironmentL(RProcess& aProcess) const  
+//! @SYMTestExpectedResults 	Tests checks results against desired results.
+
+START_TESTCASE API-APPFWK-T-CmdlnStep-testSecureCmdLinesL-0001
+
+PRINT Run T_Cmdln Apparc test
+//
+// Testexecute not yet startup state aware (DEF059510). Until then, delay required to ensure emulator boot has finished
+DELAY 5000
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_Cmdln
+
+END_TESTCASE API-APPFWK-T-CmdlnStep-testSecureCmdLinesL-0001

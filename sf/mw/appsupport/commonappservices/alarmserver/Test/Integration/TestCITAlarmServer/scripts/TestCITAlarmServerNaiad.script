@@ -1,0 +1,341 @@
+// Copyright (c) 2007-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+//! @file
+//! @SYMTestSuiteName	TestCITAlarmServerSuite
+//! @SYMScriptTestEnvironment
+
+PRINT Run all TestCITAlarmServer Naiad Quality Tests
+
+//
+LOAD_SUITE TestCITAlarmServerSuite
+//
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0001AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0001AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Setting Alarms Quiet Period Test 1
+//! @SYMTestActions Set sound silent.
+//! @SYMTestActions Create alarm (expiry time after silent until).
+//! @SYMTestActions Verify that the sound start is as expected.
+//! @SYMTestExpectedResults Sound should start as expected, i.e. immediately after it expires
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM1
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0001AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0002AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0002AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Setting Alarms Quiet Period Test 2
+//! @SYMTestActions Set sound silent.
+//! @SYMTestActions Create alarm (expiry time before silent until).
+//! @SYMTestActions Verify that the sound start is as expected.
+//! @SYMTestExpectedResults Sound should start as expected, when the quiet period ends
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM2
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0002AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0003AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0003AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Setting Out of Range Alarms Quiet Period
+//! @SYMTestActions Set sound silent out of range i.e. year 2101
+//! @SYMTestActions Create alarm.
+//! @SYMTestActions Verify that it does not panic.
+//! @SYMTestExpectedResults Should not panic
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM3
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0003AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0004AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0004AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Setting Sound Silent until in the past
+//! @SYMTestActions Set system time and UTC offset.
+//! @SYMTestActions Set sound silent until in the past.
+//! @SYMTestActions Verify it returns KErrArgument.
+//! @SYMTestExpectedResults Error code returned should be KErrArgument
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM4
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0004AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0005AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0005AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Setting Sound Silent For
+//! @SYMTestActions Set system time and UTC offset.
+//! @SYMTestActions Set sound silent For.
+//! @SYMTestActions Set UTC offset again.
+//! @SYMTestActions Verify that the silent period is cancelled.
+//! @SYMTestExpectedResults Silent period should be cancelled
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM5
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0005AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0006AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0006AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc No alarms test
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Enquire about the number of alarms by state.
+//! @SYMTestExpectedResults Should not panic, and return 0 alarms for all alarm states
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM6
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0006AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0007AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0007AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Alarm Characteristics
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Set Alarm and get alarm Characteristics.
+//! @SYMTestActions Verify that the return code returned is KErrNone.
+//! @SYMTestExpectedResults Return code should be KErrNone
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM7
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0007AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0008AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0008AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Over night alarm 
+//! @SYMTestActions Set system time to 1 minute before midnight and UTC offset.  
+//! @SYMTestActions Set Alarm Expiry to expiry 1 minute past the next day.
+//! @SYMTestExpectedResults Sound should start at the expected time
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM8
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0008AP-Naiad-0001
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0009AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0009AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc 24 Hour Alarm
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Set Alarm to expiry 24 hours and later.  
+//! @SYMTestActions Verify that the sound starts as expected
+//! @SYMTestExpectedResults Sound should start as the expected time
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM9
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM10
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM11
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM12
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM13
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM15
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0009AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0010AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0010AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Changing System Time less than one day 
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Add alarm to server.
+//! @SYMTestActions Change system time less than 12 hours than the previously calculated expiry time.
+//! @SYMTestActions Verify that the alarm expires immediately.
+//! @SYMTestExpectedResults Alarm should expiry immediately
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM14
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0010AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0011AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0011AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Changing System Time greater than one day 
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Add alarm to server.
+//! @SYMTestActions Change system time greater than one day than the previously calculated expiry time
+//! @SYMTestActions Verify that the alarm is silently discarded.
+//! @SYMTestExpectedResults The alarm should be silently discarded
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM16
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0011AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0012AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0012AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc 24 Hour Alarm
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Add 24 hour alarm to server expiring in 23 hours and 59 minutes after system time.
+//! @SYMTestActions Verify that the alarm is queued
+//! @SYMTestExpectedResults The alarm should be queued in the alarm server session
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM17
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0012AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0013AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0013AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc 24 Hour Alarm
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Add 24 Hour Alarm to server.
+//! @SYMTestActions Change system time so its before the previously calculated expiry time
+//! @SYMTestActions Verify that the alarm's definition changes from EAlarmRepeatDefintionRepeatNext24Hours to EAlarmRepeatDefintionRepeatOnce
+//! @SYMTestExpectedResults Verify that the alarm's definition is EAlarmRepeatDefintionRepeatOnce
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM18
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0013AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0014AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0014AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc 24 Hour Alarm (changing system time in future less than one day)
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Add 24 Hour Alarm to server.
+//! @SYMTestActions Change system time less than 12 hours than the previously calculated expiry time. 
+//! @SYMTestActions Verify that the alarm expires immediately.
+//! @SYMTestExpectedResults The alarm should expiry immediately 
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM19
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0014AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0015AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0015AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc 24 Hour Alarm (changing system time in future greater than one day)
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Add 24 Hour Alarm to server.
+//! @SYMTestActions Change system time greater than one day than the previously calcualted expiry time.
+//! @SYMTestActions Verify that the alarm is discarded silently.
+//! @SYMTestExpectedResults The alarm should be discarded silently
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM20
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0015AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0016AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0016AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Repeat Daily Alarm
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Add Repeat Daily Alarm to server.
+//! @SYMTestActions Wait for expiry.
+//! @SYMTestActions Verify the next calculated expiry time.
+//! @SYMTestExpectedResults The next calculated expiry time should be as expected
+
+RUN_TEST_STEP 230 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM21
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0016AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0017AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0017AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Set Alarm Day Or Timed Test
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Set Day/Timed alarm, add to server.
+//! @SYMTestActions Get day/timed alarm and verify
+//! @SYMTestExpectedResults Day or Timed Alarm should be set correctly
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM22
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM23
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0017AP-Naiad-0001
+
+
+START_TESTCASE PIM-APPSERV-AlarmServer-CIT-0018AP-Naiad-0001
+//! @file
+//! @SYMTestCaseID PIM-APPSERV-AlarmServer-CIT-0018AP-Naiad-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMFssID App-Services_Functional_Specification.doc 3.2 App Services/Alarmserver 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Default Alarm Day Or Timed Test
+//! @SYMTestActions Set system time and UTC offset.  
+//! @SYMTestActions Create alarm and add to server.
+//! @SYMTestActions Get day/timed alarm and verify default value.
+//! @SYMTestExpectedResults Default value should be EASShdAlarmTypeTimed
+
+RUN_TEST_STEP 180 TestCITAlarmServerSuite TestCITAlarmServer \CITAlarmServer\testdata\TestAlarmServerData4.ini ALARM24
+END_TESTCASE PIM-APPSERV-AlarmServer-CIT-0018AP-Naiad-0001
+
+PRINT Complete TestCITAlarmServer Naiad Quality Tests

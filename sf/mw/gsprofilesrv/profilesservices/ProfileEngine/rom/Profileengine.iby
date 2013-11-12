@@ -1,0 +1,40 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: IBY files for profile engine.
+*/
+#ifndef __PROFILEENGINE_IBY__
+#define __PROFILEENGINE_IBY__
+
+file=ABI_DIR\BUILD_DIR\profileengine.dll                        SHARED_LIB_DIR\profileengine.dll
+
+file=ABI_DIR\BUILD_DIR\profileeng.dll                           SHARED_LIB_DIR\profileeng.dll
+
+file=ABI_DIR\BUILD_DIR\profilescheduleevent.exe                 SHARED_LIB_DIR\profilescheduleevent.exe
+
+data=ABI_DIR\BUILD_DIR\z\system\sounds\digital\No_Sound.wav     RESOURCE_FILES_DIR\No_Sound.wav
+   
+data=ZPRIVATE\100058F8\backup_registration.xml                  private\100058F8\backup_registration.xml
+
+#ifdef FF_3D_RINGING_TONES
+// 3D Ringing tone plugin
+ECOM_PLUGIN( RingingTone3DPlugin.dll, 10208ADF.rsc )
+
+data=DATAZ_\RESOURCE_FILES_DIR\3DTones\1circular.xml                  RESOURCE_FILES_DIR\3DTones\1circular.xml
+data=DATAZ_\RESOURCE_FILES_DIR\3DTones\2flyby.xml                     RESOURCE_FILES_DIR\3DTones\2flyby.xml
+data=DATAZ_\RESOURCE_FILES_DIR\3DTones\3zigzag.xml                    RESOURCE_FILES_DIR\3DTones\3zigzag.xml
+data=DATAZ_\RESOURCE_FILES_DIR\3DTones\4meander.xml                   RESOURCE_FILES_DIR\3DTones\4meander.xml
+data=DATAZ_\RESOURCE_FILES_DIR\3DTones\5random.xml                    RESOURCE_FILES_DIR\3DTones\5random.xml
+#endif // FF_3D_RINGING_TONES
+
+#endif

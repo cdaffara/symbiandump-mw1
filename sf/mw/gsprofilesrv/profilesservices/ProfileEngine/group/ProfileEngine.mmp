@@ -1,0 +1,81 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This file contains build information for the ProfileEngine
+*
+*/
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          ProfileEngine.dll
+TARGETTYPE      dll
+
+UID             0x1000008d 0x100058FA
+VENDORID 	    VID_DEFAULT
+
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../WrapperSrc
+SOURCE          CProEngEngineImpl.cpp
+SOURCE          CProEngProfileImpl.cpp
+SOURCE          CProEngProfileNameArrayImpl.cpp
+SOURCE          CProEngProfileNameImpl.cpp
+SOURCE          CProEngToneHandler.cpp
+SOURCE          CProEngToneHandlerDrmFull.cpp
+SOURCE          CProEngDrmCommonWrapperFull.cpp
+LIBRARY         drmhelper.lib
+SOURCE          CProEngToneSettingsImpl.cpp
+SOURCE          CProEngTonesImpl.cpp
+SOURCE          CProEngAlertToneSeekerImpl.cpp
+SOURCE          CProEngNotifyHandlerImpl.cpp
+SOURCE          CProEngObserverBase.cpp
+SOURCE          CProEngCenRepObserverBase.cpp
+SOURCE          CProEngPubSubObserverBase.cpp
+SOURCE          CProEngActiveProfileDelegate.cpp
+SOURCE          CProEngProfileActivationDelegate.cpp
+SOURCE          CProEngProfileNameArrayEventDelegate.cpp
+SOURCE          CProEngProfileEventDelegate.cpp
+SOURCE          CProEngMediaVariation.cpp
+SOURCE          CProEngPostFilter.cpp
+SOURCE          ProEngFactory.cpp
+SOURCE          ProEngMmfInfoUtility.cpp 
+
+START RESOURCE  ProEngWrapper.rss
+  HEADER
+  TARGETPATH    RESOURCE_FILES_DIR
+  LANGUAGE_IDS
+END
+
+USERINCLUDE     .
+USERINCLUDE     ../WrapperInc
+USERINCLUDE     ../EngInc
+
+MW_LAYER_SYSTEMINCLUDE
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY         bafl.lib
+LIBRARY         euser.lib
+LIBRARY         centralrepository.lib
+LIBRARY         profileeng.lib
+LIBRARY         apgrfx.lib  // RApaLSSession
+LIBRARY         apmime.lib  // TDataType
+LIBRARY         efsrv.lib  // RFs, TParse
+LIBRARY         PlatformEnv.lib  // PathInfo
+LIBRARY         ContentListingFramework.lib
+LIBRARY         mmfcontrollerframework.lib
+
+LIBRARY         DRMCommon.lib
+LIBRARY         DrmRights.lib
+LIBRARY		caf.lib	cafutils.lib // Content access framework

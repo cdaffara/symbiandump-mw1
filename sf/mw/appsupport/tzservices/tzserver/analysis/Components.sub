@@ -1,0 +1,504 @@
+
+(object Petal
+    version    	43
+    _written   	"Rose 6.5.9232.10"
+    charSet    	0)
+
+(object SubSystem "Components Analysis"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"40D969B300E0"
+    physical_models 	(list unit_reference_list
+	(object module "App-Services/TzClient" "NotAModuleType" "NotAModulePart"
+	    quid       	"40D960CA0111"
+	    stereotype 	"DLL"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"40D9620F0386"
+		    label      	"communicates with"
+		    supplier   	"Component View::Components Analysis::App-Services/TzServer"
+		    quidu      	"40D960F101AD"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"40D96A130352"
+		    supplier   	"Component View::Components Analysis"
+		    quidu      	"40D969B300E0"
+		    supplier_is_subsystem 	TRUE)))
+	(object module "App-Services/TzServer" "NotAModuleType" "NotAModulePart"
+	    quid       	"40D960F101AD"
+	    stereotype 	"EXE"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"40D96A0F03DE"
+		    supplier   	"Component View::Components Analysis"
+		    quidu      	"40D969B300E0"
+		    supplier_is_subsystem 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"40DC4E600225"
+		    supplier   	"Component View::Components Analysis::App-Services/TimeZoneDatabaseProvider"
+		    quidu      	"40D9624801D1"
+		    supplier_is_spec 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"4180BFFD0079"
+		    label      	"linked with"
+		    supplier   	"Component View::Components Analysis::App-Services/TzClient"
+		    quidu      	"40D960CA0111"
+		    supplier_is_spec 	TRUE)))
+	(object module "App-Services/TimeZoneDatabaseProvider" "NotAModuleType" "NotAModulePart"
+	    quid       	"40D9624801D1"
+	    stereotype 	"")
+	(object module "App-Services/LocalisedNamesService" "NotAModuleType" "NotAModulePart"
+	    quid       	"40EA737F02BF"
+	    stereotype 	"DLL"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"4112039F009F"
+		    supplier   	"Component View::Components Analysis::Licensee Provided Localised Location Name Resource Manager"
+		    quidu      	"411202FA03D9"
+		    supplier_is_spec 	TRUE)))
+	(object module "Licensee Provided Localised Location Name Resource Manager" "NotAModuleType" "NotAModulePart"
+	    quid       	"411202FA03D9"
+	    stereotype 	"ECOM Plug-in")
+	(object SubSystem "BASE/EFSRV"
+	    quid       	"418770FA028E"
+	    physical_models 	(list unit_reference_list)
+	    physical_presentations 	(list unit_reference_list))
+	(object SubSystem "BASE/ESTOR"
+	    quid       	"418771100250"
+	    physical_models 	(list unit_reference_list)
+	    physical_presentations 	(list unit_reference_list
+		(object Module_Diagram "Main"
+		    quid       	"418771C901B6"
+		    title      	"Main"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list))))
+	(object SubSystem "BASE/EUSER"
+	    quid       	"41877121001D"
+	    physical_models 	(list unit_reference_list)
+	    physical_presentations 	(list unit_reference_list))
+	(object SubSystem "SYSLIB/BAFL"
+	    quid       	"4187712F02CD"
+	    physical_models 	(list unit_reference_list)
+	    physical_presentations 	(list unit_reference_list))
+	(object SubSystem "APP-SERVICES/BACKUPRESTORENOTIFICATION"
+	    quid       	"41877141027F"
+	    physical_models 	(list unit_reference_list)
+	    physical_presentations 	(list unit_reference_list))
+	(object SubSystem "APP-SERVICES/TIMEZONESERVER"
+	    quid       	"4187716101D4"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"418771F3008D"
+		    supplier   	"Component View::Components Analysis::APP-SERVICES/BACKUPRESTORENOTIFICATION"
+		    quidu      	"41877141027F"
+		    supplier_is_subsystem 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"418771F502B0"
+		    supplier   	"Component View::Components Analysis::BASE/EFSRV"
+		    quidu      	"418770FA028E"
+		    supplier_is_subsystem 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"418771F80214"
+		    supplier   	"Component View::Components Analysis::BASE/ESTOR"
+		    quidu      	"418771100250"
+		    supplier_is_subsystem 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"418771FA0168"
+		    supplier   	"Component View::Components Analysis::SYSLIB/BAFL"
+		    quidu      	"4187712F02CD"
+		    supplier_is_subsystem 	TRUE)
+		(object Dependency_Relationship
+		    quid       	"418771FC0262"
+		    supplier   	"Component View::Components Analysis::BASE/EUSER"
+		    quidu      	"41877121001D"
+		    supplier_is_subsystem 	TRUE))
+	    physical_models 	(list unit_reference_list)
+	    physical_presentations 	(list unit_reference_list)))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "Deployment Diagram"
+	    quid       	"40E55E310390"
+	    title      	"Deployment Diagram"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object NoteView @1
+		    location   	(519, 1356)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(12, 1144)
+			nlines     	7
+			max_width  	978
+			label      	"Local Time Configuration Server Process")
+		    line_color 	3342489
+		    width      	1038
+		    height     	437)
+		(object ModView "Component View::Components Analysis::App-Services/TzClient" "NotAModuleType" "NotAModulePart" @2
+		    location   	(519, 746)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(440, 771)
+			fill_color 	13434879
+			anchor_loc 	3
+			nlines     	2
+			max_width  	299
+			label      	"App-Services/TzClient")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@2
+			location   	(440, 690)
+			fill_color 	13434879
+			anchor     	10
+			anchor_loc 	3
+			nlines     	1
+			max_width  	172
+			label      	"<<DLL>>")
+		    icon       	"DLL"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40D960CA0111"
+		    width      	538
+		    height     	168
+		    autoResize 	TRUE
+		    width      	538
+		    height     	168)
+		(object ModView "Component View::Components Analysis::App-Services/TzServer" "NotAModuleType" "NotAModulePart" @3
+		    location   	(528, 1387)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(443, 1402)
+			fill_color 	13434879
+			anchor_loc 	3
+			nlines     	2
+			max_width  	319
+			label      	"App-Services/TzServer")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@3
+			location   	(443, 1321)
+			fill_color 	13434879
+			anchor     	10
+			anchor_loc 	3
+			nlines     	1
+			max_width  	178
+			label      	"<<EXE>>")
+		    icon       	"EXE"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40D960F101AD"
+		    width      	575
+		    height     	237
+		    autoResize 	TRUE
+		    width      	575
+		    height     	237)
+		(object NoteView @4
+		    location   	(525, 353)
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(215, 225)
+			fill_color 	13434879
+			nlines     	5
+			max_width  	584
+			label      	"Client Interface to the Local Time Conversion and Configuration Services.")
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	644
+		    height     	269)
+		(object Label @5
+		    location   	(38, 31)
+		    font       	(object Font
+			size       	12)
+		    nlines     	1
+		    max_width  	600
+		    label      	"Client Process")
+		(object AttachView "" @6
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@4
+		    line_style 	0)
+		(object ModView "Component View::Components Analysis::App-Services/LocalisedNamesService" "NotAModuleType" "NotAModulePart" @7
+		    location   	(2138, 761)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(2043, 786)
+			fill_color 	13434879
+			anchor_loc 	3
+			nlines     	2
+			max_width  	361
+			label      	"App-Services/LocalisedNamesService")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@7
+			location   	(2043, 711)
+			fill_color 	13434879
+			anchor     	10
+			anchor_loc 	3
+			nlines     	1
+			max_width  	172
+			label      	"<<DLL>>")
+		    icon       	"DLL"
+		    icon_style 	"Label"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40EA737F02BF"
+		    width      	650
+		    autoResize 	TRUE
+		    width      	650
+		    height     	162)
+		(object NoteView @8
+		    location   	(2122, 268)
+		    font       	(object Font
+			size       	10)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(1834, 43)
+			fill_color 	13434879
+			nlines     	9
+			max_width  	540
+			label      	
+|Provides an API for clients to request localised location names and the TZ Zone names these refers to.
+|Licensees provide the underlining localised location name - zone name resource files
+			)
+		    line_color 	3342489
+		    fill_color 	13434879
+		    width      	600
+		    height     	463)
+		(object AttachView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    client     	@8
+		    supplier   	@7
+		    line_style 	0)
+		(object ModView "Component View::Components Analysis::Licensee Provided Localised Location Name Resource Manager" "NotAModuleType" "NotAModulePart" @10
+		    location   	(2147, 1178)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1980, 1168)
+			fill_color 	13434879
+			anchor_loc 	3
+			nlines     	2
+			max_width  	638
+			label      	"Licensee Provided Localised Location Name Resource Manager")
+		    stereotype 	(object ItemLabel
+			Parent_View 	@10
+			location   	(1980, 1098)
+			fill_color 	13434879
+			anchor     	10
+			anchor_loc 	3
+			nlines     	1
+			max_width  	328
+			label      	"<<ECOM Plug-in>>")
+		    icon       	"ECOM Plug-in"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	65535
+		    quidu      	"411202FA03D9"
+		    width      	1150
+		    height     	387
+		    autoResize 	TRUE
+		    width      	1150
+		    height     	387)
+		(object ModVisView "" @11
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4112039F009F"
+		    client     	@7
+		    supplier   	@10
+		    line_style 	0)
+		(object ModVisView "communicates with" @12
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(520, 1048)
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"communicates with")
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40D9620F0386"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)
+		(object ModVisView "linked with" @13
+		    font       	(object Font
+			size       	12)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(1141, 1018)
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"linked with")
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4180BFFD0079"
+		    client     	@3
+		    supplier   	@2
+		    vertices   	(list Points
+			(804, 1315)
+			(1141, 1315)
+			(1141, 746)
+			(777, 746))
+		    line_style 	3
+		    origin_attachment 	(804, 1315)
+		    terminal_attachment 	(777, 746))))
+	(object Module_Diagram "TZ Deployment"
+	    quid       	"413C4C350317"
+	    title      	"TZ Deployment"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object SubSysView "Component View::Components Analysis::APP-SERVICES/TIMEZONESERVER" @14
+		    location   	(1066, 172)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(922, 103)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	288
+			justify    	0
+			label      	"APP-SERVICES/TIMEZONESERVER")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4187716101D4"
+		    width      	300
+		    height     	150)
+		(object SubSysView "Component View::Components Analysis::APP-SERVICES/BACKUPRESTORENOTIFICATION" @15
+		    location   	(272, 506)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(128, 437)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	288
+			justify    	0
+			label      	"APP-SERVICES/BACKUPRESTORENOTIFICATION")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"41877141027F"
+		    width      	300
+		    height     	150)
+		(object SubSysView "Component View::Components Analysis::SYSLIB/BAFL" @16
+		    location   	(1581, 766)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(1437, 697)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	288
+			justify    	0
+			label      	"SYSLIB/BAFL")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4187712F02CD"
+		    width      	300
+		    height     	150)
+		(object SubSysView "Component View::Components Analysis::BASE/EUSER" @17
+		    location   	(1997, 550)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(1853, 481)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	288
+			justify    	0
+			label      	"BASE/EUSER")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"41877121001D"
+		    width      	300
+		    height     	150)
+		(object SubSysView "Component View::Components Analysis::BASE/ESTOR" @18
+		    location   	(1041, 816)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(897, 747)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	288
+			justify    	0
+			label      	"BASE/ESTOR")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"418771100250"
+		    width      	300
+		    height     	150)
+		(object SubSysView "Component View::Components Analysis::BASE/EFSRV" @19
+		    location   	(556, 794)
+		    label      	(object ItemLabel
+			Parent_View 	@19
+			location   	(412, 725)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	288
+			justify    	0
+			label      	"BASE/EFSRV")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"418770FA028E"
+		    width      	300
+		    height     	150)
+		(object ModVisView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418771F3008D"
+		    client     	@14
+		    supplier   	@15
+		    line_style 	0)
+		(object ModVisView "" @21
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418771F502B0"
+		    client     	@14
+		    supplier   	@19
+		    line_style 	0)
+		(object ModVisView "" @22
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418771F80214"
+		    client     	@14
+		    supplier   	@18
+		    line_style 	0)
+		(object ModVisView "" @23
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418771FA0168"
+		    client     	@14
+		    supplier   	@16
+		    line_style 	0)
+		(object ModVisView "" @24
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"418771FC0262"
+		    client     	@14
+		    supplier   	@17
+		    line_style 	0)))))

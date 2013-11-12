@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Registry info resource file for SAnimIhlPlugin ECOM plugin.
+*
+*/
+
+
+//  INCLUDES
+#include <ecom/registryinfov2.rh>
+
+//  RESOURCE DEFINITIONS
+// ---------------------------------------------------------
+//
+//   sanimihlplugin_registry_info
+//   Registry info resource.
+//
+// ---------------------------------------------------------
+//
+RESOURCE REGISTRY_INFO sanimihlplugin_registry_info
+    {
+    resource_format_version = RESOURCE_FORMAT_VERSION_2;
+    dll_uid = 0x2000B11B;
+    interfaces =
+        {
+        INTERFACE_INFO
+            {
+            interface_uid = 0x2000B118; // UID of Startup Image Plug-in API
+            implementations =
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    implementation_uid = 0x2000B11C;
+                    version_no = 1;
+                    display_name = "SAnimIhlPlugin";
+                    default_data = "gif||jpg||bmp||jpeg||mbm||png||tiff||ico||wmf";
+                    opaque_data = "";
+                    rom_only = 1;
+                    }
+                };
+            }
+        };
+    }
+
+
+// End of File

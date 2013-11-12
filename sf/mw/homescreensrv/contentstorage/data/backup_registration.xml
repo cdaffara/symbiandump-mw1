@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="yes"?>
+<backup_registration>
+  <passive_backup>
+      <include_file name="castorage.backup"/>
+  </passive_backup>
+  <restore requires_reboot = "yes"/>
+</backup_registration>

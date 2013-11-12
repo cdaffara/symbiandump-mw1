@@ -1,0 +1,14 @@
+HbDialog#tsdevicedialog::heading {
+    left: 0un;
+    right: 0un;
+    top: 0un;
+    bottom: 0un;
+    fixed-height: expr(var(hb-param-text-height-primary)+2*var(hb-param-margin-gene-popup));
+}
+
+HbDialog#tsdevicedialog::content {
+    left: -0.25un;
+    right: 0.25un;
+    bottom: 0un;
+    top: 0un;
+}

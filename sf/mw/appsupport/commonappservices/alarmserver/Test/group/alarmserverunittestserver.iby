@@ -1,0 +1,81 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __TEF_ALARMSERVER_IBY__
+#define __TEF_ALARMSERVER_IBY__
+
+#include <AlarmServer.iby>
+#include <testexecute.iby>
+#include <RFileLogger.iby>
+
+file=ABI_DIR\DEBUG_DIR\alarmserverunittestserver.exe					SYSTEM_BINDIR\alarmserverunittestserver.exe
+
+data=DATAZ_\testdata\scripts\TEAlarmServer.script 	\testdata\scripts\TEAlarmServer.script
+data=DATAZ_\testdata\configs\silentfor.ini 		\testdata\configs\silentfor.ini
+data=DATAZ_\testdata\configs\silentuntil.ini 		\testdata\configs\silentuntil.ini
+
+// Console Alarm Alert Server
+file=ABI_DIR\DEBUG_DIR\ConsoleAlarmAlertServer.exe	System\Programs\ConsoleAlarmAlertServer.exe
+file=ABI_DIR\DEBUG_DIR\ANTestClient.dll				SYSTEM_BINDIR\ANTestClient.dll
+
+
+	data=DATAZ_\testdata\config\TEAlarmServer_apc.ini	\testdata\config\TEAlarmServer_apc.ini
+	data=DATAZ_\testdata\config\TEAlarmServer_man.ini	\testdata\config\TEAlarmServer_man.ini
+
+	#if defined (AS_LOOPANDMAN)
+		data=DATAZ_\testdata\scripts\TEAlarmServer_apc_loop.script 			\testdata\scripts\TEAlarmServer_apc.script
+		data=DATAZ_\testdata\config\tealarmserver_loop.rsc					\Private\101F5027\AlarmServer.rsc
+
+		data=DATAZ_\testdata\scripts\TEAlarmServer_man.script	 		\testdata\scripts\TEAlarmServer_man.script
+		data=DATAZ_\testdata\scripts\TEAlarmServer_man_TC3.script		\testdata\scripts\TEAlarmServer_man_TC3.script
+		data=DATAZ_\testdata\scripts\TEAlarmServer_man_exceptTC3.script		\testdata\scripts\TEAlarmServer_man_exceptTC3.script
+	#else
+		#if defined (AS_REPEAT)
+		data=DATAZ_\testdata\scripts\TEAlarmServer_apc_repeat.script 		\testdata\scripts\TEAlarmServer_apc.script
+		data=DATAZ_\testdata\config\tealarmserver_repeatlast.rsc			\Private\101F5027\AlarmServer.rsc
+		#else
+			#if defined (AS_STOP)
+		data=DATAZ_\testdata\scripts\TEAlarmServer_apc_stop.script 			\testdata\scripts\TEAlarmServer_apc.script
+		data=DATAZ_\testdata\config\tealarmserver_stop.rsc					\Private\101F5027\AlarmServer.rsc
+			#else
+				#if defined (AS_DISABLED)
+		data=DATAZ_\testdata\scripts\TEAlarmServer_apc_disabled.script	 	\testdata\scripts\TEAlarmServer_apc.script
+		data=DATAZ_\testdata\config\tealarmserver_disabled.rsc				\Private\101F5027\AlarmServer.rsc
+				#else
+					#if defined (AS_DISORDERED)
+		data=DATAZ_\testdata\scripts\TEAlarmServer_apc_disordered.script 	\testdata\scripts\TEAlarmServer_apc.script
+		data=DATAZ_\testdata\config\tealarmserver_disordered.rsc			\Private\101F5027\AlarmServer.rsc
+					#else
+						#if defined (AS_INI)
+		data=DATAZ_\testdata\scripts\TEAlarmServer_apc_ini.script		 \testdata\scripts\TEAlarmServer_apc.script
+		data=DATAZ_\testdata\config\tealarmserver_loop.rsc				\Private\101F5027\AlarmServer.rsc
+						#else
+							#if defined (AS_INVALID)
+		data=DATAZ_\testdata\scripts\TEAlarmServer_apc_invalid.script 		\testdata\scripts\TEAlarmServer_apc.script
+		data=DATAZ_\testdata\config\tealarmserver_longduration.rsc			\Private\101F5027\AlarmServer.rsc
+							#else // No Resource file
+		data=DATAZ_\testdata\scripts\TEAlarmServer_apc_norsc.script 		\testdata\scripts\TEAlarmServer_apc.script
+		data=DATAZ_\testdata\scripts\TEAlarmServer_man_exceptTC3.script		\testdata\scripts\TEAlarmServer_man.script
+							#endif // AS_INVALID
+						#endif // AS_INI
+					#endif // AS_DISORDERED
+				#endif // AS_DISABLED
+			#endif // AS_STOP
+		#endif // AS_REPEAT
+	#endif // AS_LOOP
+
+
+#endif // __TEF_ALARMSERVER_IBY__

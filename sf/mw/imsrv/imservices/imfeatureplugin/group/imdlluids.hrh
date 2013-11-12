@@ -1,0 +1,73 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  XIMP Framework IM DLL uids
+*
+*/
+
+#ifndef IMDLLUIDS_HRH
+#define IMDLLUIDS_HRH
+
+
+// -----------------------------------------------------------------------------
+// Common dll uids
+// -----------------------------------------------------------------------------
+//
+#define XIMP_IM_DLL_UID_STATIC_INTERFACE                   0x1000008d
+#define XIMP_IM_DLL_UID_ECOM_PLUGIN                        0x10009D8D
+
+// -----------------------------------------------------------------------------
+// Common UID 3 for the XIMP Framework dlls.
+// -----------------------------------------------------------------------------
+//
+#define XIMP_IM_DLL_UID_COMMON                             0x10282DD8
+// -----------------------------------------------------------------------------
+// ECOM implementation UID
+// -----------------------------------------------------------------------------
+//
+#define XIMP_ECOM_IMPLEMENTATION_UID_IM_INTERFACE   				0x2000B5ED
+
+//#define XIMP_ECOM_IMPL_UID_IM_CACHE_INTERFACE       				0x2000B5EE
+
+// Factory interface for internal data structures
+#define XIMP_ECOM_IMPL_UID_IM_DATAMODEL_INTERFACE   				0x2000B5EF
+
+#define XIMP_ECOM_IMPL_UID_IM_PROCESSOR_INTERFACE   				0x20015A10
+#define XIMP_ECOM_IMPL_UID_IM_OPERATION_INTERFACE   				0x20015A0F
+
+// -----------------------------------------------------------------------------
+// Other dll uids
+// -----------------------------------------------------------------------------
+//
+#define XIMP_DLL_UID_IM_HOOK                      					0x2000B5F0
+#define XIMP_DLL_UID_IM_MANAGER                   					0x2000B5F1
+#define XIMP_DLL_UID_IM_DATAMODEL_HOOK            					0x2000B5F2
+//#define XIMP_DLL_UID_IM_CACHE_HOOK                					0x2000B5F3
+#define XIMP_DLL_UID_IM_PROCESSOR	            					0x2000B5F4
+#define XIMP_DLL_UID_IM_PROCESSOR_HOOK            					0x20015A12
+#define XIMP_DLL_UID_IM_OPERATIONS_HOOK            					0x20015A13
+
+
+#define XIMP_DLL_UID_IM_OPERATION           						0x20015A11
+
+
+//#define XIMP_ECOM_IMPLEMENTATION_UID_IM_INTERFACE 		0x2000B5EA
+//#define XIMP_DLL_UID_IM_HOOK                      			0x2000B5EB
+//#define XIMP_DLL_UID_IM_MANAGER                   			0x2000B5EC
+
+
+
+
+#endif // IMDLLUIDS_HRH
+
+

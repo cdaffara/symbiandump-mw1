@@ -1,0 +1,800 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+// Resource Identifier
+NAME TZGP
+
+// INCLUDES
+#include <uikon.rh>
+#include "TimeZoneLocalization.rh"
+#include "TimeZoneGroupsLocalization.rls"
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_uk
+	{
+	city_group_id = 1;
+	city_group_name = STRING_city_group_name1;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_cal
+	{
+	city_group_id = 2;
+	city_group_name = STRING_city_group_name2;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_oreg
+	{
+	city_group_id = 3;
+	city_group_name = STRING_city_group_name3;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_wash
+	{
+	city_group_id = 4;
+	city_group_name = STRING_city_group_name4;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_eur
+	{
+	city_group_id = 5;
+	city_group_name = STRING_city_group_name5;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_aus
+	{
+	city_group_id = 6;
+	city_group_name = STRING_city_group_name6;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_centrallakes
+	{
+	city_group_id = 7;
+	city_group_name = STRING_city_group_name7;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_asia
+	{
+	city_group_id = 8;
+	city_group_name = STRING_city_group_name8;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_newzealand
+	{
+	city_group_id = 9;
+	city_group_name = STRING_city_group_name9;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_atlantic
+	{
+	city_group_id = 10;
+	city_group_name = STRING_city_group_name10;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_acre
+	{
+	city_group_id = 11;
+	city_group_name = STRING_city_group_name11;
+	}
+
+//Add new time zone groups to test support 127+ groups
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_12
+	{
+	city_group_id = 12;
+	city_group_name = STRING_city_group_name12;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_13
+	{
+	city_group_id = 13;
+	city_group_name = STRING_city_group_name13;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_14
+	{
+	city_group_id = 14;
+	city_group_name = STRING_city_group_name14;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_15
+	{
+	city_group_id = 15;
+	city_group_name = STRING_city_group_name15;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_16
+	{
+	city_group_id = 16;
+	city_group_name = STRING_city_group_name16;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_17
+	{
+	city_group_id = 17;
+	city_group_name = STRING_city_group_name17;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_18
+	{
+	city_group_id = 18;
+	city_group_name = STRING_city_group_name18;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_19
+	{
+	city_group_id = 19;
+	city_group_name = STRING_city_group_name19;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_20
+	{
+	city_group_id = 20;
+	city_group_name = STRING_city_group_name20;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_21
+	{
+	city_group_id = 21;
+	city_group_name = STRING_city_group_name21;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_22
+	{
+	city_group_id = 22;
+	city_group_name = STRING_city_group_name22;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_23
+	{
+	city_group_id = 23;
+	city_group_name = STRING_city_group_name23;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_24
+	{
+	city_group_id = 24;
+	city_group_name = STRING_city_group_name24;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_25
+	{
+	city_group_id = 25;
+	city_group_name = STRING_city_group_name25;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_26
+	{
+	city_group_id = 26;
+	city_group_name = STRING_city_group_name26;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_27
+	{
+	city_group_id = 27;
+	city_group_name = STRING_city_group_name27;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_28
+	{
+	city_group_id = 28;
+	city_group_name = STRING_city_group_name28;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_29
+	{
+	city_group_id = 29;
+	city_group_name = STRING_city_group_name29;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_30
+	{
+	city_group_id = 30;
+	city_group_name = STRING_city_group_name30;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_31
+	{
+	city_group_id = 31;
+	city_group_name = STRING_city_group_name31;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_32
+	{
+	city_group_id = 32;
+	city_group_name = STRING_city_group_name32;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_33
+	{
+	city_group_id = 33;
+	city_group_name = STRING_city_group_name33;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_34
+	{
+	city_group_id = 34;
+	city_group_name = STRING_city_group_name34;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_35
+	{
+	city_group_id = 35;
+	city_group_name = STRING_city_group_name35;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_36
+	{
+	city_group_id = 36;
+	city_group_name = STRING_city_group_name36;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_37
+	{
+	city_group_id = 37;
+	city_group_name = STRING_city_group_name37;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_38
+	{
+	city_group_id = 38;
+	city_group_name = STRING_city_group_name38;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_39
+	{
+	city_group_id = 39;
+	city_group_name = STRING_city_group_name39;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_40
+	{
+	city_group_id = 40;
+	city_group_name = STRING_city_group_name40;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_41
+	{
+	city_group_id = 41;
+	city_group_name = STRING_city_group_name41;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_42
+	{
+	city_group_id = 42;
+	city_group_name = STRING_city_group_name42;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_43
+	{
+	city_group_id = 43;
+	city_group_name = STRING_city_group_name43;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_44
+	{
+	city_group_id = 44;
+	city_group_name = STRING_city_group_name44;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_45
+	{
+	city_group_id = 45;
+	city_group_name = STRING_city_group_name45;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_46
+	{
+	city_group_id = 46;
+	city_group_name = STRING_city_group_name46;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_47
+	{
+	city_group_id = 47;
+	city_group_name = STRING_city_group_name47;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_48
+	{
+	city_group_id = 48;
+	city_group_name = STRING_city_group_name48;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_49
+	{
+	city_group_id = 49;
+	city_group_name = STRING_city_group_name49;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_50
+	{
+	city_group_id = 50;
+	city_group_name = STRING_city_group_name50;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_51
+	{
+	city_group_id = 51;
+	city_group_name = STRING_city_group_name51;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_52
+	{
+	city_group_id = 52;
+	city_group_name = STRING_city_group_name52;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_53
+	{
+	city_group_id = 53;
+	city_group_name = STRING_city_group_name53;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_54
+	{
+	city_group_id = 54;
+	city_group_name = STRING_city_group_name54;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_55
+	{
+	city_group_id = 55;
+	city_group_name = STRING_city_group_name55;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_56
+	{
+	city_group_id = 56;
+	city_group_name = STRING_city_group_name56;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_57
+	{
+	city_group_id = 57;
+	city_group_name = STRING_city_group_name57;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_58
+	{
+	city_group_id = 58;
+	city_group_name = STRING_city_group_name58;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_59
+	{
+	city_group_id = 59;
+	city_group_name = STRING_city_group_name59;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_60
+	{
+	city_group_id = 60;
+	city_group_name = STRING_city_group_name60;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_61
+	{
+	city_group_id = 61;
+	city_group_name = STRING_city_group_name61;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_62
+	{
+	city_group_id = 62;
+	city_group_name = STRING_city_group_name62;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_63
+	{
+	city_group_id = 63;
+	city_group_name = STRING_city_group_name63;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_64
+	{
+	city_group_id = 64;
+	city_group_name = STRING_city_group_name64;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_65
+	{
+	city_group_id = 65;
+	city_group_name = STRING_city_group_name65;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_66
+	{
+	city_group_id = 66;
+	city_group_name = STRING_city_group_name66;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_67
+	{
+	city_group_id = 67;
+	city_group_name = STRING_city_group_name67;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_68
+	{
+	city_group_id = 68;
+	city_group_name = STRING_city_group_name68;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_69
+	{
+	city_group_id = 69;
+	city_group_name = STRING_city_group_name69;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_70
+	{
+	city_group_id = 70;
+	city_group_name = STRING_city_group_name70;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_71
+	{
+	city_group_id = 71;
+	city_group_name = STRING_city_group_name71;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_72
+	{
+	city_group_id = 72;
+	city_group_name = STRING_city_group_name72;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_73
+	{
+	city_group_id = 73;
+	city_group_name = STRING_city_group_name73;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_74
+	{
+	city_group_id = 74;
+	city_group_name = STRING_city_group_name74;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_75
+	{
+	city_group_id = 75;
+	city_group_name = STRING_city_group_name75;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_76
+	{
+	city_group_id = 76;
+	city_group_name = STRING_city_group_name76;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_77
+	{
+	city_group_id = 77;
+	city_group_name = STRING_city_group_name77;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_78
+	{
+	city_group_id = 78;
+	city_group_name = STRING_city_group_name78;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_79
+	{
+	city_group_id = 79;
+	city_group_name = STRING_city_group_name79;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_80
+	{
+	city_group_id = 80;
+	city_group_name = STRING_city_group_name80;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_81
+	{
+	city_group_id = 81;
+	city_group_name = STRING_city_group_name81;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_82
+	{
+	city_group_id = 82;
+	city_group_name = STRING_city_group_name82;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_83
+	{
+	city_group_id = 83;
+	city_group_name = STRING_city_group_name83;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_84
+	{
+	city_group_id = 84;
+	city_group_name = STRING_city_group_name84;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_85
+	{
+	city_group_id = 85;
+	city_group_name = STRING_city_group_name85;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_86
+	{
+	city_group_id = 86;
+	city_group_name = STRING_city_group_name86;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_87
+	{
+	city_group_id = 87;
+	city_group_name = STRING_city_group_name87;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_88
+	{
+	city_group_id = 88;
+	city_group_name = STRING_city_group_name88;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_89
+	{
+	city_group_id = 89;
+	city_group_name = STRING_city_group_name89;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_90
+	{
+	city_group_id = 90;
+	city_group_name = STRING_city_group_name90;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_91
+	{
+	city_group_id = 91;
+	city_group_name = STRING_city_group_name91;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_92
+	{
+	city_group_id = 92;
+	city_group_name = STRING_city_group_name92;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_93
+	{
+	city_group_id = 93;
+	city_group_name = STRING_city_group_name93;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_94
+	{
+	city_group_id = 94;
+	city_group_name = STRING_city_group_name94;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_95
+	{
+	city_group_id = 95;
+	city_group_name = STRING_city_group_name95;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_96
+	{
+	city_group_id = 96;
+	city_group_name = STRING_city_group_name96;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_97
+	{
+	city_group_id = 97;
+	city_group_name = STRING_city_group_name97;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_98
+	{
+	city_group_id = 98;
+	city_group_name = STRING_city_group_name98;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_99
+	{
+	city_group_id = 99;
+	city_group_name = STRING_city_group_name99;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_100
+	{
+	city_group_id = 100;
+	city_group_name = STRING_city_group_name100;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_101
+	{
+	city_group_id = 101;
+	city_group_name = STRING_city_group_name101;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_102
+	{
+	city_group_id = 102;
+	city_group_name = STRING_city_group_name102;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_103
+	{
+	city_group_id = 103;
+	city_group_name = STRING_city_group_name103;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_104
+	{
+	city_group_id = 104;
+	city_group_name = STRING_city_group_name104;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_105
+	{
+	city_group_id = 105;
+	city_group_name = STRING_city_group_name105;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_106
+	{
+	city_group_id = 106;
+	city_group_name = STRING_city_group_name106;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_107
+	{
+	city_group_id = 107;
+	city_group_name = STRING_city_group_name107;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_108
+	{
+	city_group_id = 108;
+	city_group_name = STRING_city_group_name108;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_109
+	{
+	city_group_id = 109;
+	city_group_name = STRING_city_group_name109;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_110
+	{
+	city_group_id = 110;
+	city_group_name = STRING_city_group_name110;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_111
+	{
+	city_group_id = 111;
+	city_group_name = STRING_city_group_name111;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_112
+	{
+	city_group_id = 112;
+	city_group_name = STRING_city_group_name112;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_113
+	{
+	city_group_id = 113;
+	city_group_name = STRING_city_group_name113;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_114
+	{
+	city_group_id = 114;
+	city_group_name = STRING_city_group_name114;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_115
+	{
+	city_group_id = 115;
+	city_group_name = STRING_city_group_name115;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_116
+	{
+	city_group_id = 116;
+	city_group_name = STRING_city_group_name116;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_117
+	{
+	city_group_id = 117;
+	city_group_name = STRING_city_group_name117;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_118
+	{
+	city_group_id = 118;
+	city_group_name = STRING_city_group_name118;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_119
+	{
+	city_group_id = 119;
+	city_group_name = STRING_city_group_name119;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_120
+	{
+	city_group_id = 120;
+	city_group_name = STRING_city_group_name120;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_121
+	{
+	city_group_id = 121;
+	city_group_name = STRING_city_group_name121;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_122
+	{
+	city_group_id = 122;
+	city_group_name = STRING_city_group_name122;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_123
+	{
+	city_group_id = 123;
+	city_group_name = STRING_city_group_name123;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_124
+	{
+	city_group_id = 124;
+	city_group_name = STRING_city_group_name124;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_125
+	{
+	city_group_id = 125;
+	city_group_name = STRING_city_group_name125;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_126
+	{
+	city_group_id = 126;
+	city_group_name = STRING_city_group_name126;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_127
+	{
+	city_group_id = 127;
+	city_group_name = STRING_city_group_name127;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_128
+	{
+	city_group_id = 128;
+	city_group_name = STRING_city_group_name128;
+	}
+
+RESOURCE TIMEZONE_CITY_GROUP r_tz_group_129
+	{
+	city_group_id = 129;
+	city_group_name = STRING_city_group_name129;
+	}
+

@@ -1,0 +1,50 @@
+/*
+* ==============================================================================
+*  Name        : bld.inf
+*  Part of     :
+*  Description : This is a top level bld file to generate all libraries.
+*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies). All rights reserved.
+*
+* This library is free software; you can redistribute it and/or
+* modify it under the terms of the GNU Lesser General Public
+* License as published by the Free Software Foundation; either
+* version 2 of the License, or (at your option) any later version.
+*
+* This library is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* Lesser General Public License for more details.
+*
+* You should have received a copy of the GNU Lesser General Public
+* License along with this library; if not, write to the
+* Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+* Boston, MA 02111-1307, USA.
+*
+* Description:  This file provides the information required for building
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_EXPORTS
+
+
+s60settingsuis.confml           MW_LAYER_CONFML(s60settingsuis.confml) 
+s60settingsuis_101F877A.crml 	  MW_LAYER_CRML(s60settingsuis_101f877a.crml) 
+s60settingsuis_101F877B.crml 	  MW_LAYER_CRML(s60settingsuis_101f877b.crml) 
+s60settingsuis_101F877C.crml 	  MW_LAYER_CRML(s60settingsuis_101f877c.crml) 
+s60settingsuis_101F877E.crml 	  MW_LAYER_CRML(s60settingsuis_101f877e.crml) 
+s60settingsuis_101F877F.crml 	  MW_LAYER_CRML(s60settingsuis_101f877f.crml) 
+s60settingsuis_101F883B.crml 	  MW_LAYER_CRML(s60settingsuis_101f883b.crml) 
+s60settingsuis_101F8751.crml 	  MW_LAYER_CRML(s60settingsuis_101f8751.crml) 
+s60settingsuis_101F8780.crml 	  MW_LAYER_CRML(s60settingsuis_101f8780.crml) 
+s60settingsuis_101F8781.crml 	  MW_LAYER_CRML(s60settingsuis_101f8781.crml) 
+s60settingsuis_101F8782.crml 	  MW_LAYER_CRML(s60settingsuis_101f8782.crml) 
+s60settingsuis_101F8831.crml 	  MW_LAYER_CRML(s60settingsuis_101f8831.crml) 
+s60settingsuis_1000A82B.crml 	  MW_LAYER_CRML(s60settingsuis_1000a82b.crml) 
+s60settingsuis_1020720A.crml 	  MW_LAYER_CRML(s60settingsuis_1020720a.crml) 
+s60settingsuis_1028239D.crml 	  MW_LAYER_CRML(s60settingsuis_1028239d.crml) 
+s60settingsuis_2002120B.crml 	  MW_LAYER_CRML(s60settingsuis_2002120b.crml)
+

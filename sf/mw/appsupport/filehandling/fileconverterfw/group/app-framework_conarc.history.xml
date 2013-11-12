@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<relnotes schema="1.0.0" name="File Converter Framework" purpose="" type="component">
+  <revision major="0" functional="0" minor="0" ext="0" date="20080221">
+    <ref name="117570" type="defect"/>
+    <description>Removed loading dll before calling UserSrv::ChangeLocale()</description>
+  </revision>
+  <purpose>
+    Framework supporting creation of file converter plugins which enable applications to request file to file conversion based on the different MIME types of the file to be converted and the file to be created. Typically used to support conversion between MS office and Symbian OS proprietary formats.
+  </purpose>
+</relnotes>

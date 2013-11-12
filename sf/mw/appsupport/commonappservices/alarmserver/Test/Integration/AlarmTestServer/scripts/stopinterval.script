@@ -1,0 +1,38 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE T_PREQ1118_TestSuite
+
+START_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0015
+//! @file
+//! @SYMTestCaseID PIM-APPSRV-ALARMSVR-CIT-1118-0015
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMPREQ 1118
+//! @SYMFssID AlarmServer 035
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Stop Alarm Playing When End of Play Interval Reached
+//! @SYMTestActions  Resource file should be updated. Add alarm, wiat for it
+//!                  to expire and check play interval timings.
+//! @SYMTestExpectedResults Alarm does not repeat when end of play interval reached.
+
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+
+RUN_TEST_STEP 400 T_PREQ1118_TestSuite TestStopPlayStep \test\pim\alarmserver\data\citalarmplaytestdata.ini StopPlayIntervals
+END_TESTCASE PIM-APPSRV-ALARMSVR-CIT-1118-0015

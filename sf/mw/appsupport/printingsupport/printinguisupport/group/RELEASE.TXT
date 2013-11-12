@@ -1,0 +1,642 @@
+Running the testcode
+====================
+wserv's tlib library is required to build the preview testcode. To build this, do the following (from \print\group):
+mnt getsrcwserv
+ebld btlib
+Preview testcode can then be built and run in the normal way
+
+
+Print 1.0.058
+=============
+Built by MarcoS on 9 Sept 1999
+
+1) Removed warnings (test code as well).
+2) PvTest.mmp changed from being DLL to EXE.
+
+
+Print 1.0.057
+=============
+Built by DarrenJ on 19 May 1999
+
+Print.dll: 	  E32[185] ; F32[145] ; Store[062] ; GDI[070] ; Fntstore[060] ; Fbserv[091] ; 
+			Bitgdi[096] ; EText[121] ; Form[151]
+Prev.dll: 	  Wserv[107]
+Tools: 	  E32Tools[120] ; E32Toolp[107] ; E32Utils[027]
+Testcode:  PdrStore[057] ; PrintDrv[064] ; C32[551]
+
+1) Changes for auto-building
+
+
+
+Print 1.0.056
+=============
+Built by DarrenJ on 17 February 1999
+
+Print.dll: 	  E32[159] ; F32[125] ; Store[051] ; GDI[061] ; Fntstore[057] ; Fbserv[084] ; 
+			Bitgdi[080] ; EText[100] ; Form[131]
+Prev.dll: 	  Wserv[103]
+Tools: 	  E32Tools[95] ; E32Toolp[99] ; E32Utils[026]
+Testcode:  PdrStore[054] ; PrintDrv[057] ; C32[502]
+
+1) Fixed EDN352178 PRINT is not fully boiler-plated
+
+Print 1.0.055
+=============
+Built by DarrenJ on 4 January 1999
+
+Print.dll: 	  E32[159] ; F32[125] ; Store[051] ; GDI[061] ; Fntstore[057] ; Fbserv[084] ; 
+			Bitgdi[080] ; EText[100] ; Form[131]
+Prev.dll: 	  Wserv[103]
+Tools: 	  E32Tools[095] ; E32Toolp[099] ; E32Utils[026]
+Testcode:  PdrStore[054] ; PrintDrv[057] ; C32[502]
+
+1) Fixed EDN800107 CPrintSetup::InternalizeL not closing its RFs
+2) Fixed EDN787008 ebld.bat uses cont and prj
+3) Fixed EDN380636 Need to rebuild with VC5 SP3
+4) Fixed EDN756619 Need to rebuild with boilerplated headers
+
+Print 1.0.054
+=============
+Built by MattM on 3 November 1998
+
+Print.dll: 	  E32[156] ; F32[122] ; Store[050] ; GDI[061] ; Fntstore[052] ; Fbserv[082] ; 
+			Bitgdi[072] ; EText[098] ; Form[129]
+Prev.dll: 	  Wserv[094]
+Tools: 	  E32Tools[095] ; E32Toolp[096] ; E32Utils[023]
+Testcode:  PdrStore[052] ; PrintDrv[055] ; C32[502]
+
+Deb/rel interoperable, Unicode UID's changed
+
+Print 1.0.053
+=============
+
+20/03/98 by Will Ramsay
+
+Print.dll: 	  E32[120] ; F32[090] ; Store[046] ; GDI[057] ; Fntstore[046] ; Fbserv[075] ; 
+			Bitgdi[062] ; EText[092] ; Form[120]
+Prev.dll: 	  Wserv[094]
+Tools: 	  GCCTOOLS[113] ; E32Tools[087] ; E32Utils[019]
+Testcode:  PdrStore[049] ; PrintDrv[050] ; C32[049]
+
+1) Fixed SW1-933: Header and footers don't consider printers min page margins
+2) Fixed SW1-417: Spelling mistake
+3) Updated print.oby to allow marm unicode images to work
+
+Print 1.0.052
+=============
+
+10/02/98 by IanH
+
+Print.dll: 	  E32[120] ; F32[090] ; Store[046] ; GDI[057] ; Fntstore[046] ; Fbserv[075] ; 
+			Bitgdi[062] ; EText[092] ; Form[120]
+Prev.dll: 	  Wserv[094]
+Tools: 	  GCCTOOLS[113] ; E32Tools[087] ; E32Utils[019]
+Testcode:  PdrStore[049] ; PrintDrv[049] ; C32[049]
+
+Ascii builds binary compatible with 046-051
+Includes all unicode builds for the first time
+
+General:
+
+1) Built against the new unicode chain. No source changes were necessary, so this release has identical source to 051
+2) Converted to makmake and the ebld paradigm. Standard syntax is followed in both cases.
+3) MMPs for print and prev dll's are to be found in ..\group
+4) Renamed the .frz files to .def, and made sure there was one for each build
+5) Rom building stuff split off from ..\group into ..\rom
+
+Validation:
+
+Release validated on a clean drive:
+pgetbld print group 052
+ebld bldall
+mnt valid
+
+Testcode:
+
+wserv's tlib library is required to build the preview testcode. To build this, do the following (from \print\group):
+mnt getsrcwserv
+ebld btlib
+Preview testcode can then be built and run in the normal way.
+
+
+
+
+Print 1.0.049
+=============
+
+26/05/97 by IanH
+
+Dependancies: C[001]
+
+Print.dll: E32[107] ; F32[074] ; Store[043] ; GDI[053] ; Fntstore[043] ; Fbserv[066] ; 
+			Bitgdi[058] ; EText[085] ; Form[108]
+
+Prev.dll: Wserv[085]
+
+Tools: GCCTOOLS[113] ; E32Tools[067] ; E32Utils[018]
+
+Testcode: PdrStore[043] ; PrintDrv[041] ; C32[045]
+
+General:
+
+Binary compatible with 046-048
+
+) Moved up to C[001] dependancies
+
+) Checked that standard mnt verbs work (renamed bldarm/bldarmd verbs to armrel/armdeb)
+
+
+
+
+
+Print 1.0.048
+=============
+
+20/05/97 by IanH
+
+Dependancies: C[0] + EText[081]
+
+Print.dll: E32[105] ; F32[072] ; Store[042] ; GDI[051] ; Fntstore[042] ; Fbserv[063] ; 
+			Bitgdi[056] ; EText[081] ; Form[106]
+
+Prev.dll: Wserv[083]
+
+Tools: GCCTOOLS[113] ; E32Tools[066] ; E32Utils[014]
+
+Testcode: PdrStore[041] ; PrintDrv[041] ; C32[044]
+
+General:
+
+Binary compatible with 046 & 047.
+
+)
+
+
+
+
+Print 1.0.047
+=============
+
+14/05/97 by IanH
+
+Print.dll: E32[105] ; F32[072] ; Store[042] ; GDI[051] ; Fntstore[042] ; Fbserv[063] ; 
+			Bitgdi[056] ; EText[081] ; Form[106]
+
+Prev.dll: Wserv[083]
+
+Tools: GCCTOOLS[113] ; E32Tools[066] ; E32Utils[014]
+
+Testcode: PdrStore[041] ; PrintDrv[041] ; C32[044]
+
+General:
+
+) Binary compatible with 046 as far as users are concerned, but requires EText 081 because of necessary non BC changes in that component:
+CFileNameField (FIELD.DLL) provides its own implementation of the virtual RestoreL() method; thus changing the v-table of this object.
+
+) Moved up to C0 reference releases + non-BC EText 081
+
+) .MAP files are now pvcsed with arm releasables.
+
+) Added mnt commands to check that WINS is exporting by ordinal and that ARM def and frz files are identical
+
+) Fixes SW3-167: Fields in headers and footers were getting converted to text on restoration, and inserting fields into such restored headers caused a panic in etext.
+The fix is to call iText->SetFieldFactory() in CHeaderFooter::InternalizeL()
+
+
+
+
+
+
+
+Print.046
+=========
+
+27/04/97 by IanH
+
+Print.dll: E32[099+] ; F32[069+] ; Store[042+] ; GDI[051+] ; Fntstore[038+] ; Fbserv[057+] ; 
+			Bitgdi[055+] ; EText[080+] ; Form[104+]
+
+Prev.dll: Wserv[080+]
+
+Tools: GCCTOOLS[113] ; E32Tools[063] ; E32Utils[012]
+
+Testcode: PdrStore[040+] ; PrintDrv[039+] ; C32[043+]
+
+General:
+
+) Not binary compatible with 045
+
+) This release freezes the API for all time...
+
+) Note that print 046 depends upon gdi-051, not 048
+
+) iText, iParaFormatLayer and iCharFormatLayer members of CHeaderFooter made private and accessors/setters provided
+
+) iHeader and iFooter members of CPrintSetup made private and accessors added.
+
+) CPrintSetup's restoring NewL() withdrawn (suggested by Kevin Dempsey)
+
+) Fixed a problem with partial initialisation of CPrintSetup::iModelList (SW-4052)
+
+Following the BC review by AndrewT:
+
+) Some functions that took arguments by pointer now take them by reference. The changes are obvious from compilation :-)
+
+) CHeaderFooter::SetPageNumInfo() no longer exported as it is only called by CPrintSetup
+
+) Some implementation mix-ins now inherited privately (eg CHeaderFooter, CPrintSetup)
+
+
+
+Print.045
+=========
+
+16/04/97 by IanH
+
+Uses: GCCTOOLS[113] ; E32Tools[063] ; E32[099] ; F32[069] ; Store[042] ; GDI[050] ; Fntstore[039] ; 
+Fbserv[057] ; Bitgdi[055] ; EText[079] ; Form[103] ; Wserv[079]
+
+Testcode: PdrStore[037] ; PrintDrv[037] ; C32[042]
+
+General:
+
+) Binary compatible with 044
+
+) Moved up to new components as above
+
+) Fixed alloc heaven in CPrintPreviewImage::DrawL() (spotted by SimonC)
+
+) Print process priority changed to -75 (suggested by JamesD/SteveE)
+
+) PrinterDriverUI support added to CPrintProcess - BeforePrint() and AfterPrint() are now called at appropriate times.
+
+) Fixed some undrawn pixels in print preview's left margin (spotted by Vamsi)
+
+
+
+
+
+
+
+Print.044
+=========
+
+12/04/97 by IanH
+
+Uses: GCCTOOLS[113] ; E32Tools[060] ; E32[097] ; F32[067] ; Store[041] ; GDI[047] ; Fntstore[038] ; 
+Fbserv[053] ; Bitgdi[053] ; EText[077] ; Form[102] ; Wserv[078]
+
+Testcode: PdrStore[036] ; PrintDrv[035] ; C32[040]
+
+General:
+
+) Not binary compatible with previous releases
+
+) ARM Print and prev dll's are now petran'ed so their UID's can be removed from .iby files.
+
+) Changes in pdrstore mean that the testcode now links to pdrprt.dll instead of pdrstore.dll. Eikon should mirror this change.
+
+) Preview now scrolls panels when possible, and takes note of invalid areas for redraws
+
+) Preview device now owns a CWsScreenDevice rather than deriving from it - this fixes problems with font scaling (suggested by James)
+
+) Streaming operators added for enum CPrintPreviewImage::TMarginState (from Vamsi)
+
+) CPrintPreviewImage::EFacingPages removed as it was completely unused.
+
+) Private class TPreviewPanel now embedded in CPrintPreviewImage
+
+) Protected interface removed from the following classes, which may not now be derived from:
+	
+	CPrintPreviewImage
+	CHeaderFooter
+	CPrintSetup
+
+) CPrintPreviewDevice class made entirely private
+
+) Various .iby's changed: pdrprt added, faxprint.pdl removed as printdrv no longer releases it, uid3's added for various dlls that have now implemented type-safe linking
+
+
+
+
+Print.043
+=========
+
+30/3/97 by IanH
+
+Uses: GCCTOOLS[113] ; E32Tools[056] ; E32[095] ; F32[063] ; C32[040] ; Store[039] ; GDI[046] ; Fntstore[037] ; Fbserv[051] ; Bitgdi[051] ; EText[076] ; Form[100] ; Wserv[075]
+
+Testcode: PdrStore[033] ; PrintDrv[032]
+
+General:
+
+) Not binary compatible with previous releases
+
+) Takes new components as above
+
+) Changes in GDI mean that print no longer depends upon pdrstore or printdrv. These components are now only required by testcode for the creation of concrete printer ports. Eikon will still need to link to pdrstore so that it can create printer ports.
+
+) Parameters of restoring CPrintSetup::NewL() changed - it will now work properly!
+
+) Some latent OOM bugs fixed.
+
+) WINS builds now link by ordinal, not by name
+
+
+
+
+
+Print.042
+=========
+
+25/3/97 by IanH
+
+Uses: GCCTOOLS[113] ; E32Tools[056] ; E32[095] ; F32[063] ; C32[040] ; Store[039] ; GDI[046] ; Fntstore[037] ; Fbserv[051] ; Bitgdi[052] ; EText[076] ; Form[100] ; Wserv[075]
+
+Testcode: PdrStore[033] ; PrintDrv[032]
+General:
+
+) Binary incompatible with previous releases
+
+) Takes new components as above - including new scheme for building ROM images
+
+) By taking the new pdrstore, print now only includes pdrlist.h - pdrstore.h is no longer included anywhere. 
+This insulates print and it's dependants from pdrstore changes to the printer driver interfaces.
+
+) CHeaderFooter::DetachFromStore() and RestoreL(), and CPrintSetup::Restore() and RestoreComponents() now all take a MPictureFactory* as a parameter. 
+A factory capable of creating embedded doors (ie a TApaPictureFactory) should be supplied if you want headers and footers to support storing and restoring of embedded objects.
+This goes some way to fixing SW-1484, though support will also have to be added in Eikon.
+
+
+
+
+Print.040
+=========
+
+5/3/97 by IanH
+
+Uses: GCCTOOLS[111] ; E32Tools[051] ; E32[090] ; F32[057] ; C32[040] ; Store[036] ; GDI[043] ; Fntstore[036] ; 
+Fbserv[049] ; Bitgdi[049] ; PdrStore[030] ; PrintDrv[028] ; EText[073] ; Form[095] ; Wserv[073]
+
+General:
+
+) Binary compatible with 039 - B5.004 release
+
+) Fixes SW-1066: Footers not being visible in preview
+
+) CPrintSetup::AddPrinterDriverDirL() altered such that if a full path including drive is passed in then only that drive is scanned, not all drives on the system.
+
+
+
+
+
+
+
+
+Print.039
+=========
+
+1/3/97 by IanH
+
+Uses: GCCTOOLS[111] ; E32Tools[051] ; E32[090] ; F32[057] ; C32[040] ; Store[036] ; GDI[043] ; Fntstore[036] ; 
+Fbserv[049] ; Bitgdi[049] ; PdrStore[030] ; PrintDrv[028] ; EText[073] ; Form[095] ; Wserv[073]
+
+General:
+
+) Not binary compatible with 038
+
+) Takes new components as above (GDI[043] etc.)
+
+) CPrintSetup::CreatePrinterDriverUIL() added. If the current printer driver has a matching .UDL file this is used to create a specific UI for the printer, otherwise NULL is returned.
+
+) In PdrStore TPrinterModelEntry now has an extra member TBool iRequiresPrinterPort, which can be used in printer selection dialogs to dim out the port when it is not required.
+
+) CPrintPreviewImage::NewL() no longer take the number of pages in the doc as a parameter.
+This value is now passed into FormatL() instead - this means that the length of the doc can be changed dynamically while previewing in response to format changes.
+
+) CHeaderFooter::iPrintFirstPage has been replaced by an inline FirstPageToPrintTo() and matching setter function. 
+This allows the header/footer to be skipped for the first few pages, not just the very first one.
+This value is relative to the first page being numbered 0, and so is independant of an user-defined page numbering.
+
+) Fixed SW-373: Page numbers being clipped in preview
+
+) Page numbers taken as parameters to print methods are now always zero-indexed, ie they all asume that the first page is number zero. 
+CPrintSetup::iNumOfFirstPage is only taken account of when actually displaying page numbers in print preview or printing them in headers and footers.
+
+
+
+
+
+
+
+Print.038
+=========
+
+3/2/97 by IanH
+
+Uses: GCCTOOLS[111] ; E32Tools[051] ; E32[086] ; F32[050] ; C32[040] ; Store[035] ; GDI[042] ; Fntstore[035] ; Fbserv[045] ; Bitgdi[045] ; PdrStore[029] ; PrintDrv[027] ; EText[069] ; Form[090] ; Wserv[065]
+
+General:
+
+) Not binary compatible with 037
+
+) Takes new components as above (GDI[042] etc.)
+
+) The following methods added to CHeaderFooter that enable any print setup dialog to divine which of the possible field types are actually supported:
+
+	inline MFieldFileNameInfo* FileNameFieldInfo()const;
+	inline MFieldNumPagesInfo* NumPagesFieldInfo()const;
+
+) CPrintSetup::Restore() now takes const pointers to the field value mixins (suggested by Duncan)
+
+
+
+
+
+
+
+
+
+
+Print.037
+=========
+
+23/1/97 by IanH
+
+Uses: GCCTOOLS[111] ; E32Tools[051] ; E32[086] ; F32[049] ; C32[040] ; Store[033] ; GDI[041] ; Fntstore[034] ; Fbserv[044] ; Bitgdi[044] ; PdrStore[028] ; PrintDrv[026] ; EText[066] ; Form[089] ; Wserv[064]
+
+General
+=======
+
+) Not binary compatible with 036
+
+) Takes new components as above (E32[086] etc. - B5 chain)
+
+) CPrintSetup::RestoreL() now takes a MFieldNumPagesInfo* as an additional parameter (spotted by Vamsi/Duncan)
+
+) New header "prnuids.h" that simply defines the uid for the headstream to which a CPrintSetup should be externalized. The is for the use of any downstream components. (suggested by MartinB)
+
+) Negative page numbers are now displayed correctly in print preview (spotted by Vamsi)
+
+) A printer port is not required for printing to all printer devices. A port should only be created if necessary, using something similar to the following code:
+
+	// create the port if necessary
+	CPrinterPort* port=NULL;
+	if (iPrintSetup->PrinterDevice()->RequiresPrinterPort())
+		port = CFilePrinterPort::NewL(_L("c:\\fpr.pcl")); // or whatever type of port you want
+	//
+	// start printing
+	ThePrintSetup->StartPrintL(params,TheRegionPrinter,port,TheObserver);
+
+) Rounding errors that were causing print preview to leave some areas of the screen undrawn have now been fixed (spotted by Simon & Vamsi)
+
+
+
+
+
+
+
+
+
+
+
+
+Print.036
+=========
+
+10/1/97 by IanH
+
+Uses: GCCTOOLS[111] ; E32Tools[049] ; E32[082] ; F32[046] ; C32[039] ; Store[032] ; GDI[040] ; Fntstore[033] ; Fbserv[043] ; Bitgdi[043] ; PdrStore[027] ; PrintDrv[025] ; EText[065] ; Form[088] ; Wserv[063]
+
+General
+=======
+
+) Not binary compatible with 035
+
+) Takes new components as above (GDI 040 etc, NOT B5 chain)
+
+) CPrintSetup no longer gets initialised with factory settings on construction. Margins etc will all be set to zero and no printer will be selected. If a brand new CPrintSetup is created a printer must be selected and must have its page spec set before printing can take place. Failure to select a printer will result in a panic.
+
+) CPrintSetup::CreatePrinterDeviceL(TUid) will now create a default printer device if the requested one is not available - this means that CPrintSetup restoration will not fail just because a particular printer driver is missing.
+
+) A badly thought-out _ASSERT removed from CPreviewProcess::TerminatePrint() (spotted by Bruce)
+
+) There is a new CPrintSetup method:
+
+	void AddPrinterDriverDirL(const TDesC& aDriverDir)
+
+This should be called after construction of CPrintSetup, supplying a search path for printer drivers. The path should be of the form "\system\printers\", and whenever a printer model list is requested this directory will be scanned on all non-remote drives. This method can be called multiple times to add a number of directories to the list of those to search. If it is not called before a model list is requested CPrintSetup will panic.
+
+) CPrintSetup::ModelNameListL() now takes a RFs& as a parameter
+
+) CPrintSetup::CreatePrinterDeviceL(TUid aModelUid) now takes a RFs& as an additional parameter
+
+) Number of pages fields can now be inserted in headers and footers (problem spotted by Duncan). For this to work in header 
+
+	CPrintSetup->iHeader->SetNumPagesInfo()
+
+needs to be called after construction of CPrintSetup, passing in the callback that supplies the number of pages. This call should also be made to iFooter. There is a similar call that must be made if an app wishes to support filename fields.
+
+
+Private stuff:
+
+) QueueGetBand() and QueueEndPrint() no longer leave and error reporting now uses request status - tidier!
+
+)
+
+Print.035
+=========
+
+19/12/96 by IanH
+
+Uses: GCCTOOLS[111] ; E32Tools[046] ; E32[076] ; F32[042] ; C32[033] ; ESock[037] ; IRDA[025] ; Store[029] ; GDI[038] ; Fntstore[031] ; Fbserv[038] ; Bitgdi[040] ; PdrStore[023] ; PrintDrv[023] ; EText[060] ; Form[082] ; Wserv[054]
+
+General
+=======
+
+) Binary compatible with B4 release.
+
+) Print preview gc now clips all drawing to the current band (this will stop the flicker that is evident when previewing in some apps). This fixes HA-
+
+) HA-515 fixed - OOM problems in print preview.
+
+
+
+
+
+Print.033
+=========
+
+13/12/96 by IanH
+
+Uses: GCCTOOLS[111] ; E32Tools[046] ; E32[076] ; F32[042] ; C32[033] ; ESock[037] ; IRDA[025] ; Store[029] ; GDI[038] ; Fntstore[031] ; Fbserv[038] ; Bitgdi[040] ; PdrStore[023] ; PrintDrv[023] ; EText[060] ; Form[082] ; Wserv[054]
+
+
+General
+=======
+
+) B4 release - not binary compatible with 032
+
+) Tweaks to the active object side of printing to get rid of problems with canceling. As of this release canceling printing will usually work, but may die once in a while due to a stray event. This is a bug in pdrstore that should be fixed pre-B4, and at that time print will be re-released also.
+
+) CPrintPreviewImage now has a handle to a MPrintProcessObserver that it informs of interesting events. This allows error dialogs to be displayed by Eikon if there are problems with previewing. (spotted by James in HA-369)
+
+) Drawing of print preview modified slightly so that it draws to every single pixel (previously it was missing a strip across the top and down the left hand side). (spotted by Vamsi)
+
+
+
+Print.032
+=========
+
+4/12/96 by IanH
+
+Uses: GCCTOOLS[111] ; E32Tools[046] ; E32[076] ; F32[042] ; C32[033] ; ESock[037] ; IRDA[025] ; Store[029] ; GDI[038] ; Fntstore[031] ; Fbserv[038] ; Bitgdi[040] ; PdrStore[023] ; PrintDrv[023] ; EText[060] ; Form[082] ; Wserv[054]
+
+
+General
+=======
+
+) Takes new E32 etc.
+
+) The arm release dll sizes are:
+	print.dll :  12,632 bytes
+	prev.dll  : 12,344 bytes
+
+) CPrintSetup::PageSpecInTwips() withdrawn - use CPrintSetup::PrinterDevice()->CurrentPageSpecInTwips() instead
+
+) Page numbers are now drawn alongside panels in print preview rather than underneath as was previously the case. This allows the panels to be that much bigger.
+
+) Print Preview draw code re-written in a much less flickery manner.
+
+Test Code
+=========
+
+) In the preview testcode '<' and '>' keys now go to the start and end of the page range, and 'o' switches the page orientation between landscape and portrait.
+
+
+
+
+
+Print.031
+=========
+
+27/11/96 by IanH
+
+Uses: GCCTOOLS[111] ; E32Tools[046] ; E32[074] ; F32[041] ; C32[033] ; ESock[037] ; IRDA[025] ; Store[029] ; GDI[038] ; Fntstore[031] ; Fbserv[038] ; Bitgdi[040] ; PdrStore[023] ; PrintDrv[023] ; EText[060] ; Form[082] ; Wserv[054]
+
+
+General
+=======
+
+) No real changes, just propagating releases up the chain. PrintDrv is taken for the first time.
+
+) The arm release dll sizes are:
+	print.dll :  12,632 bytes
+	prev.dll  : 12,344 bytes
+
+) The base addresses for print and prev dll's have been set in line with Martin B's suggestions.
+
+) Type safe loading has been implemented with the following uids for the dll's released as part of Print:
+
+	print.dll uid3=0x100000E8
+	prev.dll uid3=0x100000E9

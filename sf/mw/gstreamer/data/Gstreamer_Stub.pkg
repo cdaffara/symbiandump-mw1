@@ -1,0 +1,75 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved.
+;
+; This library is free software; you can redistribute it and/or
+; modify it under the terms of the GNU Lesser General Public
+; License as published by the Free Software Foundation; either
+; version 2 of the License, or (at your option) any later version.
+;
+; This library is distributed in the hope that it will be useful,
+; but WITHOUT ANY WARRANTY; without even the implied warranty of
+; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+; Lesser General Public License for more details.
+;
+; You should have received a copy of the GNU Lesser General Public
+; License along with this library; if not, write to the
+; Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+; Boston, MA 02111-1307, USA.
+;
+; Description: GStreamer multimedia framework
+;
+;File: gstreamer_stub.pkg
+
+;Languages
+&EN
+
+;Header
+#{"GStreamer"},(0x2001F43C),1,0,0
+
+;Localised Vendor name
+%{"Nokia"}
+
+;Unique Vendor name
+:"Nokia"
+
+;GST DLL
+""-"z:\sys\bin\libgstaudio.dll"
+""-"z:\sys\bin\libgstbase.dll"
+""-"z:\sys\bin\libgstcdda.dll"
+""-"z:\sys\bin\libgstcontroller.dll"
+""-"z:\sys\bin\libgstdataprotocol.dll"
+""-"z:\sys\bin\libgstfft.dll"
+""-"z:\sys\bin\libgstinterfaces.dll"
+""-"z:\sys\bin\libgstnet.dll"
+""-"z:\sys\bin\libgstnetbuffer.dll"
+""-"z:\sys\bin\libgstpbutils.dll"
+""-"z:\sys\bin\libgstreamer.dll"
+""-"z:\sys\bin\libgstriff.dll"
+""-"z:\sys\bin\libgsttag.dll"
+""-"z:\sys\bin\libgstvideo.dll"
+""-"z:\sys\bin\libgstvideorate.dll"
+""-"z:\sys\bin\libgstdevsoundext.dll"
+""-"z:\sys\bin\libgstaudiorate.dll"
+""-"z:\sys\bin\libgstaudioresample.dll"
+""-"z:\sys\bin\libgstaudiotestsrc.dll"
+""-"z:\sys\bin\libgstcoreelements.dll"
+""-"z:\sys\bin\libgstcoreindexers.dll"
+""-"z:\sys\bin\libgstdecodebin.dll"
+""-"z:\sys\bin\libgstdecodebin2.dll"
+""-"z:\sys\bin\libgstdevsoundsink.dll"
+""-"z:\sys\bin\libgstdevsoundsrc.dll"
+""-"z:\sys\bin\libgstplaybin.dll"
+""-"z:\sys\bin\libgsttypefindfunctions.dll"
+""-"z:\sys\bin\libgstwavparse.dll"
+""-"z:\sys\bin\libgstwavenc.dll"
+""-"z:\sys\bin\libgstaudioconvert.dll"
+""-"z:\sys\bin\libgstqueue2.dll"
+""-"z:\sys\bin\libgstautodetect.dll"
+""-"z:\sys\bin\libgstapp.dll"
+""-"z:\sys\bin\libgstadder.dll"
+""-"z:\sys\bin\libgsttcp.dll"
+""-"z:\sys\bin\libgstsubparse.dll"
+""-"z:\sys\bin\libgstrtp.dll"
+""-"z:\sys\bin\libgstgdp.dll"
+""-"z:\sys\bin\libgstvolume.dll"
+""-"z:\gstreamer\.gstreamer-0.10\registry.i686.bin"

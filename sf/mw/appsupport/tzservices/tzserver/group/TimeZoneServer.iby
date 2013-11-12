@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#ifndef __TIMEZONESERVER_IBY__
+#define __TIMEZONESERVER_IBY__
+
+#include <BackupRestoreNotification.iby>
+#include <swiplugin.iby>
+#include <sql.iby>
+
+REM *** TimeZone Client and Server ***
+
+file=ABI_DIR\BUILD_DIR\tzserver.exe		System\Programs\tzserver.exe
+file=ABI_DIR\BUILD_DIR\tzclient.dll		System\Libs\tzclient.dll
+
+REM *** SWI Plugin ***
+ECOM_PLUGIN(tzswiobserverplugin.dll,1028649C.rsc)
+
+REM *** TZ Database ***
+data=EPOCROOT##epoc32\data\z\private\1020383E\tzdb.dbz	private\1020383E\tzdb.dbz
+data=EPOCROOT##epoc32\data\Z\private\1020383E\backup_registration.xml	private\1020383E\backup_registration.xml
+data=EPOCROOT##epoc32\data\Z\private\100012a5\policy\10206A8B.SPD		private\100012a5\policy\10206A8B.SPD
+data=EPOCROOT##epoc32\data\Z\system\install\timezone_stub.sis	system\install\timezone_stub.sis
+
+#endif

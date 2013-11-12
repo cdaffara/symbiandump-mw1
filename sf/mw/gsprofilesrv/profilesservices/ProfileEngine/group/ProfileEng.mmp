@@ -1,0 +1,76 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project specification file of ProfileEng.
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          ProfileEng.dll
+TARGETTYPE      dll
+UID             0x1000008d 0x100058F8
+VENDORID 	    VID_DEFAULT
+
+CAPABILITY      CAP_GENERAL_DLL
+
+SOURCEPATH      ../group
+START RESOURCE  ProfileEng.rss
+  HEADER
+  TARGETPATH    RESOURCE_FILES_DIR
+  LANGUAGE_IDS
+END
+
+SOURCEPATH      ../EngSrc
+SOURCE          CProfileNameImpl.cpp
+SOURCE          CProfileTonesImpl.cpp
+SOURCE          CProfilePresenceImpl.cpp
+SOURCE          CProfileExtraTonesImpl.cpp
+SOURCE          CProfileExtraSettingsImpl.cpp
+SOURCE          CProfileFeedbackSettingsImpl.cpp
+SOURCE          CProfile3DToneSettingsImpl.cpp
+SOURCE          CProfilePttSettingsImpl.cpp
+SOURCE          CProfileChangeNotifyHandler.cpp
+SOURCE          CProfileImpl.cpp
+SOURCE          ProfileEngUtils.cpp
+SOURCE          ProfileEngPanic.cpp
+SOURCE          CProfilesNamesArrayImpl.cpp
+SOURCE          CProfileEngineImpl.cpp
+SOURCE          CProfilesLocalFeatures.cpp
+SOURCE          CProfileTiming.cpp
+#ifdef __DYNAMIC_PROFILES
+SOURCE          CProfileEngineImplDynamicProfiles.cpp
+#else
+SOURCE          CProfileEngineImplStaticProfiles.cpp
+#endif // __DYNAMIC_PROFILES
+SOURCE          CProfileUtilitySingletonImpl.cpp 
+SOURCE          CProfileVibraSettingsImpl.cpp
+
+USERINCLUDE     . ../EngInc ../../group
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/ecom
+
+LIBRARY         euser.lib
+LIBRARY         efsrv.lib
+LIBRARY         bafl.lib
+LIBRARY         FeatMgr.lib
+LIBRARY         cntmodel.lib
+LIBRARY         sssettings.lib // for als check-up
+LIBRARY         centralrepository.lib
+LIBRARY         sysutil.lib
+LIBRARY         PlatformEnv.lib
+LIBRARY         schsvr.lib // RScheduler etc
+

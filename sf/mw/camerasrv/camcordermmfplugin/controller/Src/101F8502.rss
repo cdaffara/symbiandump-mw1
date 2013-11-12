@@ -1,0 +1,94 @@
+/*
+* Copyright (c) 2002-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Camcorder controller plugin ECOM registration
+*
+*/
+
+
+
+//  INCLUDES
+#include "ecom/registryinfo.rh"
+#include "CamCImplementationUIDs.hrh"
+#include <mmf/plugin/mmfplugininterfaceuids.hrh>
+#include <bldvariant.hrh>
+
+
+//  RESOURCE DEFINITIONS 
+// -----------------------------------------------------------------------------
+//   
+// theInfo
+// Camcorder controller plugin ECOM registration
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE REGISTRY_INFO theInfo
+	{
+	dll_uid = 0x101F8502;
+	interfaces = 
+		{
+		INTERFACE_INFO // Controller Plugin Description
+			{
+			interface_uid = KMmfUidPluginInterfaceController;
+			implementations = 
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = KCamCUidControllerImplementation;
+					version_no = 1;
+					display_name = "Camcorder controller";
+					default_data = "?";
+					opaque_data = "<s>Nokia<i>0x101F5D08<r>0x101F850D<a>0xC00000<t>0x8000";
+					}
+				};
+			},
+		INTERFACE_INFO // Record Format Description
+			{
+			interface_uid = 0x101F850D;
+			implementations = 
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = KCamCUidRecordFormatImplementation;
+					version_no = 1;
+					display_name = "3GPP File Format";
+					default_data = "?";
+					opaque_data = "<s>Nokia<i>0x101F5D08<e>.3gp<h>????ftyp<m>video/3gpp";
+					}
+                ,
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = KCamCUid3GPP2FileFormatImplementation;
+					version_no = 1;
+					display_name = "3GPP2 File Format";
+					default_data = "?";
+					opaque_data = "<s>Nokia<i>0x101F5D08<e>.3g2<h>????ftyp<m>video/3gpp2";
+					}
+#if (defined(__MPEG4_VIDEO_ENCODING) && defined(__MPEG4_AAC_ENCODING))
+                ,
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = KCamCUidMP4FileFormatImplementation;
+					version_no = 1;
+					display_name = "MPEG-4 File Format";
+					default_data = "?";
+					opaque_data = "<s>Nokia<i>0x101F5D08<e>.mp4<h>????ftyp<m>video/mp4";
+					}
+#endif
+				};
+			}
+		};
+	}
+
+
+// End of File

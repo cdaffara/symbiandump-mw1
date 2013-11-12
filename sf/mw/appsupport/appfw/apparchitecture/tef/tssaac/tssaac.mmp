@@ -1,0 +1,75 @@
+// Copyright (c) 2005-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// ssaac - Startup State Aware Apparc Component
+// Startup State Aware (SSA) test component used to
+// test apparc StartApp and StartDocument functionality
+// 
+//
+
+TARGET          tssaac.exe
+TARGETTYPE      exe
+TARGETPATH      /sys/bin
+UID             0x1000007A 0x10207F77
+VENDORID        0x70000001
+
+CAPABILITY      AllFiles WriteDeviceData
+
+#if defined(WINS)
+// startup with tssaac application for emulator for fallback.
+START RESOURCE	tssaac_emulator.rss
+TARGETPATH		/private/10205c44
+END
+
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+// startup with tssaac application for emulator for ssma.
+START RESOURCE tssaac_emulator_ssma.rss
+TARGETPATH		/private/2000d75b/startup/test
+END
+#endif //SYMBIAN_SYSTEM_STATE_MANAGEMENT
+
+#else
+// startup with tssaac application for hardware
+START RESOURCE	tssaac_hardware.rss
+TARGETPATH		/private/10205C44
+END
+#endif
+
+SOURCEPATH      .
+
+SOURCE          tssaac.cpp 
+SOURCE          SysStartApparcTestCases.cpp
+
+USERINCLUDE		.
+USERINCLUDE     ../../tef
+USERINCLUDE     ../../../uiftestfw/inc
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+SYSTEMINCLUDE   /epoc32/include/ssm
+#endif //SYMBIAN_SYSTEM_STATE_MANAGEMENT
+
+LIBRARY         euser.lib 
+LIBRARY         efsrv.lib
+LIBRARY         domaincli.lib
+LIBRARY         estor.lib
+
+LIBRARY     	apgrfx.lib
+LIBRARY			apparc.lib
+LIBRARY			appfwk_test_appui.lib
+LIBRARY			testexecuteutils.lib
+LIBRARY			apmime.lib
+
+SMPSAFE

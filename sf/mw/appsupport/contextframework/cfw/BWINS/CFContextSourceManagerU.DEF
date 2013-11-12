@@ -1,0 +1,16 @@
+EXPORTS
+	??0CCFContextSourcePlugIn@@IAE@PAVTContextSourceInitParams@@@Z @ 1 NONAME ; CCFContextSourcePlugIn::CCFContextSourcePlugIn(class TContextSourceInitParams *)
+	??1CCFContextSourceManager@@UAE@XZ @ 2 NONAME ; CCFContextSourceManager::~CCFContextSourceManager(void)
+	??1CCFContextSourcePlugIn@@UAE@XZ @ 3 NONAME ; CCFContextSourcePlugIn::~CCFContextSourcePlugIn(void)
+	?NewL@CCFContextSourceManager@@SAPAV1@AAVMCFExtendedContextInterface@@AAVRFs@@@Z @ 4 NONAME ; class CCFContextSourceManager * CCFContextSourceManager::NewL(class MCFContextInterface &, class RFs &)
+	?NewL@CCFContextSourcePlugIn@@SAPAV1@ABVTUid@@PAVTContextSourceInitParams@@@Z @ 5 NONAME ; class CCFContextSourcePlugIn * CCFContextSourcePlugIn::NewL(class TUid const &, class TContextSourceInitParams *)
+	?NewLC@CCFContextSourceManager@@SAPAV1@AAVMCFExtendedContextInterface@@AAVRFs@@@Z @ 6 NONAME ; class CCFContextSourceManager * CCFContextSourceManager::NewLC(class MCFContextInterface &, class RFs &)
+	?NewLC@CCFContextSourcePlugIn@@SAPAV1@ABVTUid@@PAVTContextSourceInitParams@@@Z @ 7 NONAME ; class CCFContextSourcePlugIn * CCFContextSourcePlugIn::NewLC(class TUid const &, class TContextSourceInitParams *)
+	?Extension@CCFContextSourcePlugIn@@UBEPAXABVTUid@@@Z @ 8 NONAME ; void * CCFContextSourcePlugIn::Extension(class TUid const &) const
+	?InstallSettingL@CCFContextSourceManager@@QAEXAAVRFile@@ABVTUid@@AAVRThread@@@Z @ 9 NONAME ; void CCFContextSourceManager::InstallSettingL(class RFile &, class TUid const &, class RThread &)
+	?UninstallSettingL@CCFContextSourceManager@@QAEXABVTDesC16@@ABVTUid@@AAVRThread@@@Z @ 10 NONAME ; void CCFContextSourceManager::UninstallSettingL(class TDesC16 const &, class TUid const &, class RThread &)
+	?UninstallSettingsL@CCFContextSourceManager@@QAEXABVTUid@@AAVRThread@@@Z @ 11 NONAME ; void CCFContextSourceManager::UninstallSettingsL(class TUid const &, class RThread &)
+	?HandleContextSourceCommandL@CCFContextSourceManager@@QAEXABVCCFContextSourceCommand@@@Z @ 12 NONAME ; void CCFContextSourceManager::HandleContextSourceCommandL(class CCFContextSourceCommand const &)
+	?DeregisterClientContextSource@CCFContextSourceManager@@QAEXABVMCFContextSource@@@Z @ 13 NONAME ; void CCFContextSourceManager::DeregisterClientContextSource(class MCFContextSource const &)
+	?RegisterClientContextSource@CCFContextSourceManager@@QAEHPAVMCFContextSource@@ABVTUid@@@Z @ 14 NONAME ; int CCFContextSourceManager::RegisterClientContextSource(class MCFContextSource *, class TUid const &)
+

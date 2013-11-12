@@ -1,0 +1,12 @@
+#ifndef __RFSTESTMODULE_IBY__
+#define __RFSTESTMODULE_IBY__
+
+file=ABI_DIR\BUILD_DIR\RfsTestModule.dll                      SHARED_LIB_DIR\RfsTestModule.dll
+
+data=\epoc32\data\z\system\data\TestFramework.ini             \testframework\RFS_TestFramework.ini
+
+data=\epoc32\data\z\system\data\ui_RfsTestModule.cfg                      \testframework\ui_RfsTestModule.cfg
+
+
+
+#endif

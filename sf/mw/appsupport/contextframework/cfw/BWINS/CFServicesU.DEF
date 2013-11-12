@@ -1,0 +1,93 @@
+EXPORTS
+	??1CCFKeyValuePair@@UAE@XZ @ 1 NONAME ; CCFKeyValuePair::~CCFKeyValuePair(void)
+	?CompareByTimeDescending@CCFContextObjectImpl@@SAHABVCCFContextObject@@0@Z @ 2 NONAME ; int CCFContextObjectImpl::CompareByTimeDescending(class CCFContextObject const &, class CCFContextObject const &)
+	?CompareByType@CCFContextObjectImpl@@SAHABVCCFContextObject@@0@Z @ 3 NONAME ; int CCFContextObjectImpl::CompareByType(class CCFContextObject const &, class CCFContextObject const &)
+	?CompareByTypeAndSource@CCFContextObjectImpl@@SAHABVCCFContextObject@@0@Z @ 4 NONAME ; int CCFContextObjectImpl::CompareByTypeAndSource(class CCFContextObject const &, class CCFContextObject const &)
+	?CompareValue@CCFContextObjectImpl@@QBEHABVCCFContextObject@@@Z @ 5 NONAME ; int CCFContextObjectImpl::CompareValue(class CCFContextObject const &) const
+	?EvaluateContextChangeL@CCFContextSubscriptionImpl@@QBEXABVCCFContextObject@@0H@Z @ 6 NONAME ; void CCFContextSubscriptionImpl::EvaluateContextChangeL(class CCFContextObject const &, class CCFContextObject const &, int) const
+	?ExternalizeL@CCFActionIndicationImpl@@QAEXAAVRWriteStream@@@Z @ 7 NONAME ; void CCFActionIndicationImpl::ExternalizeL(class RWriteStream &)
+	?ExternalizeL@CCFActionSubscriptionImpl@@QAEXAAVRWriteStream@@@Z @ 8 NONAME ; void CCFActionSubscriptionImpl::ExternalizeL(class RWriteStream &)
+	?ExternalizeL@CCFContextIndicationImpl@@QAEXAAVRWriteStream@@@Z @ 9 NONAME ; void CCFContextIndicationImpl::ExternalizeL(class RWriteStream &)
+	?ExternalizeL@CCFContextObjectImpl@@QAEXAAVRWriteStream@@@Z @ 10 NONAME ; void CCFContextObjectImpl::ExternalizeL(class RWriteStream &)
+	?ExternalizeL@CCFContextQueryImpl@@QAEXAAVRWriteStream@@@Z @ 11 NONAME ; void CCFContextQueryImpl::ExternalizeL(class RWriteStream &)
+	?ExternalizeL@CCFContextSubscriptionImpl@@QAEXAAVRWriteStream@@@Z @ 12 NONAME ; void CCFContextSubscriptionImpl::ExternalizeL(class RWriteStream &)
+	?InternalizeL@CCFActionIndicationImpl@@QAEXAAVRReadStream@@@Z @ 13 NONAME ; void CCFActionIndicationImpl::InternalizeL(class RReadStream &)
+	?InternalizeL@CCFActionSubscriptionImpl@@QAEXAAVRReadStream@@@Z @ 14 NONAME ; void CCFActionSubscriptionImpl::InternalizeL(class RReadStream &)
+	?InternalizeL@CCFContextIndicationImpl@@QAEXAAVRReadStream@@@Z @ 15 NONAME ; void CCFContextIndicationImpl::InternalizeL(class RReadStream &)
+	?InternalizeL@CCFContextObjectImpl@@QAEXAAVRReadStream@@@Z @ 16 NONAME ; void CCFContextObjectImpl::InternalizeL(class RReadStream &)
+	?InternalizeL@CCFContextQueryImpl@@QAEXAAVRReadStream@@@Z @ 17 NONAME ; void CCFContextQueryImpl::InternalizeL(class RReadStream &)
+	?InternalizeL@CCFContextSubscriptionImpl@@QAEXAAVRReadStream@@@Z @ 18 NONAME ; void CCFContextSubscriptionImpl::InternalizeL(class RReadStream &)
+	?IsSame@CCFContextObjectImpl@@SAHABVCCFContextObject@@0@Z @ 19 NONAME ; int CCFContextObjectImpl::IsSame(class CCFContextObject const &, class CCFContextObject const &)
+	?IsSame@CCFContextQueryImpl@@SAHABVCCFContextQuery@@0@Z @ 20 NONAME ; int CCFContextQueryImpl::IsSame(class CCFContextQuery const &, class CCFContextQuery const &)
+	?IsSame@CCFContextSubscriptionImpl@@QBEHABV1@@Z @ 21 NONAME ; int CCFContextSubscriptionImpl::IsSame(class CCFContextSubscriptionImpl const &) const
+	?Key@CCFKeyValuePair@@QBEABVTDesC16@@XZ @ 22 NONAME ; class TDesC16 const & CCFKeyValuePair::Key(void) const
+	?Listener@CCFActionSubscriptionImpl@@QBEAAVMCFActionSubscriptionListener@@XZ @ 23 NONAME ; class MCFActionSubscriptionListener & CCFActionSubscriptionImpl::Listener(void) const
+	?Matches@CCFContextQueryImpl@@QBEHABVTDesC16@@0@Z @ 24 NONAME ; int CCFContextQueryImpl::Matches(class TDesC16 const &, class TDesC16 const &) const
+	?Matches@CCFContextSubscriptionImpl@@QBEHABVTDesC16@@0@Z @ 25 NONAME ; int CCFContextSubscriptionImpl::Matches(class TDesC16 const &, class TDesC16 const &) const
+	?Matches@CCFContextSubscriptionImpl@@QBEHABVTDesC16@@@Z @ 26 NONAME ; int CCFContextSubscriptionImpl::Matches(class TDesC16 const &) const
+	?MatchesQuery@CCFContextQueryImpl@@SAHABVCCFContextQuery@@ABVTDesC16@@1H@Z @ 27 NONAME ; int CCFContextQueryImpl::MatchesQuery(class CCFContextQuery const &, class TDesC16 const &, class TDesC16 const &, int)
+	?NewL@CCFActionIndication@@SAPAV1@XZ @ 28 NONAME ; class CCFActionIndication * CCFActionIndication::NewL(void)
+	?NewL@CCFActionIndicationImpl@@SAPAV1@XZ @ 29 NONAME ; class CCFActionIndicationImpl * CCFActionIndicationImpl::NewL(void)
+	?NewL@CCFActionSubscription@@SAPAV1@XZ @ 30 NONAME ; class CCFActionSubscription * CCFActionSubscription::NewL(void)
+	?NewL@CCFActionSubscriptionImpl@@SAPAV1@XZ @ 31 NONAME ; class CCFActionSubscriptionImpl * CCFActionSubscriptionImpl::NewL(void)
+	?NewL@CCFContextIndication@@SAPAV1@ABVTUid@@@Z @ 32 NONAME ; class CCFContextIndication * CCFContextIndication::NewL(class TUid const &)
+	?NewL@CCFContextIndicationImpl@@SAPAV1@AAVRReadStream@@@Z @ 33 NONAME ; class CCFContextIndicationImpl * CCFContextIndicationImpl::NewL(class RReadStream &)
+	?NewL@CCFContextIndicationImpl@@SAPAV1@ABVTUid@@@Z @ 34 NONAME ; class CCFContextIndicationImpl * CCFContextIndicationImpl::NewL(class TUid const &)
+	?NewL@CCFContextObject@@SAPAV1@ABVTDesC16@@00@Z @ 35 NONAME ; class CCFContextObject * CCFContextObject::NewL(class TDesC16 const &, class TDesC16 const &, class TDesC16 const &)
+	?NewL@CCFContextObject@@SAPAV1@XZ @ 36 NONAME ; class CCFContextObject * CCFContextObject::NewL(void)
+	?NewL@CCFContextObjectImpl@@SAPAV1@ABVTDesC16@@00@Z @ 37 NONAME ; class CCFContextObjectImpl * CCFContextObjectImpl::NewL(class TDesC16 const &, class TDesC16 const &, class TDesC16 const &)
+	?NewL@CCFContextObjectImpl@@SAPAV1@XZ @ 38 NONAME ; class CCFContextObjectImpl * CCFContextObjectImpl::NewL(void)
+	?NewL@CCFContextQuery@@SAPAV1@ABVTDesC16@@0@Z @ 39 NONAME ; class CCFContextQuery * CCFContextQuery::NewL(class TDesC16 const &, class TDesC16 const &)
+	?NewL@CCFContextQuery@@SAPAV1@XZ @ 40 NONAME ; class CCFContextQuery * CCFContextQuery::NewL(void)
+	?NewL@CCFContextQueryImpl@@SAPAV1@ABVTDesC16@@0@Z @ 41 NONAME ; class CCFContextQueryImpl * CCFContextQueryImpl::NewL(class TDesC16 const &, class TDesC16 const &)
+	?NewL@CCFContextSubscription@@SAPAV1@XZ @ 42 NONAME ; class CCFContextSubscription * CCFContextSubscription::NewL(void)
+	?NewL@CCFContextSubscriptionImpl@@SAPAV1@AAVRReadStream@@@Z @ 43 NONAME ; class CCFContextSubscriptionImpl * CCFContextSubscriptionImpl::NewL(class RReadStream &)
+	?NewL@CCFContextSubscriptionImpl@@SAPAV1@XZ @ 44 NONAME ; class CCFContextSubscriptionImpl * CCFContextSubscriptionImpl::NewL(void)
+	?NewL@CCFKeyValuePair@@SAPAV1@ABVTDesC16@@0@Z @ 45 NONAME ; class CCFKeyValuePair * CCFKeyValuePair::NewL(class TDesC16 const &, class TDesC16 const &)
+	?NewL@CCFKeyValuePair@@SAPAV1@PAVHBufC16@@0@Z @ 46 NONAME ; class CCFKeyValuePair * CCFKeyValuePair::NewL(class HBufC16 *, class HBufC16 *)
+	?NewLC@CCFActionIndication@@SAPAV1@XZ @ 47 NONAME ; class CCFActionIndication * CCFActionIndication::NewLC(void)
+	?NewLC@CCFActionIndicationImpl@@SAPAV1@XZ @ 48 NONAME ; class CCFActionIndicationImpl * CCFActionIndicationImpl::NewLC(void)
+	?NewLC@CCFActionSubscription@@SAPAV1@XZ @ 49 NONAME ; class CCFActionSubscription * CCFActionSubscription::NewLC(void)
+	?NewLC@CCFActionSubscriptionImpl@@SAPAV1@XZ @ 50 NONAME ; class CCFActionSubscriptionImpl * CCFActionSubscriptionImpl::NewLC(void)
+	?NewLC@CCFContextIndication@@SAPAV1@ABVTUid@@@Z @ 51 NONAME ; class CCFContextIndication * CCFContextIndication::NewLC(class TUid const &)
+	?NewLC@CCFContextIndicationImpl@@SAPAV1@AAVRReadStream@@@Z @ 52 NONAME ; class CCFContextIndicationImpl * CCFContextIndicationImpl::NewLC(class RReadStream &)
+	?NewLC@CCFContextIndicationImpl@@SAPAV1@ABVTUid@@@Z @ 53 NONAME ; class CCFContextIndicationImpl * CCFContextIndicationImpl::NewLC(class TUid const &)
+	?NewLC@CCFContextObject@@SAPAV1@ABVTDesC16@@00@Z @ 54 NONAME ; class CCFContextObject * CCFContextObject::NewLC(class TDesC16 const &, class TDesC16 const &, class TDesC16 const &)
+	?NewLC@CCFContextObject@@SAPAV1@XZ @ 55 NONAME ; class CCFContextObject * CCFContextObject::NewLC(void)
+	?NewLC@CCFContextObjectImpl@@SAPAV1@ABVTDesC16@@00@Z @ 56 NONAME ; class CCFContextObjectImpl * CCFContextObjectImpl::NewLC(class TDesC16 const &, class TDesC16 const &, class TDesC16 const &)
+	?NewLC@CCFContextObjectImpl@@SAPAV1@XZ @ 57 NONAME ; class CCFContextObjectImpl * CCFContextObjectImpl::NewLC(void)
+	?NewLC@CCFContextQuery@@SAPAV1@ABVTDesC16@@0@Z @ 58 NONAME ; class CCFContextQuery * CCFContextQuery::NewLC(class TDesC16 const &, class TDesC16 const &)
+	?NewLC@CCFContextQuery@@SAPAV1@XZ @ 59 NONAME ; class CCFContextQuery * CCFContextQuery::NewLC(void)
+	?NewLC@CCFContextQueryImpl@@SAPAV1@ABVTDesC16@@0@Z @ 60 NONAME ; class CCFContextQueryImpl * CCFContextQueryImpl::NewLC(class TDesC16 const &, class TDesC16 const &)
+	?NewLC@CCFContextSubscription@@SAPAV1@XZ @ 61 NONAME ; class CCFContextSubscription * CCFContextSubscription::NewLC(void)
+	?NewLC@CCFContextSubscriptionImpl@@SAPAV1@AAVRReadStream@@@Z @ 62 NONAME ; class CCFContextSubscriptionImpl * CCFContextSubscriptionImpl::NewLC(class RReadStream &)
+	?NewLC@CCFContextSubscriptionImpl@@SAPAV1@XZ @ 63 NONAME ; class CCFContextSubscriptionImpl * CCFContextSubscriptionImpl::NewLC(void)
+	?NewLC@CCFKeyValuePair@@SAPAV1@ABVTDesC16@@0@Z @ 64 NONAME ; class CCFKeyValuePair * CCFKeyValuePair::NewLC(class TDesC16 const &, class TDesC16 const &)
+	?NewLC@CCFKeyValuePair@@SAPAV1@PAVHBufC16@@0@Z @ 65 NONAME ; class CCFKeyValuePair * CCFKeyValuePair::NewLC(class HBufC16 *, class HBufC16 *)
+	?SetContextL@CCFContextIndicationImpl@@QAEXABVCCFContextObject@@@Z @ 66 NONAME ; void CCFContextIndicationImpl::SetContextL(class CCFContextObject const &)
+	?SetListener@CCFActionSubscriptionImpl@@QAEXPAVMCFActionSubscriptionListener@@@Z @ 67 NONAME ; void CCFActionSubscriptionImpl::SetListener(class MCFActionSubscriptionListener *)
+	?SetSubscriptionListener@CCFContextSubscriptionImpl@@QAEXAAVMCFContextSubscriptionListener@@@Z @ 68 NONAME ; void CCFContextSubscriptionImpl::SetSubscriptionListener(class MCFContextSubscriptionListener &)
+	?Size@CCFActionIndicationImpl@@QBEHXZ @ 69 NONAME ; int CCFActionIndicationImpl::Size(void) const
+	?Size@CCFActionSubscriptionImpl@@QBEHXZ @ 70 NONAME ; int CCFActionSubscriptionImpl::Size(void) const
+	?Size@CCFContextIndicationImpl@@QBEHXZ @ 71 NONAME ; int CCFContextIndicationImpl::Size(void) const
+	?Size@CCFContextObjectImpl@@QBEHXZ @ 72 NONAME ; int CCFContextObjectImpl::Size(void) const
+	?Size@CCFContextQueryImpl@@QBEHXZ @ 73 NONAME ; int CCFContextQueryImpl::Size(void) const
+	?Size@CCFContextSubscriptionImpl@@QBEHXZ @ 74 NONAME ; int CCFContextSubscriptionImpl::Size(void) const
+	?SubscriptionListener@CCFContextSubscriptionImpl@@QBEAAVMCFContextSubscriptionListener@@XZ @ 75 NONAME ; class MCFContextSubscriptionListener & CCFContextSubscriptionImpl::SubscriptionListener(void) const
+	?Value@CCFKeyValuePair@@QBEABVTDesC16@@XZ @ 76 NONAME ; class TDesC16 const & CCFKeyValuePair::Value(void) const
+	?EvaluateContextChangeL@CCFContextSubscriptionImpl@@QBEXABVCCFContextObject@@AAVCCFContextDataObject@@H@Z @ 77 NONAME ; void CCFContextSubscriptionImpl::EvaluateContextChangeL(class CCFContextObject const &, class CCFContextDataObject &, int) const
+	?SetDataObject@CCFContextIndicationImpl@@QAEXPAVHBufC8@@@Z @ 78 NONAME ; void CCFContextIndicationImpl::SetDataObject(class HBufC8 *)
+	?SetDataObjectUid@CCFContextIndicationImpl@@QAEXABVTUid@@@Z @ 79 NONAME ; void CCFContextIndicationImpl::SetDataObjectUid(class TUid const &)
+	?NewL@CCFContextDataProxy@@SAPAV1@XZ @ 80 NONAME ; class CCFContextDataProxy * CCFContextDataProxy::NewL(void)
+	?NewLC@CCFContextDataProxy@@SAPAV1@XZ @ 81 NONAME ; class CCFContextDataProxy * CCFContextDataProxy::NewLC(void)
+	?SetContextData@CCFContextDataProxy@@QAEXPAVHBufC8@@@Z @ 82 NONAME ; void CCFContextDataProxy::SetContextData(class HBufC8 *)
+	?SetContextDataUid@CCFContextDataProxy@@QAEXABVTUid@@@Z @ 83 NONAME ; void CCFContextDataProxy::SetContextDataUid(class TUid const &)
+	?NewL@CCFContextSourceCommand@@SAPAV1@XZ @ 84 NONAME ; class CCFContextSourceCommand * CCFContextSourceCommand::NewL(void)
+	?NewL@CCFContextSourceCommandParameter@@SAPAV1@XZ @ 85 NONAME ; class CCFContextSourceCommandParameter * CCFContextSourceCommandParameter::NewL(void)
+	?NewLC@CCFContextSourceCommand@@SAPAV1@XZ @ 86 NONAME ; class CCFContextSourceCommand * CCFContextSourceCommand::NewLC(void)
+	?NewLC@CCFContextSourceCommandParameter@@SAPAV1@XZ @ 87 NONAME ; class CCFContextSourceCommandParameter * CCFContextSourceCommandParameter::NewLC(void)
+	??0CCFEComPluginManager@@IAE@XZ @ 88 NONAME ; CCFEComPluginManager::CCFEComPluginManager(void)
+	??1CCFEComPluginManager@@UAE@XZ @ 89 NONAME ; CCFEComPluginManager::~CCFEComPluginManager(void)
+	?AddToBlackList@CCFEComPluginManager@@IAEHABVTUid@@@Z @ 90 NONAME ; int CCFEComPluginManager::AddToBlackList(class TUid const &)
+	?RemoveBlackListed@CCFEComPluginManager@@IAEXAAV?$RPointerArray@VCImplementationInformation@@@@@Z @ 91 NONAME ; void CCFEComPluginManager::RemoveBlackListed(class RPointerArray<class CImplementationInformation> &)
+

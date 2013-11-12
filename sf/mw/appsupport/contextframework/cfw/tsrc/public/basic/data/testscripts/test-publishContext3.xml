@@ -1,0 +1,16 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <equals>
+            <contextRef source='source.publishContext3' type='type.publishContext3'/>
+            <string>true</string>
+        </equals>
+        <actions>
+			<publishContext define='false'>
+				<contextRef source='source.publishContext3'
+					type='type.publishContext3.reply'
+					value='true'/>
+			</publishContext>
+        </actions>
+    </if>
+</script>

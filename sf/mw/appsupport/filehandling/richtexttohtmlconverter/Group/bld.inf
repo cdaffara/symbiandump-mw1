@@ -1,0 +1,59 @@
+// Copyright (c) 1997-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_PLATFORMS
+	DEFAULT
+
+PRJ_EXPORTS
+	./RichTextToHtmlConv.iby				/epoc32/rom/include/core/mw/richtexttohtmlconv.iby
+	./RichTextToHtmlConv.iby				/epoc32/rom/include/richtexttohtmlconv.iby
+
+PRJ_MMPFILES
+	./RT2HTMCV.MMP
+
+
+PRJ_TESTMMPFILES
+	../TSrc/cnvhtmltest.mmp
+
+PRJ_TESTEXPORTS
+	// Used by cnvhtmltest
+	./RichTextToHtmlConvTest.iby				/epoc32/rom/include/richtexttohtmlconvtest.iby
+	../Test/RT2HtmlConv.html /epoc32/data/z/test/rt2htmlconv.html
+	../Test/RT2HtmlConv.html /epoc32/release/wins/udeb/z/test/rt2htmlconv.html
+	../Test/RT2HtmlConv.html /epoc32/release/wins/urel/z/test/rt2htmlconv.html
+	../Test/RT2HtmlConv.html /epoc32/release/winscw/udeb/z/test/rt2htmlconv.html
+	../Test/RT2HtmlConv.html /epoc32/release/winscw/urel/z/test/rt2htmlconv.html
+	../Test/FmtdRT2HtmlConvExpectedFile.html /epoc32/data/z/test/fmtdrt2htmlconvexpectedfile.html
+	../Test/FmtdRT2HtmlConvExpectedFile.html /epoc32/release/wins/udeb/z/test/fmtdrt2htmlconvexpectedfile.html
+	../Test/FmtdRT2HtmlConvExpectedFile.html /epoc32/release/wins/urel/z/test/fmtdrt2htmlconvexpectedfile.html
+	../Test/FmtdRT2HtmlConvExpectedFile.html /epoc32/release/winscw/udeb/z/test/fmtdrt2htmlconvexpectedfile.html
+	../Test/FmtdRT2HtmlConvExpectedFile.html /epoc32/release/winscw/urel/z/test/fmtdrt2htmlconvexpectedfile.html
+	../Test/bulletconvexpectedfile1.html /epoc32/data/z/test/bulletconvexpectedfile1.html
+	../Test/bulletconvexpectedfile1.html /epoc32/release/wins/udeb/z/test/bulletconvexpectedfile1.html
+	../Test/bulletconvexpectedfile1.html /epoc32/release/wins/urel/z/test/bulletconvexpectedfile1.html
+	../Test/bulletconvexpectedfile1.html /epoc32/release/winscw/udeb/z/test/bulletconvexpectedfile1.html
+	../Test/bulletconvexpectedfile1.html /epoc32/release/winscw/urel/z/test/bulletconvexpectedfile1.html
+	../Test/translateconvexpectedfile1.html /epoc32/data/z/test/translateconvexpectedfile1.html
+	../Test/translateconvexpectedfile1.html /epoc32/release/wins/udeb/z/test/translateconvexpectedfile1.html
+	../Test/translateconvexpectedfile1.html /epoc32/release/wins/urel/z/test/translateconvexpectedfile1.html
+	../Test/translateconvexpectedfile1.html /epoc32/release/winscw/udeb/z/test/translateconvexpectedfile1.html
+	../Test/translateconvexpectedfile1.html /epoc32/release/winscw/urel/z/test/translateconvexpectedfile1.html
+	../Test/textstyleconvexpectedfile1.html /epoc32/data/z/test/textstyleconvexpectedfile1.html
+	../Test/textstyleconvexpectedfile1.html /epoc32/release/wins/udeb/z/test/textstyleconvexpectedfile1.html
+	../Test/textstyleconvexpectedfile1.html /epoc32/release/wins/urel/z/test/textstyleconvexpectedfile1.html
+	../Test/textstyleconvexpectedfile1.html /epoc32/release/winscw/udeb/z/test/textstyleconvexpectedfile1.html
+	../Test/textstyleconvexpectedfile1.html /epoc32/release/winscw/urel/z/test/textstyleconvexpectedfile1.html
+
+

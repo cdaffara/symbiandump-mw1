@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ad:metadata xmlns="http://nokia.com/arrow/repository/ia_component"
+  xmlns:ad="http://nokia.com/arrow/application_metadata">
+    <iaSearchCriteria>ABC:ABC</iaSearchCriteria>
+    <!--
+    The appResources element contains all the language metadata of one IAC.
+    IAC may have one or more language-specific component names
+    and descriptions inside appResource element.
+
+    Language ID 1 should be always defined as this is the default language
+    in case other languages supported by the client cannot be found.
+    -->
+    <appResources>
+        <appResource>
+            <!-- Language ID -->
+            <language>1</language>
+            <!-- Name in given language -->
+            <iacName>camerasrv</iacName>
+            <!-- Description in given language -->
+            <iacDescription>Update package for Camerasrv</iacDescription>
+        </appResource>
+    </appResources>
+    <!-- Specifies for what versions of what platform this component is for. -->
+    <swPlatformDep>
+    <!-- platform code -->
+        <platform>S60</platform>
+        <versionFrom>
+            <!--
+            platform version number separated in major and minor number (i.e.
+            3.0 has 3 as major and 0 as minor)
+            -->
+            <major>5</major>
+            <minor>2</minor>
+            <!--
+            date-element can be used to pinpoint platform version number to even
+            more specific one. It is not currently used in the system.
+            -->
+            <date>
+                <year>2010</year>
+                <week>32</week>
+            </date>
+        </versionFrom>
+        <!-- the latest platform version this component is for -->
+        <!--versionTo>
+            <major>2</major>
+            <minor>0</minor>
+            <date>
+                <year>2008</year>
+                <week>1</week>
+            </date>
+        </versionTo-->
+    </swPlatformDep>
+    <!-- specifies dependencies to other IACs -->
+    <interDeps>
+        <!--interDep>
+        <sisxUid>0x1230</sisxUid>
+            <versionFrom>
+                <major>1</major>
+                <minor>1</minor>
+                <build>1</build>
+            </versionFrom>
+            <versionTo>
+                <major>1</major>
+                <minor>1</minor>
+                <build>1</build>
+            </versionTo>
+        </interDep-->
+    </interDeps>
+    <firmwareDependencies>
+    </firmwareDependencies>
+    <rebootAfterInstall>true</rebootAfterInstall>
+</ad:metadata>

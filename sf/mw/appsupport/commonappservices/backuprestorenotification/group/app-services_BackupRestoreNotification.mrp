@@ -1,0 +1,12 @@
+component	app-services_BackupRestoreNotification
+source	\sf\mw\appsupport\commonappservices\backuprestorenotification
+binary	\sf\mw\appsupport\commonappservices\backuprestorenotification\group	all
+exports	\sf\mw\appsupport\commonappservices\backuprestorenotification\group
+
+
+notes_source	\component_defs\release.src
+
+
+ipr E 
+ipr T \sf\mw\appsupport\commonappservices\backuprestorenotification\tsrc
+

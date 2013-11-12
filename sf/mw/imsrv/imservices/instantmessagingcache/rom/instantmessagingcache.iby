@@ -1,0 +1,28 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: IBY file for imcache
+*
+*/
+
+#ifndef __INSTANTMESSAGINGCACHE_IBY__
+#define __INSTANTMESSAGINGCACHE_IBY__
+
+//instant messaging cache 
+file=ABI_DIR/BUILD_DIR/imcacheserver.exe					PROGRAMS_DIR/imcacheserver.exe
+file=ABI_DIR/BUILD_DIR/imcacheclient.dll					SHARED_LIB_DIR/imcacheclient.dll
+
+// stub SIS, provides support for SIS upgrading
+data=DATAZ_/system/install/imcachestub.sis    system/install/imcachestub.sis
+
+#endif //__INSTANTMESSAGINGCACHE_IBY__

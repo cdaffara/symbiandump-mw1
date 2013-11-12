@@ -1,0 +1,9 @@
+<html>
+This message is to test a few Latin letters - Å, Ä, Ö, à, è, ø, þ.Here's a message with all sorts of <b>bold<br>
+</b><font color="#FF0000">red
+</font><font face="Garamond" size=7><i><u>annoying
+</u></i></font>formatting and a picture<br>
+here...<br>
+<br>
+<img src="cid:4.3.2.7.2.20010530153011.00e3c870@notessmtp.symbian.com.0" width=393 height=500 alt="ss.jpg"><br>
+more text</html>

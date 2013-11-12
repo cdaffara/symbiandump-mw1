@@ -1,0 +1,58 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project SensorSourcePlugIn
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../inc/sensortraceconfiguration.hrh"
+#include "../inc/sensorsourcepluginconst.hrh"
+
+TARGET          sensorsourceplugin.dll
+TARGETTYPE      PLUGIN
+UID             0x10009D8D KSensorSourcePlugInDllUid
+CAPABILITY      CAP_ECOM_PLUGIN
+
+SOURCEPATH      ../src
+SOURCE          main.cpp
+SOURCE          sensorsourceplugin.cpp
+SOURCE          sensorchannelbase.cpp
+SOURCE          sensorchanneldoubletap.cpp
+SOURCE          sensorchannelorientation.cpp
+SOURCE		sensorsourcecommand.cpp
+SOURCE		sensorutil.cpp
+SOURCE		sensorsourceclient.cpp
+SOURCE          sensorchannelproximity.cpp
+
+USERINCLUDE     .
+USERINCLUDE     ../inc
+
+MW_LAYER_SYSTEMINCLUDE
+
+SOURCEPATH      ../data
+START RESOURCE	sensorsourceplugin.rss
+TARGET 		    sensorsourceplugin.rsc
+TARGETPATH 	    /resource/plugins
+END
+
+LIBRARY         euser.lib
+LIBRARY		    cfservices.lib
+LIBRARY         cfcontextsourcemanager.lib
+LIBRARY         sensrvclient.lib
+LIBRARY         sensrvutil.lib
+#ifdef TRACE_INTO_FILE
+LIBRARY         flogger.lib
+#endif
+

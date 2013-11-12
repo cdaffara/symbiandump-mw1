@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relnotes name="Backup Restore Notification">
+  <purpose>
+    A Wrapper class for Backup and Restore notification mechanisms, to be used by Core Apps components.
+  </purpose>
+</relnotes>

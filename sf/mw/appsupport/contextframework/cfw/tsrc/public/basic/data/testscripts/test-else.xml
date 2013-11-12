@@ -1,0 +1,17 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <equals>
+            <contextRef source='Application.State' type='Foreground.View'/>
+            <cep:string>NowPlaying</cep:string>
+        </equals>
+        <actions>
+            <firstTestAction/>
+        </actions>
+    </if>
+    <else>
+        <actions>
+            <secondTestAction/>
+        </actions>
+    </else>
+</script>

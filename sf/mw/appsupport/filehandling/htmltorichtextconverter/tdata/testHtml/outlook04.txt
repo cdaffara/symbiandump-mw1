@@ -1,0 +1,433 @@
+<html>
+<!--Version 1.0-->
+<head>
+	<title>Nokia on the Web</title>
+<!-- meta-information for indexing  -->
+<META NAME="description" CONTENT="Nokia is the world's leading mobile phone supplier and a leading supplier of mobile and fixed telecom networks including related customer services.">
+<META NAME="keywords" CONTENT="nokia, Nokia, NOKIA, mobile phones, cellular, telecommunications, wireless networks,
+fixed networks, datacom, GSM, multimedia terminals, monitors, handsets, customer services, press releases,
+financial information, student exchange, open positions, employment opportunities,
+career opportunities with Nokia">
+<!-- end meta-information -->
+<!--Stylesheet detection-->
+<!-- Vignette StoryServer 4 Thu Nov 04 12:17:05 1999 -->
+<!--Stylesheet detection script-->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function isMacintosh() {
+    if (navigator.appVersion.indexOf("Mac") != -1) return true;
+    if (navigator.appVersion.indexOf("PPC") != -1) return true;
+    else return false;
+	}
+
+function is4() {
+	if (parseInt(navigator.appVersion)>=4) return true;
+	else return false;
+	}
+
+if (isMacintosh()) {
+	if (is4()) document.write('<LINK REL="stylesheet" HREF="/mac_styles.css" type="text/css">');
+	}
+else {
+	if (is4()) document.write('<LINK REL="stylesheet" HREF="/styles.css" type="text/css">');
+	}
+
+window.onError = null;
+// -->
+</SCRIPT>
+</head>
+
+<map name="bulletin">
+<area shape="rect" coords="269,0,446,36" href="/snowboard/index.html">
+<area shape="rect" coords="0,0,269,155" href="/snowboard/index.html">
+<area shape="rect" coords="280,37,368,49" href="/snowboard/best_riding/1,,1,00.html">
+<area shape="rect" coords="269,59,446,155" href="/snowboard/index.html">
+</map>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0033CC" vlink="#551A8B" alink="#cc9933">
+<br>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width=620>
+<tr>
+    <td bgcolor="#cccccc" rowspan=5 width=1 valign=top><IMG border=0 height=288 src="pics/right_1px.gif" width=1></td>
+	<td bgcolor="#cccccc"><IMG alt=" " border=0 height=1 src="pics/204_grey_1px.gif" width=135></td>
+	<td bgcolor="#cccccc"><IMG alt=" " border=0 height=1 src="pics/204_grey_1px.gif" width=311></td>
+	<td bgcolor="#cccccc"><IMG alt=" " border=0 height=1 src="pics/204_grey_1px.gif" width=1></td>
+	<td bgcolor="#cccccc"><IMG alt=" " border=0 height=1 src="pics/204_grey_1px.gif" width=171></td>
+	<td bgcolor="#cccccc"><IMG alt=" " border=0 height=1 src="pics/204_grey_1px.gif" width=1></td>
+</tr>
+<tr>
+	<td width=135><a href="http://www.nokia.com/"><IMG alt="Go to www.nokia.com" border=0 height=50 src ="pics/nokia_logo.gif" width=135></a></td>
+<td valign=middle width=311>
+<!-- font specifications for tracker --><font face="Arial, Helvetica" size="1" class="tracker">
+&nbsp;&nbsp;Welcome to www.nokia.com!
+</font></td>
+	<td width=1 bgcolor="#cccccc"><IMG alt=" " border=0 height=50 src="pics/204_grey_1px.gif" width=1></td>
+	<td width=171><IMG alt="Welcome!" border=0 height=42 src="pics/welcome_optimized.gif" width=165></td>
+	<td width=1 bgcolor="#cccccc"><IMG alt=" " border=0 height=50 src="pics/204_grey_1px.gif" width=1></td>
+</tr>
+<tr>
+	<td bgcolor="#666666"><IMG alt=" " border=0 height=1 src="pics/102_grey_1px.gif" width=135></td>
+	<td bgcolor="#666666"><IMG alt=" " border=0 height=1 src="pics/102_grey_1px.gif" width=311></td>
+	<td bgcolor="#666666"><IMG alt=" " border=0 height=1 src="pics/102_grey_1px.gif" width=1></td>
+	<td bgcolor="#666666"><IMG alt=" " border=0 height=1 src="pics/102_grey_1px.gif" width=171></td>
+	<td bgcolor="#666666"><IMG alt=" " border=0 height=1 src="pics/102_grey_1px.gif" width=1></td>
+</tr>
+<tr>
+	<td colspan=2 rowspan=2 valign=top align=left width=446>
+
+<!--Main page teasers start-->
+<table width="446" cellspacing="0" cellpadding="0" border="0">
+<tr><td valign="top">
+
+	<!-- START TEASER -->
+	  <!--TEASER-->
+	     <!-- END TEASER -->
+
+<table width="402" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="160"><a href="/phones/3210/index.html"><img src="/pics/3210_big_teaser_optimized.jpg" WIDTH=223 HEIGHT=161 alt="Nokia 3210" border="0"></a></td>
+<td width="242"><font face="Arial, Helvetica" size="2"><b><a href="/phones/3210/index.html">Nokia 3210</a></b><i> for Europe and Asia-Pacific</i></font><br><br><font face="Arial, Helvetica" size="1">The Nokia 3210 features GSM 900/1800 dual-band functionality, the Navi&#153; Key for ease of use, large display for easier reading and Xpress-on&#153; Front and Back Covers. <a href="/phones/3210/index.html">&gt;&gt;</a></font></td>
+</tr>
+</table>
+
+<!-- END TEASER -->
+
+
+</tr>
+<tr>
+    <td width="446"><img src="/teaser/shadebar.gif" width=446 height=9 alt="" border="0"></td>
+</tr>
+</table>
+<br>
+<table width="446" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td colspan="7"><a href="http://www.nokia.com/press/releases/index.html"><IMG SRC="http://www.nokia.com/pics/releasemore.gif" width=402 height=
+
+17 border=0 alt="" usemap="#releasemore"></a><MAP name="releasemore"><AREA shape="rect" coords="337,0,401,16" href="http://www.nokia.com/press/releases/index.html" title=""><AREA shape="default" nohref></MAP></td>
+		<td width="22">&nbsp;</td>
+
+	</tr>
+	<tr>
+		<td width="22">&nbsp;</td>
+		<td width="12">&nbsp;</td>
+		<td width="106" valign="top"><font size="1" face="arial, helvetica"><br>
+		November 15, 1999<br>
+		 <a href="http://wwwdb.nokia.com/pressrel/webpr.nsf/mostrecent/C225663600509DEDC225682A0036D668?opendocument">
+		Nokia wins contract to supply KKF.net with DSL Broadband Network in Germany</a></font></td>
+
+		<td width="8">&nbsp;</td>
+		<td width="106" valign="top"><font size="1" face="arial, helvetica"><br>
+		November 12, 1999<br>
+		 <a href="http://wwwdb.nokia.com/pressrel/webpr.nsf/mostrecent/C225663600509DEDC22568260057DA89?opendocument">
+		Hong Kong Police to Purchase Digital Nokia TETRA System</a></font></td>
+
+		<td width="8">&nbsp;</td>
+		<td width="106" valign="top"><font size="1" face="arial, helvetica"><br>
+		November 10, 1999<br>
+		 <a href="http://wwwdb.nokia.com/pressrel/webpr.nsf/mostrecent/C225663600509DEDC2256825002B50D3?opendocument">
+		Nokia 445PRO Brings a New Dimension to Display Technology</a></font></td>
+
+		<td width="12">&nbsp;</td>
+		<td width="22">&nbsp;</td>
+	</tr>
+</table><br>
+<center>
+
+
+
+<table width="402" cellspacing="0" cellpadding="0">
+<tr>
+<td width="160"><A href="/snowboard/index.html"><img src="/pics/snow_small.gif" WIDTH=156 HEIGHT=110 alt="Nokia FIS Snowboard World Cup" border="0"></a></td>
+<td width="10">&nbsp;</td>
+<td width="252"><font face="Arial, Helvetica" size="2"><b><A href="/snowboard/index.html">Nokia FIS Snowboard World Cup 1999-2000</a></b></font><br><font face="Arial, Helvetica" size="1">Nokia is the proud title sponsor of the FIS Snowboard World Cup. Check out the World Cup along with an interactive Best Riding Bulletin and other
+smashing features.<A href="/snowboard/index.html">&gt;&gt;</a></font></td>
+</tr>
+</table>
+<br>
+
+<table width="402" cellspacing="0" cellpadding="0">
+<tr>
+<td width="236"><font face="Arial, Helvetica" size="2"><b> <a href="/phones/8210/index.html">Do you know the difference between clothing and style?</a></b></font><br><font face="Arial, Helvetica" size="1">Then you know the difference between a mobile phone and the <a href="/phones/8210/index.html">Nokia 8210</a>, a phone for Europe and the Asia-Pacific region. <a href="/phones/8210/index.html">Learn more</a>, or view the archived <a href="/phones/livestyle/index.html">webcast</a> from the launch event at Paris fashion week.
+<a href="/phones/8210/index.html">&gt;&gt;</a></font></td>
+<td width="10">&nbsp;</td>
+<td width="156"><a href="/phones/8210/index.html"><IMG SRC="/pics/8210_mid_teaser2.jpg" WIDTH=151 HEIGHT=118 ALT="Nokia 8210" BORDER="0"></a></td>
+</tr></table>
+<BR>
+
+<table width="402" cellspacing="0" cellpadding="0">
+<tr><td width="242"><font face="Arial, Helvetica" size="2"><b> <a href="/corporate/waponweb/index.html">Nokia WAP on Web
+</a></b></font><br><font face="Arial, Helvetica" size="1">Everything you need to know about WAP: products, applications, and business opportunities. <a href="/corporate/waponweb/index.html">&gt;&gt;</a></font></td>
+<td width="20">&nbsp;</td>
+<td width="160"><a href="/corporate/waponweb/index.html"><IMG SRC="/pics/waponweb.jpg" WIDTH=156 HEIGHT=85 ALT="WAP on Web" BORDER="0"></a></td>
+</tr></table>
+<BR>
+
+
+
+
+<table width="400" cellspacing="0" cellpadding="0" border="0">
+<tr><td><FONT face="Arial, Helvetica" size="2">
+<a href="/careers/students_netdays.html"><img src="/careers/pics/netdays_littleteaser.gif" align="left" hspace="10"width=165 height=88 alt="Netd@ys Europe 1999" border="0"></a><FONT face="Arial, Helvetica" size="2"><a href="/careers/students_netdays.html"><b>Nokia Supports Netd@ys Europe 1999</a></b>
+<br><FONT face="Arial, Helvetica" size="1">
+Students! Teachers! See what you can accomplish with the help of the Internet. Educational and cultural projects from around Europe are being showcased during Netd@ys Europe 1999, 13-21 November. <a href="/careers/students_netdays.html">&gt;&gt;</a> </font>
+</td></tr>
+</table><br>
+
+
+<table width="402" cellspacing="0" cellpadding="0">
+<tr>
+<td width="160"><a href="http://www.forum.nokia.com/"><img src="/pics/forum_developers.gif" width=156 height=85 alt="Forum Nokia" border="0"></a></td>
+<td width="242"><font face="Arial, Helvetica" size="2"><b><a href="http://www.forum.nokia.com/">Visit Forum Nokia</a></b></font><br><font face="Arial, Helvetica" size="1">Forum Nokia is the site for wireless data professionals; developers, system integrators, and other partners. <a href="http://www.forum.nokia.com/">&gt;&gt;</a></font></td>
+</tr>
+</table>
+<br>
+
+<table width="402" cellspacing="0" cellpadding="0">
+<tr>
+<td width="160"><a href="/year2000/"><img src="pics/y2klogo_optimized.gif" width=156 height=58 alt="Year 2000" border="0"></a></td>
+<td width="242"><font face="Arial, Helvetica" size="2"><b> <a href="/year2000/">Year 2000</a></b></font><br><font face="Arial, Helvetica" size="1">Working with you to prepare for the coming millennium. The Nokia Year 2000 Project considers the impact of Year 2000 issues on Nokia equipment and services, for a smooth transition to the new millennium. <a href="/year2000/">&gt;&gt;</a></font></td>
+</tr>
+</table>
+<BR>
+</center>
+<!--Main page teasers end-->
+	</td>
+	<td width=1 bgcolor="#cccccc" rowspan=2><br></td>
+	<td valign=top width=171>
+
+<!-- navigation area starts here -->
+
+<table border=0 cellspacing=0 cellpadding=2>
+			<tr>
+				<td width="5"><br></td>
+				<td valign=top align=left>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				Mobile Phones<br>
+				</b></font>
+				<table cellspacing="0" cellpadding="0">
+				<tr><td width="6">&nbsp;</td><TD COLSPAN="2"><font face="Arial, Helvetica" size="2" class="indented"><A href="http://ads05.focalink.com/SmartBanner/page?16504.7-INSERT_TIME_DATE_STAMP_HERE">Phones - U.S.</a></font></td></tr>
+				<tr><td width="6">&nbsp;</td><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="http://ads05.focalink.com/SmartBanner/page?16504.8-INSERT_TIME_DATE_STAMP_HERE">Buy Accessories - U.S.</a></font></td></tr>
+				<tr><td width="6">&nbsp;</td><td COLSPAN="2"><font face="Arial, Helvetica" size="2" class="indented"><A href="phones/index.html">Phones - Other Countries</a></font></td></tr>
+				</table>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				Displays<br>
+				</b></font>
+				<table cellspacing="0" cellpadding="0">
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="http://www.nokia.com/americas/displays/index.html">Displays - U.S.</a></td></tr>
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="monitors/index.html">Displays - Other Countries</a></td></tr>
+				</table>
+
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				<A href="multimedia/index.html">Multimedia Terminals</a><br>
+				</b></font>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				Solutions for Corporations and Service Providers<br>
+				</b></font>
+				<table cellspacing="0" cellpadding="0">
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="/corporate/ipmobility/index.html">IP Mobility</a></td></tr>
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="http://www.dsl.nokia.com">DSL</a></td></tr>
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="http://www.nokiaiptel.com">IP Telephony</a></td></tr>
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="http://www.iprg.nokia.com">IP Security Solutions</a></td></tr>
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="/corporate/wap/index.html">WAP Solutions for Mobile Business</a></td></tr>
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="/corporate/ipmobility/prod_solutions_laptop.html">Wireless LAN</a></td></tr>
+				</table>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				<A href="/networks/index.html">Networks</a><br>
+				</b></font>
+				<table cellspacing="0" cellpadding="0">
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="/networks/1/index.html">Mobile Networks</a></td></tr>
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="/networks/4/index.html">IP Solutions</a></td></tr>
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="/networks/2/index.html">Fixed Networks</a></td></tr>
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="/networks/services/index.html">Professional Services</a></td></tr>
+				</table>
+
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				<A href="/careers/index.html">Career Opportunities</a><br>
+				</b></font>
+				<table cellspacing="0" cellpadding="0">
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="http://wwwdb.nokia.com/nokia/hr/recrsyst.nsf/JobsByLocation?OpenView&count=75&CollapseView">Jobs by Location</a></td></tr>
+				</table>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				<A href="/students/index.html">Students</a><br>
+				</b></font>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				<A href="/press/index.html">Press Services</a><br>
+				</b></font>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				<A href="/investor/index.html">Investor Relations</a><br>
+				</b></font>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				<A href="/safety/">Health and Mobile Telephony</a><br>
+				</b></font>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				<A href="/environment/index.html">Nokia and the Environment</a><br>
+				</b></font>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				<A href="inbrief/index.html">Nokia In Brief</a><br>
+				</b></font>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				<A href="/year2000/">Year 2000</a><br>
+				</b></font>
+				<br>
+				<font face="Arial, Helvetica" size="2" class="nav"><b>
+				Contact Information<br>
+				</b></font>
+				<table cellspacing="0" cellpadding="0">
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="inbrief/contact/index.html">Nokia Addresses</a></td></tr>
+				<tr><td width="6">&nbsp;</td><td><font face="Arial, Helvetica" size="2" class="indented"><A href="/helplines.html">Customer Support</a></td></tr>
+				</table>
+
+
+
+
+				</font>
+				</td>
+			</tr>
+		</table>
+
+<!-- navigation area ends here -->
+
+		</td>
+	<td width=1 bgcolor="#cccccc" rowspan=2><br></td>
+</tr>
+<tr>
+	<td valign=top align=center width=171>
+
+<!-- search form begins here -->
+
+<!-- Vignette StoryServer 4 Thu Nov 04 12:17:05 1999 -->
+<br>
+<FORM METHOD=POST ACTION="/cgi-bin/empower" NAME=form>
+<TABLE border="0" cellpadding="4" cellspacing="0" align=center>
+<TR><TD><FONT face="Arial, Helvetica" size="1" class="search">Search www.nokia.com:</FONT>
+<TABLE border="0" cellpadding="0" cellspacing="0"><TR>
+<TD align="left" valign=top><INPUT type=hidden name="SAVEDB" value="nokiacom%2dspider">
+<FONT face="Arial, Helvetica" size="1"><INPUT NAME=QUERY00 size=14 VALUE=""></FONT></TD></tr>
+<tr><TD align="right" valign=top><FONT face="Arial, Helvetica" size="1">
+<INPUT type="image" NAME="CMD=search.run" src="/pics/search.gif" width=48 height=18 border=0 alt="search" vspace=4 hspace=4>
+<INPUT type=hidden name=SAVEP value="">
+<INPUT type=hidden name=PROP00 value="L=en"></FONT></TD>
+</TR></TABLE></FORM>
+</td></tr><tr><td><table cellspacing=0 cellpadding=0 border=0><FORM ACTION="/cgi/jump.cgi/1,3536,,00.html" ENCTYPE=x-www-form-encoded METHOD=POST TARGET="_top"><tr>
+				<td><font face="Arial, Helvetica" size="1" class="search">
+				Navigate www.nokia.com:
+				<br>
+				<SELECT NAME="LOCATION" OnChange="top.location.href=this.options[this.selectedIndex].value">
+				<option selected>Choose one
+				<option>____
+				<option>Featured content:
+				<option VALUE="/3g/index.html">Third Generation
+				<option VALUE="/phones/7110/index.html">Nokia 7110
+				<option VALUE="/corporate/waponweb/index.html">WAP on Web
+				<option VALUE="http://www.forum.nokia.com/developers/wap/wap.html">Nokia WAP Toolkit
+				<option VALUE="/year2000/">Nokia Year 2000
+				<option VALUE="/press/magazines/discovery/index.html">Discovery Online
+				<option VALUE="http://www.club.nokia.com">Join Club Nokia!
+				<option VALUE="/snake">Play the Snake!
+				<option>____
+				<option VALUE="/index.html">Welcome page
+				<option>____
+				<option VALUE="/phones/index.html">Mobile Phones
+				<option VALUE="/monitors/index.html">Displays
+				<option VALUE="/multimedia/index.html">Multimedia Terminals
+				<option VALUE="/corporate/ipmobility/index.html">IP Mobility
+				<option VALUE="http://www.dsl.nokia.com/">DSL
+				<option VALUE="http://www.nokiaiptel.com">IP Telephony
+				<option VALUE="http://www.iprg.nokia.com">IP Security Solutions
+				<option VALUE="/corporate/wap/index.html">WAP Solutions
+				<option VALUE="/networks/1/index.html">Mobile Networks
+				<option VALUE="/networks/4/index.html">IP Solutions
+				<option VALUE="/networks/2/index.html">Fixed Networks
+				<option VALUE="/careers/index.html">Career Opportunities
+				<option VALUE="/students/index.html">Students
+				<option VALUE="/press/index.html">Press Services
+				<option VALUE="/investor/index.html">Investor Relations
+				<option VALUE="/inbrief/index.html">Nokia In Brief
+				<option VALUE="/inbrief/contact/index.html">Nokia Addresses
+				<option VALUE="/helplines.html">Customer Support
+				</select></font>
+				</td>
+			</tr>
+			<tr>
+				<td align=right valign=top><input type="image" src="/pics/go.gif" name="go" border=0 alt="" vspace=2 hspace=2></td></tr>
+				</form>
+				</table>
+			</td>
+			</tr>
+			<tr>
+				<td>
+				<table cellspacing=0 cellpadding=0 border=0>
+				<FORM ACTION="/cgi/jump.cgi/1,3536,,00.html" ENCTYPE=x-www-form-encoded METHOD=POST TARGET="_top">
+				<tr>
+				<td>
+				<font face="Arial, Helvetica" size="1" class="search">
+				Country and other Nokia<br>sites:
+				<br>
+				<SELECT NAME="LOCATION" OnChange="top.location.href=this.options[this.selectedIndex].value">
+					<OPTION SELECTED>Choose one
+					<OPTION>____
+					<OPTION VALUE="http://www.club.nokia.com/">Club Nokia
+					<OPTION VALUE="http://www.forum.nokia.com/">Forum Nokia
+					<OPTION VALUE="http://www.iprg.nokia.com/">Internet Security
+					<OPTION VALUE="http://www.nokiaiptel.com/">IP Telephony
+					<OPTION VALUE="http://www.wirelessfuture.nokia.com/">Wireless Future
+					<OPTION>____
+					<OPTION VALUE="http://www.nokia-asia.com/">Nokia Asia Pacific
+					<OPTION VALUE="http://www.nokia.at/">Nokia Austria
+					<OPTION VALUE="http://www.nokia.be/">Nokia Belgium
+					<OPTION VALUE="http://www.nokia.ca/">Nokia Canada
+					<OPTION VALUE="http://www.nokia.com.cn/">Nokia China
+					<OPTION VALUE="http://www.nokia.cz/">Nokia Czech Republic
+					<OPTION VALUE="http://www.nokia.dk">Nokia Denmark
+					<OPTION VALUE="http://www.nokia.fi">Nokia Finland
+					<OPTION VALUE="http://www.nokia.fr/">Nokia France
+					<OPTION VALUE="http://www.nokia.de/">Nokia Germany
+					<OPTION VALUE="http://www.nokia.hu/">Nokia Hungary
+					<OPTION VALUE="http://www.nokia.it/">Nokia Italy
+					<OPTION VALUE="http://www.nokia.co.jp/">Nokia Japan
+					<OPTION VALUE="http://www.nokia-nederland.nl/">Nokia Netherlands
+					<OPTION VALUE="http://www.nokia.no">Nokia Norway
+					<OPTION VALUE="http://www.nokia.com.pl">Nokia Poland
+					<OPTION VALUE="http://www.nokia.se">Nokia Sweden
+					<OPTION VALUE="http://www.nokia.ch/">Nokia Switzerland
+					<OPTION VALUE="http://www.nokia.com/americas/displays/index.html">Nokia US Displays
+					<OPTION VALUE="http://www.nokiausa.com">Nokia US Phones
+
+				</SELECT>
+				</font>
+				</td>
+			</tr>
+			<tr>
+				<td align=right valign=top><input type="image" src="/pics/go.gif" name="go" border=0 alt="" vspace=2 hspace=2></td>
+				</tr>
+				</form>
+				</table>
+				</td>
+			</tr></table><!-- search form ends here -->
+</form>
+<!-- LEGAL NOTICE-->
+
+<!-- Vignette StoryServer 4 Thu Nov 04 12:17:06 1999 -->
+<font face="Arial, Helvetica" size="1" class="legal">&copy; Nokia 1999.<BR>Read our <a href="http://www.nokia.com/copyright.html">legal notice</a>.</font> </td>
+</tr>
+</table>
+
+</center>
+
+</body>
+</html>

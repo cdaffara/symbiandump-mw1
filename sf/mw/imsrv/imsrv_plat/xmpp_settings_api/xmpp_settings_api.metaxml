@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="30a7ce3294a8454371ee730878f1d3b1" dataversion="1.0">
+<name>xmpp_settings_api</name>
+<description>This is a API that provides read and write facility for protocol specific settings.</description>
+<type>c++</type>
+<subsystem>xmppsettingsapi</subsystem>
+<libs><lib name="xmppsettingsapi.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

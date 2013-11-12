@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<api id="c5abe1a8714f500e6889205330ded96f" dataversion="1.0">
+  <name>XIMP Core Protocol Plug-in API</name>
+  <description>XIMP Framework Protocol Plugin API contains abstract interfaces what protocol adaptation plug-ins must implement. XIMP Framework will instantiate protocol plug-ins through ECom framework and call methods declared in these interfces. This interface includes methods to:
+- get the features of the protocol plug-in
+- manage the service connections</description>
+  <type>c++</type>
+  <subsystem>ximpfw</subsystem>
+  <libs><lib name="ximpdatamodel.lib"/>
+<lib name="ximpoperations.lib"/>
+<lib name="ximpecomhook.lib"/>
+<lib name="ximpmanager.lib"/>
+<lib name="ximpsrvclient.lib"/>
+<lib name="ximpprocessor.lib"/>
+<lib name="ximputils.lib"/>
+</libs>
+  <release category="domain"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>yes</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

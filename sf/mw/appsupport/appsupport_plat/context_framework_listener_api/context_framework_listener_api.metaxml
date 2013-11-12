@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="f3f7dce8d320fb459594f175a5a5d26d" dataversion="2.0">
+<name>Context Framework Listener API</name>
+<description>Context Framework Listener API is an interface through 3rd party clients can receive notifications of change in contexts or actions needed to be executed. To receive a context change or action indication client needs to subscribe for a certain context.</description>
+<type>c++</type>
+<collection>contextframework</collection>
+<libs></libs>
+<release category="platform" sinceversion="0"/>
+<attributes>
+<htmldocprovided>no</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

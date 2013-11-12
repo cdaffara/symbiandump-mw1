@@ -1,0 +1,78 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: media_recorder_api
+*
+*/
+#include <platform_paths.hrh>
+
+TARGET        StifCamcTest.dll
+TARGETTYPE    dll
+// First UID is DLL UID, Second UID is STIF Test Framework UID
+UID             0x1000008D 0x101FB3E7
+
+CAPABILITY	CAP_GENERAL_DLL MultimediaDD
+VENDORID      VID_DEFAULT
+
+SOURCEPATH    ../src
+
+SOURCE        camcTest.cpp
+SOURCE        StifCamcTestTop.cpp
+
+SOURCE        camcTest_1.cpp
+SOURCE        camcTestClient_1.cpp
+SOURCE        camcTest_2.cpp
+SOURCE        camcTestClient_2.cpp
+SOURCE        camcTest_3.cpp
+SOURCE        camcTestClient_3.cpp
+SOURCE        camcTest_4.cpp
+SOURCE        camcTestClient_4.cpp
+SOURCE        camcTest_5.cpp
+SOURCE        camcTestClient_5.cpp
+SOURCE        camcTest_6.cpp
+SOURCE        camcTestClient_6.cpp
+SOURCE        camcTest_7.cpp
+SOURCE        camcTestClient_7.cpp
+SOURCE        camcTest_8.cpp
+SOURCE        camcTestClient_8.cpp
+SOURCE        camcTest_9.cpp
+SOURCE        camcTestClient_9.cpp
+
+SOURCE        camcTest_visualcheckdsp.cpp
+SOURCE        camcTestClient_visualcheckdsp.cpp
+SOURCE        camcTest_visualcheck.cpp
+SOURCE        camcTestClient_visualcheck.cpp
+
+
+//  TestFrameWork files 
+SOURCE        TestFrameWork/TestCase.cpp
+SOURCE        TestFrameWork/AssertFailure.cpp
+SOURCE        TestFrameWork/TestSuite.cpp
+
+USERINCLUDE   ..
+USERINCLUDE   ../inc
+USERINCLUDE   ../inc/TestFrameWork
+USERINCLUDE   ../../../../camcordermmfplugin/controller/Inc
+
+MW_LAYER_SYSTEMINCLUDE
+
+SYSTEMINCLUDE	/epoc32/include/libc
+
+LIBRARY       euser.lib
+LIBRARY       efsrv.lib
+LIBRARY       StifTestInterface.lib
+LIBRARY       mediaclientvideo.lib
+LIBRARY       mmfcontrollerframework.lib
+LIBRARY       bafl.lib 
+LIBRARY       ecam.lib
+LIBRARY	      ecom.lib

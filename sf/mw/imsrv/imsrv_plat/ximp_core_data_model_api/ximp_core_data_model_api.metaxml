@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<api id="45fafe9889c9bbe121433fe9e13f418f" dataversion="1.0">
+  <name>XIMP Core Data Model API</name>
+  <description>XIMP Framework Data Model API contains generic object containers, status objects and identity objects. API provides also abstract object factory interface to instantiate other objects.</description>
+  <type>c++</type>
+  <subsystem>ximpfw</subsystem>
+  <libs><lib name="ximpdatamodel.lib"/>
+<lib name="ximpoperations.lib"/>
+<lib name="ximpecomhook.lib"/>
+<lib name="ximpmanager.lib"/>
+<lib name="ximpsrvclient.lib"/>
+<lib name="ximpprocessor.lib"/>
+<lib name="ximputils.lib"/>
+</libs>
+  <release category="domain"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>yes</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

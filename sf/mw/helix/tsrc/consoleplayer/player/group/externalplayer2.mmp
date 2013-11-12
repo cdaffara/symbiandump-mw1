@@ -1,0 +1,53 @@
+/*
+ * Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * Nokia Corporation - initial contribution.
+ *
+ * Contributors:
+ *
+ * Description:
+ * This file provides the information required for building the
+ * External Player2 executable used by Console Player test app.
+ */
+
+#include <platform_paths.hrh>
+
+TARGET        externalplayer2.exe
+TARGETTYPE    exe
+UID           0x0 0x10207CB1
+VENDORID      VID_DEFAULT
+
+CAPABILITY    ALL -TCB
+
+EPOCSTACKSIZE 0x5000           //20KB
+EPOCHEAPSIZE  0x400 0x1000000  //1KB-16MB
+
+USERINCLUDE   ../../common
+USERINCLUDE   ../inc
+USERINCLUDE   ../src/mmf
+
+SOURCEPATH    ../src
+SOURCE        externalplayer.cpp
+SOURCE        playerwindow.cpp
+
+SOURCEPATH    ../src\mmf
+SOURCE        mmfplayerwindow.cpp
+
+MW_LAYER_SYSTEMINCLUDE
+USERINCLUDE   .
+SYSTEMINCLUDE /epoc32/include
+
+LIBRARY       euser.lib
+LIBRARY       efsrv.lib
+LIBRARY       mediaclientvideo.lib
+LIBRARY	      gce.lib 
+LIBRARY       ws32.lib 
+LIBRARY       gdi.lib
+LIBRARY		    fntstr.lib
+LIBRARY       fbscli.lib

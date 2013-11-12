@@ -1,0 +1,7 @@
+EXPORTS
+	_Z12GateFunctionv @ 1 NONAME
+	_ZTI20CTestConverterBadUid @ 2 NONAME ; #<TI>#
+	_ZTI27CTestConverterBadUidLibrary @ 3 NONAME ; #<TI>#
+	_ZTV20CTestConverterBadUid @ 4 NONAME ; #<VT>#
+	_ZTV27CTestConverterBadUidLibrary @ 5 NONAME ; #<VT>#
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api id="bd75b8cdec8227a98d287e7dcb2a3ff1" dataversion="2.0">
+  <name>camese framework api</name>
+  <description>WMDRM DLA framework plugin interfaces
+WMDRM DLA Client API</description>
+  <type>c++</type>
+  <collection>WMDRM</collection>
+  <libs>
+    <lib name="wmdrmdla.lib"/>
+  </libs>
+  <release category="platform" sinceversion="5.1"/>
+  <attributes>
+    <htmldocprovided>yes</htmldocprovided>
+    <adaptation>no</adaptation>
+  </attributes>
+</api>

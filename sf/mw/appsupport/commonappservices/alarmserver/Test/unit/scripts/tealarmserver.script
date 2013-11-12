@@ -1,0 +1,89 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE alarmserverunittestserver
+
+//! @SYMTestCaseDesc Remove ini file
+PREFIX RUN_UTILS
+// Remove the INI file
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+DeleteFile  c:\System\Data\AlarmServer.ini
+REMOVE_PREFIX
+
+START_TESTCASE PIM-AlarmServer-SilentFor-0001
+//! @SYMTestCaseID PIM-AlarmServer-SilentFor-0001
+//! @SYMTestCaseDesc Sets the Alarm Server silent period using SetAlarmSoundsSilentFor and updates the UTC offset.
+//! @SYMTestStatus Implemented
+//! @SYMTestPriority 1
+//! @SYMTestActions Set UTC offset to initial value. Set alarm sounds silent period. Move UTC offset. 
+//! @SYMTestExpectedResults GetAlarmSoundsSilentUntil should remain constant.
+//! @SYMTestType UT
+//! @SYMFssID <App-Services>/<AlarmServer>/034
+
+// Test case naming scheme: SilentFor.InitialUTC.MoveToUTC
+
+RUN_TEST_STEP -1 alarmserverunittestserver SilentForStep \testdata\configs\silentfor.ini 3.0.60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentForStep \testdata\configs\silentfor.ini 2.0.-60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentForStep \testdata\configs\silentfor.ini 2.0.0
+RUN_TEST_STEP -1 alarmserverunittestserver SilentForStep \testdata\configs\silentfor.ini 60.0.60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentForStep \testdata\configs\silentfor.ini 5.60.60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentForStep \testdata\configs\silentfor.ini 5.-60.60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentForStep \testdata\configs\silentfor.ini time1
+RUN_TEST_STEP -1 alarmserverunittestserver SilentForStep \testdata\configs\silentfor.ini time2
+RUN_TEST_STEP -1 alarmserverunittestserver SilentForStep \testdata\configs\silentfor.ini TimeAndUTC
+END_TESTCASE PIM-AlarmServer-SilentFor-0001
+
+START_TESTCASE PIM-AlarmServer-SilentUntil-0001
+//! @SYMTestCaseID PIM-AlarmServer-SilentUntil-0001
+//! @SYMTestCaseDesc Sets the Alarm Server silent period using SetAlarmSoundsSilentUntil and updates the UTC offset.
+//! @SYMTestStatus Implemented
+//! @SYMTestPriority 1
+//! @SYMTestActions Set UTC offset to initial value. Set alarm sounds silent period. Move UTC offset. 
+//! @SYMTestExpectedResults GetAlarmSoundsSilentUntil should track changes in UTC offset.
+//! @SYMTestType UT
+//! @SYMFssID <App-Services>/<AlarmServer>/034
+
+// Test case naming scheme: InitialUTC.SilentUntil.MoveToUTC
+
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC0.60.0
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC0.0.0
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC0.120.60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC0.60.60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC0.60.-60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC60.60.60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC60.120.60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC60.120.120
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC60.60.120
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC60.60.0
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC-60.60.-60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC-60.0.-60
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC-60.120.0
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC-60.60.0
+RUN_TEST_STEP -1 alarmserverunittestserver SilentUntilStep \testdata\configs\silentuntil.ini UTC-60.60.-120
+END_TESTCASE PIM-AlarmServer-SilentUntil-0001
+
+START_TESTCASE PIM-AlarmServer-GetAlarmData-0001
+//! @SYMTestCaseID PIM-AlarmServer-GetAlarmData-0001
+//! @SYMTestCaseDesc Test getting of alarm data in OOM and normal scenario
+//! @SYMDEF PDEF106894 Non leaving function RASCliSession::GetAlarmData can leave
+//! @SYMTestStatus Implemented
+//! @SYMTestPriority 4
+//! @SYMTestActions Add a alarm with data. Test getting alarm data in OOM case and expect KErrNoMemory is returned.
+//!                    Then test getting alarm data in normal case and expect KErrNone.
+//! @SYMTestExpectedResults Expect result as described above
+//! @SYMTestType UT
+RUN_TEST_STEP -1 alarmserverunittestserver TestGetAlarmDataStep
+END_TESTCASE PIM-AlarmServer-GetAlarmData-0001

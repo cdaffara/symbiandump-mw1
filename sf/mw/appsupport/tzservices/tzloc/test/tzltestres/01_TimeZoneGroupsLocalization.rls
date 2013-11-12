@@ -1,0 +1,667 @@
+// Copyright (c) 2004-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __01_TzLocalization_RLS__
+#define __01_TzLocalization_RLS__
+
+// Groups of Cities =====================================================================
+
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name1 "United Kingdom"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name2 "California"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name3 "Oregon"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name4 "Washington"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name5 "Europe"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name6 "Australia"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name7 "Central Lakes"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name8 "Asia"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name9  "New Zealand"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name10 "Atlantic"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name11 "Acre"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name12 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name13 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name14 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name15 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name16 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name17 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name18 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name19 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name20 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name21 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name22 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name23 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name24 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name25 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name26 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name27 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name28 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name29 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name30 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name31 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name32 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name33 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name34 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name35 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name36 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name37 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name38 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name39 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name40 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name41 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name42 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name43 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name44 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name45 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name46 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name47 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name48 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name49 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name50 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name51 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name52 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name53 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name54 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name55 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name56 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name57 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name58 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name59 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name60 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name61 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name62 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name63 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name64 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name65 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name66 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name67 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name68 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name69 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name70 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name71 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name72 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name73 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name74 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name75 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name76 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name77 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name78 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name79 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name80 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name81 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name82 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name83 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name84 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name85 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name86 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name87 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name88 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name89 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name90 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name91 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name92 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name93 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name94 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name95 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name96 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name97 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name98 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name99 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name100 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name101 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name102 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name103 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name104 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name105 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name106 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name107 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name108 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name109 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name110 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name111 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name112 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name113 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name114 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name115 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name116 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name117 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name118 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name119 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name120 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name121 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name122 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name123 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name124 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name125 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name126 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name127 ""
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name128 "Vancouver"
+/*&
+@description A string defining a time zone city group name
+@uicontext TzLocalizationRscFactory
+*/
+rls_string STRING_city_group_name129 "Canada West Coast"
+
+#endif // __01_TzLocalization_RLS__

@@ -1,0 +1,49 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+TARGET        castorage.dll
+TARGETTYPE    dll
+UID           0x1000008d 0x20026FAA
+
+CAPABILITY    CAP_GENERAL_DLL
+
+SOURCEPATH    ../src
+SOURCE        casqlitestorage.cpp castoragefactory.cpp casqlquery.cpp casqlquerycreator.cpp
+
+USERINCLUDE   ../inc
+USERINCLUDE   ../../cautils/inc/
+USERINCLUDE   ../../srvinc/
+USERINCLUDE   ../../inc/
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY       euser.lib
+LIBRARY       estor.lib
+LIBRARY       sqldb.lib
+LIBRARY       efsrv.lib
+LIBRARY       bafl.lib
+LIBRARY       cautils.lib
+
+DEBUGLIBRARY    flogger.lib
+
+
+
+
+SMPSAFE

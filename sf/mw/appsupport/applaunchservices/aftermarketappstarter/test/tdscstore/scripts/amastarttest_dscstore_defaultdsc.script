@@ -1,0 +1,70 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// (Test case keeps the backup of old database and restore it at the end of the test case.)
+// 
+//
+
+//! @file
+//! @test
+//! @internalComponent - Internal Symbian test code 
+//! @SYMTestCaseID 		API-APPFWK-DSCSTORE-0002
+//! @SYMPREQ 			PREQ871
+//! @SYMTestType		CIT
+//! @SYMTestPriority		Critical
+//! @SYMTestStatus 		3. Released
+//! @SYMTestCaseDependencies
+//! @SYMTestCaseDesc		Tests the basic DscStore APIs.
+//! @SYMTestActions		Create few Dsc Items, and then update, delete and enumerate dsc items for a KDefaultSymbianDsc.
+//! @SYMTestExpectedResults 	All the basic DSC APIs should work correctly with data store as expected.
+
+PRINT Run API-APPFWK-DSCSTORE-0002 test 
+
+RUN_SCRIPT z:\amastarttest\ini\tdscstore_dscdb_backup.script
+
+LOAD_SUITE tdscstore_server
+
+START_TESTCASE API-APPFWK-DSCSTORE-0002
+
+PREFIX RUN_TEST_STEP 100 		tdscstore_server
+			CreateDsc			z:\amastarttest\ini\tdscstore_api.ini Dsc_DefaultUid_1
+			DscExist			z:\amastarttest\ini\tdscstore_api.ini Dsc_DefaultUid_1
+			CreateDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_1_DefaultUid
+			CreateDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_2_DefaultUid
+			CreateDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_3_DefaultUid
+			ReadDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_1_DefaultUid
+			ReadDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_2_DefaultUid
+			ReadDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_3_DefaultUid
+			UpdateDscItem	 	z:\amastarttest\ini\tdscstore_api.ini AMC_1_DefaultUid
+			UpdateDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_2_DefaultUid
+			UpdateDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_3_DefaultUid
+			EnumDscItem 		z:\amastarttest\ini\tdscstore_api.ini Dsc_DefaultUid_1
+			CompareDscItems		z:\amastarttest\ini\tdscstore_api.ini AMC_1_DefaultUid
+			CompareDscItems		z:\amastarttest\ini\tdscstore_api.ini AMC_2_DefaultUid
+			CompareDscItems		z:\amastarttest\ini\tdscstore_api.ini AMC_3_DefaultUid
+			CreateDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_4_DefaultUid
+			DscItemCount		z:\amastarttest\ini\tdscstore_api.ini Dsc_DefaultUid_1
+			CompareDscItems		z:\amastarttest\ini\tdscstore_api.ini AMC_4_DefaultUid
+			DeleteDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_1_DefaultUid
+			DeleteDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_2_DefaultUid
+			DeleteDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_3_DefaultUid
+			DeleteDscItem 		z:\amastarttest\ini\tdscstore_api.ini AMC_4_DefaultUid
+			DscItemCount		z:\amastarttest\ini\tdscstore_api.ini Dsc_DefaultUid_2
+			DeleteDsc			z:\amastarttest\ini\tdscstore_api.ini Dsc_DefaultUid_1
+REMOVE_PREFIX
+
+RUN_TEST_STEP !error=-1 100 	tdscstore_server DscExist 	z:\amastarttest\ini\tdscstore_api.ini Dsc_DefaultUid_1
+
+END_TESTCASE API-APPFWK-DSCSTORE-0002
+
+RUN_SCRIPT z:\amastarttest\ini\tdscstore_dscdb_restore.script

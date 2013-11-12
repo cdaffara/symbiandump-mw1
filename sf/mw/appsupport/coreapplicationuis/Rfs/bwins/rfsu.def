@@ -1,0 +1,14 @@
+EXPORTS
+	??0CRfsHandler@@QAE@XZ @ 1 NONAME ; public: __thiscall CRfsHandler::CRfsHandler(void)
+	??0RRfsClient@@QAE@XZ @ 2 NONAME ; public: __thiscall RRfsClient::RRfsClient(void)
+	??1CRfsHandler@@UAE@XZ @ 3 NONAME ; public: virtual __thiscall CRfsHandler::~CRfsHandler(void)
+	?ActivateRfsL@CRfsHandler@@QAEXW4TRfsType@@H@Z @ 4 NONAME ; public: void __thiscall CRfsHandler::ActivateRfsL(enum TRfsType,int)
+	?Cancel@CRfsHandler@@QAEXXZ @ 5 NONAME ; public: void __thiscall CRfsHandler::Cancel(void)
+	?Close@RRfsClient@@QAEXXZ @ 6 NONAME ; public: void __thiscall RRfsClient::Close(void)
+	?Connect@RRfsClient@@QAEHXZ @ 7 NONAME ; public: int __thiscall RRfsClient::Connect(void)
+	?PerformRfs@RRfsClient@@QAEHW4TRfsType@@H@Z @ 8 NONAME ; public: int __thiscall RRfsClient::PerformRfs(enum TRfsType,int)
+	?RunScriptInDescriptor@RRfsClient@@QAEHABVTDesC16@@@Z @ 9 NONAME ; public: int __thiscall RRfsClient::RunScriptInDescriptor(class TDesC16 const &)
+	?RunScriptInFile@RRfsClient@@QAEHABVTDesC16@@@Z @ 10 NONAME ; public: int __thiscall RRfsClient::RunScriptInFile(class TDesC16 const &)
+	?ThreadStart@CRfsServer@@SAHAAVTSignal@1@@Z @ 11 NONAME ; public: static int __cdecl CRfsServer::ThreadStart(class CRfsServer::TSignal &)
+	?PerformPostEikonRfs@RRfsClient@@QAEHW4TRfsType@@@Z @ 12 NONAME ; public: int __thiscall RRfsClient::PerformPostEikonRfs(enum TRfsType)
+

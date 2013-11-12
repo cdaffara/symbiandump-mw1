@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_5_1.dtd" [
+  <!ENTITY layer_real_source_path "sf/mw/homescreensrv" >
+]>
+
+<SystemDefinition name="homescreensrv" schema="1.5.1">
+  <systemModel>
+
+    <layer name="tools_layer">
+      <module name="homescreensrvconf">
+        <unit name="homescreensrvconf" unitID="hs.homescreensrvconf" mrp="" bldFile="&layer_real_source_path;/group"/>
+      </module>
+    </layer>
+    
+    <layer name="mw_layer">
+      <module name="homescreensrv">
+        <unit unitID="hs.homescreensrv" mrp="" bldFile="&layer_real_source_path;" name="homescreensrv" proFile="homescreensrv.pro" qmakeArgs="-r"/>
+      </module>
+    </layer>
+
+    <layer name="unit_test_layer">
+      <module name="hs_unit_test">
+        <unit unitID="hsdo.hs_unit_test" name="hs_unit_test" bldFile="&layer_real_source_path;/tsrc" mrp="" proFile="tsrc.pro" qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN"/>
+      </module>
+    </layer>
+
+  </systemModel>
+</SystemDefinition>

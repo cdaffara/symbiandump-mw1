@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="ec9b710291eb2dfbbd2ad55b2226f895" dataversion="1.0">
+<name>ximp_im_management_api</name>
+<description>This is a API that provides instant messaging related APIs like sending and receiving messages to the client.</description>
+<type>c++</type>
+<subsystem>immanager</subsystem>
+<libs><lib name="immanager.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

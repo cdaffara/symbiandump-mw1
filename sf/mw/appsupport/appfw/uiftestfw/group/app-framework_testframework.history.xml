@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<relnotes schema="1.0.0" name="INTEGRATIONTEST" purpose="" type="component">
+  <revision major="1" functional="0" minor="1" date="20080801">
+    <ref name="125721" type="defect"/>
+    <description>Testframework source classification is changed from Test UI to Tools.</description>
+  </revision>
+  <revision major="1" functional="0" minor="0" date="20070831">
+    <ref name="110932" type="defect"/>
+    <description>Appended GfxTransEffect batch file</description>
+  </revision>
+  <purpose>
+  </purpose>
+  <defect number="PDEF099099" title="UIF TestFramework component has source dependancy on SysStart" revision="001">
+    Remove in testframework the source dependency on sysstart by removing testframework\resource\SSCForStartupMode0_target.rss file. This file is not needed as is made redundant by sysstart\test\resource\hardware\SSCForStartupMode0_target.rss.
+  </defect>
+</relnotes>

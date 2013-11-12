@@ -1,0 +1,4 @@
+- AT Command plugin implements AT commands for AT+CKPD, AT+CBKLT, AT+CTSA
+- This plugin will not be part of SF and will be moved to ext folder later
+- To test this plugin we need to manually build 
+- Optionally, after building we can generate a sisx file and use it for testing. Look at ATCmdPlugin\sis folder for information

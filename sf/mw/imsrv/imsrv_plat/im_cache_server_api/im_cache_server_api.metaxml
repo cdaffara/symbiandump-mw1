@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<api id="863647221bb5911f41a64c87ee43d8dd" dataversion="1.0">
+<name>im_cache_server_api</name>
+<description>This is a API that providesthe interface for the plugins, the cache server passes on the infomation to the plugins.</description>
+<type>c++</type>
+<subsystem>instantmessagingcache</subsystem>
+<libs></libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>

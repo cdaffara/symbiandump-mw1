@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2002-2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for project CFOperationPluginServices
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include "../inc/common/cftraceconfiguration.hrh"
+
+TARGET                  cfoperationpluginservices.dll
+TARGETTYPE              dll
+UID                     0x1000008d 0x2000B612
+
+CAPABILITY              CAP_GENERAL_DLL
+VENDORID                VID_DEFAULT
+
+SOURCEPATH 		../src/cfoperationpluginservices
+SOURCE 			cfoperationpluginmanager.cpp
+SOURCE			cfoperationplugin.cpp
+SOURCE			cfoperationnode.cpp
+SOURCE			cfscriptroot.cpp
+SOURCE			cfscriptevent.cpp
+
+USERINCLUDE             .
+USERINCLUDE		../inc/cfoperationpluginservices
+USERINCLUDE		../inc/common
+USERINCLUDE		../inc/cfscriptengine
+USERINCLUDE		../inc/cfserver
+USERINCLUDE		../inc/cfservices
+USERINCLUDE             ../CenRep
+
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY                 ecom.lib
+LIBRARY                 euser.lib
+LIBRARY			efsrv.lib
+LIBRARY                 centralrepository.lib
+LIBRARY                 bafl.lib
+LIBRARY                 xmldom.lib
+LIBRARY                 cfservices.lib
+
+#ifdef TRACE_INTO_FILE
+LIBRARY         	flogger.lib
+#endif

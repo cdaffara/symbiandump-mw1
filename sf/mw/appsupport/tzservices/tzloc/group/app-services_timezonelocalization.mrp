@@ -1,0 +1,11 @@
+component	app-services_TimeZoneLocalization
+source	\sf\mw\appsupport\tzservices\tzloc
+binary	\sf\mw\appsupport\tzservices\tzloc\group	all
+exports	\sf\mw\appsupport\tzservices\tzloc\group
+
+notes_source	\component_defs\release.src
+
+
+ipr E 
+ipr T \sf\mw\appsupport\tzservices\tzloc\test
+

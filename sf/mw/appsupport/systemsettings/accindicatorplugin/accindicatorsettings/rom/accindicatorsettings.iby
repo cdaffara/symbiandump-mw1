@@ -1,0 +1,26 @@
+/*
+* Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+#ifndef __ACCINDICATORSETTINGS_IBY__
+#define __ACCINDICATORSETTINGS_IBY__
+
+REM DLL
+file = ABI_DIR\BUILD_DIR\accindicatorsettings.exe  \sys\bin\accindicatorsettings.exe
+data = \epoc32\data\z\resource\apps\accindicatorsettings.rsc    \resource\apps\accindicatorsettings.rsc
+data = \epoc32\data\z\private\10003a3f\import\apps\accindicatorsettings_reg.rsc   \private\10003a3f\import\apps\accindicatorsettings_reg.rsc
+data=\epoc32\data\z\resource\accindicator\wired_accessory.svg   \resource\accindicator\wired_accessory.svg
+data=\epoc32\data\z\resource\accindicator\wireless_accessory.svg   \resource\accindicator\wireless_accessory.svg
+#endif

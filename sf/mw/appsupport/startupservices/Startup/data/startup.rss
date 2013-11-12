@@ -1,0 +1,126 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*           This file contains all the resources for the module.
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    STUP // 4 letter ID
+
+//  SYSTEM INCLUDES
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <startup.loc>
+#ifndef RD_STARTUP_ANIMATION_CUSTOMIZATION
+#include <startup.mbg>
+#endif // RD_STARTUP_ANIMATION_CUSTOMIZATION
+
+//  USER INCLUDES
+#include "startup.hrh"
+
+
+//  CONSTANTS
+//  -none
+
+//  MACROS
+//  -none
+
+//  RESOURCE DEFINITIONS
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="startup"; }
+
+RESOURCE EIK_APP_INFO
+    {
+        status_pane = r_status_pane;
+    }
+
+RESOURCE STATUS_PANE_APP_MODEL r_status_pane
+    {
+        layout= R_AVKON_STATUS_PANE_LAYOUT_EMPTY;
+    }
+
+#ifndef RD_STARTUP_ANIMATION_CUSTOMIZATION
+//
+// Application Startup resources
+//
+RESOURCE BMPANIM_DATA r_anim_image
+    {
+        frameinterval = 135;  // ms
+        playmode = EAknBitmapAnimationPlayModePlay;
+        bmpfile = "Z:\\resource\\apps\\startup.mbm";
+        frames = r_anim_array;
+    }
+
+RESOURCE ARRAY r_anim_array
+    {
+    items =
+        {
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_01;
+                            maskid = EMbmStartupQgn_graf_startup_01_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_02;
+                            maskid = EMbmStartupQgn_graf_startup_02_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_03;
+                            maskid = EMbmStartupQgn_graf_startup_03_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_04;
+                            maskid = EMbmStartupQgn_graf_startup_04_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_05;
+                            maskid = EMbmStartupQgn_graf_startup_05_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_06;
+                            maskid = EMbmStartupQgn_graf_startup_06_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_07;
+                            maskid = EMbmStartupQgn_graf_startup_07_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_08;
+                            maskid = EMbmStartupQgn_graf_startup_08_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_09;
+                            maskid = EMbmStartupQgn_graf_startup_09_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_10;
+                            maskid = EMbmStartupQgn_graf_startup_10_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_11;
+                            maskid = EMbmStartupQgn_graf_startup_11_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_12;
+                            maskid = EMbmStartupQgn_graf_startup_12_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_13;
+                            maskid = EMbmStartupQgn_graf_startup_13_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_14;
+                            maskid = EMbmStartupQgn_graf_startup_14_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_15;
+                            maskid = EMbmStartupQgn_graf_startup_15_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_16;
+                            maskid = EMbmStartupQgn_graf_startup_16_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_17;
+                            maskid = EMbmStartupQgn_graf_startup_17_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_18;
+                            maskid = EMbmStartupQgn_graf_startup_18_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_19;
+                            maskid = EMbmStartupQgn_graf_startup_19_mask; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_20;
+                            maskid = EMbmStartupQgn_graf_startup_20_mask; time = 2000; },
+            BMPANIM_FRAME { bmpid = EMbmStartupQgn_graf_startup_bg;
+                            maskid = EMbmStartupQgn_graf_startup_bg_mask; }
+        };
+    }
+#endif // RD_STARTUP_ANIMATION_CUSTOMIZATION
+
+RESOURCE TBUF       r_su_selftest_failed_note_text  { buf = qtn_su_note_selftest_failed; }
+RESOURCE TBUF       r_qtn_su_select_country { buf = qtn_su_select_country; }
+RESOURCE TBUF       r_qtn_su_select_city { buf = qtn_su_select_city; }
+
+#include "startupdatequery.rss"
+#include "startuptimequery.rss"
+#include "startupofflinemodequery.rss"

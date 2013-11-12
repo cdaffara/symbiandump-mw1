@@ -1,0 +1,17 @@
+EXPORTS
+	?launchActivity@CAfStorageClient@@QAEHABVCAfEntry@@@Z @ 1 NONAME ; int CAfStorageClient::launchActivity(class CAfEntry const &)
+	?updateActivity@CAfStorageClient@@QAEHABVCAfEntry@@H@Z @ 2 NONAME ABSENT ; int CAfStorageClient::updateActivity(class CAfEntry const &, int)
+	?saveActivity@CAfStorageClient@@QAEHABVCAfEntry@@H@Z @ 3 NONAME ; int CAfStorageClient::saveActivity(class CAfEntry const &, int)
+	?addActivity@CAfStorageClient@@QAEHABVCAfEntry@@H@Z @ 4 NONAME ABSENT ; int CAfStorageClient::addActivity(class CAfEntry const &, int)
+	??1CAfStorageClient@@UAE@XZ @ 5 NONAME ; CAfStorageClient::~CAfStorageClient(void)
+	?notifyDataChange@CAfStorageClient@@QAEHXZ @ 6 NONAME ; int CAfStorageClient::notifyDataChange(void)
+	?waitActivity@CAfStorageClient@@QAEHXZ @ 7 NONAME ; int CAfStorageClient::waitActivity(void)
+	?applicationActivities@CAfStorageClient@@QAEHAAV?$RPointerArray@VCAfEntry@@@@ABVCAfEntry@@@Z @ 8 NONAME ; int CAfStorageClient::applicationActivities(class RPointerArray<class CAfEntry> &, class CAfEntry const &)
+	?NewL@CAfStorageClient@@SAPAV1@AAVMAfAsyncRequestObserver@@@Z @ 9 NONAME ; class CAfStorageClient * CAfStorageClient::NewL(class MAfAsyncRequestObserver &)
+	?activities@CAfStorageClient@@QAEHAAV?$RPointerArray@VCAfEntry@@@@H@Z @ 10 NONAME ; int CAfStorageClient::activities(class RPointerArray<class CAfEntry> &, int)
+	?NewLC@CAfStorageClient@@SAPAV1@AAVMAfAsyncRequestObserver@@@Z @ 11 NONAME ; class CAfStorageClient * CAfStorageClient::NewLC(class MAfAsyncRequestObserver &)
+	?getThumbnail@CAfStorageClient@@QAEHABVTDesC16@@PAX@Z @ 12 NONAME ; int CAfStorageClient::getThumbnail(class TDesC16 const &, void *)
+	?removeActivity@CAfStorageClient@@QAEHABVCAfEntry@@@Z @ 13 NONAME ; int CAfStorageClient::removeActivity(class CAfEntry const &)
+	?removeApplicationActivities@CAfStorageClient@@QAEHABVCAfEntry@@@Z @ 14 NONAME ; int CAfStorageClient::removeApplicationActivities(class CAfEntry const &)
+	?activityData@CAfStorageClient@@QAEHAAPAVCAfEntry@@ABV2@@Z @ 15 NONAME ; int CAfStorageClient::activityData(class CAfEntry * &, class CAfEntry const &)
+

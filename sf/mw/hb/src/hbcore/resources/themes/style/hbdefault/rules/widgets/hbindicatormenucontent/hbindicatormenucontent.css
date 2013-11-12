@@ -1,0 +1,6 @@
+HbIndicatorMenuContent
+{
+    layout:menucontent;
+    fixed-width:expr(var(hb-param-screen-short-edge)-9.0un);
+    max-height:expr(var(hb-param-screen-height)-var(hb-param-widget-chrome-height)-var(hb-param-margin-gene-screen));
+}

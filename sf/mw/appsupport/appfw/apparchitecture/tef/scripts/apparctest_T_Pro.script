@@ -1,0 +1,35 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T-ProStep-testAppIdentifierL-0001
+//! @SYMTestCaseDesc 		Tests TApaAppIdentifier API.
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions 		Create a temporary store. Construct an application identifier for the specified application DLL, and Uid. Call WriteAppIdentifierL() to store application identifier details. Read the stored application identifier details.
+//!   				API Calls:
+//!   				TApaAppIdentifier::TApaAppIdentifier(TUid aAppUidType,const TFileName& aDllName)
+//!				CApaProcess::WriteAppIdentifierL(CStreamStore& aStore,CStreamDictionary& aStreamDic,const TApaAppIdentifier& aAppId)
+//!				CApsProcess::ReadAppIdentifierL(const CStreamStore& aStore,const CStreamDictionary& aStreamDic)
+//! @SYMTestExpectedResults 	Test checks whether stored and read application identifier details match.
+
+START_TESTCASE API-APPFWK-T-ProStep-testAppIdentifierL-0001
+
+PRINT Run T_Pro Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 100 ApparcTestServer T_Pro
+
+END_TESTCASE API-APPFWK-T-ProStep-testAppIdentifierL-0001

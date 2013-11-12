@@ -1,0 +1,65 @@
+/*
+ * Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+ * All rights reserved.
+ * This component and the accompanying materials are made available
+ * under the terms of "Eclipse Public License v1.0"
+ * which accompanies this distribution, and is available
+ * at the URL "http://www.eclipse.org/legal/epl-v10.html".
+ *
+ * Initial Contributors:
+ * Nokia Corporation - initial contribution.
+ *
+ * Contributors:
+ *
+ * Description:
+ * This file provides the information required for building the
+ * Thumbnail Tester test app.
+ */
+
+#include <platform_paths.hrh>
+
+TARGET        thumbnailtester.exe
+TARGETTYPE    exe
+UID           0x0 0xE9081726
+VENDORID      VID_DEFAULT
+
+CAPABILITY    ALL -TCB
+
+EPOCSTACKSIZE 0x5000             //20KB
+EPOCHEAPSIZE  0x100000 0x1000000 //1MB-16MB
+
+START RESOURCE  thumbnailtester_reg.rss
+TARGETPATH 	    /private/10003a3f/apps
+END 
+
+USERINCLUDE   ../../common
+
+SOURCEPATH    ../../common
+SOURCE        testappbase.cpp
+
+SOURCEPATH    ../src
+SOURCE        thumbnailtester.cpp
+SOURCE        yuv2rgb24.cpp
+
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE /epoc32/include
+SYSTEMINCLUDE /epoc32/include\stdapis
+USERINCLUDE   /sf/mw/helix/helix_ren/src/datatype/tools/metadataeng/common/pub
+USERINCLUDE   /sf/mw/helix/helix_ren/src/datatype/tools/metadataeng/utility/platform/symbian
+
+STATICLIBRARY hxmetadatautil.lib
+LIBRARY       flogger.lib
+
+LIBRARY       euser.lib
+LIBRARY       efsrv.lib
+LIBRARY	      gce.lib 
+LIBRARY       ws32.lib 
+LIBRARY       gdi.lib
+LIBRARY		    fntstr.lib
+LIBRARY       fbscli.lib
+LIBRARY       estor.lib 
+LIBRARY       ecom.lib
+
+// for volume key handling
+LIBRARY       remconcoreapi.lib
+LIBRARY       remconinterfacebase.lib

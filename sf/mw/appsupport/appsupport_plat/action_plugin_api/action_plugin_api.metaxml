@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="55095e9109775d06f418fa0c883dbbb0" dataversion="2.0">
+  <name>Action Plug-In API</name>
+  <description>Action Plug-In API provides an interface through application and service providers can define own actions to be performed after certain rule has triggered. This is a domain API only and should not be included in public SDK. Third party developers should use Context Framework Client API instead.</description>
+  <type>c++</type>
+  <collection>contextframework</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>no</adaptation>
+  </attributes>
+</api>

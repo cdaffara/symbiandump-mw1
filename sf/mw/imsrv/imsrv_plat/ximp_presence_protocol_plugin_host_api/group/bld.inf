@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                XIMP Presence Protocol Plug-in Host API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/protocolpresencewatchingdatahost.h     MW_LAYER_PLATFORM_EXPORT_PATH(protocolpresencewatchingdatahost.h)
+../inc/protocolpresenceauthorizationdatahost.h     MW_LAYER_PLATFORM_EXPORT_PATH(protocolpresenceauthorizationdatahost.h)
+../inc/protocolpresentitygroupsdatahost.h     MW_LAYER_PLATFORM_EXPORT_PATH(protocolpresentitygroupsdatahost.h)
+../inc/protocolpresencedatahost.h     MW_LAYER_PLATFORM_EXPORT_PATH(protocolpresencedatahost.h)
+../inc/presenceprotocolpluginhostifids.hrh     MW_LAYER_PLATFORM_EXPORT_PATH(presenceprotocolpluginhostifids.hrh)
+../inc/protocolpresencepublishingdatahost.h     MW_LAYER_PLATFORM_EXPORT_PATH(protocolpresencepublishingdatahost.h)

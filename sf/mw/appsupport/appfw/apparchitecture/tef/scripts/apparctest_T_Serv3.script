@@ -1,0 +1,40 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-T_Serv3Step_DoSyncRecognizerTest1L-0001
+//! @SYMPREQ 			PREQ699
+//! @SYMREQ  			REQ3897
+//! @SYMTestCaseDesc 		Test PREQ699.1.0 Validate Synchronous RecognizeFilesL function and CDataRecognitionResultArray
+//! @SYMTestPriority 		High
+//! @SYMTestStatus 		3. Released
+//! @SYMTestActions		Calls RecognizeFilesL() with a folder containing two files of zero and one byte sizes. Validates the returned number of files and file types. Tests CDataRecognitionResultArray by using the object.
+//!		 		API Calls:
+//!				RApaLsSession::RecognizeFilesL(const TDesC& aPath, CDataRecognitionResultArray& aResult);
+//!				CDataRecognitionResultArray::CDataRecognitionResultArray();
+//!				CDataRecognitionResultArray::Count() const;
+//!				CDataRecognitionResultArray::const TFileName& Path() const;
+//!				CDataRecognitionResultArray::GetDataRecognitionResultL(TDataRecognitionResult& aResult, const TUint aIndex) const;
+//!				CDataRecognitionResultArray::GetFileNameL(TFileName& aFileName, const TUint aIndex) const;
+//! @SYMTestExpectedResults 	KErrNone and CDataRecognitionResultArray returned containing two entries, of MIME type "text/plain" 
+
+START_TESTCASE API-APPFWK-T_Serv3Step_DoSyncRecognizerTest1L-0001
+
+PRINT Run T_Serv3 Apparc test
+//
+LOAD_SUITE ApparcTestServer
+RUN_TEST_STEP 1000 ApparcTestServer T_Serv3
+
+END_TESTCASE API-APPFWK-T_Serv3Step_DoSyncRecognizerTest1L-0001

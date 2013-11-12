@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2006-2010 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Out of Memory Monitor Constants.
+*
+*/
+
+
+#ifndef OOMCONSTANTS_HRH_
+#define OOMCONSTANTS_HRH_
+
+const TInt KAppNotInWindowGroupList = -1;
+
+const TInt KOomDefaultAppId = 0;
+const TInt KOomDefaultPluginId = 0;
+const TInt KOomThresholdUnset = 0;
+
+const TInt KOomBusyAppId = 0x10286A84;
+const TInt KOomHighPriorityAppId = 0x10286A85;
+
+const TInt KOomPriorityInfinate = 1024;
+
+// same as Akncapserver since fast swap is contained in it
+const TUid  KUidFastSwap = { 0x10207218 };
+const TUid  KUidPenInputServer = { 0x10281855 };
+
+const TInt KMicrosecondsInMillisecond = 1000;
+
+#endif /*OOMCONSTANTS_HRH_*/

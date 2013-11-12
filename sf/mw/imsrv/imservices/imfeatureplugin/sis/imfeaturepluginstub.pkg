@@ -1,0 +1,42 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: 
+;
+;Language
+&EN
+
+;Header
+#{"imfeatureplugin"}, (0x2000B5F1), 1, 0, 0, TYPE=SA
+
+;Localised VendorID
+%{"Nokia"}
+
+;VendorID
+:"Nokia"
+
+;imfeature plugin
+""							-"z:\sys\bin\imdatamodelhook.dll"
+""							-"z:\resource\plugins\imdatamodelhook.rsc"
+""							-"z:\sys\bin\imdatamodel.dll"
+""							-"z:\sys\bin\immanager.dll"
+""							-"z:\sys\bin\imecomhook.dll"
+""							-"z:\resource\plugins\imecomhook.rsc"
+""							-"z:\sys\bin\imoperationshook.dll"
+""							-"z:\resource\plugins\imoperationshook.rsc"
+""							-"z:\sys\bin\imoperation.dll"
+""							-"z:\sys\bin\improcessorhook.dll"
+""							-"z:\resource\plugins\improcessorhook.rsc"
+""							-"z:\sys\bin\improcessor.dll"
+
+; end of file

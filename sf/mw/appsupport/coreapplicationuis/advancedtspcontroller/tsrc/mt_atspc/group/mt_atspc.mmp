@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          mt_atspc.dll
+TARGETTYPE      dll
+UID             0x1000af5a 0x01700000
+
+CAPABILITY      ALL -TCB
+VENDORID        VID_DEFAULT
+
+// Sources required by the test suite
+SOURCEPATH              ../src
+SOURCE                  mt_atspc_DllMain.cpp
+SOURCE                  mt_atspc.cpp 
+
+USERINCLUDE ../inc
+
+SYSTEMINCLUDE           /epoc32/include/Digia/EUnit
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY                 EUnit.lib
+LIBRARY                 EUnitUtil.lib
+LIBRARY                 euser.lib
+LIBRARY 				remcontargetselectorplugin.lib // EUNIT cannot load the DLL because it does not have enough capablities
+LIBRARY					ecom.lib
+LIBRARY					remcontypes.lib 
+LIBRARY					tspclientmapper.lib
+LIBRARY					cfclient.lib
+LIBRARY					cfservices.lib

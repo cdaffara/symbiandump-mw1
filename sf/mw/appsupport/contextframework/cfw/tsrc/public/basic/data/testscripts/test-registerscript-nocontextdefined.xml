@@ -1,0 +1,13 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <and>
+            <contextUpdated>
+                <contextRef source='RegisterScriptSource' type='RegisterScriptTypeNotDefined'/>
+            </contextUpdated>
+        </and>
+        <actions>
+            <RegisterScriptAction ParamA1='ValueA1'/>
+        </actions>
+    </if>
+</script>

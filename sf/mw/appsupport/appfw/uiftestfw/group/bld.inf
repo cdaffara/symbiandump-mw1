@@ -1,0 +1,57 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+// test code only
+
+PRJ_MMPFILES
+// test code only
+
+PRJ_TESTMMPFILES
+../group/appfwk_test_AppUi.mmp
+../group/appfwk_test_utils.mmp
+../group/appfwk_test_utils_server.mmp
+../group/appfwk_test_dummytest.mmp
+
+PRJ_TESTEXPORTS
+// TestFramework IBY files
+../rom/afss_test.iby 				/epoc32/rom/include/afss_test.iby
+../rom/appfwk_test.iby 				/epoc32/rom/include/appfwk_test.iby
+../rom/appfwk_test_framework.iby 		/epoc32/rom/include/appfwk_test_framework.iby
+
+// TestFramework INCLUDE files
+../inc/appfwk_test.h 				MW_LAYER_PLATFORM_EXPORT_PATH(test/appfwk_test.h)
+../inc/appfwk_test_AppUi.h			MW_LAYER_PLATFORM_EXPORT_PATH(test/appfwk_test_appui.h)
+../inc/appfwk_test_utils.h 			MW_LAYER_PLATFORM_EXPORT_PATH(test/appfwk_test_utils.h)
+../inc/appfwk_tmsteststep.h 		MW_LAYER_PLATFORM_EXPORT_PATH(test/appfwk_tmsteststep.h)
+
+#if defined(SYMBIAN_WSERV_AND_CONE_MULTIPLE_SCREENS)
+../group/mulscreens.ini							/epoc32/data/z/appfwk/test/mulscreens.ini
+../group/mulscreens_changetracking.ini					/epoc32/data/z/appfwk/test/mulscreens_changetracking.ini
+../scripts/hardware/mulscreens_hw_test.cmd		/epoc32/data/z/appfwk/test/mulscreens_hw_test.cmd
+../group/mulscreens.ini							/epoc32/release/winscw/udeb/z/appfwk/test/mulscreens.ini
+../group/mulscreens.ini							/epoc32/release/winscw/urel/z/appfwk/test/mulscreens.ini
+../group/mulscreens_changetracking.ini					/epoc32/release/winscw/udeb/z/appfwk/test/mulscreens_changetracking.ini
+../group/mulscreens_changetracking.ini					/epoc32/release/winscw/urel/z/appfwk/test/mulscreens_changetracking.ini
+
+// Here we export the same script 3 times: first 2 for BATS, last 1 for Mistral.
+../scripts/emulator/mulscreens_sw_test.cmd		/epoc32/release/winscw/udeb/z/appfwk/test/mulscreens_sw_test.cmd
+../scripts/emulator/mulscreens_sw_test.cmd		/epoc32/release/winscw/urel/z/appfwk/test/mulscreens_sw_test.cmd
+../scripts/emulator/mulscreens_sw_test.cmd		/epoc32/data/z/appfwk/test/mulscreens_sw_test.cmd
+
+#endif

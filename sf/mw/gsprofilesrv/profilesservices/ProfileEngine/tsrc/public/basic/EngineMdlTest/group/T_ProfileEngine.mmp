@@ -1,0 +1,73 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Profile Engine tests
+*
+*/
+
+////////////////////////////////////////////////////////////
+// T_ProfileEngine.mmp
+//
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+// DEFINES
+#define         KEUnitUid3 0x1000af59
+#define         KEUnitTestDllUid2 0x1000af5a
+
+// Build target
+TARGET          T_ProfileEngine.dll
+TARGETTYPE      dll
+TARGETPATH      ../../../../wins/c/DigiaEUnit/Tests
+UID             KEUnitTestDllUid2 KEUnitUid3
+
+CAPABILITY      ALL -TCB
+
+MACRO KPROFILE_TEST_DEFAULT
+
+// Source files
+SOURCEPATH      ../src
+SOURCE          DllMain.cpp
+SOURCE          T_MProfilesNamesArray.cpp
+SOURCE          T_MProfileEngine.cpp
+SOURCE          T_MProfile.cpp
+SOURCE          T_CProfileChangeNotifyHandler.cpp
+SOURCE          T_MProfileName.cpp
+SOURCE          T_MProfileTones.cpp
+SOURCE          T_MProfileExtraTones.cpp
+SOURCE		T_MProfileExtraSettings.cpp
+SOURCE          T_MProfilePttSettings.cpp
+SOURCE		T_MProfileFeedbackSettings.cpp
+SOURCE		T_MProfile3DToneSettings.cpp
+
+// Include paths
+USERINCLUDE	../inc
+USERINCLUDE	../../../../../EngInc
+SYSTEMINCLUDE	../../../../../../../inc
+SYSTEMINCLUDE   /epoc32/include/digia/EUnit
+APP_LAYER_SYSTEMINCLUDE
+
+// Dependencies to system components
+LIBRARY         euser.lib
+LIBRARY         EUnit.lib
+LIBRARY         EUnitutil.lib
+LIBRARY         efsrv.lib
+LIBRARY         bafl.lib
+LIBRARY         PbkEng.lib
+LIBRARY         cntmodel.lib
+LIBRARY         CommonEngine.lib
+LIBRARY         centralrepository.lib
+
+// Dependencies to Profiles components
+LIBRARY         ProfileEng.lib

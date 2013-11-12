@@ -1,0 +1,7 @@
+EXPORTS
+	??0COperationHandleSearchResult@@QAE@XZ @ 1 NONAME ; COperationHandleSearchResult::COperationHandleSearchResult(void)
+	??0COperationSearch@@QAE@XZ @ 2 NONAME ; COperationSearch::COperationSearch(void)
+	?NewL@CSearchOperationFactory@@SAPAV1@XZ @ 3 NONAME ; class CSearchOperationFactory * CSearchOperationFactory::NewL(void)
+	??0COperationGetSearchKeys@@QAE@XZ @ 4 NONAME ; COperationGetSearchKeys::COperationGetSearchKeys(void)
+	??0COperationHandleSearchKeys@@QAE@XZ @ 5 NONAME ; COperationHandleSearchKeys::COperationHandleSearchKeys(void)
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="7afbbc971c860be3983a54337b84bd1a" dataversion="2.0">
+  <name>System Application Plug-in Callback API</name>
+  <description>An interface for System Application plug-ins for communicating with System Application.</description>
+  <type>c++</type>
+  <collection>coreapplicationuis</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>yes</adaptation>
+  </attributes>
+</api>

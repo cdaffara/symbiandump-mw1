@@ -1,0 +1,9 @@
+EXPORTS
+	??1CCFContextSourceSettingsManagerImpl@@UAE@XZ @ 1 NONAME ; CCFContextSourceSettingsManagerImpl::~CCFContextSourceSettingsManagerImpl(void)
+	?NewL@CCFContextSourceSettingArray@@SAPAV1@XZ @ 2 NONAME ; class CCFContextSourceSettingArray * CCFContextSourceSettingArray::NewL(void)
+	?NewL@CCFContextSourceSettingsManager@@SAPAV1@AAVRFs@@@Z @ 3 NONAME ; class CCFContextSourceSettingsManager * CCFContextSourceSettingsManager::NewL(class RFs &)
+	?NewL@CCFContextSourceSettingsManagerImpl@@SAPAV1@AAVRFs@@@Z @ 4 NONAME ; class CCFContextSourceSettingsManagerImpl * CCFContextSourceSettingsManagerImpl::NewL(class RFs &)
+	?NewLC@CCFContextSourceSettingArray@@SAPAV1@XZ @ 5 NONAME ; class CCFContextSourceSettingArray * CCFContextSourceSettingArray::NewLC(void)
+	?NewLC@CCFContextSourceSettingsManager@@SAPAV1@AAVRFs@@@Z @ 6 NONAME ; class CCFContextSourceSettingsManager * CCFContextSourceSettingsManager::NewLC(class RFs &)
+	?NewLC@CCFContextSourceSettingsManagerImpl@@SAPAV1@AAVRFs@@@Z @ 7 NONAME ; class CCFContextSourceSettingsManagerImpl * CCFContextSourceSettingsManagerImpl::NewLC(class RFs &)
+

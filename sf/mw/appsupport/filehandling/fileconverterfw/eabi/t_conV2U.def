@@ -1,0 +1,7 @@
+EXPORTS
+	_Z12GateFunctionv @ 1 NONAME
+	_ZTI16CTestConverterV2 @ 2 NONAME ; #<TI>#
+	_ZTI23CTestConverterV2Library @ 3 NONAME ; #<TI>#
+	_ZTV16CTestConverterV2 @ 4 NONAME ; #<VT>#
+	_ZTV23CTestConverterV2Library @ 5 NONAME ; #<VT>#
+

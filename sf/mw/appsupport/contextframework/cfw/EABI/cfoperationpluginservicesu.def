@@ -1,0 +1,42 @@
+EXPORTS
+	_ZN13CCFScriptRootC2ER20MCFOperationServicesP16CCFOperationNode @ 1 NONAME
+	_ZN13CCFScriptRootD0Ev @ 2 NONAME
+	_ZN13CCFScriptRootD1Ev @ 3 NONAME
+	_ZN13CCFScriptRootD2Ev @ 4 NONAME
+	_ZN14CCFScriptEvent4NewLERKiRK13RPointerArrayI15CCFKeyValuePairERK7TDesC16 @ 5 NONAME
+	_ZN16CCFOperationNode12ExternalizeLER12RWriteStream @ 6 NONAME
+	_ZN16CCFOperationNode12InternalizeLER11RReadStream @ 7 NONAME
+	_ZN16CCFOperationNode28GenerateDomTreeLocationInfoLER10CMDXMLNode @ 8 NONAME
+	_ZN16CCFOperationNode7CleanupEv @ 9 NONAME
+	_ZN16CCFOperationNodeC2ER20MCFOperationServicesPS_ @ 10 NONAME
+	_ZN16CCFOperationNodeD0Ev @ 11 NONAME
+	_ZN16CCFOperationNodeD1Ev @ 12 NONAME
+	_ZN16CCFOperationNodeD2Ev @ 13 NONAME
+	_ZN18CCFOperationPlugIn4NewLERK4TUidP26TOperationPluginInitParams @ 14 NONAME
+	_ZN18CCFOperationPlugIn5NewLCERK4TUidP26TOperationPluginInitParams @ 15 NONAME
+	_ZN18CCFOperationPlugInC2EP26TOperationPluginInitParams @ 16 NONAME
+	_ZN18CCFOperationPlugInD0Ev @ 17 NONAME
+	_ZN18CCFOperationPlugInD1Ev @ 18 NONAME
+	_ZN18CCFOperationPlugInD2Ev @ 19 NONAME
+	_ZN25CCFOperationPluginManager4NewLER24MCFScriptEngineInterface @ 20 NONAME
+	_ZN25CCFOperationPluginManager5NewLCER24MCFScriptEngineInterface @ 21 NONAME
+	_ZN25CCFOperationPluginManagerD0Ev @ 22 NONAME
+	_ZN25CCFOperationPluginManagerD1Ev @ 23 NONAME
+	_ZN25CCFOperationPluginManagerD2Ev @ 24 NONAME
+	_ZNK14CCFScriptEvent10IdentifierEv @ 25 NONAME
+	_ZNK14CCFScriptEvent10ParametersEv @ 26 NONAME
+	_ZNK14CCFScriptEvent8ScriptIdEv @ 27 NONAME
+	_ZNK16CCFOperationNode5ValueEv @ 28 NONAME
+	_ZNK18CCFOperationPlugIn9ExtensionERK4TUid @ 29 NONAME
+	_ZTI13CCFScriptRoot @ 30 NONAME ; #<TI>#
+	_ZTI16CCFOperationNode @ 31 NONAME ; #<TI>#
+	_ZTI18CCFOperationPlugIn @ 32 NONAME ; #<TI>#
+	_ZTV13CCFScriptRoot @ 33 NONAME ; #<VT>#
+	_ZTV16CCFOperationNode @ 34 NONAME ; #<VT>#
+	_ZTV18CCFOperationPlugIn @ 35 NONAME ; #<VT>#
+	_ZThn36_N25CCFOperationPluginManagerD0Ev @ 36 NONAME ; #<thunk>#
+	_ZThn36_N25CCFOperationPluginManagerD1Ev @ 37 NONAME ; #<thunk>#
+	_ZThn40_N25CCFOperationPluginManagerD0Ev @ 38 NONAME ; #<thunk>#
+	_ZThn40_N25CCFOperationPluginManagerD1Ev @ 39 NONAME ; #<thunk>#
+	_ZNK16CCFOperationNode9ExtensionERK4TUid @ 40 NONAME
+

@@ -1,0 +1,10 @@
+component	app-framework_aplp
+source	\sf\mw\appsupport\applaunchservices\applaunchplugins
+binary	\sf\mw\appsupport\applaunchservices\applaunchplugins\group	all
+exports	\sf\mw\appsupport\applaunchservices\applaunchplugins\group
+notes_source	\component_defs\release.src
+
+
+ipr E 
+
+ipr T \sf\mw\appsupport\applaunchservices\applaunchplugins\test

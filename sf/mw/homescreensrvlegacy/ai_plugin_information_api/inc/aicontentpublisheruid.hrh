@@ -1,0 +1,63 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+
+
+#ifndef AICONTENTPUBLISHERUID_HRH
+#define AICONTENTPUBLISHERUID_HRH
+
+/**
+ * Ecom interface uid for CAiContentPublisher.
+ *
+ * Example resource of a plugin that implements content publisher interface.
+ * @code
+ * #include <aicontentpublisheruid.hrh>
+ * #include <ecom/registryinfov2.rh>
+ *
+ * #define MY_DLL_UID                   0xFFEEDDCC
+ * #define MY_PLUGIN_IMPLEMENTATION_UID 0xBBAA9988
+ *
+ * RESOURCE REGISTRY_INFO registry_info
+ * {
+ *     resource_format_version = RESOURCE_FORMAT_VERSION_2;
+ *     dll_uid = MY_DLL_UID;
+ * 
+ *     // Interface info array
+ *     interfaces = 
+ *     {
+ *         INTERFACE_INFO
+ *         {
+ *             // UID of the implemented interface
+ *             interface_uid = AI_UID_ECOM_INTERFACE_CONTENTPUBLISHER;
+ * 
+ *             implementations = 
+ *             {
+ *                 IMPLEMENTATION_INFO
+ *                 {
+ *                     implementation_uid = MY_PLUGIN_IMPLEMENTATION_UID;
+ *                     version_no         = 1;
+ *                     display_name       = "My plugin";
+ *                 }
+ *             };
+ *         }
+ *     };
+ * }
+ * @endcode
+ */
+#define AI_UID_ECOM_INTERFACE_CONTENTPUBLISHER 0x102750ED
+
+#endif // AICONTENTPUBLISHERUID_HRH

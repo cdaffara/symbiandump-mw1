@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<api id="4d00c51ae97360bb882f86bb25b961b4" dataversion="2.0">
+  <name>System Application Key Handler Plug-in API</name>
+  <description>An interface for plugin components for receiving key events.</description>
+  <type>c++</type>
+  <collection>coreapplicationuis</collection>
+  <libs>
+  </libs>
+  <release category="platform"/>
+  <attributes>
+     <!-- This indicates wether the api provedes separate html documentation -->
+     <!-- or is the additional documentation generated from headers. -->
+     <!-- If you are unsuere then the value is "no" -->
+     <htmldocprovided>no</htmldocprovided>
+     <adaptation>yes</adaptation>
+  </attributes>
+</api>

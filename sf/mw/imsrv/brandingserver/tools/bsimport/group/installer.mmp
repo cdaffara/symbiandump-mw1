@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:   Project definition file for project bsinstall
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+TARGET          bsinstall.exe
+TARGETTYPE      exe
+UID             0x1000008d 0x102828E1
+
+CAPABILITY      CAP_APPLICATION
+VENDORID        VID_DEFAULT
+
+SOURCEPATH      ../src
+SOURCE          installer.cpp
+SOURCE          cbsimportstorage.cpp
+SOURCE          cbsimportmanager.cpp
+SOURCE          cbsimportxmlparser.cpp
+SOURCE          cbsimportfilereader.cpp
+SOURCE          cbsimportstoragemanager.cpp
+SOURCE          bsbrandremover.cpp
+
+// INCLUDE DIRS
+USERINCLUDE     ../inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+// LIBRARIES
+LIBRARY         euser.lib
+LIBRARY         xmlparser.lib
+LIBRARY         efsrv.lib
+LIBRARY         xmldom.lib
+LIBRARY         charconv.lib
+LIBRARY         avkon.lib
+LIBRARY         estor.lib       // RWriteStream
+LIBRARY         flogger.lib
+LIBRARY         bafl.lib
+LIBRARY         bsclient.lib    // branding server
+LIBRARY         cone.lib

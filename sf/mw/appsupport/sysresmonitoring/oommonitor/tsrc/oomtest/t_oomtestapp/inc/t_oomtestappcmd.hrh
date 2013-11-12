@@ -1,0 +1,27 @@
+/*
+============================================================================
+ Name       : t_oomtestappcmd.hrh
+ Author   : 
+ Copyright   : Your copyright notice
+ Description : This file contains all the resources for the t_oomtestapp.
+============================================================================
+*/
+
+
+#ifndef T_OOMTESTAPPCMD_HRH
+#define T_OOMTESTAPPCMD_HRH
+
+enum TOomTestAppCmds
+    {
+    EOomTestAppSelectConfig = 1000,
+    EOomTestAppToggleSystem,
+    EOomTestAppAllocMemory,
+    EOomTestAppFreeMemory,
+    EOomTestAppAllocMemWithPermission,
+    EOomTestAppSetPriority,
+    EOomTestAppSetPriorityNormal,
+    EOomTestAppSetPriorityHigh,
+    EOomTestAppSetPriorityBusy
+    };
+
+#endif // T_OOMTESTAPPCMD_HRH

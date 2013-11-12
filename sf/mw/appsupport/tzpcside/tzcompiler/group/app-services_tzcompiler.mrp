@@ -1,0 +1,12 @@
+component	app-services_tzcompiler
+source	\sf\mw\appsupport\tzpcside\tzcompiler
+binary	\sf\mw\appsupport\tzpcside\tzcompiler\group	all
+
+exports	\sf\mw\appsupport\tzpcside\tzcompiler\group
+
+notes_source	\component_defs\release.src
+
+
+ipr E 
+ipr T \sf\mw\appsupport\tzpcside\tzcompiler\test
+

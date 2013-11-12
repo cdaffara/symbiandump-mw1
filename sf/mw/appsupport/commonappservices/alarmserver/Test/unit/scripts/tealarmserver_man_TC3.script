@@ -1,0 +1,46 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE alarmserverunittestserver
+
+// This testcase requires tealarmserver_man_loop.rss resource file
+START_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0323
+//! @SYMTestCaseID   	PIM-UCT-PREQ1118-MAN-AS-0323
+//! @SYMTestCaseDesc 	Multiple Alarm Sound Playing
+//! @SYMTestStatus	Implemented
+//! @SYMTestPriority 	High
+//! @SYMTestActions 	. configure CAAS to support MAN;
+//!		. register the 2 alarms (A0,A1) with the AlarmServer; 
+//!		. wait for A1 to expire;
+//!		. trace EASAltOpCodeSetAlarm for A0 (check A); 
+//!		. verify that ASPS has been restarted for A1 playing sound (check B);
+//!		. acknowledge (Clear) A1 alarm;
+//!		. verify that EASAltOpCodeStartPlayingSound was sent for A0 (check C) and that the ASPS was restarted (check D).
+//! @SYMTestExpectedResults A. AlarmServer should send EASAltOpCodeStopPlayingSound(A0) before EASAltOpCodeStopPlayingSound(A1).
+//!		C. A0 should restart playing after A1 was acknowledged;
+//!		B, D. ASPS should restart whenever an alarm starts playing.
+//! @SYMTestType		CT
+//! @SYMFssID		<App-Services>/<AlarmServer>/EAS.005
+PREFIX RUN_UTILS
+// Overwrite the RSC file
+MakeReadWrite c:\Private\101F5027\AlarmServer.rsc
+CopyFile \testdata\config\tealarmserver_apc_loop.rsc c:\Private\101F5027\AlarmServer.rsc
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+DELAY 1000
+RUN_TEST_STEP 120 alarmserverunittestserver TestMultipleAlarmsStep \testdata\config\tealarmserver_man.ini TESTCASE3
+END_TESTCASE PIM-UCT-PREQ1118-MAN-AS-0323

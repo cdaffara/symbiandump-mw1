@@ -1,0 +1,52 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Alarm server
+// 
+//
+
+PRJ_EXPORTS
+
+// AlarmShared
+../Shared/Include/ASShdAlarm.h SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(asshdalarm.h)
+../Shared/Include/ASShdDefs.h SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(asshddefs.h)
+../Shared/Include/ASShdBitFlags.h SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(asshdbitflags.h)
+#ifdef SYMBIAN_ENABLE_SPLIT_HEADERS
+../Shared/Include/ASShdAlarmCal.h SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(ASShdAlarmCal.h)
+#endif
+
+// AlarmAlert
+../AlarmAlert/Shared/ASAltDefs.h SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(asaltdefs.h)
+
+// AlarmClient
+../Client/Include/ASCliSession.h SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(asclisession.h)
+../Client/Include/ASCliSoundPlay.h SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(asclisoundplay.h)
+../Client/Include/ASCliDefinitions.h SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(asclidefinitions.h)
+../Client/Include/ASCliClientUtils.h SYMBIAN_MW_LAYER_PUBLIC_EXPORT_PATH(ascliclientutils.h)
+
+// Console Alarm Alert Server
+../ConsoleAlarmAlertServer/Include/ConsoleAlarmAlertServerMain.h SYMBIAN_MW_LAYER_PLATFORM_EXPORT_PATH(consolealarmalertservermain.h)
+
+AlarmServer.iby			CORE_MW_LAYER_IBY_EXPORT_PATH(alarmserver.iby)
+
+backup_registration.xml  /epoc32/data/z/private/101f5027/backup_registration.xml
+backup_registration.xml  /epoc32/release/winscw/udeb/z/private/101f5027/backup_registration.xml
+backup_registration.xml  /epoc32/release/winscw/urel/z/private/101f5027/backup_registration.xml
+
+
+PRJ_MMPFILES
+AlarmShared.mmp
+AlarmClient.mmp
+AlarmServer.mmp
+
+#include "../Test/group/bld.inf"

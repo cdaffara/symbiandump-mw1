@@ -1,0 +1,30 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+
+UIDs Allocated for Application-Protocol Recognisers
+
+KUidAppProtRecognisers
+
+101FD8D0	KUidRecogTestEcomInterface	ECom Interface for recogniser test plugins
+101FD8D1	KUidWebUrlRecogTestDll		Web URL recogniser test plugin DLL UID
+101FD8D2	KUidWebUrlRecogTest		Web URL recogniser ECom implementation UID
+101FD8D3	KUidEBookmarkRecogTestDll	EBookmark recogniser test plugin DLL UID
+101FD8D4	KUidEBookmarkRecogTest		EBookmark recogniser ECom implementation UID
+101FD8D5	KUidRecWebRecogTestDll		Web (html/xml) recogniser test plugin DLL UID
+101FD8D6	KUidRecWebRecogTest		Web (html/xml) recogniser ECom implementation UID
+101FD8D7
+101FD8D8
+101FD8D9

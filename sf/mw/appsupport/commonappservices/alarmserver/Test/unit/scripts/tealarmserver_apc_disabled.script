@@ -1,0 +1,50 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE alarmserverunittestserver
+
+START_TESTCASE PIM-UCT-PREQ1118-APC-AS-0030
+//! @SYMTestCaseID PIM-UCT-PREQ1118-APC-AS-0030
+//! @SYMTestCaseDesc Disable Alarm Sound Control 
+//! @SYMFssID <App-Services>/<AlarmServer>/EAS.004
+//! @SYMTestStatus Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions Use Resource file containing 0 intervals. Start the AlarmServer. Add an alarm, enable and wait for expiry. Verify no sounds played even when the alarm goes off.
+//! @SYMTestExpectedResults When an empty IaDS supplied AlarmServer’s control of intervals and durations shall be disabled
+//! @SYMTestType CT
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 45 alarmserverunittestserver AlarmPlayConfig \testdata\config\TEAlarmServer_apc.ini disabled
+END_TESTCASE PIM-UCT-PREQ1118-APC-AS-0030
+
+START_TESTCASE PIM-UCT-PREQ1118-APC-AS-0040
+//! @SYMTestCaseID PIM-UCT-PREQ1118-APC-AS-0040
+//! @SYMTestCaseDesc Incorrect intervals 
+//! @SYMFssID <App-Services>/<AlarmServer>/EAS.004
+//! @SYMTestStatus Implemented
+//! @SYMTestPriority High
+//! @SYMTestActions Use Resource file containing 0 intervals. Start the AlarmServer. Attempt RASCliSession::SetAlarmPlayIntervalsL() call.
+//! @SYMTestExpectedResults RASCliSession::SetAlarmPlayIntervalsL() will leave with KErrNotSupported(-5), and the sound play intervals are unchanged.
+//! @SYMTestType CT
+PREFIX RUN_UTILS
+// Remove the INI file
+MakeReadWrite c:\Private\101F5027\AlarmServer.ini
+DeleteFile c:\Private\101F5027\AlarmServer.ini
+REMOVE_PREFIX
+RUN_TEST_STEP 10 alarmserverunittestserver APCSetIntervals \testdata\config\TEAlarmServer_apc.ini disable-client
+END_TESTCASE PIM-UCT-PREQ1118-APC-AS-0040

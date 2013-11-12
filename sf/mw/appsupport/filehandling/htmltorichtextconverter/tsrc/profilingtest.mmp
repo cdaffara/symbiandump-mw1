@@ -1,0 +1,50 @@
+// Copyright (c) 1997-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET			profilingtest.exe
+
+TARGETTYPE		exe
+CAPABILITY   None
+
+SRCDBG
+
+SOURCE			../src/CHtmlToCrtConverter.cpp profilingtest.cpp
+SOURCE			../src/CHtmlToCrtConvBuffer.cpp
+SOURCE			../src/CHtmlToCrtConvHashTable.cpp
+SOURCE			../src/CHtmlToCrtConvActionProcessor.cpp
+SOURCE			../src/CHtmlToCrtConvParser.cpp
+SOURCE			../src/CHtmlToCrtConvActionProcessorCustom.cpp
+SOURCE			../src/CHtmlToCrtConvCharsetConvert.cpp			
+
+RESOURCE		../group/10203591.rss
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+//systeminclude 	/epoc32/include/ecom
+
+USERINCLUDE		../inc
+USERINCLUDE		../group
+
+EPOCSTACKSIZE	20000
+
+LIBRARY			efsrv.lib estor.lib etext.lib euser.lib gdi.lib conarc.lib bafl.lib charconv.lib
+
+#define __CHTMLTOCRTCONV_TESTCODE_BUILD_CONTROL__
+
+#ifdef __CHTMLTOCRTCONV_TESTCODE_BUILD_CONTROL__
+	MACRO __CHTMLTOCRTCONV_TESTCODE__
+#endif
+VENDORID 0x70000001
+
+SMPSAFE

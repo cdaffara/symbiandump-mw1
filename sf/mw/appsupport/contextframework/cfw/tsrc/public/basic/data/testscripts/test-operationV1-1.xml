@@ -1,0 +1,13 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+    	<operation_v1>
+    		<source>operation.source</source>
+    		<type>operation.type.v1</type>
+    		<value>true</value>
+    	</operation_v1>
+        <actions>
+            <operationAction_v1 param='true'/>
+        </actions>
+    </if>
+</script>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.s60.com/xml/confml/2" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="BrowserBookmarks">
+  <feature ref="BookmarkItems" name="BookmarkItems">
+    <setting ref="RemoveNokiaBookmarks" name="Remove All Nokia bookmarks" type="boolean">
+      <desc>If selected all Nokia bookmarks are removed.</desc>
+    </setting>
+    <setting ref="RemoveNokiaThirdPartyBookmarks" name="Remove All Third party bookmarks" type="boolean">
+      <desc>If selected all Third party bookmarks are removed.</desc>
+    </setting>
+    <setting ref="NokiaBookmarkItem" mapKey="Name" mapValue="Name" name="BookmarkItem" type="sequence" minOccurs="0" maxOccurs="16">
+      <desc>TBD</desc>
+      <setting ref="Name" name="Name Of The New Entry" type="string">
+        <desc>Text field containing name for the Bookmark. Must be unique.</desc>
+      </setting>
+      <setting ref="URL" name="URL Of The Bookmark" type="string">
+        <xs:pattern value="((ftp|wap|http(|s))://([\w-]+\.)+[\w-]+(:[0-9]{1,5})?(/[\w- ./?%&amp;=]*)?|)"/>
+        <desc>Text of the full URL for a Bookmark.(e.g. http://my.server.com)</desc>
+      </setting>
+    </setting>
+    <setting ref="ThirdPartyBookmarkItem" mapKey="Name" mapValue="Name" name="Third Party BookmarkItem" type="sequence" minOccurs="0" maxOccurs="16">
+      <desc>Add Description.</desc>
+      <setting ref="Name" name="Name Of The New Entry" type="string">
+        <desc>Text field containing name for the Bookmark. Must be unique.</desc>
+      </setting>
+      <setting ref="URL" name="URL Of The Bookmark" type="string">
+        <xs:pattern value="((ftp|wap|http(|s))://([\w-]+\.)+[\w-]+(:[0-9]{1,5})?(/[\w- ./?%&amp;=]*)?|)"/>
+        <desc>Text of the full URL for a Bookmark.(e.g. http://my.server.com)</desc>
+      </setting>
+    </setting>
+    <setting ref="CustomerBookmarkItem" mapKey="Name" mapValue="Name" name="Customer BookmarkItem" type="sequence" minOccurs="0" maxOccurs="99">
+      <desc>Add Description.</desc>
+      <setting ref="Name" name="Name Of The New Entry" type="string">
+        <desc>Text field containing name for the Bookmark. Must be unique.</desc>
+      </setting>
+      <setting ref="URL" name="URL Of The Bookmark" type="string">
+        <xs:pattern value="((ftp|wap|http(|s))://([\w-]+\.)+[\w-]+(:[0-9]{1,5})?(/[\w- ./?%&amp;=]*)?|)"/>
+        <desc>Text of the full URL for a Bookmark. (e.g. http://my.server.com)</desc>
+      </setting>
+    </setting>
+    <setting ref="TopPriorityBookmarkItem" mapKey="Name" mapValue="Name" name="Top Priority BookmarkItem" type="sequence" minOccurs="0" maxOccurs="1">
+      <desc>Add Description.</desc>
+      <setting ref="Name" name="Name Of The New Entry" type="string">
+        <desc>Text field containing name for the Bookmark. Must be unique.</desc>
+      </setting>
+      <setting ref="URL" name="URL Of The Bookmark" type="string">
+        <xs:pattern value="((ftp|wap|http(|s))://([\w-]+\.)+[\w-]+(:[0-9]{1,5})?(/[\w- ./?%&amp;=]*)?|)"/>
+        <desc>Text of the full URL for a Bookmark. (e.g. http://my.server.com)</desc>
+      </setting>
+    </setting>
+    <setting ref="CustomerTopPriorityBookmarkItem" mapKey="Name" mapValue="Name" name="Customer Top Priority BookmarkItem" type="sequence" minOccurs="0" maxOccurs="1">
+      <desc>Add Description.</desc>
+      <setting ref="Name" name="Name Of The New Entry" type="string">
+        <desc>Text field containing name for the Bookmark. Must be unique.</desc>
+      </setting>
+      <setting ref="URL" name="URL Of The Bookmark" type="string">
+        <xs:pattern value="((ftp|wap|http(|s))://([\w-]+\.)+[\w-]+(:[0-9]{1,5})?(/[\w- ./?%&amp;=]*)?|)"/>
+        <desc>Text of the full URL for a Bookmark. (e.g. http://my.server.com)</desc>
+      </setting>
+    </setting>
+  </feature>
+  <!--<xi:include href="./BookmarkData.confml"/>-->
+  <data>
+        <BookmarkItems>
+            <RemoveNokiaBookmarks>false</RemoveNokiaBookmarks>
+            <RemoveNokiaThirdPartyBookmarks>false</RemoveNokiaThirdPartyBookmarks>
+            <TopPriorityBookmarkItem extensionPolicy="replace">
+                <Name>Tre IOP XHTML</Name>
+                <URL>http://rave.cellulardata.com/xhtml/index.xhtml</URL>
+            </TopPriorityBookmarkItem>
+            <CustomerBookmarkItem extensionPolicy="replace">
+                <Name>Geocaching.hu</Name>
+                <URL>http://geocaching.hu/wap</URL>
+            </CustomerBookmarkItem>
+            <CustomerBookmarkItem>
+                <Name>Test sites</Name>
+                <URL></URL>
+            </CustomerBookmarkItem>
+            <CustomerBookmarkItem>
+                <Name>DDT</Name>
+                <URL>http://ammo.factory.cellulardata.com:8000/ddt</URL>
+            </CustomerBookmarkItem>
+            <CustomerBookmarkItem>
+                <Name>DDT (no cookies)</Name>
+                <URL>http://ammo.factory.cellulardata.com:8000/ddtnc</URL>
+            </CustomerBookmarkItem>
+            <CustomerBookmarkItem>
+                <Name>Digdown</Name>
+                <URL>http://digdown1.extra.wirelessfuture.com/ddtnc</URL>
+            </CustomerBookmarkItem>
+            <CustomerBookmarkItem>
+                <Name>DLS 2.0 S60</Name>
+                <URL>http://trsrv42.wirelessfuture.com/content/s60/index.wml</URL>
+            </CustomerBookmarkItem>
+            <CustomerBookmarkItem>
+                <Name>DLS 2.0 IOP</Name>
+                <URL>http://www.it.cellulardata.com/iop/dls20/index.wml</URL>
+            </CustomerBookmarkItem>
+            <CustomerBookmarkItem>
+                <Name>Wirelessfuture</Name>
+                <URL>http://trsrv29.extra.wirelessfuture.com/drm/index.wml</URL>
+            </CustomerBookmarkItem>
+            <NokiaBookmarkItem extensionPolicy="append">
+                <Name>User agent</Name>
+                <URL>http://testsuite.nokia-boston.com/content/wml_ua/wmlheader.asp</URL>
+                <Tag1>Tag1</Tag1>
+            </NokiaBookmarkItem>
+            <NokiaBookmarkItem>
+                <Name>Google</Name>
+                <URL>http://www.google.com</URL>
+            </NokiaBookmarkItem>
+            <NokiaBookmarkItem>
+                <Name>Eco</Name>
+                <URL>http://wap.eco.hu</URL>
+            </NokiaBookmarkItem>
+            <NokiaBookmarkItem>
+                <Name>Stop!</Name>
+                <URL>http://wap.stop.hu</URL>
+                <Tag1>Tag1</Tag1>
+            </NokiaBookmarkItem>
+            <NokiaBookmarkItem>
+                <Name>Report Browser Bugs</Name>
+                <URL>http://waplabdc.nokia-boston.com/browser/users/Kimono/errorEmail/error.asp</URL>
+            </NokiaBookmarkItem>
+            <NokiaBookmarkItem>
+                <Name>OSS Browser Report</Name>
+                <URL>http://waplabdc.nokia-boston.com/browser/users/OSSBrowser/errorEmail/error.asp</URL>
+            </NokiaBookmarkItem>
+            <NokiaBookmarkItem>
+                <Name>Google</Name>
+                <URL>Http://www.google.com</URL>
+            </NokiaBookmarkItem>
+            <NokiaBookmarkItem>
+                <Name/>
+                <URL/>
+            </NokiaBookmarkItem>
+            <ThirdPartyBookmarkItem extensionPolicy="append">
+                <Name>XHTML -IOP</Name>
+                <URL>http://rave.cellulardata.com/xhtml/index.xhtml</URL>
+            </ThirdPartyBookmarkItem>
+            <ThirdPartyBookmarkItem>
+                <Name>TCG</Name>
+                <URL>http://testsuite.nokia-boston.com</URL>
+            </ThirdPartyBookmarkItem>
+            <ThirdPartyBookmarkItem>
+                <Name>Widgets</Name>
+                <URL>http://widgets.nokia-boston.com</URL>
+            </ThirdPartyBookmarkItem>
+            <ThirdPartyBookmarkItem>
+                <Name>S60 Acceptance Test</Name>
+                <URL>http://testsuite.nokia-boston.com/s60accept/qstart.asp</URL>
+            </ThirdPartyBookmarkItem>
+            <CustomerTopPriorityBookmarkItem
+                extensionPolicy="replace">
+                <Name>Tre IOP WML</Name>
+                <URL>http://195.134.227.137/1.wml</URL>
+            </CustomerTopPriorityBookmarkItem>
+        </BookmarkItems>
+    </data>
+</configuration>

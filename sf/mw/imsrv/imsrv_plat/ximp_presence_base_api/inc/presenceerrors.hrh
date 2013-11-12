@@ -1,0 +1,104 @@
+/*
+* Copyright (c) 2006, 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Protocol agnostic error codes for XIMP Framework Presence.
+*
+*/
+
+#ifndef PRESENCEERRORS_HRH
+#define PRESENCEERRORS_HRH
+
+
+/**
+ * XIMP Framework Presence error codes.
+ *
+ * Error codes returned from XIMP Framework are either:
+ * -# System wide Symbian OS error codes (KErrNone, KErrNoMemory, etc.)
+ * -# Protocol agnostic presence related error codes defined here.
+ *    These error codes have range: KXIMPErrBase ... KXIMPErrLow. (-30150 )
+ *
+ * @ingroup ximppresenceapi
+ * @since S60 v3.2
+ */
+enum
+    {
+    KPresenceErrBase = -30138,
+
+    /**
+     * Error code to indicate that presence protocol or
+     * protocol adaptation does not support given presence
+     * information field type.
+     */
+    KPresenceErrPresenceInfoFieldTypeNotSupported = KPresenceErrBase - 1,
+
+
+    /**
+     * Error code to indicate that presence protocol or
+     * protocol adaptation does not support given presence
+     * information field value.
+     */
+    KPresenceErrPresenceInfoFieldValueNotSupported = KPresenceErrBase - 2,
+
+
+    /**
+     * Error code to indicate that presence protocol or
+     * protocol adaptation does not support given presentity
+     * group property (for example display name property).
+     */
+    KPresenceErrPresentityGroupPropertyNotSupported = KPresenceErrBase - 3,
+
+
+    /**
+     * Error code to indicate that request processing has failed
+     * on presence service, because the presentity group amount
+     * exeeds the service specific limit.
+     */
+    KPresenceErrTooManyPresentityGroups = KPresenceErrBase - 4,
+
+
+    /**
+     * Error code to indicate that request processing has failed
+     * on presence service, because the presentity amount
+     * exeeds the service specific limit.
+     */
+    KPresenceErrTooManyPresentities = KPresenceErrBase - 5,
+
+
+    /**
+     * Error code to indicate that presence service doesn't know
+     * the presentity group, which was identified in the request.
+     */
+    KPresenceErrUnknownPresentityGroup = KPresenceErrBase - 6,
+
+
+    /**
+     * Error code to indicate that presence service doesn't know
+     * the presentity, which was identified in the request.
+     */
+    KPresenceErrUnknownPresentity = KPresenceErrBase - 7,
+
+
+    /**
+     * Error code to indicate that the presence service
+     * has refused from request handling, because user
+     * doesn't have enough credits for the operation.
+     */
+    KPresenceErrNotEnoughCredits = KPresenceErrBase - 47
+
+
+    };
+
+
+#endif // PRESENCEERRORS_HRH
+
+

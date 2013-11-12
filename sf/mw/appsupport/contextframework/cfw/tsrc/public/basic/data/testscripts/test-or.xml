@@ -1,0 +1,21 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <or>
+		        <equals>
+		            <contextRef source='Application.State'
+		            		 type='Foreground.View'/>
+		            <cep:string>MusicLibrary</cep:string>
+		        </equals>
+		        <equals>
+		            <contextRef source='Application.State'
+		            		 type='Foreground.View'/>
+		            <cep:string>MusicShop</cep:string>
+		        </equals>
+        </or>
+        <actions>
+            <!-- start calendar app -->
+            <startApp appUid='10005901' viewUid='00000001' msgUid='00000000' msg='msg'/>
+        </actions>
+    </if>
+</script>

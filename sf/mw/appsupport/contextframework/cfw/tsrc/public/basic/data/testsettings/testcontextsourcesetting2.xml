@@ -1,0 +1,17 @@
+<ContextSourceSettings>
+    <SettingItem2 Attribute2="Attrvalue2">
+        <SettingItemParam2 Param2="Paramvalue2"/>
+        <SettingItemParam2 Param2="Paramvalue2"/>
+        <SettingItemParam2 Param2="Paramvalue2"/>
+    </SettingItem2>
+    <SettingItem2 attribute2="attrvalue2">
+        <SettingItemParam2 Param2="Paramvalue2"/>
+        <SettingItemParam2 Param2="Paramvalue2"/>
+        <SettingItemParam2 Param2="Paramvalue2"/>
+    </SettingItem2>
+    <SettingItem2 attribute2="attrvalue2">
+        <SettingItemParam2 Param2="Paramvalue2"/>
+        <SettingItemParam2 Param2="Paramvalue2"/>
+        <SettingItemParam2 Param2="Paramvalue2"/>
+    </SettingItem2>
+</ContextSourceSettings>

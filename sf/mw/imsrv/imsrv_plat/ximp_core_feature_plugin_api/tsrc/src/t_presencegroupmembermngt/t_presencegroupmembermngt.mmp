@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include            "../../tsrcutils/eunitcommon/eunittstdllbase.hrh"
+#include            "../../tsrcutils/processmaster/pm.h"
+
+TARGET              t_presencegroupmembermngt.dll
+CAPABILITY              ALL -TCB  
+SOURCEPATH          .
+SOURCE              t_presencegroupmembermngt.cpp
+
+
+USERINCLUDE             ../../../../../ximpfw/core/srcdatamodel
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presentitygroups
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presencewatching
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presenceauthorization
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presencepublishing
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presenceinfo
+USERINCLUDE             ../../../../../ximpfw/core/srcutils
+
+// TODO remove unnecessary
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/base
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/datamodel
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/protocolplugin
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/protocolpluginhost
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presencedatamodel
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presencemanagement
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presenceprotocolplugin
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presenceprotocolpluginhost
+
+LIBRARY             ecom.lib
+LIBRARY             bafl.lib
+LIBRARY             ximpdatamodel.lib
+LIBRARY             presencedatamodel.lib
+LIBRARY             ximputils.lib
+LIBRARY             estor.lib
+LIBRARY                 EUnit.lib
+
+// end of file
+
+

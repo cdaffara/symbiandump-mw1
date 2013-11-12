@@ -1,0 +1,96 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+	CAPABILITY		All -TCB
+	TARGET			dstunittestserver.exe
+	TARGETTYPE		exe
+	UID			0x1000007A 0x1028637D
+
+MACRO SYMBIAN_TZ_UNIT_TEST
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+USERINCLUDE		../../Common/inc
+USERINCLUDE		../inc
+USERINCLUDE		../teststeps/inc
+USERINCLUDE		../../../../../commonappservices/backuprestorenotification/inc
+USERINCLUDE		../../../../../commonappservices/coreappstest/inc
+
+SOURCEPATH		../../Common/src
+SOURCE			DstStep.cpp
+
+SOURCEPATH		../src
+SOURCE			DstUnitTestServer.cpp
+SOURCE			DstUnitTestStep.cpp
+
+SOURCEPATH		../teststeps/src
+SOURCE			dstdatabasemanagerstep.cpp
+SOURCE			StepSetLocation.cpp
+SOURCE			encodedrulesstep.cpp
+SOURCE			tzupdatenotification.cpp
+SOURCE			TzCachingTestStep.cpp
+SOURCE          IsDaylightSavingsOn.cpp
+SOURCE			actualisedrules.cpp
+SOURCE			tzrulesteststep.cpp
+
+//
+USERINCLUDE		../../../Include
+USERINCLUDE		../../../Client/Include
+USERINCLUDE		../../../Server/Include
+
+SOURCE 			../../../../Server/Source/DataProvider.cpp
+SOURCE 			../../../../Server/Source/readonlytzdb.cpp
+SOURCE 			../../../../Server/Source/tzdbentities.cpp
+SOURCE 			../../../../Server/Source/timezoneconfig.cpp
+SOURCE			../../../../Server/Source/timezonesession.cpp
+SOURCE			../../../../Server/Source/tzuserdata.cpp
+SOURCE			../../../../Server/Source/tzuserdatacache.cpp
+SOURCE			../../../../Server/Source/tzsystemdata.cpp
+SOURCE			../../../../Server/Source/timezoneserver.cpp
+SOURCE			../../../../Server/Source/tzlocalizationdb.cpp
+SOURCE			../../../../Server/Source/tzswiobserver.cpp
+
+//
+#if defined(WINS)
+// No special resource file required for emulator
+#else
+sourcepath ../resource/hardware
+START RESOURCE	TzMode2_target.RSS
+TARGETPATH	/private/10205c44
+END
+#endif
+
+//
+
+LIBRARY		euser.lib estor.lib
+LIBRARY		testexecutelogclient.lib
+LIBRARY 	testexecuteutils.lib
+LIBRARY 	tzclient.lib
+LIBRARY		bafl.lib
+LIBRARY		charconv.lib
+LIBRARY		efsrv.lib 
+LIBRARY		backuprestorenotification.lib
+LIBRARY     centralrepository.lib
+LIBRARY		edbms.lib
+LIBRARY		sqldb.lib
+
+EPOCSTACKSIZE		0x6000
+
+DEFFILE		UNITSERVER.DEF
+
+VENDORID 0x70000001
+
+SMPSAFE
+

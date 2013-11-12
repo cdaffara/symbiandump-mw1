@@ -1,0 +1,37 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+
+#include <eikon.rh>
+#include "avkon.loc"
+
+RESOURCE LBUF r_qtn_memlo_device_memory_low 
+              {txt = qtn_memlo_device_memory_low;}
+RESOURCE LBUF r_qtn_memlo_memory_card_low_name 
+              {txt = qtn_memlo_memory_card_low_name;}
+RESOURCE LBUF r_qtn_memlo_memory_card_low_defaultname 
+              {txt = qtn_memlo_memory_card_low_defaultname;}
+RESOURCE LBUF r_qtn_memlo_mass_storage_memory_low 
+              {txt = qtn_memlo_mass_storage_memory_low;}
+RESOURCE LBUF r_qtn_memlo_device_memory_full 
+              {txt = qtn_memlo_device_memory_full;}
+RESOURCE LBUF r_qtn_memlo_memory_card_full_name
+              {txt = qtn_memlo_memory_card_full_name;}
+RESOURCE LBUF r_qtn_memlo_memory_card_full_defaultname 
+              {txt = qtn_memlo_memory_card_full_defaultname;}
+RESOURCE LBUF r_qtn_memlo_mass_storage_full 
+              {txt = qtn_memlo_mass_storage_full;}

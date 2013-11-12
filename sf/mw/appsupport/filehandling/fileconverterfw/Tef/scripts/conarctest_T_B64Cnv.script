@@ -1,0 +1,37 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//! @file
+//! @SYMTestCaseID		API-APPFWK-TB64CNVStep-DoTestBase64L-0001
+//! @SYMTestCaseDesc  		Base 64 Test Converter
+//! @SYMTestPriority  		High
+//! @SYMTestStatus 	 	3. Released
+//! @SYMTestActions  		Converts a .b64 file to a .doc file, Converts a .doc file to a .b64 file and compares them.
+//!				Test the following APIs
+//!				CConverterBase2::ConvertObjectL(RReadStream& aReadStream, RWriteStream& aWriteStream, 
+//!				MConverterUiObserver* aObserver=NULL);	
+//!				CConverterBase2::Capabilities();
+//!				CConverterBase2::Uid();
+//!				CCnaConverterList::NewConverterL(TUid aUid)
+//! @SYMTestExpectedResults 	Compare is succesful  
+
+START_TESTCASE API-APPFWK-TB64CNVStep-DoTestBase64L-0001
+
+PRINT Run TB64Cnv ConArc test
+//
+LOAD_SUITE TConArcTestServer
+RUN_TEST_STEP 100 TConArcTestServer TB64Cnv
+
+END_TESTCASE API-APPFWK-TB64CNVStep-DoTestBase64L-0001

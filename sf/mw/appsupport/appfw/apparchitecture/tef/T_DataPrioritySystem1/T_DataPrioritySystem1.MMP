@@ -1,0 +1,62 @@
+// Copyright (c) 2005-2010 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// T_DataPrioritySystem1.EXE Test application for checking system prioirty for
+// datatype handlers
+// 
+//
+
+/**
+ @file 
+*/
+
+TARGETPATH	/sys/bin
+target          t_dataprioritysystem1.exe
+targettype      EXE
+
+
+UID		0x1000007a 0x10207f7b
+ 
+VENDORID 0x70000001
+
+CAPABILITY WriteDeviceData
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+
+SOURCEPATH		.	
+source       	T_DataPrioritySystem1.CPP
+
+USERINCLUDE     .
+USERINCLUDE 	..
+userinclude		../../../uiftestfw/inc
+
+start resource T_DataPrioritySystem1_reg.rss
+targetpath /apparctestregfiles
+end
+
+start resource T_DataPrioritySystem1_loc.rss
+targetpath /apparctestregfiles
+end
+
+LIBRARY		cone.lib   ws32.lib
+LIBRARY		appfwk_test_appui.lib
+LIBRARY		euser.lib
+LIBRARY		testexecuteutils.lib  testexecutelogclient.lib
+LIBRARY		apparc.lib efsrv.lib estor.lib gdi.lib fbscli.lib
+LIBRARY     apfile.lib apgrfx.lib  bafl.lib apmime.lib
+LIBRARY		eikcore.lib 
+LIBRARY		apserv.lib
+LIBRARY     ecom.lib
+
+SMPSAFE

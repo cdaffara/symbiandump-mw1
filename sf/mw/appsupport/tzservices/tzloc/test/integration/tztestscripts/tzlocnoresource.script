@@ -1,0 +1,32 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+LOAD_SUITE TzLocalTestserver
+
+
+START_TESTCASE PIM-APPSERV-TZLOCAL-DEF142617-CIT-HW-0001
+//! @SYMTestCaseID PIM-APPSERV-TZLOCAL-DEF142617-CIT-HW-0001
+//! @SYMTestType CIT
+//! @SYMTestPriority High
+//! @SYMDEF142716
+//! @SYMFssID 
+//! @SYMTestStatus Implemented
+//! @SYMTestCaseDesc Try to set locale with the localization resource files missing
+//! @SYMTestActions Try to set some particular locale with the localization resource files missing
+//! @SYMTestExpectedResults Resource file is missing, hence the TZ Resource reader should panic with code = 1 (Not Found)
+
+RUN_TEST_STEP !PanicCode=1 100 TzLocalTestserver TestSetTimeZoneStep         c:\tzlocaltestdata.ini UKTz
+END_TESTCASE PIM-APPSERV-TZLOCAL-DEF142617-CIT-HW-0001

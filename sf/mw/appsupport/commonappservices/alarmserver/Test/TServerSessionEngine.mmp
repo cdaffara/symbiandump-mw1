@@ -1,0 +1,99 @@
+// Copyright (c) 1999-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET					tserversessionengine.exe
+TARGETTYPE				EXE
+CAPABILITY   ReadUserData WriteUserData WriteDeviceData Protserv AllFiles
+
+SOURCEPATH				../Test
+
+SOURCE					TServerSessionEngine.cpp
+SOURCE					TServerSessionEngineMain.cpp
+
+SOURCEPATH				../Server/Source
+
+SOURCE					ASSrvServer.cpp
+SOURCE					ASSrvSession.cpp
+SOURCE					ASSrvSessionEngine.cpp
+//
+SOURCE					ASSrvAlarm.cpp
+//
+SOURCE					ASSrvStaticUtils.cpp
+//
+SOURCE					ASSrvTimer.cpp
+SOURCE					ASSrvDataPool.cpp
+SOURCE					ASSrvAlarmQueue.cpp
+SOURCE					ASSrvAlarmStore.cpp
+SOURCE					ASSrvSoundSettings.cpp
+SOURCE					ASSrvServerWideData.cpp
+SOURCE					ASSrvSoundController.cpp
+SOURCE					ASSrvAlarmSoundDetails.cpp
+SOURCE					ASSrvNotificationCoordinator.cpp
+SOURCE					ASSrvEnvironmentChangeManager.cpp
+//
+SOURCE					ASSrvIteratorBase.cpp
+SOURCE					ASSrvIteratorByState.cpp
+SOURCE					ASSrvIteratorByStatus.cpp
+SOURCE					ASSrvIteratorByCategory.cpp
+SOURCE					ASSrvIteratorBySessionId.cpp
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+SOURCE					ASSrvIteratorByWakeup.cpp
+#endif
+//
+SOURCE					ASSrvNotifyingAlarmMngr.cpp
+SOURCE					ASSrvDSTChange.cpp
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+SOURCE					assrvsystemstate.cpp
+#endif
+
+SOURCEPATH				../AlarmAlert/Source
+
+SOURCE					ASAltClientSession.cpp
+SOURCE					ASAltEventHandler.cpp
+SOURCE					ASAltServerDeathObserver.cpp
+SOURCE					asaltrequestsetalarm.cpp
+SOURCE					ASAltRequestQuietPeriodEnd.cpp
+
+USERINCLUDE				../Shared/Include
+USERINCLUDE				../Server/Include
+USERINCLUDE				../AlarmAlert/Shared
+USERINCLUDE				../AlarmAlert/Include
+USERINCLUDE				../ConsoleAlarmAlertServer/Include
+USERINCLUDE				../../backuprestorenotification/inc
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+
+LIBRARY					bafl.lib		efsrv.lib
+LIBRARY					estor.lib		euser.lib
+
+LIBRARY					alarmshared.lib
+LIBRARY					backuprestorenotification.lib
+LIBRARY					powermgrcli.lib
+#ifdef SYMBIAN_SYSTEM_STATE_MANAGEMENT
+LIBRARY					ssmadaptationcli.lib ssmcmn.lib
+#endif
+
+#ifndef MARM
+#endif
+
+#define __SYNCHRONOUS_CONNECTION_ATTEMPT_TO_ALARMALERTSERVER_BUILD_CONTROL__
+
+#ifdef __SYNCHRONOUS_CONNECTION_ATTEMPT_TO_ALARMALERTSERVER_BUILD_CONTROL__
+    MACRO __SYNCHRONOUS_CONNECTION_ATTEMPT_TO_ALARMALERTSERVER__ 
+#endif
+
+VENDORID 0x70000001
+
+SMPSAFE

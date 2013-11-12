@@ -1,0 +1,65 @@
+//
+// Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+//---------------------------------------------------------------------------
+// Tests that the TZ server's cenrep file can be backed up and restored 
+// properly. Uses the Backup and Restore test server to do the backup and
+// restoring.
+//---------------------------------------------------------------------------
+
+// Create the directory where the files will be backed up to.
+RUN_UTILS MkDir C:\private\BackupArchive
+
+RUN_UTILS MkDir C:\private\10202be9\
+RUN_UTILS MkDir C:\private\1020383e\
+
+LOAD_SUITE DstIntServer 
+
+// Set the time zone to something other than the default. This will be saved 
+// in the tz servers .cre file prior to back up.
+PRINT Setting time zone.
+START_TESTCASE   PIM-BACKUPRESTORE-0001
+//! @SYMTestCaseID   PIM-BACKUPRESTORE-0001
+RUN_TEST_STEP 100 DstIntServer BackupRestore \dstscripts\backuprestore.ini SetTimeZone
+END_TESTCASE   PIM-BACKUPRESTORE-0001
+
+LOAD_SUITE BURTestServer
+
+// Backup central repository with the last set TZ.
+PRINT Starting backup.
+START_TESTCASE   PIM-BACKUPRESTORE-0002
+//! @SYMTestCaseID   PIM-BACKUPRESTORE-0002
+RUN_TEST_STEP -1 BURTestServer TestBackup \dstscripts\backuprestore.ini default
+END_TESTCASE   PIM-BACKUPRESTORE-0002
+
+// Delete TZ server's cenrep file.
+PRINT Deleting TZ server's cenrep file.
+RUN_UTILS DeleteFile c:\Private\10202be9\persists\1020383e.cre
+
+// Restore the .cre file.
+PRINT Starting restore.
+START_TESTCASE   PIM-BACKUPRESTORE-0003
+//! @SYMTestCaseID   PIM-BACKUPRESTORE-0003
+RUN_TEST_STEP -1 BURTestServer TestRestore \dstscripts\backuprestore.ini default
+END_TESTCASE   PIM-BACKUPRESTORE-0003
+
+// Check time zone. The TZ server's .cre file should have been restored and the 
+// last set time zone should be the current TZ.
+PRINT Checking last set time zone has been restored.
+START_TESTCASE   PIM-BACKUPRESTORE-0004
+//! @SYMTestCaseID   PIM-BACKUPRESTORE-0004
+RUN_TEST_STEP 100 DstIntServer BackupRestore \dstscripts\backuprestore.ini CheckTimeZone
+END_TESTCASE   PIM-BACKUPRESTORE-0004
+

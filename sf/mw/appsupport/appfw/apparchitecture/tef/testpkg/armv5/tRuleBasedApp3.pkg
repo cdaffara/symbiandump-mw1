@@ -1,0 +1,32 @@
+;
+; Copyright (c) 2010 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of the License "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description:
+;
+
+
+;Languages
+&EN
+
+;Header
+; SA = Symbian Application
+; RU = Rom Upgrade
+#{"tRuleBasedApp3"}, (0X1020D6FE), 1, 0, 0, TYPE=SA
+
+%{"Nokia India Pvt Ltd"}
+:"Nokia India Pvt Ltd"
+
+"\epoc32\release\armv5\udeb\trulebasedapp3.exe"-"!:\sys\bin\trulebasedapp3.exe"
+"\epoc32\data\z\apparctestregfiles\tRuleBasedApp3_reg.rsc"-"!:\private\10003a3f\import\apps\tRuleBasedApp3_reg.rsc"
+"\epoc32\data\z\apparctestregfiles\tRuleBasedApp3.rsc"-"!:\resource\apps\tRuleBasedApp3.rsc"
+

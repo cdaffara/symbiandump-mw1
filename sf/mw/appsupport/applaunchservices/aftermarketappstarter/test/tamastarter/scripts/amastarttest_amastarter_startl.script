@@ -1,0 +1,38 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// Then the test uses CAmaStart::StartL() with the appropriate item id to start these AMAs
+// from an existing DSC item in the created test database.
+// The application logs are read to check the applications were launched as expected.
+// 
+//
+
+//! @file
+//! @SYMTestCaseID 		API-APPFWK-AMASTARTER-0008
+//! @SYMTestCaseDesc		Check if AMA can be started using AmaStarter DLL.
+//! @SYMPREQ 			PREQ871
+//! @SYMREQ			REQ9141
+//! @SYMTestType		UT
+//! @SYMTestPriority		Critical
+//! @SYMTestStatus 		3. Released
+//! @SYMTestCaseDependencies	The appropriate database has been created.
+//! @SYMTestActions		The test uses a known DSC store database with valid items in it.
+//! @SYMTestExpectedResults 	The different AMAs are started as expected from the test database.
+
+PRINT Run AmaStarterStartL tests
+
+LOAD_SUITE tamastarter_server
+
+START_TESTCASE API-APPFWK-AMASTARTER-0008
+RUN_TEST_STEP 1000 tamastarter_server AmaStarterStartL
+END_TESTCASE API-APPFWK-AMASTARTER-0008

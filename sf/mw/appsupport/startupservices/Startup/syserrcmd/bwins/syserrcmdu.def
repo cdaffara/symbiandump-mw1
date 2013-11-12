@@ -1,0 +1,3 @@
+EXPORTS
+	?SysErrCmdNewL@SysErrCmdFactory@@SAPAVMSsmCustomCommand@@XZ @ 1 NONAME ; class MSsmCustomCommand * SysErrCmdFactory::SysErrCmdNewL(void)
+

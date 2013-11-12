@@ -1,0 +1,92 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+#include <platform_paths.hrh>
+#include                "prfwtestdlluids.hrh"
+
+TARGET                  prfwtestcaseutils.dll
+TARGETTYPE              dll
+UID                     PRFWTEST_DLL_UID_STATIC_INTERFACE PRFWTEST_DLL_UID_COMMON
+
+CAPABILITY              ALL -TCB 
+VENDORID                VID_DEFAULT
+
+
+SOURCEPATH              .
+SOURCE                  prfwteststatuseventlistener.cpp
+SOURCE                  prfwtestmessenger.cpp
+SOURCE                  prfwtestfilesrvmsg.cpp
+SOURCE                  prfwtestfiletool.cpp
+SOURCE                  prfwtestcontextwrapper.cpp
+SOURCE                  prfwtestcontextwrappermgr.cpp
+SOURCE                  prfwgeneralwaiter.cpp
+SOURCE                  prfwtestpresencedatautils.cpp
+SOURCE                  prfwtestlistener.cpp
+SOURCE                  prfwtestwaithelper.cpp
+SOURCE                  prfwtesteventfactory.cpp
+
+USERINCLUDE             ../../../../../ximpfw/core/srcdatamodel
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presentitygroups
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presencewatching
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presenceauthorization
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presencepublishing
+USERINCLUDE             ../../../../../ximpfw/presence/srcpresencedatamodel/presenceinfo
+USERINCLUDE             ../../../../../ximpfw/core/srcutils
+
+
+USERINCLUDE             ../../../../../ximpfw/core/srcclient
+USERINCLUDE             ../../../../../ximpfw/core/srcpscserver
+USERINCLUDE             ../../../../../ximpfw/core/srcrootserver
+
+USERINCLUDE             .
+USERINCLUDE             ../../tsrcutils/eunitcommon
+USERINCLUDE             ../../tsrcutils/processmaster
+USERINCLUDE             ../../tsrcprotocols
+
+
+// TODO remove unnecessary
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/base
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/datamodel
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/protocolplugin
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/core/protocolpluginhost
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presencedatamodel
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presencemanagement
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presenceprotocolplugin
+SYSTEMINCLUDE           ../../../../../ximpfw/inc/presence/presenceprotocolpluginhost
+
+SYSTEMINCLUDE           /epoc32/include/digia/eunit
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY                 ecom.lib
+LIBRARY                 bafl.lib
+LIBRARY                 euser.lib
+LIBRARY                 estor.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 eunit.lib
+LIBRARY                 eunitutil.lib
+LIBRARY                 ximpsrvclient.lib
+LIBRARY                 ximpdatamodel.lib
+LIBRARY             presencedatamodel.lib
+LIBRARY                 ximputils.lib
+
+EXPORTUNFROZEN
+
+// end of file
+
+

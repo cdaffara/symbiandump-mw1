@@ -1,0 +1,36 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// The IBY file for PREQ1118 Integration Test Suite
+// 
+//
+
+#ifndef __TEST_MULTIPLE_ALARMS_SUITE_IBY__
+#define __TEST_MULTIPLE_ALARMS_SUITE_IBY__
+
+file=ABI_DIR\DEBUG_DIR\TestMultipleAlarmsServer.exe		Sys\Bin\TestMultipleAlarmsServer.exe
+
+// Script and data files
+data=DATAZ_\TestData\Scripts\TestMultipleAlarmsSuite.script	TestData\Scripts\TestMultipleAlarmsSuite.script
+data=DATAZ_\TestData\Scripts\SingleModeTests.script		TestData\Scripts\SingleModeTests.script
+data=DATAZ_\TestData\Scripts\MultipleModeTests.script		TestData\Scripts\MultipleModeTests.script
+data=DATAZ_\TestData\Scripts\OOMTests.script			TestData\Scripts\OOMTests.script
+data=DATAZ_\TestData\Ini\TestMultipleAlarmsSuite.ini		TestData\Ini\TestMultipleAlarmsSuite.ini
+data=DATAZ_\TestData\test.jpg					TestData\test.jpg
+data=DATAZ_\TestData\test.wav					TestData\test.wav
+
+// Other dependencies
+#include <testexecute.iby>
+
+#endif // __TEST_MULTIPLE_ALARMS_SUITE_IBY__
+

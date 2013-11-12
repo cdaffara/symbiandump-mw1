@@ -1,0 +1,50 @@
+// Copyright (c) 2005-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+TARGET		testmultiplealarmsserver.exe
+TARGETTYPE	exe
+UID		0x1000007A 0x10273108
+
+CAPABILITY	protserv readuserdata writeuserdata readdevicedata writedevicedata
+
+VENDORID 	0x70000001
+
+MW_LAYER_SYSTEMINCLUDE_SYMBIAN
+APP_LAYER_SYSTEMINCLUDE_SYMBIAN
+//SYSTEMINCLUDE 	/epoc32/include/uikon
+USERINCLUDE	../inc
+
+LIBRARY		euser.lib efsrv.lib 
+
+// For CalInterimAPI
+LIBRARY		calinterimapi.lib
+
+// For alarm alert server
+LIBRARY		eiksrv.lib
+
+// For alarm server
+LIBRARY		alarmclient.lib alarmshared.lib
+
+//For TEF
+LIBRARY		testexecuteutils.lib testexecutelogclient.lib
+
+SOURCEPATH	../src
+
+SOURCE		TestMultipleAlarmsServer.cpp	TestBaseStep.cpp		TestStartAlertServerStep.cpp
+SOURCE		TestWaitStep.cpp		TestCreateCalEntriesStep.cpp	TestAlarmSnoozeStep.cpp	
+SOURCE		TestAlarmClearStep.cpp		TestAlarmControlStateStep.cpp	TestAssociatedDataStep.cpp
+SOURCE		TestKillAlertServerStep.cpp	TestCleanupStep.cpp		TestPerformanceStep.cpp
+SOURCE		AlarmControlsManager.cpp	DummyAlarmControl.cpp		ProgressCallBack.cpp		
+SOURCE		AlarmActionPerformer.cpp	TestCreateEntriesOOMStep.cpp	TestAlarmContentOOMStep.cpp

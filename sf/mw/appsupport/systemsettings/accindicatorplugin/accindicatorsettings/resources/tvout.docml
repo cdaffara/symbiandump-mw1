@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hbdocument version="0.4">
+    <widget name="view" type="HbView">
+        <widget name="content_1" role="HbView:widget" type="HbWidget">
+            <widget name="container" type="HbWidget">
+                <widget name="container_1" type="HbWidget">
+                    <widget name="image" type="HbLabel">
+                        <icon iconName=":/images/wired_accessory.svg" name="icon"/>
+                        <sizehint height="5.223880745727788un" type="PREFERRED" width="7.014925572834458un"/>
+                    </widget>
+                    <widget name="label" type="HbLabel">
+                        <sizehint height="4.4776120677666755un" type="PREFERRED" width="14.925373559222251un"/>
+                        <string name="text" value="TV Out"/>
+                        <zvalue value="1.0"/>
+                    </widget>
+                    <sizehint height="23.8806un" type="PREFERRED" width="23.8806un"/>
+                    <zvalue value="0.0"/>
+                    <layout type="anchor" widget="container_1">
+                        <anchoritem dst="image" dstEdge="LEFT" spacing="0.7462713220388874un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="image" dstEdge="BOTTOM" spacing="-5.323374711844449un" src="" srcEdge="BOTTOM"/>
+                        <anchoritem dst="label" dstEdge="LEFT" spacing="12.089552582970024un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="label" dstEdge="TOP" spacing="3.1343284474366726un" src="" srcEdge="TOP"/>
+                    </layout>
+                </widget>
+                <widget name="container_3" type="HbWidget">
+                    <widget name="label_4" type="HbLabel">
+                        <sizehint height="4.4776120677666755un" type="PREFERRED" width="19.850746833765594un"/>
+                        <string name="text" value="TV Aspect Ratio"/>
+                        <zvalue value="1.0"/>
+                    </widget>
+                    <widget name="combobox" type="HbComboBox">
+                        <sizehint height="5.970149423688901un" type="PREFERRED" width="26.71641867100783un"/>
+                        <zvalue value="2.0"/>
+                    </widget>
+                    <sizehint height="23.8806un" type="PREFERRED" width="23.8806un"/>
+                    <zvalue value="0.0"/>
+                    <layout type="anchor" widget="container_3">
+                        <anchoritem dst="label_4" dstEdge="LEFT" spacing="2.089552298291115un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="label_4" dstEdge="TOP" spacing="0.2985074711844451un" src="" srcEdge="TOP"/>
+                        <anchoritem dst="combobox" dstEdge="LEFT" spacing="2.089552298291115un" src="" srcEdge="LEFT"/>
+                        <anchoritem dst="combobox" dstEdge="BOTTOM" spacing="-1.9402985626988927un" src="" srcEdge="BOTTOM"/>
+                    </layout>
+                </widget>
+                <sizehint height="31.044777003182283un" type="PREFERRED" width="52.23880745727788un"/>
+                <zvalue value="0.0"/>
+                <layout orientation="Vertical" type="linear">
+                    <linearitem itemname="container_1"/>
+                    <linearitem itemname="container_3"/>
+                </layout>
+            </widget>
+            <zvalue value="0.0"/>
+            <layout type="anchor" widget="content_1">
+                <anchoritem dst="container" dstEdge="LEFT" spacing="0.59701un" src="" srcEdge="LEFT"/>
+                <anchoritem dst="container" dstEdge="TOP" spacing="0.0un" src="" srcEdge="TOP"/>
+            </layout>
+        </widget>
+        <string name="title" value="Accessory"/>
+    </widget>
+    <metadata display="QHD portrait" unit="un"/>
+</hbdocument>

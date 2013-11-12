@@ -1,0 +1,36 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of the License "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Branding Server IBY
+*
+*/
+
+#ifndef __BS_IBY__
+#define __BS_IBY__
+
+#include <data_caging_paths_for_iby.hrh>
+
+
+// branding client
+file=ABI_DIR\BUILD_DIR\bsclient.dll          SHARED_LIB_DIR\bsclient.dll
+// branding server
+file=ABI_DIR\BUILD_DIR\bsserver.exe          PROGRAMS_DIR\bsserver.exe
+
+// Add bsinstall.exe to rom to get xml importing working.
+file=ABI_DIR\BUILD_DIR\bsinstall.exe          PROGRAMS_DIR\bsinstall.exe
+
+// backup registration file
+data=ZPRIVATE\102828dd\backup_registration.xml	private\102828dd\backup_registration.xml
+
+
+#endif // __BS_IBY__

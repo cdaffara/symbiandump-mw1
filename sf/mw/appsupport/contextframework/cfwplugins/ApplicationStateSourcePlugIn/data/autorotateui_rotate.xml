@@ -1,0 +1,78 @@
+<!--
+........................................................................................................................
+Description:
+    This rule script defines when to rotate UI and when not.
+    
+Feature:
+    autorotateui
+    
+Dependencies:
+    autorotateui_init.rul
+    autorotateui_activation.rul
+........................................................................................................................
+-->
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+
+<!--
+........................................................................................................................
+Description:
+    If the following pre-conditions are met, do nothing.
+........................................................................................................................
+-->
+    <if>
+        <or>
+            <!-- Sensor setting is currently 'Off' -->
+            <equals>
+                <contextRef source='Sensor' type='Setting.Active' value='Off'/>
+            </equals>
+            <!-- Turning interaction is currently 'Off' -->
+            <equals>
+                <contextRef source='Sensor' type='Setting.TurningInteraction.AutoRotation' value='Off'/>
+            </equals>
+            
+            <!-- Rotation is currently disabled by some other rule -->
+            <equals>
+                <contextRef source='Device' type='Orientation.Active' value='false'/>
+            </equals>
+        </or>
+        <actions>
+            <!-- Do nothing -->
+        </actions>
+    </if>
+
+<!--
+........................................................................................................................
+Description:
+    Rotate UI to landscape.
+........................................................................................................................
+-->
+    <elseIf>
+        <!-- New orientation event is reveived from sensor source with value 'DisplayRightUp' -->
+        <contextUpdated>
+            <contextRef source='Sensor' type='Event.Orientation' value='DisplayRightUp'/>
+        </contextUpdated>
+        <actions>
+            <!-- Switch to 'Alternate' mode (Landscape) -->
+            <Orientation Mode='Alternate'/>
+        </actions>
+    </elseIf>
+
+<!--
+........................................................................................................................
+Description:
+    Rotate UI to portrait.
+........................................................................................................................
+-->
+    <elseIf>
+        <!-- New orientation event is reveived from sensor source with value 'DisplayUp' -->
+        <contextUpdated>
+            <contextRef source='Sensor' type='Event.Orientation' value='DisplayUp'/>
+        </contextUpdated>
+        <actions>
+            <!-- Switch to 'Normal' mode (Portrait) -->
+            <Orientation Mode='Normal'/>
+        </actions>
+    </elseIf>
+
+</script>

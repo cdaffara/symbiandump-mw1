@@ -1,0 +1,3 @@
+EXPORTS
+	?NewMXIMPClientL@CXIMPClientImp@@SAPAVMXIMPClient@@XZ @ 1 NONAME ; class MXIMPClient * CXIMPClientImp::NewMXIMPClientL(void)
+

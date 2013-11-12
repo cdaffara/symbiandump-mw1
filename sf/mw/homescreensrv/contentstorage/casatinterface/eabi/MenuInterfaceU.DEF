@@ -1,0 +1,6 @@
+EXPORTS
+	_ZN17CMenuSATInterface16MakeSatUiVisibleEiRK7TDesC16 @ 1 NONAME
+	_ZN17CMenuSATInterface16MakeSatUiVisibleEiRK7TDesC16h @ 2 NONAME
+	_ZN17CMenuSATInterfaceC1Ev @ 3 NONAME
+	_ZN17CMenuSATInterfaceC2Ev @ 4 NONAME
+

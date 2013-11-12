@@ -1,0 +1,14 @@
+HbSliderPopupContentWidget
+{
+    layout:slider_popup;
+}
+
+
+
+
+
+HbSliderPopupContentWidget::sliderpopup_background
+{ 
+    border-width:var(hb-param-background-popup-transparent);
+}
+

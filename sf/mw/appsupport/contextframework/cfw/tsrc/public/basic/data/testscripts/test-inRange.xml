@@ -1,0 +1,14 @@
+<script xmlns="http://www.nokia.com/ns/cep/script/1.0/"
+xmlns:cep="http://www.nokia.com/ns/cep/1.0/">
+    <if>
+        <inRange>
+            <contextRef source='Sensor' type='Z.RawValue'/>
+            <cep:int>100</cep:int>
+            <cep:int>200</cep:int>
+        </inRange>
+        <actions>
+            <!-- start calendar app -->
+            <startApp appUid='10005901' viewUid='00000001' msgUid='00000000' msg='msg'/>
+        </actions>
+    </if>
+</script>

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<api id="999d4b5f3fab2086ed66a1f6c685305e" dataversion="1.0">
+<name>ximp_im_protocol_plugin_host_api</name>
+<description>Protocol adaptation implementation can call this method to notify IM from message forward completion information. IM updates its cached information and notifies the subscribing clients from data changes.</description>
+<type>c++</type>
+<subsystem>improcessor</subsystem>
+<libs><lib name="improcessor.lib"/>
+</libs>
+<release category="domain" sinceversion=""/>
+<attributes>
+<htmldocprovided>yes</htmldocprovided>
+<adaptation>no</adaptation>
+</attributes>
+</api>
